@@ -1,0 +1,28 @@
+{
+  "name": "jsdoccer",
+  "version": "1.0.0",
+  "description": "A tool to auto document your ECMAScript (Java Script) in  JSDoc 3 using Esprima.",
+  "main": "document.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChetHarrison/jsdoccer.git"
+  },
+  "keywords": [
+    "jsdoc",
+    "auto",
+    "documentation"
+  ],
+  "author": "Chet Harrison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChetHarrison/jsdoccer/issues"
+  },
+  "homepage": "https://github.com/ChetHarrison/jsdoccer",
+  "devDependencies": {
+    "esprima": "^1.2.2",
+    "requirejs": "^2.1.15"
+  }
+}

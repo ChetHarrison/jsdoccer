@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/ChetHarrison/jsdoccer",
   "devDependencies": {
-    "esprima": "^1.2.2",
-    "requirejs": "^2.1.15"
+    "esprima": "^1.2.2"
   }
 }

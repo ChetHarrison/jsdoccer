@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/ChetHarrison/jsdoccer",
   "devDependencies": {
-    "esprima": "^1.2.2"
+    "esprima": "^1.2.2",
+    "lodash": "^2.4.1",
+    "rx": "^2.3.10"
   }
 }

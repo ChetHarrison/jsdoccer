@@ -11,24 +11,12 @@
           "computed": false,
           "object": {
             "type": "Identifier",
-            "name": "Marionette",
-            "range": [
-              216,
-              226
-            ]
+            "name": "Marionette"
           },
           "property": {
             "type": "Identifier",
-            "name": "Controller",
-            "range": [
-              227,
-              237
-            ]
-          },
-          "range": [
-            216,
-            237
-          ]
+            "name": "Controller"
+          }
         },
         "right": {
           "type": "FunctionExpression",
@@ -36,11 +24,7 @@
           "params": [
             {
               "type": "Identifier",
-              "name": "options",
-              "range": [
-                249,
-                256
-              ]
+              "name": "options"
             }
           ],
           "defaults": [],
@@ -56,58 +40,26 @@
                     "type": "MemberExpression",
                     "computed": false,
                     "object": {
-                      "type": "ThisExpression",
-                      "range": [
-                        262,
-                        266
-                      ]
+                      "type": "ThisExpression"
                     },
                     "property": {
                       "type": "Identifier",
-                      "name": "options",
-                      "range": [
-                        267,
-                        274
-                      ]
-                    },
-                    "range": [
-                      262,
-                      274
-                    ]
+                      "name": "options"
+                    }
                   },
                   "right": {
                     "type": "LogicalExpression",
                     "operator": "||",
                     "left": {
                       "type": "Identifier",
-                      "name": "options",
-                      "range": [
-                        277,
-                        284
-                      ]
+                      "name": "options"
                     },
                     "right": {
                       "type": "ObjectExpression",
-                      "properties": [],
-                      "range": [
-                        288,
-                        290
-                      ]
-                    },
-                    "range": [
-                      277,
-                      290
-                    ]
-                  },
-                  "range": [
-                    262,
-                    290
-                  ]
-                },
-                "range": [
-                  262,
-                  291
-                ]
+                      "properties": []
+                    }
+                  }
+                }
               },
               {
                 "type": "IfStatement",
@@ -118,53 +70,25 @@
                     "computed": false,
                     "object": {
                       "type": "Identifier",
-                      "name": "_",
-                      "range": [
-                        299,
-                        300
-                      ]
+                      "name": "_"
                     },
                     "property": {
                       "type": "Identifier",
-                      "name": "isFunction",
-                      "range": [
-                        301,
-                        311
-                      ]
-                    },
-                    "range": [
-                      299,
-                      311
-                    ]
+                      "name": "isFunction"
+                    }
                   },
                   "arguments": [
                     {
                       "type": "MemberExpression",
                       "computed": false,
                       "object": {
-                        "type": "ThisExpression",
-                        "range": [
-                          312,
-                          316
-                        ]
+                        "type": "ThisExpression"
                       },
                       "property": {
                         "type": "Identifier",
-                        "name": "initialize",
-                        "range": [
-                          317,
-                          327
-                        ]
-                      },
-                      "range": [
-                        312,
-                        327
-                      ]
+                        "name": "initialize"
+                      }
                     }
-                  ],
-                  "range": [
-                    299,
-                    328
                   ]
                 },
                 "consequent": {
@@ -178,95 +102,39 @@
                           "type": "MemberExpression",
                           "computed": false,
                           "object": {
-                            "type": "ThisExpression",
-                            "range": [
-                              336,
-                              340
-                            ]
+                            "type": "ThisExpression"
                           },
                           "property": {
                             "type": "Identifier",
-                            "name": "initialize",
-                            "range": [
-                              341,
-                              351
-                            ]
-                          },
-                          "range": [
-                            336,
-                            351
-                          ]
+                            "name": "initialize"
+                          }
                         },
                         "arguments": [
                           {
                             "type": "MemberExpression",
                             "computed": false,
                             "object": {
-                              "type": "ThisExpression",
-                              "range": [
-                                352,
-                                356
-                              ]
+                              "type": "ThisExpression"
                             },
                             "property": {
                               "type": "Identifier",
-                              "name": "options",
-                              "range": [
-                                357,
-                                364
-                              ]
-                            },
-                            "range": [
-                              352,
-                              364
-                            ]
+                              "name": "options"
+                            }
                           }
-                        ],
-                        "range": [
-                          336,
-                          365
                         ]
-                      },
-                      "range": [
-                        336,
-                        366
-                      ]
+                      }
                     }
-                  ],
-                  "range": [
-                    330,
-                    370
                   ]
                 },
-                "alternate": null,
-                "range": [
-                  295,
-                  370
-                ]
+                "alternate": null
               }
-            ],
-            "range": [
-              258,
-              372
             ]
           },
           "rest": null,
           "generator": false,
-          "expression": false,
-          "range": [
-            240,
-            372
-          ]
-        },
-        "range": [
-          216,
-          372
-        ]
-      },
-      "range": [
-        216,
-        373
-      ]
+          "expression": false
+        }
+      }
     },
     {
       "type": "ExpressionStatement",
@@ -281,71 +149,31 @@
             "computed": false,
             "object": {
               "type": "Identifier",
-              "name": "Marionette",
-              "range": [
-                375,
-                385
-              ]
+              "name": "Marionette"
             },
             "property": {
               "type": "Identifier",
-              "name": "Controller",
-              "range": [
-                386,
-                396
-              ]
-            },
-            "range": [
-              375,
-              396
-            ]
+              "name": "Controller"
+            }
           },
           "property": {
             "type": "Identifier",
-            "name": "extend",
-            "range": [
-              397,
-              403
-            ]
-          },
-          "range": [
-            375,
-            403
-          ]
+            "name": "extend"
+          }
         },
         "right": {
           "type": "MemberExpression",
           "computed": false,
           "object": {
             "type": "Identifier",
-            "name": "Marionette",
-            "range": [
-              406,
-              416
-            ]
+            "name": "Marionette"
           },
           "property": {
             "type": "Identifier",
-            "name": "extend",
-            "range": [
-              417,
-              423
-            ]
-          },
-          "range": [
-            406,
-            423
-          ]
-        },
-        "range": [
-          375,
-          423
-        ]
-      },
-      "range": [
-        375,
-        424
-      ]
+            "name": "extend"
+          }
+        }
+      }
     },
     {
       "type": "ExpressionStatement",
@@ -356,24 +184,12 @@
           "computed": false,
           "object": {
             "type": "Identifier",
-            "name": "_",
-            "range": [
-              520,
-              521
-            ]
+            "name": "_"
           },
           "property": {
             "type": "Identifier",
-            "name": "extend",
-            "range": [
-              522,
-              528
-            ]
-          },
-          "range": [
-            520,
-            528
-          ]
+            "name": "extend"
+          }
         },
         "arguments": [
           {
@@ -384,61 +200,29 @@
               "computed": false,
               "object": {
                 "type": "Identifier",
-                "name": "Marionette",
-                "range": [
-                  529,
-                  539
-                ]
+                "name": "Marionette"
               },
               "property": {
                 "type": "Identifier",
-                "name": "Controller",
-                "range": [
-                  540,
-                  550
-                ]
-              },
-              "range": [
-                529,
-                550
-              ]
+                "name": "Controller"
+              }
             },
             "property": {
               "type": "Identifier",
-              "name": "prototype",
-              "range": [
-                551,
-                560
-              ]
-            },
-            "range": [
-              529,
-              560
-            ]
+              "name": "prototype"
+            }
           },
           {
             "type": "MemberExpression",
             "computed": false,
             "object": {
               "type": "Identifier",
-              "name": "Backbone",
-              "range": [
-                562,
-                570
-              ]
+              "name": "Backbone"
             },
             "property": {
               "type": "Identifier",
-              "name": "Events",
-              "range": [
-                571,
-                577
-              ]
-            },
-            "range": [
-              562,
-              577
-            ]
+              "name": "Events"
+            }
           },
           {
             "type": "ObjectExpression",
@@ -447,11 +231,7 @@
                 "type": "Property",
                 "key": {
                   "type": "Identifier",
-                  "name": "destroy",
-                  "range": [
-                    583,
-                    590
-                  ]
+                  "name": "destroy"
                 },
                 "value": {
                   "type": "FunctionExpression",
@@ -468,11 +248,7 @@
                             "type": "VariableDeclarator",
                             "id": {
                               "type": "Identifier",
-                              "name": "args",
-                              "range": [
-                                613,
-                                617
-                              ]
+                              "name": "args"
                             },
                             "init": {
                               "type": "CallExpression",
@@ -481,51 +257,23 @@
                                 "computed": false,
                                 "object": {
                                   "type": "Identifier",
-                                  "name": "slice",
-                                  "range": [
-                                    620,
-                                    625
-                                  ]
+                                  "name": "slice"
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "name": "call",
-                                  "range": [
-                                    626,
-                                    630
-                                  ]
-                                },
-                                "range": [
-                                  620,
-                                  630
-                                ]
+                                  "name": "call"
+                                }
                               },
                               "arguments": [
                                 {
                                   "type": "Identifier",
-                                  "name": "arguments",
-                                  "range": [
-                                    631,
-                                    640
-                                  ]
+                                  "name": "arguments"
                                 }
-                              ],
-                              "range": [
-                                620,
-                                641
                               ]
-                            },
-                            "range": [
-                              613,
-                              641
-                            ]
+                            }
                           }
                         ],
-                        "kind": "var",
-                        "range": [
-                          609,
-                          642
-                        ]
+                        "kind": "var"
                       },
                       {
                         "type": "ExpressionStatement",
@@ -538,45 +286,21 @@
                               "type": "MemberExpression",
                               "computed": false,
                               "object": {
-                                "type": "ThisExpression",
-                                "range": [
-                                  647,
-                                  651
-                                ]
+                                "type": "ThisExpression"
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "triggerMethod",
-                                "range": [
-                                  652,
-                                  665
-                                ]
-                              },
-                              "range": [
-                                647,
-                                665
-                              ]
+                                "name": "triggerMethod"
+                              }
                             },
                             "property": {
                               "type": "Identifier",
-                              "name": "apply",
-                              "range": [
-                                666,
-                                671
-                              ]
-                            },
-                            "range": [
-                              647,
-                              671
-                            ]
+                              "name": "apply"
+                            }
                           },
                           "arguments": [
                             {
-                              "type": "ThisExpression",
-                              "range": [
-                                672,
-                                676
-                              ]
+                              "type": "ThisExpression"
                             },
                             {
                               "type": "CallExpression",
@@ -589,56 +313,24 @@
                                     {
                                       "type": "Literal",
                                       "value": "before:destroy",
-                                      "raw": "'before:destroy'",
-                                      "range": [
-                                        679,
-                                        695
-                                      ]
+                                      "raw": "'before:destroy'"
                                     }
-                                  ],
-                                  "range": [
-                                    678,
-                                    696
                                   ]
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "name": "concat",
-                                  "range": [
-                                    697,
-                                    703
-                                  ]
-                                },
-                                "range": [
-                                  678,
-                                  703
-                                ]
+                                  "name": "concat"
+                                }
                               },
                               "arguments": [
                                 {
                                   "type": "Identifier",
-                                  "name": "args",
-                                  "range": [
-                                    704,
-                                    708
-                                  ]
+                                  "name": "args"
                                 }
-                              ],
-                              "range": [
-                                678,
-                                709
                               ]
                             }
-                          ],
-                          "range": [
-                            647,
-                            710
                           ]
-                        },
-                        "range": [
-                          647,
-                          711
-                        ]
+                        }
                       },
                       {
                         "type": "ExpressionStatement",
@@ -651,45 +343,21 @@
                               "type": "MemberExpression",
                               "computed": false,
                               "object": {
-                                "type": "ThisExpression",
-                                "range": [
-                                  716,
-                                  720
-                                ]
+                                "type": "ThisExpression"
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "triggerMethod",
-                                "range": [
-                                  721,
-                                  734
-                                ]
-                              },
-                              "range": [
-                                716,
-                                734
-                              ]
+                                "name": "triggerMethod"
+                              }
                             },
                             "property": {
                               "type": "Identifier",
-                              "name": "apply",
-                              "range": [
-                                735,
-                                740
-                              ]
-                            },
-                            "range": [
-                              716,
-                              740
-                            ]
+                              "name": "apply"
+                            }
                           },
                           "arguments": [
                             {
-                              "type": "ThisExpression",
-                              "range": [
-                                741,
-                                745
-                              ]
+                              "type": "ThisExpression"
                             },
                             {
                               "type": "CallExpression",
@@ -702,56 +370,24 @@
                                     {
                                       "type": "Literal",
                                       "value": "destroy",
-                                      "raw": "'destroy'",
-                                      "range": [
-                                        748,
-                                        757
-                                      ]
+                                      "raw": "'destroy'"
                                     }
-                                  ],
-                                  "range": [
-                                    747,
-                                    758
                                   ]
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "name": "concat",
-                                  "range": [
-                                    759,
-                                    765
-                                  ]
-                                },
-                                "range": [
-                                  747,
-                                  765
-                                ]
+                                  "name": "concat"
+                                }
                               },
                               "arguments": [
                                 {
                                   "type": "Identifier",
-                                  "name": "args",
-                                  "range": [
-                                    766,
-                                    770
-                                  ]
+                                  "name": "args"
                                 }
-                              ],
-                              "range": [
-                                747,
-                                771
                               ]
                             }
-                          ],
-                          "range": [
-                            716,
-                            772
                           ]
-                        },
-                        "range": [
-                          716,
-                          773
-                        ]
+                        }
                       },
                       {
                         "type": "ExpressionStatement",
@@ -761,35 +397,15 @@
                             "type": "MemberExpression",
                             "computed": false,
                             "object": {
-                              "type": "ThisExpression",
-                              "range": [
-                                779,
-                                783
-                              ]
+                              "type": "ThisExpression"
                             },
                             "property": {
                               "type": "Identifier",
-                              "name": "stopListening",
-                              "range": [
-                                784,
-                                797
-                              ]
-                            },
-                            "range": [
-                              779,
-                              797
-                            ]
+                              "name": "stopListening"
+                            }
                           },
-                          "arguments": [],
-                          "range": [
-                            779,
-                            799
-                          ]
-                        },
-                        "range": [
-                          779,
-                          800
-                        ]
+                          "arguments": []
+                        }
                       },
                       {
                         "type": "ExpressionStatement",
@@ -799,1372 +415,74 @@
                             "type": "MemberExpression",
                             "computed": false,
                             "object": {
-                              "type": "ThisExpression",
-                              "range": [
-                                805,
-                                809
-                              ]
+                              "type": "ThisExpression"
                             },
                             "property": {
                               "type": "Identifier",
-                              "name": "off",
-                              "range": [
-                                810,
-                                813
-                              ]
-                            },
-                            "range": [
-                              805,
-                              813
-                            ]
+                              "name": "off"
+                            }
                           },
-                          "arguments": [],
-                          "range": [
-                            805,
-                            815
-                          ]
-                        },
-                        "range": [
-                          805,
-                          816
-                        ]
+                          "arguments": []
+                        }
                       },
                       {
                         "type": "ReturnStatement",
                         "argument": {
-                          "type": "ThisExpression",
-                          "range": [
-                            828,
-                            832
-                          ]
-                        },
-                        "range": [
-                          821,
-                          833
-                        ]
+                          "type": "ThisExpression"
+                        }
                       }
-                    ],
-                    "range": [
-                      603,
-                      837
                     ]
                   },
                   "rest": null,
                   "generator": false,
-                  "expression": false,
-                  "range": [
-                    592,
-                    837
-                  ]
+                  "expression": false
                 },
-                "kind": "init",
-                "range": [
-                  583,
-                  837
-                ]
+                "kind": "init"
               },
               {
                 "type": "Property",
                 "key": {
                   "type": "Identifier",
-                  "name": "triggerMethod",
-                  "range": [
-                    945,
-                    958
-                  ]
+                  "name": "triggerMethod"
                 },
                 "value": {
                   "type": "MemberExpression",
                   "computed": false,
                   "object": {
                     "type": "Identifier",
-                    "name": "Marionette",
-                    "range": [
-                      960,
-                      970
-                    ]
+                    "name": "Marionette"
                   },
                   "property": {
                     "type": "Identifier",
-                    "name": "triggerMethod",
-                    "range": [
-                      971,
-                      984
-                    ]
-                  },
-                  "range": [
-                    960,
-                    984
-                  ]
+                    "name": "triggerMethod"
+                  }
                 },
-                "kind": "init",
-                "range": [
-                  945,
-                  984
-                ]
+                "kind": "init"
               },
               {
                 "type": "Property",
                 "key": {
                   "type": "Identifier",
-                  "name": "getOption",
-                  "range": [
-                    1073,
-                    1082
-                  ]
+                  "name": "getOption"
                 },
                 "value": {
                   "type": "MemberExpression",
                   "computed": false,
                   "object": {
                     "type": "Identifier",
-                    "name": "Marionette",
-                    "range": [
-                      1084,
-                      1094
-                    ]
+                    "name": "Marionette"
                   },
                   "property": {
                     "type": "Identifier",
-                    "name": "proxyGetOption",
-                    "range": [
-                      1095,
-                      1109
-                    ]
-                  },
-                  "range": [
-                    1084,
-                    1109
-                  ]
+                    "name": "proxyGetOption"
+                  }
                 },
-                "kind": "init",
-                "range": [
-                  1073,
-                  1109
-                ]
+                "kind": "init"
               }
-            ],
-            "range": [
-              579,
-              1112
             ]
           }
-        ],
-        "range": [
-          520,
-          1113
         ]
-      },
-      "range": [
-        520,
-        1114
-      ]
-    }
-  ],
-  "range": [
-    216,
-    1114
-  ],
-  "tokens": [
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        216,
-        226
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        226,
-        227
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Controller",
-      "range": [
-        227,
-        237
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        238,
-        239
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        240,
-        248
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        248,
-        249
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "options",
-      "range": [
-        249,
-        256
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        256,
-        257
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        258,
-        259
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        262,
-        266
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        266,
-        267
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "options",
-      "range": [
-        267,
-        274
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        275,
-        276
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "options",
-      "range": [
-        277,
-        284
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "||",
-      "range": [
-        285,
-        287
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        288,
-        289
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        289,
-        290
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        290,
-        291
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "if",
-      "range": [
-        295,
-        297
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        298,
-        299
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_",
-      "range": [
-        299,
-        300
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        300,
-        301
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "isFunction",
-      "range": [
-        301,
-        311
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        311,
-        312
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        312,
-        316
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        316,
-        317
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "initialize",
-      "range": [
-        317,
-        327
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        327,
-        328
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        328,
-        329
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        330,
-        331
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        336,
-        340
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        340,
-        341
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "initialize",
-      "range": [
-        341,
-        351
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        351,
-        352
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        352,
-        356
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        356,
-        357
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "options",
-      "range": [
-        357,
-        364
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        364,
-        365
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        365,
-        366
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        369,
-        370
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        371,
-        372
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        372,
-        373
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        375,
-        385
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        385,
-        386
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Controller",
-      "range": [
-        386,
-        396
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        396,
-        397
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "extend",
-      "range": [
-        397,
-        403
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        404,
-        405
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        406,
-        416
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        416,
-        417
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "extend",
-      "range": [
-        417,
-        423
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        423,
-        424
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_",
-      "range": [
-        520,
-        521
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        521,
-        522
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "extend",
-      "range": [
-        522,
-        528
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        528,
-        529
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        529,
-        539
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        539,
-        540
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Controller",
-      "range": [
-        540,
-        550
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        550,
-        551
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "prototype",
-      "range": [
-        551,
-        560
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        560,
-        561
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Backbone",
-      "range": [
-        562,
-        570
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        570,
-        571
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Events",
-      "range": [
-        571,
-        577
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        577,
-        578
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        579,
-        580
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "destroy",
-      "range": [
-        583,
-        590
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        590,
-        591
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        592,
-        600
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        600,
-        601
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        601,
-        602
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        603,
-        604
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "var",
-      "range": [
-        609,
-        612
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "args",
-      "range": [
-        613,
-        617
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        618,
-        619
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "slice",
-      "range": [
-        620,
-        625
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        625,
-        626
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "call",
-      "range": [
-        626,
-        630
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        630,
-        631
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "arguments",
-      "range": [
-        631,
-        640
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        640,
-        641
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        641,
-        642
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        647,
-        651
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        651,
-        652
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "triggerMethod",
-      "range": [
-        652,
-        665
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        665,
-        666
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "apply",
-      "range": [
-        666,
-        671
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        671,
-        672
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        672,
-        676
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        676,
-        677
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "[",
-      "range": [
-        678,
-        679
-      ]
-    },
-    {
-      "type": "String",
-      "value": "'before:destroy'",
-      "range": [
-        679,
-        695
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "]",
-      "range": [
-        695,
-        696
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        696,
-        697
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "concat",
-      "range": [
-        697,
-        703
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        703,
-        704
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "args",
-      "range": [
-        704,
-        708
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        708,
-        709
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        709,
-        710
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        710,
-        711
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        716,
-        720
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        720,
-        721
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "triggerMethod",
-      "range": [
-        721,
-        734
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        734,
-        735
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "apply",
-      "range": [
-        735,
-        740
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        740,
-        741
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        741,
-        745
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        745,
-        746
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "[",
-      "range": [
-        747,
-        748
-      ]
-    },
-    {
-      "type": "String",
-      "value": "'destroy'",
-      "range": [
-        748,
-        757
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "]",
-      "range": [
-        757,
-        758
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        758,
-        759
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "concat",
-      "range": [
-        759,
-        765
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        765,
-        766
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "args",
-      "range": [
-        766,
-        770
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        770,
-        771
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        771,
-        772
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        772,
-        773
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        779,
-        783
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        783,
-        784
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "stopListening",
-      "range": [
-        784,
-        797
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        797,
-        798
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        798,
-        799
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        799,
-        800
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        805,
-        809
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        809,
-        810
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "off",
-      "range": [
-        810,
-        813
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        813,
-        814
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        814,
-        815
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        815,
-        816
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "return",
-      "range": [
-        821,
-        827
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        828,
-        832
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        832,
-        833
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        836,
-        837
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        837,
-        838
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "triggerMethod",
-      "range": [
-        945,
-        958
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        958,
-        959
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        960,
-        970
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        970,
-        971
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "triggerMethod",
-      "range": [
-        971,
-        984
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        984,
-        985
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "getOption",
-      "range": [
-        1073,
-        1082
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        1082,
-        1083
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        1084,
-        1094
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1094,
-        1095
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "proxyGetOption",
-      "range": [
-        1095,
-        1109
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        1111,
-        1112
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1112,
-        1113
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1113,
-        1114
-      ]
+      }
     }
   ]
 }

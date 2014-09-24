@@ -11,24 +11,12 @@
           "computed": false,
           "object": {
             "type": "Identifier",
-            "name": "Marionette",
-            "range": [
-              166,
-              176
-            ]
+            "name": "Marionette"
           },
           "property": {
             "type": "Identifier",
-            "name": "Callbacks",
-            "range": [
-              177,
-              186
-            ]
-          },
-          "range": [
-            166,
-            186
-          ]
+            "name": "Callbacks"
+          }
         },
         "right": {
           "type": "FunctionExpression",
@@ -47,24 +35,12 @@
                     "type": "MemberExpression",
                     "computed": false,
                     "object": {
-                      "type": "ThisExpression",
-                      "range": [
-                        204,
-                        208
-                      ]
+                      "type": "ThisExpression"
                     },
                     "property": {
                       "type": "Identifier",
-                      "name": "_deferred",
-                      "range": [
-                        209,
-                        218
-                      ]
-                    },
-                    "range": [
-                      204,
-                      218
-                    ]
+                      "name": "_deferred"
+                    }
                   },
                   "right": {
                     "type": "CallExpression",
@@ -73,40 +49,16 @@
                       "computed": false,
                       "object": {
                         "type": "Identifier",
-                        "name": "Marionette",
-                        "range": [
-                          221,
-                          231
-                        ]
+                        "name": "Marionette"
                       },
                       "property": {
                         "type": "Identifier",
-                        "name": "Deferred",
-                        "range": [
-                          232,
-                          240
-                        ]
-                      },
-                      "range": [
-                        221,
-                        240
-                      ]
+                        "name": "Deferred"
+                      }
                     },
-                    "arguments": [],
-                    "range": [
-                      221,
-                      242
-                    ]
-                  },
-                  "range": [
-                    204,
-                    242
-                  ]
-                },
-                "range": [
-                  204,
-                  243
-                ]
+                    "arguments": []
+                  }
+                }
               },
               {
                 "type": "ExpressionStatement",
@@ -117,66 +69,26 @@
                     "type": "MemberExpression",
                     "computed": false,
                     "object": {
-                      "type": "ThisExpression",
-                      "range": [
-                        246,
-                        250
-                      ]
+                      "type": "ThisExpression"
                     },
                     "property": {
                       "type": "Identifier",
-                      "name": "_callbacks",
-                      "range": [
-                        251,
-                        261
-                      ]
-                    },
-                    "range": [
-                      246,
-                      261
-                    ]
+                      "name": "_callbacks"
+                    }
                   },
                   "right": {
                     "type": "ArrayExpression",
-                    "elements": [],
-                    "range": [
-                      264,
-                      266
-                    ]
-                  },
-                  "range": [
-                    246,
-                    266
-                  ]
-                },
-                "range": [
-                  246,
-                  267
-                ]
+                    "elements": []
+                  }
+                }
               }
-            ],
-            "range": [
-              200,
-              269
             ]
           },
           "rest": null,
           "generator": false,
-          "expression": false,
-          "range": [
-            189,
-            269
-          ]
-        },
-        "range": [
-          166,
-          269
-        ]
-      },
-      "range": [
-        166,
-        270
-      ]
+          "expression": false
+        }
+      }
     },
     {
       "type": "ExpressionStatement",
@@ -187,24 +99,12 @@
           "computed": false,
           "object": {
             "type": "Identifier",
-            "name": "_",
-            "range": [
-              272,
-              273
-            ]
+            "name": "_"
           },
           "property": {
             "type": "Identifier",
-            "name": "extend",
-            "range": [
-              274,
-              280
-            ]
-          },
-          "range": [
-            272,
-            280
-          ]
+            "name": "extend"
+          }
         },
         "arguments": [
           {
@@ -215,37 +115,17 @@
               "computed": false,
               "object": {
                 "type": "Identifier",
-                "name": "Marionette",
-                "range": [
-                  281,
-                  291
-                ]
+                "name": "Marionette"
               },
               "property": {
                 "type": "Identifier",
-                "name": "Callbacks",
-                "range": [
-                  292,
-                  301
-                ]
-              },
-              "range": [
-                281,
-                301
-              ]
+                "name": "Callbacks"
+              }
             },
             "property": {
               "type": "Identifier",
-              "name": "prototype",
-              "range": [
-                302,
-                311
-              ]
-            },
-            "range": [
-              281,
-              311
-            ]
+              "name": "prototype"
+            }
           },
           {
             "type": "ObjectExpression",
@@ -254,11 +134,7 @@
                 "type": "Property",
                 "key": {
                   "type": "Identifier",
-                  "name": "add",
-                  "range": [
-                    469,
-                    472
-                  ]
+                  "name": "add"
                 },
                 "value": {
                   "type": "FunctionExpression",
@@ -266,19 +142,11 @@
                   "params": [
                     {
                       "type": "Identifier",
-                      "name": "callback",
-                      "range": [
-                        483,
-                        491
-                      ]
+                      "name": "callback"
                     },
                     {
                       "type": "Identifier",
-                      "name": "contextOverride",
-                      "range": [
-                        493,
-                        508
-                      ]
+                      "name": "contextOverride"
                     }
                   ],
                   "defaults": [],
@@ -292,11 +160,7 @@
                             "type": "VariableDeclarator",
                             "id": {
                               "type": "Identifier",
-                              "name": "promise",
-                              "range": [
-                                520,
-                                527
-                              ]
+                              "name": "promise"
                             },
                             "init": {
                               "type": "CallExpression",
@@ -305,75 +169,35 @@
                                 "computed": false,
                                 "object": {
                                   "type": "Identifier",
-                                  "name": "_",
-                                  "range": [
-                                    530,
-                                    531
-                                  ]
+                                  "name": "_"
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "name": "result",
-                                  "range": [
-                                    532,
-                                    538
-                                  ]
-                                },
-                                "range": [
-                                  530,
-                                  538
-                                ]
+                                  "name": "result"
+                                }
                               },
                               "arguments": [
                                 {
                                   "type": "MemberExpression",
                                   "computed": false,
                                   "object": {
-                                    "type": "ThisExpression",
-                                    "range": [
-                                      539,
-                                      543
-                                    ]
+                                    "type": "ThisExpression"
                                   },
                                   "property": {
                                     "type": "Identifier",
-                                    "name": "_deferred",
-                                    "range": [
-                                      544,
-                                      553
-                                    ]
-                                  },
-                                  "range": [
-                                    539,
-                                    553
-                                  ]
+                                    "name": "_deferred"
+                                  }
                                 },
                                 {
                                   "type": "Literal",
                                   "value": "promise",
-                                  "raw": "'promise'",
-                                  "range": [
-                                    555,
-                                    564
-                                  ]
+                                  "raw": "'promise'"
                                 }
-                              ],
-                              "range": [
-                                530,
-                                565
                               ]
-                            },
-                            "range": [
-                              520,
-                              565
-                            ]
+                            }
                           }
                         ],
-                        "kind": "var",
-                        "range": [
-                          516,
-                          566
-                        ]
+                        "kind": "var"
                       },
                       {
                         "type": "ExpressionStatement",
@@ -386,37 +210,17 @@
                               "type": "MemberExpression",
                               "computed": false,
                               "object": {
-                                "type": "ThisExpression",
-                                "range": [
-                                  572,
-                                  576
-                                ]
+                                "type": "ThisExpression"
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "_callbacks",
-                                "range": [
-                                  577,
-                                  587
-                                ]
-                              },
-                              "range": [
-                                572,
-                                587
-                              ]
+                                "name": "_callbacks"
+                              }
                             },
                             "property": {
                               "type": "Identifier",
-                              "name": "push",
-                              "range": [
-                                588,
-                                592
-                              ]
-                            },
-                            "range": [
-                              572,
-                              592
-                            ]
+                              "name": "push"
+                            }
                           },
                           "arguments": [
                             {
@@ -426,66 +230,30 @@
                                   "type": "Property",
                                   "key": {
                                     "type": "Identifier",
-                                    "name": "cb",
-                                    "range": [
-                                      594,
-                                      596
-                                    ]
+                                    "name": "cb"
                                   },
                                   "value": {
                                     "type": "Identifier",
-                                    "name": "callback",
-                                    "range": [
-                                      598,
-                                      606
-                                    ]
+                                    "name": "callback"
                                   },
-                                  "kind": "init",
-                                  "range": [
-                                    594,
-                                    606
-                                  ]
+                                  "kind": "init"
                                 },
                                 {
                                   "type": "Property",
                                   "key": {
                                     "type": "Identifier",
-                                    "name": "ctx",
-                                    "range": [
-                                      608,
-                                      611
-                                    ]
+                                    "name": "ctx"
                                   },
                                   "value": {
                                     "type": "Identifier",
-                                    "name": "contextOverride",
-                                    "range": [
-                                      613,
-                                      628
-                                    ]
+                                    "name": "contextOverride"
                                   },
-                                  "kind": "init",
-                                  "range": [
-                                    608,
-                                    628
-                                  ]
+                                  "kind": "init"
                                 }
-                              ],
-                              "range": [
-                                593,
-                                629
                               ]
                             }
-                          ],
-                          "range": [
-                            572,
-                            630
                           ]
-                        },
-                        "range": [
-                          572,
-                          631
-                        ]
+                        }
                       },
                       {
                         "type": "ExpressionStatement",
@@ -496,24 +264,12 @@
                             "computed": false,
                             "object": {
                               "type": "Identifier",
-                              "name": "promise",
-                              "range": [
-                                637,
-                                644
-                              ]
+                              "name": "promise"
                             },
                             "property": {
                               "type": "Identifier",
-                              "name": "then",
-                              "range": [
-                                645,
-                                649
-                              ]
-                            },
-                            "range": [
-                              637,
-                              649
-                            ]
+                              "name": "then"
+                            }
                           },
                           "arguments": [
                             {
@@ -522,11 +278,7 @@
                               "params": [
                                 {
                                   "type": "Identifier",
-                                  "name": "args",
-                                  "range": [
-                                    659,
-                                    663
-                                  ]
+                                  "name": "args"
                                 }
                               ],
                               "defaults": [],
@@ -537,11 +289,7 @@
                                     "type": "IfStatement",
                                     "test": {
                                       "type": "Identifier",
-                                      "name": "contextOverride",
-                                      "range": [
-                                        677,
-                                        692
-                                      ]
+                                      "name": "contextOverride"
                                     },
                                     "consequent": {
                                       "type": "BlockStatement",
@@ -556,54 +304,22 @@
                                               "computed": false,
                                               "object": {
                                                 "type": "Identifier",
-                                                "name": "args",
-                                                "range": [
-                                                  695,
-                                                  699
-                                                ]
+                                                "name": "args"
                                               },
                                               "property": {
                                                 "type": "Identifier",
-                                                "name": "context",
-                                                "range": [
-                                                  700,
-                                                  707
-                                                ]
-                                              },
-                                              "range": [
-                                                695,
-                                                707
-                                              ]
+                                                "name": "context"
+                                              }
                                             },
                                             "right": {
                                               "type": "Identifier",
-                                              "name": "contextOverride",
-                                              "range": [
-                                                710,
-                                                725
-                                              ]
-                                            },
-                                            "range": [
-                                              695,
-                                              725
-                                            ]
-                                          },
-                                          "range": [
-                                            695,
-                                            726
-                                          ]
+                                              "name": "contextOverride"
+                                            }
+                                          }
                                         }
-                                      ],
-                                      "range": [
-                                        693,
-                                        728
                                       ]
                                     },
-                                    "alternate": null,
-                                    "range": [
-                                      673,
-                                      728
-                                    ]
+                                    "alternate": null
                                   },
                                   {
                                     "type": "ExpressionStatement",
@@ -614,24 +330,12 @@
                                         "computed": false,
                                         "object": {
                                           "type": "Identifier",
-                                          "name": "callback",
-                                          "range": [
-                                            735,
-                                            743
-                                          ]
+                                          "name": "callback"
                                         },
                                         "property": {
                                           "type": "Identifier",
-                                          "name": "call",
-                                          "range": [
-                                            744,
-                                            748
-                                          ]
-                                        },
-                                        "range": [
-                                          735,
-                                          748
-                                        ]
+                                          "name": "call"
+                                        }
                                       },
                                       "arguments": [
                                         {
@@ -639,114 +343,50 @@
                                           "computed": false,
                                           "object": {
                                             "type": "Identifier",
-                                            "name": "args",
-                                            "range": [
-                                              749,
-                                              753
-                                            ]
+                                            "name": "args"
                                           },
                                           "property": {
                                             "type": "Identifier",
-                                            "name": "context",
-                                            "range": [
-                                              754,
-                                              761
-                                            ]
-                                          },
-                                          "range": [
-                                            749,
-                                            761
-                                          ]
+                                            "name": "context"
+                                          }
                                         },
                                         {
                                           "type": "MemberExpression",
                                           "computed": false,
                                           "object": {
                                             "type": "Identifier",
-                                            "name": "args",
-                                            "range": [
-                                              763,
-                                              767
-                                            ]
+                                            "name": "args"
                                           },
                                           "property": {
                                             "type": "Identifier",
-                                            "name": "options",
-                                            "range": [
-                                              768,
-                                              775
-                                            ]
-                                          },
-                                          "range": [
-                                            763,
-                                            775
-                                          ]
+                                            "name": "options"
+                                          }
                                         }
-                                      ],
-                                      "range": [
-                                        735,
-                                        776
                                       ]
-                                    },
-                                    "range": [
-                                      735,
-                                      777
-                                    ]
+                                    }
                                   }
-                                ],
-                                "range": [
-                                  665,
-                                  783
                                 ]
                               },
                               "rest": null,
                               "generator": false,
-                              "expression": false,
-                              "range": [
-                                650,
-                                783
-                              ]
+                              "expression": false
                             }
-                          ],
-                          "range": [
-                            637,
-                            784
                           ]
-                        },
-                        "range": [
-                          637,
-                          785
-                        ]
+                        }
                       }
-                    ],
-                    "range": [
-                      510,
-                      789
                     ]
                   },
                   "rest": null,
                   "generator": false,
-                  "expression": false,
-                  "range": [
-                    474,
-                    789
-                  ]
+                  "expression": false
                 },
-                "kind": "init",
-                "range": [
-                  469,
-                  789
-                ]
+                "kind": "init"
               },
               {
                 "type": "Property",
                 "key": {
                   "type": "Identifier",
-                  "name": "run",
-                  "range": [
-                    957,
-                    960
-                  ]
+                  "name": "run"
                 },
                 "value": {
                   "type": "FunctionExpression",
@@ -754,19 +394,11 @@
                   "params": [
                     {
                       "type": "Identifier",
-                      "name": "options",
-                      "range": [
-                        971,
-                        978
-                      ]
+                      "name": "options"
                     },
                     {
                       "type": "Identifier",
-                      "name": "context",
-                      "range": [
-                        980,
-                        987
-                      ]
+                      "name": "context"
                     }
                   ],
                   "defaults": [],
@@ -784,37 +416,17 @@
                               "type": "MemberExpression",
                               "computed": false,
                               "object": {
-                                "type": "ThisExpression",
-                                "range": [
-                                  995,
-                                  999
-                                ]
+                                "type": "ThisExpression"
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "_deferred",
-                                "range": [
-                                  1000,
-                                  1009
-                                ]
-                              },
-                              "range": [
-                                995,
-                                1009
-                              ]
+                                "name": "_deferred"
+                              }
                             },
                             "property": {
                               "type": "Identifier",
-                              "name": "resolve",
-                              "range": [
-                                1010,
-                                1017
-                              ]
-                            },
-                            "range": [
-                              995,
-                              1017
-                            ]
+                              "name": "resolve"
+                            }
                           },
                           "arguments": [
                             {
@@ -824,96 +436,44 @@
                                   "type": "Property",
                                   "key": {
                                     "type": "Identifier",
-                                    "name": "options",
-                                    "range": [
-                                      1026,
-                                      1033
-                                    ]
+                                    "name": "options"
                                   },
                                   "value": {
                                     "type": "Identifier",
-                                    "name": "options",
-                                    "range": [
-                                      1035,
-                                      1042
-                                    ]
+                                    "name": "options"
                                   },
-                                  "kind": "init",
-                                  "range": [
-                                    1026,
-                                    1042
-                                  ]
+                                  "kind": "init"
                                 },
                                 {
                                   "type": "Property",
                                   "key": {
                                     "type": "Identifier",
-                                    "name": "context",
-                                    "range": [
-                                      1050,
-                                      1057
-                                    ]
+                                    "name": "context"
                                   },
                                   "value": {
                                     "type": "Identifier",
-                                    "name": "context",
-                                    "range": [
-                                      1059,
-                                      1066
-                                    ]
+                                    "name": "context"
                                   },
-                                  "kind": "init",
-                                  "range": [
-                                    1050,
-                                    1066
-                                  ]
+                                  "kind": "init"
                                 }
-                              ],
-                              "range": [
-                                1018,
-                                1072
                               ]
                             }
-                          ],
-                          "range": [
-                            995,
-                            1073
                           ]
-                        },
-                        "range": [
-                          995,
-                          1074
-                        ]
+                        }
                       }
-                    ],
-                    "range": [
-                      989,
-                      1078
                     ]
                   },
                   "rest": null,
                   "generator": false,
-                  "expression": false,
-                  "range": [
-                    962,
-                    1078
-                  ]
+                  "expression": false
                 },
-                "kind": "init",
-                "range": [
-                  957,
-                  1078
-                ]
+                "kind": "init"
               },
               {
                 "type": "Property",
                 "key": {
                   "type": "Identifier",
-                  "name": "reset",
-                  "range": [
-                    1220,
-                    1225
-                  ]
+                  "name": "reset"
                 },
                 "value": {
                   "type": "FunctionExpression",
@@ -930,46 +490,22 @@
                             "type": "VariableDeclarator",
                             "id": {
                               "type": "Identifier",
-                              "name": "callbacks",
-                              "range": [
-                                1248,
-                                1257
-                              ]
+                              "name": "callbacks"
                             },
                             "init": {
                               "type": "MemberExpression",
                               "computed": false,
                               "object": {
-                                "type": "ThisExpression",
-                                "range": [
-                                  1260,
-                                  1264
-                                ]
+                                "type": "ThisExpression"
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "_callbacks",
-                                "range": [
-                                  1265,
-                                  1275
-                                ]
-                              },
-                              "range": [
-                                1260,
-                                1275
-                              ]
-                            },
-                            "range": [
-                              1248,
-                              1275
-                            ]
+                                "name": "_callbacks"
+                              }
+                            }
                           }
                         ],
-                        "kind": "var",
-                        "range": [
-                          1244,
-                          1276
-                        ]
+                        "kind": "var"
                       },
                       {
                         "type": "ExpressionStatement",
@@ -980,24 +516,12 @@
                             "type": "MemberExpression",
                             "computed": false,
                             "object": {
-                              "type": "ThisExpression",
-                              "range": [
-                                1281,
-                                1285
-                              ]
+                              "type": "ThisExpression"
                             },
                             "property": {
                               "type": "Identifier",
-                              "name": "_deferred",
-                              "range": [
-                                1286,
-                                1295
-                              ]
-                            },
-                            "range": [
-                              1281,
-                              1295
-                            ]
+                              "name": "_deferred"
+                            }
                           },
                           "right": {
                             "type": "CallExpression",
@@ -1006,40 +530,16 @@
                               "computed": false,
                               "object": {
                                 "type": "Identifier",
-                                "name": "Marionette",
-                                "range": [
-                                  1298,
-                                  1308
-                                ]
+                                "name": "Marionette"
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "Deferred",
-                                "range": [
-                                  1309,
-                                  1317
-                                ]
-                              },
-                              "range": [
-                                1298,
-                                1317
-                              ]
+                                "name": "Deferred"
+                              }
                             },
-                            "arguments": [],
-                            "range": [
-                              1298,
-                              1319
-                            ]
-                          },
-                          "range": [
-                            1281,
-                            1319
-                          ]
-                        },
-                        "range": [
-                          1281,
-                          1320
-                        ]
+                            "arguments": []
+                          }
+                        }
                       },
                       {
                         "type": "ExpressionStatement",
@@ -1050,42 +550,18 @@
                             "type": "MemberExpression",
                             "computed": false,
                             "object": {
-                              "type": "ThisExpression",
-                              "range": [
-                                1325,
-                                1329
-                              ]
+                              "type": "ThisExpression"
                             },
                             "property": {
                               "type": "Identifier",
-                              "name": "_callbacks",
-                              "range": [
-                                1330,
-                                1340
-                              ]
-                            },
-                            "range": [
-                              1325,
-                              1340
-                            ]
+                              "name": "_callbacks"
+                            }
                           },
                           "right": {
                             "type": "ArrayExpression",
-                            "elements": [],
-                            "range": [
-                              1343,
-                              1345
-                            ]
-                          },
-                          "range": [
-                            1325,
-                            1345
-                          ]
-                        },
-                        "range": [
-                          1325,
-                          1346
-                        ]
+                            "elements": []
+                          }
+                        }
                       },
                       {
                         "type": "ExpressionStatement",
@@ -1096,33 +572,17 @@
                             "computed": false,
                             "object": {
                               "type": "Identifier",
-                              "name": "_",
-                              "range": [
-                                1352,
-                                1353
-                              ]
+                              "name": "_"
                             },
                             "property": {
                               "type": "Identifier",
-                              "name": "each",
-                              "range": [
-                                1354,
-                                1358
-                              ]
-                            },
-                            "range": [
-                              1352,
-                              1358
-                            ]
+                              "name": "each"
+                            }
                           },
                           "arguments": [
                             {
                               "type": "Identifier",
-                              "name": "callbacks",
-                              "range": [
-                                1359,
-                                1368
-                              ]
+                              "name": "callbacks"
                             },
                             {
                               "type": "FunctionExpression",
@@ -1130,11 +590,7 @@
                               "params": [
                                 {
                                   "type": "Identifier",
-                                  "name": "cb",
-                                  "range": [
-                                    1379,
-                                    1381
-                                  ]
+                                  "name": "cb"
                                 }
                               ],
                               "defaults": [],
@@ -1149,24 +605,12 @@
                                         "type": "MemberExpression",
                                         "computed": false,
                                         "object": {
-                                          "type": "ThisExpression",
-                                          "range": [
-                                            1391,
-                                            1395
-                                          ]
+                                          "type": "ThisExpression"
                                         },
                                         "property": {
                                           "type": "Identifier",
-                                          "name": "add",
-                                          "range": [
-                                            1396,
-                                            1399
-                                          ]
-                                        },
-                                        "range": [
-                                          1391,
-                                          1399
-                                        ]
+                                          "name": "add"
+                                        }
                                       },
                                       "arguments": [
                                         {
@@ -1174,1798 +618,52 @@
                                           "computed": false,
                                           "object": {
                                             "type": "Identifier",
-                                            "name": "cb",
-                                            "range": [
-                                              1400,
-                                              1402
-                                            ]
+                                            "name": "cb"
                                           },
                                           "property": {
                                             "type": "Identifier",
-                                            "name": "cb",
-                                            "range": [
-                                              1403,
-                                              1405
-                                            ]
-                                          },
-                                          "range": [
-                                            1400,
-                                            1405
-                                          ]
+                                            "name": "cb"
+                                          }
                                         },
                                         {
                                           "type": "MemberExpression",
                                           "computed": false,
                                           "object": {
                                             "type": "Identifier",
-                                            "name": "cb",
-                                            "range": [
-                                              1407,
-                                              1409
-                                            ]
+                                            "name": "cb"
                                           },
                                           "property": {
                                             "type": "Identifier",
-                                            "name": "ctx",
-                                            "range": [
-                                              1410,
-                                              1413
-                                            ]
-                                          },
-                                          "range": [
-                                            1407,
-                                            1413
-                                          ]
+                                            "name": "ctx"
+                                          }
                                         }
-                                      ],
-                                      "range": [
-                                        1391,
-                                        1414
                                       ]
-                                    },
-                                    "range": [
-                                      1391,
-                                      1415
-                                    ]
+                                    }
                                   }
-                                ],
-                                "range": [
-                                  1383,
-                                  1421
                                 ]
                               },
                               "rest": null,
                               "generator": false,
-                              "expression": false,
-                              "range": [
-                                1370,
-                                1421
-                              ]
+                              "expression": false
                             },
                             {
-                              "type": "ThisExpression",
-                              "range": [
-                                1423,
-                                1427
-                              ]
+                              "type": "ThisExpression"
                             }
-                          ],
-                          "range": [
-                            1352,
-                            1428
                           ]
-                        },
-                        "range": [
-                          1352,
-                          1429
-                        ]
+                        }
                       }
-                    ],
-                    "range": [
-                      1238,
-                      1433
                     ]
                   },
                   "rest": null,
                   "generator": false,
-                  "expression": false,
-                  "range": [
-                    1227,
-                    1433
-                  ]
+                  "expression": false
                 },
-                "kind": "init",
-                "range": [
-                  1220,
-                  1433
-                ]
+                "kind": "init"
               }
-            ],
-            "range": [
-              313,
-              1435
             ]
           }
-        ],
-        "range": [
-          272,
-          1436
         ]
-      },
-      "range": [
-        272,
-        1437
-      ]
-    }
-  ],
-  "range": [
-    166,
-    1437
-  ],
-  "tokens": [
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        166,
-        176
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        176,
-        177
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Callbacks",
-      "range": [
-        177,
-        186
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        187,
-        188
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        189,
-        197
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        197,
-        198
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        198,
-        199
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        200,
-        201
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        204,
-        208
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        208,
-        209
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_deferred",
-      "range": [
-        209,
-        218
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        219,
-        220
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        221,
-        231
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        231,
-        232
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Deferred",
-      "range": [
-        232,
-        240
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        240,
-        241
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        241,
-        242
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        242,
-        243
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        246,
-        250
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        250,
-        251
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_callbacks",
-      "range": [
-        251,
-        261
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        262,
-        263
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "[",
-      "range": [
-        264,
-        265
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "]",
-      "range": [
-        265,
-        266
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        266,
-        267
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        268,
-        269
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        269,
-        270
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_",
-      "range": [
-        272,
-        273
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        273,
-        274
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "extend",
-      "range": [
-        274,
-        280
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        280,
-        281
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        281,
-        291
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        291,
-        292
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Callbacks",
-      "range": [
-        292,
-        301
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        301,
-        302
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "prototype",
-      "range": [
-        302,
-        311
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        311,
-        312
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        313,
-        314
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "add",
-      "range": [
-        469,
-        472
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        472,
-        473
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        474,
-        482
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        482,
-        483
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "callback",
-      "range": [
-        483,
-        491
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        491,
-        492
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "contextOverride",
-      "range": [
-        493,
-        508
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        508,
-        509
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        510,
-        511
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "var",
-      "range": [
-        516,
-        519
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "promise",
-      "range": [
-        520,
-        527
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        528,
-        529
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_",
-      "range": [
-        530,
-        531
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        531,
-        532
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "result",
-      "range": [
-        532,
-        538
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        538,
-        539
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        539,
-        543
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        543,
-        544
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_deferred",
-      "range": [
-        544,
-        553
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        553,
-        554
-      ]
-    },
-    {
-      "type": "String",
-      "value": "'promise'",
-      "range": [
-        555,
-        564
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        564,
-        565
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        565,
-        566
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        572,
-        576
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        576,
-        577
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_callbacks",
-      "range": [
-        577,
-        587
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        587,
-        588
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "push",
-      "range": [
-        588,
-        592
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        592,
-        593
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        593,
-        594
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "cb",
-      "range": [
-        594,
-        596
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        596,
-        597
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "callback",
-      "range": [
-        598,
-        606
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        606,
-        607
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "ctx",
-      "range": [
-        608,
-        611
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        611,
-        612
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "contextOverride",
-      "range": [
-        613,
-        628
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        628,
-        629
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        629,
-        630
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        630,
-        631
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "promise",
-      "range": [
-        637,
-        644
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        644,
-        645
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "then",
-      "range": [
-        645,
-        649
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        649,
-        650
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        650,
-        658
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        658,
-        659
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "args",
-      "range": [
-        659,
-        663
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        663,
-        664
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        665,
-        666
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "if",
-      "range": [
-        673,
-        675
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        676,
-        677
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "contextOverride",
-      "range": [
-        677,
-        692
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        692,
-        693
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        693,
-        694
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "args",
-      "range": [
-        695,
-        699
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        699,
-        700
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "context",
-      "range": [
-        700,
-        707
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        708,
-        709
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "contextOverride",
-      "range": [
-        710,
-        725
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        725,
-        726
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        727,
-        728
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "callback",
-      "range": [
-        735,
-        743
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        743,
-        744
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "call",
-      "range": [
-        744,
-        748
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        748,
-        749
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "args",
-      "range": [
-        749,
-        753
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        753,
-        754
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "context",
-      "range": [
-        754,
-        761
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        761,
-        762
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "args",
-      "range": [
-        763,
-        767
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        767,
-        768
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "options",
-      "range": [
-        768,
-        775
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        775,
-        776
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        776,
-        777
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        782,
-        783
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        783,
-        784
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        784,
-        785
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        788,
-        789
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        789,
-        790
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "run",
-      "range": [
-        957,
-        960
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        960,
-        961
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        962,
-        970
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        970,
-        971
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "options",
-      "range": [
-        971,
-        978
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        978,
-        979
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "context",
-      "range": [
-        980,
-        987
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        987,
-        988
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        989,
-        990
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        995,
-        999
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        999,
-        1000
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_deferred",
-      "range": [
-        1000,
-        1009
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1009,
-        1010
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "resolve",
-      "range": [
-        1010,
-        1017
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1017,
-        1018
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        1018,
-        1019
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "options",
-      "range": [
-        1026,
-        1033
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        1033,
-        1034
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "options",
-      "range": [
-        1035,
-        1042
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1042,
-        1043
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "context",
-      "range": [
-        1050,
-        1057
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        1057,
-        1058
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "context",
-      "range": [
-        1059,
-        1066
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        1071,
-        1072
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1072,
-        1073
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1073,
-        1074
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        1077,
-        1078
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1078,
-        1079
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "reset",
-      "range": [
-        1220,
-        1225
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        1225,
-        1226
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        1227,
-        1235
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1235,
-        1236
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1236,
-        1237
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        1238,
-        1239
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "var",
-      "range": [
-        1244,
-        1247
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "callbacks",
-      "range": [
-        1248,
-        1257
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        1258,
-        1259
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1260,
-        1264
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1264,
-        1265
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_callbacks",
-      "range": [
-        1265,
-        1275
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1275,
-        1276
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1281,
-        1285
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1285,
-        1286
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_deferred",
-      "range": [
-        1286,
-        1295
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        1296,
-        1297
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        1298,
-        1308
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1308,
-        1309
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Deferred",
-      "range": [
-        1309,
-        1317
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1317,
-        1318
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1318,
-        1319
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1319,
-        1320
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1325,
-        1329
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1329,
-        1330
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_callbacks",
-      "range": [
-        1330,
-        1340
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        1341,
-        1342
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "[",
-      "range": [
-        1343,
-        1344
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "]",
-      "range": [
-        1344,
-        1345
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1345,
-        1346
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_",
-      "range": [
-        1352,
-        1353
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1353,
-        1354
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "each",
-      "range": [
-        1354,
-        1358
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1358,
-        1359
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "callbacks",
-      "range": [
-        1359,
-        1368
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1368,
-        1369
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        1370,
-        1378
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1378,
-        1379
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "cb",
-      "range": [
-        1379,
-        1381
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1381,
-        1382
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        1383,
-        1384
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1391,
-        1395
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1395,
-        1396
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "add",
-      "range": [
-        1396,
-        1399
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1399,
-        1400
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "cb",
-      "range": [
-        1400,
-        1402
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1402,
-        1403
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "cb",
-      "range": [
-        1403,
-        1405
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1405,
-        1406
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "cb",
-      "range": [
-        1407,
-        1409
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1409,
-        1410
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "ctx",
-      "range": [
-        1410,
-        1413
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1413,
-        1414
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1414,
-        1415
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        1420,
-        1421
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1421,
-        1422
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1423,
-        1427
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1427,
-        1428
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1428,
-        1429
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        1432,
-        1433
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        1434,
-        1435
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1435,
-        1436
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1436,
-        1437
-      ]
+      }
     }
   ]
 }

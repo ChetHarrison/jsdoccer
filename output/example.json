@@ -8,78 +8,67 @@
           "type": "VariableDeclarator",
           "id": {
             "type": "Identifier",
-            "name": "answer",
-            "range": [
-              4,
-              10
-            ]
+            "name": "func"
+          },
+          "init": {
+            "type": "FunctionExpression",
+            "id": null,
+            "params": [
+              {
+                "type": "Identifier",
+                "name": "arg1"
+              },
+              {
+                "type": "Identifier",
+                "name": "arg2"
+              }
+            ],
+            "defaults": [],
+            "body": {
+              "type": "BlockStatement",
+              "body": [
+                {
+                  "type": "ReturnStatement",
+                  "argument": {
+                    "type": "BinaryExpression",
+                    "operator": "+",
+                    "left": {
+                      "type": "Identifier",
+                      "name": "arg1"
+                    },
+                    "right": {
+                      "type": "Identifier",
+                      "name": "arg2"
+                    }
+                  }
+                }
+              ]
+            },
+            "rest": null,
+            "generator": false,
+            "expression": false
+          }
+        }
+      ],
+      "kind": "var"
+    },
+    {
+      "type": "VariableDeclaration",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "answer"
           },
           "init": {
             "type": "Literal",
             "value": 42,
-            "raw": "42",
-            "range": [
-              13,
-              15
-            ]
-          },
-          "range": [
-            4,
-            15
-          ]
+            "raw": "42"
+          }
         }
       ],
-      "kind": "var",
-      "range": [
-        0,
-        16
-      ]
-    }
-  ],
-  "range": [
-    0,
-    16
-  ],
-  "tokens": [
-    {
-      "type": "Keyword",
-      "value": "var",
-      "range": [
-        0,
-        3
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "answer",
-      "range": [
-        4,
-        10
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        11,
-        12
-      ]
-    },
-    {
-      "type": "Numeric",
-      "value": "42",
-      "range": [
-        13,
-        15
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        15,
-        16
-      ]
+      "kind": "var"
     }
   ]
 }

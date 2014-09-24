@@ -11,24 +11,12 @@
           "computed": false,
           "object": {
             "type": "Identifier",
-            "name": "Marionette",
-            "range": [
-              244,
-              254
-            ]
+            "name": "Marionette"
           },
           "property": {
             "type": "Identifier",
-            "name": "ItemView",
-            "range": [
-              255,
-              263
-            ]
-          },
-          "range": [
-            244,
-            263
-          ]
+            "name": "ItemView"
+          }
         },
         "right": {
           "type": "CallExpression",
@@ -40,37 +28,17 @@
               "computed": false,
               "object": {
                 "type": "Identifier",
-                "name": "Marionette",
-                "range": [
-                  266,
-                  276
-                ]
+                "name": "Marionette"
               },
               "property": {
                 "type": "Identifier",
-                "name": "View",
-                "range": [
-                  277,
-                  281
-                ]
-              },
-              "range": [
-                266,
-                281
-              ]
+                "name": "View"
+              }
             },
             "property": {
               "type": "Identifier",
-              "name": "extend",
-              "range": [
-                282,
-                288
-              ]
-            },
-            "range": [
-              266,
-              288
-            ]
+              "name": "extend"
+            }
           },
           "arguments": [
             {
@@ -80,11 +48,7 @@
                   "type": "Property",
                   "key": {
                     "type": "Identifier",
-                    "name": "constructor",
-                    "range": [
-                      423,
-                      434
-                    ]
+                    "name": "constructor"
                   },
                   "value": {
                     "type": "FunctionExpression",
@@ -106,94 +70,42 @@
                                 "computed": false,
                                 "object": {
                                   "type": "Identifier",
-                                  "name": "Marionette",
-                                  "range": [
-                                    453,
-                                    463
-                                  ]
+                                  "name": "Marionette"
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "name": "View",
-                                  "range": [
-                                    464,
-                                    468
-                                  ]
-                                },
-                                "range": [
-                                  453,
-                                  468
-                                ]
+                                  "name": "View"
+                                }
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "apply",
-                                "range": [
-                                  469,
-                                  474
-                                ]
-                              },
-                              "range": [
-                                453,
-                                474
-                              ]
+                                "name": "apply"
+                              }
                             },
                             "arguments": [
                               {
-                                "type": "ThisExpression",
-                                "range": [
-                                  475,
-                                  479
-                                ]
+                                "type": "ThisExpression"
                               },
                               {
                                 "type": "Identifier",
-                                "name": "arguments",
-                                "range": [
-                                  481,
-                                  490
-                                ]
+                                "name": "arguments"
                               }
-                            ],
-                            "range": [
-                              453,
-                              491
                             ]
-                          },
-                          "range": [
-                            453,
-                            492
-                          ]
+                          }
                         }
-                      ],
-                      "range": [
-                        447,
-                        496
                       ]
                     },
                     "rest": null,
                     "generator": false,
-                    "expression": false,
-                    "range": [
-                      436,
-                      496
-                    ]
+                    "expression": false
                   },
-                  "kind": "init",
-                  "range": [
-                    423,
-                    496
-                  ]
+                  "kind": "init"
                 },
                 {
                   "type": "Property",
                   "key": {
                     "type": "Identifier",
-                    "name": "serializeData",
-                    "range": [
-                      979,
-                      992
-                    ]
+                    "name": "serializeData"
                   },
                   "value": {
                     "type": "FunctionExpression",
@@ -210,31 +122,15 @@
                               "type": "VariableDeclarator",
                               "id": {
                                 "type": "Identifier",
-                                "name": "data",
-                                "range": [
-                                  1014,
-                                  1018
-                                ]
+                                "name": "data"
                               },
                               "init": {
                                 "type": "ObjectExpression",
-                                "properties": [],
-                                "range": [
-                                  1021,
-                                  1023
-                                ]
-                              },
-                              "range": [
-                                1014,
-                                1023
-                              ]
+                                "properties": []
+                              }
                             }
                           ],
-                          "kind": "var",
-                          "range": [
-                            1010,
-                            1024
-                          ]
+                          "kind": "var"
                         },
                         {
                           "type": "IfStatement",
@@ -242,24 +138,12 @@
                             "type": "MemberExpression",
                             "computed": false,
                             "object": {
-                              "type": "ThisExpression",
-                              "range": [
-                                1034,
-                                1038
-                              ]
+                              "type": "ThisExpression"
                             },
                             "property": {
                               "type": "Identifier",
-                              "name": "model",
-                              "range": [
-                                1039,
-                                1044
-                              ]
-                            },
-                            "range": [
-                              1034,
-                              1044
-                            ]
+                              "name": "model"
+                            }
                           },
                           "consequent": {
                             "type": "BlockStatement",
@@ -271,11 +155,7 @@
                                   "operator": "=",
                                   "left": {
                                     "type": "Identifier",
-                                    "name": "data",
-                                    "range": [
-                                      1054,
-                                      1058
-                                    ]
+                                    "name": "data"
                                   },
                                   "right": {
                                     "type": "CallExpression",
@@ -289,127 +169,55 @@
                                           "computed": false,
                                           "object": {
                                             "type": "Identifier",
-                                            "name": "_",
-                                            "range": [
-                                              1061,
-                                              1062
-                                            ]
+                                            "name": "_"
                                           },
                                           "property": {
                                             "type": "Identifier",
-                                            "name": "partial",
-                                            "range": [
-                                              1063,
-                                              1070
-                                            ]
-                                          },
-                                          "range": [
-                                            1061,
-                                            1070
-                                          ]
+                                            "name": "partial"
+                                          }
                                         },
                                         "arguments": [
                                           {
                                             "type": "MemberExpression",
                                             "computed": false,
                                             "object": {
-                                              "type": "ThisExpression",
-                                              "range": [
-                                                1071,
-                                                1075
-                                              ]
+                                              "type": "ThisExpression"
                                             },
                                             "property": {
                                               "type": "Identifier",
-                                              "name": "serializeModel",
-                                              "range": [
-                                                1076,
-                                                1090
-                                              ]
-                                            },
-                                            "range": [
-                                              1071,
-                                              1090
-                                            ]
+                                              "name": "serializeModel"
+                                            }
                                           },
                                           {
                                             "type": "MemberExpression",
                                             "computed": false,
                                             "object": {
-                                              "type": "ThisExpression",
-                                              "range": [
-                                                1092,
-                                                1096
-                                              ]
+                                              "type": "ThisExpression"
                                             },
                                             "property": {
                                               "type": "Identifier",
-                                              "name": "model",
-                                              "range": [
-                                                1097,
-                                                1102
-                                              ]
-                                            },
-                                            "range": [
-                                              1092,
-                                              1102
-                                            ]
+                                              "name": "model"
+                                            }
                                           }
-                                        ],
-                                        "range": [
-                                          1061,
-                                          1103
                                         ]
                                       },
                                       "property": {
                                         "type": "Identifier",
-                                        "name": "apply",
-                                        "range": [
-                                          1104,
-                                          1109
-                                        ]
-                                      },
-                                      "range": [
-                                        1061,
-                                        1109
-                                      ]
+                                        "name": "apply"
+                                      }
                                     },
                                     "arguments": [
                                       {
-                                        "type": "ThisExpression",
-                                        "range": [
-                                          1110,
-                                          1114
-                                        ]
+                                        "type": "ThisExpression"
                                       },
                                       {
                                         "type": "Identifier",
-                                        "name": "arguments",
-                                        "range": [
-                                          1116,
-                                          1125
-                                        ]
+                                        "name": "arguments"
                                       }
-                                    ],
-                                    "range": [
-                                      1061,
-                                      1126
                                     ]
-                                  },
-                                  "range": [
-                                    1054,
-                                    1126
-                                  ]
-                                },
-                                "range": [
-                                  1054,
-                                  1127
-                                ]
+                                  }
+                                }
                               }
-                            ],
-                            "range": [
-                              1046,
-                              1133
                             ]
                           },
                           "alternate": {
@@ -418,24 +226,12 @@
                               "type": "MemberExpression",
                               "computed": false,
                               "object": {
-                                "type": "ThisExpression",
-                                "range": [
-                                  1147,
-                                  1151
-                                ]
+                                "type": "ThisExpression"
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "collection",
-                                "range": [
-                                  1152,
-                                  1162
-                                ]
-                              },
-                              "range": [
-                                1147,
-                                1162
-                              ]
+                                "name": "collection"
+                              }
                             },
                             "consequent": {
                               "type": "BlockStatement",
@@ -447,11 +243,7 @@
                                     "operator": "=",
                                     "left": {
                                       "type": "Identifier",
-                                      "name": "data",
-                                      "range": [
-                                        1172,
-                                        1176
-                                      ]
+                                      "name": "data"
                                     },
                                     "right": {
                                       "type": "ObjectExpression",
@@ -460,11 +252,7 @@
                                           "type": "Property",
                                           "key": {
                                             "type": "Identifier",
-                                            "name": "items",
-                                            "range": [
-                                              1181,
-                                              1186
-                                            ]
+                                            "name": "items"
                                           },
                                           "value": {
                                             "type": "CallExpression",
@@ -478,196 +266,84 @@
                                                   "computed": false,
                                                   "object": {
                                                     "type": "Identifier",
-                                                    "name": "_",
-                                                    "range": [
-                                                      1188,
-                                                      1189
-                                                    ]
+                                                    "name": "_"
                                                   },
                                                   "property": {
                                                     "type": "Identifier",
-                                                    "name": "partial",
-                                                    "range": [
-                                                      1190,
-                                                      1197
-                                                    ]
-                                                  },
-                                                  "range": [
-                                                    1188,
-                                                    1197
-                                                  ]
+                                                    "name": "partial"
+                                                  }
                                                 },
                                                 "arguments": [
                                                   {
                                                     "type": "MemberExpression",
                                                     "computed": false,
                                                     "object": {
-                                                      "type": "ThisExpression",
-                                                      "range": [
-                                                        1198,
-                                                        1202
-                                                      ]
+                                                      "type": "ThisExpression"
                                                     },
                                                     "property": {
                                                       "type": "Identifier",
-                                                      "name": "serializeCollection",
-                                                      "range": [
-                                                        1203,
-                                                        1222
-                                                      ]
-                                                    },
-                                                    "range": [
-                                                      1198,
-                                                      1222
-                                                    ]
+                                                      "name": "serializeCollection"
+                                                    }
                                                   },
                                                   {
                                                     "type": "MemberExpression",
                                                     "computed": false,
                                                     "object": {
-                                                      "type": "ThisExpression",
-                                                      "range": [
-                                                        1224,
-                                                        1228
-                                                      ]
+                                                      "type": "ThisExpression"
                                                     },
                                                     "property": {
                                                       "type": "Identifier",
-                                                      "name": "collection",
-                                                      "range": [
-                                                        1229,
-                                                        1239
-                                                      ]
-                                                    },
-                                                    "range": [
-                                                      1224,
-                                                      1239
-                                                    ]
+                                                      "name": "collection"
+                                                    }
                                                   }
-                                                ],
-                                                "range": [
-                                                  1188,
-                                                  1240
                                                 ]
                                               },
                                               "property": {
                                                 "type": "Identifier",
-                                                "name": "apply",
-                                                "range": [
-                                                  1241,
-                                                  1246
-                                                ]
-                                              },
-                                              "range": [
-                                                1188,
-                                                1246
-                                              ]
+                                                "name": "apply"
+                                              }
                                             },
                                             "arguments": [
                                               {
-                                                "type": "ThisExpression",
-                                                "range": [
-                                                  1247,
-                                                  1251
-                                                ]
+                                                "type": "ThisExpression"
                                               },
                                               {
                                                 "type": "Identifier",
-                                                "name": "arguments",
-                                                "range": [
-                                                  1253,
-                                                  1262
-                                                ]
+                                                "name": "arguments"
                                               }
-                                            ],
-                                            "range": [
-                                              1188,
-                                              1263
                                             ]
                                           },
-                                          "kind": "init",
-                                          "range": [
-                                            1181,
-                                            1263
-                                          ]
+                                          "kind": "init"
                                         }
-                                      ],
-                                      "range": [
-                                        1179,
-                                        1265
                                       ]
-                                    },
-                                    "range": [
-                                      1172,
-                                      1265
-                                    ]
-                                  },
-                                  "range": [
-                                    1172,
-                                    1266
-                                  ]
+                                    }
+                                  }
                                 }
-                              ],
-                              "range": [
-                                1164,
-                                1272
                               ]
                             },
-                            "alternate": null,
-                            "range": [
-                              1143,
-                              1272
-                            ]
-                          },
-                          "range": [
-                            1030,
-                            1272
-                          ]
+                            "alternate": null
+                          }
                         },
                         {
                           "type": "ReturnStatement",
                           "argument": {
                             "type": "Identifier",
-                            "name": "data",
-                            "range": [
-                              1285,
-                              1289
-                            ]
-                          },
-                          "range": [
-                            1278,
-                            1290
-                          ]
+                            "name": "data"
+                          }
                         }
-                      ],
-                      "range": [
-                        1004,
-                        1294
                       ]
                     },
                     "rest": null,
                     "generator": false,
-                    "expression": false,
-                    "range": [
-                      994,
-                      1294
-                    ]
+                    "expression": false
                   },
-                  "kind": "init",
-                  "range": [
-                    979,
-                    1294
-                  ]
+                  "kind": "init"
                 },
                 {
                   "type": "Property",
                   "key": {
                     "type": "Identifier",
-                    "name": "serializeCollection",
-                    "range": [
-                      1362,
-                      1381
-                    ]
+                    "name": "serializeCollection"
                   },
                   "value": {
                     "type": "FunctionExpression",
@@ -675,11 +351,7 @@
                     "params": [
                       {
                         "type": "Identifier",
-                        "name": "collection",
-                        "range": [
-                          1392,
-                          1402
-                        ]
+                        "name": "collection"
                       }
                     ],
                     "defaults": [],
@@ -698,46 +370,22 @@
                                 "computed": false,
                                 "object": {
                                   "type": "Identifier",
-                                  "name": "collection",
-                                  "range": [
-                                    1416,
-                                    1426
-                                  ]
+                                  "name": "collection"
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "name": "toJSON",
-                                  "range": [
-                                    1427,
-                                    1433
-                                  ]
-                                },
-                                "range": [
-                                  1416,
-                                  1433
-                                ]
+                                  "name": "toJSON"
+                                }
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "apply",
-                                "range": [
-                                  1434,
-                                  1439
-                                ]
-                              },
-                              "range": [
-                                1416,
-                                1439
-                              ]
+                                "name": "apply"
+                              }
                             },
                             "arguments": [
                               {
                                 "type": "Identifier",
-                                "name": "collection",
-                                "range": [
-                                  1440,
-                                  1450
-                                ]
+                                "name": "collection"
                               },
                               {
                                 "type": "CallExpression",
@@ -746,89 +394,41 @@
                                   "computed": false,
                                   "object": {
                                     "type": "Identifier",
-                                    "name": "slice",
-                                    "range": [
-                                      1452,
-                                      1457
-                                    ]
+                                    "name": "slice"
                                   },
                                   "property": {
                                     "type": "Identifier",
-                                    "name": "call",
-                                    "range": [
-                                      1458,
-                                      1462
-                                    ]
-                                  },
-                                  "range": [
-                                    1452,
-                                    1462
-                                  ]
+                                    "name": "call"
+                                  }
                                 },
                                 "arguments": [
                                   {
                                     "type": "Identifier",
-                                    "name": "arguments",
-                                    "range": [
-                                      1463,
-                                      1472
-                                    ]
+                                    "name": "arguments"
                                   },
                                   {
                                     "type": "Literal",
                                     "value": 1,
-                                    "raw": "1",
-                                    "range": [
-                                      1474,
-                                      1475
-                                    ]
+                                    "raw": "1"
                                   }
-                                ],
-                                "range": [
-                                  1452,
-                                  1476
                                 ]
                               }
-                            ],
-                            "range": [
-                              1416,
-                              1477
                             ]
-                          },
-                          "range": [
-                            1409,
-                            1478
-                          ]
+                          }
                         }
-                      ],
-                      "range": [
-                        1403,
-                        1482
                       ]
                     },
                     "rest": null,
                     "generator": false,
-                    "expression": false,
-                    "range": [
-                      1383,
-                      1482
-                    ]
+                    "expression": false
                   },
-                  "kind": "init",
-                  "range": [
-                    1362,
-                    1482
-                  ]
+                  "kind": "init"
                 },
                 {
                   "type": "Property",
                   "key": {
                     "type": "Identifier",
-                    "name": "render",
-                    "range": [
-                      1779,
-                      1785
-                    ]
+                    "name": "render"
                   },
                   "value": {
                     "type": "FunctionExpression",
@@ -846,35 +446,15 @@
                               "type": "MemberExpression",
                               "computed": false,
                               "object": {
-                                "type": "ThisExpression",
-                                "range": [
-                                  1804,
-                                  1808
-                                ]
+                                "type": "ThisExpression"
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "_ensureViewIsIntact",
-                                "range": [
-                                  1809,
-                                  1828
-                                ]
-                              },
-                              "range": [
-                                1804,
-                                1828
-                              ]
+                                "name": "_ensureViewIsIntact"
+                              }
                             },
-                            "arguments": [],
-                            "range": [
-                              1804,
-                              1830
-                            ]
-                          },
-                          "range": [
-                            1804,
-                            1831
-                          ]
+                            "arguments": []
+                          }
                         },
                         {
                           "type": "ExpressionStatement",
@@ -884,52 +464,24 @@
                               "type": "MemberExpression",
                               "computed": false,
                               "object": {
-                                "type": "ThisExpression",
-                                "range": [
-                                  1837,
-                                  1841
-                                ]
+                                "type": "ThisExpression"
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "triggerMethod",
-                                "range": [
-                                  1842,
-                                  1855
-                                ]
-                              },
-                              "range": [
-                                1837,
-                                1855
-                              ]
+                                "name": "triggerMethod"
+                              }
                             },
                             "arguments": [
                               {
                                 "type": "Literal",
                                 "value": "before:render",
-                                "raw": "'before:render'",
-                                "range": [
-                                  1856,
-                                  1871
-                                ]
+                                "raw": "'before:render'"
                               },
                               {
-                                "type": "ThisExpression",
-                                "range": [
-                                  1873,
-                                  1877
-                                ]
+                                "type": "ThisExpression"
                               }
-                            ],
-                            "range": [
-                              1837,
-                              1878
                             ]
-                          },
-                          "range": [
-                            1837,
-                            1879
-                          ]
+                          }
                         },
                         {
                           "type": "ExpressionStatement",
@@ -939,35 +491,15 @@
                               "type": "MemberExpression",
                               "computed": false,
                               "object": {
-                                "type": "ThisExpression",
-                                "range": [
-                                  1885,
-                                  1889
-                                ]
+                                "type": "ThisExpression"
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "_renderTemplate",
-                                "range": [
-                                  1890,
-                                  1905
-                                ]
-                              },
-                              "range": [
-                                1885,
-                                1905
-                              ]
+                                "name": "_renderTemplate"
+                              }
                             },
-                            "arguments": [],
-                            "range": [
-                              1885,
-                              1907
-                            ]
-                          },
-                          "range": [
-                            1885,
-                            1908
-                          ]
+                            "arguments": []
+                          }
                         },
                         {
                           "type": "ExpressionStatement",
@@ -977,35 +509,15 @@
                               "type": "MemberExpression",
                               "computed": false,
                               "object": {
-                                "type": "ThisExpression",
-                                "range": [
-                                  1913,
-                                  1917
-                                ]
+                                "type": "ThisExpression"
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "bindUIElements",
-                                "range": [
-                                  1918,
-                                  1932
-                                ]
-                              },
-                              "range": [
-                                1913,
-                                1932
-                              ]
+                                "name": "bindUIElements"
+                              }
                             },
-                            "arguments": [],
-                            "range": [
-                              1913,
-                              1934
-                            ]
-                          },
-                          "range": [
-                            1913,
-                            1935
-                          ]
+                            "arguments": []
+                          }
                         },
                         {
                           "type": "ExpressionStatement",
@@ -1015,96 +527,44 @@
                               "type": "MemberExpression",
                               "computed": false,
                               "object": {
-                                "type": "ThisExpression",
-                                "range": [
-                                  1941,
-                                  1945
-                                ]
+                                "type": "ThisExpression"
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "triggerMethod",
-                                "range": [
-                                  1946,
-                                  1959
-                                ]
-                              },
-                              "range": [
-                                1941,
-                                1959
-                              ]
+                                "name": "triggerMethod"
+                              }
                             },
                             "arguments": [
                               {
                                 "type": "Literal",
                                 "value": "render",
-                                "raw": "'render'",
-                                "range": [
-                                  1960,
-                                  1968
-                                ]
+                                "raw": "'render'"
                               },
                               {
-                                "type": "ThisExpression",
-                                "range": [
-                                  1970,
-                                  1974
-                                ]
+                                "type": "ThisExpression"
                               }
-                            ],
-                            "range": [
-                              1941,
-                              1975
                             ]
-                          },
-                          "range": [
-                            1941,
-                            1976
-                          ]
+                          }
                         },
                         {
                           "type": "ReturnStatement",
                           "argument": {
-                            "type": "ThisExpression",
-                            "range": [
-                              1989,
-                              1993
-                            ]
-                          },
-                          "range": [
-                            1982,
-                            1994
-                          ]
+                            "type": "ThisExpression"
+                          }
                         }
-                      ],
-                      "range": [
-                        1798,
-                        1998
                       ]
                     },
                     "rest": null,
                     "generator": false,
-                    "expression": false,
-                    "range": [
-                      1787,
-                      1998
-                    ]
+                    "expression": false
                   },
-                  "kind": "init",
-                  "range": [
-                    1779,
-                    1998
-                  ]
+                  "kind": "init"
                 },
                 {
                   "type": "Property",
                   "key": {
                     "type": "Identifier",
-                    "name": "_renderTemplate",
-                    "range": [
-                      2245,
-                      2260
-                    ]
+                    "name": "_renderTemplate"
                   },
                   "value": {
                     "type": "FunctionExpression",
@@ -1121,11 +581,7 @@
                               "type": "VariableDeclarator",
                               "id": {
                                 "type": "Identifier",
-                                "name": "template",
-                                "range": [
-                                  2283,
-                                  2291
-                                ]
+                                "name": "template"
                               },
                               "init": {
                                 "type": "CallExpression",
@@ -1133,42 +589,18 @@
                                   "type": "MemberExpression",
                                   "computed": false,
                                   "object": {
-                                    "type": "ThisExpression",
-                                    "range": [
-                                      2294,
-                                      2298
-                                    ]
+                                    "type": "ThisExpression"
                                   },
                                   "property": {
                                     "type": "Identifier",
-                                    "name": "getTemplate",
-                                    "range": [
-                                      2299,
-                                      2310
-                                    ]
-                                  },
-                                  "range": [
-                                    2294,
-                                    2310
-                                  ]
+                                    "name": "getTemplate"
+                                  }
                                 },
-                                "arguments": [],
-                                "range": [
-                                  2294,
-                                  2312
-                                ]
-                              },
-                              "range": [
-                                2283,
-                                2312
-                              ]
+                                "arguments": []
+                              }
                             }
                           ],
-                          "kind": "var",
-                          "range": [
-                            2279,
-                            2313
-                          ]
+                          "kind": "var"
                         },
                         {
                           "type": "IfStatement",
@@ -1177,48 +609,24 @@
                             "operator": "===",
                             "left": {
                               "type": "Identifier",
-                              "name": "template",
-                              "range": [
-                                2361,
-                                2369
-                              ]
+                              "name": "template"
                             },
                             "right": {
                               "type": "Literal",
                               "value": false,
-                              "raw": "false",
-                              "range": [
-                                2374,
-                                2379
-                              ]
-                            },
-                            "range": [
-                              2361,
-                              2379
-                            ]
+                              "raw": "false"
+                            }
                           },
                           "consequent": {
                             "type": "BlockStatement",
                             "body": [
                               {
                                 "type": "ReturnStatement",
-                                "argument": null,
-                                "range": [
-                                  2389,
-                                  2396
-                                ]
+                                "argument": null
                               }
-                            ],
-                            "range": [
-                              2381,
-                              2402
                             ]
                           },
-                          "alternate": null,
-                          "range": [
-                            2357,
-                            2402
-                          ]
+                          "alternate": null
                         },
                         {
                           "type": "IfStatement",
@@ -1227,17 +635,9 @@
                             "operator": "!",
                             "argument": {
                               "type": "Identifier",
-                              "name": "template",
-                              "range": [
-                                2413,
-                                2421
-                              ]
+                              "name": "template"
                             },
-                            "prefix": true,
-                            "range": [
-                              2412,
-                              2421
-                            ]
+                            "prefix": true
                           },
                           "consequent": {
                             "type": "BlockStatement",
@@ -1251,24 +651,12 @@
                                     "computed": false,
                                     "object": {
                                       "type": "Identifier",
-                                      "name": "Marionette",
-                                      "range": [
-                                        2441,
-                                        2451
-                                      ]
+                                      "name": "Marionette"
                                     },
                                     "property": {
                                       "type": "Identifier",
-                                      "name": "Error",
-                                      "range": [
-                                        2452,
-                                        2457
-                                      ]
-                                    },
-                                    "range": [
-                                      2441,
-                                      2457
-                                    ]
+                                      "name": "Error"
+                                    }
                                   },
                                   "arguments": [
                                     {
@@ -1278,80 +666,36 @@
                                           "type": "Property",
                                           "key": {
                                             "type": "Identifier",
-                                            "name": "name",
-                                            "range": [
-                                              2468,
-                                              2472
-                                            ]
+                                            "name": "name"
                                           },
                                           "value": {
                                             "type": "Literal",
                                             "value": "UndefinedTemplateError",
-                                            "raw": "'UndefinedTemplateError'",
-                                            "range": [
-                                              2474,
-                                              2498
-                                            ]
+                                            "raw": "'UndefinedTemplateError'"
                                           },
-                                          "kind": "init",
-                                          "range": [
-                                            2468,
-                                            2498
-                                          ]
+                                          "kind": "init"
                                         },
                                         {
                                           "type": "Property",
                                           "key": {
                                             "type": "Identifier",
-                                            "name": "message",
-                                            "range": [
-                                              2508,
-                                              2515
-                                            ]
+                                            "name": "message"
                                           },
                                           "value": {
                                             "type": "Literal",
                                             "value": "Cannot render the template since it is null or undefined.",
-                                            "raw": "'Cannot render the template since it is null or undefined.'",
-                                            "range": [
-                                              2517,
-                                              2576
-                                            ]
+                                            "raw": "'Cannot render the template since it is null or undefined.'"
                                           },
-                                          "kind": "init",
-                                          "range": [
-                                            2508,
-                                            2576
-                                          ]
+                                          "kind": "init"
                                         }
-                                      ],
-                                      "range": [
-                                        2458,
-                                        2584
                                       ]
                                     }
-                                  ],
-                                  "range": [
-                                    2437,
-                                    2585
                                   ]
-                                },
-                                "range": [
-                                  2431,
-                                  2586
-                                ]
+                                }
                               }
-                            ],
-                            "range": [
-                              2423,
-                              2592
                             ]
                           },
-                          "alternate": null,
-                          "range": [
-                            2408,
-                            2592
-                          ]
+                          "alternate": null
                         },
                         {
                           "type": "VariableDeclaration",
@@ -1360,11 +704,7 @@
                               "type": "VariableDeclarator",
                               "id": {
                                 "type": "Identifier",
-                                "name": "data",
-                                "range": [
-                                  2649,
-                                  2653
-                                ]
+                                "name": "data"
                               },
                               "init": {
                                 "type": "CallExpression",
@@ -1372,42 +712,18 @@
                                   "type": "MemberExpression",
                                   "computed": false,
                                   "object": {
-                                    "type": "ThisExpression",
-                                    "range": [
-                                      2656,
-                                      2660
-                                    ]
+                                    "type": "ThisExpression"
                                   },
                                   "property": {
                                     "type": "Identifier",
-                                    "name": "serializeData",
-                                    "range": [
-                                      2661,
-                                      2674
-                                    ]
-                                  },
-                                  "range": [
-                                    2656,
-                                    2674
-                                  ]
+                                    "name": "serializeData"
+                                  }
                                 },
-                                "arguments": [],
-                                "range": [
-                                  2656,
-                                  2676
-                                ]
-                              },
-                              "range": [
-                                2649,
-                                2676
-                              ]
+                                "arguments": []
+                              }
                             }
                           ],
-                          "kind": "var",
-                          "range": [
-                            2645,
-                            2677
-                          ]
+                          "kind": "var"
                         },
                         {
                           "type": "ExpressionStatement",
@@ -1416,11 +732,7 @@
                             "operator": "=",
                             "left": {
                               "type": "Identifier",
-                              "name": "data",
-                              "range": [
-                                2682,
-                                2686
-                              ]
+                              "name": "data"
                             },
                             "right": {
                               "type": "CallExpression",
@@ -1428,49 +740,21 @@
                                 "type": "MemberExpression",
                                 "computed": false,
                                 "object": {
-                                  "type": "ThisExpression",
-                                  "range": [
-                                    2689,
-                                    2693
-                                  ]
+                                  "type": "ThisExpression"
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "name": "mixinTemplateHelpers",
-                                  "range": [
-                                    2694,
-                                    2714
-                                  ]
-                                },
-                                "range": [
-                                  2689,
-                                  2714
-                                ]
+                                  "name": "mixinTemplateHelpers"
+                                }
                               },
                               "arguments": [
                                 {
                                   "type": "Identifier",
-                                  "name": "data",
-                                  "range": [
-                                    2715,
-                                    2719
-                                  ]
+                                  "name": "data"
                                 }
-                              ],
-                              "range": [
-                                2689,
-                                2720
                               ]
-                            },
-                            "range": [
-                              2682,
-                              2720
-                            ]
-                          },
-                          "range": [
-                            2682,
-                            2721
-                          ]
+                            }
+                          }
                         },
                         {
                           "type": "VariableDeclaration",
@@ -1479,11 +763,7 @@
                               "type": "VariableDeclarator",
                               "id": {
                                 "type": "Identifier",
-                                "name": "html",
-                                "range": [
-                                  2759,
-                                  2763
-                                ]
+                                "name": "html"
                               },
                               "init": {
                                 "type": "CallExpression",
@@ -1495,79 +775,35 @@
                                     "computed": false,
                                     "object": {
                                       "type": "Identifier",
-                                      "name": "Marionette",
-                                      "range": [
-                                        2766,
-                                        2776
-                                      ]
+                                      "name": "Marionette"
                                     },
                                     "property": {
                                       "type": "Identifier",
-                                      "name": "Renderer",
-                                      "range": [
-                                        2777,
-                                        2785
-                                      ]
-                                    },
-                                    "range": [
-                                      2766,
-                                      2785
-                                    ]
+                                      "name": "Renderer"
+                                    }
                                   },
                                   "property": {
                                     "type": "Identifier",
-                                    "name": "render",
-                                    "range": [
-                                      2786,
-                                      2792
-                                    ]
-                                  },
-                                  "range": [
-                                    2766,
-                                    2792
-                                  ]
+                                    "name": "render"
+                                  }
                                 },
                                 "arguments": [
                                   {
                                     "type": "Identifier",
-                                    "name": "template",
-                                    "range": [
-                                      2793,
-                                      2801
-                                    ]
+                                    "name": "template"
                                   },
                                   {
                                     "type": "Identifier",
-                                    "name": "data",
-                                    "range": [
-                                      2803,
-                                      2807
-                                    ]
+                                    "name": "data"
                                   },
                                   {
-                                    "type": "ThisExpression",
-                                    "range": [
-                                      2809,
-                                      2813
-                                    ]
+                                    "type": "ThisExpression"
                                   }
-                                ],
-                                "range": [
-                                  2766,
-                                  2814
                                 ]
-                              },
-                              "range": [
-                                2759,
-                                2814
-                              ]
+                              }
                             }
                           ],
-                          "kind": "var",
-                          "range": [
-                            2755,
-                            2815
-                          ]
+                          "kind": "var"
                         },
                         {
                           "type": "ExpressionStatement",
@@ -1577,88 +813,40 @@
                               "type": "MemberExpression",
                               "computed": false,
                               "object": {
-                                "type": "ThisExpression",
-                                "range": [
-                                  2820,
-                                  2824
-                                ]
+                                "type": "ThisExpression"
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "attachElContent",
-                                "range": [
-                                  2825,
-                                  2840
-                                ]
-                              },
-                              "range": [
-                                2820,
-                                2840
-                              ]
+                                "name": "attachElContent"
+                              }
                             },
                             "arguments": [
                               {
                                 "type": "Identifier",
-                                "name": "html",
-                                "range": [
-                                  2841,
-                                  2845
-                                ]
+                                "name": "html"
                               }
-                            ],
-                            "range": [
-                              2820,
-                              2846
                             ]
-                          },
-                          "range": [
-                            2820,
-                            2847
-                          ]
+                          }
                         },
                         {
                           "type": "ReturnStatement",
                           "argument": {
-                            "type": "ThisExpression",
-                            "range": [
-                              2860,
-                              2864
-                            ]
-                          },
-                          "range": [
-                            2853,
-                            2865
-                          ]
+                            "type": "ThisExpression"
+                          }
                         }
-                      ],
-                      "range": [
-                        2273,
-                        2869
                       ]
                     },
                     "rest": null,
                     "generator": false,
-                    "expression": false,
-                    "range": [
-                      2262,
-                      2869
-                    ]
+                    "expression": false
                   },
-                  "kind": "init",
-                  "range": [
-                    2245,
-                    2869
-                  ]
+                  "kind": "init"
                 },
                 {
                   "type": "Property",
                   "key": {
                     "type": "Identifier",
-                    "name": "attachElContent",
-                    "range": [
-                      3203,
-                      3218
-                    ]
+                    "name": "attachElContent"
                   },
                   "value": {
                     "type": "FunctionExpression",
@@ -1666,11 +854,7 @@
                     "params": [
                       {
                         "type": "Identifier",
-                        "name": "html",
-                        "range": [
-                          3229,
-                          3233
-                        ]
+                        "name": "html"
                       }
                     ],
                     "defaults": [],
@@ -1688,101 +872,45 @@
                                 "type": "MemberExpression",
                                 "computed": false,
                                 "object": {
-                                  "type": "ThisExpression",
-                                  "range": [
-                                    3241,
-                                    3245
-                                  ]
+                                  "type": "ThisExpression"
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "name": "$el",
-                                  "range": [
-                                    3246,
-                                    3249
-                                  ]
-                                },
-                                "range": [
-                                  3241,
-                                  3249
-                                ]
+                                  "name": "$el"
+                                }
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "html",
-                                "range": [
-                                  3250,
-                                  3254
-                                ]
-                              },
-                              "range": [
-                                3241,
-                                3254
-                              ]
+                                "name": "html"
+                              }
                             },
                             "arguments": [
                               {
                                 "type": "Identifier",
-                                "name": "html",
-                                "range": [
-                                  3255,
-                                  3259
-                                ]
+                                "name": "html"
                               }
-                            ],
-                            "range": [
-                              3241,
-                              3260
                             ]
-                          },
-                          "range": [
-                            3241,
-                            3261
-                          ]
+                          }
                         },
                         {
                           "type": "ReturnStatement",
                           "argument": {
-                            "type": "ThisExpression",
-                            "range": [
-                              3274,
-                              3278
-                            ]
-                          },
-                          "range": [
-                            3267,
-                            3279
-                          ]
+                            "type": "ThisExpression"
+                          }
                         }
-                      ],
-                      "range": [
-                        3235,
-                        3283
                       ]
                     },
                     "rest": null,
                     "generator": false,
-                    "expression": false,
-                    "range": [
-                      3220,
-                      3283
-                    ]
+                    "expression": false
                   },
-                  "kind": "init",
-                  "range": [
-                    3203,
-                    3283
-                  ]
+                  "kind": "init"
                 },
                 {
                   "type": "Property",
                   "key": {
                     "type": "Identifier",
-                    "name": "destroy",
-                    "range": [
-                      3378,
-                      3385
-                    ]
+                    "name": "destroy"
                   },
                   "value": {
                     "type": "FunctionExpression",
@@ -1798,47 +926,23 @@
                             "type": "MemberExpression",
                             "computed": false,
                             "object": {
-                              "type": "ThisExpression",
-                              "range": [
-                                3408,
-                                3412
-                              ]
+                              "type": "ThisExpression"
                             },
                             "property": {
                               "type": "Identifier",
-                              "name": "isDestroyed",
-                              "range": [
-                                3413,
-                                3424
-                              ]
-                            },
-                            "range": [
-                              3408,
-                              3424
-                            ]
+                              "name": "isDestroyed"
+                            }
                           },
                           "consequent": {
                             "type": "BlockStatement",
                             "body": [
                               {
                                 "type": "ReturnStatement",
-                                "argument": null,
-                                "range": [
-                                  3428,
-                                  3435
-                                ]
+                                "argument": null
                               }
-                            ],
-                            "range": [
-                              3426,
-                              3437
                             ]
                           },
-                          "alternate": null,
-                          "range": [
-                            3404,
-                            3437
-                          ]
+                          "alternate": null
                         },
                         {
                           "type": "ReturnStatement",
@@ -1858,2850 +962,52 @@
                                     "computed": false,
                                     "object": {
                                       "type": "Identifier",
-                                      "name": "Marionette",
-                                      "range": [
-                                        3450,
-                                        3460
-                                      ]
+                                      "name": "Marionette"
                                     },
                                     "property": {
                                       "type": "Identifier",
-                                      "name": "View",
-                                      "range": [
-                                        3461,
-                                        3465
-                                      ]
-                                    },
-                                    "range": [
-                                      3450,
-                                      3465
-                                    ]
+                                      "name": "View"
+                                    }
                                   },
                                   "property": {
                                     "type": "Identifier",
-                                    "name": "prototype",
-                                    "range": [
-                                      3466,
-                                      3475
-                                    ]
-                                  },
-                                  "range": [
-                                    3450,
-                                    3475
-                                  ]
+                                    "name": "prototype"
+                                  }
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "name": "destroy",
-                                  "range": [
-                                    3476,
-                                    3483
-                                  ]
-                                },
-                                "range": [
-                                  3450,
-                                  3483
-                                ]
+                                  "name": "destroy"
+                                }
                               },
                               "property": {
                                 "type": "Identifier",
-                                "name": "apply",
-                                "range": [
-                                  3484,
-                                  3489
-                                ]
-                              },
-                              "range": [
-                                3450,
-                                3489
-                              ]
+                                "name": "apply"
+                              }
                             },
                             "arguments": [
                               {
-                                "type": "ThisExpression",
-                                "range": [
-                                  3490,
-                                  3494
-                                ]
+                                "type": "ThisExpression"
                               },
                               {
                                 "type": "Identifier",
-                                "name": "arguments",
-                                "range": [
-                                  3496,
-                                  3505
-                                ]
+                                "name": "arguments"
                               }
-                            ],
-                            "range": [
-                              3450,
-                              3506
                             ]
-                          },
-                          "range": [
-                            3443,
-                            3507
-                          ]
+                          }
                         }
-                      ],
-                      "range": [
-                        3398,
-                        3511
                       ]
                     },
                     "rest": null,
                     "generator": false,
-                    "expression": false,
-                    "range": [
-                      3387,
-                      3511
-                    ]
+                    "expression": false
                   },
-                  "kind": "init",
-                  "range": [
-                    3378,
-                    3511
-                  ]
+                  "kind": "init"
                 }
-              ],
-              "range": [
-                289,
-                3513
               ]
             }
-          ],
-          "range": [
-            266,
-            3514
           ]
-        },
-        "range": [
-          244,
-          3514
-        ]
-      },
-      "range": [
-        244,
-        3515
-      ]
-    }
-  ],
-  "range": [
-    244,
-    3515
-  ],
-  "tokens": [
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        244,
-        254
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        254,
-        255
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "ItemView",
-      "range": [
-        255,
-        263
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        264,
-        265
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        266,
-        276
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        276,
-        277
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "View",
-      "range": [
-        277,
-        281
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        281,
-        282
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "extend",
-      "range": [
-        282,
-        288
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        288,
-        289
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        289,
-        290
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "constructor",
-      "range": [
-        423,
-        434
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        434,
-        435
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        436,
-        444
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        444,
-        445
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        445,
-        446
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        447,
-        448
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        453,
-        463
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        463,
-        464
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "View",
-      "range": [
-        464,
-        468
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        468,
-        469
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "apply",
-      "range": [
-        469,
-        474
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        474,
-        475
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        475,
-        479
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        479,
-        480
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "arguments",
-      "range": [
-        481,
-        490
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        490,
-        491
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        491,
-        492
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        495,
-        496
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        496,
-        497
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "serializeData",
-      "range": [
-        979,
-        992
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        992,
-        993
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        994,
-        1002
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1002,
-        1003
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1003,
-        1004
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        1004,
-        1005
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "var",
-      "range": [
-        1010,
-        1013
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "data",
-      "range": [
-        1014,
-        1018
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        1019,
-        1020
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        1021,
-        1022
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        1022,
-        1023
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1023,
-        1024
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "if",
-      "range": [
-        1030,
-        1032
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1033,
-        1034
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1034,
-        1038
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1038,
-        1039
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "model",
-      "range": [
-        1039,
-        1044
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1044,
-        1045
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        1046,
-        1047
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "data",
-      "range": [
-        1054,
-        1058
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        1059,
-        1060
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_",
-      "range": [
-        1061,
-        1062
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1062,
-        1063
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "partial",
-      "range": [
-        1063,
-        1070
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1070,
-        1071
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1071,
-        1075
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1075,
-        1076
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "serializeModel",
-      "range": [
-        1076,
-        1090
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1090,
-        1091
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1092,
-        1096
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1096,
-        1097
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "model",
-      "range": [
-        1097,
-        1102
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1102,
-        1103
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1103,
-        1104
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "apply",
-      "range": [
-        1104,
-        1109
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1109,
-        1110
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1110,
-        1114
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1114,
-        1115
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "arguments",
-      "range": [
-        1116,
-        1125
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1125,
-        1126
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1126,
-        1127
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        1132,
-        1133
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "else",
-      "range": [
-        1138,
-        1142
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "if",
-      "range": [
-        1143,
-        1145
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1146,
-        1147
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1147,
-        1151
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1151,
-        1152
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "collection",
-      "range": [
-        1152,
-        1162
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1162,
-        1163
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        1164,
-        1165
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "data",
-      "range": [
-        1172,
-        1176
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        1177,
-        1178
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        1179,
-        1180
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "items",
-      "range": [
-        1181,
-        1186
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        1186,
-        1187
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_",
-      "range": [
-        1188,
-        1189
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1189,
-        1190
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "partial",
-      "range": [
-        1190,
-        1197
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1197,
-        1198
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1198,
-        1202
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1202,
-        1203
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "serializeCollection",
-      "range": [
-        1203,
-        1222
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1222,
-        1223
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1224,
-        1228
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1228,
-        1229
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "collection",
-      "range": [
-        1229,
-        1239
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1239,
-        1240
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1240,
-        1241
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "apply",
-      "range": [
-        1241,
-        1246
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1246,
-        1247
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1247,
-        1251
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1251,
-        1252
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "arguments",
-      "range": [
-        1253,
-        1262
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1262,
-        1263
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        1264,
-        1265
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1265,
-        1266
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        1271,
-        1272
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "return",
-      "range": [
-        1278,
-        1284
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "data",
-      "range": [
-        1285,
-        1289
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1289,
-        1290
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        1293,
-        1294
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1294,
-        1295
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "serializeCollection",
-      "range": [
-        1362,
-        1381
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        1381,
-        1382
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        1383,
-        1391
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1391,
-        1392
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "collection",
-      "range": [
-        1392,
-        1402
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1402,
-        1403
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        1403,
-        1404
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "return",
-      "range": [
-        1409,
-        1415
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "collection",
-      "range": [
-        1416,
-        1426
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1426,
-        1427
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "toJSON",
-      "range": [
-        1427,
-        1433
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1433,
-        1434
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "apply",
-      "range": [
-        1434,
-        1439
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1439,
-        1440
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "collection",
-      "range": [
-        1440,
-        1450
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1450,
-        1451
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "slice",
-      "range": [
-        1452,
-        1457
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1457,
-        1458
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "call",
-      "range": [
-        1458,
-        1462
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1462,
-        1463
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "arguments",
-      "range": [
-        1463,
-        1472
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1472,
-        1473
-      ]
-    },
-    {
-      "type": "Numeric",
-      "value": "1",
-      "range": [
-        1474,
-        1475
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1475,
-        1476
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1476,
-        1477
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1477,
-        1478
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        1481,
-        1482
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1482,
-        1483
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "render",
-      "range": [
-        1779,
-        1785
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        1785,
-        1786
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        1787,
-        1795
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1795,
-        1796
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1796,
-        1797
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        1798,
-        1799
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1804,
-        1808
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1808,
-        1809
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_ensureViewIsIntact",
-      "range": [
-        1809,
-        1828
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1828,
-        1829
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1829,
-        1830
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1830,
-        1831
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1837,
-        1841
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1841,
-        1842
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "triggerMethod",
-      "range": [
-        1842,
-        1855
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1855,
-        1856
-      ]
-    },
-    {
-      "type": "String",
-      "value": "'before:render'",
-      "range": [
-        1856,
-        1871
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1871,
-        1872
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1873,
-        1877
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1877,
-        1878
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1878,
-        1879
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1885,
-        1889
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1889,
-        1890
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_renderTemplate",
-      "range": [
-        1890,
-        1905
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1905,
-        1906
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1906,
-        1907
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1907,
-        1908
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1913,
-        1917
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1917,
-        1918
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "bindUIElements",
-      "range": [
-        1918,
-        1932
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1932,
-        1933
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1933,
-        1934
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1934,
-        1935
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1941,
-        1945
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        1945,
-        1946
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "triggerMethod",
-      "range": [
-        1946,
-        1959
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        1959,
-        1960
-      ]
-    },
-    {
-      "type": "String",
-      "value": "'render'",
-      "range": [
-        1960,
-        1968
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1968,
-        1969
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1970,
-        1974
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        1974,
-        1975
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1975,
-        1976
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "return",
-      "range": [
-        1982,
-        1988
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        1989,
-        1993
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        1993,
-        1994
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        1997,
-        1998
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        1998,
-        1999
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "_renderTemplate",
-      "range": [
-        2245,
-        2260
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        2260,
-        2261
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        2262,
-        2270
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        2270,
-        2271
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        2271,
-        2272
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        2273,
-        2274
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "var",
-      "range": [
-        2279,
-        2282
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "template",
-      "range": [
-        2283,
-        2291
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        2292,
-        2293
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        2294,
-        2298
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        2298,
-        2299
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "getTemplate",
-      "range": [
-        2299,
-        2310
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        2310,
-        2311
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        2311,
-        2312
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        2312,
-        2313
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "if",
-      "range": [
-        2357,
-        2359
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        2360,
-        2361
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "template",
-      "range": [
-        2361,
-        2369
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "===",
-      "range": [
-        2370,
-        2373
-      ]
-    },
-    {
-      "type": "Boolean",
-      "value": "false",
-      "range": [
-        2374,
-        2379
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        2379,
-        2380
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        2381,
-        2382
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "return",
-      "range": [
-        2389,
-        2395
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        2395,
-        2396
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        2401,
-        2402
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "if",
-      "range": [
-        2408,
-        2410
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        2411,
-        2412
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "!",
-      "range": [
-        2412,
-        2413
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "template",
-      "range": [
-        2413,
-        2421
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        2421,
-        2422
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        2423,
-        2424
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "throw",
-      "range": [
-        2431,
-        2436
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "new",
-      "range": [
-        2437,
-        2440
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        2441,
-        2451
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        2451,
-        2452
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Error",
-      "range": [
-        2452,
-        2457
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        2457,
-        2458
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        2458,
-        2459
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "name",
-      "range": [
-        2468,
-        2472
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        2472,
-        2473
-      ]
-    },
-    {
-      "type": "String",
-      "value": "'UndefinedTemplateError'",
-      "range": [
-        2474,
-        2498
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        2498,
-        2499
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "message",
-      "range": [
-        2508,
-        2515
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        2515,
-        2516
-      ]
-    },
-    {
-      "type": "String",
-      "value": "'Cannot render the template since it is null or undefined.'",
-      "range": [
-        2517,
-        2576
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        2583,
-        2584
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        2584,
-        2585
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        2585,
-        2586
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        2591,
-        2592
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "var",
-      "range": [
-        2645,
-        2648
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "data",
-      "range": [
-        2649,
-        2653
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        2654,
-        2655
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        2656,
-        2660
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        2660,
-        2661
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "serializeData",
-      "range": [
-        2661,
-        2674
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        2674,
-        2675
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        2675,
-        2676
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        2676,
-        2677
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "data",
-      "range": [
-        2682,
-        2686
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        2687,
-        2688
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        2689,
-        2693
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        2693,
-        2694
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "mixinTemplateHelpers",
-      "range": [
-        2694,
-        2714
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        2714,
-        2715
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "data",
-      "range": [
-        2715,
-        2719
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        2719,
-        2720
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        2720,
-        2721
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "var",
-      "range": [
-        2755,
-        2758
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "html",
-      "range": [
-        2759,
-        2763
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "=",
-      "range": [
-        2764,
-        2765
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        2766,
-        2776
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        2776,
-        2777
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Renderer",
-      "range": [
-        2777,
-        2785
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        2785,
-        2786
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "render",
-      "range": [
-        2786,
-        2792
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        2792,
-        2793
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "template",
-      "range": [
-        2793,
-        2801
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        2801,
-        2802
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "data",
-      "range": [
-        2803,
-        2807
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        2807,
-        2808
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        2809,
-        2813
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        2813,
-        2814
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        2814,
-        2815
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        2820,
-        2824
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        2824,
-        2825
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "attachElContent",
-      "range": [
-        2825,
-        2840
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        2840,
-        2841
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "html",
-      "range": [
-        2841,
-        2845
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        2845,
-        2846
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        2846,
-        2847
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "return",
-      "range": [
-        2853,
-        2859
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        2860,
-        2864
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        2864,
-        2865
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        2868,
-        2869
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        2869,
-        2870
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "attachElContent",
-      "range": [
-        3203,
-        3218
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        3218,
-        3219
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        3220,
-        3228
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        3228,
-        3229
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "html",
-      "range": [
-        3229,
-        3233
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        3233,
-        3234
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        3235,
-        3236
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        3241,
-        3245
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        3245,
-        3246
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "$el",
-      "range": [
-        3246,
-        3249
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        3249,
-        3250
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "html",
-      "range": [
-        3250,
-        3254
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        3254,
-        3255
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "html",
-      "range": [
-        3255,
-        3259
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        3259,
-        3260
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        3260,
-        3261
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "return",
-      "range": [
-        3267,
-        3273
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        3274,
-        3278
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        3278,
-        3279
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        3282,
-        3283
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        3283,
-        3284
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "destroy",
-      "range": [
-        3378,
-        3385
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ":",
-      "range": [
-        3385,
-        3386
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "function",
-      "range": [
-        3387,
-        3395
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        3395,
-        3396
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        3396,
-        3397
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        3398,
-        3399
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "if",
-      "range": [
-        3404,
-        3406
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        3407,
-        3408
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        3408,
-        3412
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        3412,
-        3413
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "isDestroyed",
-      "range": [
-        3413,
-        3424
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        3424,
-        3425
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "{",
-      "range": [
-        3426,
-        3427
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "return",
-      "range": [
-        3428,
-        3434
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        3434,
-        3435
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        3436,
-        3437
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "return",
-      "range": [
-        3443,
-        3449
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "Marionette",
-      "range": [
-        3450,
-        3460
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        3460,
-        3461
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "View",
-      "range": [
-        3461,
-        3465
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        3465,
-        3466
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "prototype",
-      "range": [
-        3466,
-        3475
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        3475,
-        3476
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "destroy",
-      "range": [
-        3476,
-        3483
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ".",
-      "range": [
-        3483,
-        3484
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "apply",
-      "range": [
-        3484,
-        3489
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "(",
-      "range": [
-        3489,
-        3490
-      ]
-    },
-    {
-      "type": "Keyword",
-      "value": "this",
-      "range": [
-        3490,
-        3494
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ",",
-      "range": [
-        3494,
-        3495
-      ]
-    },
-    {
-      "type": "Identifier",
-      "value": "arguments",
-      "range": [
-        3496,
-        3505
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        3505,
-        3506
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        3506,
-        3507
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        3510,
-        3511
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": "}",
-      "range": [
-        3512,
-        3513
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ")",
-      "range": [
-        3513,
-        3514
-      ]
-    },
-    {
-      "type": "Punctuator",
-      "value": ";",
-      "range": [
-        3514,
-        3515
-      ]
+        }
+      }
     }
   ]
 }

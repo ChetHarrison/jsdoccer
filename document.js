@@ -5,6 +5,7 @@ var production = true;
 var fs = require('fs'),
 	path = require('path'),
 	esprima = require('esprima'),
+	_ = require('lodash'),
 
 	Lookup = require('./lookup.js'),
 
@@ -39,7 +40,7 @@ var fs = require('fs'),
 	saveSyntaxTree = function (json, filename) {
 		var fullOutputPath = getFullOutputPath(filename);
 		fs.writeFileSync(fullOutputPath, JSON.stringify(json, null, 2));
-		console.log(filename + ' has been documented at: ' + fullOutputPath);
+		console.log('Saving syntax tree: ' + fullOutputPath);
 	},
 
 	getConfig = function () {
@@ -49,19 +50,24 @@ var fs = require('fs'),
 	},
 
 	documentFile = function (filename) {
-		var tree = createSyntaxTree(getFullInputPath(filename)),
+		var tree, lookup, bodyNodes, typeMap;
 
-			lookup = new Lookup({
-				syntaxTree: tree,
-				config: getConfig()
-			});
-
-		console.log('body elements: ' + lookup.bodyLength());
+		tree = createSyntaxTree(getFullInputPath(filename));
 
 		if (production) {
 			saveSyntaxTree(tree, filename);
 		}
+
+		// Play with the tree
+		lookup = new Lookup({
+			syntaxTree: tree,
+			config: getConfig()
+		});
+
+		console.log(lookup.getNamespacedFunctionAssignments());
+
 	};
+
 
 
 // check for command line for target js file arguments.

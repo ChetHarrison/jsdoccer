@@ -1,0 +1,1091 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+            "type": "Identifier",
+            "name": "Marionette",
+            "range": [
+              119,
+              129
+            ]
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "Renderer",
+            "range": [
+              130,
+              138
+            ]
+          },
+          "range": [
+            119,
+            138
+          ]
+        },
+        "right": {
+          "type": "ObjectExpression",
+          "properties": [
+            {
+              "type": "Property",
+              "key": {
+                "type": "Identifier",
+                "name": "render",
+                "range": [
+                  398,
+                  404
+                ]
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "template",
+                    "range": [
+                      415,
+                      423
+                    ]
+                  },
+                  {
+                    "type": "Identifier",
+                    "name": "data",
+                    "range": [
+                      425,
+                      429
+                    ]
+                  }
+                ],
+                "defaults": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "IfStatement",
+                      "test": {
+                        "type": "UnaryExpression",
+                        "operator": "!",
+                        "argument": {
+                          "type": "Identifier",
+                          "name": "template",
+                          "range": [
+                            442,
+                            450
+                          ]
+                        },
+                        "prefix": true,
+                        "range": [
+                          441,
+                          450
+                        ]
+                      },
+                      "consequent": {
+                        "type": "BlockStatement",
+                        "body": [
+                          {
+                            "type": "ThrowStatement",
+                            "argument": {
+                              "type": "NewExpression",
+                              "callee": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "Identifier",
+                                  "name": "Marionette",
+                                  "range": [
+                                    470,
+                                    480
+                                  ]
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "Error",
+                                  "range": [
+                                    481,
+                                    486
+                                  ]
+                                },
+                                "range": [
+                                  470,
+                                  486
+                                ]
+                              },
+                              "arguments": [
+                                {
+                                  "type": "ObjectExpression",
+                                  "properties": [
+                                    {
+                                      "type": "Property",
+                                      "key": {
+                                        "type": "Identifier",
+                                        "name": "name",
+                                        "range": [
+                                          497,
+                                          501
+                                        ]
+                                      },
+                                      "value": {
+                                        "type": "Literal",
+                                        "value": "TemplateNotFoundError",
+                                        "raw": "'TemplateNotFoundError'",
+                                        "range": [
+                                          503,
+                                          526
+                                        ]
+                                      },
+                                      "kind": "init",
+                                      "range": [
+                                        497,
+                                        526
+                                      ]
+                                    },
+                                    {
+                                      "type": "Property",
+                                      "key": {
+                                        "type": "Identifier",
+                                        "name": "message",
+                                        "range": [
+                                          536,
+                                          543
+                                        ]
+                                      },
+                                      "value": {
+                                        "type": "Literal",
+                                        "value": "Cannot render the template since its false, null or undefined.",
+                                        "raw": "'Cannot render the template since its false, null or undefined.'",
+                                        "range": [
+                                          545,
+                                          609
+                                        ]
+                                      },
+                                      "kind": "init",
+                                      "range": [
+                                        536,
+                                        609
+                                      ]
+                                    }
+                                  ],
+                                  "range": [
+                                    487,
+                                    617
+                                  ]
+                                }
+                              ],
+                              "range": [
+                                466,
+                                618
+                              ]
+                            },
+                            "range": [
+                              460,
+                              619
+                            ]
+                          }
+                        ],
+                        "range": [
+                          452,
+                          625
+                        ]
+                      },
+                      "alternate": null,
+                      "range": [
+                        437,
+                        625
+                      ]
+                    },
+                    {
+                      "type": "VariableDeclaration",
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "id": {
+                            "type": "Identifier",
+                            "name": "templateFunc",
+                            "range": [
+                              635,
+                              647
+                            ]
+                          },
+                          "init": null,
+                          "range": [
+                            635,
+                            647
+                          ]
+                        }
+                      ],
+                      "kind": "var",
+                      "range": [
+                        631,
+                        648
+                      ]
+                    },
+                    {
+                      "type": "IfStatement",
+                      "test": {
+                        "type": "BinaryExpression",
+                        "operator": "===",
+                        "left": {
+                          "type": "UnaryExpression",
+                          "operator": "typeof",
+                          "argument": {
+                            "type": "Identifier",
+                            "name": "template",
+                            "range": [
+                              664,
+                              672
+                            ]
+                          },
+                          "prefix": true,
+                          "range": [
+                            657,
+                            672
+                          ]
+                        },
+                        "right": {
+                          "type": "Literal",
+                          "value": "function",
+                          "raw": "'function'",
+                          "range": [
+                            677,
+                            687
+                          ]
+                        },
+                        "range": [
+                          657,
+                          687
+                        ]
+                      },
+                      "consequent": {
+                        "type": "BlockStatement",
+                        "body": [
+                          {
+                            "type": "ExpressionStatement",
+                            "expression": {
+                              "type": "AssignmentExpression",
+                              "operator": "=",
+                              "left": {
+                                "type": "Identifier",
+                                "name": "templateFunc",
+                                "range": [
+                                  697,
+                                  709
+                                ]
+                              },
+                              "right": {
+                                "type": "Identifier",
+                                "name": "template",
+                                "range": [
+                                  712,
+                                  720
+                                ]
+                              },
+                              "range": [
+                                697,
+                                720
+                              ]
+                            },
+                            "range": [
+                              697,
+                              721
+                            ]
+                          }
+                        ],
+                        "range": [
+                          689,
+                          727
+                        ]
+                      },
+                      "alternate": {
+                        "type": "BlockStatement",
+                        "body": [
+                          {
+                            "type": "ExpressionStatement",
+                            "expression": {
+                              "type": "AssignmentExpression",
+                              "operator": "=",
+                              "left": {
+                                "type": "Identifier",
+                                "name": "templateFunc",
+                                "range": [
+                                  741,
+                                  753
+                                ]
+                              },
+                              "right": {
+                                "type": "CallExpression",
+                                "callee": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "MemberExpression",
+                                    "computed": false,
+                                    "object": {
+                                      "type": "Identifier",
+                                      "name": "Marionette",
+                                      "range": [
+                                        756,
+                                        766
+                                      ]
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "TemplateCache",
+                                      "range": [
+                                        767,
+                                        780
+                                      ]
+                                    },
+                                    "range": [
+                                      756,
+                                      780
+                                    ]
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "get",
+                                    "range": [
+                                      781,
+                                      784
+                                    ]
+                                  },
+                                  "range": [
+                                    756,
+                                    784
+                                  ]
+                                },
+                                "arguments": [
+                                  {
+                                    "type": "Identifier",
+                                    "name": "template",
+                                    "range": [
+                                      785,
+                                      793
+                                    ]
+                                  }
+                                ],
+                                "range": [
+                                  756,
+                                  794
+                                ]
+                              },
+                              "range": [
+                                741,
+                                794
+                              ]
+                            },
+                            "range": [
+                              741,
+                              795
+                            ]
+                          }
+                        ],
+                        "range": [
+                          733,
+                          801
+                        ]
+                      },
+                      "range": [
+                        653,
+                        801
+                      ]
+                    },
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "templateFunc",
+                          "range": [
+                            814,
+                            826
+                          ]
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "name": "data",
+                            "range": [
+                              827,
+                              831
+                            ]
+                          }
+                        ],
+                        "range": [
+                          814,
+                          832
+                        ]
+                      },
+                      "range": [
+                        807,
+                        833
+                      ]
+                    }
+                  ],
+                  "range": [
+                    431,
+                    837
+                  ]
+                },
+                "rest": null,
+                "generator": false,
+                "expression": false,
+                "range": [
+                  406,
+                  837
+                ]
+              },
+              "kind": "init",
+              "range": [
+                398,
+                837
+              ]
+            }
+          ],
+          "range": [
+            141,
+            839
+          ]
+        },
+        "range": [
+          119,
+          839
+        ]
+      },
+      "range": [
+        119,
+        840
+      ]
+    }
+  ],
+  "range": [
+    119,
+    840
+  ],
+  "tokens": [
+    {
+      "type": "Identifier",
+      "value": "Marionette",
+      "range": [
+        119,
+        129
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        129,
+        130
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Renderer",
+      "range": [
+        130,
+        138
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        139,
+        140
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        141,
+        142
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "render",
+      "range": [
+        398,
+        404
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        404,
+        405
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        406,
+        414
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        414,
+        415
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "template",
+      "range": [
+        415,
+        423
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        423,
+        424
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "data",
+      "range": [
+        425,
+        429
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        429,
+        430
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        431,
+        432
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "if",
+      "range": [
+        437,
+        439
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        440,
+        441
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "!",
+      "range": [
+        441,
+        442
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "template",
+      "range": [
+        442,
+        450
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        450,
+        451
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        452,
+        453
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "throw",
+      "range": [
+        460,
+        465
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "new",
+      "range": [
+        466,
+        469
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Marionette",
+      "range": [
+        470,
+        480
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        480,
+        481
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Error",
+      "range": [
+        481,
+        486
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        486,
+        487
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        487,
+        488
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "name",
+      "range": [
+        497,
+        501
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        501,
+        502
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'TemplateNotFoundError'",
+      "range": [
+        503,
+        526
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        526,
+        527
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "message",
+      "range": [
+        536,
+        543
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        543,
+        544
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'Cannot render the template since its false, null or undefined.'",
+      "range": [
+        545,
+        609
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        616,
+        617
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        617,
+        618
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        618,
+        619
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        624,
+        625
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "var",
+      "range": [
+        631,
+        634
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateFunc",
+      "range": [
+        635,
+        647
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        647,
+        648
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "if",
+      "range": [
+        653,
+        655
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        656,
+        657
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "typeof",
+      "range": [
+        657,
+        663
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "template",
+      "range": [
+        664,
+        672
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "===",
+      "range": [
+        673,
+        676
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'function'",
+      "range": [
+        677,
+        687
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        687,
+        688
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        689,
+        690
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateFunc",
+      "range": [
+        697,
+        709
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        710,
+        711
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "template",
+      "range": [
+        712,
+        720
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        720,
+        721
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        726,
+        727
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "else",
+      "range": [
+        728,
+        732
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        733,
+        734
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateFunc",
+      "range": [
+        741,
+        753
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        754,
+        755
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Marionette",
+      "range": [
+        756,
+        766
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        766,
+        767
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "TemplateCache",
+      "range": [
+        767,
+        780
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        780,
+        781
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "get",
+      "range": [
+        781,
+        784
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        784,
+        785
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "template",
+      "range": [
+        785,
+        793
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        793,
+        794
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        794,
+        795
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        800,
+        801
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "return",
+      "range": [
+        807,
+        813
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateFunc",
+      "range": [
+        814,
+        826
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        826,
+        827
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "data",
+      "range": [
+        827,
+        831
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        831,
+        832
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        832,
+        833
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        836,
+        837
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        838,
+        839
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        839,
+        840
+      ]
+    }
+  ]
+}

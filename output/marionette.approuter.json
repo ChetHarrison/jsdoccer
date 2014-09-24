@@ -1,0 +1,4329 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+            "type": "Identifier",
+            "name": "Marionette",
+            "range": [
+              585,
+              595
+            ]
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "AppRouter",
+            "range": [
+              596,
+              605
+            ]
+          },
+          "range": [
+            585,
+            605
+          ]
+        },
+        "right": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+              "type": "MemberExpression",
+              "computed": false,
+              "object": {
+                "type": "Identifier",
+                "name": "Backbone",
+                "range": [
+                  608,
+                  616
+                ]
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "Router",
+                "range": [
+                  617,
+                  623
+                ]
+              },
+              "range": [
+                608,
+                623
+              ]
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "extend",
+              "range": [
+                624,
+                630
+              ]
+            },
+            "range": [
+              608,
+              630
+            ]
+          },
+          "arguments": [
+            {
+              "type": "ObjectExpression",
+              "properties": [
+                {
+                  "type": "Property",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "constructor",
+                    "range": [
+                      636,
+                      647
+                    ]
+                  },
+                  "value": {
+                    "type": "FunctionExpression",
+                    "id": null,
+                    "params": [
+                      {
+                        "type": "Identifier",
+                        "name": "options",
+                        "range": [
+                          658,
+                          665
+                        ]
+                      }
+                    ],
+                    "defaults": [],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "Identifier",
+                                  "name": "Backbone",
+                                  "range": [
+                                    673,
+                                    681
+                                  ]
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "Router",
+                                  "range": [
+                                    682,
+                                    688
+                                  ]
+                                },
+                                "range": [
+                                  673,
+                                  688
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "apply",
+                                "range": [
+                                  689,
+                                  694
+                                ]
+                              },
+                              "range": [
+                                673,
+                                694
+                              ]
+                            },
+                            "arguments": [
+                              {
+                                "type": "ThisExpression",
+                                "range": [
+                                  695,
+                                  699
+                                ]
+                              },
+                              {
+                                "type": "Identifier",
+                                "name": "arguments",
+                                "range": [
+                                  701,
+                                  710
+                                ]
+                              }
+                            ],
+                            "range": [
+                              673,
+                              711
+                            ]
+                          },
+                          "range": [
+                            673,
+                            712
+                          ]
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "AssignmentExpression",
+                            "operator": "=",
+                            "left": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression",
+                                "range": [
+                                  718,
+                                  722
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "options",
+                                "range": [
+                                  723,
+                                  730
+                                ]
+                              },
+                              "range": [
+                                718,
+                                730
+                              ]
+                            },
+                            "right": {
+                              "type": "LogicalExpression",
+                              "operator": "||",
+                              "left": {
+                                "type": "Identifier",
+                                "name": "options",
+                                "range": [
+                                  733,
+                                  740
+                                ]
+                              },
+                              "right": {
+                                "type": "ObjectExpression",
+                                "properties": [],
+                                "range": [
+                                  744,
+                                  746
+                                ]
+                              },
+                              "range": [
+                                733,
+                                746
+                              ]
+                            },
+                            "range": [
+                              718,
+                              746
+                            ]
+                          },
+                          "range": [
+                            718,
+                            747
+                          ]
+                        },
+                        {
+                          "type": "VariableDeclaration",
+                          "declarations": [
+                            {
+                              "type": "VariableDeclarator",
+                              "id": {
+                                "type": "Identifier",
+                                "name": "appRoutes",
+                                "range": [
+                                  757,
+                                  766
+                                ]
+                              },
+                              "init": {
+                                "type": "CallExpression",
+                                "callee": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "ThisExpression",
+                                    "range": [
+                                      769,
+                                      773
+                                    ]
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "getOption",
+                                    "range": [
+                                      774,
+                                      783
+                                    ]
+                                  },
+                                  "range": [
+                                    769,
+                                    783
+                                  ]
+                                },
+                                "arguments": [
+                                  {
+                                    "type": "Literal",
+                                    "value": "appRoutes",
+                                    "raw": "'appRoutes'",
+                                    "range": [
+                                      784,
+                                      795
+                                    ]
+                                  }
+                                ],
+                                "range": [
+                                  769,
+                                  796
+                                ]
+                              },
+                              "range": [
+                                757,
+                                796
+                              ]
+                            }
+                          ],
+                          "kind": "var",
+                          "range": [
+                            753,
+                            797
+                          ]
+                        },
+                        {
+                          "type": "VariableDeclaration",
+                          "declarations": [
+                            {
+                              "type": "VariableDeclarator",
+                              "id": {
+                                "type": "Identifier",
+                                "name": "controller",
+                                "range": [
+                                  806,
+                                  816
+                                ]
+                              },
+                              "init": {
+                                "type": "CallExpression",
+                                "callee": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "ThisExpression",
+                                    "range": [
+                                      819,
+                                      823
+                                    ]
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "_getController",
+                                    "range": [
+                                      824,
+                                      838
+                                    ]
+                                  },
+                                  "range": [
+                                    819,
+                                    838
+                                  ]
+                                },
+                                "arguments": [],
+                                "range": [
+                                  819,
+                                  840
+                                ]
+                              },
+                              "range": [
+                                806,
+                                840
+                              ]
+                            }
+                          ],
+                          "kind": "var",
+                          "range": [
+                            802,
+                            841
+                          ]
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression",
+                                "range": [
+                                  846,
+                                  850
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "processAppRoutes",
+                                "range": [
+                                  851,
+                                  867
+                                ]
+                              },
+                              "range": [
+                                846,
+                                867
+                              ]
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "name": "controller",
+                                "range": [
+                                  868,
+                                  878
+                                ]
+                              },
+                              {
+                                "type": "Identifier",
+                                "name": "appRoutes",
+                                "range": [
+                                  880,
+                                  889
+                                ]
+                              }
+                            ],
+                            "range": [
+                              846,
+                              890
+                            ]
+                          },
+                          "range": [
+                            846,
+                            891
+                          ]
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression",
+                                "range": [
+                                  896,
+                                  900
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "on",
+                                "range": [
+                                  901,
+                                  903
+                                ]
+                              },
+                              "range": [
+                                896,
+                                903
+                              ]
+                            },
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "value": "route",
+                                "raw": "'route'",
+                                "range": [
+                                  904,
+                                  911
+                                ]
+                              },
+                              {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "ThisExpression",
+                                  "range": [
+                                    913,
+                                    917
+                                  ]
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "_processOnRoute",
+                                  "range": [
+                                    918,
+                                    933
+                                  ]
+                                },
+                                "range": [
+                                  913,
+                                  933
+                                ]
+                              },
+                              {
+                                "type": "ThisExpression",
+                                "range": [
+                                  935,
+                                  939
+                                ]
+                              }
+                            ],
+                            "range": [
+                              896,
+                              940
+                            ]
+                          },
+                          "range": [
+                            896,
+                            941
+                          ]
+                        }
+                      ],
+                      "range": [
+                        667,
+                        945
+                      ]
+                    },
+                    "rest": null,
+                    "generator": false,
+                    "expression": false,
+                    "range": [
+                      649,
+                      945
+                    ]
+                  },
+                  "kind": "init",
+                  "range": [
+                    636,
+                    945
+                  ]
+                },
+                {
+                  "type": "Property",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "appRoute",
+                    "range": [
+                      1044,
+                      1052
+                    ]
+                  },
+                  "value": {
+                    "type": "FunctionExpression",
+                    "id": null,
+                    "params": [
+                      {
+                        "type": "Identifier",
+                        "name": "route",
+                        "range": [
+                          1063,
+                          1068
+                        ]
+                      },
+                      {
+                        "type": "Identifier",
+                        "name": "methodName",
+                        "range": [
+                          1070,
+                          1080
+                        ]
+                      }
+                    ],
+                    "defaults": [],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "VariableDeclaration",
+                          "declarations": [
+                            {
+                              "type": "VariableDeclarator",
+                              "id": {
+                                "type": "Identifier",
+                                "name": "controller",
+                                "range": [
+                                  1092,
+                                  1102
+                                ]
+                              },
+                              "init": {
+                                "type": "CallExpression",
+                                "callee": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "ThisExpression",
+                                    "range": [
+                                      1105,
+                                      1109
+                                    ]
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "_getController",
+                                    "range": [
+                                      1110,
+                                      1124
+                                    ]
+                                  },
+                                  "range": [
+                                    1105,
+                                    1124
+                                  ]
+                                },
+                                "arguments": [],
+                                "range": [
+                                  1105,
+                                  1126
+                                ]
+                              },
+                              "range": [
+                                1092,
+                                1126
+                              ]
+                            }
+                          ],
+                          "kind": "var",
+                          "range": [
+                            1088,
+                            1127
+                          ]
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression",
+                                "range": [
+                                  1132,
+                                  1136
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "_addAppRoute",
+                                "range": [
+                                  1137,
+                                  1149
+                                ]
+                              },
+                              "range": [
+                                1132,
+                                1149
+                              ]
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "name": "controller",
+                                "range": [
+                                  1150,
+                                  1160
+                                ]
+                              },
+                              {
+                                "type": "Identifier",
+                                "name": "route",
+                                "range": [
+                                  1162,
+                                  1167
+                                ]
+                              },
+                              {
+                                "type": "Identifier",
+                                "name": "methodName",
+                                "range": [
+                                  1169,
+                                  1179
+                                ]
+                              }
+                            ],
+                            "range": [
+                              1132,
+                              1180
+                            ]
+                          },
+                          "range": [
+                            1132,
+                            1181
+                          ]
+                        }
+                      ],
+                      "range": [
+                        1082,
+                        1185
+                      ]
+                    },
+                    "rest": null,
+                    "generator": false,
+                    "expression": false,
+                    "range": [
+                      1054,
+                      1185
+                    ]
+                  },
+                  "kind": "init",
+                  "range": [
+                    1044,
+                    1185
+                  ]
+                },
+                {
+                  "type": "Property",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "_processOnRoute",
+                    "range": [
+                      1274,
+                      1289
+                    ]
+                  },
+                  "value": {
+                    "type": "FunctionExpression",
+                    "id": null,
+                    "params": [
+                      {
+                        "type": "Identifier",
+                        "name": "routeName",
+                        "range": [
+                          1300,
+                          1309
+                        ]
+                      },
+                      {
+                        "type": "Identifier",
+                        "name": "routeArgs",
+                        "range": [
+                          1311,
+                          1320
+                        ]
+                      }
+                    ],
+                    "defaults": [],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "VariableDeclaration",
+                          "declarations": [
+                            {
+                              "type": "VariableDeclarator",
+                              "id": {
+                                "type": "Identifier",
+                                "name": "routePath",
+                                "range": [
+                                  1366,
+                                  1375
+                                ]
+                              },
+                              "init": {
+                                "type": "MemberExpression",
+                                "computed": true,
+                                "object": {
+                                  "type": "CallExpression",
+                                  "callee": {
+                                    "type": "MemberExpression",
+                                    "computed": false,
+                                    "object": {
+                                      "type": "Identifier",
+                                      "name": "_",
+                                      "range": [
+                                        1378,
+                                        1379
+                                      ]
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "invert",
+                                      "range": [
+                                        1380,
+                                        1386
+                                      ]
+                                    },
+                                    "range": [
+                                      1378,
+                                      1386
+                                    ]
+                                  },
+                                  "arguments": [
+                                    {
+                                      "type": "CallExpression",
+                                      "callee": {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                          "type": "ThisExpression",
+                                          "range": [
+                                            1387,
+                                            1391
+                                          ]
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "getOption",
+                                          "range": [
+                                            1392,
+                                            1401
+                                          ]
+                                        },
+                                        "range": [
+                                          1387,
+                                          1401
+                                        ]
+                                      },
+                                      "arguments": [
+                                        {
+                                          "type": "Literal",
+                                          "value": "appRoutes",
+                                          "raw": "'appRoutes'",
+                                          "range": [
+                                            1402,
+                                            1413
+                                          ]
+                                        }
+                                      ],
+                                      "range": [
+                                        1387,
+                                        1414
+                                      ]
+                                    }
+                                  ],
+                                  "range": [
+                                    1378,
+                                    1415
+                                  ]
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "routeName",
+                                  "range": [
+                                    1416,
+                                    1425
+                                  ]
+                                },
+                                "range": [
+                                  1378,
+                                  1426
+                                ]
+                              },
+                              "range": [
+                                1366,
+                                1426
+                              ]
+                            }
+                          ],
+                          "kind": "var",
+                          "range": [
+                            1362,
+                            1427
+                          ]
+                        },
+                        {
+                          "type": "IfStatement",
+                          "test": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "_",
+                                "range": [
+                                  1487,
+                                  1488
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "isFunction",
+                                "range": [
+                                  1489,
+                                  1499
+                                ]
+                              },
+                              "range": [
+                                1487,
+                                1499
+                              ]
+                            },
+                            "arguments": [
+                              {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "ThisExpression",
+                                  "range": [
+                                    1500,
+                                    1504
+                                  ]
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "onRoute",
+                                  "range": [
+                                    1505,
+                                    1512
+                                  ]
+                                },
+                                "range": [
+                                  1500,
+                                  1512
+                                ]
+                              }
+                            ],
+                            "range": [
+                              1487,
+                              1513
+                            ]
+                          },
+                          "consequent": {
+                            "type": "BlockStatement",
+                            "body": [
+                              {
+                                "type": "ExpressionStatement",
+                                "expression": {
+                                  "type": "CallExpression",
+                                  "callee": {
+                                    "type": "MemberExpression",
+                                    "computed": false,
+                                    "object": {
+                                      "type": "ThisExpression",
+                                      "range": [
+                                        1523,
+                                        1527
+                                      ]
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "onRoute",
+                                      "range": [
+                                        1528,
+                                        1535
+                                      ]
+                                    },
+                                    "range": [
+                                      1523,
+                                      1535
+                                    ]
+                                  },
+                                  "arguments": [
+                                    {
+                                      "type": "Identifier",
+                                      "name": "routeName",
+                                      "range": [
+                                        1536,
+                                        1545
+                                      ]
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "name": "routePath",
+                                      "range": [
+                                        1547,
+                                        1556
+                                      ]
+                                    },
+                                    {
+                                      "type": "Identifier",
+                                      "name": "routeArgs",
+                                      "range": [
+                                        1558,
+                                        1567
+                                      ]
+                                    }
+                                  ],
+                                  "range": [
+                                    1523,
+                                    1568
+                                  ]
+                                },
+                                "range": [
+                                  1523,
+                                  1569
+                                ]
+                              }
+                            ],
+                            "range": [
+                              1515,
+                              1575
+                            ]
+                          },
+                          "alternate": null,
+                          "range": [
+                            1483,
+                            1575
+                          ]
+                        }
+                      ],
+                      "range": [
+                        1322,
+                        1579
+                      ]
+                    },
+                    "rest": null,
+                    "generator": false,
+                    "expression": false,
+                    "range": [
+                      1291,
+                      1579
+                    ]
+                  },
+                  "kind": "init",
+                  "range": [
+                    1274,
+                    1579
+                  ]
+                },
+                {
+                  "type": "Property",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "processAppRoutes",
+                    "range": [
+                      1750,
+                      1766
+                    ]
+                  },
+                  "value": {
+                    "type": "FunctionExpression",
+                    "id": null,
+                    "params": [
+                      {
+                        "type": "Identifier",
+                        "name": "controller",
+                        "range": [
+                          1777,
+                          1787
+                        ]
+                      },
+                      {
+                        "type": "Identifier",
+                        "name": "appRoutes",
+                        "range": [
+                          1789,
+                          1798
+                        ]
+                      }
+                    ],
+                    "defaults": [],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "IfStatement",
+                          "test": {
+                            "type": "UnaryExpression",
+                            "operator": "!",
+                            "argument": {
+                              "type": "Identifier",
+                              "name": "appRoutes",
+                              "range": [
+                                1811,
+                                1820
+                              ]
+                            },
+                            "prefix": true,
+                            "range": [
+                              1810,
+                              1820
+                            ]
+                          },
+                          "consequent": {
+                            "type": "BlockStatement",
+                            "body": [
+                              {
+                                "type": "ReturnStatement",
+                                "argument": null,
+                                "range": [
+                                  1824,
+                                  1831
+                                ]
+                              }
+                            ],
+                            "range": [
+                              1822,
+                              1833
+                            ]
+                          },
+                          "alternate": null,
+                          "range": [
+                            1806,
+                            1833
+                          ]
+                        },
+                        {
+                          "type": "VariableDeclaration",
+                          "declarations": [
+                            {
+                              "type": "VariableDeclarator",
+                              "id": {
+                                "type": "Identifier",
+                                "name": "routeNames",
+                                "range": [
+                                  1843,
+                                  1853
+                                ]
+                              },
+                              "init": {
+                                "type": "CallExpression",
+                                "callee": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "CallExpression",
+                                    "callee": {
+                                      "type": "MemberExpression",
+                                      "computed": false,
+                                      "object": {
+                                        "type": "Identifier",
+                                        "name": "_",
+                                        "range": [
+                                          1856,
+                                          1857
+                                        ]
+                                      },
+                                      "property": {
+                                        "type": "Identifier",
+                                        "name": "keys",
+                                        "range": [
+                                          1858,
+                                          1862
+                                        ]
+                                      },
+                                      "range": [
+                                        1856,
+                                        1862
+                                      ]
+                                    },
+                                    "arguments": [
+                                      {
+                                        "type": "Identifier",
+                                        "name": "appRoutes",
+                                        "range": [
+                                          1863,
+                                          1872
+                                        ]
+                                      }
+                                    ],
+                                    "range": [
+                                      1856,
+                                      1873
+                                    ]
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "reverse",
+                                    "range": [
+                                      1874,
+                                      1881
+                                    ]
+                                  },
+                                  "range": [
+                                    1856,
+                                    1881
+                                  ]
+                                },
+                                "arguments": [],
+                                "range": [
+                                  1856,
+                                  1883
+                                ]
+                              },
+                              "range": [
+                                1843,
+                                1883
+                              ]
+                            }
+                          ],
+                          "kind": "var",
+                          "range": [
+                            1839,
+                            1884
+                          ]
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "_",
+                                "range": [
+                                  1936,
+                                  1937
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "each",
+                                "range": [
+                                  1938,
+                                  1942
+                                ]
+                              },
+                              "range": [
+                                1936,
+                                1942
+                              ]
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "name": "routeNames",
+                                "range": [
+                                  1943,
+                                  1953
+                                ]
+                              },
+                              {
+                                "type": "FunctionExpression",
+                                "id": null,
+                                "params": [
+                                  {
+                                    "type": "Identifier",
+                                    "name": "route",
+                                    "range": [
+                                      1964,
+                                      1969
+                                    ]
+                                  }
+                                ],
+                                "defaults": [],
+                                "body": {
+                                  "type": "BlockStatement",
+                                  "body": [
+                                    {
+                                      "type": "ExpressionStatement",
+                                      "expression": {
+                                        "type": "CallExpression",
+                                        "callee": {
+                                          "type": "MemberExpression",
+                                          "computed": false,
+                                          "object": {
+                                            "type": "ThisExpression",
+                                            "range": [
+                                              1979,
+                                              1983
+                                            ]
+                                          },
+                                          "property": {
+                                            "type": "Identifier",
+                                            "name": "_addAppRoute",
+                                            "range": [
+                                              1984,
+                                              1996
+                                            ]
+                                          },
+                                          "range": [
+                                            1979,
+                                            1996
+                                          ]
+                                        },
+                                        "arguments": [
+                                          {
+                                            "type": "Identifier",
+                                            "name": "controller",
+                                            "range": [
+                                              1997,
+                                              2007
+                                            ]
+                                          },
+                                          {
+                                            "type": "Identifier",
+                                            "name": "route",
+                                            "range": [
+                                              2009,
+                                              2014
+                                            ]
+                                          },
+                                          {
+                                            "type": "MemberExpression",
+                                            "computed": true,
+                                            "object": {
+                                              "type": "Identifier",
+                                              "name": "appRoutes",
+                                              "range": [
+                                                2016,
+                                                2025
+                                              ]
+                                            },
+                                            "property": {
+                                              "type": "Identifier",
+                                              "name": "route",
+                                              "range": [
+                                                2026,
+                                                2031
+                                              ]
+                                            },
+                                            "range": [
+                                              2016,
+                                              2032
+                                            ]
+                                          }
+                                        ],
+                                        "range": [
+                                          1979,
+                                          2033
+                                        ]
+                                      },
+                                      "range": [
+                                        1979,
+                                        2034
+                                      ]
+                                    }
+                                  ],
+                                  "range": [
+                                    1971,
+                                    2040
+                                  ]
+                                },
+                                "rest": null,
+                                "generator": false,
+                                "expression": false,
+                                "range": [
+                                  1955,
+                                  2040
+                                ]
+                              },
+                              {
+                                "type": "ThisExpression",
+                                "range": [
+                                  2042,
+                                  2046
+                                ]
+                              }
+                            ],
+                            "range": [
+                              1936,
+                              2047
+                            ]
+                          },
+                          "range": [
+                            1936,
+                            2048
+                          ]
+                        }
+                      ],
+                      "range": [
+                        1800,
+                        2052
+                      ]
+                    },
+                    "rest": null,
+                    "generator": false,
+                    "expression": false,
+                    "range": [
+                      1768,
+                      2052
+                    ]
+                  },
+                  "kind": "init",
+                  "range": [
+                    1750,
+                    2052
+                  ]
+                },
+                {
+                  "type": "Property",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "_getController",
+                    "range": [
+                      2057,
+                      2071
+                    ]
+                  },
+                  "value": {
+                    "type": "FunctionExpression",
+                    "id": null,
+                    "params": [],
+                    "defaults": [],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "ReturnStatement",
+                          "argument": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression",
+                                "range": [
+                                  2097,
+                                  2101
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "getOption",
+                                "range": [
+                                  2102,
+                                  2111
+                                ]
+                              },
+                              "range": [
+                                2097,
+                                2111
+                              ]
+                            },
+                            "arguments": [
+                              {
+                                "type": "Literal",
+                                "value": "controller",
+                                "raw": "'controller'",
+                                "range": [
+                                  2112,
+                                  2124
+                                ]
+                              }
+                            ],
+                            "range": [
+                              2097,
+                              2125
+                            ]
+                          },
+                          "range": [
+                            2090,
+                            2126
+                          ]
+                        }
+                      ],
+                      "range": [
+                        2084,
+                        2130
+                      ]
+                    },
+                    "rest": null,
+                    "generator": false,
+                    "expression": false,
+                    "range": [
+                      2073,
+                      2130
+                    ]
+                  },
+                  "kind": "init",
+                  "range": [
+                    2057,
+                    2130
+                  ]
+                },
+                {
+                  "type": "Property",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "_addAppRoute",
+                    "range": [
+                      2135,
+                      2147
+                    ]
+                  },
+                  "value": {
+                    "type": "FunctionExpression",
+                    "id": null,
+                    "params": [
+                      {
+                        "type": "Identifier",
+                        "name": "controller",
+                        "range": [
+                          2158,
+                          2168
+                        ]
+                      },
+                      {
+                        "type": "Identifier",
+                        "name": "route",
+                        "range": [
+                          2170,
+                          2175
+                        ]
+                      },
+                      {
+                        "type": "Identifier",
+                        "name": "methodName",
+                        "range": [
+                          2177,
+                          2187
+                        ]
+                      }
+                    ],
+                    "defaults": [],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "VariableDeclaration",
+                          "declarations": [
+                            {
+                              "type": "VariableDeclarator",
+                              "id": {
+                                "type": "Identifier",
+                                "name": "method",
+                                "range": [
+                                  2199,
+                                  2205
+                                ]
+                              },
+                              "init": {
+                                "type": "MemberExpression",
+                                "computed": true,
+                                "object": {
+                                  "type": "Identifier",
+                                  "name": "controller",
+                                  "range": [
+                                    2208,
+                                    2218
+                                  ]
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "methodName",
+                                  "range": [
+                                    2219,
+                                    2229
+                                  ]
+                                },
+                                "range": [
+                                  2208,
+                                  2230
+                                ]
+                              },
+                              "range": [
+                                2199,
+                                2230
+                              ]
+                            }
+                          ],
+                          "kind": "var",
+                          "range": [
+                            2195,
+                            2231
+                          ]
+                        },
+                        {
+                          "type": "IfStatement",
+                          "test": {
+                            "type": "UnaryExpression",
+                            "operator": "!",
+                            "argument": {
+                              "type": "Identifier",
+                              "name": "method",
+                              "range": [
+                                2242,
+                                2248
+                              ]
+                            },
+                            "prefix": true,
+                            "range": [
+                              2241,
+                              2248
+                            ]
+                          },
+                          "consequent": {
+                            "type": "BlockStatement",
+                            "body": [
+                              {
+                                "type": "ThrowStatement",
+                                "argument": {
+                                  "type": "NewExpression",
+                                  "callee": {
+                                    "type": "MemberExpression",
+                                    "computed": false,
+                                    "object": {
+                                      "type": "Identifier",
+                                      "name": "Marionette",
+                                      "range": [
+                                        2268,
+                                        2278
+                                      ]
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "Error",
+                                      "range": [
+                                        2279,
+                                        2284
+                                      ]
+                                    },
+                                    "range": [
+                                      2268,
+                                      2284
+                                    ]
+                                  },
+                                  "arguments": [
+                                    {
+                                      "type": "BinaryExpression",
+                                      "operator": "+",
+                                      "left": {
+                                        "type": "BinaryExpression",
+                                        "operator": "+",
+                                        "left": {
+                                          "type": "Literal",
+                                          "value": "Method \"",
+                                          "raw": "'Method \"'",
+                                          "range": [
+                                            2285,
+                                            2295
+                                          ]
+                                        },
+                                        "right": {
+                                          "type": "Identifier",
+                                          "name": "methodName",
+                                          "range": [
+                                            2298,
+                                            2308
+                                          ]
+                                        },
+                                        "range": [
+                                          2285,
+                                          2308
+                                        ]
+                                      },
+                                      "right": {
+                                        "type": "Literal",
+                                        "value": "\" was not found on the controller",
+                                        "raw": "'\" was not found on the controller'",
+                                        "range": [
+                                          2311,
+                                          2346
+                                        ]
+                                      },
+                                      "range": [
+                                        2285,
+                                        2346
+                                      ]
+                                    }
+                                  ],
+                                  "range": [
+                                    2264,
+                                    2347
+                                  ]
+                                },
+                                "range": [
+                                  2258,
+                                  2348
+                                ]
+                              }
+                            ],
+                            "range": [
+                              2250,
+                              2354
+                            ]
+                          },
+                          "alternate": null,
+                          "range": [
+                            2237,
+                            2354
+                          ]
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression",
+                                "range": [
+                                  2360,
+                                  2364
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "route",
+                                "range": [
+                                  2365,
+                                  2370
+                                ]
+                              },
+                              "range": [
+                                2360,
+                                2370
+                              ]
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "name": "route",
+                                "range": [
+                                  2371,
+                                  2376
+                                ]
+                              },
+                              {
+                                "type": "Identifier",
+                                "name": "methodName",
+                                "range": [
+                                  2378,
+                                  2388
+                                ]
+                              },
+                              {
+                                "type": "CallExpression",
+                                "callee": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "Identifier",
+                                    "name": "_",
+                                    "range": [
+                                      2390,
+                                      2391
+                                    ]
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "bind",
+                                    "range": [
+                                      2392,
+                                      2396
+                                    ]
+                                  },
+                                  "range": [
+                                    2390,
+                                    2396
+                                  ]
+                                },
+                                "arguments": [
+                                  {
+                                    "type": "Identifier",
+                                    "name": "method",
+                                    "range": [
+                                      2397,
+                                      2403
+                                    ]
+                                  },
+                                  {
+                                    "type": "Identifier",
+                                    "name": "controller",
+                                    "range": [
+                                      2405,
+                                      2415
+                                    ]
+                                  }
+                                ],
+                                "range": [
+                                  2390,
+                                  2416
+                                ]
+                              }
+                            ],
+                            "range": [
+                              2360,
+                              2417
+                            ]
+                          },
+                          "range": [
+                            2360,
+                            2418
+                          ]
+                        }
+                      ],
+                      "range": [
+                        2189,
+                        2422
+                      ]
+                    },
+                    "rest": null,
+                    "generator": false,
+                    "expression": false,
+                    "range": [
+                      2149,
+                      2422
+                    ]
+                  },
+                  "kind": "init",
+                  "range": [
+                    2135,
+                    2422
+                  ]
+                },
+                {
+                  "type": "Property",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "getOption",
+                    "range": [
+                      2511,
+                      2520
+                    ]
+                  },
+                  "value": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                      "type": "Identifier",
+                      "name": "Marionette",
+                      "range": [
+                        2522,
+                        2532
+                      ]
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "proxyGetOption",
+                      "range": [
+                        2533,
+                        2547
+                      ]
+                    },
+                    "range": [
+                      2522,
+                      2547
+                    ]
+                  },
+                  "kind": "init",
+                  "range": [
+                    2511,
+                    2547
+                  ]
+                }
+              ],
+              "range": [
+                631,
+                2549
+              ]
+            }
+          ],
+          "range": [
+            608,
+            2550
+          ]
+        },
+        "range": [
+          585,
+          2550
+        ]
+      },
+      "range": [
+        585,
+        2551
+      ]
+    }
+  ],
+  "range": [
+    585,
+    2551
+  ],
+  "tokens": [
+    {
+      "type": "Identifier",
+      "value": "Marionette",
+      "range": [
+        585,
+        595
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        595,
+        596
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "AppRouter",
+      "range": [
+        596,
+        605
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        606,
+        607
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Backbone",
+      "range": [
+        608,
+        616
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        616,
+        617
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Router",
+      "range": [
+        617,
+        623
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        623,
+        624
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "extend",
+      "range": [
+        624,
+        630
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        630,
+        631
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        631,
+        632
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "constructor",
+      "range": [
+        636,
+        647
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        647,
+        648
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        649,
+        657
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        657,
+        658
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "options",
+      "range": [
+        658,
+        665
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        665,
+        666
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        667,
+        668
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Backbone",
+      "range": [
+        673,
+        681
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        681,
+        682
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Router",
+      "range": [
+        682,
+        688
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        688,
+        689
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "apply",
+      "range": [
+        689,
+        694
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        694,
+        695
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        695,
+        699
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        699,
+        700
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "arguments",
+      "range": [
+        701,
+        710
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        710,
+        711
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        711,
+        712
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        718,
+        722
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        722,
+        723
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "options",
+      "range": [
+        723,
+        730
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        731,
+        732
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "options",
+      "range": [
+        733,
+        740
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "||",
+      "range": [
+        741,
+        743
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        744,
+        745
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        745,
+        746
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        746,
+        747
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "var",
+      "range": [
+        753,
+        756
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "appRoutes",
+      "range": [
+        757,
+        766
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        767,
+        768
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        769,
+        773
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        773,
+        774
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "getOption",
+      "range": [
+        774,
+        783
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        783,
+        784
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'appRoutes'",
+      "range": [
+        784,
+        795
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        795,
+        796
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        796,
+        797
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "var",
+      "range": [
+        802,
+        805
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "controller",
+      "range": [
+        806,
+        816
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        817,
+        818
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        819,
+        823
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        823,
+        824
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_getController",
+      "range": [
+        824,
+        838
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        838,
+        839
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        839,
+        840
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        840,
+        841
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        846,
+        850
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        850,
+        851
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "processAppRoutes",
+      "range": [
+        851,
+        867
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        867,
+        868
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "controller",
+      "range": [
+        868,
+        878
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        878,
+        879
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "appRoutes",
+      "range": [
+        880,
+        889
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        889,
+        890
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        890,
+        891
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        896,
+        900
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        900,
+        901
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "on",
+      "range": [
+        901,
+        903
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        903,
+        904
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'route'",
+      "range": [
+        904,
+        911
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        911,
+        912
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        913,
+        917
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        917,
+        918
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_processOnRoute",
+      "range": [
+        918,
+        933
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        933,
+        934
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        935,
+        939
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        939,
+        940
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        940,
+        941
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        944,
+        945
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        945,
+        946
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "appRoute",
+      "range": [
+        1044,
+        1052
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        1052,
+        1053
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        1054,
+        1062
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1062,
+        1063
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "route",
+      "range": [
+        1063,
+        1068
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1068,
+        1069
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "methodName",
+      "range": [
+        1070,
+        1080
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1080,
+        1081
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1082,
+        1083
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "var",
+      "range": [
+        1088,
+        1091
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "controller",
+      "range": [
+        1092,
+        1102
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        1103,
+        1104
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1105,
+        1109
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1109,
+        1110
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_getController",
+      "range": [
+        1110,
+        1124
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1124,
+        1125
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1125,
+        1126
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1126,
+        1127
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1132,
+        1136
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1136,
+        1137
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_addAppRoute",
+      "range": [
+        1137,
+        1149
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1149,
+        1150
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "controller",
+      "range": [
+        1150,
+        1160
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1160,
+        1161
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "route",
+      "range": [
+        1162,
+        1167
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1167,
+        1168
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "methodName",
+      "range": [
+        1169,
+        1179
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1179,
+        1180
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1180,
+        1181
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1184,
+        1185
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1185,
+        1186
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_processOnRoute",
+      "range": [
+        1274,
+        1289
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        1289,
+        1290
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        1291,
+        1299
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1299,
+        1300
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "routeName",
+      "range": [
+        1300,
+        1309
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1309,
+        1310
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "routeArgs",
+      "range": [
+        1311,
+        1320
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1320,
+        1321
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1322,
+        1323
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "var",
+      "range": [
+        1362,
+        1365
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "routePath",
+      "range": [
+        1366,
+        1375
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        1376,
+        1377
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_",
+      "range": [
+        1378,
+        1379
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1379,
+        1380
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "invert",
+      "range": [
+        1380,
+        1386
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1386,
+        1387
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1387,
+        1391
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1391,
+        1392
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "getOption",
+      "range": [
+        1392,
+        1401
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1401,
+        1402
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'appRoutes'",
+      "range": [
+        1402,
+        1413
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1413,
+        1414
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1414,
+        1415
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "[",
+      "range": [
+        1415,
+        1416
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "routeName",
+      "range": [
+        1416,
+        1425
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "]",
+      "range": [
+        1425,
+        1426
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1426,
+        1427
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "if",
+      "range": [
+        1483,
+        1485
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1486,
+        1487
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_",
+      "range": [
+        1487,
+        1488
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1488,
+        1489
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "isFunction",
+      "range": [
+        1489,
+        1499
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1499,
+        1500
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1500,
+        1504
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1504,
+        1505
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "onRoute",
+      "range": [
+        1505,
+        1512
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1512,
+        1513
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1513,
+        1514
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1515,
+        1516
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1523,
+        1527
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1527,
+        1528
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "onRoute",
+      "range": [
+        1528,
+        1535
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1535,
+        1536
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "routeName",
+      "range": [
+        1536,
+        1545
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1545,
+        1546
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "routePath",
+      "range": [
+        1547,
+        1556
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1556,
+        1557
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "routeArgs",
+      "range": [
+        1558,
+        1567
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1567,
+        1568
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1568,
+        1569
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1574,
+        1575
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1578,
+        1579
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1579,
+        1580
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "processAppRoutes",
+      "range": [
+        1750,
+        1766
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        1766,
+        1767
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        1768,
+        1776
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1776,
+        1777
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "controller",
+      "range": [
+        1777,
+        1787
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1787,
+        1788
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "appRoutes",
+      "range": [
+        1789,
+        1798
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1798,
+        1799
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1800,
+        1801
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "if",
+      "range": [
+        1806,
+        1808
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1809,
+        1810
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "!",
+      "range": [
+        1810,
+        1811
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "appRoutes",
+      "range": [
+        1811,
+        1820
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1820,
+        1821
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1822,
+        1823
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "return",
+      "range": [
+        1824,
+        1830
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1830,
+        1831
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1832,
+        1833
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "var",
+      "range": [
+        1839,
+        1842
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "routeNames",
+      "range": [
+        1843,
+        1853
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        1854,
+        1855
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_",
+      "range": [
+        1856,
+        1857
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1857,
+        1858
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "keys",
+      "range": [
+        1858,
+        1862
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1862,
+        1863
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "appRoutes",
+      "range": [
+        1863,
+        1872
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1872,
+        1873
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1873,
+        1874
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "reverse",
+      "range": [
+        1874,
+        1881
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1881,
+        1882
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1882,
+        1883
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1883,
+        1884
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_",
+      "range": [
+        1936,
+        1937
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1937,
+        1938
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "each",
+      "range": [
+        1938,
+        1942
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1942,
+        1943
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "routeNames",
+      "range": [
+        1943,
+        1953
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1953,
+        1954
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        1955,
+        1963
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1963,
+        1964
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "route",
+      "range": [
+        1964,
+        1969
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1969,
+        1970
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1971,
+        1972
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1979,
+        1983
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1983,
+        1984
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_addAppRoute",
+      "range": [
+        1984,
+        1996
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1996,
+        1997
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "controller",
+      "range": [
+        1997,
+        2007
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        2007,
+        2008
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "route",
+      "range": [
+        2009,
+        2014
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        2014,
+        2015
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "appRoutes",
+      "range": [
+        2016,
+        2025
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "[",
+      "range": [
+        2025,
+        2026
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "route",
+      "range": [
+        2026,
+        2031
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "]",
+      "range": [
+        2031,
+        2032
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2032,
+        2033
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        2033,
+        2034
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        2039,
+        2040
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        2040,
+        2041
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        2042,
+        2046
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2046,
+        2047
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        2047,
+        2048
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        2051,
+        2052
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        2052,
+        2053
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_getController",
+      "range": [
+        2057,
+        2071
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        2071,
+        2072
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        2073,
+        2081
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2081,
+        2082
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2082,
+        2083
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        2084,
+        2085
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "return",
+      "range": [
+        2090,
+        2096
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        2097,
+        2101
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        2101,
+        2102
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "getOption",
+      "range": [
+        2102,
+        2111
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2111,
+        2112
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'controller'",
+      "range": [
+        2112,
+        2124
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2124,
+        2125
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        2125,
+        2126
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        2129,
+        2130
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        2130,
+        2131
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_addAppRoute",
+      "range": [
+        2135,
+        2147
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        2147,
+        2148
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        2149,
+        2157
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2157,
+        2158
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "controller",
+      "range": [
+        2158,
+        2168
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        2168,
+        2169
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "route",
+      "range": [
+        2170,
+        2175
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        2175,
+        2176
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "methodName",
+      "range": [
+        2177,
+        2187
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2187,
+        2188
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        2189,
+        2190
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "var",
+      "range": [
+        2195,
+        2198
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "method",
+      "range": [
+        2199,
+        2205
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        2206,
+        2207
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "controller",
+      "range": [
+        2208,
+        2218
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "[",
+      "range": [
+        2218,
+        2219
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "methodName",
+      "range": [
+        2219,
+        2229
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "]",
+      "range": [
+        2229,
+        2230
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        2230,
+        2231
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "if",
+      "range": [
+        2237,
+        2239
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2240,
+        2241
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "!",
+      "range": [
+        2241,
+        2242
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "method",
+      "range": [
+        2242,
+        2248
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2248,
+        2249
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        2250,
+        2251
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "throw",
+      "range": [
+        2258,
+        2263
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "new",
+      "range": [
+        2264,
+        2267
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Marionette",
+      "range": [
+        2268,
+        2278
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        2278,
+        2279
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Error",
+      "range": [
+        2279,
+        2284
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2284,
+        2285
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'Method \"'",
+      "range": [
+        2285,
+        2295
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "+",
+      "range": [
+        2296,
+        2297
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "methodName",
+      "range": [
+        2298,
+        2308
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "+",
+      "range": [
+        2309,
+        2310
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'\" was not found on the controller'",
+      "range": [
+        2311,
+        2346
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2346,
+        2347
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        2347,
+        2348
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        2353,
+        2354
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        2360,
+        2364
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        2364,
+        2365
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "route",
+      "range": [
+        2365,
+        2370
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2370,
+        2371
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "route",
+      "range": [
+        2371,
+        2376
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        2376,
+        2377
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "methodName",
+      "range": [
+        2378,
+        2388
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        2388,
+        2389
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_",
+      "range": [
+        2390,
+        2391
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        2391,
+        2392
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "bind",
+      "range": [
+        2392,
+        2396
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2396,
+        2397
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "method",
+      "range": [
+        2397,
+        2403
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        2403,
+        2404
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "controller",
+      "range": [
+        2405,
+        2415
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2415,
+        2416
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2416,
+        2417
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        2417,
+        2418
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        2421,
+        2422
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        2422,
+        2423
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "getOption",
+      "range": [
+        2511,
+        2520
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        2520,
+        2521
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Marionette",
+      "range": [
+        2522,
+        2532
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        2532,
+        2533
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "proxyGetOption",
+      "range": [
+        2533,
+        2547
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        2548,
+        2549
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2549,
+        2550
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        2550,
+        2551
+      ]
+    }
+  ]
+}

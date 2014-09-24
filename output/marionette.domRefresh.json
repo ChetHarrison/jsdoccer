@@ -1,0 +1,2339 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+            "type": "Identifier",
+            "name": "Marionette",
+            "range": [
+              178,
+              188
+            ]
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "MonitorDOMRefresh",
+            "range": [
+              189,
+              206
+            ]
+          },
+          "range": [
+            178,
+            206
+          ]
+        },
+        "right": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "FunctionExpression",
+            "id": null,
+            "params": [
+              {
+                "type": "Identifier",
+                "name": "documentElement",
+                "range": [
+                  219,
+                  234
+                ]
+              }
+            ],
+            "defaults": [],
+            "body": {
+              "type": "BlockStatement",
+              "body": [
+                {
+                  "type": "FunctionDeclaration",
+                  "id": {
+                    "type": "Identifier",
+                    "name": "handleShow",
+                    "range": [
+                      373,
+                      383
+                    ]
+                  },
+                  "params": [
+                    {
+                      "type": "Identifier",
+                      "name": "view",
+                      "range": [
+                        384,
+                        388
+                      ]
+                    }
+                  ],
+                  "defaults": [],
+                  "body": {
+                    "type": "BlockStatement",
+                    "body": [
+                      {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                          "type": "AssignmentExpression",
+                          "operator": "=",
+                          "left": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "Identifier",
+                              "name": "view",
+                              "range": [
+                                396,
+                                400
+                              ]
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "_isShown",
+                              "range": [
+                                401,
+                                409
+                              ]
+                            },
+                            "range": [
+                              396,
+                              409
+                            ]
+                          },
+                          "right": {
+                            "type": "Literal",
+                            "value": true,
+                            "raw": "true",
+                            "range": [
+                              412,
+                              416
+                            ]
+                          },
+                          "range": [
+                            396,
+                            416
+                          ]
+                        },
+                        "range": [
+                          396,
+                          417
+                        ]
+                      },
+                      {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "Identifier",
+                            "name": "triggerDOMRefresh",
+                            "range": [
+                              422,
+                              439
+                            ]
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "name": "view",
+                              "range": [
+                                440,
+                                444
+                              ]
+                            }
+                          ],
+                          "range": [
+                            422,
+                            445
+                          ]
+                        },
+                        "range": [
+                          422,
+                          446
+                        ]
+                      }
+                    ],
+                    "range": [
+                      390,
+                      450
+                    ]
+                  },
+                  "rest": null,
+                  "generator": false,
+                  "expression": false,
+                  "range": [
+                    364,
+                    450
+                  ]
+                },
+                {
+                  "type": "FunctionDeclaration",
+                  "id": {
+                    "type": "Identifier",
+                    "name": "handleRender",
+                    "range": [
+                      506,
+                      518
+                    ]
+                  },
+                  "params": [
+                    {
+                      "type": "Identifier",
+                      "name": "view",
+                      "range": [
+                        519,
+                        523
+                      ]
+                    }
+                  ],
+                  "defaults": [],
+                  "body": {
+                    "type": "BlockStatement",
+                    "body": [
+                      {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                          "type": "AssignmentExpression",
+                          "operator": "=",
+                          "left": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "Identifier",
+                              "name": "view",
+                              "range": [
+                                531,
+                                535
+                              ]
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "_isRendered",
+                              "range": [
+                                536,
+                                547
+                              ]
+                            },
+                            "range": [
+                              531,
+                              547
+                            ]
+                          },
+                          "right": {
+                            "type": "Literal",
+                            "value": true,
+                            "raw": "true",
+                            "range": [
+                              550,
+                              554
+                            ]
+                          },
+                          "range": [
+                            531,
+                            554
+                          ]
+                        },
+                        "range": [
+                          531,
+                          555
+                        ]
+                      },
+                      {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "Identifier",
+                            "name": "triggerDOMRefresh",
+                            "range": [
+                              560,
+                              577
+                            ]
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "name": "view",
+                              "range": [
+                                578,
+                                582
+                              ]
+                            }
+                          ],
+                          "range": [
+                            560,
+                            583
+                          ]
+                        },
+                        "range": [
+                          560,
+                          584
+                        ]
+                      }
+                    ],
+                    "range": [
+                      525,
+                      588
+                    ]
+                  },
+                  "rest": null,
+                  "generator": false,
+                  "expression": false,
+                  "range": [
+                    497,
+                    588
+                  ]
+                },
+                {
+                  "type": "FunctionDeclaration",
+                  "id": {
+                    "type": "Identifier",
+                    "name": "triggerDOMRefresh",
+                    "range": [
+                      678,
+                      695
+                    ]
+                  },
+                  "params": [
+                    {
+                      "type": "Identifier",
+                      "name": "view",
+                      "range": [
+                        696,
+                        700
+                      ]
+                    }
+                  ],
+                  "defaults": [],
+                  "body": {
+                    "type": "BlockStatement",
+                    "body": [
+                      {
+                        "type": "IfStatement",
+                        "test": {
+                          "type": "LogicalExpression",
+                          "operator": "&&",
+                          "left": {
+                            "type": "LogicalExpression",
+                            "operator": "&&",
+                            "left": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "view",
+                                "range": [
+                                  712,
+                                  716
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "_isShown",
+                                "range": [
+                                  717,
+                                  725
+                                ]
+                              },
+                              "range": [
+                                712,
+                                725
+                              ]
+                            },
+                            "right": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "view",
+                                "range": [
+                                  729,
+                                  733
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "_isRendered",
+                                "range": [
+                                  734,
+                                  745
+                                ]
+                              },
+                              "range": [
+                                729,
+                                745
+                              ]
+                            },
+                            "range": [
+                              712,
+                              745
+                            ]
+                          },
+                          "right": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "Identifier",
+                              "name": "isInDOM",
+                              "range": [
+                                749,
+                                756
+                              ]
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "name": "view",
+                                "range": [
+                                  757,
+                                  761
+                                ]
+                              }
+                            ],
+                            "range": [
+                              749,
+                              762
+                            ]
+                          },
+                          "range": [
+                            712,
+                            762
+                          ]
+                        },
+                        "consequent": {
+                          "type": "BlockStatement",
+                          "body": [
+                            {
+                              "type": "IfStatement",
+                              "test": {
+                                "type": "CallExpression",
+                                "callee": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "Identifier",
+                                    "name": "_",
+                                    "range": [
+                                      776,
+                                      777
+                                    ]
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "isFunction",
+                                    "range": [
+                                      778,
+                                      788
+                                    ]
+                                  },
+                                  "range": [
+                                    776,
+                                    788
+                                  ]
+                                },
+                                "arguments": [
+                                  {
+                                    "type": "MemberExpression",
+                                    "computed": false,
+                                    "object": {
+                                      "type": "Identifier",
+                                      "name": "view",
+                                      "range": [
+                                        789,
+                                        793
+                                      ]
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "triggerMethod",
+                                      "range": [
+                                        794,
+                                        807
+                                      ]
+                                    },
+                                    "range": [
+                                      789,
+                                      807
+                                    ]
+                                  }
+                                ],
+                                "range": [
+                                  776,
+                                  808
+                                ]
+                              },
+                              "consequent": {
+                                "type": "BlockStatement",
+                                "body": [
+                                  {
+                                    "type": "ExpressionStatement",
+                                    "expression": {
+                                      "type": "CallExpression",
+                                      "callee": {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                          "type": "Identifier",
+                                          "name": "view",
+                                          "range": [
+                                            820,
+                                            824
+                                          ]
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "triggerMethod",
+                                          "range": [
+                                            825,
+                                            838
+                                          ]
+                                        },
+                                        "range": [
+                                          820,
+                                          838
+                                        ]
+                                      },
+                                      "arguments": [
+                                        {
+                                          "type": "Literal",
+                                          "value": "dom:refresh",
+                                          "raw": "'dom:refresh'",
+                                          "range": [
+                                            839,
+                                            852
+                                          ]
+                                        }
+                                      ],
+                                      "range": [
+                                        820,
+                                        853
+                                      ]
+                                    },
+                                    "range": [
+                                      820,
+                                      854
+                                    ]
+                                  }
+                                ],
+                                "range": [
+                                  810,
+                                  862
+                                ]
+                              },
+                              "alternate": null,
+                              "range": [
+                                772,
+                                862
+                              ]
+                            }
+                          ],
+                          "range": [
+                            764,
+                            868
+                          ]
+                        },
+                        "alternate": null,
+                        "range": [
+                          708,
+                          868
+                        ]
+                      }
+                    ],
+                    "range": [
+                      702,
+                      872
+                    ]
+                  },
+                  "rest": null,
+                  "generator": false,
+                  "expression": false,
+                  "range": [
+                    669,
+                    872
+                  ]
+                },
+                {
+                  "type": "FunctionDeclaration",
+                  "id": {
+                    "type": "Identifier",
+                    "name": "isInDOM",
+                    "range": [
+                      885,
+                      892
+                    ]
+                  },
+                  "params": [
+                    {
+                      "type": "Identifier",
+                      "name": "view",
+                      "range": [
+                        893,
+                        897
+                      ]
+                    }
+                  ],
+                  "defaults": [],
+                  "body": {
+                    "type": "BlockStatement",
+                    "body": [
+                      {
+                        "type": "ReturnStatement",
+                        "argument": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "Backbone",
+                                "range": [
+                                  912,
+                                  920
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "$",
+                                "range": [
+                                  921,
+                                  922
+                                ]
+                              },
+                              "range": [
+                                912,
+                                922
+                              ]
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "contains",
+                              "range": [
+                                923,
+                                931
+                              ]
+                            },
+                            "range": [
+                              912,
+                              931
+                            ]
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "name": "documentElement",
+                              "range": [
+                                932,
+                                947
+                              ]
+                            },
+                            {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "view",
+                                "range": [
+                                  949,
+                                  953
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "el",
+                                "range": [
+                                  954,
+                                  956
+                                ]
+                              },
+                              "range": [
+                                949,
+                                956
+                              ]
+                            }
+                          ],
+                          "range": [
+                            912,
+                            957
+                          ]
+                        },
+                        "range": [
+                          905,
+                          958
+                        ]
+                      }
+                    ],
+                    "range": [
+                      899,
+                      962
+                    ]
+                  },
+                  "rest": null,
+                  "generator": false,
+                  "expression": false,
+                  "range": [
+                    876,
+                    962
+                  ]
+                },
+                {
+                  "type": "ReturnStatement",
+                  "argument": {
+                    "type": "FunctionExpression",
+                    "id": null,
+                    "params": [
+                      {
+                        "type": "Identifier",
+                        "name": "view",
+                        "range": [
+                          1005,
+                          1009
+                        ]
+                      }
+                    ],
+                    "defaults": [],
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "view",
+                                "range": [
+                                  1017,
+                                  1021
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "listenTo",
+                                "range": [
+                                  1022,
+                                  1030
+                                ]
+                              },
+                              "range": [
+                                1017,
+                                1030
+                              ]
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "name": "view",
+                                "range": [
+                                  1031,
+                                  1035
+                                ]
+                              },
+                              {
+                                "type": "Literal",
+                                "value": "show",
+                                "raw": "'show'",
+                                "range": [
+                                  1037,
+                                  1043
+                                ]
+                              },
+                              {
+                                "type": "FunctionExpression",
+                                "id": null,
+                                "params": [],
+                                "defaults": [],
+                                "body": {
+                                  "type": "BlockStatement",
+                                  "body": [
+                                    {
+                                      "type": "ExpressionStatement",
+                                      "expression": {
+                                        "type": "CallExpression",
+                                        "callee": {
+                                          "type": "Identifier",
+                                          "name": "handleShow",
+                                          "range": [
+                                            1064,
+                                            1074
+                                          ]
+                                        },
+                                        "arguments": [
+                                          {
+                                            "type": "Identifier",
+                                            "name": "view",
+                                            "range": [
+                                              1075,
+                                              1079
+                                            ]
+                                          }
+                                        ],
+                                        "range": [
+                                          1064,
+                                          1080
+                                        ]
+                                      },
+                                      "range": [
+                                        1064,
+                                        1081
+                                      ]
+                                    }
+                                  ],
+                                  "range": [
+                                    1056,
+                                    1087
+                                  ]
+                                },
+                                "rest": null,
+                                "generator": false,
+                                "expression": false,
+                                "range": [
+                                  1045,
+                                  1087
+                                ]
+                              }
+                            ],
+                            "range": [
+                              1017,
+                              1088
+                            ]
+                          },
+                          "range": [
+                            1017,
+                            1089
+                          ]
+                        },
+                        {
+                          "type": "ExpressionStatement",
+                          "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "view",
+                                "range": [
+                                  1095,
+                                  1099
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "listenTo",
+                                "range": [
+                                  1100,
+                                  1108
+                                ]
+                              },
+                              "range": [
+                                1095,
+                                1108
+                              ]
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "name": "view",
+                                "range": [
+                                  1109,
+                                  1113
+                                ]
+                              },
+                              {
+                                "type": "Literal",
+                                "value": "render",
+                                "raw": "'render'",
+                                "range": [
+                                  1115,
+                                  1123
+                                ]
+                              },
+                              {
+                                "type": "FunctionExpression",
+                                "id": null,
+                                "params": [],
+                                "defaults": [],
+                                "body": {
+                                  "type": "BlockStatement",
+                                  "body": [
+                                    {
+                                      "type": "ExpressionStatement",
+                                      "expression": {
+                                        "type": "CallExpression",
+                                        "callee": {
+                                          "type": "Identifier",
+                                          "name": "handleRender",
+                                          "range": [
+                                            1144,
+                                            1156
+                                          ]
+                                        },
+                                        "arguments": [
+                                          {
+                                            "type": "Identifier",
+                                            "name": "view",
+                                            "range": [
+                                              1157,
+                                              1161
+                                            ]
+                                          }
+                                        ],
+                                        "range": [
+                                          1144,
+                                          1162
+                                        ]
+                                      },
+                                      "range": [
+                                        1144,
+                                        1163
+                                      ]
+                                    }
+                                  ],
+                                  "range": [
+                                    1136,
+                                    1169
+                                  ]
+                                },
+                                "rest": null,
+                                "generator": false,
+                                "expression": false,
+                                "range": [
+                                  1125,
+                                  1169
+                                ]
+                              }
+                            ],
+                            "range": [
+                              1095,
+                              1170
+                            ]
+                          },
+                          "range": [
+                            1095,
+                            1171
+                          ]
+                        }
+                      ],
+                      "range": [
+                        1011,
+                        1175
+                      ]
+                    },
+                    "rest": null,
+                    "generator": false,
+                    "expression": false,
+                    "range": [
+                      996,
+                      1175
+                    ]
+                  },
+                  "range": [
+                    989,
+                    1176
+                  ]
+                }
+              ],
+              "range": [
+                236,
+                1178
+              ]
+            },
+            "rest": null,
+            "generator": false,
+            "expression": false,
+            "range": [
+              210,
+              1178
+            ]
+          },
+          "arguments": [
+            {
+              "type": "MemberExpression",
+              "computed": false,
+              "object": {
+                "type": "Identifier",
+                "name": "document",
+                "range": [
+                  1180,
+                  1188
+                ]
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "documentElement",
+                "range": [
+                  1189,
+                  1204
+                ]
+              },
+              "range": [
+                1180,
+                1204
+              ]
+            }
+          ],
+          "range": [
+            209,
+            1205
+          ]
+        },
+        "range": [
+          178,
+          1205
+        ]
+      },
+      "range": [
+        178,
+        1206
+      ]
+    }
+  ],
+  "range": [
+    178,
+    1206
+  ],
+  "tokens": [
+    {
+      "type": "Identifier",
+      "value": "Marionette",
+      "range": [
+        178,
+        188
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        188,
+        189
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "MonitorDOMRefresh",
+      "range": [
+        189,
+        206
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        207,
+        208
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        209,
+        210
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        210,
+        218
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        218,
+        219
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "documentElement",
+      "range": [
+        219,
+        234
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        234,
+        235
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        236,
+        237
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        364,
+        372
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "handleShow",
+      "range": [
+        373,
+        383
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        383,
+        384
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        384,
+        388
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        388,
+        389
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        390,
+        391
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        396,
+        400
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        400,
+        401
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_isShown",
+      "range": [
+        401,
+        409
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        410,
+        411
+      ]
+    },
+    {
+      "type": "Boolean",
+      "value": "true",
+      "range": [
+        412,
+        416
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        416,
+        417
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "triggerDOMRefresh",
+      "range": [
+        422,
+        439
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        439,
+        440
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        440,
+        444
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        444,
+        445
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        445,
+        446
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        449,
+        450
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        497,
+        505
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "handleRender",
+      "range": [
+        506,
+        518
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        518,
+        519
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        519,
+        523
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        523,
+        524
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        525,
+        526
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        531,
+        535
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        535,
+        536
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_isRendered",
+      "range": [
+        536,
+        547
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        548,
+        549
+      ]
+    },
+    {
+      "type": "Boolean",
+      "value": "true",
+      "range": [
+        550,
+        554
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        554,
+        555
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "triggerDOMRefresh",
+      "range": [
+        560,
+        577
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        577,
+        578
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        578,
+        582
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        582,
+        583
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        583,
+        584
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        587,
+        588
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        669,
+        677
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "triggerDOMRefresh",
+      "range": [
+        678,
+        695
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        695,
+        696
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        696,
+        700
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        700,
+        701
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        702,
+        703
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "if",
+      "range": [
+        708,
+        710
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        711,
+        712
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        712,
+        716
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        716,
+        717
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_isShown",
+      "range": [
+        717,
+        725
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "&&",
+      "range": [
+        726,
+        728
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        729,
+        733
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        733,
+        734
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_isRendered",
+      "range": [
+        734,
+        745
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "&&",
+      "range": [
+        746,
+        748
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "isInDOM",
+      "range": [
+        749,
+        756
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        756,
+        757
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        757,
+        761
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        761,
+        762
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        762,
+        763
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        764,
+        765
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "if",
+      "range": [
+        772,
+        774
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        775,
+        776
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_",
+      "range": [
+        776,
+        777
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        777,
+        778
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "isFunction",
+      "range": [
+        778,
+        788
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        788,
+        789
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        789,
+        793
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        793,
+        794
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "triggerMethod",
+      "range": [
+        794,
+        807
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        807,
+        808
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        808,
+        809
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        810,
+        811
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        820,
+        824
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        824,
+        825
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "triggerMethod",
+      "range": [
+        825,
+        838
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        838,
+        839
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'dom:refresh'",
+      "range": [
+        839,
+        852
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        852,
+        853
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        853,
+        854
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        861,
+        862
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        867,
+        868
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        871,
+        872
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        876,
+        884
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "isInDOM",
+      "range": [
+        885,
+        892
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        892,
+        893
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        893,
+        897
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        897,
+        898
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        899,
+        900
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "return",
+      "range": [
+        905,
+        911
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Backbone",
+      "range": [
+        912,
+        920
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        920,
+        921
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "$",
+      "range": [
+        921,
+        922
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        922,
+        923
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "contains",
+      "range": [
+        923,
+        931
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        931,
+        932
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "documentElement",
+      "range": [
+        932,
+        947
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        947,
+        948
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        949,
+        953
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        953,
+        954
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "el",
+      "range": [
+        954,
+        956
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        956,
+        957
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        957,
+        958
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        961,
+        962
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "return",
+      "range": [
+        989,
+        995
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        996,
+        1004
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1004,
+        1005
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        1005,
+        1009
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1009,
+        1010
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1011,
+        1012
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        1017,
+        1021
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1021,
+        1022
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "listenTo",
+      "range": [
+        1022,
+        1030
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1030,
+        1031
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        1031,
+        1035
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1035,
+        1036
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'show'",
+      "range": [
+        1037,
+        1043
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1043,
+        1044
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        1045,
+        1053
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1053,
+        1054
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1054,
+        1055
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1056,
+        1057
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "handleShow",
+      "range": [
+        1064,
+        1074
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1074,
+        1075
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        1075,
+        1079
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1079,
+        1080
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1080,
+        1081
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1086,
+        1087
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1087,
+        1088
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1088,
+        1089
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        1095,
+        1099
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1099,
+        1100
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "listenTo",
+      "range": [
+        1100,
+        1108
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1108,
+        1109
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        1109,
+        1113
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1113,
+        1114
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'render'",
+      "range": [
+        1115,
+        1123
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1123,
+        1124
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        1125,
+        1133
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1133,
+        1134
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1134,
+        1135
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1136,
+        1137
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "handleRender",
+      "range": [
+        1144,
+        1156
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1156,
+        1157
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "view",
+      "range": [
+        1157,
+        1161
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1161,
+        1162
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1162,
+        1163
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1168,
+        1169
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1169,
+        1170
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1170,
+        1171
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1174,
+        1175
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1175,
+        1176
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1177,
+        1178
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1178,
+        1179
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1179,
+        1180
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "document",
+      "range": [
+        1180,
+        1188
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1188,
+        1189
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "documentElement",
+      "range": [
+        1189,
+        1204
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1204,
+        1205
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1205,
+        1206
+      ]
+    }
+  ]
+}

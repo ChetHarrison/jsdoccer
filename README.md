@@ -13,7 +13,7 @@ $ git clone git@github.com:ChetHarrison/jsdoccer.git
 $ cd jsdoccer
 $ node document.js <filename>
 ```
-Currently place the file in the `input/js` directory. For example if the contents of `example.js` were
+Currently place the files to document in the `input/js` directory. For example if the contents of `example.js` were
 
 ```
 var answer = 42;

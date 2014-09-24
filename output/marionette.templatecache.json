@@ -1,0 +1,4177 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+            "type": "Identifier",
+            "name": "Marionette",
+            "range": [
+              121,
+              131
+            ]
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "TemplateCache",
+            "range": [
+              132,
+              145
+            ]
+          },
+          "range": [
+            121,
+            145
+          ]
+        },
+        "right": {
+          "type": "FunctionExpression",
+          "id": null,
+          "params": [
+            {
+              "type": "Identifier",
+              "name": "templateId",
+              "range": [
+                157,
+                167
+              ]
+            }
+          ],
+          "defaults": [],
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "ExpressionStatement",
+                "expression": {
+                  "type": "AssignmentExpression",
+                  "operator": "=",
+                  "left": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                      "type": "ThisExpression",
+                      "range": [
+                        173,
+                        177
+                      ]
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "templateId",
+                      "range": [
+                        178,
+                        188
+                      ]
+                    },
+                    "range": [
+                      173,
+                      188
+                    ]
+                  },
+                  "right": {
+                    "type": "Identifier",
+                    "name": "templateId",
+                    "range": [
+                      191,
+                      201
+                    ]
+                  },
+                  "range": [
+                    173,
+                    201
+                  ]
+                },
+                "range": [
+                  173,
+                  202
+                ]
+              }
+            ],
+            "range": [
+              169,
+              204
+            ]
+          },
+          "rest": null,
+          "generator": false,
+          "expression": false,
+          "range": [
+            148,
+            204
+          ]
+        },
+        "range": [
+          121,
+          204
+        ]
+      },
+      "range": [
+        121,
+        205
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+            "type": "Identifier",
+            "name": "_",
+            "range": [
+              356,
+              357
+            ]
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "extend",
+            "range": [
+              358,
+              364
+            ]
+          },
+          "range": [
+            356,
+            364
+          ]
+        },
+        "arguments": [
+          {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+              "type": "Identifier",
+              "name": "Marionette",
+              "range": [
+                365,
+                375
+              ]
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "TemplateCache",
+              "range": [
+                376,
+                389
+              ]
+            },
+            "range": [
+              365,
+              389
+            ]
+          },
+          {
+            "type": "ObjectExpression",
+            "properties": [
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "templateCaches",
+                  "range": [
+                    395,
+                    409
+                  ]
+                },
+                "value": {
+                  "type": "ObjectExpression",
+                  "properties": [],
+                  "range": [
+                    411,
+                    413
+                  ]
+                },
+                "kind": "init",
+                "range": [
+                  395,
+                  413
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "get",
+                  "range": [
+                    530,
+                    533
+                  ]
+                },
+                "value": {
+                  "type": "FunctionExpression",
+                  "id": null,
+                  "params": [
+                    {
+                      "type": "Identifier",
+                      "name": "templateId",
+                      "range": [
+                        544,
+                        554
+                      ]
+                    }
+                  ],
+                  "defaults": [],
+                  "body": {
+                    "type": "BlockStatement",
+                    "body": [
+                      {
+                        "type": "VariableDeclaration",
+                        "declarations": [
+                          {
+                            "type": "VariableDeclarator",
+                            "id": {
+                              "type": "Identifier",
+                              "name": "cachedTemplate",
+                              "range": [
+                                566,
+                                580
+                              ]
+                            },
+                            "init": {
+                              "type": "MemberExpression",
+                              "computed": true,
+                              "object": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "ThisExpression",
+                                  "range": [
+                                    583,
+                                    587
+                                  ]
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "templateCaches",
+                                  "range": [
+                                    588,
+                                    602
+                                  ]
+                                },
+                                "range": [
+                                  583,
+                                  602
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "templateId",
+                                "range": [
+                                  603,
+                                  613
+                                ]
+                              },
+                              "range": [
+                                583,
+                                614
+                              ]
+                            },
+                            "range": [
+                              566,
+                              614
+                            ]
+                          }
+                        ],
+                        "kind": "var",
+                        "range": [
+                          562,
+                          615
+                        ]
+                      },
+                      {
+                        "type": "IfStatement",
+                        "test": {
+                          "type": "UnaryExpression",
+                          "operator": "!",
+                          "argument": {
+                            "type": "Identifier",
+                            "name": "cachedTemplate",
+                            "range": [
+                              626,
+                              640
+                            ]
+                          },
+                          "prefix": true,
+                          "range": [
+                            625,
+                            640
+                          ]
+                        },
+                        "consequent": {
+                          "type": "BlockStatement",
+                          "body": [
+                            {
+                              "type": "ExpressionStatement",
+                              "expression": {
+                                "type": "AssignmentExpression",
+                                "operator": "=",
+                                "left": {
+                                  "type": "Identifier",
+                                  "name": "cachedTemplate",
+                                  "range": [
+                                    650,
+                                    664
+                                  ]
+                                },
+                                "right": {
+                                  "type": "NewExpression",
+                                  "callee": {
+                                    "type": "MemberExpression",
+                                    "computed": false,
+                                    "object": {
+                                      "type": "Identifier",
+                                      "name": "Marionette",
+                                      "range": [
+                                        671,
+                                        681
+                                      ]
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "TemplateCache",
+                                      "range": [
+                                        682,
+                                        695
+                                      ]
+                                    },
+                                    "range": [
+                                      671,
+                                      695
+                                    ]
+                                  },
+                                  "arguments": [
+                                    {
+                                      "type": "Identifier",
+                                      "name": "templateId",
+                                      "range": [
+                                        696,
+                                        706
+                                      ]
+                                    }
+                                  ],
+                                  "range": [
+                                    667,
+                                    707
+                                  ]
+                                },
+                                "range": [
+                                  650,
+                                  707
+                                ]
+                              },
+                              "range": [
+                                650,
+                                708
+                              ]
+                            },
+                            {
+                              "type": "ExpressionStatement",
+                              "expression": {
+                                "type": "AssignmentExpression",
+                                "operator": "=",
+                                "left": {
+                                  "type": "MemberExpression",
+                                  "computed": true,
+                                  "object": {
+                                    "type": "MemberExpression",
+                                    "computed": false,
+                                    "object": {
+                                      "type": "ThisExpression",
+                                      "range": [
+                                        715,
+                                        719
+                                      ]
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "templateCaches",
+                                      "range": [
+                                        720,
+                                        734
+                                      ]
+                                    },
+                                    "range": [
+                                      715,
+                                      734
+                                    ]
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "templateId",
+                                    "range": [
+                                      735,
+                                      745
+                                    ]
+                                  },
+                                  "range": [
+                                    715,
+                                    746
+                                  ]
+                                },
+                                "right": {
+                                  "type": "Identifier",
+                                  "name": "cachedTemplate",
+                                  "range": [
+                                    749,
+                                    763
+                                  ]
+                                },
+                                "range": [
+                                  715,
+                                  763
+                                ]
+                              },
+                              "range": [
+                                715,
+                                764
+                              ]
+                            }
+                          ],
+                          "range": [
+                            642,
+                            770
+                          ]
+                        },
+                        "alternate": null,
+                        "range": [
+                          621,
+                          770
+                        ]
+                      },
+                      {
+                        "type": "ReturnStatement",
+                        "argument": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "Identifier",
+                              "name": "cachedTemplate",
+                              "range": [
+                                783,
+                                797
+                              ]
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "load",
+                              "range": [
+                                798,
+                                802
+                              ]
+                            },
+                            "range": [
+                              783,
+                              802
+                            ]
+                          },
+                          "arguments": [],
+                          "range": [
+                            783,
+                            804
+                          ]
+                        },
+                        "range": [
+                          776,
+                          805
+                        ]
+                      }
+                    ],
+                    "range": [
+                      556,
+                      809
+                    ]
+                  },
+                  "rest": null,
+                  "generator": false,
+                  "expression": false,
+                  "range": [
+                    535,
+                    809
+                  ]
+                },
+                "kind": "init",
+                "range": [
+                  530,
+                  809
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "clear",
+                  "range": [
+                    1056,
+                    1061
+                  ]
+                },
+                "value": {
+                  "type": "FunctionExpression",
+                  "id": null,
+                  "params": [],
+                  "defaults": [],
+                  "body": {
+                    "type": "BlockStatement",
+                    "body": [
+                      {
+                        "type": "VariableDeclaration",
+                        "declarations": [
+                          {
+                            "type": "VariableDeclarator",
+                            "id": {
+                              "type": "Identifier",
+                              "name": "i",
+                              "range": [
+                                1084,
+                                1085
+                              ]
+                            },
+                            "init": null,
+                            "range": [
+                              1084,
+                              1085
+                            ]
+                          }
+                        ],
+                        "kind": "var",
+                        "range": [
+                          1080,
+                          1086
+                        ]
+                      },
+                      {
+                        "type": "VariableDeclaration",
+                        "declarations": [
+                          {
+                            "type": "VariableDeclarator",
+                            "id": {
+                              "type": "Identifier",
+                              "name": "args",
+                              "range": [
+                                1095,
+                                1099
+                              ]
+                            },
+                            "init": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "Identifier",
+                                  "name": "slice",
+                                  "range": [
+                                    1102,
+                                    1107
+                                  ]
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "call",
+                                  "range": [
+                                    1108,
+                                    1112
+                                  ]
+                                },
+                                "range": [
+                                  1102,
+                                  1112
+                                ]
+                              },
+                              "arguments": [
+                                {
+                                  "type": "Identifier",
+                                  "name": "arguments",
+                                  "range": [
+                                    1113,
+                                    1122
+                                  ]
+                                }
+                              ],
+                              "range": [
+                                1102,
+                                1123
+                              ]
+                            },
+                            "range": [
+                              1095,
+                              1123
+                            ]
+                          }
+                        ],
+                        "kind": "var",
+                        "range": [
+                          1091,
+                          1124
+                        ]
+                      },
+                      {
+                        "type": "VariableDeclaration",
+                        "declarations": [
+                          {
+                            "type": "VariableDeclarator",
+                            "id": {
+                              "type": "Identifier",
+                              "name": "length",
+                              "range": [
+                                1133,
+                                1139
+                              ]
+                            },
+                            "init": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "args",
+                                "range": [
+                                  1142,
+                                  1146
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "length",
+                                "range": [
+                                  1147,
+                                  1153
+                                ]
+                              },
+                              "range": [
+                                1142,
+                                1153
+                              ]
+                            },
+                            "range": [
+                              1133,
+                              1153
+                            ]
+                          }
+                        ],
+                        "kind": "var",
+                        "range": [
+                          1129,
+                          1154
+                        ]
+                      },
+                      {
+                        "type": "IfStatement",
+                        "test": {
+                          "type": "BinaryExpression",
+                          "operator": ">",
+                          "left": {
+                            "type": "Identifier",
+                            "name": "length",
+                            "range": [
+                              1164,
+                              1170
+                            ]
+                          },
+                          "right": {
+                            "type": "Literal",
+                            "value": 0,
+                            "raw": "0",
+                            "range": [
+                              1173,
+                              1174
+                            ]
+                          },
+                          "range": [
+                            1164,
+                            1174
+                          ]
+                        },
+                        "consequent": {
+                          "type": "BlockStatement",
+                          "body": [
+                            {
+                              "type": "ForStatement",
+                              "init": {
+                                "type": "AssignmentExpression",
+                                "operator": "=",
+                                "left": {
+                                  "type": "Identifier",
+                                  "name": "i",
+                                  "range": [
+                                    1189,
+                                    1190
+                                  ]
+                                },
+                                "right": {
+                                  "type": "Literal",
+                                  "value": 0,
+                                  "raw": "0",
+                                  "range": [
+                                    1193,
+                                    1194
+                                  ]
+                                },
+                                "range": [
+                                  1189,
+                                  1194
+                                ]
+                              },
+                              "test": {
+                                "type": "BinaryExpression",
+                                "operator": "<",
+                                "left": {
+                                  "type": "Identifier",
+                                  "name": "i",
+                                  "range": [
+                                    1196,
+                                    1197
+                                  ]
+                                },
+                                "right": {
+                                  "type": "Identifier",
+                                  "name": "length",
+                                  "range": [
+                                    1200,
+                                    1206
+                                  ]
+                                },
+                                "range": [
+                                  1196,
+                                  1206
+                                ]
+                              },
+                              "update": {
+                                "type": "UpdateExpression",
+                                "operator": "++",
+                                "argument": {
+                                  "type": "Identifier",
+                                  "name": "i",
+                                  "range": [
+                                    1208,
+                                    1209
+                                  ]
+                                },
+                                "prefix": false,
+                                "range": [
+                                  1208,
+                                  1211
+                                ]
+                              },
+                              "body": {
+                                "type": "BlockStatement",
+                                "body": [
+                                  {
+                                    "type": "ExpressionStatement",
+                                    "expression": {
+                                      "type": "UnaryExpression",
+                                      "operator": "delete",
+                                      "argument": {
+                                        "type": "MemberExpression",
+                                        "computed": true,
+                                        "object": {
+                                          "type": "MemberExpression",
+                                          "computed": false,
+                                          "object": {
+                                            "type": "ThisExpression",
+                                            "range": [
+                                              1230,
+                                              1234
+                                            ]
+                                          },
+                                          "property": {
+                                            "type": "Identifier",
+                                            "name": "templateCaches",
+                                            "range": [
+                                              1235,
+                                              1249
+                                            ]
+                                          },
+                                          "range": [
+                                            1230,
+                                            1249
+                                          ]
+                                        },
+                                        "property": {
+                                          "type": "MemberExpression",
+                                          "computed": true,
+                                          "object": {
+                                            "type": "Identifier",
+                                            "name": "args",
+                                            "range": [
+                                              1250,
+                                              1254
+                                            ]
+                                          },
+                                          "property": {
+                                            "type": "Identifier",
+                                            "name": "i",
+                                            "range": [
+                                              1255,
+                                              1256
+                                            ]
+                                          },
+                                          "range": [
+                                            1250,
+                                            1257
+                                          ]
+                                        },
+                                        "range": [
+                                          1230,
+                                          1258
+                                        ]
+                                      },
+                                      "prefix": true,
+                                      "range": [
+                                        1223,
+                                        1258
+                                      ]
+                                    },
+                                    "range": [
+                                      1223,
+                                      1259
+                                    ]
+                                  }
+                                ],
+                                "range": [
+                                  1213,
+                                  1267
+                                ]
+                              },
+                              "range": [
+                                1184,
+                                1267
+                              ]
+                            }
+                          ],
+                          "range": [
+                            1176,
+                            1273
+                          ]
+                        },
+                        "alternate": {
+                          "type": "BlockStatement",
+                          "body": [
+                            {
+                              "type": "ExpressionStatement",
+                              "expression": {
+                                "type": "AssignmentExpression",
+                                "operator": "=",
+                                "left": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "ThisExpression",
+                                    "range": [
+                                      1287,
+                                      1291
+                                    ]
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "templateCaches",
+                                    "range": [
+                                      1292,
+                                      1306
+                                    ]
+                                  },
+                                  "range": [
+                                    1287,
+                                    1306
+                                  ]
+                                },
+                                "right": {
+                                  "type": "ObjectExpression",
+                                  "properties": [],
+                                  "range": [
+                                    1309,
+                                    1311
+                                  ]
+                                },
+                                "range": [
+                                  1287,
+                                  1311
+                                ]
+                              },
+                              "range": [
+                                1287,
+                                1312
+                              ]
+                            }
+                          ],
+                          "range": [
+                            1279,
+                            1318
+                          ]
+                        },
+                        "range": [
+                          1160,
+                          1318
+                        ]
+                      }
+                    ],
+                    "range": [
+                      1074,
+                      1322
+                    ]
+                  },
+                  "rest": null,
+                  "generator": false,
+                  "expression": false,
+                  "range": [
+                    1063,
+                    1322
+                  ]
+                },
+                "kind": "init",
+                "range": [
+                  1056,
+                  1322
+                ]
+              }
+            ],
+            "range": [
+              391,
+              1324
+            ]
+          }
+        ],
+        "range": [
+          356,
+          1325
+        ]
+      },
+      "range": [
+        356,
+        1326
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+            "type": "Identifier",
+            "name": "_",
+            "range": [
+              1472,
+              1473
+            ]
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "extend",
+            "range": [
+              1474,
+              1480
+            ]
+          },
+          "range": [
+            1472,
+            1480
+          ]
+        },
+        "arguments": [
+          {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+              "type": "MemberExpression",
+              "computed": false,
+              "object": {
+                "type": "Identifier",
+                "name": "Marionette",
+                "range": [
+                  1481,
+                  1491
+                ]
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "TemplateCache",
+                "range": [
+                  1492,
+                  1505
+                ]
+              },
+              "range": [
+                1481,
+                1505
+              ]
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "prototype",
+              "range": [
+                1506,
+                1515
+              ]
+            },
+            "range": [
+              1481,
+              1515
+            ]
+          },
+          {
+            "type": "ObjectExpression",
+            "properties": [
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "load",
+                  "range": [
+                    1564,
+                    1568
+                  ]
+                },
+                "value": {
+                  "type": "FunctionExpression",
+                  "id": null,
+                  "params": [],
+                  "defaults": [],
+                  "body": {
+                    "type": "BlockStatement",
+                    "body": [
+                      {
+                        "type": "IfStatement",
+                        "test": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              1659,
+                              1663
+                            ]
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "compiledTemplate",
+                            "range": [
+                              1664,
+                              1680
+                            ]
+                          },
+                          "range": [
+                            1659,
+                            1680
+                          ]
+                        },
+                        "consequent": {
+                          "type": "BlockStatement",
+                          "body": [
+                            {
+                              "type": "ReturnStatement",
+                              "argument": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "ThisExpression",
+                                  "range": [
+                                    1697,
+                                    1701
+                                  ]
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "compiledTemplate",
+                                  "range": [
+                                    1702,
+                                    1718
+                                  ]
+                                },
+                                "range": [
+                                  1697,
+                                  1718
+                                ]
+                              },
+                              "range": [
+                                1690,
+                                1719
+                              ]
+                            }
+                          ],
+                          "range": [
+                            1682,
+                            1725
+                          ]
+                        },
+                        "alternate": null,
+                        "range": [
+                          1655,
+                          1725
+                        ]
+                      },
+                      {
+                        "type": "VariableDeclaration",
+                        "declarations": [
+                          {
+                            "type": "VariableDeclarator",
+                            "id": {
+                              "type": "Identifier",
+                              "name": "template",
+                              "range": [
+                                1775,
+                                1783
+                              ]
+                            },
+                            "init": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "ThisExpression",
+                                  "range": [
+                                    1786,
+                                    1790
+                                  ]
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "loadTemplate",
+                                  "range": [
+                                    1791,
+                                    1803
+                                  ]
+                                },
+                                "range": [
+                                  1786,
+                                  1803
+                                ]
+                              },
+                              "arguments": [
+                                {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "ThisExpression",
+                                    "range": [
+                                      1804,
+                                      1808
+                                    ]
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "templateId",
+                                    "range": [
+                                      1809,
+                                      1819
+                                    ]
+                                  },
+                                  "range": [
+                                    1804,
+                                    1819
+                                  ]
+                                }
+                              ],
+                              "range": [
+                                1786,
+                                1820
+                              ]
+                            },
+                            "range": [
+                              1775,
+                              1820
+                            ]
+                          }
+                        ],
+                        "kind": "var",
+                        "range": [
+                          1771,
+                          1821
+                        ]
+                      },
+                      {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                          "type": "AssignmentExpression",
+                          "operator": "=",
+                          "left": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "ThisExpression",
+                              "range": [
+                                1826,
+                                1830
+                              ]
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "compiledTemplate",
+                              "range": [
+                                1831,
+                                1847
+                              ]
+                            },
+                            "range": [
+                              1826,
+                              1847
+                            ]
+                          },
+                          "right": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression",
+                                "range": [
+                                  1850,
+                                  1854
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "compileTemplate",
+                                "range": [
+                                  1855,
+                                  1870
+                                ]
+                              },
+                              "range": [
+                                1850,
+                                1870
+                              ]
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "name": "template",
+                                "range": [
+                                  1871,
+                                  1879
+                                ]
+                              }
+                            ],
+                            "range": [
+                              1850,
+                              1880
+                            ]
+                          },
+                          "range": [
+                            1826,
+                            1880
+                          ]
+                        },
+                        "range": [
+                          1826,
+                          1881
+                        ]
+                      },
+                      {
+                        "type": "ReturnStatement",
+                        "argument": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              1894,
+                              1898
+                            ]
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "compiledTemplate",
+                            "range": [
+                              1899,
+                              1915
+                            ]
+                          },
+                          "range": [
+                            1894,
+                            1915
+                          ]
+                        },
+                        "range": [
+                          1887,
+                          1916
+                        ]
+                      }
+                    ],
+                    "range": [
+                      1581,
+                      1920
+                    ]
+                  },
+                  "rest": null,
+                  "generator": false,
+                  "expression": false,
+                  "range": [
+                    1570,
+                    1920
+                  ]
+                },
+                "kind": "init",
+                "range": [
+                  1564,
+                  1920
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "loadTemplate",
+                  "range": [
+                    2245,
+                    2257
+                  ]
+                },
+                "value": {
+                  "type": "FunctionExpression",
+                  "id": null,
+                  "params": [
+                    {
+                      "type": "Identifier",
+                      "name": "templateId",
+                      "range": [
+                        2268,
+                        2278
+                      ]
+                    }
+                  ],
+                  "defaults": [],
+                  "body": {
+                    "type": "BlockStatement",
+                    "body": [
+                      {
+                        "type": "VariableDeclaration",
+                        "declarations": [
+                          {
+                            "type": "VariableDeclarator",
+                            "id": {
+                              "type": "Identifier",
+                              "name": "template",
+                              "range": [
+                                2290,
+                                2298
+                              ]
+                            },
+                            "init": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "CallExpression",
+                                  "callee": {
+                                    "type": "MemberExpression",
+                                    "computed": false,
+                                    "object": {
+                                      "type": "Identifier",
+                                      "name": "Backbone",
+                                      "range": [
+                                        2301,
+                                        2309
+                                      ]
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "$",
+                                      "range": [
+                                        2310,
+                                        2311
+                                      ]
+                                    },
+                                    "range": [
+                                      2301,
+                                      2311
+                                    ]
+                                  },
+                                  "arguments": [
+                                    {
+                                      "type": "Identifier",
+                                      "name": "templateId",
+                                      "range": [
+                                        2312,
+                                        2322
+                                      ]
+                                    }
+                                  ],
+                                  "range": [
+                                    2301,
+                                    2323
+                                  ]
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "html",
+                                  "range": [
+                                    2324,
+                                    2328
+                                  ]
+                                },
+                                "range": [
+                                  2301,
+                                  2328
+                                ]
+                              },
+                              "arguments": [],
+                              "range": [
+                                2301,
+                                2330
+                              ]
+                            },
+                            "range": [
+                              2290,
+                              2330
+                            ]
+                          }
+                        ],
+                        "kind": "var",
+                        "range": [
+                          2286,
+                          2331
+                        ]
+                      },
+                      {
+                        "type": "IfStatement",
+                        "test": {
+                          "type": "LogicalExpression",
+                          "operator": "||",
+                          "left": {
+                            "type": "UnaryExpression",
+                            "operator": "!",
+                            "argument": {
+                              "type": "Identifier",
+                              "name": "template",
+                              "range": [
+                                2342,
+                                2350
+                              ]
+                            },
+                            "prefix": true,
+                            "range": [
+                              2341,
+                              2350
+                            ]
+                          },
+                          "right": {
+                            "type": "BinaryExpression",
+                            "operator": "===",
+                            "left": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "template",
+                                "range": [
+                                  2354,
+                                  2362
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "length",
+                                "range": [
+                                  2363,
+                                  2369
+                                ]
+                              },
+                              "range": [
+                                2354,
+                                2369
+                              ]
+                            },
+                            "right": {
+                              "type": "Literal",
+                              "value": 0,
+                              "raw": "0",
+                              "range": [
+                                2374,
+                                2375
+                              ]
+                            },
+                            "range": [
+                              2354,
+                              2375
+                            ]
+                          },
+                          "range": [
+                            2341,
+                            2375
+                          ]
+                        },
+                        "consequent": {
+                          "type": "BlockStatement",
+                          "body": [
+                            {
+                              "type": "ThrowStatement",
+                              "argument": {
+                                "type": "NewExpression",
+                                "callee": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "Identifier",
+                                    "name": "Marionette",
+                                    "range": [
+                                      2395,
+                                      2405
+                                    ]
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "Error",
+                                    "range": [
+                                      2406,
+                                      2411
+                                    ]
+                                  },
+                                  "range": [
+                                    2395,
+                                    2411
+                                  ]
+                                },
+                                "arguments": [
+                                  {
+                                    "type": "ObjectExpression",
+                                    "properties": [
+                                      {
+                                        "type": "Property",
+                                        "key": {
+                                          "type": "Identifier",
+                                          "name": "name",
+                                          "range": [
+                                            2422,
+                                            2426
+                                          ]
+                                        },
+                                        "value": {
+                                          "type": "Literal",
+                                          "value": "NoTemplateError",
+                                          "raw": "'NoTemplateError'",
+                                          "range": [
+                                            2428,
+                                            2445
+                                          ]
+                                        },
+                                        "kind": "init",
+                                        "range": [
+                                          2422,
+                                          2445
+                                        ]
+                                      },
+                                      {
+                                        "type": "Property",
+                                        "key": {
+                                          "type": "Identifier",
+                                          "name": "message",
+                                          "range": [
+                                            2455,
+                                            2462
+                                          ]
+                                        },
+                                        "value": {
+                                          "type": "BinaryExpression",
+                                          "operator": "+",
+                                          "left": {
+                                            "type": "BinaryExpression",
+                                            "operator": "+",
+                                            "left": {
+                                              "type": "Literal",
+                                              "value": "Could not find template: \"",
+                                              "raw": "'Could not find template: \"'",
+                                              "range": [
+                                                2464,
+                                                2492
+                                              ]
+                                            },
+                                            "right": {
+                                              "type": "Identifier",
+                                              "name": "templateId",
+                                              "range": [
+                                                2495,
+                                                2505
+                                              ]
+                                            },
+                                            "range": [
+                                              2464,
+                                              2505
+                                            ]
+                                          },
+                                          "right": {
+                                            "type": "Literal",
+                                            "value": "\"",
+                                            "raw": "'\"'",
+                                            "range": [
+                                              2508,
+                                              2511
+                                            ]
+                                          },
+                                          "range": [
+                                            2464,
+                                            2511
+                                          ]
+                                        },
+                                        "kind": "init",
+                                        "range": [
+                                          2455,
+                                          2511
+                                        ]
+                                      }
+                                    ],
+                                    "range": [
+                                      2412,
+                                      2519
+                                    ]
+                                  }
+                                ],
+                                "range": [
+                                  2391,
+                                  2520
+                                ]
+                              },
+                              "range": [
+                                2385,
+                                2521
+                              ]
+                            }
+                          ],
+                          "range": [
+                            2377,
+                            2527
+                          ]
+                        },
+                        "alternate": null,
+                        "range": [
+                          2337,
+                          2527
+                        ]
+                      },
+                      {
+                        "type": "ReturnStatement",
+                        "argument": {
+                          "type": "Identifier",
+                          "name": "template",
+                          "range": [
+                            2540,
+                            2548
+                          ]
+                        },
+                        "range": [
+                          2533,
+                          2549
+                        ]
+                      }
+                    ],
+                    "range": [
+                      2280,
+                      2553
+                    ]
+                  },
+                  "rest": null,
+                  "generator": false,
+                  "expression": false,
+                  "range": [
+                    2259,
+                    2553
+                  ]
+                },
+                "kind": "init",
+                "range": [
+                  2245,
+                  2553
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "compileTemplate",
+                  "range": [
+                    2786,
+                    2801
+                  ]
+                },
+                "value": {
+                  "type": "FunctionExpression",
+                  "id": null,
+                  "params": [
+                    {
+                      "type": "Identifier",
+                      "name": "rawTemplate",
+                      "range": [
+                        2812,
+                        2823
+                      ]
+                    }
+                  ],
+                  "defaults": [],
+                  "body": {
+                    "type": "BlockStatement",
+                    "body": [
+                      {
+                        "type": "ReturnStatement",
+                        "argument": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "Identifier",
+                              "name": "_",
+                              "range": [
+                                2838,
+                                2839
+                              ]
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "template",
+                              "range": [
+                                2840,
+                                2848
+                              ]
+                            },
+                            "range": [
+                              2838,
+                              2848
+                            ]
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "name": "rawTemplate",
+                              "range": [
+                                2849,
+                                2860
+                              ]
+                            }
+                          ],
+                          "range": [
+                            2838,
+                            2861
+                          ]
+                        },
+                        "range": [
+                          2831,
+                          2862
+                        ]
+                      }
+                    ],
+                    "range": [
+                      2825,
+                      2866
+                    ]
+                  },
+                  "rest": null,
+                  "generator": false,
+                  "expression": false,
+                  "range": [
+                    2803,
+                    2866
+                  ]
+                },
+                "kind": "init",
+                "range": [
+                  2786,
+                  2866
+                ]
+              }
+            ],
+            "range": [
+              1517,
+              2868
+            ]
+          }
+        ],
+        "range": [
+          1472,
+          2869
+        ]
+      },
+      "range": [
+        1472,
+        2870
+      ]
+    }
+  ],
+  "range": [
+    121,
+    2870
+  ],
+  "tokens": [
+    {
+      "type": "Identifier",
+      "value": "Marionette",
+      "range": [
+        121,
+        131
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        131,
+        132
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "TemplateCache",
+      "range": [
+        132,
+        145
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        146,
+        147
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        148,
+        156
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        156,
+        157
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateId",
+      "range": [
+        157,
+        167
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        167,
+        168
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        169,
+        170
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        173,
+        177
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        177,
+        178
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateId",
+      "range": [
+        178,
+        188
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        189,
+        190
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateId",
+      "range": [
+        191,
+        201
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        201,
+        202
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        203,
+        204
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        204,
+        205
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_",
+      "range": [
+        356,
+        357
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        357,
+        358
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "extend",
+      "range": [
+        358,
+        364
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        364,
+        365
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Marionette",
+      "range": [
+        365,
+        375
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        375,
+        376
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "TemplateCache",
+      "range": [
+        376,
+        389
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        389,
+        390
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        391,
+        392
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateCaches",
+      "range": [
+        395,
+        409
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        409,
+        410
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        411,
+        412
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        412,
+        413
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        413,
+        414
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "get",
+      "range": [
+        530,
+        533
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        533,
+        534
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        535,
+        543
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        543,
+        544
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateId",
+      "range": [
+        544,
+        554
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        554,
+        555
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        556,
+        557
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "var",
+      "range": [
+        562,
+        565
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "cachedTemplate",
+      "range": [
+        566,
+        580
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        581,
+        582
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        583,
+        587
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        587,
+        588
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateCaches",
+      "range": [
+        588,
+        602
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "[",
+      "range": [
+        602,
+        603
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateId",
+      "range": [
+        603,
+        613
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "]",
+      "range": [
+        613,
+        614
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        614,
+        615
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "if",
+      "range": [
+        621,
+        623
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        624,
+        625
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "!",
+      "range": [
+        625,
+        626
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "cachedTemplate",
+      "range": [
+        626,
+        640
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        640,
+        641
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        642,
+        643
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "cachedTemplate",
+      "range": [
+        650,
+        664
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        665,
+        666
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "new",
+      "range": [
+        667,
+        670
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Marionette",
+      "range": [
+        671,
+        681
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        681,
+        682
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "TemplateCache",
+      "range": [
+        682,
+        695
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        695,
+        696
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateId",
+      "range": [
+        696,
+        706
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        706,
+        707
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        707,
+        708
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        715,
+        719
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        719,
+        720
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateCaches",
+      "range": [
+        720,
+        734
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "[",
+      "range": [
+        734,
+        735
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateId",
+      "range": [
+        735,
+        745
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "]",
+      "range": [
+        745,
+        746
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        747,
+        748
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "cachedTemplate",
+      "range": [
+        749,
+        763
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        763,
+        764
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        769,
+        770
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "return",
+      "range": [
+        776,
+        782
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "cachedTemplate",
+      "range": [
+        783,
+        797
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        797,
+        798
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "load",
+      "range": [
+        798,
+        802
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        802,
+        803
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        803,
+        804
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        804,
+        805
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        808,
+        809
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        809,
+        810
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "clear",
+      "range": [
+        1056,
+        1061
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        1061,
+        1062
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        1063,
+        1071
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1071,
+        1072
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1072,
+        1073
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1074,
+        1075
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "var",
+      "range": [
+        1080,
+        1083
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "i",
+      "range": [
+        1084,
+        1085
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1085,
+        1086
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "var",
+      "range": [
+        1091,
+        1094
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "args",
+      "range": [
+        1095,
+        1099
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        1100,
+        1101
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "slice",
+      "range": [
+        1102,
+        1107
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1107,
+        1108
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "call",
+      "range": [
+        1108,
+        1112
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1112,
+        1113
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "arguments",
+      "range": [
+        1113,
+        1122
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1122,
+        1123
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1123,
+        1124
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "var",
+      "range": [
+        1129,
+        1132
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "length",
+      "range": [
+        1133,
+        1139
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        1140,
+        1141
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "args",
+      "range": [
+        1142,
+        1146
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1146,
+        1147
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "length",
+      "range": [
+        1147,
+        1153
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1153,
+        1154
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "if",
+      "range": [
+        1160,
+        1162
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1163,
+        1164
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "length",
+      "range": [
+        1164,
+        1170
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ">",
+      "range": [
+        1171,
+        1172
+      ]
+    },
+    {
+      "type": "Numeric",
+      "value": "0",
+      "range": [
+        1173,
+        1174
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1174,
+        1175
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1176,
+        1177
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "for",
+      "range": [
+        1184,
+        1187
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1188,
+        1189
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "i",
+      "range": [
+        1189,
+        1190
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        1191,
+        1192
+      ]
+    },
+    {
+      "type": "Numeric",
+      "value": "0",
+      "range": [
+        1193,
+        1194
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1194,
+        1195
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "i",
+      "range": [
+        1196,
+        1197
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "<",
+      "range": [
+        1198,
+        1199
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "length",
+      "range": [
+        1200,
+        1206
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1206,
+        1207
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "i",
+      "range": [
+        1208,
+        1209
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "++",
+      "range": [
+        1209,
+        1211
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1211,
+        1212
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1213,
+        1214
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "delete",
+      "range": [
+        1223,
+        1229
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1230,
+        1234
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1234,
+        1235
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateCaches",
+      "range": [
+        1235,
+        1249
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "[",
+      "range": [
+        1249,
+        1250
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "args",
+      "range": [
+        1250,
+        1254
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "[",
+      "range": [
+        1254,
+        1255
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "i",
+      "range": [
+        1255,
+        1256
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "]",
+      "range": [
+        1256,
+        1257
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "]",
+      "range": [
+        1257,
+        1258
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1258,
+        1259
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1266,
+        1267
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1272,
+        1273
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "else",
+      "range": [
+        1274,
+        1278
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1279,
+        1280
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1287,
+        1291
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1291,
+        1292
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateCaches",
+      "range": [
+        1292,
+        1306
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        1307,
+        1308
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1309,
+        1310
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1310,
+        1311
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1311,
+        1312
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1317,
+        1318
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1321,
+        1322
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1323,
+        1324
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1324,
+        1325
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1325,
+        1326
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_",
+      "range": [
+        1472,
+        1473
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1473,
+        1474
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "extend",
+      "range": [
+        1474,
+        1480
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1480,
+        1481
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Marionette",
+      "range": [
+        1481,
+        1491
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1491,
+        1492
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "TemplateCache",
+      "range": [
+        1492,
+        1505
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1505,
+        1506
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "prototype",
+      "range": [
+        1506,
+        1515
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1515,
+        1516
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1517,
+        1518
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "load",
+      "range": [
+        1564,
+        1568
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        1568,
+        1569
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        1570,
+        1578
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1578,
+        1579
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1579,
+        1580
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1581,
+        1582
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "if",
+      "range": [
+        1655,
+        1657
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1658,
+        1659
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1659,
+        1663
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1663,
+        1664
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "compiledTemplate",
+      "range": [
+        1664,
+        1680
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1680,
+        1681
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        1682,
+        1683
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "return",
+      "range": [
+        1690,
+        1696
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1697,
+        1701
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1701,
+        1702
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "compiledTemplate",
+      "range": [
+        1702,
+        1718
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1718,
+        1719
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1724,
+        1725
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "var",
+      "range": [
+        1771,
+        1774
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "template",
+      "range": [
+        1775,
+        1783
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        1784,
+        1785
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1786,
+        1790
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1790,
+        1791
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "loadTemplate",
+      "range": [
+        1791,
+        1803
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1803,
+        1804
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1804,
+        1808
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1808,
+        1809
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateId",
+      "range": [
+        1809,
+        1819
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1819,
+        1820
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1820,
+        1821
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1826,
+        1830
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1830,
+        1831
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "compiledTemplate",
+      "range": [
+        1831,
+        1847
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        1848,
+        1849
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1850,
+        1854
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1854,
+        1855
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "compileTemplate",
+      "range": [
+        1855,
+        1870
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        1870,
+        1871
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "template",
+      "range": [
+        1871,
+        1879
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        1879,
+        1880
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1880,
+        1881
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "return",
+      "range": [
+        1887,
+        1893
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "this",
+      "range": [
+        1894,
+        1898
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        1898,
+        1899
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "compiledTemplate",
+      "range": [
+        1899,
+        1915
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        1915,
+        1916
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        1919,
+        1920
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        1920,
+        1921
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "loadTemplate",
+      "range": [
+        2245,
+        2257
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        2257,
+        2258
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        2259,
+        2267
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2267,
+        2268
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateId",
+      "range": [
+        2268,
+        2278
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2278,
+        2279
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        2280,
+        2281
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "var",
+      "range": [
+        2286,
+        2289
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "template",
+      "range": [
+        2290,
+        2298
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "=",
+      "range": [
+        2299,
+        2300
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Backbone",
+      "range": [
+        2301,
+        2309
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        2309,
+        2310
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "$",
+      "range": [
+        2310,
+        2311
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2311,
+        2312
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateId",
+      "range": [
+        2312,
+        2322
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2322,
+        2323
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        2323,
+        2324
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "html",
+      "range": [
+        2324,
+        2328
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2328,
+        2329
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2329,
+        2330
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        2330,
+        2331
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "if",
+      "range": [
+        2337,
+        2339
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2340,
+        2341
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "!",
+      "range": [
+        2341,
+        2342
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "template",
+      "range": [
+        2342,
+        2350
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "||",
+      "range": [
+        2351,
+        2353
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "template",
+      "range": [
+        2354,
+        2362
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        2362,
+        2363
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "length",
+      "range": [
+        2363,
+        2369
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "===",
+      "range": [
+        2370,
+        2373
+      ]
+    },
+    {
+      "type": "Numeric",
+      "value": "0",
+      "range": [
+        2374,
+        2375
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2375,
+        2376
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        2377,
+        2378
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "throw",
+      "range": [
+        2385,
+        2390
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "new",
+      "range": [
+        2391,
+        2394
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Marionette",
+      "range": [
+        2395,
+        2405
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        2405,
+        2406
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "Error",
+      "range": [
+        2406,
+        2411
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2411,
+        2412
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        2412,
+        2413
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "name",
+      "range": [
+        2422,
+        2426
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        2426,
+        2427
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'NoTemplateError'",
+      "range": [
+        2428,
+        2445
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        2445,
+        2446
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "message",
+      "range": [
+        2455,
+        2462
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        2462,
+        2463
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'Could not find template: \"'",
+      "range": [
+        2464,
+        2492
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "+",
+      "range": [
+        2493,
+        2494
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "templateId",
+      "range": [
+        2495,
+        2505
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "+",
+      "range": [
+        2506,
+        2507
+      ]
+    },
+    {
+      "type": "String",
+      "value": "'\"'",
+      "range": [
+        2508,
+        2511
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        2518,
+        2519
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2519,
+        2520
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        2520,
+        2521
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        2526,
+        2527
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "return",
+      "range": [
+        2533,
+        2539
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "template",
+      "range": [
+        2540,
+        2548
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        2548,
+        2549
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        2552,
+        2553
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ",",
+      "range": [
+        2553,
+        2554
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "compileTemplate",
+      "range": [
+        2786,
+        2801
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ":",
+      "range": [
+        2801,
+        2802
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "function",
+      "range": [
+        2803,
+        2811
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2811,
+        2812
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "rawTemplate",
+      "range": [
+        2812,
+        2823
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2823,
+        2824
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "{",
+      "range": [
+        2825,
+        2826
+      ]
+    },
+    {
+      "type": "Keyword",
+      "value": "return",
+      "range": [
+        2831,
+        2837
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "_",
+      "range": [
+        2838,
+        2839
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ".",
+      "range": [
+        2839,
+        2840
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "template",
+      "range": [
+        2840,
+        2848
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "(",
+      "range": [
+        2848,
+        2849
+      ]
+    },
+    {
+      "type": "Identifier",
+      "value": "rawTemplate",
+      "range": [
+        2849,
+        2860
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2860,
+        2861
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        2861,
+        2862
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        2865,
+        2866
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": "}",
+      "range": [
+        2867,
+        2868
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ")",
+      "range": [
+        2868,
+        2869
+      ]
+    },
+    {
+      "type": "Punctuator",
+      "value": ";",
+      "range": [
+        2869,
+        2870
+      ]
+    }
+  ]
+}

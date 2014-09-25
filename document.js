@@ -64,7 +64,7 @@ var fs = require('fs'),
 			config: getConfig()
 		});
 
-		console.log(lookup.getNamespacedFunctionAssignments());
+		console.log(lookup.parse());
 
 	};
 

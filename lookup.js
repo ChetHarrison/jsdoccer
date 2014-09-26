@@ -2,6 +2,9 @@
 
 var _ = require('lodash'),
 
+	// yaml templates
+	functionDeclarationTpl = require('./templates/function-declaration.tpl'),
+
 	// constructor
 	Lookup = function (options) {
 		options = options || {};
@@ -31,11 +34,14 @@ var _ = require('lodash'),
 	recursionDepth = 0,
 	syntax = '',
 
+	_getTemplateName = function(type) {
+		// TODO: impliment this.
+		return 'functionDeclarationTpl';
+	},
+
 	// private functions
 	// returns a string of white space for indentation.
 	_getTabs = function(count) {
-		// TODO: REMOVE THIS HACK
-		count = count - 5;
 		var tabs = _.times(count, function() { 
 				return '  ';
 			});
@@ -43,7 +49,7 @@ var _ = require('lodash'),
 	},
 
 	// main recursive logic
-	_parseBranch = function(branch, targetSyntax, foundTarget) {
+	_parseBranch = function(branch, results, foundTarget) {
 		var keys = Object.keys(branch),
 			maxDepth = 50;
 		
@@ -69,39 +75,58 @@ var _ = require('lodash'),
 
 				// grab disired fields declared in the syntaxWhitelist
 				_.each(targetSyntaxConfig.attributes, function(attribute) {
-					var data = _parseBranch(branch[attribute], targetSyntax, true);
-					console.log('here comes yor data');
-					console.log(data);
-					console.log('done with your data');
-					relevantSyntax[attribute] = data;
+					// Create some new storage for our target so we don't 
+					// clutter up the resuts storage.
+					var targetResults = [];
+					relevantSyntax[attribute] = _parseBranch(branch[attribute], targetResults, true);
 				});
 
-				targetSyntax.push(relevantSyntax);
+				results.push(relevantSyntax);
 			}
 
 			// current value is an array so recurse
 			// with members
 			if (_.isArray(value)) {
 				_.each(value, function(member) {
-					_parseBranch(member, targetSyntax, foundTarget);
+					_parseBranch(member, results, foundTarget);
 				})
 			}
 
 			// current value is an object so recurse
 			// with the object
 			else if (_.isPlainObject(value)) {
-				_parseBranch(value, targetSyntax, foundTarget);
+				_parseBranch(value, results, foundTarget);
 			}
 
 			// Esprima nodes with an "Identifier" type
 			// indicate names declared in your code. 
 			else if (foundTarget && key === 'type' && value === 'Identifier') {
-				targetSyntax.push(branch.name);
+				results.push(branch.name);
 			}
 		});
 
 		recursionDepth--;
-		return targetSyntax;
+		return results;
+	},
+
+	_jsonToYaml = function(jsonArray) {
+		var yaml = '';
+
+		yaml += _.each(jsonArray, function(json) {
+			var template = _getTemplateName(json.type);
+			console.log(json.id.pop());
+			var compiled =  _.template(template);
+			console.log(compiled);
+			var results = compiled({'id': json.id.pop()});
+			console.log(results);
+			return results;
+		});
+
+		console.log(nl + nl);
+		console.log(yaml);
+		console.log(nl + nl);
+
+		return yaml;
 	};
 
 _.extend(Lookup.prototype, {
@@ -109,9 +134,16 @@ _.extend(Lookup.prototype, {
 	// Walk the AST building a yaml string of whitelisted
 	// syntax.
 	parse: function () {
-		var targetSyntax = [],
-			foundTarget = false;
-		return _parseBranch(this.bodyNodes, targetSyntax, foundTarget);
+
+			// this will collect the relevant data.
+		var results = [], 
+			// this a flag that will tell the parser to
+			// start collecting data we are interested in.
+			foundTarget = false,
+
+			targets = _parseBranch(this.bodyNodes, results, foundTarget);
+
+		return _jsonToYaml(targets);
 	}
 
 });

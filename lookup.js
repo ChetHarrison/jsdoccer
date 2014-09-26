@@ -77,21 +77,21 @@ var parseBranch = function(tree) {
 					parseBranch(tree[tag]);
 				});
 
-				yaml += _.each(type.documentTags, function(tag) {
-					console.log(tree);
-					console.log(tag);
-					tree[tag] + tab;
+				yaml = yaml + tab;
+
+				_.each(type.documentTags, function(tag) {
+					yaml = yaml + tree[tag] + nl;
 				});
 			}
 		}
-		console.log(yaml);
 		return yaml;
 	}
 
 _.extend(Lookup.prototype, {
 
 	parse: function() {
-		parseBranch(this.bodyNodes);
+		yaml = '';
+		return parseBranch(this.bodyNodes);
 	},
 
 	getNamespacedAssignments: function(type) {

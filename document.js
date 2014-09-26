@@ -26,6 +26,7 @@ var fs = require('fs'),
 	},
 
 	createSyntaxTree = function (file) {
+		if (file === inputPath + '.DS_Store') return;
 		var code = fs.readFileSync(file, 'utf8');
 		console.log('Generating syntax tree: ' + file);
 		return esprima.parse(code, {
@@ -38,12 +39,13 @@ var fs = require('fs'),
 	},
 
 	saveSyntaxTree = function (json, filename) {
+		if (filename === '.DS_Store') return;
 		var fullOutputPath = getFullOutputPath(filename);
 		fs.writeFileSync(fullOutputPath, JSON.stringify(json, null, 2));
 		console.log('Saving syntax tree: ' + fullOutputPath);
 	},
 
-	getConfig = function () {
+	getSyntaxWhitelist = function () {
 		// TODO: Look for .jsdoccerrc config file and pass that
 		// in as config argument.
 		return {};
@@ -61,14 +63,14 @@ var fs = require('fs'),
 		// Play with the tree
 		lookup = new Lookup({
 			syntaxTree: tree,
-			config: getConfig()
+			syntaxWhitelist: getSyntaxWhitelist()
 		});
 
 		console.log(lookup.parse());
-
 	};
 
-
+// var tester = new Lookup();
+// 	console.log(tester.test());
 
 // check for command line for target js file arguments.
 if (process.argv.length >= 4) {

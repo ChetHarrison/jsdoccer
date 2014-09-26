@@ -1,129 +1,117 @@
 'use strict';
 
 var _ = require('lodash'),
-	RxArray = require('./rx-array.js');
-	
-var Lookup = function (options) {
-	// maps esprima to jsdoc
-	var defaultConfig = {
 
-	};
+	// constructor
+	Lookup = function (options) {
+		options = options || {};
 
-	this.syntaxTree = options.syntaxTree;
+		this.syntaxTree = options.syntaxTree || {};
 
-	this.config = options.config || defaultConfig;
+		this.syntaxWhitelist = options.syntaxWhitelist || defaultSyntaxWhitelist;
 
-	this.bodyNodes = this.syntaxTree.body || [];
-}
-
-// esprima map of type to detail field
-var typeMap = {
-	Program: {
-		parseTags: ['body'],
-		documentTags: []
+		this.bodyNodes = this.syntaxTree.body || [];
 	},
 
-	VariableDeclaration: {
-		parseTags: ['declarations'],
-		documentTags: []
-	},
-
-	VariableDeclarator: {
-		parseTags: ['id','init'],
-		documentTags: []
-	},
-
-	id: {
-		parseTags: ['Identifier'],
-		documentTags: []
-	},
-
-	FunctionExpression: {
-		parseTags: ['params'],
-		documentTags: []
-	},
-
-	Identifier: {
-		parseTags: [],
-		documentTags: ['name']
-	}
-
-}
-
-var tab = '  ';
-var nl = '\n';
-var yaml = '';
-
-var parseBranch = function(tree) {
-
-		// console.log('//------------------tree is now-----------------------');
-		// console.log(tree);
-
-		// collection
-		if (_.isArray(tree)) {
-			_.each(tree, function(item) {
-				parseBranch(item)
-			})
+	// Some default config. For each type of
+	// syntax you need tell it what attributes
+	// you would like to document
+	defaultSyntaxWhitelist = {
+		// This would parse a function name and it's 
+		// parameter names
+		FunctionDeclaration: {
+			attributes: ['id', 'params']
 		}
-		// node
-		else {
-			var type = typeMap[tree.type]
-			// console.log('type is now ----');
-			// console.log(type);
+	},
 
-			if (type) {
-				_.each(type.parseTags, function(tag) {
-					// console.log('tag is ' + tag);
-					parseBranch(tree[tag]);
+	// formating
+	tab = '  ',
+	nl = '\n',
+	yaml = '',
+	recursionDepth = 0,
+	syntax = '',
+
+	// private functions
+	// returns a string of white space for indentation.
+	_getTabs = function(count) {
+		// TODO: REMOVE THIS HACK
+		count = count - 5;
+		var tabs = _.times(count, function() { 
+				return '  ';
+			});
+		return tabs.join('');
+	},
+
+	// main recursive logic
+	_parseBranch = function(branch, targetSyntax, foundTarget) {
+		var keys = Object.keys(branch),
+			maxDepth = 50;
+		
+		recursionDepth++;
+
+		// recursion emergency break!
+		if (recursionDepth > maxDepth) {
+			console.warn('Lookup._parseBranch(): Exceeded max recursion depth.');
+			return;
+		} 
+		
+		_.each(keys, function (key) {
+			var value = branch[key];
+
+			// TODO: reference the Lookup instance's whitelist
+			var targetSyntaxConfig = defaultSyntaxWhitelist[value];
+
+			if (targetSyntaxConfig) {
+				var relevantSyntax = {};
+
+				// type the whitelisted syntax
+				relevantSyntax['type'] = value;
+
+				// grab disired fields declared in the syntaxWhitelist
+				_.each(targetSyntaxConfig.attributes, function(attribute) {
+					var data = _parseBranch(branch[attribute], targetSyntax, true);
+					console.log('here comes yor data');
+					console.log(data);
+					console.log('done with your data');
+					relevantSyntax[attribute] = data;
 				});
 
-				yaml = yaml + tab;
-
-				_.each(type.documentTags, function(tag) {
-					yaml = yaml + tree[tag] + nl;
-				});
+				targetSyntax.push(relevantSyntax);
 			}
-		}
-		return yaml;
-	}
+
+			// current value is an array so recurse
+			// with members
+			if (_.isArray(value)) {
+				_.each(value, function(member) {
+					_parseBranch(member, targetSyntax, foundTarget);
+				})
+			}
+
+			// current value is an object so recurse
+			// with the object
+			else if (_.isPlainObject(value)) {
+				_parseBranch(value, targetSyntax, foundTarget);
+			}
+
+			// Esprima nodes with an "Identifier" type
+			// indicate names declared in your code. 
+			else if (foundTarget && key === 'type' && value === 'Identifier') {
+				targetSyntax.push(branch.name);
+			}
+		});
+
+		recursionDepth--;
+		return targetSyntax;
+	};
 
 _.extend(Lookup.prototype, {
 
-	parse: function() {
-		yaml = '';
-		return parseBranch(this.bodyNodes);
-	},
-
-	getNamespacedAssignments: function(type) {
-		return this.bodyNodes.
-
-			filter(function(node) { return node.type === 'ExpressionStatement'; }).
-
-			map(function(node) { return node.expression }).
-
-			filter(function(expression) {
-				return (
-					expression.type === 'AssignmentExpression' &&
-					expression.operator === '='
-				);
-			}).
-
-			filter(function(expression) { 
-				return (
-					expression.left.type === 'MemberExpression' &&
-					expression.right.type === type
-				); 
-			}).
-
-			map(function(expression) { 
-				return {
-					namespace: expression.left.object.name,
-					functionName: expression.left.property.name,
-					params: expression.right.params.map(function(param) {
-						return param.name;
-					})
-				}; 
-			});
+	// Walk the AST building a yaml string of whitelisted
+	// syntax.
+	parse: function () {
+		var targetSyntax = [],
+			foundTarget = false;
+		return _parseBranch(this.bodyNodes, targetSyntax, foundTarget);
 	}
 
 });

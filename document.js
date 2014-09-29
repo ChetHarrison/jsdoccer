@@ -26,7 +26,6 @@ var fs = require('fs'),
 	},
 
 	createSyntaxTree = function (file) {
-		if (file === inputPath + '.DS_Store') return;
 		var code = fs.readFileSync(file, 'utf8');
 		console.log('Generating syntax tree: ' + file);
 		return esprima.parse(code, {
@@ -34,12 +33,12 @@ var fs = require('fs'),
 			range: false,
 			raw: false,
 			tokens: false,
+			// TODO: if commets grab and insert into description.
 			comment: false,
 		});
 	},
 
 	saveSyntaxTree = function (json, filename) {
-		if (filename === '.DS_Store') return;
 		var fullOutputPath = getFullOutputPath(filename);
 		fs.writeFileSync(fullOutputPath, JSON.stringify(json, null, 2));
 		console.log('Saving syntax tree: ' + fullOutputPath);
@@ -51,7 +50,12 @@ var fs = require('fs'),
 		return {};
 	},
 
+	// TODO: add to config
+	fileFilter = ['.DS_Store'],
+
 	documentFile = function (filename) {
+		if (_.contains(fileFilter, filename)) return;
+
 		var tree, lookup, bodyNodes, typeMap;
 
 		tree = createSyntaxTree(getFullInputPath(filename));
@@ -66,6 +70,8 @@ var fs = require('fs'),
 			syntaxWhitelist: getSyntaxWhitelist()
 		});
 
+		console.log('howdy');
+		console.log(filename);
 		console.log(lookup.parse());
 	};
 

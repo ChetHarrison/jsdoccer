@@ -2,6 +2,8 @@
 
 var _ = require('lodash'),
 
+	escodegen = require('escodegen'),
+
 	// yaml templates
 	functionDeclarationTpl = require('./templates/function-declaration.tpl'),
 
@@ -23,7 +25,8 @@ var _ = require('lodash'),
 		// This would parse a function name and it's 
 		// parameter names
 		FunctionDeclaration: {
-			attributes: ['id', 'params']
+			attributes: ['id', 'params'],
+			code: ['body']
 		}
 	},
 
@@ -79,6 +82,15 @@ var _ = require('lodash'),
 					// clutter up the resuts storage.
 					var targetResults = [];
 					relevantSyntax[attribute] = _parseBranch(branch[attribute], targetResults, true);
+
+				});
+
+				// Generate code for any types referenced in the `code` parameter
+				// of the config.
+				_.each(targetSyntaxConfig.code, function(attribute) {
+					// Create some new storage for our target so we don't 
+					// clutter up the resuts storage.
+					relevantSyntax[attribute] = escodegen.generate(branch[attribute]);
 				});
 
 				results.push(relevantSyntax);
@@ -110,21 +122,17 @@ var _ = require('lodash'),
 	},
 
 	_jsonToYaml = function(jsonArray) {
-		var yaml = '';
+		var yaml = [],
+			results = '';
 
-		yaml += _.each(jsonArray, function(json) {
-			var template = _getTemplateName(json.type);
-			console.log(json.id.pop());
-			var compiled =  _.template(template);
-			console.log(compiled);
-			var results = compiled({'id': json.id.pop()});
-			console.log(results);
-			return results;
+		yaml = 'fucj';
+		_.each(jsonArray, function(json) {		
+			results += _.template(functionDeclarationTpl, {'id': json.id});
+			results += '\n';
+			return 'what'
 		});
 
-		console.log(nl + nl);
 		console.log(yaml);
-		console.log(nl + nl);
 
 		return yaml;
 	};
@@ -142,6 +150,8 @@ _.extend(Lookup.prototype, {
 			foundTarget = false,
 
 			targets = _parseBranch(this.bodyNodes, results, foundTarget);
+
+			console.log(targets); targets;
 
 		return _jsonToYaml(targets);
 	}

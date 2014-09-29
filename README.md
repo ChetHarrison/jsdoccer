@@ -137,6 +137,4 @@ unbindFromStrings
 Place all of your js files in the source js dir specified in your `.jsdoccerrc` config file wich defaults to `./input/js`. From the command line type `node document.js`. Documented files will be saved in the `output` directory.
 
 ### To Do
-* --template ymal from target JSON parse results for jsdoc.--
 * convert to grunt task.
-* --consult external config file.--

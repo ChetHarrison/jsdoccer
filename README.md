@@ -51,6 +51,25 @@ and you would get the following json syntax tree in the output directory
 }
 ```
 
+You can configure the task to document any type defined by the [Spider Monkey Parser API](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Parser_API#Functions). Add an argument for each type you would like to document then add any child attribute names you would like to collect to its associated `attributes` array. Any child attributes with code you would like to reference, such as a function body, add to its associated `code` attribute.
+
+#### Example Config
+
+The following example will document all functions, their parameters, and provide the code for thier function bodies.
+
+```
+var syntaxWhitelist = {
+    // This would parse a function name, its 
+    // parameter names, and its body code.
+    FunctionDeclaration: {
+      attributes: ['id', 'params'],
+      code: ['body']
+    }
+  };
+```
+
+
+
 ### Batch Jobs
 Place all of your js files in the `input/js` directory. From the command line type `node document.js`. Documented files will be saved in the `output` directory.
 

@@ -22,8 +22,8 @@ var _ = require('lodash'),
 	// syntax you need tell it what attributes
 	// you would like to document
 	defaultSyntaxWhitelist = {
-		// This would parse a function name and it's 
-		// parameter names
+		// This would parse a function name, its 
+		// parameter names, and its body code.
 		FunctionDeclaration: {
 			attributes: ['id', 'params'],
 			code: ['body']

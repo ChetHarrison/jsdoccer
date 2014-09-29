@@ -4,10 +4,6 @@
 
 A Node.js tool to auto document your ECMAScript (Java Script) in  [JSDoc 3](https://github.com/jsdoc3/jsdoc3.github.com) using [Esprima](http://esprima.org/) and [ESCodeGen](https://github.com/Constellation/escodegen).
 
-###ASTs
-
-An AST or Abstract Syntax Tree is a typed representation of valid code. Esprima will parse ASTs from valid ECMAScript and ESCodeGen provides an "inverse" operation that will generate valid ECMAScript from Esprima ASTs.
-
 ###Basic Usage
 
 From the command line
@@ -15,19 +11,20 @@ From the command line
 ```
 $ git clone git@github.com:ChetHarrison/jsdoccer.git
 $ cd jsdoccer
-$ node document.js <filename>
+$ node document.js
 ```
-Currently place the files to document in the `input/js` directory. For example if the contents of `example.js` were
+
+###ASTs
+
+An AST or Abstract Syntax Tree is a typed representation of valid code. Esprima will parse ASTs from valid ECMAScript and ESCodeGen provides an "inverse" operation that will generate valid ECMAScript from Esprima ASTs.
+
+Esprima will parse this:
 
 ```
 var answer = 42;
 ```
 
-and at the command line you typed
-
-`node document.js example.js`
-
-and you would get the following json syntax tree in the output directory
+into this AST:
 
 ```
 {
@@ -108,6 +105,31 @@ Example:
       example: |
         ```js
         <%- body %>
+        ```
+```
+
+Here is a sample of the yaml produced:
+
+```
+unbindFromStrings
+  description: | 
+    @param {type} target - <param description> 
+    @param {type} entity - <param description> 
+    @param {type} evt - <param description> 
+    @param {type} methods - <param description> 
+  
+  examples:
+    -
+      name: Function Body
+      example: |
+        ```js
+        {
+    var methodNames = methods.split(/\s+/);
+    _.each(methodNames, function (methodName) {
+        var method = target[methodName];
+        target.stopListening(entity, evt, method);
+    });
+}
         ```
 ```
 ### Batch Jobs

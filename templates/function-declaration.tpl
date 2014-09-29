@@ -7,5 +7,5 @@
       name: Function Body
       example: |
         ```js
-        <%- body %>
+        <%= body %>
         ```

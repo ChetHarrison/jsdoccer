@@ -86,7 +86,7 @@ The following example will document all functions, their parameters, and provide
 
 ### YAML Templates
 
-YAML templates should be "slugified" with a `.tpl` extention. Example:
+YAML template file names should be "slugified" with a `.tpl` extention. Example:
 
 The Parser API type "FunctionDeclaration" should have a corresponding template `function-eclaration.tpl`. At the moment templates are populated using Lodash (Underscore) templating. Because YAML is whitespace sensitive you may have to carefully watch where you place inline script 
 

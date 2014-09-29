@@ -1,3 +1,23 @@
 {
-	"esprimaTag": "jsdocTag"
+	"js": {
+		"scr": "./input/js"
+	},
+	"ast": {
+		"dest": "./output",
+		"save": true
+	},
+	"yaml": {
+		"templates": "./templates",
+		"dest": "./yaml",
+		"save": true
+	},
+	"jsdoc": {
+		"dest": "./doc"
+	},
+	"syntaxWhitelist": {
+		"FunctionDeclaration": {
+			"attributes": ["id", "params"],
+			"code": ["body"]
+		}
+	}
 }

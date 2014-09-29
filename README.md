@@ -59,25 +59,62 @@ You can configure the task to document any type defined by the [Spider Monkey Pa
 
 #### Example Config
 
-The following example will document all functions, their parameters, and provide the code for thier function bodies.
+The following example will document all functions, their parameters, and provide the code for thier function bodies. See `syntaxWhitelist` where `FunctionDeclaration` represents a valid API Parser type and the `attributes` and `code` items are children of that type.
 
 ```
-var syntaxWhitelist = {
-    // This would parse a function name, its 
-    // parameter names, and its body code.
-    FunctionDeclaration: {
-      attributes: ['id', 'params'],
-      code: ['body']
+{
+  "js": {
+    "scr": "./input/js"
+  },
+  "ast": {
+    "dest": "./output",
+    "save": true
+  },
+  "yaml": {
+    "templates": "./templates",
+    "dest": "./yaml",
+    "save": true
+  },
+  "jsdoc": {
+    "dest": "./doc"
+  },
+  "syntaxWhitelist": {
+    "FunctionDeclaration": {
+      "attributes": ["id", "params"],
+      "code": ["body"]
     }
-  };
+  }
+}
 ```
 
+### YAML Templates
 
+YAML templates should be "slugified" with a `.tpl` extention. Example:
 
+The Parser API type "FunctionDeclaration" should have a corresponding template `function-eclaration.tpl`. At the moment templates are populated using Lodash (Underscore) templating. Because YAML is whitespace sensitive you may have to carefully watch where you place inline script 
+
+Example:
+
+`function-declaration.tpl` referenced in the `.jsdoccerrc` config file above will search for this template in the `yaml/templates` dir specified in the config file above. Note the indentation of the loop to populate the template with `param` values.
+
+```
+<%- id %>
+  description: | <% params.forEach(function(param) {%>
+    @param {type} <%= param %> - <param description> <%}); %>
+  
+  examples:
+    -
+      name: Function Body
+      example: |
+        ```js
+        <%- body %>
+        ```
+```
 ### Batch Jobs
-Place all of your js files in the `input/js` directory. From the command line type `node document.js`. Documented files will be saved in the `output` directory.
+
+Place all of your js files in the source js dir specified in your `.jsdoccerrc` config file wich defaults to `./input/js`. From the command line type `node document.js`. Documented files will be saved in the `output` directory.
 
 ### To Do
-* template ymal from target JSON parse results for jsdoc.
+* --template ymal from target JSON parse results for jsdoc.--
 * convert to grunt task.
-* consult external config file.
+* --consult external config file.--

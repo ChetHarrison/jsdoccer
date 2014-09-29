@@ -25,5 +25,8 @@
     "escodegen": "^1.4.1",
     "esprima": "^1.2.2",
     "lodash": "^2.4.1"
+  },
+  "dependencies": {
+    "underscore.string": "^2.3.3"
   }
 }

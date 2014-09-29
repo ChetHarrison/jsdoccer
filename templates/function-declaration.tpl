@@ -1,13 +1,11 @@
-var tpl = '<%= id %>';
-
-module.exports = tpl;
-
-// <%= id %>:
-//   description: | 
-//     @param {<param type>} <%= param %> - <param description>
-    
-  // examples:
-  //   - 
-  //     name: <example name>
-  //     example: |
-  //       <example>
+<%- id %>
+  description: | <% params.forEach(function(param) {%>
+    @param {type} <%= param %> - <param description> <%}); %>
+  
+  examples:
+    -
+      name: Function Body
+      example: |
+        ```js
+        <%- body %>
+        ```

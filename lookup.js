@@ -1,11 +1,18 @@
 'use strict';
 
-var _ = require('lodash'),
+
+var fs = require('fs'),
+	
+	configFile = __dirname + '/.jsdoccerrc',
+
+	// read .jsdoccerrc
+	config = JSON.parse(fs.readFileSync(configFile, 'utf8')),
+
+	_ = require('lodash'),
 
 	escodegen = require('escodegen'),
 
-	// yaml templates
-	functionDeclarationTpl = require('./templates/function-declaration.tpl'),
+	_s = require('underscore.string'),
 
 	// constructor
 	Lookup = function (options) {
@@ -13,7 +20,7 @@ var _ = require('lodash'),
 
 		this.syntaxTree = options.syntaxTree || {};
 
-		this.syntaxWhitelist = options.syntaxWhitelist || defaultSyntaxWhitelist;
+		this.syntaxWhitelist = options.syntaxWhitelist || config.syntaxWhitelist || defaultSyntaxWhitelist;
 
 		this.bodyNodes = this.syntaxTree.body || [];
 	},
@@ -121,18 +128,23 @@ var _ = require('lodash'),
 		return results;
 	},
 
+	_getTemplate = function(type) {
+		// TODO: Make this more robust with Node Path lib
+		var filename = config.yaml.templates + '/' + _s.dasherize(type).substr(1) + '.tpl',
+			fs = require('fs'),
+			file = __dirname + 'filename';
+ 
+		return fs.readFileSync(filename, 'utf8');
+	},
+
 	_jsonToYaml = function(jsonArray) {
-		var yaml = [],
-			results = '';
+		var yaml = '';
 
-		yaml = 'fucj';
-		_.each(jsonArray, function(json) {		
-			results += _.template(functionDeclarationTpl, {'id': json.id});
-			results += '\n';
-			return 'what'
+		_.each(jsonArray, function(json) {	
+			var template = _getTemplate(json.type);
+			yaml += _.template(template, json);
+			yaml += '\n';
 		});
-
-		console.log(yaml);
 
 		return yaml;
 	};
@@ -150,8 +162,6 @@ _.extend(Lookup.prototype, {
 			foundTarget = false,
 
 			targets = _parseBranch(this.bodyNodes, results, foundTarget);
-
-			console.log(targets); targets;
 
 		return _jsonToYaml(targets);
 	}

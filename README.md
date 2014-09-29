@@ -2,7 +2,11 @@
 
 ###JSDoccer
 
-A Node.js tool to auto document your ECMAScript (Java Script) in  [JSDoc 3](https://github.com/jsdoc3/jsdoc3.github.com) using [Esprima](http://esprima.org/).
+A Node.js tool to auto document your ECMAScript (Java Script) in  [JSDoc 3](https://github.com/jsdoc3/jsdoc3.github.com) using [Esprima](http://esprima.org/) and [ESCodeGen](https://github.com/Constellation/escodegen).
+
+###ASTs
+
+An AST or Abstract Syntax Tree is a typed representation of valid code. Esprima will parse ASTs from valid ECMAScript and ESCodeGen provides an "inverse" operation that will generate valid ECMAScript from Esprima ASTs.
 
 ###Basic Usage
 
@@ -74,5 +78,6 @@ var syntaxWhitelist = {
 Place all of your js files in the `input/js` directory. From the command line type `node document.js`. Documented files will be saved in the `output` directory.
 
 ### To Do
-* parse syntax tree to ymal for jsdoc
-* get kids to bed on time
+* template ymal from target JSON parse results for jsdoc.
+* convert to grunt task.
+* consult external config file.

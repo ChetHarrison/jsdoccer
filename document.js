@@ -70,8 +70,6 @@ var fs = require('fs'),
 			syntaxWhitelist: getSyntaxWhitelist()
 		});
 
-		console.log('howdy');
-		console.log(filename);
 		console.log(lookup.parse());
 	};
 

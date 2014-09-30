@@ -44,20 +44,7 @@ var fs = require('fs'),
 	recursionDepth = 0,
 	syntax = '',
 
-	_getTemplateName = function(type) {
-		// TODO: impliment this.
-		return 'functionDeclarationTpl';
-	},
-
 	// private functions
-	// returns a string of white space for indentation.
-	_getTabs = function(count) {
-		var tabs = _.times(count, function() { 
-				return '  ';
-			});
-		return tabs.join('');
-	},
-
 	// main recursive logic
 	_parseBranch = function(branch, results, foundTarget) {
 		var keys = Object.keys(branch),
@@ -74,15 +61,28 @@ var fs = require('fs'),
 		_.each(keys, function (key) {
 			var value = branch[key];
 
-			// TODO: reference the Lookup instance's whitelist
-			var targetSyntaxConfig = defaultSyntaxWhitelist[value];
+			// console.log(defaultSyntaxWhitelist);
+			// console.log(defaultSyntaxWhitelist[value]);
 
+			// TODO: reference the Lookup instance's whitelist
+			var targetSyntaxConfig;
+			// we have to check hasOwnProperty for collisions like 'constructor'
+			if (defaultSyntaxWhitelist.hasOwnProperty(value)) {
+				targetSyntaxConfig = defaultSyntaxWhitelist[value];
+			}
+			// console.dir(targetSyntaxConfig);
 			if (targetSyntaxConfig) {
+				console.log('found target ' + value);
+				console.log(defaultSyntaxWhitelist);
+				console.dir(targetSyntaxConfig);
 				var relevantSyntax = {};
 
 				// type the whitelisted syntax
 				relevantSyntax['type'] = value;
 
+				// console.log(value);
+				// console.log(key);
+				// console.log(targetSyntaxConfig);
 				// grab disired fields declared in the syntaxWhitelist
 				_.each(targetSyntaxConfig.attributes, function(attribute) {
 					// Create some new storage for our target so we don't 
@@ -99,7 +99,8 @@ var fs = require('fs'),
 					// clutter up the resuts storage.
 					relevantSyntax[attribute] = escodegen.generate(branch[attribute]);
 				});
-
+				console.log("pushing target syntax");
+				console.log(relevantSyntax);
 				results.push(relevantSyntax);
 			}
 
@@ -120,6 +121,8 @@ var fs = require('fs'),
 			// Esprima nodes with an "Identifier" type
 			// indicate names declared in your code. 
 			else if (foundTarget && key === 'type' && value === 'Identifier') {
+				console.log("pushing identifier");
+				console.log(branch.name);
 				results.push(branch.name);
 			}
 		});
@@ -128,9 +131,16 @@ var fs = require('fs'),
 		return results;
 	},
 
+	_getTemplateName = function(type) {
+		var path = _s.dasherize(type);
+		path = path[0] === '-' ? path.substr(1) : path;
+		path = config.yaml.templates + '/' + path + '.tpl';
+		return path;
+	},
+
 	_getTemplate = function(type) {
 		// TODO: Make this more robust with Node Path lib
-		var filename = config.yaml.templates + '/' + _s.dasherize(type).substr(1) + '.tpl',
+		var filename = _getTemplateName(type),
 			fs = require('fs'),
 			file = __dirname + 'filename';
  
@@ -154,6 +164,7 @@ _.extend(Lookup.prototype, {
 	// Walk the AST building a yaml string of whitelisted
 	// syntax.
 	parse: function () {
+		console.log(defaultSyntaxWhitelist['constructor']);
 
 			// this will collect the relevant data.
 		var results = [], 
@@ -162,6 +173,8 @@ _.extend(Lookup.prototype, {
 			foundTarget = false,
 
 			targets = _parseBranch(this.bodyNodes, results, foundTarget);
+
+			console.log(targets);
 
 		return _jsonToYaml(targets);
 	}

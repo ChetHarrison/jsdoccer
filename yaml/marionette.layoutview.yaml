@@ -1,0 +1,106 @@
+constructor
+  description: | 
+    @param {type} options - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+render
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+destroy
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+addRegion
+  description: | 
+    @param {type} name - <param description> 
+    @param {type} definition - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+addRegions
+  description: | 
+    @param {type} regions - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+removeRegion
+  description: | 
+    @param {type} name - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+getRegion
+  description: | 
+    @param {type} region - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+getRegions
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_buildRegions
+  description: | 
+    @param {type} regions - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+parentEl
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_initializeRegions
+  description: | 
+    @param {type} options - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_reInitializeRegions
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+getRegionManager
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_initRegionManager
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |

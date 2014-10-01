@@ -1,0 +1,148 @@
+constructor
+  description: | 
+    @param {type} options - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+getTemplate
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+serializeModel
+  description: | 
+    @param {type} model - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+mixinTemplateHelpers
+  description: | 
+    @param {type} target - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+normalizeUIKeys
+  description: | 
+    @param {type} hash - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+normalizeUIValues
+  description: | 
+    @param {type} hash - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+configureTriggers
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+delegateEvents
+  description: | 
+    @param {type} events - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_delegateDOMEvents
+  description: | 
+    @param {type} eventsArg - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+undelegateEvents
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+onShowCalled
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_ensureViewIsIntact
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+destroy
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+bindUIElements
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_bindUIElements
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+unbindUIElements
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_unbindUIElements
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_buildViewTrigger
+  description: | 
+    @param {type} triggerDef - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+setElement
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+triggerMethod
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |

@@ -1,0 +1,95 @@
+constructor
+  description: | 
+    @param {type} options - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+addRegions
+  description: | 
+    @param {type} regionDefinitions - <param description> 
+    @param {type} defaults - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+addRegion
+  description: | 
+    @param {type} name - <param description> 
+    @param {type} definition - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+get
+  description: | 
+    @param {type} name - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+getRegions
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+removeRegion
+  description: | 
+    @param {type} name - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+removeRegions
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+emptyRegions
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+destroy
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_store
+  description: | 
+    @param {type} name - <param description> 
+    @param {type} region - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_remove
+  description: | 
+    @param {type} name - <param description> 
+    @param {type} region - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_setLength
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |

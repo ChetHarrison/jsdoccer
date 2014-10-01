@@ -11,18 +11,29 @@ var fs = require('fs'),
 
 	filename = process.argv[2],
 
-	inputPath = 'input/js/',
+	configFile = __dirname + '/.jsdoccerrc',
 
-	outputPath = 'output/',
+	config = JSON.parse(fs.readFileSync(configFile, 'utf8')),
 
-	filesToDocument = fs.readdirSync(inputPath),
+	jsPath = config.js.src,
 
-	getFullInputPath = function (filename) {
-		return path.join(inputPath + filename);
+	astPath = config.ast.dest,
+
+	yamlPath = config.yaml.dest,
+
+	filesToDocument = fs.readdirSync(jsPath),
+
+	getFullJsPath = function (filename) {
+		return path.join(jsPath + filename);
 	},
 
-	getFullOutputPath = function (filename) {
-		return path.join(outputPath + path.basename(filename, '.js') + '.json');
+	getFullAstPath = function (filename) {
+		return path.join(astPath + path.basename(filename, '.js') + '.json');
+	},
+
+	getFullYamlPath = function (filename) {
+		console.log(path.join(yamlPath + path.basename(filename, '.js') + '.yaml'));
+		return path.join(yamlPath + path.basename(filename, '.js') + '.yaml');
 	},
 
 	createSyntaxTree = function (file) {
@@ -38,51 +49,51 @@ var fs = require('fs'),
 		});
 	},
 
-	saveSyntaxTree = function (json, filename) {
-		var fullOutputPath = getFullOutputPath(filename);
-		fs.writeFileSync(fullOutputPath, JSON.stringify(json, null, 2));
+	saveSyntaxTree = function (ast, filename) {
+		var fullOutputPath = getFullAstPath(filename);
+		fs.writeFileSync(fullOutputPath, JSON.stringify(ast, null, 2));
 		console.log('Saving syntax tree: ' + fullOutputPath);
 	},
 
-	// TODO: add to config
-	fileFilter = ['.DS_Store'],
+	saveDocYaml = function (docYaml, filename) {
+		var fullOutputPath = getFullYamlPath(filename);
+		fs.writeFileSync(fullOutputPath, docYaml);
+		console.log('Saving document YAML: ' + fullOutputPath);
+	},
+
+	fileFilters = config.fileFilters,
 
 	documentFile = function (filename) {
-		if (_.contains(fileFilter, filename)) return;
+		var filterThis = false;
 
-		var tree, lookup, bodyNodes, typeMap;
+		_.each(fileFilters, function(fileFilter) {
+			if (_.contains(fileFilter, filename)) filterThis = true;
+		});
+		if (filterThis) return;
 
-		tree = createSyntaxTree(getFullInputPath(filename));
+		var syntaxTree, lookup, docYaml;
+
+		syntaxTree = createSyntaxTree(getFullJsPath(filename));
 
 		if (production) {
-			saveSyntaxTree(tree, filename);
+			saveSyntaxTree(syntaxTree, filename);
 		}
 
-		// Play with the tree
+		// Play with the syntaxTree
 		lookup = new Lookup({
-			syntaxTree: tree
+			syntaxTree: syntaxTree
 		});
 
-		console.log(lookup.parse());
+		docYaml = lookup.parse();
+		saveDocYaml(docYaml, filename);
 	};
 
-// var tester = new Lookup();
-// 	console.log(tester.test());
-
-// check for command line for target js file arguments.
-if (process.argv.length >= 4) {
-	console.log('TODO: take more than one arg. right now it only takes one at the command line.');
-	process.exit(1);
-} else if (process.argv.length >= 3) {
-	documentFile(filename);
-}
 // check the input folder for target js files.
-else if (filesToDocument.length > 0) {
+if (filesToDocument.length > 0) {
 	filesToDocument.forEach(documentFile);
 }
 // bad usage
 else {
-	console.log('Usage: node ' + process.argv[1] + ' FILENAME');
-	console.log('Or for batch processing save your js files in ' + inputPath);
+	console.warn('Or for batch processing save your js files in ' + jsPath);
 	process.exit(1);
 }

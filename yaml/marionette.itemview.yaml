@@ -1,0 +1,51 @@
+constructor
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+serializeData
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+serializeCollection
+  description: | 
+    @param {type} collection - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+render
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_renderTemplate
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+attachElContent
+  description: | 
+    @param {type} html - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+destroy
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |

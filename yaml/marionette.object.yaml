@@ -1,0 +1,14 @@
+initialize
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+destroy
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |

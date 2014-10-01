@@ -1,0 +1,31 @@
+Behavior
+  description: | 
+    @param {type} options - <param description> 
+    @param {type} view - <param description> 
+  
+  examples:
+    -
+      name: 
+      example: |
+initialize
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+destroy
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+proxyViewProperties
+  description: | 
+    @param {type} view - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |

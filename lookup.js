@@ -25,10 +25,6 @@ var fs = require('fs'),
 		var keys = _.keys(branch),
 			maxDepth = 50,
 			syntaxToDocumentType = _syntaxToDocument(branch);
-		
-		// console.log('depth: ' + _recursionDepth);
-		// console.log('//-----------------------------------------'); 
-		// console.log(branch);
 
 		// recursion emergency break!
 		_recursionDepth++;
@@ -47,8 +43,6 @@ var fs = require('fs'),
 
 		_.each(keys, function(key) {
 			var childBranch = branch[key]
-			// console.log(key);
-			// console.log(childBranch);	
 
 			// Current childBranch is an array so recurse
 			// with members.
@@ -82,7 +76,6 @@ var fs = require('fs'),
 
 		_.each(syntaxTargets, function(syntaxTarget) {
 			if (syntaxToDocument[syntaxTarget](branch)) {
-				console.log(syntaxTarget);
 				syntax = syntaxTarget;
 			}
 		});
@@ -111,11 +104,10 @@ var fs = require('fs'),
 		var yaml = '';
 
 		_.each(jsonArray, function(json) {
-			console.log(json);
 			var docType = _.keys(json)[0],
 				ast = json[docType],
 				template = _getTemplate(docType);
-				
+
 			yaml += _.template(template, ast);
 			yaml += '\n';
 		});
@@ -132,8 +124,6 @@ _.extend(Lookup.prototype, {
 		var results = [], 
 			targets;
 		targets = _parseBranch(this.syntaxTree, results);
-
-		console.log(targets);
 
 		return _jsonToYaml(targets);
 	}

@@ -1,0 +1,98 @@
+Behaviors
+  description: | 
+    @param {type} view - <param description> 
+    @param {type} behaviors - <param description> 
+  
+  examples:
+    -
+      name: 
+      example: |
+behaviorTriggers
+  description: | 
+    @param {type} behaviorTriggers - <param description> 
+    @param {type} behaviors - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+behaviorEvents
+  description: | 
+    @param {type} behaviorEvents - <param description> 
+    @param {type} behaviors - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+behaviorsLookup
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+getBehaviorClass
+  description: | 
+    @param {type} options - <param description> 
+    @param {type} key - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+parseBehaviors
+  description: | 
+    @param {type} view - <param description> 
+    @param {type} behaviors - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+wrap
+  description: | 
+    @param {type} view - <param description> 
+    @param {type} behaviors - <param description> 
+    @param {type} methodNames - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+BehaviorTriggersBuilder
+  description: | 
+    @param {type} view - <param description> 
+    @param {type} behaviors - <param description> 
+  
+  examples:
+    -
+      name: 
+      example: |
+buildBehaviorTriggers
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_buildTriggerHandlersForBehavior
+  description: | 
+    @param {type} behavior - <param description> 
+    @param {type} i - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_setHandlerForBehavior
+  description: | 
+    @param {type} behavior - <param description> 
+    @param {type} i - <param description> 
+    @param {type} eventName - <param description> 
+    @param {type} trigger - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |

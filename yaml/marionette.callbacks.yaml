@@ -1,0 +1,25 @@
+add
+  description: | 
+    @param {type} callback - <param description> 
+    @param {type} contextOverride - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+run
+  description: | 
+    @param {type} options - <param description> 
+    @param {type} context - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+reset
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |

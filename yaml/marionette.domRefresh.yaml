@@ -1,0 +1,32 @@
+handleShow
+  description: | 
+    @param {type} view - <param description> 
+  
+  examples:
+    -
+      name: 
+      example: |
+handleRender
+  description: | 
+    @param {type} view - <param description> 
+  
+  examples:
+    -
+      name: 
+      example: |
+triggerDOMRefresh
+  description: | 
+    @param {type} view - <param description> 
+  
+  examples:
+    -
+      name: 
+      example: |
+isInDOM
+  description: | 
+    @param {type} view - <param description> 
+  
+  examples:
+    -
+      name: 
+      example: |

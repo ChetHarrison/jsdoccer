@@ -1,0 +1,9 @@
+render
+  description: | 
+    @param {type} template - <param description> 
+    @param {type} data - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |

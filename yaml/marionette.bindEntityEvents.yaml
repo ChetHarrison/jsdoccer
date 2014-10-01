@@ -1,0 +1,56 @@
+bindFromStrings
+  description: | 
+    @param {type} target - <param description> 
+    @param {type} entity - <param description> 
+    @param {type} evt - <param description> 
+    @param {type} methods - <param description> 
+  
+  examples:
+    -
+      name: 
+      example: |
+bindToFunction
+  description: | 
+    @param {type} target - <param description> 
+    @param {type} entity - <param description> 
+    @param {type} evt - <param description> 
+    @param {type} method - <param description> 
+  
+  examples:
+    -
+      name: 
+      example: |
+unbindFromStrings
+  description: | 
+    @param {type} target - <param description> 
+    @param {type} entity - <param description> 
+    @param {type} evt - <param description> 
+    @param {type} methods - <param description> 
+  
+  examples:
+    -
+      name: 
+      example: |
+unbindToFunction
+  description: | 
+    @param {type} target - <param description> 
+    @param {type} entity - <param description> 
+    @param {type} evt - <param description> 
+    @param {type} method - <param description> 
+  
+  examples:
+    -
+      name: 
+      example: |
+iterateEvents
+  description: | 
+    @param {type} target - <param description> 
+    @param {type} entity - <param description> 
+    @param {type} bindings - <param description> 
+    @param {type} functionCallback - <param description> 
+    @param {type} stringCallback - <param description> 
+  
+  examples:
+    -
+      name: 
+      example: |

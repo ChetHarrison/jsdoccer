@@ -1,0 +1,23 @@
+constructor
+  description: | 
+    @param {type} message - <param description> 
+    @param {type} options - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+captureStackTrace
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+toString
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |

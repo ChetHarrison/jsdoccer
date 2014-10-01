@@ -4,5 +4,5 @@
   
   examples:
     -
-      name: Function Body
+      name:
       example: |

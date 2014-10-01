@@ -1,0 +1,38 @@
+get
+  description: | 
+    @param {type} templateId - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+clear
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+load
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+loadTemplate
+  description: | 
+    @param {type} templateId - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+compileTemplate
+  description: | 
+    @param {type} rawTemplate - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |

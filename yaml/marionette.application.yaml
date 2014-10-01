@@ -1,0 +1,113 @@
+initialize
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+execute
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+request
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+addInitializer
+  description: | 
+    @param {type} initializer - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+start
+  description: | 
+    @param {type} options - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+addRegions
+  description: | 
+    @param {type} regions - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+emptyRegions
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+removeRegion
+  description: | 
+    @param {type} region - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+getRegion
+  description: | 
+    @param {type} region - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+getRegions
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+module
+  description: | 
+    @param {type} moduleNames - <param description> 
+    @param {type} moduleDefinition - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+getRegionManager
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_initializeRegions
+  description: | 
+    @param {type} options - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_initRegionManager
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_initChannel
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |

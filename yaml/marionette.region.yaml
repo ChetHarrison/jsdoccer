@@ -1,0 +1,103 @@
+buildRegion
+  description: | 
+    @param {type} regionConfig - <param description> 
+    @param {type} DefaultRegionClass - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_buildRegionFromSelector
+  description: | 
+    @param {type} selector - <param description> 
+    @param {type} DefaultRegionClass - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_buildRegionFromObject
+  description: | 
+    @param {type} regionConfig - <param description> 
+    @param {type} DefaultRegionClass - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_buildRegionFromRegionClass
+  description: | 
+    @param {type} RegionClass - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+show
+  description: | 
+    @param {type} view - <param description> 
+    @param {type} options - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_ensureElement
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+getEl
+  description: | 
+    @param {type} el - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+attachHtml
+  description: | 
+    @param {type} view - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+empty
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_destroyView
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+attachView
+  description: | 
+    @param {type} view - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+hasView
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+reset
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |

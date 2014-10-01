@@ -1,0 +1,290 @@
+constructor
+  description: | 
+    @param {type} options - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+initRenderBuffer
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+startBuffering
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+endBuffering
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_triggerBeforeShowBufferedChildren
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_triggerShowBufferedChildren
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_triggerMethodOnChild
+  description: | 
+    @param {type} event - <param description> 
+    @param {type} childView - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_initialEvents
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_onCollectionAdd
+  description: | 
+    @param {type} child - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_onCollectionRemove
+  description: | 
+    @param {type} model - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+onShowCalled
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+render
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+resortView
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_sortViews
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+_renderChildren
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+showCollection
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+showEmptyView
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+destroyEmptyView
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+getEmptyView
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+addEmptyView
+  description: | 
+    @param {type} child - <param description> 
+    @param {type} EmptyView - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+getChildView
+  description: | 
+    @param {type} child - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+addChild
+  description: | 
+    @param {type} child - <param description> 
+    @param {type} ChildView - <param description> 
+    @param {type} index - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_updateIndices
+  description: | 
+    @param {type} view - <param description> 
+    @param {type} increment - <param description> 
+    @param {type} index - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_addChildView
+  description: | 
+    @param {type} view - <param description> 
+    @param {type} index - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+renderChildView
+  description: | 
+    @param {type} view - <param description> 
+    @param {type} index - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+buildChildView
+  description: | 
+    @param {type} child - <param description> 
+    @param {type} ChildViewClass - <param description> 
+    @param {type} childViewOptions - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+removeChildView
+  description: | 
+    @param {type} view - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+isEmpty
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+checkEmpty
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+attachBuffer
+  description: | 
+    @param {type} collectionView - <param description> 
+    @param {type} buffer - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+attachHtml
+  description: | 
+    @param {type} collectionView - <param description> 
+    @param {type} childView - <param description> 
+    @param {type} index - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_insertBefore
+  description: | 
+    @param {type} childView - <param description> 
+    @param {type} index - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_insertAfter
+  description: | 
+    @param {type} childView - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |
+_initChildViewStorage
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+destroy
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+destroyChildren
+  description: | 
+  
+  examples:
+    -
+      name:
+      example: |
+proxyChildEvents
+  description: | 
+    @param {type} view - <param description> 
+  
+  examples:
+    -
+      name:
+      example: |

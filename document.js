@@ -44,12 +44,6 @@ var fs = require('fs'),
 		console.log('Saving syntax tree: ' + fullOutputPath);
 	},
 
-	getSyntaxWhitelist = function () {
-		// TODO: Look for .jsdoccerrc config file and pass that
-		// in as config argument.
-		return {};
-	},
-
 	// TODO: add to config
 	fileFilter = ['.DS_Store'],
 
@@ -66,8 +60,7 @@ var fs = require('fs'),
 
 		// Play with the tree
 		lookup = new Lookup({
-			syntaxTree: tree,
-			syntaxWhitelist: getSyntaxWhitelist()
+			syntaxTree: tree
 		});
 
 		console.log(lookup.parse());

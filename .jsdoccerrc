@@ -1,9 +1,9 @@
 {
 	"js": {
-		"scr": "./input/js"
+		"src": "./js"
 	},
 	"ast": {
-		"dest": "./output",
+		"dest": "./ast",
 		"save": true
 	},
 	"yaml": {
@@ -12,12 +12,9 @@
 		"save": true
 	},
 	"jsdoc": {
-		"dest": "./doc"
+		"dest": "./jsdoc"
 	},
-	"syntaxWhitelist": {
-		"FunctionDeclaration": {
-			"attributes": ["id", "params"],
-			"code": ["body"]
-		}
+	"syntaxToDocument": {
+		"src": "./syntax/syntax-to-document.js"
 	}
 }

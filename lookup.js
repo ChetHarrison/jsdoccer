@@ -1,140 +1,100 @@
 'use strict';
 
-
 var fs = require('fs'),
-	
-	configFile = __dirname + '/.jsdoccerrc',
-
-	// read .jsdoccerrc
-	config = JSON.parse(fs.readFileSync(configFile, 'utf8')),
-
 	_ = require('lodash'),
-
-	escodegen = require('escodegen'),
-
 	_s = require('underscore.string'),
+	configFile = __dirname + '/.jsdoccerrc',
+	config = JSON.parse(fs.readFileSync(configFile, 'utf8')),
+	syntaxToDocument = require(config.syntaxToDocument.src),
+	
 
 	// constructor
 	Lookup = function (options) {
 		options = options || {};
-
-		this.syntaxTree = options.syntaxTree || {};
-
-		this.syntaxWhitelist = options.syntaxWhitelist || config.syntaxWhitelist || defaultSyntaxWhitelist;
-
-		this.bodyNodes = this.syntaxTree.body || [];
+		if (!options.syntaxTree) throw new Error('lookup.js#constructor: requires a syntaxt tree.');
+		this.syntaxTree = options.syntaxTree;
+		this.syntaxToDocument = options.syntaxToDocument || syntaxToDocument;
+		if (!this.syntaxToDocument) throw new Error('lookup.js#constructor: requires a syntaxt-to-document.js file.');
 	},
 
-	// Some default config. For each type of
-	// syntax you need tell it what attributes
-	// you would like to document
-	defaultSyntaxWhitelist = {
-		// This would parse a function name, its 
-		// parameter names, and its body code.
-		FunctionDeclaration: {
-			attributes: ['id', 'params'],
-			code: ['body']
-		}
-	},
-
-	// formating
-	tab = '  ',
-	nl = '\n',
-	yaml = '',
-	recursionDepth = 0,
-	syntax = '',
 
 	// private functions
 	// main recursive logic
-	_parseBranch = function(branch, results, foundTarget) {
-		var keys = Object.keys(branch),
-			maxDepth = 50;
+	_recursionDepth = 0,
+	_parseBranch = function(branch, results) {
+		var keys = _.keys(branch),
+			maxDepth = 50,
+			syntaxToDocumentType = _syntaxToDocument(branch);
 		
-		recursionDepth++;
+		// console.log('depth: ' + _recursionDepth);
+		// console.log('//-----------------------------------------'); 
+		// console.log(branch);
 
 		// recursion emergency break!
-		if (recursionDepth > maxDepth) {
+		_recursionDepth++;
+		if (_recursionDepth > maxDepth) {
 			console.warn('Lookup._parseBranch(): Exceeded max recursion depth.');
+
 			return;
-		} 
-		
-		_.each(keys, function (key) {
-			var value = branch[key];
+		}
 
-			// console.log(defaultSyntaxWhitelist);
-			// console.log(defaultSyntaxWhitelist[value]);
+		// Does current childBranch need to be documented?
+		if (syntaxToDocumentType) {
+			var newSyntaxToDocumentAst = {};
+			newSyntaxToDocumentAst[syntaxToDocumentType] = branch;
+			results.push(newSyntaxToDocumentAst);
+		}
 
-			// TODO: reference the Lookup instance's whitelist
-			var targetSyntaxConfig;
-			// we have to check hasOwnProperty for collisions like 'constructor'
-			if (defaultSyntaxWhitelist.hasOwnProperty(value)) {
-				targetSyntaxConfig = defaultSyntaxWhitelist[value];
-			}
-			// console.dir(targetSyntaxConfig);
-			if (targetSyntaxConfig) {
-				console.log('found target ' + value);
-				console.log(defaultSyntaxWhitelist);
-				console.dir(targetSyntaxConfig);
-				var relevantSyntax = {};
+		_.each(keys, function(key) {
+			var childBranch = branch[key]
+			// console.log(key);
+			// console.log(childBranch);	
 
-				// type the whitelisted syntax
-				relevantSyntax['type'] = value;
-
-				// console.log(value);
-				// console.log(key);
-				// console.log(targetSyntaxConfig);
-				// grab disired fields declared in the syntaxWhitelist
-				_.each(targetSyntaxConfig.attributes, function(attribute) {
-					// Create some new storage for our target so we don't 
-					// clutter up the resuts storage.
-					var targetResults = [];
-					relevantSyntax[attribute] = _parseBranch(branch[attribute], targetResults, true);
-
+			// Current childBranch is an array so recurse
+			// with members.
+			if (_.isArray(childBranch)) {
+				_.each(childBranch, function(sibling) {
+					_parseBranch(sibling, results);
 				});
-
-				// Generate code for any types referenced in the `code` parameter
-				// of the config.
-				_.each(targetSyntaxConfig.code, function(attribute) {
-					// Create some new storage for our target so we don't 
-					// clutter up the resuts storage.
-					relevantSyntax[attribute] = escodegen.generate(branch[attribute]);
-				});
-				console.log("pushing target syntax");
-				console.log(relevantSyntax);
-				results.push(relevantSyntax);
 			}
 
-			// current value is an array so recurse
-			// with members
-			if (_.isArray(value)) {
-				_.each(value, function(member) {
-					_parseBranch(member, results, foundTarget);
-				})
-			}
-
-			// current value is an object so recurse
-			// with the object
-			else if (_.isPlainObject(value)) {
-				_parseBranch(value, results, foundTarget);
-			}
-
-			// Esprima nodes with an "Identifier" type
-			// indicate names declared in your code. 
-			else if (foundTarget && key === 'type' && value === 'Identifier') {
-				console.log("pushing identifier");
-				console.log(branch.name);
-				results.push(branch.name);
+			// Current childBranch is an object so recurse
+			// with the object.
+			else if (_.isPlainObject(childBranch)) {
+				_parseBranch(childBranch, results);
 			}
 		});
 
-		recursionDepth--;
+		_recursionDepth--;
+
 		return results;
+	},
+
+	// iterate the `syntaxToDocument` object and call each
+	// validation function with the current ast branch. Return
+	// the syntax name of the first match.
+	_syntaxToDocument = function(branch) {
+		// TODO: Pull syntaxToDocument from Lookup instance
+		var syntaxTargets = _.keys(syntaxToDocument),
+			syntax = false;
+
+		if (_.isNull(branch)) return;
+
+		_.each(syntaxTargets, function(syntaxTarget) {
+			if (syntaxToDocument[syntaxTarget](branch)) {
+				console.log(syntaxTarget);
+				syntax = syntaxTarget;
+			}
+		});
+
+		return syntax;
 	},
 
 	_getTemplateName = function(type) {
 		var path = _s.dasherize(type);
 		path = path[0] === '-' ? path.substr(1) : path;
 		path = config.yaml.templates + '/' + path + '.tpl';
+
 		return path;
 	},
 
@@ -150,9 +110,13 @@ var fs = require('fs'),
 	_jsonToYaml = function(jsonArray) {
 		var yaml = '';
 
-		_.each(jsonArray, function(json) {	
-			var template = _getTemplate(json.type);
-			yaml += _.template(template, json);
+		_.each(jsonArray, function(json) {
+			console.log(json);
+			var docType = _.keys(json)[0],
+				ast = json[docType],
+				template = _getTemplate(docType);
+				
+			yaml += _.template(template, ast);
 			yaml += '\n';
 		});
 
@@ -164,17 +128,12 @@ _.extend(Lookup.prototype, {
 	// Walk the AST building a yaml string of whitelisted
 	// syntax.
 	parse: function () {
-		console.log(defaultSyntaxWhitelist['constructor']);
-
 			// this will collect the relevant data.
 		var results = [], 
-			// this a flag that will tell the parser to
-			// start collecting data we are interested in.
-			foundTarget = false,
+			targets;
+		targets = _parseBranch(this.syntaxTree, results);
 
-			targets = _parseBranch(this.bodyNodes, results, foundTarget);
-
-			console.log(targets);
+		console.log(targets);
 
 		return _jsonToYaml(targets);
 	}

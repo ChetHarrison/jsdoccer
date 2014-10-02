@@ -9,6 +9,7 @@ bindFromStrings
     -
       name: 
       example: |
+      
 bindToFunction
   description: | 
     @param {type} target - <param description> 
@@ -20,6 +21,7 @@ bindToFunction
     -
       name: 
       example: |
+      
 unbindFromStrings
   description: | 
     @param {type} target - <param description> 
@@ -31,6 +33,7 @@ unbindFromStrings
     -
       name: 
       example: |
+      
 unbindToFunction
   description: | 
     @param {type} target - <param description> 
@@ -42,6 +45,7 @@ unbindToFunction
     -
       name: 
       example: |
+      
 iterateEvents
   description: | 
     @param {type} target - <param description> 
@@ -54,3 +58,4 @@ iterateEvents
     -
       name: 
       example: |
+      

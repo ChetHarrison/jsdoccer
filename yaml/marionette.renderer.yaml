@@ -1,3 +1,5 @@
+name: Renderer
+
 render
   description: | 
     @param {type} template - <param description> 
@@ -7,3 +9,4 @@ render
     -
       name:
       example: |
+      

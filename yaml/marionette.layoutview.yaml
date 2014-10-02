@@ -1,3 +1,5 @@
+name: LayoutView
+
 constructor
   description: | 
     @param {type} options - <param description> 
@@ -6,6 +8,7 @@ constructor
     -
       name:
       example: |
+      
 render
   description: | 
   
@@ -13,6 +16,7 @@ render
     -
       name:
       example: |
+      
 destroy
   description: | 
   
@@ -20,6 +24,7 @@ destroy
     -
       name:
       example: |
+      
 addRegion
   description: | 
     @param {type} name - <param description> 
@@ -29,6 +34,7 @@ addRegion
     -
       name:
       example: |
+      
 addRegions
   description: | 
     @param {type} regions - <param description> 
@@ -37,6 +43,7 @@ addRegions
     -
       name:
       example: |
+      
 removeRegion
   description: | 
     @param {type} name - <param description> 
@@ -45,6 +52,7 @@ removeRegion
     -
       name:
       example: |
+      
 getRegion
   description: | 
     @param {type} region - <param description> 
@@ -53,6 +61,7 @@ getRegion
     -
       name:
       example: |
+      
 getRegions
   description: | 
   
@@ -60,6 +69,7 @@ getRegions
     -
       name:
       example: |
+      
 _buildRegions
   description: | 
     @param {type} regions - <param description> 
@@ -68,6 +78,7 @@ _buildRegions
     -
       name:
       example: |
+      
 parentEl
   description: | 
   
@@ -75,6 +86,7 @@ parentEl
     -
       name:
       example: |
+      
 _initializeRegions
   description: | 
     @param {type} options - <param description> 
@@ -83,6 +95,7 @@ _initializeRegions
     -
       name:
       example: |
+      
 _reInitializeRegions
   description: | 
   
@@ -90,6 +103,7 @@ _reInitializeRegions
     -
       name:
       example: |
+      
 getRegionManager
   description: | 
   
@@ -97,6 +111,7 @@ getRegionManager
     -
       name:
       example: |
+      
 _initRegionManager
   description: | 
   
@@ -104,3 +119,4 @@ _initRegionManager
     -
       name:
       example: |
+      

@@ -1,3 +1,5 @@
+name: RegionManager
+
 constructor
   description: | 
     @param {type} options - <param description> 
@@ -6,6 +8,7 @@ constructor
     -
       name:
       example: |
+      
 addRegions
   description: | 
     @param {type} regionDefinitions - <param description> 
@@ -15,6 +18,7 @@ addRegions
     -
       name:
       example: |
+      
 addRegion
   description: | 
     @param {type} name - <param description> 
@@ -24,6 +28,7 @@ addRegion
     -
       name:
       example: |
+      
 get
   description: | 
     @param {type} name - <param description> 
@@ -32,6 +37,7 @@ get
     -
       name:
       example: |
+      
 getRegions
   description: | 
   
@@ -39,6 +45,7 @@ getRegions
     -
       name:
       example: |
+      
 removeRegion
   description: | 
     @param {type} name - <param description> 
@@ -47,6 +54,7 @@ removeRegion
     -
       name:
       example: |
+      
 removeRegions
   description: | 
   
@@ -54,6 +62,7 @@ removeRegions
     -
       name:
       example: |
+      
 emptyRegions
   description: | 
   
@@ -61,6 +70,7 @@ emptyRegions
     -
       name:
       example: |
+      
 destroy
   description: | 
   
@@ -68,6 +78,7 @@ destroy
     -
       name:
       example: |
+      
 _store
   description: | 
     @param {type} name - <param description> 
@@ -77,6 +88,7 @@ _store
     -
       name:
       example: |
+      
 _remove
   description: | 
     @param {type} name - <param description> 
@@ -86,6 +98,7 @@ _remove
     -
       name:
       example: |
+      
 _setLength
   description: | 
   
@@ -93,3 +106,4 @@ _setLength
     -
       name:
       example: |
+      

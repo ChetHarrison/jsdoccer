@@ -1,3 +1,5 @@
+name: View
+
 constructor
   description: | 
     @param {type} options - <param description> 
@@ -6,6 +8,7 @@ constructor
     -
       name:
       example: |
+      
 getTemplate
   description: | 
   
@@ -13,6 +16,7 @@ getTemplate
     -
       name:
       example: |
+      
 serializeModel
   description: | 
     @param {type} model - <param description> 
@@ -21,6 +25,7 @@ serializeModel
     -
       name:
       example: |
+      
 mixinTemplateHelpers
   description: | 
     @param {type} target - <param description> 
@@ -29,6 +34,7 @@ mixinTemplateHelpers
     -
       name:
       example: |
+      
 normalizeUIKeys
   description: | 
     @param {type} hash - <param description> 
@@ -37,6 +43,7 @@ normalizeUIKeys
     -
       name:
       example: |
+      
 normalizeUIValues
   description: | 
     @param {type} hash - <param description> 
@@ -45,6 +52,7 @@ normalizeUIValues
     -
       name:
       example: |
+      
 configureTriggers
   description: | 
   
@@ -52,6 +60,7 @@ configureTriggers
     -
       name:
       example: |
+      
 delegateEvents
   description: | 
     @param {type} events - <param description> 
@@ -60,6 +69,7 @@ delegateEvents
     -
       name:
       example: |
+      
 _delegateDOMEvents
   description: | 
     @param {type} eventsArg - <param description> 
@@ -68,6 +78,7 @@ _delegateDOMEvents
     -
       name:
       example: |
+      
 undelegateEvents
   description: | 
   
@@ -75,6 +86,7 @@ undelegateEvents
     -
       name:
       example: |
+      
 onShowCalled
   description: | 
   
@@ -82,6 +94,7 @@ onShowCalled
     -
       name:
       example: |
+      
 _ensureViewIsIntact
   description: | 
   
@@ -89,6 +102,7 @@ _ensureViewIsIntact
     -
       name:
       example: |
+      
 destroy
   description: | 
   
@@ -96,6 +110,7 @@ destroy
     -
       name:
       example: |
+      
 bindUIElements
   description: | 
   
@@ -103,6 +118,7 @@ bindUIElements
     -
       name:
       example: |
+      
 _bindUIElements
   description: | 
   
@@ -110,6 +126,7 @@ _bindUIElements
     -
       name:
       example: |
+      
 unbindUIElements
   description: | 
   
@@ -117,6 +134,7 @@ unbindUIElements
     -
       name:
       example: |
+      
 _unbindUIElements
   description: | 
   
@@ -124,6 +142,7 @@ _unbindUIElements
     -
       name:
       example: |
+      
 _buildViewTrigger
   description: | 
     @param {type} triggerDef - <param description> 
@@ -132,6 +151,7 @@ _buildViewTrigger
     -
       name:
       example: |
+      
 setElement
   description: | 
   
@@ -139,6 +159,7 @@ setElement
     -
       name:
       example: |
+      
 triggerMethod
   description: | 
   
@@ -146,3 +167,4 @@ triggerMethod
     -
       name:
       example: |
+      

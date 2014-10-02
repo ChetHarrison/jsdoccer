@@ -1,3 +1,5 @@
+name: Module
+
 initialize
   description: | 
   
@@ -5,6 +7,7 @@ initialize
     -
       name:
       example: |
+      
 addInitializer
   description: | 
     @param {type} callback - <param description> 
@@ -13,6 +16,7 @@ addInitializer
     -
       name:
       example: |
+      
 addFinalizer
   description: | 
     @param {type} callback - <param description> 
@@ -21,6 +25,7 @@ addFinalizer
     -
       name:
       example: |
+      
 start
   description: | 
     @param {type} options - <param description> 
@@ -29,6 +34,7 @@ start
     -
       name:
       example: |
+      
 stop
   description: | 
   
@@ -36,6 +42,7 @@ stop
     -
       name:
       example: |
+      
 addDefinition
   description: | 
     @param {type} moduleDefinition - <param description> 
@@ -45,6 +52,7 @@ addDefinition
     -
       name:
       example: |
+      
 _runModuleDefinition
   description: | 
     @param {type} definition - <param description> 
@@ -54,6 +62,7 @@ _runModuleDefinition
     -
       name:
       example: |
+      
 _setupInitializersAndFinalizers
   description: | 
   
@@ -61,6 +70,7 @@ _setupInitializersAndFinalizers
     -
       name:
       example: |
+      
 create
   description: | 
     @param {type} app - <param description> 
@@ -71,6 +81,7 @@ create
     -
       name:
       example: |
+      
 _getModule
   description: | 
     @param {type} parentModule - <param description> 
@@ -83,6 +94,7 @@ _getModule
     -
       name:
       example: |
+      
 getClass
   description: | 
     @param {type} moduleDefinition - <param description> 
@@ -91,6 +103,7 @@ getClass
     -
       name:
       example: |
+      
 _addModuleDefinition
   description: | 
     @param {type} parentModule - <param description> 
@@ -102,6 +115,7 @@ _addModuleDefinition
     -
       name:
       example: |
+      
 _getStartWithParent
   description: | 
     @param {type} def - <param description> 
@@ -111,6 +125,7 @@ _getStartWithParent
     -
       name:
       example: |
+      
 _getDefine
   description: | 
     @param {type} def - <param description> 
@@ -119,6 +134,7 @@ _getDefine
     -
       name:
       example: |
+      
 _addStartWithParent
   description: | 
     @param {type} parentModule - <param description> 
@@ -129,3 +145,4 @@ _addStartWithParent
     -
       name:
       example: |
+      

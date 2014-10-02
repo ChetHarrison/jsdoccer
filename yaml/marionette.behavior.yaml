@@ -1,3 +1,5 @@
+name: Behavior
+
 Behavior
   description: | 
     @param {type} options - <param description> 
@@ -7,6 +9,7 @@ Behavior
     -
       name: 
       example: |
+      
 initialize
   description: | 
   
@@ -14,6 +17,7 @@ initialize
     -
       name:
       example: |
+      
 destroy
   description: | 
   
@@ -21,6 +25,7 @@ destroy
     -
       name:
       example: |
+      
 proxyViewProperties
   description: | 
     @param {type} view - <param description> 
@@ -29,3 +34,4 @@ proxyViewProperties
     -
       name:
       example: |
+      

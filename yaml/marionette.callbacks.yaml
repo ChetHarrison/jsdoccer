@@ -1,3 +1,5 @@
+name: Callbacks
+
 add
   description: | 
     @param {type} callback - <param description> 
@@ -7,6 +9,7 @@ add
     -
       name:
       example: |
+      
 run
   description: | 
     @param {type} options - <param description> 
@@ -16,6 +19,7 @@ run
     -
       name:
       example: |
+      
 reset
   description: | 
   
@@ -23,3 +27,4 @@ reset
     -
       name:
       example: |
+      

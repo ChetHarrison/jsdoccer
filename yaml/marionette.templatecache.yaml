@@ -1,3 +1,5 @@
+name: TemplateCache
+
 get
   description: | 
     @param {type} templateId - <param description> 
@@ -6,6 +8,7 @@ get
     -
       name:
       example: |
+      
 clear
   description: | 
   
@@ -13,6 +16,7 @@ clear
     -
       name:
       example: |
+      
 load
   description: | 
   
@@ -20,6 +24,7 @@ load
     -
       name:
       example: |
+      
 loadTemplate
   description: | 
     @param {type} templateId - <param description> 
@@ -28,6 +33,7 @@ loadTemplate
     -
       name:
       example: |
+      
 compileTemplate
   description: | 
     @param {type} rawTemplate - <param description> 
@@ -36,3 +42,4 @@ compileTemplate
     -
       name:
       example: |
+      

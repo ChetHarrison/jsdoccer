@@ -1,3 +1,5 @@
+name: Controller
+
 destroy
   description: | 
   
@@ -5,3 +7,4 @@ destroy
     -
       name:
       example: |
+      

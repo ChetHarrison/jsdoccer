@@ -1,3 +1,5 @@
+name: CompositeView
+
 constructor
   description: | 
   
@@ -5,6 +7,7 @@ constructor
     -
       name:
       example: |
+      
 _initialEvents
   description: | 
   
@@ -12,6 +15,7 @@ _initialEvents
     -
       name:
       example: |
+      
 getChildView
   description: | 
     @param {type} child - <param description> 
@@ -20,6 +24,7 @@ getChildView
     -
       name:
       example: |
+      
 serializeData
   description: | 
   
@@ -27,6 +32,7 @@ serializeData
     -
       name:
       example: |
+      
 render
   description: | 
   
@@ -34,6 +40,7 @@ render
     -
       name:
       example: |
+      
 _renderChildren
   description: | 
   
@@ -41,6 +48,7 @@ _renderChildren
     -
       name:
       example: |
+      
 _renderTemplate
   description: | 
   
@@ -48,6 +56,7 @@ _renderTemplate
     -
       name:
       example: |
+      
 attachElContent
   description: | 
     @param {type} html - <param description> 
@@ -56,6 +65,7 @@ attachElContent
     -
       name:
       example: |
+      
 attachBuffer
   description: | 
     @param {type} compositeView - <param description> 
@@ -65,6 +75,7 @@ attachBuffer
     -
       name:
       example: |
+      
 _insertAfter
   description: | 
     @param {type} childView - <param description> 
@@ -73,6 +84,7 @@ _insertAfter
     -
       name:
       example: |
+      
 getChildViewContainer
   description: | 
     @param {type} containerView - <param description> 
@@ -81,6 +93,7 @@ getChildViewContainer
     -
       name:
       example: |
+      
 resetChildViewContainer
   description: | 
   
@@ -88,3 +101,4 @@ resetChildViewContainer
     -
       name:
       example: |
+      

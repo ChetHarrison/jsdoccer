@@ -1,3 +1,5 @@
+name: CollectionView
+
 constructor
   description: | 
     @param {type} options - <param description> 
@@ -6,6 +8,7 @@ constructor
     -
       name:
       example: |
+      
 initRenderBuffer
   description: | 
   
@@ -13,6 +16,7 @@ initRenderBuffer
     -
       name:
       example: |
+      
 startBuffering
   description: | 
   
@@ -20,6 +24,7 @@ startBuffering
     -
       name:
       example: |
+      
 endBuffering
   description: | 
   
@@ -27,6 +32,7 @@ endBuffering
     -
       name:
       example: |
+      
 _triggerBeforeShowBufferedChildren
   description: | 
   
@@ -34,6 +40,7 @@ _triggerBeforeShowBufferedChildren
     -
       name:
       example: |
+      
 _triggerShowBufferedChildren
   description: | 
   
@@ -41,6 +48,7 @@ _triggerShowBufferedChildren
     -
       name:
       example: |
+      
 _triggerMethodOnChild
   description: | 
     @param {type} event - <param description> 
@@ -50,6 +58,7 @@ _triggerMethodOnChild
     -
       name:
       example: |
+      
 _initialEvents
   description: | 
   
@@ -57,6 +66,7 @@ _initialEvents
     -
       name:
       example: |
+      
 _onCollectionAdd
   description: | 
     @param {type} child - <param description> 
@@ -65,6 +75,7 @@ _onCollectionAdd
     -
       name:
       example: |
+      
 _onCollectionRemove
   description: | 
     @param {type} model - <param description> 
@@ -73,6 +84,7 @@ _onCollectionRemove
     -
       name:
       example: |
+      
 onShowCalled
   description: | 
   
@@ -80,6 +92,7 @@ onShowCalled
     -
       name:
       example: |
+      
 render
   description: | 
   
@@ -87,6 +100,7 @@ render
     -
       name:
       example: |
+      
 resortView
   description: | 
   
@@ -94,6 +108,7 @@ resortView
     -
       name:
       example: |
+      
 _sortViews
   description: | 
   
@@ -101,6 +116,7 @@ _sortViews
     -
       name:
       example: |
+      
 _renderChildren
   description: | 
   
@@ -108,6 +124,7 @@ _renderChildren
     -
       name:
       example: |
+      
 showCollection
   description: | 
   
@@ -115,6 +132,7 @@ showCollection
     -
       name:
       example: |
+      
 showEmptyView
   description: | 
   
@@ -122,6 +140,7 @@ showEmptyView
     -
       name:
       example: |
+      
 destroyEmptyView
   description: | 
   
@@ -129,6 +148,7 @@ destroyEmptyView
     -
       name:
       example: |
+      
 getEmptyView
   description: | 
   
@@ -136,6 +156,7 @@ getEmptyView
     -
       name:
       example: |
+      
 addEmptyView
   description: | 
     @param {type} child - <param description> 
@@ -145,6 +166,7 @@ addEmptyView
     -
       name:
       example: |
+      
 getChildView
   description: | 
     @param {type} child - <param description> 
@@ -153,6 +175,7 @@ getChildView
     -
       name:
       example: |
+      
 addChild
   description: | 
     @param {type} child - <param description> 
@@ -163,6 +186,7 @@ addChild
     -
       name:
       example: |
+      
 _updateIndices
   description: | 
     @param {type} view - <param description> 
@@ -173,6 +197,7 @@ _updateIndices
     -
       name:
       example: |
+      
 _addChildView
   description: | 
     @param {type} view - <param description> 
@@ -182,6 +207,7 @@ _addChildView
     -
       name:
       example: |
+      
 renderChildView
   description: | 
     @param {type} view - <param description> 
@@ -191,6 +217,7 @@ renderChildView
     -
       name:
       example: |
+      
 buildChildView
   description: | 
     @param {type} child - <param description> 
@@ -201,6 +228,7 @@ buildChildView
     -
       name:
       example: |
+      
 removeChildView
   description: | 
     @param {type} view - <param description> 
@@ -209,6 +237,7 @@ removeChildView
     -
       name:
       example: |
+      
 isEmpty
   description: | 
   
@@ -216,6 +245,7 @@ isEmpty
     -
       name:
       example: |
+      
 checkEmpty
   description: | 
   
@@ -223,6 +253,7 @@ checkEmpty
     -
       name:
       example: |
+      
 attachBuffer
   description: | 
     @param {type} collectionView - <param description> 
@@ -232,6 +263,7 @@ attachBuffer
     -
       name:
       example: |
+      
 attachHtml
   description: | 
     @param {type} collectionView - <param description> 
@@ -242,6 +274,7 @@ attachHtml
     -
       name:
       example: |
+      
 _insertBefore
   description: | 
     @param {type} childView - <param description> 
@@ -251,6 +284,7 @@ _insertBefore
     -
       name:
       example: |
+      
 _insertAfter
   description: | 
     @param {type} childView - <param description> 
@@ -259,6 +293,7 @@ _insertAfter
     -
       name:
       example: |
+      
 _initChildViewStorage
   description: | 
   
@@ -266,6 +301,7 @@ _initChildViewStorage
     -
       name:
       example: |
+      
 destroy
   description: | 
   
@@ -273,6 +309,7 @@ destroy
     -
       name:
       example: |
+      
 destroyChildren
   description: | 
   
@@ -280,6 +317,7 @@ destroyChildren
     -
       name:
       example: |
+      
 proxyChildEvents
   description: | 
     @param {type} view - <param description> 
@@ -288,3 +326,4 @@ proxyChildEvents
     -
       name:
       example: |
+      

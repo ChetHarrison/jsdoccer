@@ -1,3 +1,5 @@
+name: ItemView
+
 constructor
   description: | 
   
@@ -5,6 +7,7 @@ constructor
     -
       name:
       example: |
+      
 serializeData
   description: | 
   
@@ -12,6 +15,7 @@ serializeData
     -
       name:
       example: |
+      
 serializeCollection
   description: | 
     @param {type} collection - <param description> 
@@ -20,6 +24,7 @@ serializeCollection
     -
       name:
       example: |
+      
 render
   description: | 
   
@@ -27,6 +32,7 @@ render
     -
       name:
       example: |
+      
 _renderTemplate
   description: | 
   
@@ -34,6 +40,7 @@ _renderTemplate
     -
       name:
       example: |
+      
 attachElContent
   description: | 
     @param {type} html - <param description> 
@@ -42,6 +49,7 @@ attachElContent
     -
       name:
       example: |
+      
 destroy
   description: | 
   
@@ -49,3 +57,4 @@ destroy
     -
       name:
       example: |
+      

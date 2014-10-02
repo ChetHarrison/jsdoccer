@@ -1,3 +1,5 @@
+name: triggerMethod
+
 getEventName
   description: | 
     @param {type} match - <param description> 
@@ -8,3 +10,4 @@ getEventName
     -
       name: 
       example: |
+      

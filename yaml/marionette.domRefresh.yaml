@@ -1,3 +1,5 @@
+name: MonitorDOMRefresh
+
 handleShow
   description: | 
     @param {type} view - <param description> 
@@ -6,6 +8,7 @@ handleShow
     -
       name: 
       example: |
+      
 handleRender
   description: | 
     @param {type} view - <param description> 
@@ -14,6 +17,7 @@ handleRender
     -
       name: 
       example: |
+      
 triggerDOMRefresh
   description: | 
     @param {type} view - <param description> 
@@ -22,6 +26,7 @@ triggerDOMRefresh
     -
       name: 
       example: |
+      
 isInDOM
   description: | 
     @param {type} view - <param description> 
@@ -30,3 +35,4 @@ isInDOM
     -
       name: 
       example: |
+      

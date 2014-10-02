@@ -1,3 +1,5 @@
+name: Region
+
 buildRegion
   description: | 
     @param {type} regionConfig - <param description> 
@@ -7,6 +9,7 @@ buildRegion
     -
       name:
       example: |
+      
 _buildRegionFromSelector
   description: | 
     @param {type} selector - <param description> 
@@ -16,6 +19,7 @@ _buildRegionFromSelector
     -
       name:
       example: |
+      
 _buildRegionFromObject
   description: | 
     @param {type} regionConfig - <param description> 
@@ -25,6 +29,7 @@ _buildRegionFromObject
     -
       name:
       example: |
+      
 _buildRegionFromRegionClass
   description: | 
     @param {type} RegionClass - <param description> 
@@ -33,6 +38,7 @@ _buildRegionFromRegionClass
     -
       name:
       example: |
+      
 show
   description: | 
     @param {type} view - <param description> 
@@ -42,6 +48,7 @@ show
     -
       name:
       example: |
+      
 _ensureElement
   description: | 
   
@@ -49,6 +56,7 @@ _ensureElement
     -
       name:
       example: |
+      
 getEl
   description: | 
     @param {type} el - <param description> 
@@ -57,6 +65,7 @@ getEl
     -
       name:
       example: |
+      
 attachHtml
   description: | 
     @param {type} view - <param description> 
@@ -65,6 +74,7 @@ attachHtml
     -
       name:
       example: |
+      
 empty
   description: | 
   
@@ -72,6 +82,7 @@ empty
     -
       name:
       example: |
+      
 _destroyView
   description: | 
   
@@ -79,6 +90,7 @@ _destroyView
     -
       name:
       example: |
+      
 attachView
   description: | 
     @param {type} view - <param description> 
@@ -87,6 +99,7 @@ attachView
     -
       name:
       example: |
+      
 hasView
   description: | 
   
@@ -94,6 +107,7 @@ hasView
     -
       name:
       example: |
+      
 reset
   description: | 
   
@@ -101,3 +115,4 @@ reset
     -
       name:
       example: |
+      

@@ -1,3 +1,5 @@
+name: Object
+
 initialize
   description: | 
   
@@ -5,6 +7,7 @@ initialize
     -
       name:
       example: |
+      
 destroy
   description: | 
   
@@ -12,3 +15,4 @@ destroy
     -
       name:
       example: |
+      

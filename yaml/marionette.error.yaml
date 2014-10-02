@@ -7,6 +7,7 @@ constructor
     -
       name:
       example: |
+      
 captureStackTrace
   description: | 
   
@@ -14,6 +15,7 @@ captureStackTrace
     -
       name:
       example: |
+      
 toString
   description: | 
   
@@ -21,3 +23,4 @@ toString
     -
       name:
       example: |
+      

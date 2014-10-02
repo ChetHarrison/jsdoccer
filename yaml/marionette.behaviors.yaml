@@ -1,3 +1,5 @@
+name: Behaviors
+
 Behaviors
   description: | 
     @param {type} view - <param description> 
@@ -7,6 +9,7 @@ Behaviors
     -
       name: 
       example: |
+      
 behaviorTriggers
   description: | 
     @param {type} behaviorTriggers - <param description> 
@@ -16,6 +19,7 @@ behaviorTriggers
     -
       name:
       example: |
+      
 behaviorEvents
   description: | 
     @param {type} behaviorEvents - <param description> 
@@ -25,6 +29,7 @@ behaviorEvents
     -
       name:
       example: |
+      
 behaviorsLookup
   description: | 
   
@@ -32,6 +37,7 @@ behaviorsLookup
     -
       name:
       example: |
+      
 getBehaviorClass
   description: | 
     @param {type} options - <param description> 
@@ -41,6 +47,7 @@ getBehaviorClass
     -
       name:
       example: |
+      
 parseBehaviors
   description: | 
     @param {type} view - <param description> 
@@ -50,6 +57,7 @@ parseBehaviors
     -
       name:
       example: |
+      
 wrap
   description: | 
     @param {type} view - <param description> 
@@ -60,6 +68,7 @@ wrap
     -
       name:
       example: |
+      
 BehaviorTriggersBuilder
   description: | 
     @param {type} view - <param description> 
@@ -69,6 +78,7 @@ BehaviorTriggersBuilder
     -
       name: 
       example: |
+      
 buildBehaviorTriggers
   description: | 
   
@@ -76,6 +86,7 @@ buildBehaviorTriggers
     -
       name:
       example: |
+      
 _buildTriggerHandlersForBehavior
   description: | 
     @param {type} behavior - <param description> 
@@ -85,6 +96,7 @@ _buildTriggerHandlersForBehavior
     -
       name:
       example: |
+      
 _setHandlerForBehavior
   description: | 
     @param {type} behavior - <param description> 
@@ -96,3 +108,4 @@ _setHandlerForBehavior
     -
       name:
       example: |
+      

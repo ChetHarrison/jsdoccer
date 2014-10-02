@@ -1,4 +1,6 @@
 ### This is a work in progress and not ready for prime time.
+#### Because this needs to:
+* parse documented YAML to JSDoc
 
 ### JSDoccer
 

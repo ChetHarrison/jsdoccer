@@ -112,7 +112,7 @@ The document type "functions" should have a corresponding template `functions.tp
 
 Example:
 
-`function-declaration.tpl` referenced in the `syntax-to-document.js` hash above will search for this template in the `yaml/templates` dir specified in the `.jsdoccerrc` file above. Note the indentation of the loop to populate the template with `param` values.
+`functions.tpl` referenced in the `syntax-to-document.js` hash above will search for this template in the `yaml/templates` dir specified in the `.jsdoccerrc` file above. **Note the indentation of the loop to populate the template with `param` values.**
 
 ```
 <%- id %>

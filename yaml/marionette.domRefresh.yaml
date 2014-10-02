@@ -1,6 +1,14 @@
-name: MonitorDOMRefresh
+name: marionette.domRefresh.js
 
-handleShow
+description: |
+  <module description>
+  
+class: MonitorDOMRefresh
+
+description: |
+  <class description>
+  
+handleShow:
   description: | 
     @param {type} view - <param description> 
   
@@ -9,7 +17,7 @@ handleShow
       name: 
       example: |
       
-handleRender
+handleRender:
   description: | 
     @param {type} view - <param description> 
   
@@ -18,7 +26,7 @@ handleRender
       name: 
       example: |
       
-triggerDOMRefresh
+triggerDOMRefresh:
   description: | 
     @param {type} view - <param description> 
   
@@ -27,12 +35,16 @@ triggerDOMRefresh
       name: 
       example: |
       
-isInDOM
-  description: | 
-    @param {type} view - <param description> 
+
+name: show
   
-  examples:
-    -
-      name: 
-      example: |
-      
+  description: |
+    
+    example: |
+        
+name: render
+  
+  description: |
+    
+    example: |
+        

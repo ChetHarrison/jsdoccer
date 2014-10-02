@@ -1,57 +1,71 @@
-name: ItemView
+name: marionette.itemview.js
 
-constructor
+description: |
+  <module description>
+  
+class: ItemView
+
+description: |
+  <class description>
+  
+constructor: 
   description: | 
+
+  examples:
+    -
+      name: 
+        example: |
+        
+serializeData:
+  description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-serializeData
-  description: | 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-serializeCollection
+serializeCollection:
   description: | 
     @param {type} collection - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-render
+render:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_renderTemplate
+_renderTemplate:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-attachElContent
+attachElContent:
   description: | 
     @param {type} html - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-destroy
+destroy:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -

@@ -1,93 +1,110 @@
-name: LayoutView
+name: marionette.layoutview.js
 
-constructor
+description: |
+  <module description>
+  
+class: LayoutView
+
+description: |
+  <class description>
+  
+constructor: 
   description: | 
     @param {type} options - <param description> 
-  
+
   examples:
     -
-      name:
-      example: |
-      
-render
+      name: 
+        example: |
+        
+render:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-destroy
+destroy:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-addRegion
+addRegion:
   description: | 
     @param {type} name - <param description> 
     @param {type} definition - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-addRegions
+addRegions:
   description: | 
     @param {type} regions - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-removeRegion
+removeRegion:
   description: | 
     @param {type} name - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-getRegion
+getRegion:
   description: | 
     @param {type} region - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-getRegions
+getRegions:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_buildRegions
+_buildRegions:
   description: | 
     @param {type} regions - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-parentEl
+parentEl:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_initializeRegions
+_initializeRegions:
   description: | 
     @param {type} options - <param description> 
   
@@ -96,7 +113,7 @@ _initializeRegions
       name:
       example: |
       
-_reInitializeRegions
+_reInitializeRegions:
   description: | 
   
   examples:
@@ -104,7 +121,16 @@ _reInitializeRegions
       name:
       example: |
       
-getRegionManager
+getRegionManager:
+  description: | 
+    @returns {type} - <returns description>
+  
+  examples:
+    -
+      name:
+      example: |
+      
+_initRegionManager:
   description: | 
   
   examples:
@@ -112,11 +138,27 @@ getRegionManager
       name:
       example: |
       
-_initRegionManager
-  description: | 
+name: before:add:region
   
-  examples:
-    -
-      name:
-      example: |
-      
+  description: |
+    
+    example: |
+        
+name: add:region
+  
+  description: |
+    
+    example: |
+        
+name: before:remove:region
+  
+  description: |
+    
+    example: |
+        
+name: remove:region
+  
+  description: |
+    
+    example: |
+        

@@ -1,76 +1,97 @@
-name: View
+name: marionette.view.js
 
-constructor
+description: |
+  <module description>
+  
+class: View
+
+description: |
+  <class description>
+  
+constructor: 
   description: | 
     @param {type} options - <param description> 
-  
+
   examples:
     -
-      name:
-      example: |
-      
-getTemplate
+      name: 
+        example: |
+        
+name: show
+  
+  description: |
+    
+    example: |
+        
+getTemplate:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-serializeModel
+serializeModel:
   description: | 
     @param {type} model - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-mixinTemplateHelpers
+mixinTemplateHelpers:
   description: | 
     @param {type} target - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-normalizeUIKeys
+normalizeUIKeys:
   description: | 
     @param {type} hash - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-normalizeUIValues
+normalizeUIValues:
   description: | 
     @param {type} hash - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-configureTriggers
+configureTriggers:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-delegateEvents
+delegateEvents:
   description: | 
     @param {type} events - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_delegateDOMEvents
+_delegateDOMEvents:
   description: | 
     @param {type} eventsArg - <param description> 
   
@@ -79,7 +100,16 @@ _delegateDOMEvents
       name:
       example: |
       
-undelegateEvents
+undelegateEvents:
+  description: | 
+    @returns {type} - <returns description>
+  
+  examples:
+    -
+      name:
+      example: |
+      
+onShowCalled:
   description: | 
   
   examples:
@@ -87,7 +117,7 @@ undelegateEvents
       name:
       example: |
       
-onShowCalled
+_ensureViewIsIntact:
   description: | 
   
   examples:
@@ -95,7 +125,16 @@ onShowCalled
       name:
       example: |
       
-_ensureViewIsIntact
+destroy:
+  description: | 
+    @returns {type} - <returns description>
+  
+  examples:
+    -
+      name:
+      example: |
+      
+bindUIElements:
   description: | 
   
   examples:
@@ -103,7 +142,7 @@ _ensureViewIsIntact
       name:
       example: |
       
-destroy
+_bindUIElements:
   description: | 
   
   examples:
@@ -111,7 +150,7 @@ destroy
       name:
       example: |
       
-bindUIElements
+unbindUIElements:
   description: | 
   
   examples:
@@ -119,7 +158,7 @@ bindUIElements
       name:
       example: |
       
-_bindUIElements
+_unbindUIElements:
   description: | 
   
   examples:
@@ -127,41 +166,28 @@ _bindUIElements
       name:
       example: |
       
-unbindUIElements
-  description: | 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_unbindUIElements
-  description: | 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_buildViewTrigger
+_buildViewTrigger:
   description: | 
     @param {type} triggerDef - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-setElement
+setElement:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-triggerMethod
+triggerMethod:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -

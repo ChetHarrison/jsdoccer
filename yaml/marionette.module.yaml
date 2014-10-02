@@ -1,6 +1,14 @@
-name: Module
+name: marionette.module.js
 
-initialize
+description: |
+  <module description>
+  
+class: Module
+
+description: |
+  <class description>
+  
+initialize:
   description: | 
   
   examples:
@@ -8,7 +16,7 @@ initialize
       name:
       example: |
       
-addInitializer
+addInitializer:
   description: | 
     @param {type} callback - <param description> 
   
@@ -17,7 +25,7 @@ addInitializer
       name:
       example: |
       
-addFinalizer
+addFinalizer:
   description: | 
     @param {type} callback - <param description> 
   
@@ -26,7 +34,7 @@ addFinalizer
       name:
       example: |
       
-start
+start:
   description: | 
     @param {type} options - <param description> 
   
@@ -35,7 +43,7 @@ start
       name:
       example: |
       
-stop
+stop:
   description: | 
   
   examples:
@@ -43,7 +51,7 @@ stop
       name:
       example: |
       
-addDefinition
+addDefinition:
   description: | 
     @param {type} moduleDefinition - <param description> 
     @param {type} customArgs - <param description> 
@@ -53,7 +61,7 @@ addDefinition
       name:
       example: |
       
-_runModuleDefinition
+_runModuleDefinition:
   description: | 
     @param {type} definition - <param description> 
     @param {type} customArgs - <param description> 
@@ -63,7 +71,7 @@ _runModuleDefinition
       name:
       example: |
       
-_setupInitializersAndFinalizers
+_setupInitializersAndFinalizers:
   description: | 
   
   examples:
@@ -71,40 +79,43 @@ _setupInitializersAndFinalizers
       name:
       example: |
       
-create
+create:
   description: | 
     @param {type} app - <param description> 
     @param {type} moduleNames - <param description> 
     @param {type} moduleDefinition - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_getModule
+_getModule:
   description: | 
     @param {type} parentModule - <param description> 
     @param {type} moduleName - <param description> 
     @param {type} app - <param description> 
     @param {type} def - <param description> 
     @param {type} args - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-getClass
+getClass:
   description: | 
     @param {type} moduleDefinition - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_addModuleDefinition
+_addModuleDefinition:
   description: | 
     @param {type} parentModule - <param description> 
     @param {type} module - <param description> 
@@ -116,26 +127,28 @@ _addModuleDefinition
       name:
       example: |
       
-_getStartWithParent
+_getStartWithParent:
   description: | 
     @param {type} def - <param description> 
     @param {type} module - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_getDefine
+_getDefine:
   description: | 
     @param {type} def - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_addStartWithParent
+_addStartWithParent:
   description: | 
     @param {type} parentModule - <param description> 
     @param {type} module - <param description> 

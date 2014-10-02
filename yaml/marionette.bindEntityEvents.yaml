@@ -1,4 +1,9 @@
-bindFromStrings
+name: marionette.bindEntityEvents.js
+
+description: |
+  <module description>
+  
+bindFromStrings:
   description: | 
     @param {type} target - <param description> 
     @param {type} entity - <param description> 
@@ -10,7 +15,13 @@ bindFromStrings
       name: 
       example: |
       
-bindToFunction
+name: 
+  
+  description: |
+    
+    example: |
+        
+bindToFunction:
   description: | 
     @param {type} target - <param description> 
     @param {type} entity - <param description> 
@@ -22,7 +33,13 @@ bindToFunction
       name: 
       example: |
       
-unbindFromStrings
+name: 
+  
+  description: |
+    
+    example: |
+        
+unbindFromStrings:
   description: | 
     @param {type} target - <param description> 
     @param {type} entity - <param description> 
@@ -34,7 +51,7 @@ unbindFromStrings
       name: 
       example: |
       
-unbindToFunction
+unbindToFunction:
   description: | 
     @param {type} target - <param description> 
     @param {type} entity - <param description> 
@@ -46,7 +63,7 @@ unbindToFunction
       name: 
       example: |
       
-iterateEvents
+iterateEvents:
   description: | 
     @param {type} target - <param description> 
     @param {type} entity - <param description> 

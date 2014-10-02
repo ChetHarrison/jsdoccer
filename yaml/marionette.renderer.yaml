@@ -1,9 +1,18 @@
-name: Renderer
+name: marionette.renderer.js
 
-render
+description: |
+  <module description>
+  
+class: Renderer
+
+description: |
+  <class description>
+  
+render:
   description: | 
     @param {type} template - <param description> 
     @param {type} data - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -

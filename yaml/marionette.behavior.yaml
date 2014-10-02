@@ -1,6 +1,14 @@
-name: Behavior
+name: marionette.behavior.js
 
-Behavior
+description: |
+  <module description>
+  
+class: Behavior
+
+description: |
+  <class description>
+  
+Behavior:
   description: | 
     @param {type} options - <param description> 
     @param {type} view - <param description> 
@@ -10,7 +18,7 @@ Behavior
       name: 
       example: |
       
-initialize
+initialize:
   description: | 
   
   examples:
@@ -18,7 +26,7 @@ initialize
       name:
       example: |
       
-destroy
+destroy:
   description: | 
   
   examples:
@@ -26,7 +34,7 @@ destroy
       name:
       example: |
       
-proxyViewProperties
+proxyViewProperties:
   description: | 
     @param {type} view - <param description> 
   

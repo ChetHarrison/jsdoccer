@@ -1,6 +1,14 @@
-name: Callbacks
+name: marionette.callbacks.js
 
-add
+description: |
+  <module description>
+  
+class: Callbacks
+
+description: |
+  <class description>
+  
+add:
   description: | 
     @param {type} callback - <param description> 
     @param {type} contextOverride - <param description> 
@@ -10,7 +18,7 @@ add
       name:
       example: |
       
-run
+run:
   description: | 
     @param {type} options - <param description> 
     @param {type} context - <param description> 
@@ -20,7 +28,7 @@ run
       name:
       example: |
       
-reset
+reset:
   description: | 
   
   examples:

@@ -28,6 +28,8 @@ var fs = require('fs'),
 
 		this.syntaxTree = options.syntaxTree;
 
+		this.filename = options.filename || 'No filename was provided.';
+
 		this.syntaxToDocument = options.syntaxToDocument || syntaxToDocument;
 
 		if (!this.syntaxToDocument) throw new Error('lookup.js#constructor: requires a syntaxt-to-document.js file.');
@@ -187,15 +189,15 @@ _.extend(Lookup.prototype, {
 	// Walk the AST building a yaml string of whitelisted
 	// syntax.
 	parse: function () {
-			// this will collect the relevant data.
-		var results = [], 
+		// this will collect the relevant data.
+		// but first we want to add a special case to 
+		// document the module from the the file name.
+		var results = [{modules: {name: this.filename}}];
 
-			targets;
-
-		targets = _parseBranch(this.syntaxTree, results);
+		_parseBranch(this.syntaxTree, results);
 
 
-		return _jsonToYaml(targets);
+		return _jsonToYaml(results);
 	}
 
 });

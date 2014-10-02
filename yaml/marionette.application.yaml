@@ -1,6 +1,14 @@
-name: Application
+name: marionette.application.js
 
-initialize
+description: |
+  <module description>
+  
+class: Application
+
+description: |
+  <class description>
+  
+initialize:
   description: | 
   
   examples:
@@ -8,7 +16,7 @@ initialize
       name:
       example: |
       
-execute
+execute:
   description: | 
   
   examples:
@@ -16,15 +24,16 @@ execute
       name:
       example: |
       
-request
+request:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-addInitializer
+addInitializer:
   description: | 
     @param {type} initializer - <param description> 
   
@@ -33,7 +42,7 @@ addInitializer
       name:
       example: |
       
-start
+start:
   description: | 
     @param {type} options - <param description> 
   
@@ -42,77 +51,85 @@ start
       name:
       example: |
       
-addRegions
+addRegions:
   description: | 
     @param {type} regions - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-emptyRegions
+emptyRegions:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-removeRegion
-  description: | 
-    @param {type} region - <param description> 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-getRegion
+removeRegion:
   description: | 
     @param {type} region - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-getRegions
+getRegion:
   description: | 
+    @param {type} region - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-module
+getRegions:
+  description: | 
+    @returns {type} - <returns description>
+  
+  examples:
+    -
+      name:
+      example: |
+      
+module:
   description: | 
     @param {type} moduleNames - <param description> 
     @param {type} moduleDefinition - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-getRegionManager
+getRegionManager:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_initializeRegions
+_initializeRegions:
   description: | 
     @param {type} options - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_initRegionManager
+_initRegionManager:
   description: | 
   
   examples:
@@ -120,7 +137,31 @@ _initRegionManager
       name:
       example: |
       
-_initChannel
+name: before:add:region
+  
+  description: |
+    
+    example: |
+        
+name: add:region
+  
+  description: |
+    
+    example: |
+        
+name: before:remove:region
+  
+  description: |
+    
+    example: |
+        
+name: remove:region
+  
+  description: |
+    
+    example: |
+        
+_initChannel:
   description: | 
   
   examples:

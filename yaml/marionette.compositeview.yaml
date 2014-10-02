@@ -1,6 +1,22 @@
-name: CompositeView
+name: marionette.compositeview.js
 
-constructor
+description: |
+  <module description>
+  
+class: CompositeView
+
+description: |
+  <class description>
+  
+constructor: 
+  description: | 
+
+  examples:
+    -
+      name: 
+        example: |
+        
+_initialEvents:
   description: | 
   
   examples:
@@ -8,24 +24,59 @@ constructor
       name:
       example: |
       
-_initialEvents
-  description: | 
+name: add
   
-  examples:
-    -
-      name:
-      example: |
-      
-getChildView
+  description: |
+    
+    example: |
+        
+name: remove
+  
+  description: |
+    
+    example: |
+        
+name: reset
+  
+  description: |
+    
+    example: |
+        
+name: sort
+  
+  description: |
+    
+    example: |
+        
+getChildView:
   description: | 
     @param {type} child - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-serializeData
+serializeData:
+  description: | 
+    @returns {type} - <returns description>
+  
+  examples:
+    -
+      name:
+      example: |
+      
+render:
+  description: | 
+    @returns {type} - <returns description>
+  
+  examples:
+    -
+      name:
+      example: |
+      
+_renderChildren:
   description: | 
   
   examples:
@@ -33,7 +84,7 @@ serializeData
       name:
       example: |
       
-render
+_renderTemplate:
   description: | 
   
   examples:
@@ -41,32 +92,17 @@ render
       name:
       example: |
       
-_renderChildren
-  description: | 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_renderTemplate
-  description: | 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-attachElContent
+attachElContent:
   description: | 
     @param {type} html - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-attachBuffer
+attachBuffer:
   description: | 
     @param {type} compositeView - <param description> 
     @param {type} buffer - <param description> 
@@ -76,7 +112,7 @@ attachBuffer
       name:
       example: |
       
-_insertAfter
+_insertAfter:
   description: | 
     @param {type} childView - <param description> 
   
@@ -85,16 +121,17 @@ _insertAfter
       name:
       example: |
       
-getChildViewContainer
+getChildViewContainer:
   description: | 
     @param {type} containerView - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-resetChildViewContainer
+resetChildViewContainer:
   description: | 
   
   examples:

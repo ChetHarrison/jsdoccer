@@ -1,6 +1,14 @@
-name: Object
+name: marionette.object.js
 
-initialize
+description: |
+  <module description>
+  
+class: Object
+
+description: |
+  <class description>
+  
+initialize:
   description: | 
   
   examples:
@@ -8,7 +16,7 @@ initialize
       name:
       example: |
       
-destroy
+destroy:
   description: | 
   
   examples:

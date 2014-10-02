@@ -1,14 +1,19 @@
-constructor
+name: marionette.error.js
+
+description: |
+  <module description>
+  
+constructor: 
   description: | 
     @param {type} message - <param description> 
     @param {type} options - <param description> 
-  
+
   examples:
     -
-      name:
-      example: |
-      
-captureStackTrace
+      name: 
+        example: |
+        
+captureStackTrace:
   description: | 
   
   examples:
@@ -16,8 +21,9 @@ captureStackTrace
       name:
       example: |
       
-toString
+toString:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -

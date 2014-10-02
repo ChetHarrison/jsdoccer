@@ -52,8 +52,6 @@ var fs = require('fs'),
 
 
 	_getFullYamlPath = function (filename) {
-		console.log(path.join(yamlPath + path.basename(filename, '.js') + '.yaml'));
-		
 
 		return path.join(yamlPath + path.basename(filename, '.js') + '.yaml');
 	},
@@ -117,12 +115,17 @@ var fs = require('fs'),
 
 
 		lookup = new Lookup({
-			syntaxTree: syntaxTree
+			syntaxTree: syntaxTree,
+			
+			filename: filename
 		});
 
 		docYaml = lookup.parse();
 
 		_saveDocYaml(docYaml, filename);
+
+		// adding \n for readability
+		console.log();
 	};
 
 

@@ -1,6 +1,7 @@
 ### This is a work in progress and not ready for prime time.
 #### Because:
 * parse documented YAML to JSDoc
+* convert to grunt task.
 
 # JSDoccer
 
@@ -142,6 +143,3 @@ unbindFromStrings
       name: 
       example: |
 ```
-
-### To Do
-* convert to grunt task.

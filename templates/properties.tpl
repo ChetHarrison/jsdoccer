@@ -1,0 +1,5 @@
+properties:
+  vent: |
+    
+    @type {<type>}
+    

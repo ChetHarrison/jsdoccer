@@ -1,36 +1,37 @@
-name: Behaviors
+name: marionette.behaviors.js
 
-Behaviors
-  description: | 
-    @param {type} view - <param description> 
-    @param {type} behaviors - <param description> 
+description: |
+  <module description>
   
-  examples:
-    -
-      name: 
-      example: |
-      
-behaviorTriggers
+class: Behaviors
+
+description: |
+  <class description>
+  
+
+behaviorTriggers:
   description: | 
     @param {type} behaviorTriggers - <param description> 
     @param {type} behaviors - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-behaviorEvents
+behaviorEvents:
   description: | 
     @param {type} behaviorEvents - <param description> 
     @param {type} behaviors - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-behaviorsLookup
+behaviorsLookup:
   description: | 
   
   examples:
@@ -38,27 +39,29 @@ behaviorsLookup
       name:
       example: |
       
-getBehaviorClass
+getBehaviorClass:
   description: | 
     @param {type} options - <param description> 
     @param {type} key - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-parseBehaviors
+parseBehaviors:
   description: | 
     @param {type} view - <param description> 
     @param {type} behaviors - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-wrap
+wrap:
   description: | 
     @param {type} view - <param description> 
     @param {type} behaviors - <param description> 
@@ -69,7 +72,7 @@ wrap
       name:
       example: |
       
-BehaviorTriggersBuilder
+BehaviorTriggersBuilder:
   description: | 
     @param {type} view - <param description> 
     @param {type} behaviors - <param description> 
@@ -79,15 +82,16 @@ BehaviorTriggersBuilder
       name: 
       example: |
       
-buildBehaviorTriggers
+buildBehaviorTriggers:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_buildTriggerHandlersForBehavior
+_buildTriggerHandlersForBehavior:
   description: | 
     @param {type} behavior - <param description> 
     @param {type} i - <param description> 
@@ -97,7 +101,7 @@ _buildTriggerHandlersForBehavior
       name:
       example: |
       
-_setHandlerForBehavior
+_setHandlerForBehavior:
   description: | 
     @param {type} behavior - <param description> 
     @param {type} i - <param description> 

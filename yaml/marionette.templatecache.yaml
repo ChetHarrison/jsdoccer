@@ -1,15 +1,24 @@
-name: TemplateCache
+name: marionette.templatecache.js
 
-get
+description: |
+  <module description>
+  
+class: TemplateCache
+
+description: |
+  <class description>
+  
+get:
   description: | 
     @param {type} templateId - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-clear
+clear:
   description: | 
   
   examples:
@@ -17,26 +26,29 @@ clear
       name:
       example: |
       
-load
+load:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-loadTemplate
+loadTemplate:
   description: | 
     @param {type} templateId - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-compileTemplate
+compileTemplate:
   description: | 
     @param {type} rawTemplate - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -

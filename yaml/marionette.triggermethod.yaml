@@ -1,13 +1,11 @@
-name: triggerMethod
+name: marionette.triggermethod.js
 
-getEventName
-  description: | 
-    @param {type} match - <param description> 
-    @param {type} prefix - <param description> 
-    @param {type} eventName - <param description> 
+description: |
+  <module description>
   
-  examples:
-    -
-      name: 
-      example: |
-      
+class: triggerMethod
+
+description: |
+  <class description>
+  
+

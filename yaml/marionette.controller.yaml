@@ -1,7 +1,16 @@
-name: Controller
+name: marionette.controller.js
 
-destroy
+description: |
+  <module description>
+  
+class: Controller
+
+description: |
+  <class description>
+  
+destroy:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -

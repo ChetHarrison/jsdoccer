@@ -1,6 +1,14 @@
-name: Region
+name: marionette.region.js
 
-buildRegion
+description: |
+  <module description>
+  
+class: Region
+
+description: |
+  <class description>
+  
+buildRegion:
   description: | 
     @param {type} regionConfig - <param description> 
     @param {type} DefaultRegionClass - <param description> 
@@ -10,46 +18,50 @@ buildRegion
       name:
       example: |
       
-_buildRegionFromSelector
+_buildRegionFromSelector:
   description: | 
     @param {type} selector - <param description> 
     @param {type} DefaultRegionClass - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_buildRegionFromObject
+_buildRegionFromObject:
   description: | 
     @param {type} regionConfig - <param description> 
     @param {type} DefaultRegionClass - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_buildRegionFromRegionClass
+_buildRegionFromRegionClass:
   description: | 
     @param {type} RegionClass - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-show
+show:
   description: | 
     @param {type} view - <param description> 
     @param {type} options - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-_ensureElement
+_ensureElement:
   description: | 
   
   examples:
@@ -57,16 +69,17 @@ _ensureElement
       name:
       example: |
       
-getEl
+getEl:
   description: | 
     @param {type} el - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-attachHtml
+attachHtml:
   description: | 
     @param {type} view - <param description> 
   
@@ -75,7 +88,16 @@ attachHtml
       name:
       example: |
       
-empty
+empty:
+  description: | 
+    @returns {type} - <returns description>
+  
+  examples:
+    -
+      name:
+      example: |
+      
+_destroyView:
   description: | 
   
   examples:
@@ -83,33 +105,28 @@ empty
       name:
       example: |
       
-_destroyView
-  description: | 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-attachView
+attachView:
   description: | 
     @param {type} view - <param description> 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-hasView
+hasView:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -
       name:
       example: |
       
-reset
+reset:
   description: | 
+    @returns {type} - <returns description>
   
   examples:
     -

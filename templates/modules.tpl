@@ -1,4 +1,4 @@
-name: marionette.helpers.js
+name: <%- name %>
 
 description: |
   <module description>

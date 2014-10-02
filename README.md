@@ -1,10 +1,10 @@
-###This is a work in progress and not ready for prime time.
+### This is a work in progress and not ready for prime time.
 
-###JSDoccer
+### JSDoccer
 
 A Node.js tool to auto document your ECMAScript (Java Script) in  [JSDoc 3](https://github.com/jsdoc3/jsdoc3.github.com) using [Esprima](http://esprima.org/) and [ESCodeGen](https://github.com/Constellation/escodegen). It converts your code into YAML templates that (will be) converted to JSDocs. The YAML stage allows you to fill in stubbed examples and other details that cannot be generated from the provided Esprima code meta data.
 
-###Basic Usage
+### Basic Usage
 
 From the command line
 
@@ -14,9 +14,9 @@ $ cd jsdoccer
 $ node document.js
 ```
 
-*Note: JSDoccer comes with some default syntax to document. In order to configure it to your needs you will need to adapt the `.jsdoccerrc` file add target syntax AST tests to the `syntax-to-document.js` file and add any custom YAML templates to the `templates` directory.*
+**Note: JSDoccer comes with some default syntax to document. In order to configure it to your needs you will need to adapt the `.jsdoccerrc` file add target syntax AST tests to the `syntax-to-document.js` file and add any custom YAML templates to the `templates` directory.**
 
-###ASTs
+### What You Need To Know About ASTs
 
 An AST or Abstract Syntax Tree is a typed representation of valid code. Esprima will parse ASTs from valid ECMAScript and ESCodeGen provides an "inverse" operation that will generate valid ECMAScript from Esprima ASTs.
 
@@ -54,35 +54,53 @@ into this AST:
 }
 ```
 
-You can configure the task to document any type defined by the [Spider Monkey Parser API](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Parser_API#Functions). Add an argument for each type you would like to document then add any child attribute names you would like to collect to its associated `attributes` array. Any child attributes with code you would like to reference, such as a function body, add to its associated `code` attribute.
+AST types are defined by the [Spider Monkey Parser API](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Parser_API#Functions). 
 
-#### Example Config
+#### Configuring Custom Documentation
 
-The following example will document all functions, their parameters, and provide the code for thier function bodies. See `syntaxWhitelist` where `FunctionDeclaration` represents a valid API Parser type and the `attributes` and `code` items are children of that type.
+In order to find syntax targets you can create a custom document "type" by adding a type attribute and associated matching function to the `syntax-to-document.js` hash for example:
+
+
+```
+module.exports = {
+    methods: function(ast) {
+      return ast.type === 'Property' &&
+        ast.value.type === 'FunctionExpression';
+    },
+
+    functions: function(ast) {
+      return ast.type === 'FunctionDeclaration';
+    }
+  };
+```
+
+This will parse the ASTs of each files for nodes that match these conditions. To find out the AST conditions that match the code you would like to document compare your code with the ASTs saved in the `ast` directory. Then you will have a predictable AST JSON structure to query in an associated template for each document type.
+
+#### .jsdoccerrc
+
+This file configures the source and destination paths.
 
 ```
 {
   "js": {
-    "scr": "./input/js"
+    "src": "./js/"
   },
   "ast": {
-    "dest": "./output",
+    "dest": "./ast/",
     "save": true
   },
   "yaml": {
-    "templates": "./templates",
-    "dest": "./yaml",
+    "templates": "./templates/",
+    "dest": "./yaml/",
     "save": true
   },
   "jsdoc": {
-    "dest": "./doc"
+    "dest": "./jsdoc/"
   },
-  "syntaxWhitelist": {
-    "FunctionDeclaration": {
-      "attributes": ["id", "params"],
-      "code": ["body"]
-    }
-  }
+  "syntaxToDocument": {
+    "src": "./syntax-to-document.js"
+  },
+  "fileFilters": [".DS_Store"]
 }
 ```
 
@@ -90,11 +108,11 @@ The following example will document all functions, their parameters, and provide
 
 YAML template file names should be "slugified" with a `.tpl` extention. Example:
 
-The Parser API type "FunctionDeclaration" should have a corresponding template `function-eclaration.tpl`. At the moment templates are populated using Lodash (Underscore) templating. Because YAML is whitespace sensitive you may have to carefully watch where you place inline script 
+The document type "functions" should have a corresponding template `functions.tpl`. At the moment templates are populated using Lodash (Underscore) templating. Because YAML is whitespace sensitive you may have to carefully watch where you place inline script 
 
 Example:
 
-`function-declaration.tpl` referenced in the `.jsdoccerrc` config file above will search for this template in the `yaml/templates` dir specified in the config file above. Note the indentation of the loop to populate the template with `param` values.
+`function-declaration.tpl` referenced in the `syntax-to-document.js` hash above will search for this template in the `yaml/templates` dir specified in the `.jsdoccerrc` file above. Note the indentation of the loop to populate the template with `param` values.
 
 ```
 <%- id %>
@@ -122,21 +140,9 @@ unbindFromStrings
   
   examples:
     -
-      name: Function Body
+      name: 
       example: |
-        ```js
-        {
-    var methodNames = methods.split(/\s+/);
-    _.each(methodNames, function (methodName) {
-        var method = target[methodName];
-        target.stopListening(entity, evt, method);
-    });
-}
-        ```
 ```
-### Batch Jobs
-
-Place all of your js files in the source js dir specified in your `.jsdoccerrc` config file wich defaults to `./input/js`. From the command line type `node document.js`. Documented files will be saved in the `output` directory.
 
 ### To Do
 * convert to grunt task.

@@ -14,7 +14,7 @@ $ cd jsdoccer
 $ node document.js
 ```
 
-**Note: JSDoccer comes with some default syntax to document. In order to configure it to your needs you will need to adapt the `.jsdoccerrc` file add target syntax AST tests to the `syntax-to-document.js` file and add any custom YAML templates to the `templates` directory.**
+**Note: JSDoccer comes with some default syntax to document your JS. In order to configure it to specific syntax you will need to adapt the `.jsdoccerrc` file add target syntax AST tests to the `syntax-to-document.js` file and add any custom YAML templates to the `templates` directory.** *whoo that's a lot o config, but hopefully worth it!*
 
 ### What You Need To Know About ASTs
 
@@ -104,7 +104,7 @@ This file configures the source and destination paths.
 }
 ```
 
-### YAML Templates
+#### YAML Templates
 
 YAML template file names should be "slugified" with a `.tpl` extention. Example:
 

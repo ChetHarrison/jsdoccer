@@ -125,9 +125,6 @@ Example:
     -
       name: Function Body
       example: |
-        ```js
-        <%- body %>
-        ```
 ```
 
 Here is a sample of the yaml produced:

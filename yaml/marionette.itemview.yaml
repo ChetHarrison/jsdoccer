@@ -10,12 +10,7 @@ description: |
   
 constructor: 
   description: | 
-
-  examples:
-    -
-      name: 
-        example: |
-        
+  
 serializeData:
   description: | 
     @returns {type} - <returns description>

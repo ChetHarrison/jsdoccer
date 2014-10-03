@@ -15,12 +15,12 @@ bindFromStrings:
       name: 
       example: |
       
-name: 
+name: | 
   
   description: |
     
     example: |
-        
+      
 bindToFunction:
   description: | 
     @param {type} target - <param description> 
@@ -33,12 +33,12 @@ bindToFunction:
       name: 
       example: |
       
-name: 
+name: | 
   
   description: |
     
     example: |
-        
+      
 unbindFromStrings:
   description: | 
     @param {type} target - <param description> 

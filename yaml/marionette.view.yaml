@@ -11,18 +11,13 @@ description: |
 constructor: 
   description: | 
     @param {type} options - <param description> 
-
-  examples:
-    -
-      name: 
-        example: |
-        
-name: show
+  
+name: | show
   
   description: |
     
     example: |
-        
+      
 getTemplate:
   description: | 
     @returns {type} - <returns description>

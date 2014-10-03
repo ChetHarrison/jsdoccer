@@ -1,5 +1,5 @@
 properties:
   vent: |
-    
+  
     @type {<type>}
     

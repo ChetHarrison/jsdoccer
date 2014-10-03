@@ -11,12 +11,7 @@ description: |
 constructor: 
   description: | 
     @param {type} options - <param description> 
-
-  examples:
-    -
-      name: 
-        example: |
-        
+  
 appRoute:
   description: | 
     @param {type} route - <param description> 

@@ -1,6 +1,6 @@
-name: <%= arguments[1].value %>
+name: | <%= arguments[1].value %>
   
   description: |
     
     example: |
-        
+      

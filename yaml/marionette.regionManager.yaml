@@ -11,12 +11,7 @@ description: |
 constructor: 
   description: | 
     @param {type} options - <param description> 
-
-  examples:
-    -
-      name: 
-        example: |
-        
+  
 addRegions:
   description: | 
     @param {type} regionDefinitions - <param description> 

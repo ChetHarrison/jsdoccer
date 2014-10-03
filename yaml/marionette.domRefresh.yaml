@@ -35,16 +35,25 @@ triggerDOMRefresh:
       name: 
       example: |
       
-
-name: show
+isInDOM:
+  description: | 
+    @param {type} view - <param description> 
+    @returns {type} - <returns description>
+    
+  examples:
+    -
+      name: 
+      example: |
+      
+name: | show
   
   description: |
     
     example: |
-        
-name: render
+      
+name: | render
   
   description: |
     
     example: |
-        
+      

@@ -11,12 +11,7 @@ description: |
 constructor: 
   description: | 
     @param {type} options - <param description> 
-
-  examples:
-    -
-      name: 
-        example: |
-        
+  
 initRenderBuffer:
   description: | 
   
@@ -75,30 +70,30 @@ _initialEvents:
       name:
       example: |
       
-name: add
+name: | add
   
   description: |
     
     example: |
-        
-name: remove
+      
+name: | remove
   
   description: |
     
     example: |
-        
-name: reset
+      
+name: | reset
   
   description: |
     
     example: |
-        
-name: sort
+      
+name: | sort
   
   description: |
     
     example: |
-        
+      
 _onCollectionAdd:
   description: | 
     @param {type} child - <param description> 
@@ -370,9 +365,9 @@ proxyChildEvents:
       name:
       example: |
       
-name: all
+name: | all
   
   description: |
     
     example: |
-        
+      

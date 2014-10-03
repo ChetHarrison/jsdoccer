@@ -11,12 +11,7 @@ description: |
 constructor: 
   description: | 
     @param {type} options - <param description> 
-
-  examples:
-    -
-      name: 
-        example: |
-        
+  
 render:
   description: | 
     @returns {type} - <returns description>
@@ -138,27 +133,27 @@ _initRegionManager:
       name:
       example: |
       
-name: before:add:region
+name: | before:add:region
   
   description: |
     
     example: |
-        
-name: add:region
+      
+name: | add:region
   
   description: |
     
     example: |
-        
-name: before:remove:region
+      
+name: | before:remove:region
   
   description: |
     
     example: |
-        
-name: remove:region
+      
+name: | remove:region
   
   description: |
     
     example: |
-        
+      

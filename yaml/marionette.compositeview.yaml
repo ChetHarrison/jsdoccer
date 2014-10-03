@@ -10,12 +10,7 @@ description: |
   
 constructor: 
   description: | 
-
-  examples:
-    -
-      name: 
-        example: |
-        
+  
 _initialEvents:
   description: | 
   
@@ -24,30 +19,30 @@ _initialEvents:
       name:
       example: |
       
-name: add
+name: | add
   
   description: |
     
     example: |
-        
-name: remove
+      
+name: | remove
   
   description: |
     
     example: |
-        
-name: reset
+      
+name: | reset
   
   description: |
     
     example: |
-        
-name: sort
+      
+name: | sort
   
   description: |
     
     example: |
-        
+      
 getChildView:
   description: | 
     @param {type} child - <param description> 

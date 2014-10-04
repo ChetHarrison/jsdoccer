@@ -26,20 +26,10 @@ module.exports = {
 
 
 		constructors: function(ast) {
-			
-			// ast = [ast];
-			
-			// return ast.flatMap(function(branch) { 
-			// 	return branch.type.filter(type) {
-			// 		return type === 'Property;'
-			// 	}.
-			// 	map(function())
-			// 	return branch.type === 'property'; 
-			// });
 
-			// return ast.type === 'Property' &&
-			// 	ast.value.type === 'FunctionExpression' &&
-			// 	ast.key.name === 'constructor';
+			return ast.type === 'Property' &&
+				ast.value.type === 'FunctionExpression' &&
+				ast.key.name === 'constructor';
 		},
 
 
@@ -82,51 +72,50 @@ module.exports = {
 
 
 
-		methods: function(json) {
-			
-		
-			// return ast.type === 'Property' &&
-			// 	ast.value.type === 'FunctionExpression' &&
-			// 	ast.key.name !== 'constructor';
+		methods: function(ast) {
+
+			return ast.type === 'Property' &&
+				ast.value.type === 'FunctionExpression' &&
+				ast.key.name !== 'constructor';
 		},
 
 
 
 		methodsWithReturns: function(ast) {
-			// var isReturnStatment = false;
+			var isReturnStatment = false;
 
-			// if (ast.type === 'Property' &&
-			// 	ast.value.type === 'FunctionExpression' &&
-			// 	ast.key.name !== 'constructor') {
+			if (ast.type === 'Property' &&
+				ast.value.type === 'FunctionExpression' &&
+				ast.key.name !== 'constructor') {
 
-			// 	ast.value.body.body.forEach(function(subAst) {
-			// 		if (subAst.type === 'ReturnStatement') {isReturnStatment = true;}
-			// 	});
-			// }
+				ast.value.body.body.forEach(function(subAst) {
+					if (subAst.type === 'ReturnStatement') {isReturnStatment = true;}
+				});
+			}
 
-			// return isReturnStatment;
+			return isReturnStatment;
 		},
 
 
 
 		functions: function(ast) {
-			// var isReturnStatment = false;
+			var isReturnStatment = false;
 
-			// return ast.type === 'FunctionDeclaration';
+			return ast.type === 'FunctionDeclaration';
 		},
 
 
 
 		functionsWithReturns: function(ast) {
-			// var isReturnStatment = false;
+			var isReturnStatment = false;
 
-			// if (ast.type === 'FunctionDeclaration') {
-			// 	ast.body.body.forEach(function(subAst) {
-			// 		if (subAst.type === 'ReturnStatement') {isReturnStatment = true;}
-			// 	});
-			// }
+			if (ast.type === 'FunctionDeclaration') {
+				ast.body.body.forEach(function(subAst) {
+					if (subAst.type === 'ReturnStatement') {isReturnStatment = true;}
+				});
+			}
 
-			// return isReturnStatment;
+			return isReturnStatment;
 		},
 
 
@@ -168,10 +157,10 @@ module.exports = {
    			// is the second object in the "arguments" array should add
    			// some checks.
 
-            // return ast.type === 'CallExpression' &&
-            // 	ast.callee.type === 'MemberExpression' &&
-            // 	ast.callee.property &&
-            // 	ast.callee.property.name === 'listenTo';
+            return ast.type === 'CallExpression' &&
+            	ast.callee.type === 'MemberExpression' &&
+            	ast.callee.property &&
+            	ast.callee.property.name === 'listenTo';
 		},
 
 
@@ -182,25 +171,25 @@ module.exports = {
 		// style from config and create tool for multiline
 		// strings like PHP """.
 		classes: function(ast) {
-			// var target = 
-			// 	'{\n' +
-			// 	'  "type": "Program",\n' +
-			// 	'  "body": [\n' +
-			// 	'    {\n' +
-			// 	'      "type": "ExpressionStatement",\n' +
-			// 	'      "expression": {\n' +
-			// 	'        "type": "AssignmentExpression",\n' +
-			// 	'        "operator": "=",\n' +
-			// 	'        "left": {\n' +
-			// 	'          "type": "MemberExpression",\n' +
-			// 	'          "computed": false,\n' +
-			// 	'          "object": {\n' +
-			// 	'            "type": "Identifier",\n' +
-			// 	'            "name": "Marionette"\n' +
-			// 	'          },\n' +
-			// 	'          "property": {';
+			var target = 
+				'{\n' +
+				'  "type": "Program",\n' +
+				'  "body": [\n' +
+				'    {\n' +
+				'      "type": "ExpressionStatement",\n' +
+				'      "expression": {\n' +
+				'        "type": "AssignmentExpression",\n' +
+				'        "operator": "=",\n' +
+				'        "left": {\n' +
+				'          "type": "MemberExpression",\n' +
+				'          "computed": false,\n' +
+				'          "object": {\n' +
+				'            "type": "Identifier",\n' +
+				'            "name": "Marionette"\n' +
+				'          },\n' +
+				'          "property": {';
 
-			// return _parseAstSubString(ast, target);
+			return _parseAstSubString(ast, target);
 		},
 
 

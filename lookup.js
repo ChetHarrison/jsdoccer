@@ -24,7 +24,7 @@ var fs = require('fs'),
 	Lookup = function (options) {
 		options = options || {};
 
-		if (!options.syntaxTree) throw new Error('lookup.js#constructor: requires a syntaxt tree.');
+		if (!options.syntaxTree) {throw new Error('lookup.js#constructor: requires a syntaxt tree.');}
 
 		this.syntaxTree = options.syntaxTree;
 
@@ -32,7 +32,34 @@ var fs = require('fs'),
 
 		this.syntaxToDocument = options.syntaxToDocument || syntaxToDocument;
 
-		if (!this.syntaxToDocument) throw new Error('lookup.js#constructor: requires a syntaxt-to-document.js file.');
+		if (!this.syntaxToDocument) {throw new Error('lookup.js#constructor: requires a syntaxt-to-document.js file.');}
+	},
+	
+	
+	
+	// iterate the `syntaxToDocument` object and call each
+	// validation function with the current ast branch. Return
+	// the syntax name of the first match.
+	_syntaxToDocument = function(branch) {
+		// TODO: Pull syntaxToDocument from Lookup instance
+		var syntaxTargets = _.keys(syntaxToDocument),
+
+			syntax = false;
+
+
+		if (_.isNull(branch)) {return;}
+
+
+		_.each(syntaxTargets, function(syntaxTarget) {
+
+			if (syntaxToDocument[syntaxTarget](branch)) {
+
+				syntax = syntaxTarget;
+			}
+		});
+
+
+		return syntax;
 	},
 
 
@@ -75,7 +102,7 @@ var fs = require('fs'),
 
 		_.each(keys, function(key) {
 
-			var childBranch = branch[key]
+			var childBranch = branch[key];
 
 			// Current childBranch is an array so recurse
 			// with members.
@@ -102,32 +129,6 @@ var fs = require('fs'),
 		return results;
 	},
 
-
-
-	// iterate the `syntaxToDocument` object and call each
-	// validation function with the current ast branch. Return
-	// the syntax name of the first match.
-	_syntaxToDocument = function(branch) {
-		// TODO: Pull syntaxToDocument from Lookup instance
-		var syntaxTargets = _.keys(syntaxToDocument),
-
-			syntax = false;
-
-
-		if (_.isNull(branch)) return;
-
-
-		_.each(syntaxTargets, function(syntaxTarget) {
-
-			if (syntaxToDocument[syntaxTarget](branch)) {
-
-				syntax = syntaxTarget;
-			}
-		});
-
-
-		return syntax;
-	},
 
 
 

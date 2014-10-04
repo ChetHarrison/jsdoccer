@@ -1,4 +1,6 @@
 // rx functions lovingly lifted from http://reactive-extensions.github.io/learnrx/
+'use strict';
+
 var _ = require('lodash');
 
 // Strap on the map/reduce functions for rx mojo
@@ -71,6 +73,10 @@ _.extend(Array.prototype, {
 	// }).
 	// mergeAll();
 	// ```
+	// ** Note: mergeAll expects an array of 
+	// arrays so this `[ '@api private', [ '@param foo' ] ]` bombs and 
+	// `[ ['@api private'], [ '@param foo'] ]` works.**
+	
 
 	mergeAll: function () {
 		var results = [];
@@ -158,14 +164,14 @@ _.extend(Array.prototype, {
 				counter = 0;
 				accumulatedValue = initialValue;
 			} else {
-				throw "Invalid arguments.";
+				throw new Error('Invalid arguments.');
 			}
 
 			// Loop through the array, feeding the current value and the result of 
 			// the previous computation back into the combiner function until
 			// we've exhausted the entire array and are left with only one function.
 			while (counter < this.length) {
-				accumulatedValue = combiner(accumulatedValue, this[counter])
+				accumulatedValue = combiner(accumulatedValue, this[counter]);
 				counter++;
 			}
 

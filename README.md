@@ -79,6 +79,10 @@ module.exports = {
 
 This will parse the ASTs of each files for nodes that match these conditions. To find out the AST conditions that match the code you would like to document compare your code with the ASTs saved in the `ast` directory. Then you will have a predictable AST JSON structure to query in an associated template for each document type.
 
+#### Parse JSON like a champ
+
+Map/Reduce is your friend when you need to pull deeply nested targets out of a large amount of JSON. I use a modified Array with the 5 magic RX methods attached. I highly recomend you spend a little time with (this excellent tutorial)[http://reactive-extensions.github.io/learnrx/] from Jafar Husain of Netflix **Note: Do it in Chrome. It doesn't work in Firefox.** Then you will be able to inspect the generated AST files in the `ast` directory and write your own custom matchers in the `syntax-to-document.js` file.
+
 #### .jsdoccerrc
 
 This file configures the source and destination paths.

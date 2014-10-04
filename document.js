@@ -102,30 +102,132 @@ var fs = require('fs'),
 			syntaxTree, lookup, docYaml;
 
 
-		_.each(fileFilters, function(fileFilter) {
-			if (_.contains(fileFilter, filename)) filterThis = true;
+		_.each(fileFilters, function (fileFilter) {
+			if (_.contains(fileFilter, filename)) {
+				filterThis = true;
+			}
 		});
 
-		if (filterThis) return;
+		if (filterThis) {
+			return;
+		}
 
 
 		syntaxTree = _createSyntaxTree(_getFullJsPath(filename));
-		
+
 		_saveSyntaxTree(syntaxTree, filename);
 
 
-		lookup = new Lookup({
-			syntaxTree: syntaxTree,
+
+
+		//-----------------------------------------
+
+		var asts = [syntaxTree];
+
+		var allMethods = asts.
+		filter(function (ast) {
+			return ast.type === 'Program';
+		}).
+		flatMap(function (ast) {
+			return ast.body.
+				filter(function (body) {
+					return body.type === 'ExpressionStatement' &&
+						body.expression.type === 'AssignmentExpression' &&
+						body.expression.left.type === 'MemberExpression' &&
+						body.expression.left.object &&
+						body.expression.left.object.type === 'Identifier' &&
+						body.expression.left.property &&
+						body.expression.left.property.type === 'Identifier' &&
+						body.expression.right.type !== 'FunctionExpression';
+				}).
+				map(function (body) {
+					return {
+						namespace: body.expression.left.object.name,
+						class: body.expression.left.property.name,
+						expression: body.expression
+					};
+				});
+			});
 			
-			filename: filename
-		});
+		
+			
+		var methods = allMethods.
+			map(function (method) {
+				return method.expression.right;
+			}).
+			filter(function (right) {
+				return right.type === 'CallExpression';
+			}).
+			flatMap(function (right) {
+				return right.arguments;
+			}).
+			filter(function (args) {
+				return args.type === 'ObjectExpression';
+			}).
+			flatMap(function (args) {
+				return args.properties;
+			}).
+			filter(function (properties) {
+				return properties.type === 'Property' &&
+					properties.value &&
+					properties.value.params &&
+					properties.key.type === 'Identifier';
+			}).
+			map(function (properties) {
+				return {
+					type: properties.key.name === 'constructor' ? 'constructor' : 'method',
+					name: properties.key.name,
+					tags: [
+						// single values need to be in an array because mergeAll expects an array of 
+						// arrays so this `[ '@api private', [ '@param foo' ] ]` bombs and 
+						// `[ ['@api private'], [ '@param foo'] ]` works.
+						properties.key.name.indexOf('_') === 0 ? ['@api private'] : ['@api public'],
+						properties.value.params.
+						filter(function (param) {
+							return param.type === 'Identifier';
+						}).
+						map(function (param) {
+							return '@param {<type>} ' + param.name + ' - ';
+						})
+					].mergeAll()  // here's that mergeAll ^
+				};
+			});
 
-		docYaml = lookup.parse();
+		console.log(allMethods);
+		console.log(methods);
+		
+		// console.log([["@api private"],["@param {<type>} triggerDef - "]].mergeAll());
 
-		_saveDocYaml(docYaml, filename);
+		// var namedConstructors = allMethods
+		// .filter(function(method) { return method.name === 'constructor'; });
 
-		// adding \n for readability
-		console.log();
+		// console.log('Named Constructor');
+		// console.log(namedConstructors);
+
+		// var methods = allMethods
+		// .filter(function(method) { 
+		// 	return method.name !== 'constructor';
+		// });
+
+		// console.log('Methods');
+		// console.log(methods);
+
+
+
+		//-----------------------------------------
+
+		// lookup = new Lookup({
+		// 	syntaxTree: syntaxTree,
+
+		// 	filename: filename
+		// });
+
+		// docYaml = lookup.parse();
+
+		// _saveDocYaml(docYaml, filename);
+
+		// // adding \n for readability
+		// console.log();
 	};
 
 

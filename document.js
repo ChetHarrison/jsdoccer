@@ -123,6 +123,34 @@ var fs = require('fs'),
 		//-----------------------------------------
 
 		var asts = [syntaxTree];
+		
+		var namespaceClass = asts.
+		filter(function (ast) {
+			return ast.type === 'Program';
+		}).
+		flatMap(function (ast) {
+			return ast.body.
+				filter(function (bodyNode) {
+					return bodyNode.type === 'ExpressionStatement' &&
+						bodyNode.expression.type === 'AssignmentExpression' &&
+						bodyNode.expression.left.type === 'MemberExpression' &&
+						bodyNode.expression.left.object &&
+						bodyNode.expression.left.object.type === 'Identifier' &&
+						bodyNode.expression.left.property &&
+						bodyNode.expression.left.property.type === 'Identifier' &&
+						bodyNode.expression.right.type !== 'FunctionExpression';
+				}).
+				map(function (bodyNode) {
+					return {
+						namespace: bodyNode.expression.left.object.name,
+						class: bodyNode.expression.left.property.name
+					};
+				});
+			});
+		
+		console.log(namespaceClass);
+		
+		
 
 		var allMethods = asts.
 		filter(function (ast) {
@@ -130,30 +158,17 @@ var fs = require('fs'),
 		}).
 		flatMap(function (ast) {
 			return ast.body.
-				filter(function (body) {
-					return body.type === 'ExpressionStatement' &&
-						body.expression.type === 'AssignmentExpression' &&
-						body.expression.left.type === 'MemberExpression' &&
-						body.expression.left.object &&
-						body.expression.left.object.type === 'Identifier' &&
-						body.expression.left.property &&
-						body.expression.left.property.type === 'Identifier' &&
-						body.expression.right.type !== 'FunctionExpression';
-				}).
-				map(function (body) {
-					return {
-						namespace: body.expression.left.object.name,
-						class: body.expression.left.property.name,
-						expression: body.expression
-					};
-				});
-			});
-			
-		
-			
-		var methods = allMethods.
-			map(function (method) {
-				return method.expression.right;
+			filter(function (body) {
+				return body.type === 'ExpressionStatement';
+			}).
+			map(function (body) {
+				return body.expression;
+			}).
+			filter(function (expression) {
+				return expression.type === 'AssignmentExpression';
+			}).
+			map(function (expression) {
+				return expression.right;
 			}).
 			filter(function (right) {
 				return right.type === 'CallExpression';
@@ -189,12 +204,12 @@ var fs = require('fs'),
 						map(function (param) {
 							return '@param {<type>} ' + param.name + ' - ';
 						})
-					].mergeAll()  // here's that mergeAll ^
+					].mergeAll()  // here's that mergeAll
 				};
 			});
+		});
 
-		console.log(allMethods);
-		console.log(methods);
+		// console.log(allMethods);
 		
 		// console.log([["@api private"],["@param {<type>} triggerDef - "]].mergeAll());
 

@@ -165,7 +165,27 @@ var fs = require('fs'),
 					return expression.type === 'AssignmentExpression';
 				}),
 				
-			functions = expressionAssignments.
+			namespacedFunctions = expressionAssignments.
+				map(function (expression) {
+					return expression.left;
+				}).
+				filter(function (left) {
+					return left.type === 'MemberExpression' &&
+						left.property &&
+						left.property.type &&
+						left.property.type === 'Identifier';
+				}).
+				map(function (left) {
+					var obj = {};
+					
+					obj['function'] = {
+						name: left.property.name
+					};
+					
+					return obj;
+				}),
+				
+			functionParameters = expressionAssignments.
 				map(function (expression) {
 					return expression.right;
 				}).
@@ -173,7 +193,14 @@ var fs = require('fs'),
 					return right.type === 'FunctionExpression';
 				}).
 				flatMap(function (right) {
+					console.log(right.params);
 					return right.params;
+				}).
+				filter(function (param) {
+					return param.type === 'Identifier';
+				}).
+				map(function (param) {
+
 				}),
 				
 			methods = expressionAssignments.
@@ -222,9 +249,7 @@ var fs = require('fs'),
 					return obj;
 				});
 				
-			console.log('--------------');
-			console.log([namespaces, classes, methods, functions].mergeAll());
-			console.log('--------------');
+			console.log([namespaces, classes, methods, namespacedFunctions].mergeAll());
 			
 		
 

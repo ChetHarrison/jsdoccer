@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		jshint: {
-			files: ['./*.js'],
+			files: ['!Gruntfile.js', './*.js'],
 			// configure JSHint (documented at http://www.jshint.com/docs/)
 			options: {
 				jshintrc: '.jshintrc',
@@ -62,6 +62,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-jasmine-node');
 
 	grunt.loadNpmTasks('grunt-plato');
+
 
 
 	grunt.registerTask('test', ['jshint', 'jasmine_node', 'plato']);

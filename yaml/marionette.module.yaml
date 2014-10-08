@@ -3,13 +3,21 @@ name: marionette.module.js
 description: |
   <module description>
   
-class: Module
-
-description: |
-  <class description>
+constructor:
+  description: | 
+    @api public
+    @param {<type>} moduleName - 
+    @param {<type>} app - 
+    @param {<type>} options - 
   
+  examples:
+    -
+      name:
+      example: |
+      
 initialize:
   description: | 
+    @api public
   
   examples:
     -
@@ -18,7 +26,8 @@ initialize:
       
 addInitializer:
   description: | 
-    @param {type} callback - <param description> 
+    @api public
+    @param {<type>} callback - 
   
   examples:
     -
@@ -27,7 +36,8 @@ addInitializer:
       
 addFinalizer:
   description: | 
-    @param {type} callback - <param description> 
+    @api public
+    @param {<type>} callback - 
   
   examples:
     -
@@ -36,25 +46,52 @@ addFinalizer:
       
 start:
   description: | 
-    @param {type} options - <param description> 
+    @api public
+    @param {<type>} options - 
   
   examples:
     -
       name:
       example: |
+      
+name: before:start
+
+description: |
+
+example: |
+      
+name: start
+
+description: |
+
+example: |
       
 stop:
   description: | 
+    @api public
   
   examples:
     -
       name:
       example: |
       
+name: before:stop
+
+description: |
+
+example: |
+      
+name: stop
+
+description: |
+
+example: |
+      
 addDefinition:
   description: | 
-    @param {type} moduleDefinition - <param description> 
-    @param {type} customArgs - <param description> 
+    @api public
+    @param {<type>} moduleDefinition - 
+    @param {<type>} customArgs - 
   
   examples:
     -
@@ -63,8 +100,9 @@ addDefinition:
       
 _runModuleDefinition:
   description: | 
-    @param {type} definition - <param description> 
-    @param {type} customArgs - <param description> 
+    @api private
+    @param {<type>} definition - 
+    @param {<type>} customArgs - 
   
   examples:
     -
@@ -73,6 +111,7 @@ _runModuleDefinition:
       
 _setupInitializersAndFinalizers:
   description: | 
+    @api private
   
   examples:
     -
@@ -81,10 +120,11 @@ _setupInitializersAndFinalizers:
       
 create:
   description: | 
-    @param {type} app - <param description> 
-    @param {type} moduleNames - <param description> 
-    @param {type} moduleDefinition - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} app - 
+    @param {<type>} moduleNames - 
+    @param {<type>} moduleDefinition - 
+    @returns {type} -
   
   examples:
     -
@@ -93,12 +133,13 @@ create:
       
 _getModule:
   description: | 
-    @param {type} parentModule - <param description> 
-    @param {type} moduleName - <param description> 
-    @param {type} app - <param description> 
-    @param {type} def - <param description> 
-    @param {type} args - <param description> 
-    @returns {type} - <returns description>
+    @api private
+    @param {<type>} parentModule - 
+    @param {<type>} moduleName - 
+    @param {<type>} app - 
+    @param {<type>} def - 
+    @param {<type>} args - 
+    @returns {type} -
   
   examples:
     -
@@ -107,8 +148,9 @@ _getModule:
       
 getClass:
   description: | 
-    @param {type} moduleDefinition - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} moduleDefinition - 
+    @returns {type} -
   
   examples:
     -
@@ -117,10 +159,11 @@ getClass:
       
 _addModuleDefinition:
   description: | 
-    @param {type} parentModule - <param description> 
-    @param {type} module - <param description> 
-    @param {type} def - <param description> 
-    @param {type} args - <param description> 
+    @api private
+    @param {<type>} parentModule - 
+    @param {<type>} module - 
+    @param {<type>} def - 
+    @param {<type>} args - 
   
   examples:
     -
@@ -129,9 +172,10 @@ _addModuleDefinition:
       
 _getStartWithParent:
   description: | 
-    @param {type} def - <param description> 
-    @param {type} module - <param description> 
-    @returns {type} - <returns description>
+    @api private
+    @param {<type>} def - 
+    @param {<type>} module - 
+    @returns {type} -
   
   examples:
     -
@@ -140,8 +184,9 @@ _getStartWithParent:
       
 _getDefine:
   description: | 
-    @param {type} def - <param description> 
-    @returns {type} - <returns description>
+    @api private
+    @param {<type>} def - 
+    @returns {type} -
   
   examples:
     -
@@ -150,9 +195,10 @@ _getDefine:
       
 _addStartWithParent:
   description: | 
-    @param {type} parentModule - <param description> 
-    @param {type} module - <param description> 
-    @param {type} startWithParent - <param description> 
+    @api private
+    @param {<type>} parentModule - 
+    @param {<type>} module - 
+    @param {<type>} startWithParent - 
   
   examples:
     -

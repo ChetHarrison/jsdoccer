@@ -1,4 +1,9 @@
-constructor: 
-  description: | <% value.params.forEach(function(param) {%>
-    @param {type} <%= param.name %> - <param description> <%}); %>
+constructor:
+  description: | <% tags.forEach(function(tag) {%>
+    <%= tag %><%}); %>
   
+  examples:
+    -
+      name:
+      example: |
+      

@@ -3,23 +3,9 @@ name: marionette.behavior.js
 description: |
   <module description>
   
-class: Behavior
-
-description: |
-  <class description>
-  
-Behavior:
-  description: | 
-    @param {type} options - <param description> 
-    @param {type} view - <param description> 
-  
-  examples:
-    -
-      name: 
-      example: |
-      
 initialize:
   description: | 
+    @api public
   
   examples:
     -
@@ -28,6 +14,7 @@ initialize:
       
 destroy:
   description: | 
+    @api public
   
   examples:
     -
@@ -36,7 +23,8 @@ destroy:
       
 proxyViewProperties:
   description: | 
-    @param {type} view - <param description> 
+    @api public
+    @param {<type>} view - 
   
   examples:
     -

@@ -3,16 +3,12 @@ name: marionette.renderer.js
 description: |
   <module description>
   
-class: Renderer
-
-description: |
-  <class description>
-  
 render:
   description: | 
-    @param {type} template - <param description> 
-    @param {type} data - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} template - 
+    @param {<type>} data - 
+    @returns {type} -
   
   examples:
     -

@@ -3,15 +3,21 @@ name: marionette.region.js
 description: |
   <module description>
   
-class: Region
-
-description: |
-  <class description>
+constructor:
+  description: | 
+    @api public
+    @param {<type>} options - 
   
+  examples:
+    -
+      name:
+      example: |
+      
 buildRegion:
   description: | 
-    @param {type} regionConfig - <param description> 
-    @param {type} DefaultRegionClass - <param description> 
+    @api public
+    @param {<type>} regionConfig - 
+    @param {<type>} DefaultRegionClass - 
   
   examples:
     -
@@ -20,9 +26,10 @@ buildRegion:
       
 _buildRegionFromSelector:
   description: | 
-    @param {type} selector - <param description> 
-    @param {type} DefaultRegionClass - <param description> 
-    @returns {type} - <returns description>
+    @api private
+    @param {<type>} selector - 
+    @param {<type>} DefaultRegionClass - 
+    @returns {type} -
   
   examples:
     -
@@ -31,9 +38,10 @@ _buildRegionFromSelector:
       
 _buildRegionFromObject:
   description: | 
-    @param {type} regionConfig - <param description> 
-    @param {type} DefaultRegionClass - <param description> 
-    @returns {type} - <returns description>
+    @api private
+    @param {<type>} regionConfig - 
+    @param {<type>} DefaultRegionClass - 
+    @returns {type} -
   
   examples:
     -
@@ -42,8 +50,9 @@ _buildRegionFromObject:
       
 _buildRegionFromRegionClass:
   description: | 
-    @param {type} RegionClass - <param description> 
-    @returns {type} - <returns description>
+    @api private
+    @param {<type>} RegionClass - 
+    @returns {type} -
   
   examples:
     -
@@ -52,17 +61,55 @@ _buildRegionFromRegionClass:
       
 show:
   description: | 
-    @param {type} view - <param description> 
-    @param {type} options - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} view - 
+    @param {<type>} options - 
+    @returns {type} -
   
   examples:
     -
       name:
       example: |
       
+name: before:swapOut
+
+description: |
+
+example: |
+      
+name: before:swap
+
+description: |
+
+example: |
+      
+name: before:show
+
+description: |
+
+example: |
+      
+name: swapOut
+
+description: |
+
+example: |
+      
+name: swap
+
+description: |
+
+example: |
+      
+name: show
+
+description: |
+
+example: |
+      
 _ensureElement:
   description: | 
+    @api private
   
   examples:
     -
@@ -71,8 +118,9 @@ _ensureElement:
       
 getEl:
   description: | 
-    @param {type} el - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} el - 
+    @returns {type} -
   
   examples:
     -
@@ -81,7 +129,8 @@ getEl:
       
 attachHtml:
   description: | 
-    @param {type} view - <param description> 
+    @api public
+    @param {<type>} view - 
   
   examples:
     -
@@ -90,15 +139,29 @@ attachHtml:
       
 empty:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
       name:
       example: |
       
+name: before:empty
+
+description: |
+
+example: |
+      
+name: empty
+
+description: |
+
+example: |
+      
 _destroyView:
   description: | 
+    @api private
   
   examples:
     -
@@ -107,8 +170,9 @@ _destroyView:
       
 attachView:
   description: | 
-    @param {type} view - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} view - 
+    @returns {type} -
   
   examples:
     -
@@ -117,7 +181,8 @@ attachView:
       
 hasView:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -126,7 +191,8 @@ hasView:
       
 reset:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -

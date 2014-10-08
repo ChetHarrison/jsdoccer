@@ -3,20 +3,3 @@ name: marionette.triggermethod.js
 description: |
   <module description>
   
-class: triggerMethod
-
-description: |
-  <class description>
-  
-getEventName:
-  description: | 
-    @param {type} match - <param description> 
-    @param {type} prefix - <param description> 
-    @param {type} eventName - <param description> 
-    @returns {type} - <returns description>
-    
-  examples:
-    -
-      name: 
-      example: |
-      

@@ -44,7 +44,9 @@ var fs = require('fs'),
 		// TODO: Pull syntaxToDocument from Lookup instance
 		var syntaxTargets = _.keys(syntaxToDocument),
 
-			syntax = false;
+			results = false,
+			
+			syntaxJson;
 
 
 		if (_.isNull(branch)) {return;}
@@ -52,14 +54,19 @@ var fs = require('fs'),
 
 		_.each(syntaxTargets, function(syntaxTarget) {
 
-			if (syntaxToDocument[syntaxTarget](branch)) {
-
-				syntax = syntaxTarget;
+			syntaxJson = syntaxToDocument[syntaxTarget](branch);
+			
+			if (syntaxJson) { 
+				results = { 
+					type: syntaxTarget,
+					ast: syntaxJson 
+				}; 
 			}
+
 		});
 
 
-		return syntax;
+		return results;
 	},
 
 
@@ -74,8 +81,7 @@ var fs = require('fs'),
 
 			maxDepth = 50,
 
-			syntaxToDocumentType = _syntaxToDocument(branch);
-
+			syntaxObject = _syntaxToDocument(branch);
 
 		// recursion emergency break!
 		_recursionDepth++;
@@ -90,11 +96,11 @@ var fs = require('fs'),
 
 
 		// Does current childBranch need to be documented?
-		if (syntaxToDocumentType) {
+		if (syntaxObject) {
 
 			var newSyntaxToDocumentAst = {};
 
-			newSyntaxToDocumentAst[syntaxToDocumentType] = branch;
+			newSyntaxToDocumentAst[syntaxObject.type] = syntaxObject.ast;
 
 			results.push(newSyntaxToDocumentAst);
 		}
@@ -197,6 +203,7 @@ _.extend(Lookup.prototype, {
 
 		_parseBranch(this.syntaxTree, results);
 
+		// console.log(JSON.stringify(results, null, 4));
 
 		return _jsonToYaml(results);
 	}

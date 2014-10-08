@@ -3,13 +3,19 @@ name: marionette.application.js
 description: |
   <module description>
   
-class: Application
-
-description: |
-  <class description>
+constructor:
+  description: | 
+    @api public
+    @param {<type>} options - 
   
+  examples:
+    -
+      name:
+      example: |
+      
 initialize:
   description: | 
+    @api public
   
   examples:
     -
@@ -18,6 +24,7 @@ initialize:
       
 execute:
   description: | 
+    @api public
   
   examples:
     -
@@ -26,7 +33,8 @@ execute:
       
 request:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -35,7 +43,8 @@ request:
       
 addInitializer:
   description: | 
-    @param {type} initializer - <param description> 
+    @api public
+    @param {<type>} initializer - 
   
   examples:
     -
@@ -44,17 +53,31 @@ addInitializer:
       
 start:
   description: | 
-    @param {type} options - <param description> 
+    @api public
+    @param {<type>} options - 
   
   examples:
     -
       name:
       example: |
       
+name: before:start
+
+description: |
+
+example: |
+      
+name: start
+
+description: |
+
+example: |
+      
 addRegions:
   description: | 
-    @param {type} regions - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} regions - 
+    @returns {type} -
   
   examples:
     -
@@ -63,7 +86,8 @@ addRegions:
       
 emptyRegions:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -72,8 +96,9 @@ emptyRegions:
       
 removeRegion:
   description: | 
-    @param {type} region - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} region - 
+    @returns {type} -
   
   examples:
     -
@@ -82,8 +107,9 @@ removeRegion:
       
 getRegion:
   description: | 
-    @param {type} region - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} region - 
+    @returns {type} -
   
   examples:
     -
@@ -92,7 +118,8 @@ getRegion:
       
 getRegions:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -101,9 +128,10 @@ getRegions:
       
 module:
   description: | 
-    @param {type} moduleNames - <param description> 
-    @param {type} moduleDefinition - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} moduleNames - 
+    @param {<type>} moduleDefinition - 
+    @returns {type} -
   
   examples:
     -
@@ -112,7 +140,8 @@ module:
       
 getRegionManager:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -121,8 +150,9 @@ getRegionManager:
       
 _initializeRegions:
   description: | 
-    @param {type} options - <param description> 
-    @returns {type} - <returns description>
+    @api private
+    @param {<type>} options - 
+    @returns {type} -
   
   examples:
     -
@@ -131,38 +161,40 @@ _initializeRegions:
       
 _initRegionManager:
   description: | 
+    @api private
   
   examples:
     -
       name:
       example: |
       
-name: | before:add:region
-  
-  description: |
-    
-    example: |
+name: before:add:region
+
+description: |
+
+example: |
       
-name: | add:region
-  
-  description: |
-    
-    example: |
+name: add:region
+
+description: |
+
+example: |
       
-name: | before:remove:region
-  
-  description: |
-    
-    example: |
+name: before:remove:region
+
+description: |
+
+example: |
       
-name: | remove:region
-  
-  description: |
-    
-    example: |
+name: remove:region
+
+description: |
+
+example: |
       
 _initChannel:
   description: | 
+    @api private
   
   examples:
     -

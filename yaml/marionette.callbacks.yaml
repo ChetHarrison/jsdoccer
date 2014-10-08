@@ -3,15 +3,20 @@ name: marionette.callbacks.js
 description: |
   <module description>
   
-class: Callbacks
-
-description: |
-  <class description>
+constructor:
+  description: | 
+    @api public
   
+  examples:
+    -
+      name:
+      example: |
+      
 add:
   description: | 
-    @param {type} callback - <param description> 
-    @param {type} contextOverride - <param description> 
+    @api public
+    @param {<type>} callback - 
+    @param {<type>} contextOverride - 
   
   examples:
     -
@@ -20,8 +25,9 @@ add:
       
 run:
   description: | 
-    @param {type} options - <param description> 
-    @param {type} context - <param description> 
+    @api public
+    @param {<type>} options - 
+    @param {<type>} context - 
   
   examples:
     -
@@ -30,6 +36,7 @@ run:
       
 reset:
   description: | 
+    @api public
   
   examples:
     -

@@ -3,17 +3,19 @@ name: marionette.collectionview.js
 description: |
   <module description>
   
-class: CollectionView
-
-description: |
-  <class description>
-  
-constructor: 
+constructor:
   description: | 
-    @param {type} options - <param description> 
+    @api public
+    @param {<type>} options - 
   
+  examples:
+    -
+      name:
+      example: |
+      
 initRenderBuffer:
   description: | 
+    @api public
   
   examples:
     -
@@ -22,6 +24,7 @@ initRenderBuffer:
       
 startBuffering:
   description: | 
+    @api public
   
   examples:
     -
@@ -30,6 +33,7 @@ startBuffering:
       
 endBuffering:
   description: | 
+    @api public
   
   examples:
     -
@@ -38,6 +42,7 @@ endBuffering:
       
 _triggerBeforeShowBufferedChildren:
   description: | 
+    @api private
   
   examples:
     -
@@ -46,6 +51,7 @@ _triggerBeforeShowBufferedChildren:
       
 _triggerShowBufferedChildren:
   description: | 
+    @api private
   
   examples:
     -
@@ -54,8 +60,9 @@ _triggerShowBufferedChildren:
       
 _triggerMethodOnChild:
   description: | 
-    @param {type} event - <param description> 
-    @param {type} childView - <param description> 
+    @api private
+    @param {<type>} event - 
+    @param {<type>} childView - 
   
   examples:
     -
@@ -64,39 +71,17 @@ _triggerMethodOnChild:
       
 _initialEvents:
   description: | 
+    @api private
   
   examples:
     -
       name:
       example: |
       
-name: | add
-  
-  description: |
-    
-    example: |
-      
-name: | remove
-  
-  description: |
-    
-    example: |
-      
-name: | reset
-  
-  description: |
-    
-    example: |
-      
-name: | sort
-  
-  description: |
-    
-    example: |
-      
 _onCollectionAdd:
   description: | 
-    @param {type} child - <param description> 
+    @api private
+    @param {<type>} child - 
   
   examples:
     -
@@ -105,7 +90,8 @@ _onCollectionAdd:
       
 _onCollectionRemove:
   description: | 
-    @param {type} model - <param description> 
+    @api private
+    @param {<type>} model - 
   
   examples:
     -
@@ -114,6 +100,7 @@ _onCollectionRemove:
       
 onShowCalled:
   description: | 
+    @api public
   
   examples:
     -
@@ -122,15 +109,29 @@ onShowCalled:
       
 render:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
       name:
       example: |
       
+name: before:render
+
+description: |
+
+example: |
+      
+name: render
+
+description: |
+
+example: |
+      
 resortView:
   description: | 
+    @api public
   
   examples:
     -
@@ -139,6 +140,7 @@ resortView:
       
 _sortViews:
   description: | 
+    @api private
   
   examples:
     -
@@ -147,14 +149,28 @@ _sortViews:
       
 _renderChildren:
   description: | 
+    @api private
   
   examples:
     -
       name:
       example: |
       
+name: before:render:collection
+
+description: |
+
+example: |
+      
+name: render:collection
+
+description: |
+
+example: |
+      
 showCollection:
   description: | 
+    @api public
   
   examples:
     -
@@ -163,23 +179,50 @@ showCollection:
       
 showEmptyView:
   description: | 
+    @api public
   
   examples:
     -
       name:
       example: |
+      
+name: before:render:empty
+
+description: |
+
+example: |
+      
+name: render:empty
+
+description: |
+
+example: |
       
 destroyEmptyView:
   description: | 
+    @api public
   
   examples:
     -
       name:
       example: |
       
+name: before:remove:empty
+
+description: |
+
+example: |
+      
+name: remove:empty
+
+description: |
+
+example: |
+      
 getEmptyView:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -188,8 +231,9 @@ getEmptyView:
       
 addEmptyView:
   description: | 
-    @param {type} child - <param description> 
-    @param {type} EmptyView - <param description> 
+    @api public
+    @param {<type>} child - 
+    @param {<type>} EmptyView - 
   
   examples:
     -
@@ -198,8 +242,9 @@ addEmptyView:
       
 getChildView:
   description: | 
-    @param {type} child - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} child - 
+    @returns {type} -
   
   examples:
     -
@@ -208,10 +253,11 @@ getChildView:
       
 addChild:
   description: | 
-    @param {type} child - <param description> 
-    @param {type} ChildView - <param description> 
-    @param {type} index - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} child - 
+    @param {<type>} ChildView - 
+    @param {<type>} index - 
+    @returns {type} -
   
   examples:
     -
@@ -220,9 +266,10 @@ addChild:
       
 _updateIndices:
   description: | 
-    @param {type} view - <param description> 
-    @param {type} increment - <param description> 
-    @param {type} index - <param description> 
+    @api private
+    @param {<type>} view - 
+    @param {<type>} increment - 
+    @param {<type>} index - 
   
   examples:
     -
@@ -231,19 +278,33 @@ _updateIndices:
       
 _addChildView:
   description: | 
-    @param {type} view - <param description> 
-    @param {type} index - <param description> 
+    @api private
+    @param {<type>} view - 
+    @param {<type>} index - 
   
   examples:
     -
       name:
       example: |
       
+name: before:add:child
+
+description: |
+
+example: |
+      
+name: add:child
+
+description: |
+
+example: |
+      
 renderChildView:
   description: | 
-    @param {type} view - <param description> 
-    @param {type} index - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} view - 
+    @param {<type>} index - 
+    @returns {type} -
   
   examples:
     -
@@ -252,10 +313,11 @@ renderChildView:
       
 buildChildView:
   description: | 
-    @param {type} child - <param description> 
-    @param {type} ChildViewClass - <param description> 
-    @param {type} childViewOptions - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} child - 
+    @param {<type>} ChildViewClass - 
+    @param {<type>} childViewOptions - 
+    @returns {type} -
   
   examples:
     -
@@ -264,17 +326,31 @@ buildChildView:
       
 removeChildView:
   description: | 
-    @param {type} view - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} view - 
+    @returns {type} -
   
   examples:
     -
       name:
       example: |
       
+name: before:remove:child
+
+description: |
+
+example: |
+      
+name: remove:child
+
+description: |
+
+example: |
+      
 isEmpty:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -283,6 +359,7 @@ isEmpty:
       
 checkEmpty:
   description: | 
+    @api public
   
   examples:
     -
@@ -291,8 +368,9 @@ checkEmpty:
       
 attachBuffer:
   description: | 
-    @param {type} collectionView - <param description> 
-    @param {type} buffer - <param description> 
+    @api public
+    @param {<type>} collectionView - 
+    @param {<type>} buffer - 
   
   examples:
     -
@@ -301,9 +379,10 @@ attachBuffer:
       
 attachHtml:
   description: | 
-    @param {type} collectionView - <param description> 
-    @param {type} childView - <param description> 
-    @param {type} index - <param description> 
+    @api public
+    @param {<type>} collectionView - 
+    @param {<type>} childView - 
+    @param {<type>} index - 
   
   examples:
     -
@@ -312,9 +391,10 @@ attachHtml:
       
 _insertBefore:
   description: | 
-    @param {type} childView - <param description> 
-    @param {type} index - <param description> 
-    @returns {type} - <returns description>
+    @api private
+    @param {<type>} childView - 
+    @param {<type>} index - 
+    @returns {type} -
   
   examples:
     -
@@ -323,7 +403,8 @@ _insertBefore:
       
 _insertAfter:
   description: | 
-    @param {type} childView - <param description> 
+    @api private
+    @param {<type>} childView - 
   
   examples:
     -
@@ -332,6 +413,7 @@ _insertAfter:
       
 _initChildViewStorage:
   description: | 
+    @api private
   
   examples:
     -
@@ -340,16 +422,30 @@ _initChildViewStorage:
       
 destroy:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
       name:
       example: |
       
+name: before:destroy:collection
+
+description: |
+
+example: |
+      
+name: destroy:collection
+
+description: |
+
+example: |
+      
 destroyChildren:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -358,16 +454,11 @@ destroyChildren:
       
 proxyChildEvents:
   description: | 
-    @param {type} view - <param description> 
+    @api public
+    @param {<type>} view - 
   
   examples:
     -
       name:
       example: |
-      
-name: | all
-  
-  description: |
-    
-    example: |
       

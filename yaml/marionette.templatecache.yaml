@@ -3,15 +3,21 @@ name: marionette.templatecache.js
 description: |
   <module description>
   
-class: TemplateCache
-
-description: |
-  <class description>
+constructor:
+  description: | 
+    @api public
+    @param {<type>} templateId - 
   
+  examples:
+    -
+      name:
+      example: |
+      
 get:
   description: | 
-    @param {type} templateId - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} templateId - 
+    @returns {type} -
   
   examples:
     -
@@ -20,6 +26,7 @@ get:
       
 clear:
   description: | 
+    @api public
   
   examples:
     -
@@ -28,7 +35,8 @@ clear:
       
 load:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -37,8 +45,9 @@ load:
       
 loadTemplate:
   description: | 
-    @param {type} templateId - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} templateId - 
+    @returns {type} -
   
   examples:
     -
@@ -47,8 +56,9 @@ loadTemplate:
       
 compileTemplate:
   description: | 
-    @param {type} rawTemplate - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} rawTemplate - 
+    @returns {type} -
   
   examples:
     -

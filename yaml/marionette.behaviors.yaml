@@ -3,27 +3,12 @@ name: marionette.behaviors.js
 description: |
   <module description>
   
-class: Behaviors
-
-description: |
-  <class description>
-  
-Behaviors:
-  description: | 
-    @param {type} view - <param description> 
-    @param {type} behaviors - <param description> 
-    @returns {type} - <returns description>
-    
-  examples:
-    -
-      name: 
-      example: |
-      
 behaviorTriggers:
   description: | 
-    @param {type} behaviorTriggers - <param description> 
-    @param {type} behaviors - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} behaviorTriggers - 
+    @param {<type>} behaviors - 
+    @returns {type} -
   
   examples:
     -
@@ -32,9 +17,10 @@ behaviorTriggers:
       
 behaviorEvents:
   description: | 
-    @param {type} behaviorEvents - <param description> 
-    @param {type} behaviors - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} behaviorEvents - 
+    @param {<type>} behaviors - 
+    @returns {type} -
   
   examples:
     -
@@ -43,6 +29,7 @@ behaviorEvents:
       
 behaviorsLookup:
   description: | 
+    @api public
   
   examples:
     -
@@ -51,9 +38,10 @@ behaviorsLookup:
       
 getBehaviorClass:
   description: | 
-    @param {type} options - <param description> 
-    @param {type} key - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} options - 
+    @param {<type>} key - 
+    @returns {type} -
   
   examples:
     -
@@ -62,9 +50,10 @@ getBehaviorClass:
       
 parseBehaviors:
   description: | 
-    @param {type} view - <param description> 
-    @param {type} behaviors - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} view - 
+    @param {<type>} behaviors - 
+    @returns {type} -
   
   examples:
     -
@@ -73,28 +62,20 @@ parseBehaviors:
       
 wrap:
   description: | 
-    @param {type} view - <param description> 
-    @param {type} behaviors - <param description> 
-    @param {type} methodNames - <param description> 
+    @api public
+    @param {<type>} view - 
+    @param {<type>} behaviors - 
+    @param {<type>} methodNames - 
   
   examples:
     -
       name:
       example: |
       
-BehaviorTriggersBuilder:
-  description: | 
-    @param {type} view - <param description> 
-    @param {type} behaviors - <param description> 
-  
-  examples:
-    -
-      name: 
-      example: |
-      
 buildBehaviorTriggers:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -103,8 +84,9 @@ buildBehaviorTriggers:
       
 _buildTriggerHandlersForBehavior:
   description: | 
-    @param {type} behavior - <param description> 
-    @param {type} i - <param description> 
+    @api private
+    @param {<type>} behavior - 
+    @param {<type>} i - 
   
   examples:
     -
@@ -113,10 +95,11 @@ _buildTriggerHandlersForBehavior:
       
 _setHandlerForBehavior:
   description: | 
-    @param {type} behavior - <param description> 
-    @param {type} i - <param description> 
-    @param {type} eventName - <param description> 
-    @param {type} trigger - <param description> 
+    @api private
+    @param {<type>} behavior - 
+    @param {<type>} i - 
+    @param {<type>} eventName - 
+    @param {<type>} trigger - 
   
   examples:
     -

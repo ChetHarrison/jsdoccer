@@ -3,18 +3,20 @@ name: marionette.layoutview.js
 description: |
   <module description>
   
-class: LayoutView
-
-description: |
-  <class description>
-  
-constructor: 
+constructor:
   description: | 
-    @param {type} options - <param description> 
+    @api public
+    @param {<type>} options - 
   
+  examples:
+    -
+      name:
+      example: |
+      
 render:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -23,7 +25,8 @@ render:
       
 destroy:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -32,9 +35,10 @@ destroy:
       
 addRegion:
   description: | 
-    @param {type} name - <param description> 
-    @param {type} definition - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} name - 
+    @param {<type>} definition - 
+    @returns {type} -
   
   examples:
     -
@@ -43,8 +47,9 @@ addRegion:
       
 addRegions:
   description: | 
-    @param {type} regions - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} regions - 
+    @returns {type} -
   
   examples:
     -
@@ -53,8 +58,9 @@ addRegions:
       
 removeRegion:
   description: | 
-    @param {type} name - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} name - 
+    @returns {type} -
   
   examples:
     -
@@ -63,8 +69,9 @@ removeRegion:
       
 getRegion:
   description: | 
-    @param {type} region - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} region - 
+    @returns {type} -
   
   examples:
     -
@@ -73,7 +80,8 @@ getRegion:
       
 getRegions:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -82,8 +90,9 @@ getRegions:
       
 _buildRegions:
   description: | 
-    @param {type} regions - <param description> 
-    @returns {type} - <returns description>
+    @api private
+    @param {<type>} regions - 
+    @returns {type} -
   
   examples:
     -
@@ -92,7 +101,8 @@ _buildRegions:
       
 parentEl:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -101,7 +111,8 @@ parentEl:
       
 _initializeRegions:
   description: | 
-    @param {type} options - <param description> 
+    @api private
+    @param {<type>} options - 
   
   examples:
     -
@@ -110,6 +121,7 @@ _initializeRegions:
       
 _reInitializeRegions:
   description: | 
+    @api private
   
   examples:
     -
@@ -118,7 +130,8 @@ _reInitializeRegions:
       
 getRegionManager:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -127,33 +140,34 @@ getRegionManager:
       
 _initRegionManager:
   description: | 
+    @api private
   
   examples:
     -
       name:
       example: |
       
-name: | before:add:region
-  
-  description: |
-    
-    example: |
+name: before:add:region
+
+description: |
+
+example: |
       
-name: | add:region
-  
-  description: |
-    
-    example: |
+name: add:region
+
+description: |
+
+example: |
       
-name: | before:remove:region
-  
-  description: |
-    
-    example: |
+name: before:remove:region
+
+description: |
+
+example: |
       
-name: | remove:region
-  
-  description: |
-    
-    example: |
+name: remove:region
+
+description: |
+
+example: |
       

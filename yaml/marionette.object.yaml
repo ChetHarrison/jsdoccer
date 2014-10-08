@@ -3,13 +3,19 @@ name: marionette.object.js
 description: |
   <module description>
   
-class: Object
-
-description: |
-  <class description>
+constructor:
+  description: | 
+    @api public
+    @param {<type>} options - 
   
+  examples:
+    -
+      name:
+      example: |
+      
 initialize:
   description: | 
+    @api public
   
   examples:
     -
@@ -18,9 +24,22 @@ initialize:
       
 destroy:
   description: | 
+    @api public
   
   examples:
     -
       name:
       example: |
+      
+name: before:destroy
+
+description: |
+
+example: |
+      
+name: destroy
+
+description: |
+
+example: |
       

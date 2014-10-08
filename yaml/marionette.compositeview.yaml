@@ -3,50 +3,29 @@ name: marionette.compositeview.js
 description: |
   <module description>
   
-class: CompositeView
-
-description: |
-  <class description>
-  
-constructor: 
+constructor:
   description: | 
-  
-_initialEvents:
-  description: | 
+    @api public
   
   examples:
     -
       name:
       example: |
       
-name: | add
+_initialEvents:
+  description: | 
+    @api private
   
-  description: |
-    
-    example: |
-      
-name: | remove
-  
-  description: |
-    
-    example: |
-      
-name: | reset
-  
-  description: |
-    
-    example: |
-      
-name: | sort
-  
-  description: |
-    
-    example: |
+  examples:
+    -
+      name:
+      example: |
       
 getChildView:
   description: | 
-    @param {type} child - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} child - 
+    @returns {type} -
   
   examples:
     -
@@ -55,7 +34,8 @@ getChildView:
       
 serializeData:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -64,15 +44,29 @@ serializeData:
       
 render:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
       name:
       example: |
       
+name: before:render
+
+description: |
+
+example: |
+      
+name: render
+
+description: |
+
+example: |
+      
 _renderChildren:
   description: | 
+    @api private
   
   examples:
     -
@@ -81,16 +75,30 @@ _renderChildren:
       
 _renderTemplate:
   description: | 
+    @api private
   
   examples:
     -
       name:
       example: |
       
+name: before:render:template
+
+description: |
+
+example: |
+      
+name: render:template
+
+description: |
+
+example: |
+      
 attachElContent:
   description: | 
-    @param {type} html - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} html - 
+    @returns {type} -
   
   examples:
     -
@@ -99,8 +107,9 @@ attachElContent:
       
 attachBuffer:
   description: | 
-    @param {type} compositeView - <param description> 
-    @param {type} buffer - <param description> 
+    @api public
+    @param {<type>} compositeView - 
+    @param {<type>} buffer - 
   
   examples:
     -
@@ -109,7 +118,8 @@ attachBuffer:
       
 _insertAfter:
   description: | 
-    @param {type} childView - <param description> 
+    @api private
+    @param {<type>} childView - 
   
   examples:
     -
@@ -118,8 +128,9 @@ _insertAfter:
       
 getChildViewContainer:
   description: | 
-    @param {type} containerView - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} containerView - 
+    @returns {type} -
   
   examples:
     -
@@ -128,6 +139,7 @@ getChildViewContainer:
       
 resetChildViewContainer:
   description: | 
+    @api public
   
   examples:
     -

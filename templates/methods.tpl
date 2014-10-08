@@ -1,6 +1,6 @@
-<%- key.name %>:
-  description: | <% value.params.forEach(function(param) {%>
-    @param {type} <%= param.name %> - <param description> <%}); %>
+<%- name %>:
+  description: | <% tags.forEach(function(tag) {%>
+    <%= tag %><%}); %>
   
   examples:
     -

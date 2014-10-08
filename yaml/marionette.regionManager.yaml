@@ -3,20 +3,22 @@ name: marionette.regionManager.js
 description: |
   <module description>
   
-class: RegionManager
-
-description: |
-  <class description>
-  
-constructor: 
+constructor:
   description: | 
-    @param {type} options - <param description> 
+    @api public
+    @param {<type>} options - 
   
+  examples:
+    -
+      name:
+      example: |
+      
 addRegions:
   description: | 
-    @param {type} regionDefinitions - <param description> 
-    @param {type} defaults - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} regionDefinitions - 
+    @param {<type>} defaults - 
+    @returns {type} -
   
   examples:
     -
@@ -25,19 +27,33 @@ addRegions:
       
 addRegion:
   description: | 
-    @param {type} name - <param description> 
-    @param {type} definition - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} name - 
+    @param {<type>} definition - 
+    @returns {type} -
   
   examples:
     -
       name:
       example: |
       
+name: before:add:region
+
+description: |
+
+example: |
+      
+name: add:region
+
+description: |
+
+example: |
+      
 get:
   description: | 
-    @param {type} name - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} name - 
+    @returns {type} -
   
   examples:
     -
@@ -46,7 +62,8 @@ get:
       
 getRegions:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -55,8 +72,9 @@ getRegions:
       
 removeRegion:
   description: | 
-    @param {type} name - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} name - 
+    @returns {type} -
   
   examples:
     -
@@ -65,7 +83,8 @@ removeRegion:
       
 removeRegions:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -74,7 +93,8 @@ removeRegions:
       
 emptyRegions:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -83,7 +103,8 @@ emptyRegions:
       
 destroy:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -92,8 +113,9 @@ destroy:
       
 _store:
   description: | 
-    @param {type} name - <param description> 
-    @param {type} region - <param description> 
+    @api private
+    @param {<type>} name - 
+    @param {<type>} region - 
   
   examples:
     -
@@ -102,16 +124,30 @@ _store:
       
 _remove:
   description: | 
-    @param {type} name - <param description> 
-    @param {type} region - <param description> 
+    @api private
+    @param {<type>} name - 
+    @param {<type>} region - 
   
   examples:
     -
       name:
       example: |
       
+name: before:remove:region
+
+description: |
+
+example: |
+      
+name: remove:region
+
+description: |
+
+example: |
+      
 _setLength:
   description: | 
+    @api private
   
   examples:
     -

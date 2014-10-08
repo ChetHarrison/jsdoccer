@@ -3,17 +3,19 @@ name: marionette.itemview.js
 description: |
   <module description>
   
-class: ItemView
-
-description: |
-  <class description>
-  
-constructor: 
+constructor:
   description: | 
+    @api public
   
+  examples:
+    -
+      name:
+      example: |
+      
 serializeData:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -22,8 +24,9 @@ serializeData:
       
 serializeCollection:
   description: | 
-    @param {type} collection - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} collection - 
+    @returns {type} -
   
   examples:
     -
@@ -32,16 +35,30 @@ serializeCollection:
       
 render:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
       name:
       example: |
       
+name: before:render
+
+description: |
+
+example: |
+      
+name: render
+
+description: |
+
+example: |
+      
 _renderTemplate:
   description: | 
-    @returns {type} - <returns description>
+    @api private
+    @returns {type} -
   
   examples:
     -
@@ -50,8 +67,9 @@ _renderTemplate:
       
 attachElContent:
   description: | 
-    @param {type} html - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} html - 
+    @returns {type} -
   
   examples:
     -
@@ -60,7 +78,8 @@ attachElContent:
       
 destroy:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -

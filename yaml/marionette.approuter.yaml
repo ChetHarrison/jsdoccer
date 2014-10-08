@@ -3,19 +3,21 @@ name: marionette.approuter.js
 description: |
   <module description>
   
-class: AppRouter
-
-description: |
-  <class description>
-  
-constructor: 
+constructor:
   description: | 
-    @param {type} options - <param description> 
+    @api public
+    @param {<type>} options - 
   
+  examples:
+    -
+      name:
+      example: |
+      
 appRoute:
   description: | 
-    @param {type} route - <param description> 
-    @param {type} methodName - <param description> 
+    @api public
+    @param {<type>} route - 
+    @param {<type>} methodName - 
   
   examples:
     -
@@ -24,8 +26,9 @@ appRoute:
       
 _processOnRoute:
   description: | 
-    @param {type} routeName - <param description> 
-    @param {type} routeArgs - <param description> 
+    @api private
+    @param {<type>} routeName - 
+    @param {<type>} routeArgs - 
   
   examples:
     -
@@ -34,8 +37,9 @@ _processOnRoute:
       
 processAppRoutes:
   description: | 
-    @param {type} controller - <param description> 
-    @param {type} appRoutes - <param description> 
+    @api public
+    @param {<type>} controller - 
+    @param {<type>} appRoutes - 
   
   examples:
     -
@@ -44,7 +48,8 @@ processAppRoutes:
       
 _getController:
   description: | 
-    @returns {type} - <returns description>
+    @api private
+    @returns {type} -
   
   examples:
     -
@@ -53,9 +58,10 @@ _getController:
       
 _addAppRoute:
   description: | 
-    @param {type} controller - <param description> 
-    @param {type} route - <param description> 
-    @param {type} methodName - <param description> 
+    @api private
+    @param {<type>} controller - 
+    @param {<type>} route - 
+    @param {<type>} methodName - 
   
   examples:
     -

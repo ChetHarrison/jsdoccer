@@ -3,13 +3,20 @@ name: marionette.error.js
 description: |
   <module description>
   
-constructor: 
+constructor:
   description: | 
-    @param {type} message - <param description> 
-    @param {type} options - <param description> 
+    @api public
+    @param {<type>} message - 
+    @param {<type>} options - 
   
+  examples:
+    -
+      name:
+      example: |
+      
 captureStackTrace:
   description: | 
+    @api public
   
   examples:
     -
@@ -18,7 +25,8 @@ captureStackTrace:
       
 toString:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -

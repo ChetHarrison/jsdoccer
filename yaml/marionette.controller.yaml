@@ -3,14 +3,20 @@ name: marionette.controller.js
 description: |
   <module description>
   
-class: Controller
-
-description: |
-  <class description>
+constructor:
+  description: | 
+    @api public
+    @param {<type>} options - 
   
+  examples:
+    -
+      name:
+      example: |
+      
 destroy:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -

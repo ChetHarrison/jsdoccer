@@ -3,24 +3,20 @@ name: marionette.view.js
 description: |
   <module description>
   
-class: View
-
-description: |
-  <class description>
-  
-constructor: 
+constructor:
   description: | 
-    @param {type} options - <param description> 
+    @api public
+    @param {<type>} options - 
   
-name: | show
-  
-  description: |
-    
-    example: |
+  examples:
+    -
+      name:
+      example: |
       
 getTemplate:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -29,8 +25,9 @@ getTemplate:
       
 serializeModel:
   description: | 
-    @param {type} model - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} model - 
+    @returns {type} -
   
   examples:
     -
@@ -39,8 +36,9 @@ serializeModel:
       
 mixinTemplateHelpers:
   description: | 
-    @param {type} target - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} target - 
+    @returns {type} -
   
   examples:
     -
@@ -49,8 +47,9 @@ mixinTemplateHelpers:
       
 normalizeUIKeys:
   description: | 
-    @param {type} hash - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} hash - 
+    @returns {type} -
   
   examples:
     -
@@ -59,8 +58,9 @@ normalizeUIKeys:
       
 normalizeUIValues:
   description: | 
-    @param {type} hash - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} hash - 
+    @returns {type} -
   
   examples:
     -
@@ -69,7 +69,8 @@ normalizeUIValues:
       
 configureTriggers:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -78,8 +79,9 @@ configureTriggers:
       
 delegateEvents:
   description: | 
-    @param {type} events - <param description> 
-    @returns {type} - <returns description>
+    @api public
+    @param {<type>} events - 
+    @returns {type} -
   
   examples:
     -
@@ -88,7 +90,8 @@ delegateEvents:
       
 _delegateDOMEvents:
   description: | 
-    @param {type} eventsArg - <param description> 
+    @api private
+    @param {<type>} eventsArg - 
   
   examples:
     -
@@ -97,7 +100,8 @@ _delegateDOMEvents:
       
 undelegateEvents:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -106,6 +110,7 @@ undelegateEvents:
       
 onShowCalled:
   description: | 
+    @api public
   
   examples:
     -
@@ -114,6 +119,7 @@ onShowCalled:
       
 _ensureViewIsIntact:
   description: | 
+    @api private
   
   examples:
     -
@@ -122,7 +128,8 @@ _ensureViewIsIntact:
       
 destroy:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -131,6 +138,7 @@ destroy:
       
 bindUIElements:
   description: | 
+    @api public
   
   examples:
     -
@@ -139,6 +147,7 @@ bindUIElements:
       
 _bindUIElements:
   description: | 
+    @api private
   
   examples:
     -
@@ -147,6 +156,7 @@ _bindUIElements:
       
 unbindUIElements:
   description: | 
+    @api public
   
   examples:
     -
@@ -155,6 +165,7 @@ unbindUIElements:
       
 _unbindUIElements:
   description: | 
+    @api private
   
   examples:
     -
@@ -163,8 +174,9 @@ _unbindUIElements:
       
 _buildViewTrigger:
   description: | 
-    @param {type} triggerDef - <param description> 
-    @returns {type} - <returns description>
+    @api private
+    @param {<type>} triggerDef - 
+    @returns {type} -
   
   examples:
     -
@@ -173,7 +185,8 @@ _buildViewTrigger:
       
 setElement:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -
@@ -182,7 +195,8 @@ setElement:
       
 triggerMethod:
   description: | 
-    @returns {type} - <returns description>
+    @api public
+    @returns {type} -
   
   examples:
     -

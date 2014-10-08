@@ -143,14 +143,15 @@ module.exports = {
 				map(function(property) {
 					return {
 						name: property.key.name,
-						tags: [property.key.name.indexOf('_') === 0 ? ['@api private'] : ['@api public'],
+						tags: [
+							property.key.name.indexOf('_') === 0 ? ['@api private'] : ['@api public'],
 							property.value.params.
-							filter(function (param) {
-								return param.type === 'Identifier';
-							}).
-							map(function (param) {
-								return '@param {<type>} ' + param.name + ' - ';
-							}),
+								filter(function (param) {
+									return param.type === 'Identifier';
+								}).
+								map(function (param) {
+									return '@param {<type>} ' + param.name + ' - ';
+								}),
 							_hasReturn(property.value.body.body) ? ['@returns {<type>} -'] : []
 						].mergeAll()
 					};

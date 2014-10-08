@@ -98,8 +98,9 @@ module.exports = {
     }
   };
 ```
+**Note**: I am using map/reduce to produce exactly the JSON I need here. You could just as easily use regex or even string matching to identify a target case and return the current unfiltered AST node containing all the data your template requires.
 
-This will recursively walk the ASTs of each file passing every node to each match function. Each match function should return `false` or a valid JSON object containing all of the data the associated YAML template requires. While you can certainly return the raw AST node, I recomend you filter and organize your JSON here because doing it is easyer here then in the template.
+The script will recursively walk the ASTs of each file passing every node to each match function. Each match function should return `false` or a valid JSON object containing all of the data the associated YAML template requires. While you can certainly return the raw AST node, I recomend you filter and organize your JSON here rather than in the template.
 
 To find out the AST conditions that match the code you would like to document compare your code with the ASTs saved in the `ast` directory. Then you will have a predictable AST JSON structure to query in an associated template for each document type.
 

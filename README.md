@@ -66,18 +66,42 @@ In order to find syntax targets you can create a custom document "type" by addin
 
 ```
 module.exports = {
-    methods: function(ast) {
-      return ast.type === 'Property' &&
-        ast.value.type === 'FunctionExpression';
-    },
-
     functions: function(ast) {
-      return ast.type === 'FunctionDeclaration';
+      var json = [ast].
+        filter(function (ast) {
+          return ast.type === 'Property' &&
+            ast.value.type === 'FunctionExpression' &&
+            ast.key.type === 'Identifier' &&
+            ast.key.name !== 'constructor'; // filter named constructors
+        }).
+        map(function(property) {
+          return {
+            name: property.key.name,
+            tags: [property.key.name.indexOf('_') === 0 ? ['@api private'] : ['@api public'],
+              property.value.params.
+              filter(function (param) {
+                return param.type === 'Identifier';
+              }).
+              map(function (param) {
+                return '@param {<type>} ' + param.name + ' - ';
+              }),
+              _hasReturn(property.value.body.body) ? ['@returns {<type>} -'] : []
+            ].mergeAll()
+          };
+        });
+        
+      if (json.length > 0) {
+        return json.pop();
+      }
+      
+      return false;
     }
   };
 ```
 
-This will parse the ASTs of each files for nodes that match these conditions. To find out the AST conditions that match the code you would like to document compare your code with the ASTs saved in the `ast` directory. Then you will have a predictable AST JSON structure to query in an associated template for each document type.
+This will recursively walk the ASTs of each file passing every node to each match function. Each match function should return `false` or a valid JSON object containing all of the data the associated YAML template requires. While you can certainly return the raw AST node, I recomend you filter and organize your JSON here because doing it is easyer here then in the template.
+
+To find out the AST conditions that match the code you would like to document compare your code with the ASTs saved in the `ast` directory. Then you will have a predictable AST JSON structure to query in an associated template for each document type.
 
 #### Parse JSON like a champ
 
@@ -96,6 +120,9 @@ This file configures the source and destination paths.
     "dest": "./ast/",
     "save": true
   },
+  "json": {
+    "dest": "./json/"
+  },
   "yaml": {
     "templates": "./templates/",
     "dest": "./yaml/",
@@ -110,6 +137,20 @@ This file configures the source and destination paths.
   "fileFilters": [".DS_Store"]
 }
 ```
+
+**js**: The jf files you wish to document.
+
+**ast**: Where to save the generated ASTs.
+
+**json**: Where to save the JSON returned from your matching function.
+
+**yaml: Where to save the documentation YAML files.
+
+**jsdoc**: Where to save the generated JSDoc files.
+
+**syntaxToDocument**: Where to find your syntax target matcher functions.
+
+**fileFilters**: Files listed here will be ignored by the parser.
 
 #### YAML Templates
 

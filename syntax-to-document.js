@@ -123,6 +123,12 @@ module.exports = {
 			
 			return false;
 		},
+		
+		
+		
+		properties: function(ast) {
+			// TODO: impliment.
+		},
 
 
 
@@ -156,17 +162,6 @@ module.exports = {
 			
 			return false;
 		},
-
-
-
-		// functions: function(ast) {
-		// 	var isReturnStatment = false;
-
-		// 	return [ast].
-		// 		filter(function(decl) {
-		// 			return decl.type === 'FunctionDeclaration';
-		// 		});
-		// },
 
 
 
@@ -209,13 +204,5 @@ module.exports = {
 			}
 			
 			return false;
-		},
-
-
-
-		// extensions: function(ast) {
-
-		// }
-
-
+		}
 	};

@@ -4,6 +4,31 @@ modules
   description: |
     <module description>
   
+properties
+  view: |
+  
+    @type {<type>}
+    
+  defaults: |
+  
+    @type {<type>}
+    
+  options: |
+  
+    @type {<type>}
+    
+  $: |
+  
+    @type {<type>}
+    
+  $el: |
+  
+    @type {<type>}
+    
+  el: |
+  
+    @type {<type>}
+    
 functions
   initialize:
     description: | 

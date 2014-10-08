@@ -12,6 +12,35 @@
             ]
         }
     ],
+    "properties": [
+        {
+            "name": "options"
+        },
+        {
+            "name": "el"
+        },
+        {
+            "name": "el"
+        },
+        {
+            "name": "$el"
+        },
+        {
+            "name": "currentView"
+        },
+        {
+            "name": "$el"
+        },
+        {
+            "name": "el"
+        },
+        {
+            "name": "currentView"
+        },
+        {
+            "name": "el"
+        }
+    ],
     "functions": [
         {
             "name": "buildRegion",

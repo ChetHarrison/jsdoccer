@@ -48,7 +48,7 @@ var fs = require('fs'),
 
 	_getFullAstPath = function (filename) {
 
-		return path.join(astPath + path.basename(filename, '.js') + '.json');
+		return path.join(astPath + path.basename(filename, '.js') + '.ast');
 	},
 	
 	
@@ -70,8 +70,6 @@ var fs = require('fs'),
 	_createSyntaxTree = function (file) {
 		var code = fs.readFileSync(file, 'utf8');
 
-		console.log('Generating syntax tree: ' + file);
-
 
 		return esprima.parse(code, {
 			loc: false,
@@ -89,7 +87,7 @@ var fs = require('fs'),
 
 		fs.writeFileSync(fullOutputPath, JSON.stringify(ast, null, 2));
 
-		console.log('Saving syntax tree: ' + fullOutputPath);
+		console.info('File AST: ' + fullOutputPath);
 	},
 	
 	
@@ -99,7 +97,7 @@ var fs = require('fs'),
 
 		fs.writeFileSync(fullOutputPath, docJson);
 
-		console.log('Saving document JSON: ' + fullOutputPath);
+		console.log('Doc JSON: ' + fullOutputPath);
 	},
 
 
@@ -109,7 +107,7 @@ var fs = require('fs'),
 
 		fs.writeFileSync(fullOutputPath, docYaml);
 
-		console.log('Saving document YAML: ' + fullOutputPath);
+		console.log('Doc YAML: ' + fullOutputPath);
 	},
 
 

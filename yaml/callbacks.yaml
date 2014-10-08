@@ -14,6 +14,23 @@ constructors
         name:
         example: |
       
+properties
+  _deferred: |
+  
+    @type {<type>}
+    
+  _callbacks: |
+  
+    @type {<type>}
+    
+  _deferred: |
+  
+    @type {<type>}
+    
+  _callbacks: |
+  
+    @type {<type>}
+    
 functions
   add:
     description: | 

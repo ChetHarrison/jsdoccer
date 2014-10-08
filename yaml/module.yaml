@@ -17,6 +17,43 @@ constructors
         name:
         example: |
       
+properties
+  moduleName: |
+  
+    @type {<type>}
+    
+  options: |
+  
+    @type {<type>}
+    
+  initialize: |
+  
+    @type {<type>}
+    
+  submodules: |
+  
+    @type {<type>}
+    
+  app: |
+  
+    @type {<type>}
+    
+  _isInitialized: |
+  
+    @type {<type>}
+    
+  _isInitialized: |
+  
+    @type {<type>}
+    
+  _initializerCallbacks: |
+  
+    @type {<type>}
+    
+  _finalizerCallbacks: |
+  
+    @type {<type>}
+    
 functions
   initialize:
     description: | 

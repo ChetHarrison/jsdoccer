@@ -12,6 +12,11 @@
             ]
         }
     ],
+    "properties": [
+        {
+            "name": "options"
+        }
+    ],
     "functions": [
         {
             "name": "initialize",

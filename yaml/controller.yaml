@@ -15,6 +15,11 @@ constructors
         name:
         example: |
       
+properties
+  options: |
+  
+    @type {<type>}
+    
 functions
   destroy:
     description: | 

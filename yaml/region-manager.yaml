@@ -15,6 +15,15 @@ constructors
         name:
         example: |
       
+properties
+  _regions: |
+  
+    @type {<type>}
+    
+  length: |
+  
+    @type {<type>}
+    
 functions
   addRegions:
     description: | 

@@ -16,6 +16,11 @@ constructors
         name:
         example: |
       
+properties
+  url: |
+  
+    @type {<type>}
+    
 functions
   captureStackTrace:
     description: | 

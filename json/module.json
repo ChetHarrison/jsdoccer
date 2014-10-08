@@ -14,6 +14,35 @@
             ]
         }
     ],
+    "properties": [
+        {
+            "name": "moduleName"
+        },
+        {
+            "name": "options"
+        },
+        {
+            "name": "initialize"
+        },
+        {
+            "name": "submodules"
+        },
+        {
+            "name": "app"
+        },
+        {
+            "name": "_isInitialized"
+        },
+        {
+            "name": "_isInitialized"
+        },
+        {
+            "name": "_initializerCallbacks"
+        },
+        {
+            "name": "_finalizerCallbacks"
+        }
+    ],
     "functions": [
         {
             "name": "initialize",

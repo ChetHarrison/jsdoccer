@@ -15,6 +15,27 @@ constructors
         name:
         example: |
       
+properties
+  _firstRender: |
+  
+    @type {<type>}
+    
+  _firstRender: |
+  
+    @type {<type>}
+    
+  regions: |
+  
+    @type {<type>}
+    
+  regionManager: |
+  
+    @type {<type>}
+    
+  name: |
+  
+    @type {<type>}
+    
 functions
   render:
     description: | 

@@ -12,6 +12,29 @@
             ]
         }
     ],
+    "properties": [
+        {
+            "name": "options"
+        },
+        {
+            "name": "_behaviors"
+        },
+        {
+            "name": "events"
+        },
+        {
+            "name": "isDestroyed"
+        },
+        {
+            "name": "_uiBindings"
+        },
+        {
+            "name": "ui"
+        },
+        {
+            "name": "ui"
+        }
+    ],
     "functions": [
         {
             "name": "getTemplate",

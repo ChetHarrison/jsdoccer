@@ -11,6 +11,20 @@
             ]
         }
     ],
+    "properties": [
+        {
+            "name": "_deferred"
+        },
+        {
+            "name": "_callbacks"
+        },
+        {
+            "name": "_deferred"
+        },
+        {
+            "name": "_callbacks"
+        }
+    ],
     "functions": [
         {
             "name": "add",

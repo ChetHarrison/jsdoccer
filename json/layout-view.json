@@ -12,6 +12,23 @@
             ]
         }
     ],
+    "properties": [
+        {
+            "name": "_firstRender"
+        },
+        {
+            "name": "_firstRender"
+        },
+        {
+            "name": "regions"
+        },
+        {
+            "name": "regionManager"
+        },
+        {
+            "name": "name"
+        }
+    ],
     "functions": [
         {
             "name": "render",

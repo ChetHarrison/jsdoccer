@@ -15,6 +15,19 @@ constructors
         name:
         example: |
       
+properties
+  templateId: |
+  
+    @type {<type>}
+    
+  templateCaches: |
+  
+    @type {<type>}
+    
+  compiledTemplate: |
+  
+    @type {<type>}
+    
 functions
   get:
     description: | 

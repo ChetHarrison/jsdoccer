@@ -12,6 +12,14 @@
             ]
         }
     ],
+    "properties": [
+        {
+            "name": "_regions"
+        },
+        {
+            "name": "length"
+        }
+    ],
     "functions": [
         {
             "name": "addRegions",

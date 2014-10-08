@@ -12,6 +12,17 @@
             ]
         }
     ],
+    "properties": [
+        {
+            "name": "templateId"
+        },
+        {
+            "name": "templateCaches"
+        },
+        {
+            "name": "compiledTemplate"
+        }
+    ],
     "functions": [
         {
             "name": "get",

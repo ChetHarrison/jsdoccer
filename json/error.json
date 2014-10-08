@@ -13,6 +13,11 @@
             ]
         }
     ],
+    "properties": [
+        {
+            "name": "url"
+        }
+    ],
     "functions": [
         {
             "name": "captureStackTrace",

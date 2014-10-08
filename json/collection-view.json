@@ -12,6 +12,32 @@
             ]
         }
     ],
+    "properties": [
+        {
+            "name": "sort"
+        },
+        {
+            "name": "elBuffer"
+        },
+        {
+            "name": "_bufferedChildren"
+        },
+        {
+            "name": "isBuffering"
+        },
+        {
+            "name": "isBuffering"
+        },
+        {
+            "name": "_bufferedChildren"
+        },
+        {
+            "name": "_showingEmptyView"
+        },
+        {
+            "name": "children"
+        }
+    ],
     "functions": [
         {
             "name": "initRenderBuffer",

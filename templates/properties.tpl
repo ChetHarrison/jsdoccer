@@ -1,5 +1,4 @@
-properties:
-  vent: |
+<%= name %>: |
   
-    @type {<type>}
+  @type {<type>}
     

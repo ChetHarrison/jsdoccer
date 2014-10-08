@@ -125,6 +125,11 @@ functions
         name:
         example: |
       
+properties
+  isRendered: |
+  
+    @type {<type>}
+    
 events
   name: before:render
 

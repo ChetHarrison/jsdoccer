@@ -4,6 +4,26 @@
             "name": "behavior.js"
         }
     ],
+    "properties": [
+        {
+            "name": "view"
+        },
+        {
+            "name": "defaults"
+        },
+        {
+            "name": "options"
+        },
+        {
+            "name": "$"
+        },
+        {
+            "name": "$el"
+        },
+        {
+            "name": "el"
+        }
+    ],
     "functions": [
         {
             "name": "initialize",

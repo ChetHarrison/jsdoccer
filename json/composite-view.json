@@ -90,6 +90,11 @@
             ]
         }
     ],
+    "properties": [
+        {
+            "name": "isRendered"
+        }
+    ],
     "events": [
         {
             "name": "before:render"

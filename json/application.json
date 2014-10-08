@@ -12,6 +12,38 @@
             ]
         }
     ],
+    "properties": [
+        {
+            "name": "options"
+        },
+        {
+            "name": "_initCallbacks"
+        },
+        {
+            "name": "submodules"
+        },
+        {
+            "name": "_regionManager"
+        },
+        {
+            "name": "name"
+        },
+        {
+            "name": "channelName"
+        },
+        {
+            "name": "channel"
+        },
+        {
+            "name": "vent"
+        },
+        {
+            "name": "commands"
+        },
+        {
+            "name": "reqres"
+        }
+    ],
     "functions": [
         {
             "name": "initialize",

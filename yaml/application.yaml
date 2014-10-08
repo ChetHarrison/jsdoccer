@@ -15,6 +15,47 @@ constructors
         name:
         example: |
       
+properties
+  options: |
+  
+    @type {<type>}
+    
+  _initCallbacks: |
+  
+    @type {<type>}
+    
+  submodules: |
+  
+    @type {<type>}
+    
+  _regionManager: |
+  
+    @type {<type>}
+    
+  name: |
+  
+    @type {<type>}
+    
+  channelName: |
+  
+    @type {<type>}
+    
+  channel: |
+  
+    @type {<type>}
+    
+  vent: |
+  
+    @type {<type>}
+    
+  commands: |
+  
+    @type {<type>}
+    
+  reqres: |
+  
+    @type {<type>}
+    
 functions
   initialize:
     description: | 

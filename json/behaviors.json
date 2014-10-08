@@ -81,5 +81,19 @@
                 "@param {<type>} trigger - "
             ]
         }
+    ],
+    "properties": [
+        {
+            "name": "_view"
+        },
+        {
+            "name": "_viewUI"
+        },
+        {
+            "name": "_behaviors"
+        },
+        {
+            "name": "_triggers"
+        }
     ]
 }

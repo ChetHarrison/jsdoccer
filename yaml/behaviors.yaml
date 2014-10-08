@@ -108,3 +108,20 @@ functions
         name:
         example: |
       
+properties
+  _view: |
+  
+    @type {<type>}
+    
+  _viewUI: |
+  
+    @type {<type>}
+    
+  _behaviors: |
+  
+    @type {<type>}
+    
+  _triggers: |
+  
+    @type {<type>}
+    

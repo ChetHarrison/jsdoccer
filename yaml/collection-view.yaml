@@ -15,6 +15,39 @@ constructors
         name:
         example: |
       
+properties
+  sort: |
+  
+    @type {<type>}
+    
+  elBuffer: |
+  
+    @type {<type>}
+    
+  _bufferedChildren: |
+  
+    @type {<type>}
+    
+  isBuffering: |
+  
+    @type {<type>}
+    
+  isBuffering: |
+  
+    @type {<type>}
+    
+  _bufferedChildren: |
+  
+    @type {<type>}
+    
+  _showingEmptyView: |
+  
+    @type {<type>}
+    
+  children: |
+  
+    @type {<type>}
+    
 functions
   initRenderBuffer:
     description: | 

@@ -2,23 +2,37 @@
 	"js": {
 		"src": "./js/"
 	},
+	
+	
 	"ast": {
 		"dest": "./ast/",
 		"save": true
 	},
+	
+	
 	"json": {
 		"dest": "./json/"
 	},
+	
+	
 	"yaml": {
 		"templates": "./templates/",
 		"dest": "./yaml/",
 		"save": true
 	},
+	
+	
 	"jsdoc": {
 		"dest": "./jsdoc/"
 	},
+	
+	
 	"syntaxToDocument": {
 		"src": "./syntax-to-document.js"
 	},
-	"fileFilters": [".DS_Store"]
+	
+	
+	"fileFilters": [
+		".DS_Store"
+	]
 }

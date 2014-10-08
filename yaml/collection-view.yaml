@@ -1,464 +1,468 @@
-name: collection-view.js
+modules
+  name: collection-view.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   
-constructor:
-  description: | 
-    @api public
-    @param {<type>} options - 
+constructors
+  constructor:
+    description: | 
+      @api public
+      @param {<type>} options - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-initRenderBuffer:
-  description: | 
-    @api public
+functions
+  initRenderBuffer:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-startBuffering:
-  description: | 
-    @api public
+  startBuffering:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-endBuffering:
-  description: | 
-    @api public
+  endBuffering:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_triggerBeforeShowBufferedChildren:
-  description: | 
-    @api private
+  _triggerBeforeShowBufferedChildren:
+    description: | 
+      @api private
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_triggerShowBufferedChildren:
-  description: | 
-    @api private
+  _triggerShowBufferedChildren:
+    description: | 
+      @api private
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_triggerMethodOnChild:
-  description: | 
-    @api private
-    @param {<type>} event - 
-    @param {<type>} childView - 
+  _triggerMethodOnChild:
+    description: | 
+      @api private
+      @param {<type>} event - 
+      @param {<type>} childView - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_initialEvents:
-  description: | 
-    @api private
+  _initialEvents:
+    description: | 
+      @api private
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_onCollectionAdd:
-  description: | 
-    @api private
-    @param {<type>} child - 
+  _onCollectionAdd:
+    description: | 
+      @api private
+      @param {<type>} child - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_onCollectionRemove:
-  description: | 
-    @api private
-    @param {<type>} model - 
+  _onCollectionRemove:
+    description: | 
+      @api private
+      @param {<type>} model - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-onShowCalled:
-  description: | 
-    @api public
+  onShowCalled:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-render:
-  description: | 
-    @api public
-    @returns {type} -
+  render:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-name: before:render
+  resortView:
+    description: | 
+      @api public
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _sortViews:
+    description: | 
+      @api private
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _renderChildren:
+    description: | 
+      @api private
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  showCollection:
+    description: | 
+      @api public
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  showEmptyView:
+    description: | 
+      @api public
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  destroyEmptyView:
+    description: | 
+      @api public
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  getEmptyView:
+    description: | 
+      @api public
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  addEmptyView:
+    description: | 
+      @api public
+      @param {<type>} child - 
+      @param {<type>} EmptyView - 
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  getChildView:
+    description: | 
+      @api public
+      @param {<type>} child - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  addChild:
+    description: | 
+      @api public
+      @param {<type>} child - 
+      @param {<type>} ChildView - 
+      @param {<type>} index - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _updateIndices:
+    description: | 
+      @api private
+      @param {<type>} view - 
+      @param {<type>} increment - 
+      @param {<type>} index - 
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _addChildView:
+    description: | 
+      @api private
+      @param {<type>} view - 
+      @param {<type>} index - 
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  renderChildView:
+    description: | 
+      @api public
+      @param {<type>} view - 
+      @param {<type>} index - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  buildChildView:
+    description: | 
+      @api public
+      @param {<type>} child - 
+      @param {<type>} ChildViewClass - 
+      @param {<type>} childViewOptions - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  removeChildView:
+    description: | 
+      @api public
+      @param {<type>} view - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  isEmpty:
+    description: | 
+      @api public
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  checkEmpty:
+    description: | 
+      @api public
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  attachBuffer:
+    description: | 
+      @api public
+      @param {<type>} collectionView - 
+      @param {<type>} buffer - 
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  attachHtml:
+    description: | 
+      @api public
+      @param {<type>} collectionView - 
+      @param {<type>} childView - 
+      @param {<type>} index - 
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _insertBefore:
+    description: | 
+      @api private
+      @param {<type>} childView - 
+      @param {<type>} index - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _insertAfter:
+    description: | 
+      @api private
+      @param {<type>} childView - 
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _initChildViewStorage:
+    description: | 
+      @api private
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  destroy:
+    description: | 
+      @api public
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  destroyChildren:
+    description: | 
+      @api public
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  proxyChildEvents:
+    description: | 
+      @api public
+      @param {<type>} view - 
+  
+    examples:
+      -
+        name:
+        example: |
+      
+events
+  name: before:render
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: render
+  name: render
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-resortView:
-  description: | 
-    @api public
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_sortViews:
-  description: | 
-    @api private
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_renderChildren:
-  description: | 
-    @api private
-  
-  examples:
-    -
-      name:
-      example: |
-      
-name: before:render:collection
+  name: before:render:collection
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: render:collection
+  name: render:collection
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-showCollection:
-  description: | 
-    @api public
-  
-  examples:
-    -
-      name:
-      example: |
-      
-showEmptyView:
-  description: | 
-    @api public
-  
-  examples:
-    -
-      name:
-      example: |
-      
-name: before:render:empty
+  name: before:render:empty
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: render:empty
+  name: render:empty
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-destroyEmptyView:
-  description: | 
-    @api public
-  
-  examples:
-    -
-      name:
-      example: |
-      
-name: before:remove:empty
+  name: before:remove:empty
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: remove:empty
+  name: remove:empty
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-getEmptyView:
-  description: | 
-    @api public
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-addEmptyView:
-  description: | 
-    @api public
-    @param {<type>} child - 
-    @param {<type>} EmptyView - 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-getChildView:
-  description: | 
-    @api public
-    @param {<type>} child - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-addChild:
-  description: | 
-    @api public
-    @param {<type>} child - 
-    @param {<type>} ChildView - 
-    @param {<type>} index - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_updateIndices:
-  description: | 
-    @api private
-    @param {<type>} view - 
-    @param {<type>} increment - 
-    @param {<type>} index - 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_addChildView:
-  description: | 
-    @api private
-    @param {<type>} view - 
-    @param {<type>} index - 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-name: before:add:child
+  name: before:add:child
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: add:child
+  name: add:child
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-renderChildView:
-  description: | 
-    @api public
-    @param {<type>} view - 
-    @param {<type>} index - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-buildChildView:
-  description: | 
-    @api public
-    @param {<type>} child - 
-    @param {<type>} ChildViewClass - 
-    @param {<type>} childViewOptions - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-removeChildView:
-  description: | 
-    @api public
-    @param {<type>} view - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-name: before:remove:child
+  name: before:remove:child
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: remove:child
+  name: remove:child
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-isEmpty:
-  description: | 
-    @api public
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-checkEmpty:
-  description: | 
-    @api public
-  
-  examples:
-    -
-      name:
-      example: |
-      
-attachBuffer:
-  description: | 
-    @api public
-    @param {<type>} collectionView - 
-    @param {<type>} buffer - 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-attachHtml:
-  description: | 
-    @api public
-    @param {<type>} collectionView - 
-    @param {<type>} childView - 
-    @param {<type>} index - 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_insertBefore:
-  description: | 
-    @api private
-    @param {<type>} childView - 
-    @param {<type>} index - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_insertAfter:
-  description: | 
-    @api private
-    @param {<type>} childView - 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_initChildViewStorage:
-  description: | 
-    @api private
-  
-  examples:
-    -
-      name:
-      example: |
-      
-destroy:
-  description: | 
-    @api public
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-name: before:destroy:collection
+  name: before:destroy:collection
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: destroy:collection
+  name: destroy:collection
 
-description: |
+  description: |
 
-example: |
-      
-destroyChildren:
-  description: | 
-    @api public
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-proxyChildEvents:
-  description: | 
-    @api public
-    @param {<type>} view - 
-  
-  examples:
-    -
-      name:
-      example: |
+  example: |
       

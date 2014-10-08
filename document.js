@@ -27,6 +27,8 @@ var fs = require('fs'),
 	jsPath = config.js.src,
 
 	astPath = config.ast.dest,
+	
+	jsonPath = config.json.dest,
 
 	yamlPath = config.yaml.dest,
 
@@ -47,6 +49,13 @@ var fs = require('fs'),
 	_getFullAstPath = function (filename) {
 
 		return path.join(astPath + path.basename(filename, '.js') + '.json');
+	},
+	
+	
+	
+	_getFullJsonPath = function (filename) {
+
+		return path.join(jsonPath + path.basename(filename, '.js') + '.json');
 	},
 
 
@@ -75,13 +84,22 @@ var fs = require('fs'),
 	},
 
 
-
 	_saveSyntaxTree = function (ast, filename) {
 		var fullOutputPath = _getFullAstPath(filename);
 
 		fs.writeFileSync(fullOutputPath, JSON.stringify(ast, null, 2));
 
 		console.log('Saving syntax tree: ' + fullOutputPath);
+	},
+	
+	
+	
+	_saveDocJson = function (docJson, filename) {
+		var fullOutputPath = _getFullJsonPath(filename);
+
+		fs.writeFileSync(fullOutputPath, docJson);
+
+		console.log('Saving document JSON: ' + fullOutputPath);
 	},
 
 
@@ -99,7 +117,7 @@ var fs = require('fs'),
 	_documentFile = function (filename) {
 		var filterThis = false,
 
-			syntaxTree, lookup, docYaml;
+			syntaxTree, lookup, json, docYaml;
 
 
 		_.each(fileFilters, function (fileFilter) {
@@ -122,8 +140,12 @@ var fs = require('fs'),
 
 			filename: filename
 		});
+		
+		json = lookup.parse();
 
-		docYaml = lookup.parse();
+		_saveDocJson(JSON.stringify(json, null, 4), filename);
+
+		docYaml = lookup.jsonToYaml(json);
 
 		_saveDocYaml(docYaml, filename);
 

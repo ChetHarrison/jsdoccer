@@ -1,25 +1,28 @@
-name: controller.js
+modules
+  name: controller.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   
-constructor:
-  description: | 
-    @api public
-    @param {<type>} options - 
+constructors
+  constructor:
+    description: | 
+      @api public
+      @param {<type>} options - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-destroy:
-  description: | 
-    @api public
-    @returns {type} -
+functions
+  destroy:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       

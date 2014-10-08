@@ -1,211 +1,215 @@
-name: region.js
+modules
+  name: region.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   
-constructor:
-  description: | 
-    @api public
-    @param {<type>} options - 
+constructors
+  constructor:
+    description: | 
+      @api public
+      @param {<type>} options - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-buildRegion:
-  description: | 
-    @api public
-    @param {<type>} regionConfig - 
-    @param {<type>} DefaultRegionClass - 
+functions
+  buildRegion:
+    description: | 
+      @api public
+      @param {<type>} regionConfig - 
+      @param {<type>} DefaultRegionClass - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_buildRegionFromSelector:
-  description: | 
-    @api private
-    @param {<type>} selector - 
-    @param {<type>} DefaultRegionClass - 
-    @returns {type} -
+  _buildRegionFromSelector:
+    description: | 
+      @api private
+      @param {<type>} selector - 
+      @param {<type>} DefaultRegionClass - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_buildRegionFromObject:
-  description: | 
-    @api private
-    @param {<type>} regionConfig - 
-    @param {<type>} DefaultRegionClass - 
-    @returns {type} -
+  _buildRegionFromObject:
+    description: | 
+      @api private
+      @param {<type>} regionConfig - 
+      @param {<type>} DefaultRegionClass - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_buildRegionFromRegionClass:
-  description: | 
-    @api private
-    @param {<type>} RegionClass - 
-    @returns {type} -
+  _buildRegionFromRegionClass:
+    description: | 
+      @api private
+      @param {<type>} RegionClass - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-show:
-  description: | 
-    @api public
-    @param {<type>} view - 
-    @param {<type>} options - 
-    @returns {type} -
+  show:
+    description: | 
+      @api public
+      @param {<type>} view - 
+      @param {<type>} options - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-name: before:swapOut
-
-description: |
-
-example: |
-      
-name: before:swap
-
-description: |
-
-example: |
-      
-name: before:show
-
-description: |
-
-example: |
-      
-name: swapOut
-
-description: |
-
-example: |
-      
-name: swap
-
-description: |
-
-example: |
-      
-name: show
-
-description: |
-
-example: |
-      
-_ensureElement:
-  description: | 
-    @api private
+  _ensureElement:
+    description: | 
+      @api private
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_ensureViewIsIntact:
-  description: | 
-    @api private
-    @param {<type>} view - 
+  _ensureViewIsIntact:
+    description: | 
+      @api private
+      @param {<type>} view - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-getEl:
-  description: | 
-    @api public
-    @param {<type>} el - 
-    @returns {type} -
+  getEl:
+    description: | 
+      @api public
+      @param {<type>} el - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-attachHtml:
-  description: | 
-    @api public
-    @param {<type>} view - 
+  attachHtml:
+    description: | 
+      @api public
+      @param {<type>} view - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-empty:
-  description: | 
-    @api public
-    @returns {type} -
+  empty:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-name: before:empty
+  _destroyView:
+    description: | 
+      @api private
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  attachView:
+    description: | 
+      @api public
+      @param {<type>} view - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  hasView:
+    description: | 
+      @api public
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  reset:
+    description: | 
+      @api public
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+events
+  name: before:swapOut
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: empty
+  name: before:swap
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-_destroyView:
-  description: | 
-    @api private
-  
-  examples:
-    -
-      name:
-      example: |
+  name: before:show
+
+  description: |
+
+  example: |
       
-attachView:
-  description: | 
-    @api public
-    @param {<type>} view - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
+  name: swapOut
+
+  description: |
+
+  example: |
       
-hasView:
-  description: | 
-    @api public
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
+  name: swap
+
+  description: |
+
+  example: |
       
-reset:
-  description: | 
-    @api public
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
+  name: show
+
+  description: |
+
+  example: |
+      
+  name: before:empty
+
+  description: |
+
+  example: |
+      
+  name: empty
+
+  description: |
+
+  example: |
       

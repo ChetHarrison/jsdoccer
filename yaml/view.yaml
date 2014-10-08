@@ -1,205 +1,208 @@
-name: view.js
+modules
+  name: view.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   
-constructor:
-  description: | 
-    @api public
-    @param {<type>} options - 
+constructors
+  constructor:
+    description: | 
+      @api public
+      @param {<type>} options - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-getTemplate:
-  description: | 
-    @api public
-    @returns {type} -
+functions
+  getTemplate:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-serializeModel:
-  description: | 
-    @api public
-    @param {<type>} model - 
-    @returns {type} -
+  serializeModel:
+    description: | 
+      @api public
+      @param {<type>} model - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-mixinTemplateHelpers:
-  description: | 
-    @api public
-    @param {<type>} target - 
-    @returns {type} -
+  mixinTemplateHelpers:
+    description: | 
+      @api public
+      @param {<type>} target - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-normalizeUIKeys:
-  description: | 
-    @api public
-    @param {<type>} hash - 
-    @returns {type} -
+  normalizeUIKeys:
+    description: | 
+      @api public
+      @param {<type>} hash - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-normalizeUIValues:
-  description: | 
-    @api public
-    @param {<type>} hash - 
-    @returns {type} -
+  normalizeUIValues:
+    description: | 
+      @api public
+      @param {<type>} hash - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-configureTriggers:
-  description: | 
-    @api public
-    @returns {type} -
+  configureTriggers:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-delegateEvents:
-  description: | 
-    @api public
-    @param {<type>} events - 
-    @returns {type} -
+  delegateEvents:
+    description: | 
+      @api public
+      @param {<type>} events - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_delegateDOMEvents:
-  description: | 
-    @api private
-    @param {<type>} eventsArg - 
+  _delegateDOMEvents:
+    description: | 
+      @api private
+      @param {<type>} eventsArg - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-undelegateEvents:
-  description: | 
-    @api public
-    @returns {type} -
+  undelegateEvents:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-onShowCalled:
-  description: | 
-    @api public
+  onShowCalled:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_ensureViewIsIntact:
-  description: | 
-    @api private
+  _ensureViewIsIntact:
+    description: | 
+      @api private
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-destroy:
-  description: | 
-    @api public
-    @returns {type} -
+  destroy:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-bindUIElements:
-  description: | 
-    @api public
+  bindUIElements:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_bindUIElements:
-  description: | 
-    @api private
+  _bindUIElements:
+    description: | 
+      @api private
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-unbindUIElements:
-  description: | 
-    @api public
+  unbindUIElements:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_unbindUIElements:
-  description: | 
-    @api private
+  _unbindUIElements:
+    description: | 
+      @api private
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_buildViewTrigger:
-  description: | 
-    @api private
-    @param {<type>} triggerDef - 
-    @returns {type} -
+  _buildViewTrigger:
+    description: | 
+      @api private
+      @param {<type>} triggerDef - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-setElement:
-  description: | 
-    @api public
-    @returns {type} -
+  setElement:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-triggerMethod:
-  description: | 
-    @api public
-    @returns {type} -
+  triggerMethod:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       

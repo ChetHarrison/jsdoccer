@@ -1,0 +1,18 @@
+{
+    "modules": [
+        {
+            "name": "renderer.js"
+        }
+    ],
+    "functions": [
+        {
+            "name": "render",
+            "tags": [
+                "@api public",
+                "@param {<type>} template - ",
+                "@param {<type>} data - ",
+                "@returns {<type>} -"
+            ]
+        }
+    ]
+}

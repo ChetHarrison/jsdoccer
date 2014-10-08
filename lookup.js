@@ -7,6 +7,8 @@ var fs = require('fs'),
 	_ = require('lodash'),
 
 	_s = require('underscore.string'),
+	
+	indentString = require('indent-string'),
 
 
 	// Local Dependencies
@@ -16,7 +18,7 @@ var fs = require('fs'),
 	config = JSON.parse(fs.readFileSync(configFile, 'utf8')),
 
 	syntaxToDocument = require(config.syntaxToDocument.src),
-	
+
 
 
 	// Constructor
@@ -24,7 +26,9 @@ var fs = require('fs'),
 	Lookup = function (options) {
 		options = options || {};
 
-		if (!options.syntaxTree) {throw new Error('lookup.js#constructor: requires a syntaxt tree.');}
+		if (!options.syntaxTree) {
+			throw new Error('lookup.js#constructor: requires a syntaxt tree.');
+		}
 
 		this.syntaxTree = options.syntaxTree;
 
@@ -32,35 +36,39 @@ var fs = require('fs'),
 
 		this.syntaxToDocument = options.syntaxToDocument || syntaxToDocument;
 
-		if (!this.syntaxToDocument) {throw new Error('lookup.js#constructor: requires a syntaxt-to-document.js file.');}
+		if (!this.syntaxToDocument) {
+			throw new Error('lookup.js#constructor: requires a syntaxt-to-document.js file.');
+		}
 	},
-	
-	
-	
+
+
+
 	// iterate the `syntaxToDocument` object and call each
 	// validation function with the current ast branch. Return
 	// the syntax name of the first match.
-	_syntaxToDocument = function(branch) {
+	_syntaxToDocument = function (branch) {
 		// TODO: Pull syntaxToDocument from Lookup instance
 		var syntaxTargets = _.keys(syntaxToDocument),
 
 			results = false,
-			
+
 			syntaxJson;
 
 
-		if (_.isNull(branch)) {return;}
+		if (_.isNull(branch)) {
+			return;
+		}
 
 
-		_.each(syntaxTargets, function(syntaxTarget) {
+		_.each(syntaxTargets, function (syntaxTarget) {
 
 			syntaxJson = syntaxToDocument[syntaxTarget](branch);
-			
-			if (syntaxJson) { 
-				results = { 
+
+			if (syntaxJson) {
+				results = {
 					type: syntaxTarget,
-					ast: syntaxJson 
-				}; 
+					ast: syntaxJson
+				};
 			}
 
 		});
@@ -75,7 +83,7 @@ var fs = require('fs'),
 	//-----------------------------------------
 	_recursionDepth = 0,
 
-	_parseBranch = function(branch, results) {
+	_parseBranch = function (branch, results) {
 
 		var keys = _.keys(branch),
 
@@ -98,15 +106,18 @@ var fs = require('fs'),
 		// Does current childBranch need to be documented?
 		if (syntaxObject) {
 
-			var newSyntaxToDocumentAst = {};
+			// Check to see if this is a new syntax category and add
+			// it to the results if it isn't.
+			if (!results[syntaxObject.type]) {
 
-			newSyntaxToDocumentAst[syntaxObject.type] = syntaxObject.ast;
+				results[syntaxObject.type] = [];
+			}
 
-			results.push(newSyntaxToDocumentAst);
+			results[syntaxObject.type].push(syntaxObject.ast);
 		}
 
 
-		_.each(keys, function(key) {
+		_.each(keys, function (key) {
 
 			var childBranch = branch[key];
 
@@ -114,7 +125,7 @@ var fs = require('fs'),
 			// with members.
 			if (_.isArray(childBranch)) {
 
-				_.each(childBranch, function(sibling) {
+				_.each(childBranch, function (sibling) {
 
 					_parseBranch(sibling, results);
 
@@ -138,7 +149,7 @@ var fs = require('fs'),
 
 
 
-	_getTemplateName = function(type) {
+	_getTemplateName = function (type) {
 
 		var path = _s.dasherize(type);
 
@@ -152,35 +163,42 @@ var fs = require('fs'),
 
 
 
-	_getTemplate = function(type) {
+	_getTemplate = function (type) {
 		// TODO: Make this more robust with Node Path lib
 		var filename = _getTemplateName(type),
 
 			fs = require('fs'),
 
 			file = __dirname + 'filename';
- 
+
 
 		return fs.readFileSync(filename, 'utf8');
 	},
 
 
 
-	_jsonToYaml = function(jsonArray) {
-		var yaml = '';
+	_jsonToYaml = function (json) {
+		var yaml = '',
 
-		_.each(jsonArray, function(json) {
+			syntaxTypes = _.keys(json);
 
-			var docType = _.keys(json)[0],
+		_.each(syntaxTypes, function (type) {
 
-				ast = json[docType],
+			var template = _getTemplate(type),
 
-				template = _getTemplate(docType);
+				syntaxJsons = json[type];
 
+			// add type category
+			yaml += type + '\n';
 
-			yaml += _.template(template, ast);
+			_.each(syntaxJsons, function (syntaxJson) {
 
-			yaml += '\n';
+				yaml += indentString(_.template(template, syntaxJson), ' ', 2);
+
+				yaml += '\n';
+
+			});
+
 		});
 
 
@@ -199,13 +217,21 @@ _.extend(Lookup.prototype, {
 		// this will collect the relevant data.
 		// but first we want to add a special case to 
 		// document the module from the the file name.
-		var results = [{modules: {name: this.filename}}];
+		var results = {
+			modules: [{
+				name: this.filename
+			}]
+		};
 
 		_parseBranch(this.syntaxTree, results);
 
-		console.log(JSON.stringify(results, null, 4));
+		// console.log(JSON.stringify(results, null, 4));
 
-		return _jsonToYaml(results);
+		return results;
+	},
+
+	jsonToYaml: function (json) {
+		return _jsonToYaml(json);
 	}
 
 });

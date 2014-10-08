@@ -1,0 +1,115 @@
+{
+    "modules": [
+        {
+            "name": "region-manager.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} options - "
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "addRegions",
+            "tags": [
+                "@api public",
+                "@param {<type>} regionDefinitions - ",
+                "@param {<type>} defaults - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "addRegion",
+            "tags": [
+                "@api public",
+                "@param {<type>} name - ",
+                "@param {<type>} definition - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "get",
+            "tags": [
+                "@api public",
+                "@param {<type>} name - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "getRegions",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "removeRegion",
+            "tags": [
+                "@api public",
+                "@param {<type>} name - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "removeRegions",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "emptyRegions",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "destroy",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_store",
+            "tags": [
+                "@api private",
+                "@param {<type>} name - ",
+                "@param {<type>} region - "
+            ]
+        },
+        {
+            "name": "_remove",
+            "tags": [
+                "@api private",
+                "@param {<type>} name - ",
+                "@param {<type>} region - "
+            ]
+        },
+        {
+            "name": "_setLength",
+            "tags": [
+                "@api private"
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "before:add:region"
+        },
+        {
+            "name": "add:region"
+        },
+        {
+            "name": "before:remove:region"
+        },
+        {
+            "name": "remove:region"
+        }
+    ]
+}

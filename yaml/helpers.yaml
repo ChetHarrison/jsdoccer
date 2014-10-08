@@ -1,5 +1,6 @@
-name: helpers.js
+modules
+  name: helpers.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   

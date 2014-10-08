@@ -1,0 +1,54 @@
+{
+    "modules": [
+        {
+            "name": "template-cache.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} templateId - "
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "get",
+            "tags": [
+                "@api public",
+                "@param {<type>} templateId - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "clear",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "load",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "loadTemplate",
+            "tags": [
+                "@api public",
+                "@param {<type>} templateId - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "compileTemplate",
+            "tags": [
+                "@api public",
+                "@param {<type>} rawTemplate - ",
+                "@returns {<type>} -"
+            ]
+        }
+    ]
+}

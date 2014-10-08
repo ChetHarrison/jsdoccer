@@ -1,0 +1,107 @@
+{
+    "modules": [
+        {
+            "name": "composite-view.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public"
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "_initialEvents",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "getChildView",
+            "tags": [
+                "@api public",
+                "@param {<type>} child - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "serializeData",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "render",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_renderChildren",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "_renderTemplate",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "attachElContent",
+            "tags": [
+                "@api public",
+                "@param {<type>} html - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "attachBuffer",
+            "tags": [
+                "@api public",
+                "@param {<type>} compositeView - ",
+                "@param {<type>} buffer - "
+            ]
+        },
+        {
+            "name": "_insertAfter",
+            "tags": [
+                "@api private",
+                "@param {<type>} childView - "
+            ]
+        },
+        {
+            "name": "getChildViewContainer",
+            "tags": [
+                "@api public",
+                "@param {<type>} containerView - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "resetChildViewContainer",
+            "tags": [
+                "@api public"
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "before:render"
+        },
+        {
+            "name": "render"
+        },
+        {
+            "name": "before:render:template"
+        },
+        {
+            "name": "render:template"
+        }
+    ]
+}

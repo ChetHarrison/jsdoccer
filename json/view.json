@@ -1,0 +1,150 @@
+{
+    "modules": [
+        {
+            "name": "view.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} options - "
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "getTemplate",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "serializeModel",
+            "tags": [
+                "@api public",
+                "@param {<type>} model - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "mixinTemplateHelpers",
+            "tags": [
+                "@api public",
+                "@param {<type>} target - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "normalizeUIKeys",
+            "tags": [
+                "@api public",
+                "@param {<type>} hash - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "normalizeUIValues",
+            "tags": [
+                "@api public",
+                "@param {<type>} hash - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "configureTriggers",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "delegateEvents",
+            "tags": [
+                "@api public",
+                "@param {<type>} events - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_delegateDOMEvents",
+            "tags": [
+                "@api private",
+                "@param {<type>} eventsArg - "
+            ]
+        },
+        {
+            "name": "undelegateEvents",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "onShowCalled",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "_ensureViewIsIntact",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "destroy",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "bindUIElements",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "_bindUIElements",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "unbindUIElements",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "_unbindUIElements",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "_buildViewTrigger",
+            "tags": [
+                "@api private",
+                "@param {<type>} triggerDef - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "setElement",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "triggerMethod",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        }
+    ]
+}

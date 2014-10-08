@@ -1,45 +1,49 @@
-name: object.js
+modules
+  name: object.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   
-constructor:
-  description: | 
-    @api public
-    @param {<type>} options - 
+constructors
+  constructor:
+    description: | 
+      @api public
+      @param {<type>} options - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-initialize:
-  description: | 
-    @api public
+functions
+  initialize:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-destroy:
-  description: | 
-    @api public
+  destroy:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-name: before:destroy
+events
+  name: before:destroy
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: destroy
+  name: destroy
 
-description: |
+  description: |
 
-example: |
+  example: |
       

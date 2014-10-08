@@ -1,173 +1,177 @@
-name: layout-view.js
+modules
+  name: layout-view.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   
-constructor:
-  description: | 
-    @api public
-    @param {<type>} options - 
+constructors
+  constructor:
+    description: | 
+      @api public
+      @param {<type>} options - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-render:
-  description: | 
-    @api public
-    @returns {type} -
+functions
+  render:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-destroy:
-  description: | 
-    @api public
-    @returns {type} -
+  destroy:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-addRegion:
-  description: | 
-    @api public
-    @param {<type>} name - 
-    @param {<type>} definition - 
-    @returns {type} -
+  addRegion:
+    description: | 
+      @api public
+      @param {<type>} name - 
+      @param {<type>} definition - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-addRegions:
-  description: | 
-    @api public
-    @param {<type>} regions - 
-    @returns {type} -
+  addRegions:
+    description: | 
+      @api public
+      @param {<type>} regions - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-removeRegion:
-  description: | 
-    @api public
-    @param {<type>} name - 
-    @returns {type} -
+  removeRegion:
+    description: | 
+      @api public
+      @param {<type>} name - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-getRegion:
-  description: | 
-    @api public
-    @param {<type>} region - 
-    @returns {type} -
+  getRegion:
+    description: | 
+      @api public
+      @param {<type>} region - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-getRegions:
-  description: | 
-    @api public
-    @returns {type} -
+  getRegions:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_buildRegions:
-  description: | 
-    @api private
-    @param {<type>} regions - 
-    @returns {type} -
+  _buildRegions:
+    description: | 
+      @api private
+      @param {<type>} regions - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-parentEl:
-  description: | 
-    @api public
-    @returns {type} -
+  parentEl:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_initializeRegions:
-  description: | 
-    @api private
-    @param {<type>} options - 
+  _initializeRegions:
+    description: | 
+      @api private
+      @param {<type>} options - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_reInitializeRegions:
-  description: | 
-    @api private
+  _reInitializeRegions:
+    description: | 
+      @api private
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-getRegionManager:
-  description: | 
-    @api public
-    @returns {type} -
+  getRegionManager:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_initRegionManager:
-  description: | 
-    @api private
+  _initRegionManager:
+    description: | 
+      @api private
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-name: before:add:region
+events
+  name: before:add:region
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: add:region
+  name: add:region
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: before:remove:region
+  name: before:remove:region
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: remove:region
+  name: remove:region
 
-description: |
+  description: |
 
-example: |
+  example: |
       

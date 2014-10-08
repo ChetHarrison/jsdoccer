@@ -1,0 +1,149 @@
+{
+    "modules": [
+        {
+            "name": "region.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} options - "
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "buildRegion",
+            "tags": [
+                "@api public",
+                "@param {<type>} regionConfig - ",
+                "@param {<type>} DefaultRegionClass - "
+            ]
+        },
+        {
+            "name": "_buildRegionFromSelector",
+            "tags": [
+                "@api private",
+                "@param {<type>} selector - ",
+                "@param {<type>} DefaultRegionClass - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_buildRegionFromObject",
+            "tags": [
+                "@api private",
+                "@param {<type>} regionConfig - ",
+                "@param {<type>} DefaultRegionClass - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_buildRegionFromRegionClass",
+            "tags": [
+                "@api private",
+                "@param {<type>} RegionClass - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "show",
+            "tags": [
+                "@api public",
+                "@param {<type>} view - ",
+                "@param {<type>} options - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_ensureElement",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "_ensureViewIsIntact",
+            "tags": [
+                "@api private",
+                "@param {<type>} view - "
+            ]
+        },
+        {
+            "name": "getEl",
+            "tags": [
+                "@api public",
+                "@param {<type>} el - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "attachHtml",
+            "tags": [
+                "@api public",
+                "@param {<type>} view - "
+            ]
+        },
+        {
+            "name": "empty",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_destroyView",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "attachView",
+            "tags": [
+                "@api public",
+                "@param {<type>} view - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "hasView",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "reset",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "before:swapOut"
+        },
+        {
+            "name": "before:swap"
+        },
+        {
+            "name": "before:show"
+        },
+        {
+            "name": "swapOut"
+        },
+        {
+            "name": "swap"
+        },
+        {
+            "name": "show"
+        },
+        {
+            "name": "before:empty"
+        },
+        {
+            "name": "empty"
+        }
+    ]
+}

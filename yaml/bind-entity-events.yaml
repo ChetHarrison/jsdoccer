@@ -1,5 +1,6 @@
-name: bind-entity-events.js
+modules
+  name: bind-entity-events.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   

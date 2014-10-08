@@ -1,0 +1,57 @@
+{
+    "modules": [
+        {
+            "name": "app-router.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} options - "
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "appRoute",
+            "tags": [
+                "@api public",
+                "@param {<type>} route - ",
+                "@param {<type>} methodName - "
+            ]
+        },
+        {
+            "name": "_processOnRoute",
+            "tags": [
+                "@api private",
+                "@param {<type>} routeName - ",
+                "@param {<type>} routeArgs - "
+            ]
+        },
+        {
+            "name": "processAppRoutes",
+            "tags": [
+                "@api public",
+                "@param {<type>} controller - ",
+                "@param {<type>} appRoutes - "
+            ]
+        },
+        {
+            "name": "_getController",
+            "tags": [
+                "@api private",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_addAppRoute",
+            "tags": [
+                "@api private",
+                "@param {<type>} controller - ",
+                "@param {<type>} route - ",
+                "@param {<type>} methodName - "
+            ]
+        }
+    ]
+}

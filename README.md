@@ -144,7 +144,7 @@ This file configures the source and destination paths.
 
 **json**: Where to save the JSON returned from your matching function.
 
-**yaml: Where to save the documentation YAML files.
+**yaml**: Where to save the documentation YAML files.
 
 **jsdoc**: Where to save the generated JSDoc files.
 

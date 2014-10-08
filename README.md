@@ -138,7 +138,7 @@ This file configures the source and destination paths.
 }
 ```
 
-**js**: The jf files you wish to document.
+**js**: The js files you wish to document.
 
 **ast**: Where to save the generated ASTs.
 
@@ -156,7 +156,7 @@ This file configures the source and destination paths.
 
 YAML template file names should be "slugified" with a `.tpl` extention. Example:
 
-The document type "functions" should have a corresponding template `functions.tpl`. At the moment templates are populated using Lodash (Underscore) templating. Because YAML is whitespace sensitive you may have to carefully watch where you place inline script 
+The syntax target type "functions" should have a corresponding template `functions.tpl`. At the moment templates are populated using Lodash (Underscore) templating. Because YAML is whitespace sensitive you may have to carefully watch where you place inline script.
 
 Example:
 
@@ -188,3 +188,5 @@ unbindFromStrings
       name: 
       example: |
 ```
+
+At the moment that is as far as I have gotten. You would then augment the stubbed YAML with examples and descriptions. The final step, comming soon, is to generate JSDoc files from the YAML ... 

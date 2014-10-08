@@ -1,0 +1,45 @@
+name: callbacks.js
+
+description: |
+  <module description>
+  
+constructor:
+  description: | 
+    @api public
+  
+  examples:
+    -
+      name:
+      example: |
+      
+add:
+  description: | 
+    @api public
+    @param {<type>} callback - 
+    @param {<type>} contextOverride - 
+  
+  examples:
+    -
+      name:
+      example: |
+      
+run:
+  description: | 
+    @api public
+    @param {<type>} options - 
+    @param {<type>} context - 
+  
+  examples:
+    -
+      name:
+      example: |
+      
+reset:
+  description: | 
+    @api public
+  
+  examples:
+    -
+      name:
+      example: |
+      

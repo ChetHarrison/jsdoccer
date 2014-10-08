@@ -203,7 +203,7 @@ _.extend(Lookup.prototype, {
 
 		_parseBranch(this.syntaxTree, results);
 
-		// console.log(JSON.stringify(results, null, 4));
+		console.log(JSON.stringify(results, null, 4));
 
 		return _jsonToYaml(results);
 	}

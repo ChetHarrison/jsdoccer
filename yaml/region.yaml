@@ -1,0 +1,211 @@
+name: region.js
+
+description: |
+  <module description>
+  
+constructor:
+  description: | 
+    @api public
+    @param {<type>} options - 
+  
+  examples:
+    -
+      name:
+      example: |
+      
+buildRegion:
+  description: | 
+    @api public
+    @param {<type>} regionConfig - 
+    @param {<type>} DefaultRegionClass - 
+  
+  examples:
+    -
+      name:
+      example: |
+      
+_buildRegionFromSelector:
+  description: | 
+    @api private
+    @param {<type>} selector - 
+    @param {<type>} DefaultRegionClass - 
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+_buildRegionFromObject:
+  description: | 
+    @api private
+    @param {<type>} regionConfig - 
+    @param {<type>} DefaultRegionClass - 
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+_buildRegionFromRegionClass:
+  description: | 
+    @api private
+    @param {<type>} RegionClass - 
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+show:
+  description: | 
+    @api public
+    @param {<type>} view - 
+    @param {<type>} options - 
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+name: before:swapOut
+
+description: |
+
+example: |
+      
+name: before:swap
+
+description: |
+
+example: |
+      
+name: before:show
+
+description: |
+
+example: |
+      
+name: swapOut
+
+description: |
+
+example: |
+      
+name: swap
+
+description: |
+
+example: |
+      
+name: show
+
+description: |
+
+example: |
+      
+_ensureElement:
+  description: | 
+    @api private
+  
+  examples:
+    -
+      name:
+      example: |
+      
+_ensureViewIsIntact:
+  description: | 
+    @api private
+    @param {<type>} view - 
+  
+  examples:
+    -
+      name:
+      example: |
+      
+getEl:
+  description: | 
+    @api public
+    @param {<type>} el - 
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+attachHtml:
+  description: | 
+    @api public
+    @param {<type>} view - 
+  
+  examples:
+    -
+      name:
+      example: |
+      
+empty:
+  description: | 
+    @api public
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+name: before:empty
+
+description: |
+
+example: |
+      
+name: empty
+
+description: |
+
+example: |
+      
+_destroyView:
+  description: | 
+    @api private
+  
+  examples:
+    -
+      name:
+      example: |
+      
+attachView:
+  description: | 
+    @api public
+    @param {<type>} view - 
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+hasView:
+  description: | 
+    @api public
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+reset:
+  description: | 
+    @api public
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      

@@ -1,0 +1,156 @@
+name: region-manager.js
+
+description: |
+  <module description>
+  
+constructor:
+  description: | 
+    @api public
+    @param {<type>} options - 
+  
+  examples:
+    -
+      name:
+      example: |
+      
+addRegions:
+  description: | 
+    @api public
+    @param {<type>} regionDefinitions - 
+    @param {<type>} defaults - 
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+addRegion:
+  description: | 
+    @api public
+    @param {<type>} name - 
+    @param {<type>} definition - 
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+name: before:add:region
+
+description: |
+
+example: |
+      
+name: add:region
+
+description: |
+
+example: |
+      
+get:
+  description: | 
+    @api public
+    @param {<type>} name - 
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+getRegions:
+  description: | 
+    @api public
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+removeRegion:
+  description: | 
+    @api public
+    @param {<type>} name - 
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+removeRegions:
+  description: | 
+    @api public
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+emptyRegions:
+  description: | 
+    @api public
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+destroy:
+  description: | 
+    @api public
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      
+_store:
+  description: | 
+    @api private
+    @param {<type>} name - 
+    @param {<type>} region - 
+  
+  examples:
+    -
+      name:
+      example: |
+      
+_remove:
+  description: | 
+    @api private
+    @param {<type>} name - 
+    @param {<type>} region - 
+  
+  examples:
+    -
+      name:
+      example: |
+      
+name: before:remove:region
+
+description: |
+
+example: |
+      
+name: remove:region
+
+description: |
+
+example: |
+      
+_setLength:
+  description: | 
+    @api private
+  
+  examples:
+    -
+      name:
+      example: |
+      

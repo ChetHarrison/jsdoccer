@@ -1,0 +1,35 @@
+name: error.js
+
+description: |
+  <module description>
+  
+constructor:
+  description: | 
+    @api public
+    @param {<type>} message - 
+    @param {<type>} options - 
+  
+  examples:
+    -
+      name:
+      example: |
+      
+captureStackTrace:
+  description: | 
+    @api public
+  
+  examples:
+    -
+      name:
+      example: |
+      
+toString:
+  description: | 
+    @api public
+    @returns {type} -
+  
+  examples:
+    -
+      name:
+      example: |
+      

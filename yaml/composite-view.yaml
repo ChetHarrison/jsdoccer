@@ -1,148 +1,152 @@
-name: composite-view.js
+modules
+  name: composite-view.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   
-constructor:
-  description: | 
-    @api public
+constructors
+  constructor:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-_initialEvents:
-  description: | 
-    @api private
+functions
+  _initialEvents:
+    description: | 
+      @api private
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-getChildView:
-  description: | 
-    @api public
-    @param {<type>} child - 
-    @returns {type} -
+  getChildView:
+    description: | 
+      @api public
+      @param {<type>} child - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-serializeData:
-  description: | 
-    @api public
-    @returns {type} -
+  serializeData:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-render:
-  description: | 
-    @api public
-    @returns {type} -
+  render:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-name: before:render
+  _renderChildren:
+    description: | 
+      @api private
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _renderTemplate:
+    description: | 
+      @api private
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  attachElContent:
+    description: | 
+      @api public
+      @param {<type>} html - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  attachBuffer:
+    description: | 
+      @api public
+      @param {<type>} compositeView - 
+      @param {<type>} buffer - 
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _insertAfter:
+    description: | 
+      @api private
+      @param {<type>} childView - 
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  getChildViewContainer:
+    description: | 
+      @api public
+      @param {<type>} containerView - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  resetChildViewContainer:
+    description: | 
+      @api public
+  
+    examples:
+      -
+        name:
+        example: |
+      
+events
+  name: before:render
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: render
+  name: render
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-_renderChildren:
-  description: | 
-    @api private
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_renderTemplate:
-  description: | 
-    @api private
-  
-  examples:
-    -
-      name:
-      example: |
-      
-name: before:render:template
+  name: before:render:template
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: render:template
+  name: render:template
 
-description: |
+  description: |
 
-example: |
-      
-attachElContent:
-  description: | 
-    @api public
-    @param {<type>} html - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-attachBuffer:
-  description: | 
-    @api public
-    @param {<type>} compositeView - 
-    @param {<type>} buffer - 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_insertAfter:
-  description: | 
-    @api private
-    @param {<type>} childView - 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-getChildViewContainer:
-  description: | 
-    @api public
-    @param {<type>} containerView - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-resetChildViewContainer:
-  description: | 
-    @api public
-  
-  examples:
-    -
-      name:
-      example: |
+  example: |
       

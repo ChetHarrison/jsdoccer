@@ -6,6 +6,9 @@
 		"dest": "./ast/",
 		"save": true
 	},
+	"json": {
+		"dest": "./json/"
+	},
 	"yaml": {
 		"templates": "./templates/",
 		"dest": "./yaml/",

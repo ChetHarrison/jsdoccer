@@ -1,88 +1,92 @@
-name: item-view.js
+modules
+  name: item-view.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   
-constructor:
-  description: | 
-    @api public
+constructors
+  constructor:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-serializeData:
-  description: | 
-    @api public
-    @returns {type} -
+functions
+  serializeData:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-serializeCollection:
-  description: | 
-    @api public
-    @param {<type>} collection - 
-    @returns {type} -
+  serializeCollection:
+    description: | 
+      @api public
+      @param {<type>} collection - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-render:
-  description: | 
-    @api public
-    @returns {type} -
+  render:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-name: before:render
+  _renderTemplate:
+    description: | 
+      @api private
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  attachElContent:
+    description: | 
+      @api public
+      @param {<type>} html - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  destroy:
+    description: | 
+      @api public
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+events
+  name: before:render
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: render
+  name: render
 
-description: |
+  description: |
 
-example: |
-      
-_renderTemplate:
-  description: | 
-    @api private
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-attachElContent:
-  description: | 
-    @api public
-    @param {<type>} html - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-destroy:
-  description: | 
-    @api public
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
+  example: |
       

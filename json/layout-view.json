@@ -1,0 +1,126 @@
+{
+    "modules": [
+        {
+            "name": "layout-view.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} options - "
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "render",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "destroy",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "addRegion",
+            "tags": [
+                "@api public",
+                "@param {<type>} name - ",
+                "@param {<type>} definition - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "addRegions",
+            "tags": [
+                "@api public",
+                "@param {<type>} regions - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "removeRegion",
+            "tags": [
+                "@api public",
+                "@param {<type>} name - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "getRegion",
+            "tags": [
+                "@api public",
+                "@param {<type>} region - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "getRegions",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_buildRegions",
+            "tags": [
+                "@api private",
+                "@param {<type>} regions - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "parentEl",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_initializeRegions",
+            "tags": [
+                "@api private",
+                "@param {<type>} options - "
+            ]
+        },
+        {
+            "name": "_reInitializeRegions",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "getRegionManager",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_initRegionManager",
+            "tags": [
+                "@api private"
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "before:add:region"
+        },
+        {
+            "name": "add:region"
+        },
+        {
+            "name": "before:remove:region"
+        },
+        {
+            "name": "remove:region"
+        }
+    ]
+}

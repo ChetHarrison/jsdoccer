@@ -126,7 +126,7 @@ module.exports = {
 
 
 
-		methods: function(ast) {
+		functions: function(ast) {
 			var json = [ast].
 				filter(function (ast) {
 					return ast.type === 'Property' &&
@@ -145,7 +145,7 @@ module.exports = {
 							map(function (param) {
 								return '@param {<type>} ' + param.name + ' - ';
 							}),
-							_hasReturn(property.value.body.body) ? ['@returns {type} -'] : []
+							_hasReturn(property.value.body.body) ? ['@returns {<type>} -'] : []
 						].mergeAll()
 					};
 				});

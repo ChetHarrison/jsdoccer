@@ -1,0 +1,7 @@
+{
+    "modules": [
+        {
+            "name": "dom-refresh.js"
+        }
+    ]
+}

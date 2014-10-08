@@ -1,67 +1,70 @@
-name: template-cache.js
+modules
+  name: template-cache.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   
-constructor:
-  description: | 
-    @api public
-    @param {<type>} templateId - 
+constructors
+  constructor:
+    description: | 
+      @api public
+      @param {<type>} templateId - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-get:
-  description: | 
-    @api public
-    @param {<type>} templateId - 
-    @returns {type} -
+functions
+  get:
+    description: | 
+      @api public
+      @param {<type>} templateId - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-clear:
-  description: | 
-    @api public
+  clear:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-load:
-  description: | 
-    @api public
-    @returns {type} -
+  load:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-loadTemplate:
-  description: | 
-    @api public
-    @param {<type>} templateId - 
-    @returns {type} -
+  loadTemplate:
+    description: | 
+      @api public
+      @param {<type>} templateId - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-compileTemplate:
-  description: | 
-    @api public
-    @param {<type>} rawTemplate - 
-    @returns {type} -
+  compileTemplate:
+    description: | 
+      @api public
+      @param {<type>} rawTemplate - 
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       

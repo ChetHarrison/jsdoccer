@@ -1,0 +1,132 @@
+{
+    "modules": [
+        {
+            "name": "application.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} options - "
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "initialize",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "execute",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "request",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "addInitializer",
+            "tags": [
+                "@api public",
+                "@param {<type>} initializer - "
+            ]
+        },
+        {
+            "name": "start",
+            "tags": [
+                "@api public",
+                "@param {<type>} options - "
+            ]
+        },
+        {
+            "name": "addRegions",
+            "tags": [
+                "@api public",
+                "@param {<type>} regions - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "emptyRegions",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "removeRegion",
+            "tags": [
+                "@api public",
+                "@param {<type>} region - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "getRegion",
+            "tags": [
+                "@api public",
+                "@param {<type>} region - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "getRegions",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "module",
+            "tags": [
+                "@api public",
+                "@param {<type>} moduleNames - ",
+                "@param {<type>} moduleDefinition - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "getRegionManager",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_initializeRegions",
+            "tags": [
+                "@api private",
+                "@param {<type>} options - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_initRegionManager",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "_initChannel",
+            "tags": [
+                "@api private"
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "before:start"
+        },
+        {
+            "name": "start"
+        }
+    ]
+}

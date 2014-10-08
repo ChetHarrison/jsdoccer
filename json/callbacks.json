@@ -1,0 +1,38 @@
+{
+    "modules": [
+        {
+            "name": "callbacks.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public"
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "add",
+            "tags": [
+                "@api public",
+                "@param {<type>} callback - ",
+                "@param {<type>} contextOverride - "
+            ]
+        },
+        {
+            "name": "run",
+            "tags": [
+                "@api public",
+                "@param {<type>} options - ",
+                "@param {<type>} context - "
+            ]
+        },
+        {
+            "name": "reset",
+            "tags": [
+                "@api public"
+            ]
+        }
+    ]
+}

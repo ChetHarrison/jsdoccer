@@ -1,0 +1,154 @@
+{
+    "modules": [
+        {
+            "name": "module.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} moduleName - ",
+                "@param {<type>} app - ",
+                "@param {<type>} options - "
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "initialize",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "addInitializer",
+            "tags": [
+                "@api public",
+                "@param {<type>} callback - "
+            ]
+        },
+        {
+            "name": "addFinalizer",
+            "tags": [
+                "@api public",
+                "@param {<type>} callback - "
+            ]
+        },
+        {
+            "name": "start",
+            "tags": [
+                "@api public",
+                "@param {<type>} options - "
+            ]
+        },
+        {
+            "name": "stop",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "addDefinition",
+            "tags": [
+                "@api public",
+                "@param {<type>} moduleDefinition - ",
+                "@param {<type>} customArgs - "
+            ]
+        },
+        {
+            "name": "_runModuleDefinition",
+            "tags": [
+                "@api private",
+                "@param {<type>} definition - ",
+                "@param {<type>} customArgs - "
+            ]
+        },
+        {
+            "name": "_setupInitializersAndFinalizers",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "create",
+            "tags": [
+                "@api public",
+                "@param {<type>} app - ",
+                "@param {<type>} moduleNames - ",
+                "@param {<type>} moduleDefinition - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_getModule",
+            "tags": [
+                "@api private",
+                "@param {<type>} parentModule - ",
+                "@param {<type>} moduleName - ",
+                "@param {<type>} app - ",
+                "@param {<type>} def - ",
+                "@param {<type>} args - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "getClass",
+            "tags": [
+                "@api public",
+                "@param {<type>} moduleDefinition - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_addModuleDefinition",
+            "tags": [
+                "@api private",
+                "@param {<type>} parentModule - ",
+                "@param {<type>} module - ",
+                "@param {<type>} def - ",
+                "@param {<type>} args - "
+            ]
+        },
+        {
+            "name": "_getStartWithParent",
+            "tags": [
+                "@api private",
+                "@param {<type>} def - ",
+                "@param {<type>} module - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_getDefine",
+            "tags": [
+                "@api private",
+                "@param {<type>} def - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_addStartWithParent",
+            "tags": [
+                "@api private",
+                "@param {<type>} parentModule - ",
+                "@param {<type>} module - ",
+                "@param {<type>} startWithParent - "
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "before:start"
+        },
+        {
+            "name": "start"
+        },
+        {
+            "name": "before:stop"
+        },
+        {
+            "name": "stop"
+        }
+    ]
+}

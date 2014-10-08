@@ -1,0 +1,37 @@
+{
+    "modules": [
+        {
+            "name": "object.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} options - "
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "initialize",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "destroy",
+            "tags": [
+                "@api public"
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "before:destroy"
+        },
+        {
+            "name": "destroy"
+        }
+    ]
+}

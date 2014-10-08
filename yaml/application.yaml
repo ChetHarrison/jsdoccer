@@ -1,179 +1,183 @@
-name: application.js
+modules
+  name: application.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   
-constructor:
-  description: | 
-    @api public
-    @param {<type>} options - 
+constructors
+  constructor:
+    description: | 
+      @api public
+      @param {<type>} options - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-initialize:
-  description: | 
-    @api public
+functions
+  initialize:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-execute:
-  description: | 
-    @api public
+  execute:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-request:
-  description: | 
-    @api public
-    @returns {type} -
+  request:
+    description: | 
+      @api public
+      @returns {<type>} -
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-addInitializer:
-  description: | 
-    @api public
-    @param {<type>} initializer - 
+  addInitializer:
+    description: | 
+      @api public
+      @param {<type>} initializer - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-start:
-  description: | 
-    @api public
-    @param {<type>} options - 
+  start:
+    description: | 
+      @api public
+      @param {<type>} options - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-name: before:start
+  addRegions:
+    description: | 
+      @api public
+      @param {<type>} regions - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  emptyRegions:
+    description: | 
+      @api public
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  removeRegion:
+    description: | 
+      @api public
+      @param {<type>} region - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  getRegion:
+    description: | 
+      @api public
+      @param {<type>} region - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  getRegions:
+    description: | 
+      @api public
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  module:
+    description: | 
+      @api public
+      @param {<type>} moduleNames - 
+      @param {<type>} moduleDefinition - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  getRegionManager:
+    description: | 
+      @api public
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _initializeRegions:
+    description: | 
+      @api private
+      @param {<type>} options - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _initRegionManager:
+    description: | 
+      @api private
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _initChannel:
+    description: | 
+      @api private
+  
+    examples:
+      -
+        name:
+        example: |
+      
+events
+  name: before:start
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: start
+  name: start
 
-description: |
+  description: |
 
-example: |
-      
-addRegions:
-  description: | 
-    @api public
-    @param {<type>} regions - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-emptyRegions:
-  description: | 
-    @api public
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-removeRegion:
-  description: | 
-    @api public
-    @param {<type>} region - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-getRegion:
-  description: | 
-    @api public
-    @param {<type>} region - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-getRegions:
-  description: | 
-    @api public
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-module:
-  description: | 
-    @api public
-    @param {<type>} moduleNames - 
-    @param {<type>} moduleDefinition - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-getRegionManager:
-  description: | 
-    @api public
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_initializeRegions:
-  description: | 
-    @api private
-    @param {<type>} options - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_initRegionManager:
-  description: | 
-    @api private
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_initChannel:
-  description: | 
-    @api private
-  
-  examples:
-    -
-      name:
-      example: |
+  example: |
       

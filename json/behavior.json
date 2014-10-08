@@ -1,0 +1,28 @@
+{
+    "modules": [
+        {
+            "name": "behavior.js"
+        }
+    ],
+    "functions": [
+        {
+            "name": "initialize",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "destroy",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "proxyViewProperties",
+            "tags": [
+                "@api public",
+                "@param {<type>} view - "
+            ]
+        }
+    ]
+}

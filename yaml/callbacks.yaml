@@ -1,45 +1,48 @@
-name: callbacks.js
+modules
+  name: callbacks.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   
-constructor:
-  description: | 
-    @api public
+constructors
+  constructor:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-add:
-  description: | 
-    @api public
-    @param {<type>} callback - 
-    @param {<type>} contextOverride - 
+functions
+  add:
+    description: | 
+      @api public
+      @param {<type>} callback - 
+      @param {<type>} contextOverride - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-run:
-  description: | 
-    @api public
-    @param {<type>} options - 
-    @param {<type>} context - 
+  run:
+    description: | 
+      @api public
+      @param {<type>} options - 
+      @param {<type>} context - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-reset:
-  description: | 
-    @api public
+  reset:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       

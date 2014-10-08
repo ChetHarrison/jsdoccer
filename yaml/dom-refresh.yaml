@@ -1,5 +1,6 @@
-name: dom-refresh.js
+modules
+  name: dom-refresh.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   

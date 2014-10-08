@@ -1,0 +1,31 @@
+{
+    "modules": [
+        {
+            "name": "error.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} message - ",
+                "@param {<type>} options - "
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "captureStackTrace",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "toString",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        }
+    ]
+}

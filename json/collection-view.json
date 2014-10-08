@@ -1,0 +1,318 @@
+{
+    "modules": [
+        {
+            "name": "collection-view.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} options - "
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "initRenderBuffer",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "startBuffering",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "endBuffering",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "_triggerBeforeShowBufferedChildren",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "_triggerShowBufferedChildren",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "_triggerMethodOnChild",
+            "tags": [
+                "@api private",
+                "@param {<type>} event - ",
+                "@param {<type>} childView - "
+            ]
+        },
+        {
+            "name": "_initialEvents",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "_onCollectionAdd",
+            "tags": [
+                "@api private",
+                "@param {<type>} child - "
+            ]
+        },
+        {
+            "name": "_onCollectionRemove",
+            "tags": [
+                "@api private",
+                "@param {<type>} model - "
+            ]
+        },
+        {
+            "name": "onShowCalled",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "render",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "resortView",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "_sortViews",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "_renderChildren",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "showCollection",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "showEmptyView",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "destroyEmptyView",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "getEmptyView",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "addEmptyView",
+            "tags": [
+                "@api public",
+                "@param {<type>} child - ",
+                "@param {<type>} EmptyView - "
+            ]
+        },
+        {
+            "name": "getChildView",
+            "tags": [
+                "@api public",
+                "@param {<type>} child - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "addChild",
+            "tags": [
+                "@api public",
+                "@param {<type>} child - ",
+                "@param {<type>} ChildView - ",
+                "@param {<type>} index - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_updateIndices",
+            "tags": [
+                "@api private",
+                "@param {<type>} view - ",
+                "@param {<type>} increment - ",
+                "@param {<type>} index - "
+            ]
+        },
+        {
+            "name": "_addChildView",
+            "tags": [
+                "@api private",
+                "@param {<type>} view - ",
+                "@param {<type>} index - "
+            ]
+        },
+        {
+            "name": "renderChildView",
+            "tags": [
+                "@api public",
+                "@param {<type>} view - ",
+                "@param {<type>} index - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "buildChildView",
+            "tags": [
+                "@api public",
+                "@param {<type>} child - ",
+                "@param {<type>} ChildViewClass - ",
+                "@param {<type>} childViewOptions - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "removeChildView",
+            "tags": [
+                "@api public",
+                "@param {<type>} view - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "isEmpty",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "checkEmpty",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "attachBuffer",
+            "tags": [
+                "@api public",
+                "@param {<type>} collectionView - ",
+                "@param {<type>} buffer - "
+            ]
+        },
+        {
+            "name": "attachHtml",
+            "tags": [
+                "@api public",
+                "@param {<type>} collectionView - ",
+                "@param {<type>} childView - ",
+                "@param {<type>} index - "
+            ]
+        },
+        {
+            "name": "_insertBefore",
+            "tags": [
+                "@api private",
+                "@param {<type>} childView - ",
+                "@param {<type>} index - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_insertAfter",
+            "tags": [
+                "@api private",
+                "@param {<type>} childView - "
+            ]
+        },
+        {
+            "name": "_initChildViewStorage",
+            "tags": [
+                "@api private"
+            ]
+        },
+        {
+            "name": "destroy",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "destroyChildren",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "proxyChildEvents",
+            "tags": [
+                "@api public",
+                "@param {<type>} view - "
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "before:render"
+        },
+        {
+            "name": "render"
+        },
+        {
+            "name": "before:render:collection"
+        },
+        {
+            "name": "render:collection"
+        },
+        {
+            "name": "before:render:empty"
+        },
+        {
+            "name": "render:empty"
+        },
+        {
+            "name": "before:remove:empty"
+        },
+        {
+            "name": "remove:empty"
+        },
+        {
+            "name": "before:add:child"
+        },
+        {
+            "name": "add:child"
+        },
+        {
+            "name": "before:remove:child"
+        },
+        {
+            "name": "remove:child"
+        },
+        {
+            "name": "before:destroy:collection"
+        },
+        {
+            "name": "destroy:collection"
+        }
+    ]
+}

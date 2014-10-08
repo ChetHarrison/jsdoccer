@@ -1,33 +1,35 @@
-name: behavior.js
+modules
+  name: behavior.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   
-initialize:
-  description: | 
-    @api public
+functions
+  initialize:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-destroy:
-  description: | 
-    @api public
+  destroy:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-proxyViewProperties:
-  description: | 
-    @api public
-    @param {<type>} view - 
+  proxyViewProperties:
+    description: | 
+      @api public
+      @param {<type>} view - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       

@@ -1,207 +1,211 @@
-name: module.js
+modules
+  name: module.js
 
-description: |
-  <module description>
+  description: |
+    <module description>
   
-constructor:
-  description: | 
-    @api public
-    @param {<type>} moduleName - 
-    @param {<type>} app - 
-    @param {<type>} options - 
+constructors
+  constructor:
+    description: | 
+      @api public
+      @param {<type>} moduleName - 
+      @param {<type>} app - 
+      @param {<type>} options - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-initialize:
-  description: | 
-    @api public
+functions
+  initialize:
+    description: | 
+      @api public
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-addInitializer:
-  description: | 
-    @api public
-    @param {<type>} callback - 
+  addInitializer:
+    description: | 
+      @api public
+      @param {<type>} callback - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-addFinalizer:
-  description: | 
-    @api public
-    @param {<type>} callback - 
+  addFinalizer:
+    description: | 
+      @api public
+      @param {<type>} callback - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-start:
-  description: | 
-    @api public
-    @param {<type>} options - 
+  start:
+    description: | 
+      @api public
+      @param {<type>} options - 
   
-  examples:
-    -
-      name:
-      example: |
+    examples:
+      -
+        name:
+        example: |
       
-name: before:start
+  stop:
+    description: | 
+      @api public
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  addDefinition:
+    description: | 
+      @api public
+      @param {<type>} moduleDefinition - 
+      @param {<type>} customArgs - 
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _runModuleDefinition:
+    description: | 
+      @api private
+      @param {<type>} definition - 
+      @param {<type>} customArgs - 
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _setupInitializersAndFinalizers:
+    description: | 
+      @api private
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  create:
+    description: | 
+      @api public
+      @param {<type>} app - 
+      @param {<type>} moduleNames - 
+      @param {<type>} moduleDefinition - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _getModule:
+    description: | 
+      @api private
+      @param {<type>} parentModule - 
+      @param {<type>} moduleName - 
+      @param {<type>} app - 
+      @param {<type>} def - 
+      @param {<type>} args - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  getClass:
+    description: | 
+      @api public
+      @param {<type>} moduleDefinition - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _addModuleDefinition:
+    description: | 
+      @api private
+      @param {<type>} parentModule - 
+      @param {<type>} module - 
+      @param {<type>} def - 
+      @param {<type>} args - 
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _getStartWithParent:
+    description: | 
+      @api private
+      @param {<type>} def - 
+      @param {<type>} module - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _getDefine:
+    description: | 
+      @api private
+      @param {<type>} def - 
+      @returns {<type>} -
+  
+    examples:
+      -
+        name:
+        example: |
+      
+  _addStartWithParent:
+    description: | 
+      @api private
+      @param {<type>} parentModule - 
+      @param {<type>} module - 
+      @param {<type>} startWithParent - 
+  
+    examples:
+      -
+        name:
+        example: |
+      
+events
+  name: before:start
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: start
+  name: start
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-stop:
-  description: | 
-    @api public
-  
-  examples:
-    -
-      name:
-      example: |
-      
-name: before:stop
+  name: before:stop
 
-description: |
+  description: |
 
-example: |
+  example: |
       
-name: stop
+  name: stop
 
-description: |
+  description: |
 
-example: |
-      
-addDefinition:
-  description: | 
-    @api public
-    @param {<type>} moduleDefinition - 
-    @param {<type>} customArgs - 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_runModuleDefinition:
-  description: | 
-    @api private
-    @param {<type>} definition - 
-    @param {<type>} customArgs - 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_setupInitializersAndFinalizers:
-  description: | 
-    @api private
-  
-  examples:
-    -
-      name:
-      example: |
-      
-create:
-  description: | 
-    @api public
-    @param {<type>} app - 
-    @param {<type>} moduleNames - 
-    @param {<type>} moduleDefinition - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_getModule:
-  description: | 
-    @api private
-    @param {<type>} parentModule - 
-    @param {<type>} moduleName - 
-    @param {<type>} app - 
-    @param {<type>} def - 
-    @param {<type>} args - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-getClass:
-  description: | 
-    @api public
-    @param {<type>} moduleDefinition - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_addModuleDefinition:
-  description: | 
-    @api private
-    @param {<type>} parentModule - 
-    @param {<type>} module - 
-    @param {<type>} def - 
-    @param {<type>} args - 
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_getStartWithParent:
-  description: | 
-    @api private
-    @param {<type>} def - 
-    @param {<type>} module - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_getDefine:
-  description: | 
-    @api private
-    @param {<type>} def - 
-    @returns {type} -
-  
-  examples:
-    -
-      name:
-      example: |
-      
-_addStartWithParent:
-  description: | 
-    @api private
-    @param {<type>} parentModule - 
-    @param {<type>} module - 
-    @param {<type>} startWithParent - 
-  
-  examples:
-    -
-      name:
-      example: |
+  example: |
       

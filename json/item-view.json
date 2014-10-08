@@ -1,0 +1,68 @@
+{
+    "modules": [
+        {
+            "name": "item-view.js"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public"
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "name": "serializeData",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "serializeCollection",
+            "tags": [
+                "@api public",
+                "@param {<type>} collection - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "render",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "_renderTemplate",
+            "tags": [
+                "@api private",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "attachElContent",
+            "tags": [
+                "@api public",
+                "@param {<type>} html - ",
+                "@returns {<type>} -"
+            ]
+        },
+        {
+            "name": "destroy",
+            "tags": [
+                "@api public",
+                "@returns {<type>} -"
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "before:render"
+        },
+        {
+            "name": "render"
+        }
+    ]
+}

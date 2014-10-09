@@ -1,0 +1,644 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+            "type": "Identifier",
+            "name": "Marionette"
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "Behavior"
+          }
+        },
+        "right": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "FunctionExpression",
+            "id": null,
+            "params": [
+              {
+                "type": "Identifier",
+                "name": "_"
+              },
+              {
+                "type": "Identifier",
+                "name": "Backbone"
+              }
+            ],
+            "defaults": [],
+            "body": {
+              "type": "BlockStatement",
+              "body": [
+                {
+                  "type": "FunctionDeclaration",
+                  "id": {
+                    "type": "Identifier",
+                    "name": "Behavior"
+                  },
+                  "params": [
+                    {
+                      "type": "Identifier",
+                      "name": "options"
+                    },
+                    {
+                      "type": "Identifier",
+                      "name": "view"
+                    }
+                  ],
+                  "defaults": [],
+                  "body": {
+                    "type": "BlockStatement",
+                    "body": [
+                      {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                          "type": "AssignmentExpression",
+                          "operator": "=",
+                          "left": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "ThisExpression"
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "view"
+                            }
+                          },
+                          "right": {
+                            "type": "Identifier",
+                            "name": "view"
+                          }
+                        }
+                      },
+                      {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                          "type": "AssignmentExpression",
+                          "operator": "=",
+                          "left": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "ThisExpression"
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "defaults"
+                            }
+                          },
+                          "right": {
+                            "type": "LogicalExpression",
+                            "operator": "||",
+                            "left": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "Identifier",
+                                  "name": "_"
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "result"
+                                }
+                              },
+                              "arguments": [
+                                {
+                                  "type": "ThisExpression"
+                                },
+                                {
+                                  "type": "Literal",
+                                  "value": "defaults",
+                                  "raw": "'defaults'"
+                                }
+                              ]
+                            },
+                            "right": {
+                              "type": "ObjectExpression",
+                              "properties": []
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                          "type": "AssignmentExpression",
+                          "operator": "=",
+                          "left": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "ThisExpression"
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "options"
+                            }
+                          },
+                          "right": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "_"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "extend"
+                              }
+                            },
+                            "arguments": [
+                              {
+                                "type": "ObjectExpression",
+                                "properties": []
+                              },
+                              {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "ThisExpression"
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "defaults"
+                                }
+                              },
+                              {
+                                "type": "Identifier",
+                                "name": "options"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                          "type": "AssignmentExpression",
+                          "operator": "=",
+                          "left": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "ThisExpression"
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "$"
+                            }
+                          },
+                          "right": {
+                            "type": "FunctionExpression",
+                            "id": null,
+                            "params": [],
+                            "defaults": [],
+                            "body": {
+                              "type": "BlockStatement",
+                              "body": [
+                                {
+                                  "type": "ReturnStatement",
+                                  "argument": {
+                                    "type": "CallExpression",
+                                    "callee": {
+                                      "type": "MemberExpression",
+                                      "computed": false,
+                                      "object": {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                          "type": "MemberExpression",
+                                          "computed": false,
+                                          "object": {
+                                            "type": "ThisExpression"
+                                          },
+                                          "property": {
+                                            "type": "Identifier",
+                                            "name": "view"
+                                          }
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "$"
+                                        }
+                                      },
+                                      "property": {
+                                        "type": "Identifier",
+                                        "name": "apply"
+                                      }
+                                    },
+                                    "arguments": [
+                                      {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                          "type": "ThisExpression"
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "view"
+                                        }
+                                      },
+                                      {
+                                        "type": "Identifier",
+                                        "name": "arguments"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            "rest": null,
+                            "generator": false,
+                            "expression": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "initialize"
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "apply"
+                            }
+                          },
+                          "arguments": [
+                            {
+                              "type": "ThisExpression"
+                            },
+                            {
+                              "type": "Identifier",
+                              "name": "arguments"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "rest": null,
+                  "generator": false,
+                  "expression": false
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "expression": {
+                    "type": "CallExpression",
+                    "callee": {
+                      "type": "MemberExpression",
+                      "computed": false,
+                      "object": {
+                        "type": "Identifier",
+                        "name": "_"
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "extend"
+                      }
+                    },
+                    "arguments": [
+                      {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "Identifier",
+                          "name": "Behavior"
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "prototype"
+                        }
+                      },
+                      {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "Identifier",
+                          "name": "Backbone"
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "Events"
+                        }
+                      },
+                      {
+                        "type": "ObjectExpression",
+                        "properties": [
+                          {
+                            "type": "Property",
+                            "key": {
+                              "type": "Identifier",
+                              "name": "initialize"
+                            },
+                            "value": {
+                              "type": "FunctionExpression",
+                              "id": null,
+                              "params": [],
+                              "defaults": [],
+                              "body": {
+                                "type": "BlockStatement",
+                                "body": []
+                              },
+                              "rest": null,
+                              "generator": false,
+                              "expression": false
+                            },
+                            "kind": "init"
+                          },
+                          {
+                            "type": "Property",
+                            "key": {
+                              "type": "Identifier",
+                              "name": "destroy"
+                            },
+                            "value": {
+                              "type": "FunctionExpression",
+                              "id": null,
+                              "params": [],
+                              "defaults": [],
+                              "body": {
+                                "type": "BlockStatement",
+                                "body": [
+                                  {
+                                    "type": "ExpressionStatement",
+                                    "expression": {
+                                      "type": "CallExpression",
+                                      "callee": {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                          "type": "ThisExpression"
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "stopListening"
+                                        }
+                                      },
+                                      "arguments": []
+                                    }
+                                  }
+                                ]
+                              },
+                              "rest": null,
+                              "generator": false,
+                              "expression": false
+                            },
+                            "kind": "init"
+                          },
+                          {
+                            "type": "Property",
+                            "key": {
+                              "type": "Identifier",
+                              "name": "proxyViewProperties"
+                            },
+                            "value": {
+                              "type": "FunctionExpression",
+                              "id": null,
+                              "params": [
+                                {
+                                  "type": "Identifier",
+                                  "name": "view"
+                                }
+                              ],
+                              "defaults": [],
+                              "body": {
+                                "type": "BlockStatement",
+                                "body": [
+                                  {
+                                    "type": "ExpressionStatement",
+                                    "expression": {
+                                      "type": "AssignmentExpression",
+                                      "operator": "=",
+                                      "left": {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                          "type": "ThisExpression"
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "$el"
+                                        }
+                                      },
+                                      "right": {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                          "type": "Identifier",
+                                          "name": "view"
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "$el"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "ExpressionStatement",
+                                    "expression": {
+                                      "type": "AssignmentExpression",
+                                      "operator": "=",
+                                      "left": {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                          "type": "ThisExpression"
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "el"
+                                        }
+                                      },
+                                      "right": {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                          "type": "Identifier",
+                                          "name": "view"
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "el"
+                                        }
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              "rest": null,
+                              "generator": false,
+                              "expression": false
+                            },
+                            "kind": "init"
+                          },
+                          {
+                            "type": "Property",
+                            "key": {
+                              "type": "Identifier",
+                              "name": "triggerMethod"
+                            },
+                            "value": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "Marionette"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "triggerMethod"
+                              }
+                            },
+                            "kind": "init"
+                          },
+                          {
+                            "type": "Property",
+                            "key": {
+                              "type": "Identifier",
+                              "name": "getOption"
+                            },
+                            "value": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "Marionette"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "proxyGetOption"
+                              }
+                            },
+                            "kind": "init"
+                          },
+                          {
+                            "type": "Property",
+                            "key": {
+                              "type": "Identifier",
+                              "name": "bindEntityEvents"
+                            },
+                            "value": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "Marionette"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "proxyBindEntityEvents"
+                              }
+                            },
+                            "kind": "init"
+                          },
+                          {
+                            "type": "Property",
+                            "key": {
+                              "type": "Identifier",
+                              "name": "unbindEntityEvents"
+                            },
+                            "value": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "Marionette"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "proxyUnbindEntityEvents"
+                              }
+                            },
+                            "kind": "init"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "expression": {
+                    "type": "AssignmentExpression",
+                    "operator": "=",
+                    "left": {
+                      "type": "MemberExpression",
+                      "computed": false,
+                      "object": {
+                        "type": "Identifier",
+                        "name": "Behavior"
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "extend"
+                      }
+                    },
+                    "right": {
+                      "type": "MemberExpression",
+                      "computed": false,
+                      "object": {
+                        "type": "Identifier",
+                        "name": "Marionette"
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "extend"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "ReturnStatement",
+                  "argument": {
+                    "type": "Identifier",
+                    "name": "Behavior"
+                  }
+                }
+              ]
+            },
+            "rest": null,
+            "generator": false,
+            "expression": false
+          },
+          "arguments": [
+            {
+              "type": "Identifier",
+              "name": "_"
+            },
+            {
+              "type": "Identifier",
+              "name": "Backbone"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

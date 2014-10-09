@@ -14,7 +14,7 @@ From the command line
 ```
 $ git clone git@github.com:ChetHarrison/jsdoccer.git
 $ cd jsdoccer
-$ node document.js
+$ node run.js
 ```
 
 **Note: JSDoccer comes with some default syntax to document your JS. In order to configure it to specific syntax you will need to adapt the `.jsdoccerrc` file add target syntax AST tests to the `syntax-to-document.js` file and add any custom YAML templates to the `templates` directory.** *whoo that's a lot o config, but hopefully worth it!*

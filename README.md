@@ -21,7 +21,7 @@ $ node document.js
 
 ### What You Need To Know About ASTs
 
-An AST or Abstract Syntax Tree is a typed representation of valid code. Esprima will parse ASTs from valid ECMAScript and ESCodeGen provides an "inverse" operation that will generate valid ECMAScript from Esprima ASTs.
+An AST or Abstract Syntax Tree is a typed representation of valid code. Esprima will parse valid ECMAScript and generate an AST. ESCodeGen provides an "inverse" operation that will generate valid ECMAScript from Esprima ASTs.
 
 Esprima will parse this:
 
@@ -29,7 +29,7 @@ Esprima will parse this:
 var answer = 42;
 ```
 
-into this AST:
+and generate this AST:
 
 ```
 {

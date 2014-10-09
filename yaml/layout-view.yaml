@@ -1,10 +1,10 @@
-modules
+modules:
   name: LayoutView
 
   description: |
   
   
-constructors
+constructors:
   constructor:
     description: | 
       @api public
@@ -12,11 +12,11 @@ constructors
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
+          <example>
       
-properties
+properties:
   _firstRender: |
     <description>
   
@@ -42,7 +42,7 @@ properties
   
     @type {<type>}
     
-functions
+functions:
   render:
     description: | 
       @api public
@@ -50,10 +50,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   destroy:
     description: | 
       @api public
@@ -61,10 +61,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   addRegion:
     description: | 
       @api public
@@ -74,10 +74,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   addRegions:
     description: | 
       @api public
@@ -86,10 +86,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   removeRegion:
     description: | 
       @api public
@@ -98,10 +98,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getRegion:
     description: | 
       @api public
@@ -110,10 +110,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getRegions:
     description: | 
       @api public
@@ -121,10 +121,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _buildRegions:
     description: | 
       @api private
@@ -133,10 +133,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   parentEl:
     description: | 
       @api public
@@ -144,10 +144,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _initializeRegions:
     description: | 
       @api private
@@ -155,20 +155,20 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _reInitializeRegions:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getRegionManager:
     description: | 
       @api public
@@ -176,21 +176,21 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _initRegionManager:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
-events
+          <example>
+          
+events:
   name: before:add:region
 
   description: | 

@@ -1,10 +1,10 @@
-modules
+modules:
   name: Region
 
   description: |
   
   
-constructors
+constructors:
   constructor:
     description: | 
       @api public
@@ -12,11 +12,11 @@ constructors
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
+          <example>
       
-properties
+properties:
   options: |
     <description>
   
@@ -62,7 +62,7 @@ properties
   
     @type {<type>}
     
-functions
+functions:
   buildRegion:
     description: | 
       @api public
@@ -71,10 +71,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _buildRegionFromSelector:
     description: | 
       @api private
@@ -84,10 +84,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _buildRegionFromObject:
     description: | 
       @api private
@@ -97,10 +97,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _buildRegionFromRegionClass:
     description: | 
       @api private
@@ -109,10 +109,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   show:
     description: | 
       @api public
@@ -122,20 +122,20 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _ensureElement:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _ensureViewIsIntact:
     description: | 
       @api private
@@ -143,10 +143,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getEl:
     description: | 
       @api public
@@ -155,10 +155,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   attachHtml:
     description: | 
       @api public
@@ -166,10 +166,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   empty:
     description: | 
       @api public
@@ -177,20 +177,20 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _destroyView:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   attachView:
     description: | 
       @api public
@@ -199,10 +199,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   hasView:
     description: | 
       @api public
@@ -210,10 +210,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   reset:
     description: | 
       @api public
@@ -221,11 +221,11 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
-events
+          <example>
+          
+events:
   name: before:swapOut
 
   description: | 

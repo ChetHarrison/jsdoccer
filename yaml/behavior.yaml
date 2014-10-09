@@ -1,10 +1,10 @@
-modules
+modules:
   name: Behavior
 
   description: |
   
   
-properties
+properties:
   view: |
     <description>
   
@@ -35,27 +35,27 @@ properties
   
     @type {<type>}
     
-functions
+functions:
   initialize:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   destroy:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   proxyViewProperties:
     description: | 
       @api public
@@ -63,7 +63,7 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          

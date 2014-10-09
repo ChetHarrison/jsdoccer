@@ -1,10 +1,10 @@
-modules
+modules:
   name: Application
 
   description: |
   
   
-constructors
+constructors:
   constructor:
     description: | 
       @api public
@@ -12,11 +12,11 @@ constructors
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
+          <example>
       
-properties
+properties:
   options: |
     <description>
   
@@ -67,27 +67,27 @@ properties
   
     @type {<type>}
     
-functions
+functions:
   initialize:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   execute:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   request:
     description: | 
       @api public
@@ -95,10 +95,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   addInitializer:
     description: | 
       @api public
@@ -106,10 +106,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   start:
     description: | 
       @api public
@@ -117,10 +117,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   addRegions:
     description: | 
       @api public
@@ -129,10 +129,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   emptyRegions:
     description: | 
       @api public
@@ -140,10 +140,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   removeRegion:
     description: | 
       @api public
@@ -152,10 +152,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getRegion:
     description: | 
       @api public
@@ -164,10 +164,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getRegions:
     description: | 
       @api public
@@ -175,10 +175,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   module:
     description: | 
       @api public
@@ -188,10 +188,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getRegionManager:
     description: | 
       @api public
@@ -199,10 +199,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _initializeRegions:
     description: | 
       @api private
@@ -211,31 +211,31 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _initRegionManager:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _initChannel:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
-events
+          <example>
+          
+events:
   name: before:start
 
   description: | 

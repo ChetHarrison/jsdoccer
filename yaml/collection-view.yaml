@@ -1,10 +1,10 @@
-modules
+modules:
   name: CollectionView
 
   description: |
   
   
-constructors
+constructors:
   constructor:
     description: | 
       @api public
@@ -12,11 +12,11 @@ constructors
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
+          <example>
       
-properties
+properties:
   sort: |
     <description>
   
@@ -57,57 +57,57 @@ properties
   
     @type {<type>}
     
-functions
+functions:
   initRenderBuffer:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   startBuffering:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   endBuffering:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _triggerBeforeShowBufferedChildren:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _triggerShowBufferedChildren:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _triggerMethodOnChild:
     description: | 
       @api private
@@ -116,20 +116,20 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _initialEvents:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _onCollectionAdd:
     description: | 
       @api private
@@ -137,10 +137,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _onCollectionRemove:
     description: | 
       @api private
@@ -148,20 +148,20 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   onShowCalled:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   render:
     description: | 
       @api public
@@ -169,70 +169,70 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   resortView:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _sortViews:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _renderChildren:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   showCollection:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   showEmptyView:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   destroyEmptyView:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getEmptyView:
     description: | 
       @api public
@@ -240,10 +240,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   addEmptyView:
     description: | 
       @api public
@@ -252,10 +252,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getChildView:
     description: | 
       @api public
@@ -264,10 +264,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   addChild:
     description: | 
       @api public
@@ -278,10 +278,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _updateIndices:
     description: | 
       @api private
@@ -291,10 +291,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _addChildView:
     description: | 
       @api private
@@ -303,10 +303,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   renderChildView:
     description: | 
       @api public
@@ -316,10 +316,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   buildChildView:
     description: | 
       @api public
@@ -330,10 +330,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   removeChildView:
     description: | 
       @api public
@@ -342,10 +342,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   isEmpty:
     description: | 
       @api public
@@ -353,20 +353,20 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   checkEmpty:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   attachBuffer:
     description: | 
       @api public
@@ -375,10 +375,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   attachHtml:
     description: | 
       @api public
@@ -388,10 +388,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _insertBefore:
     description: | 
       @api private
@@ -401,10 +401,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _insertAfter:
     description: | 
       @api private
@@ -412,20 +412,20 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _initChildViewStorage:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   destroy:
     description: | 
       @api public
@@ -433,10 +433,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   destroyChildren:
     description: | 
       @api public
@@ -444,10 +444,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   proxyChildEvents:
     description: | 
       @api public
@@ -455,11 +455,11 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
-events
+          <example>
+          
+events:
   name: before:render
 
   description: | 

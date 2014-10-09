@@ -1,10 +1,10 @@
-modules
+modules:
   name: Module
 
   description: |
   
   
-constructors
+constructors:
   constructor:
     description: | 
       @api public
@@ -14,11 +14,11 @@ constructors
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
+          <example>
       
-properties
+properties:
   moduleName: |
     <description>
   
@@ -64,17 +64,17 @@ properties
   
     @type {<type>}
     
-functions
+functions:
   initialize:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   addInitializer:
     description: | 
       @api public
@@ -82,10 +82,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   addFinalizer:
     description: | 
       @api public
@@ -93,10 +93,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   start:
     description: | 
       @api public
@@ -104,20 +104,20 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   stop:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   addDefinition:
     description: | 
       @api public
@@ -126,10 +126,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _runModuleDefinition:
     description: | 
       @api private
@@ -138,20 +138,20 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _setupInitializersAndFinalizers:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   create:
     description: | 
       @api public
@@ -162,10 +162,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _getModule:
     description: | 
       @api private
@@ -178,10 +178,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getClass:
     description: | 
       @api public
@@ -190,10 +190,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _addModuleDefinition:
     description: | 
       @api private
@@ -204,10 +204,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _getStartWithParent:
     description: | 
       @api private
@@ -217,10 +217,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _getDefine:
     description: | 
       @api private
@@ -229,10 +229,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _addStartWithParent:
     description: | 
       @api private
@@ -242,11 +242,11 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
-events
+          <example>
+          
+events:
   name: before:start
 
   description: | 

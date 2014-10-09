@@ -1,31 +1,31 @@
-modules
+modules:
   name: CompositeView
 
   description: |
   
   
-constructors
+constructors:
   constructor:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
+          <example>
       
-functions
+functions:
   _initialEvents:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getChildView:
     description: | 
       @api public
@@ -34,10 +34,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   serializeData:
     description: | 
       @api public
@@ -45,10 +45,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   render:
     description: | 
       @api public
@@ -56,30 +56,30 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _renderChildren:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _renderTemplate:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   attachElContent:
     description: | 
       @api public
@@ -88,10 +88,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   attachBuffer:
     description: | 
       @api public
@@ -100,10 +100,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _insertAfter:
     description: | 
       @api private
@@ -111,10 +111,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getChildViewContainer:
     description: | 
       @api public
@@ -123,27 +123,27 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   resetChildViewContainer:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
-properties
+          <example>
+          
+properties:
   isRendered: |
     <description>
   
     @type {<type>}
     
-events
+events:
   name: before:render
 
   description: | 

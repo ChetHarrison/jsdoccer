@@ -190,7 +190,7 @@ var fs = require('fs'),
 				syntaxJsons = json[type];
 
 			// add type category
-			yaml += type + '\n';
+			yaml += type + ':\n';
 
 			_.each(syntaxJsons, function (syntaxJson) {
 

@@ -4,7 +4,7 @@ constructor:
   
   examples:
     -
-      name: 
+      name: <name>
       example: |
-        
+        <example>
       

@@ -53,7 +53,22 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+
+		jsDocFiles: {
+			docs: {
+				options: {},
+				files: [{
+					expand: true,
+					cwd: 'yaml',
+					src: '*.yaml',
+					dest: 'jsdoc',
+					ext: '.json'
+        		}]
+			}
+		}
 	});
+
+	grunt.loadTasks('tasks');
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 
@@ -64,8 +79,9 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-plato');
 
 
+	grunt.registerTask('api', 'Build jsdoc api files.', ['jsDocFiles']);
 
-	grunt.registerTask('test', ['jshint', 'jasmine_node', 'plato']);
+	grunt.registerTask('test', 'Lint, hint, test, coverage, and complexity.',['jshint', 'jasmine_node', 'plato']);
 
-	grunt.registerTask('default', ['jasmine_node']);
+	grunt.registerTask('default', 'Run test suite.', ['jasmine_node']);
 };

@@ -1,10 +1,10 @@
-modules
+modules:
   name: TemplateCache
 
   description: |
   
   
-constructors
+constructors:
   constructor:
     description: | 
       @api public
@@ -12,11 +12,11 @@ constructors
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
+          <example>
       
-properties
+properties:
   templateId: |
     <description>
   
@@ -32,7 +32,7 @@ properties
   
     @type {<type>}
     
-functions
+functions:
   get:
     description: | 
       @api public
@@ -41,20 +41,20 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   clear:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   load:
     description: | 
       @api public
@@ -62,10 +62,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   loadTemplate:
     description: | 
       @api public
@@ -74,10 +74,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   compileTemplate:
     description: | 
       @api public
@@ -86,7 +86,7 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          

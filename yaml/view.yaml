@@ -1,10 +1,10 @@
-modules
+modules:
   name: View
 
   description: |
   
   
-constructors
+constructors:
   constructor:
     description: | 
       @api public
@@ -12,11 +12,11 @@ constructors
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
+          <example>
       
-properties
+properties:
   options: |
     <description>
   
@@ -52,7 +52,7 @@ properties
   
     @type {<type>}
     
-functions
+functions:
   getTemplate:
     description: | 
       @api public
@@ -60,10 +60,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   serializeModel:
     description: | 
       @api public
@@ -72,10 +72,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   mixinTemplateHelpers:
     description: | 
       @api public
@@ -84,10 +84,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   normalizeUIKeys:
     description: | 
       @api public
@@ -96,10 +96,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   normalizeUIValues:
     description: | 
       @api public
@@ -108,10 +108,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   configureTriggers:
     description: | 
       @api public
@@ -119,10 +119,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   delegateEvents:
     description: | 
       @api public
@@ -131,10 +131,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _delegateDOMEvents:
     description: | 
       @api private
@@ -142,10 +142,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   undelegateEvents:
     description: | 
       @api public
@@ -153,30 +153,30 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   onShowCalled:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _ensureViewIsIntact:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   destroy:
     description: | 
       @api public
@@ -184,50 +184,50 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   bindUIElements:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _bindUIElements:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   unbindUIElements:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _unbindUIElements:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _buildViewTrigger:
     description: | 
       @api private
@@ -236,10 +236,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   setElement:
     description: | 
       @api public
@@ -247,10 +247,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   triggerMethod:
     description: | 
       @api public
@@ -258,7 +258,7 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          

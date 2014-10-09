@@ -1,10 +1,10 @@
-modules
+modules:
   name: Error
 
   description: |
   
   
-constructors
+constructors:
   constructor:
     description: | 
       @api public
@@ -13,27 +13,27 @@ constructors
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
+          <example>
       
-properties
+properties:
   url: |
     <description>
   
     @type {<type>}
     
-functions
+functions:
   captureStackTrace:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   toString:
     description: | 
       @api public
@@ -41,7 +41,7 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          

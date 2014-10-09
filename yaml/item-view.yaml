@@ -1,21 +1,21 @@
-modules
+modules:
   name: ItemView
 
   description: |
   
   
-constructors
+constructors:
   constructor:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
+          <example>
       
-functions
+functions:
   serializeData:
     description: | 
       @api public
@@ -23,10 +23,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   serializeCollection:
     description: | 
       @api public
@@ -35,10 +35,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   render:
     description: | 
       @api public
@@ -46,10 +46,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _renderTemplate:
     description: | 
       @api private
@@ -57,10 +57,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   attachElContent:
     description: | 
       @api public
@@ -69,10 +69,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   destroy:
     description: | 
       @api public
@@ -80,11 +80,11 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
-events
+          <example>
+          
+events:
   name: before:render
 
   description: | 

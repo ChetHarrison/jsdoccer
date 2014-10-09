@@ -1,10 +1,10 @@
-modules
+modules:
   name: AppRouter
 
   description: |
   
   
-constructors
+constructors:
   constructor:
     description: | 
       @api public
@@ -12,17 +12,17 @@ constructors
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
+          <example>
       
-properties
+properties:
   options: |
     <description>
   
     @type {<type>}
     
-functions
+functions:
   appRoute:
     description: | 
       @api public
@@ -31,10 +31,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _processOnRoute:
     description: | 
       @api private
@@ -43,10 +43,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   processAppRoutes:
     description: | 
       @api public
@@ -55,10 +55,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _getController:
     description: | 
       @api private
@@ -66,10 +66,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _addAppRoute:
     description: | 
       @api private
@@ -79,7 +79,7 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          

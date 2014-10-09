@@ -1,10 +1,10 @@
-modules
+modules:
   name: Behaviors
 
   description: |
   
   
-functions
+functions:
   behaviorTriggers:
     description: | 
       @api public
@@ -14,10 +14,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   behaviorEvents:
     description: | 
       @api public
@@ -27,20 +27,20 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   behaviorsLookup:
     description: | 
       @api public
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getBehaviorClass:
     description: | 
       @api public
@@ -50,10 +50,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   parseBehaviors:
     description: | 
       @api public
@@ -63,10 +63,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   wrap:
     description: | 
       @api public
@@ -76,10 +76,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   buildBehaviorTriggers:
     description: | 
       @api public
@@ -87,10 +87,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _buildTriggerHandlersForBehavior:
     description: | 
       @api private
@@ -99,10 +99,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _setHandlerForBehavior:
     description: | 
       @api private
@@ -113,11 +113,11 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
-properties
+          <example>
+          
+properties:
   _view: |
     <description>
   

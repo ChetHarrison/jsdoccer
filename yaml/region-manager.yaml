@@ -1,10 +1,10 @@
-modules
+modules:
   name: RegionManager
 
   description: |
   
   
-constructors
+constructors:
   constructor:
     description: | 
       @api public
@@ -12,11 +12,11 @@ constructors
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
+          <example>
       
-properties
+properties:
   _regions: |
     <description>
   
@@ -27,7 +27,7 @@ properties
   
     @type {<type>}
     
-functions
+functions:
   addRegions:
     description: | 
       @api public
@@ -37,10 +37,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   addRegion:
     description: | 
       @api public
@@ -50,10 +50,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   get:
     description: | 
       @api public
@@ -62,10 +62,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   getRegions:
     description: | 
       @api public
@@ -73,10 +73,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   removeRegion:
     description: | 
       @api public
@@ -85,10 +85,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   removeRegions:
     description: | 
       @api public
@@ -96,10 +96,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   emptyRegions:
     description: | 
       @api public
@@ -107,10 +107,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   destroy:
     description: | 
       @api public
@@ -118,10 +118,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _store:
     description: | 
       @api private
@@ -130,10 +130,10 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _remove:
     description: | 
       @api private
@@ -142,21 +142,21 @@ functions
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
+          <example>
+          
   _setLength:
     description: | 
       @api private
   
     examples:
       -
-        name: 
+        name: <name>
         example: |
-        
-      
-events
+          <example>
+          
+events:
   name: before:add:region
 
   description: | 

@@ -22,18 +22,18 @@
   },
   "homepage": "https://github.com/ChetHarrison/jsdoccer",
   "devDependencies": {
+    "dox": "git://github.com/jasonLaster/dox.git#marked",
     "escodegen": "^1.4.1",
     "esprima": "^1.2.2",
     "grunt-contrib-jasmine": "^0.8.0",
     "grunt-jasmine-node": "^0.2.1",
-    "grunt-jasmine-node-coverage-validation": "0.0.4",
+    "grunt-jasmine-node-coverage": "^0.1.11",
     "grunt-plato": "^1.3.0",
+    "highlight.js": "^8.2.0",
+    "js-yaml": "^3.1.0",
     "jshint-stylish": "^1.0.0",
     "lodash": "^2.4.1",
-    "dox": "git://github.com/jasonLaster/dox.git#marked",
-    "js-yaml": "^3.1.0",
-    "marked": "^0.3",
-    "highlight.js": "^8.2.0"
+    "marked": "^0.3"
   },
   "dependencies": {
     "indent-string": "^1.1.0",

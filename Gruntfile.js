@@ -19,15 +19,7 @@ module.exports = function (grunt) {
 		},
 
 		jasmine_node: {
-			coverage: {
-				options: {
-					failTask: true,
-					branches: 100,
-					functions: 100,
-					statements: 100,
-					lines: 100
-				}
-			},
+			coverage: { },
 			options: {
 				forceExit: true,
 				match: '.',
@@ -35,12 +27,13 @@ module.exports = function (grunt) {
 				extensions: 'js',
 				specNameMatcher: 'spec',
 				jUnit: {
-					report: false,
-					savePath: './reports/',
+					report: true,
+					savePath: './build/reports/jasmine/',
 					useDotNotation: true,
 					consolidate: true
 				}
-			}
+			},
+			all: ['tests/specs/']
 		},
 
 		plato: {
@@ -73,6 +66,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	
+	grunt.loadNpmTasks('grunt-jasmine-node-coverage');
 
 	grunt.loadNpmTasks('grunt-jasmine-node');
 
@@ -81,7 +76,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('api', 'Build jsdoc api files.', ['jsDocFiles']);
 
-	grunt.registerTask('test', 'Lint, hint, test, coverage, and complexity.',['jshint', 'jasmine_node', 'plato']);
+	grunt.registerTask('test', 'Lint, hint, test, coverage, and complexity.',['jshint', 'jasmine_node']);
 
 	grunt.registerTask('default', 'Run test suite.', ['jasmine_node']);
 };

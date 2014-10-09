@@ -1,6 +1,6 @@
 'use strict';
 
-var documents = require('../../document.js');
+var documents = require('../../syntax-to-document.js');
 
 describe('properties', function () {
 	it('defined Configuration', function () {

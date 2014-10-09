@@ -1,5 +1,5 @@
 modules
-  name: layout-view.js
+  name: LayoutView
 
   description: |
     <module description>

@@ -1,5 +1,5 @@
 modules
-  name: collection-view.js
+  name: CollectionView
 
   description: |
     <module description>

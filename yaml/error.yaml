@@ -1,5 +1,5 @@
 modules
-  name: error.js
+  name: Error
 
   description: |
     <module description>

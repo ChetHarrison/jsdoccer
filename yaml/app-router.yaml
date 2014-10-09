@@ -1,5 +1,5 @@
 modules
-  name: app-router.js
+  name: AppRouter
 
   description: |
     <module description>

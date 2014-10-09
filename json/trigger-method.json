@@ -1,7 +1,7 @@
 {
     "modules": [
         {
-            "name": "trigger-method.js"
+            "name": "TriggerMethod"
         }
     ]
 }

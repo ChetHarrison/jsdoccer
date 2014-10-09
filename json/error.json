@@ -1,7 +1,7 @@
 {
     "modules": [
         {
-            "name": "error.js"
+            "name": "Error"
         }
     ],
     "constructors": [

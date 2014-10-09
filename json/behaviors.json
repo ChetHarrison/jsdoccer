@@ -1,7 +1,7 @@
 {
     "modules": [
         {
-            "name": "behaviors.js"
+            "name": "Behaviors"
         }
     ],
     "functions": [

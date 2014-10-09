@@ -1,7 +1,7 @@
 {
     "modules": [
         {
-            "name": "dom-refresh.js"
+            "name": "DomRefresh"
         }
     ]
 }

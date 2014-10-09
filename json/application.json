@@ -1,7 +1,7 @@
 {
     "modules": [
         {
-            "name": "application.js"
+            "name": "Application"
         }
     ],
     "constructors": [

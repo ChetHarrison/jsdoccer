@@ -1,5 +1,5 @@
 modules
-  name: trigger-method.js
+  name: TriggerMethod
 
   description: |
     <module description>

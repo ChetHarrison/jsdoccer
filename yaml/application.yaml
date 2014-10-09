@@ -1,5 +1,5 @@
 modules
-  name: application.js
+  name: Application
 
   description: |
     <module description>

@@ -1,5 +1,5 @@
 modules
-  name: controller.js
+  name: Controller
 
   description: |
     <module description>

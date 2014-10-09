@@ -1,7 +1,7 @@
 {
     "modules": [
         {
-            "name": "helpers.js"
+            "name": "Helpers"
         }
     ]
 }

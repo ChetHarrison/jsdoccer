@@ -1,5 +1,5 @@
 modules
-  name: composite-view.js
+  name: CompositeView
 
   description: |
     <module description>

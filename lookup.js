@@ -4,6 +4,8 @@
 //-----------------------------------------
 var fs = require('fs'),
 
+	path = require('path'),
+
 	_ = require('lodash'),
 
 	_s = require('underscore.string'),
@@ -219,7 +221,7 @@ _.extend(Lookup.prototype, {
 		// document the module from the the file name.
 		var results = {
 			modules: [{
-				name: this.filename
+				name: _s.classify(path.basename(this.filename, '.js'))
 			}]
 		};
 

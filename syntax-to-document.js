@@ -3,7 +3,9 @@
 // Private functions
 //-----------------------------------------
 // Use this function to match blocks of AST JSON
-var _parseAstSubString = function(ast, subAstString) {
+var _s = require('underscore.string'),
+
+	_parseAstSubString = function(ast, subAstString) {
 		var astString = JSON.stringify(ast, null, 2);
 
 		return astString.indexOf(subAstString) > -1;

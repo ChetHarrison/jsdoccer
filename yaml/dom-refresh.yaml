@@ -1,5 +1,5 @@
 modules
-  name: dom-refresh.js
+  name: DomRefresh
 
   description: |
     <module description>

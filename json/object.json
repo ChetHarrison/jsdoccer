@@ -1,7 +1,7 @@
 {
     "modules": [
         {
-            "name": "object.js"
+            "name": "Object"
         }
     ],
     "constructors": [

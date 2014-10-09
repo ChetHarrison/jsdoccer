@@ -1,5 +1,5 @@
 modules
-  name: helpers.js
+  name: Helpers
 
   description: |
     <module description>

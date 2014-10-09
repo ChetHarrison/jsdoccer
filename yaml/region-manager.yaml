@@ -17,11 +17,9 @@ constructors
       
 properties
   _regions: |
-  
     @type {<type>}
     
   length: |
-  
     @type {<type>}
     
 functions

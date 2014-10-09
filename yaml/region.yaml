@@ -17,39 +17,30 @@ constructors
       
 properties
   options: |
-  
     @type {<type>}
     
   el: |
-  
     @type {<type>}
     
   el: |
-  
     @type {<type>}
     
   $el: |
-  
     @type {<type>}
     
   currentView: |
-  
     @type {<type>}
     
   $el: |
-  
     @type {<type>}
     
   el: |
-  
     @type {<type>}
     
   currentView: |
-  
     @type {<type>}
     
   el: |
-  
     @type {<type>}
     
 functions

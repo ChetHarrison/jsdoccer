@@ -17,15 +17,12 @@ constructors
       
 properties
   templateId: |
-  
     @type {<type>}
     
   templateCaches: |
-  
     @type {<type>}
     
   compiledTemplate: |
-  
     @type {<type>}
     
 functions

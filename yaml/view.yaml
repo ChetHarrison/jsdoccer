@@ -17,31 +17,24 @@ constructors
       
 properties
   options: |
-  
     @type {<type>}
     
   _behaviors: |
-  
     @type {<type>}
     
   events: |
-  
     @type {<type>}
     
   isDestroyed: |
-  
     @type {<type>}
     
   _uiBindings: |
-  
     @type {<type>}
     
   ui: |
-  
     @type {<type>}
     
   ui: |
-  
     @type {<type>}
     
 functions

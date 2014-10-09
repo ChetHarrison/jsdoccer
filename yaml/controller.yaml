@@ -17,7 +17,6 @@ constructors
       
 properties
   options: |
-  
     @type {<type>}
     
 functions

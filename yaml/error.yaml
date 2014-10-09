@@ -18,7 +18,6 @@ constructors
       
 properties
   url: |
-  
     @type {<type>}
     
 functions

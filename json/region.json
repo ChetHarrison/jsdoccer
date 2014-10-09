@@ -46,16 +46,16 @@
             "name": "buildRegion",
             "tags": [
                 "@api public",
-                "@param {<type>} regionConfig - ",
-                "@param {<type>} DefaultRegionClass - "
+                "@param {<type>} regionConfig - <description>",
+                "@param {<type>} DefaultRegionClass - <description>"
             ]
         },
         {
             "name": "_buildRegionFromSelector",
             "tags": [
                 "@api private",
-                "@param {<type>} selector - ",
-                "@param {<type>} DefaultRegionClass - ",
+                "@param {<type>} selector - <description>",
+                "@param {<type>} DefaultRegionClass - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -63,8 +63,8 @@
             "name": "_buildRegionFromObject",
             "tags": [
                 "@api private",
-                "@param {<type>} regionConfig - ",
-                "@param {<type>} DefaultRegionClass - ",
+                "@param {<type>} regionConfig - <description>",
+                "@param {<type>} DefaultRegionClass - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -72,7 +72,7 @@
             "name": "_buildRegionFromRegionClass",
             "tags": [
                 "@api private",
-                "@param {<type>} RegionClass - ",
+                "@param {<type>} RegionClass - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -80,8 +80,8 @@
             "name": "show",
             "tags": [
                 "@api public",
-                "@param {<type>} view - ",
-                "@param {<type>} options - ",
+                "@param {<type>} view - <description>",
+                "@param {<type>} options - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -95,14 +95,14 @@
             "name": "_ensureViewIsIntact",
             "tags": [
                 "@api private",
-                "@param {<type>} view - "
+                "@param {<type>} view - <description>"
             ]
         },
         {
             "name": "getEl",
             "tags": [
                 "@api public",
-                "@param {<type>} el - ",
+                "@param {<type>} el - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -110,7 +110,7 @@
             "name": "attachHtml",
             "tags": [
                 "@api public",
-                "@param {<type>} view - "
+                "@param {<type>} view - <description>"
             ]
         },
         {
@@ -130,7 +130,7 @@
             "name": "attachView",
             "tags": [
                 "@api public",
-                "@param {<type>} view - ",
+                "@param {<type>} view - <description>",
                 "@returns {<type>} -"
             ]
         },

@@ -8,7 +8,7 @@
         {
             "tags": [
                 "@api public",
-                "@param {<type>} options - "
+                "@param {<type>} options - <description>"
             ]
         }
     ],
@@ -47,7 +47,7 @@
             "name": "serializeModel",
             "tags": [
                 "@api public",
-                "@param {<type>} model - ",
+                "@param {<type>} model - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -55,7 +55,7 @@
             "name": "mixinTemplateHelpers",
             "tags": [
                 "@api public",
-                "@param {<type>} target - ",
+                "@param {<type>} target - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -63,7 +63,7 @@
             "name": "normalizeUIKeys",
             "tags": [
                 "@api public",
-                "@param {<type>} hash - ",
+                "@param {<type>} hash - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -71,7 +71,7 @@
             "name": "normalizeUIValues",
             "tags": [
                 "@api public",
-                "@param {<type>} hash - ",
+                "@param {<type>} hash - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -86,7 +86,7 @@
             "name": "delegateEvents",
             "tags": [
                 "@api public",
-                "@param {<type>} events - ",
+                "@param {<type>} events - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -94,7 +94,7 @@
             "name": "_delegateDOMEvents",
             "tags": [
                 "@api private",
-                "@param {<type>} eventsArg - "
+                "@param {<type>} eventsArg - <description>"
             ]
         },
         {
@@ -151,7 +151,7 @@
             "name": "_buildViewTrigger",
             "tags": [
                 "@api private",
-                "@param {<type>} triggerDef - ",
+                "@param {<type>} triggerDef - <description>",
                 "@returns {<type>} -"
             ]
         },

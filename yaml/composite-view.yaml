@@ -2,7 +2,7 @@ modules
   name: CompositeView
 
   description: |
-    <module description>
+  
   
 constructors
   constructor:
@@ -11,8 +11,9 @@ constructors
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 functions
   _initialEvents:
@@ -21,19 +22,21 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   getChildView:
     description: | 
       @api public
-      @param {<type>} child - 
+      @param {<type>} child - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   serializeData:
     description: | 
@@ -42,8 +45,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   render:
     description: | 
@@ -52,8 +56,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _renderChildren:
     description: | 
@@ -61,8 +66,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _renderTemplate:
     description: | 
@@ -70,51 +76,56 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   attachElContent:
     description: | 
       @api public
-      @param {<type>} html - 
+      @param {<type>} html - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   attachBuffer:
     description: | 
       @api public
-      @param {<type>} compositeView - 
-      @param {<type>} buffer - 
+      @param {<type>} compositeView - <description>
+      @param {<type>} buffer - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _insertAfter:
     description: | 
       @api private
-      @param {<type>} childView - 
+      @param {<type>} childView - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   getChildViewContainer:
     description: | 
       @api public
-      @param {<type>} containerView - 
+      @param {<type>} containerView - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   resetChildViewContainer:
     description: | 
@@ -122,35 +133,38 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 properties
   isRendered: |
+    <description>
+  
     @type {<type>}
     
 events
   name: before:render
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: render
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: before:render:template
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: render:template
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       

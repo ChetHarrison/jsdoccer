@@ -2,32 +2,34 @@ modules
   name: Behaviors
 
   description: |
-    <module description>
+  
   
 functions
   behaviorTriggers:
     description: | 
       @api public
-      @param {<type>} behaviorTriggers - 
-      @param {<type>} behaviors - 
+      @param {<type>} behaviorTriggers - <description>
+      @param {<type>} behaviors - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   behaviorEvents:
     description: | 
       @api public
-      @param {<type>} behaviorEvents - 
-      @param {<type>} behaviors - 
+      @param {<type>} behaviorEvents - <description>
+      @param {<type>} behaviors - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   behaviorsLookup:
     description: | 
@@ -35,44 +37,48 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   getBehaviorClass:
     description: | 
       @api public
-      @param {<type>} options - 
-      @param {<type>} key - 
+      @param {<type>} options - <description>
+      @param {<type>} key - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   parseBehaviors:
     description: | 
       @api public
-      @param {<type>} view - 
-      @param {<type>} behaviors - 
+      @param {<type>} view - <description>
+      @param {<type>} behaviors - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   wrap:
     description: | 
       @api public
-      @param {<type>} view - 
-      @param {<type>} behaviors - 
-      @param {<type>} methodNames - 
+      @param {<type>} view - <description>
+      @param {<type>} behaviors - <description>
+      @param {<type>} methodNames - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   buildBehaviorTriggers:
     description: | 
@@ -81,43 +87,54 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _buildTriggerHandlersForBehavior:
     description: | 
       @api private
-      @param {<type>} behavior - 
-      @param {<type>} i - 
+      @param {<type>} behavior - <description>
+      @param {<type>} i - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _setHandlerForBehavior:
     description: | 
       @api private
-      @param {<type>} behavior - 
-      @param {<type>} i - 
-      @param {<type>} eventName - 
-      @param {<type>} trigger - 
+      @param {<type>} behavior - <description>
+      @param {<type>} i - <description>
+      @param {<type>} eventName - <description>
+      @param {<type>} trigger - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 properties
   _view: |
+    <description>
+  
     @type {<type>}
     
   _viewUI: |
+    <description>
+  
     @type {<type>}
     
   _behaviors: |
+    <description>
+  
     @type {<type>}
     
   _triggers: |
+    <description>
+  
     @type {<type>}
     

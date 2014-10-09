@@ -68,21 +68,21 @@
             "name": "addInitializer",
             "tags": [
                 "@api public",
-                "@param {<type>} initializer - "
+                "@param {<type>} initializer - <description>"
             ]
         },
         {
             "name": "start",
             "tags": [
                 "@api public",
-                "@param {<type>} options - "
+                "@param {<type>} options - <description>"
             ]
         },
         {
             "name": "addRegions",
             "tags": [
                 "@api public",
-                "@param {<type>} regions - ",
+                "@param {<type>} regions - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -97,7 +97,7 @@
             "name": "removeRegion",
             "tags": [
                 "@api public",
-                "@param {<type>} region - ",
+                "@param {<type>} region - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -105,7 +105,7 @@
             "name": "getRegion",
             "tags": [
                 "@api public",
-                "@param {<type>} region - ",
+                "@param {<type>} region - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -120,8 +120,8 @@
             "name": "module",
             "tags": [
                 "@api public",
-                "@param {<type>} moduleNames - ",
-                "@param {<type>} moduleDefinition - ",
+                "@param {<type>} moduleNames - <description>",
+                "@param {<type>} moduleDefinition - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -136,7 +136,7 @@
             "name": "_initializeRegions",
             "tags": [
                 "@api private",
-                "@param {<type>} options - ",
+                "@param {<type>} options - <description>",
                 "@returns {<type>} -"
             ]
         },

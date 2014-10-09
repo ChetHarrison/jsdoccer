@@ -2,7 +2,7 @@ modules
   name: Region
 
   description: |
-    <module description>
+  
   
 constructors
   constructor:
@@ -12,95 +12,119 @@ constructors
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 properties
   options: |
+    <description>
+  
     @type {<type>}
     
   el: |
+    <description>
+  
     @type {<type>}
     
   el: |
+    <description>
+  
     @type {<type>}
     
   $el: |
+    <description>
+  
     @type {<type>}
     
   currentView: |
+    <description>
+  
     @type {<type>}
     
   $el: |
+    <description>
+  
     @type {<type>}
     
   el: |
+    <description>
+  
     @type {<type>}
     
   currentView: |
+    <description>
+  
     @type {<type>}
     
   el: |
+    <description>
+  
     @type {<type>}
     
 functions
   buildRegion:
     description: | 
       @api public
-      @param {<type>} regionConfig - 
-      @param {<type>} DefaultRegionClass - 
+      @param {<type>} regionConfig - <description>
+      @param {<type>} DefaultRegionClass - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _buildRegionFromSelector:
     description: | 
       @api private
-      @param {<type>} selector - 
-      @param {<type>} DefaultRegionClass - 
+      @param {<type>} selector - <description>
+      @param {<type>} DefaultRegionClass - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _buildRegionFromObject:
     description: | 
       @api private
-      @param {<type>} regionConfig - 
-      @param {<type>} DefaultRegionClass - 
+      @param {<type>} regionConfig - <description>
+      @param {<type>} DefaultRegionClass - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _buildRegionFromRegionClass:
     description: | 
       @api private
-      @param {<type>} RegionClass - 
+      @param {<type>} RegionClass - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   show:
     description: | 
       @api public
-      @param {<type>} view - 
-      @param {<type>} options - 
+      @param {<type>} view - <description>
+      @param {<type>} options - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _ensureElement:
     description: | 
@@ -108,39 +132,43 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _ensureViewIsIntact:
     description: | 
       @api private
-      @param {<type>} view - 
+      @param {<type>} view - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   getEl:
     description: | 
       @api public
-      @param {<type>} el - 
+      @param {<type>} el - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   attachHtml:
     description: | 
       @api public
-      @param {<type>} view - 
+      @param {<type>} view - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   empty:
     description: | 
@@ -149,8 +177,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _destroyView:
     description: | 
@@ -158,19 +187,21 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   attachView:
     description: | 
       @api public
-      @param {<type>} view - 
+      @param {<type>} view - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   hasView:
     description: | 
@@ -179,8 +210,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   reset:
     description: | 
@@ -189,55 +221,56 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 events
   name: before:swapOut
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: before:swap
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: before:show
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: swapOut
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: swap
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: show
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: before:empty
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: empty
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       

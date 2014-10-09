@@ -9,8 +9,8 @@
             "name": "render",
             "tags": [
                 "@api public",
-                "@param {<type>} template - ",
-                "@param {<type>} data - ",
+                "@param {<type>} template - <description>",
+                "@param {<type>} data - <description>",
                 "@returns {<type>} -"
             ]
         }

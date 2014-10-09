@@ -2,22 +2,25 @@ modules
   name: Error
 
   description: |
-    <module description>
+  
   
 constructors
   constructor:
     description: | 
       @api public
-      @param {<type>} message - 
-      @param {<type>} options - 
+      @param {<type>} message - <description>
+      @param {<type>} options - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 properties
   url: |
+    <description>
+  
     @type {<type>}
     
 functions
@@ -27,8 +30,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   toString:
     description: | 
@@ -37,6 +41,7 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       

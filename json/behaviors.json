@@ -9,8 +9,8 @@
             "name": "behaviorTriggers",
             "tags": [
                 "@api public",
-                "@param {<type>} behaviorTriggers - ",
-                "@param {<type>} behaviors - ",
+                "@param {<type>} behaviorTriggers - <description>",
+                "@param {<type>} behaviors - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -18,8 +18,8 @@
             "name": "behaviorEvents",
             "tags": [
                 "@api public",
-                "@param {<type>} behaviorEvents - ",
-                "@param {<type>} behaviors - ",
+                "@param {<type>} behaviorEvents - <description>",
+                "@param {<type>} behaviors - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -33,8 +33,8 @@
             "name": "getBehaviorClass",
             "tags": [
                 "@api public",
-                "@param {<type>} options - ",
-                "@param {<type>} key - ",
+                "@param {<type>} options - <description>",
+                "@param {<type>} key - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -42,8 +42,8 @@
             "name": "parseBehaviors",
             "tags": [
                 "@api public",
-                "@param {<type>} view - ",
-                "@param {<type>} behaviors - ",
+                "@param {<type>} view - <description>",
+                "@param {<type>} behaviors - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -51,9 +51,9 @@
             "name": "wrap",
             "tags": [
                 "@api public",
-                "@param {<type>} view - ",
-                "@param {<type>} behaviors - ",
-                "@param {<type>} methodNames - "
+                "@param {<type>} view - <description>",
+                "@param {<type>} behaviors - <description>",
+                "@param {<type>} methodNames - <description>"
             ]
         },
         {
@@ -67,18 +67,18 @@
             "name": "_buildTriggerHandlersForBehavior",
             "tags": [
                 "@api private",
-                "@param {<type>} behavior - ",
-                "@param {<type>} i - "
+                "@param {<type>} behavior - <description>",
+                "@param {<type>} i - <description>"
             ]
         },
         {
             "name": "_setHandlerForBehavior",
             "tags": [
                 "@api private",
-                "@param {<type>} behavior - ",
-                "@param {<type>} i - ",
-                "@param {<type>} eventName - ",
-                "@param {<type>} trigger - "
+                "@param {<type>} behavior - <description>",
+                "@param {<type>} i - <description>",
+                "@param {<type>} eventName - <description>",
+                "@param {<type>} trigger - <description>"
             ]
         }
     ],

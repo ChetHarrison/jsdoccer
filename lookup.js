@@ -152,7 +152,6 @@ var fs = require('fs'),
 
 
 	_getTemplateName = function (type) {
-
 		var path = _s.dasherize(type);
 
 		path = path[0] === '-' ? path.substr(1) : path;

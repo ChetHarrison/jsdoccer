@@ -2,56 +2,62 @@ modules
   name: AppRouter
 
   description: |
-    <module description>
+  
   
 constructors
   constructor:
     description: | 
       @api public
-      @param {<type>} options - 
+      @param {<type>} options - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 properties
   options: |
+    <description>
+  
     @type {<type>}
     
 functions
   appRoute:
     description: | 
       @api public
-      @param {<type>} route - 
-      @param {<type>} methodName - 
+      @param {<type>} route - <description>
+      @param {<type>} methodName - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _processOnRoute:
     description: | 
       @api private
-      @param {<type>} routeName - 
-      @param {<type>} routeArgs - 
+      @param {<type>} routeName - <description>
+      @param {<type>} routeArgs - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   processAppRoutes:
     description: | 
       @api public
-      @param {<type>} controller - 
-      @param {<type>} appRoutes - 
+      @param {<type>} controller - <description>
+      @param {<type>} appRoutes - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _getController:
     description: | 
@@ -60,18 +66,20 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _addAppRoute:
     description: | 
       @api private
-      @param {<type>} controller - 
-      @param {<type>} route - 
-      @param {<type>} methodName - 
+      @param {<type>} controller - <description>
+      @param {<type>} route - <description>
+      @param {<type>} methodName - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       

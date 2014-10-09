@@ -2,61 +2,69 @@ modules
   name: RegionManager
 
   description: |
-    <module description>
+  
   
 constructors
   constructor:
     description: | 
       @api public
-      @param {<type>} options - 
+      @param {<type>} options - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 properties
   _regions: |
+    <description>
+  
     @type {<type>}
     
   length: |
+    <description>
+  
     @type {<type>}
     
 functions
   addRegions:
     description: | 
       @api public
-      @param {<type>} regionDefinitions - 
-      @param {<type>} defaults - 
+      @param {<type>} regionDefinitions - <description>
+      @param {<type>} defaults - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   addRegion:
     description: | 
       @api public
-      @param {<type>} name - 
-      @param {<type>} definition - 
+      @param {<type>} name - <description>
+      @param {<type>} definition - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   get:
     description: | 
       @api public
-      @param {<type>} name - 
+      @param {<type>} name - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   getRegions:
     description: | 
@@ -65,19 +73,21 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   removeRegion:
     description: | 
       @api public
-      @param {<type>} name - 
+      @param {<type>} name - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   removeRegions:
     description: | 
@@ -86,8 +96,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   emptyRegions:
     description: | 
@@ -96,8 +107,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   destroy:
     description: | 
@@ -106,30 +118,33 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _store:
     description: | 
       @api private
-      @param {<type>} name - 
-      @param {<type>} region - 
+      @param {<type>} name - <description>
+      @param {<type>} region - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _remove:
     description: | 
       @api private
-      @param {<type>} name - 
-      @param {<type>} region - 
+      @param {<type>} name - <description>
+      @param {<type>} region - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _setLength:
     description: | 
@@ -137,31 +152,32 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 events
   name: before:add:region
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: add:region
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: before:remove:region
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: remove:region
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       

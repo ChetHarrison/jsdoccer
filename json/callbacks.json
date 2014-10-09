@@ -30,16 +30,16 @@
             "name": "add",
             "tags": [
                 "@api public",
-                "@param {<type>} callback - ",
-                "@param {<type>} contextOverride - "
+                "@param {<type>} callback - <description>",
+                "@param {<type>} contextOverride - <description>"
             ]
         },
         {
             "name": "run",
             "tags": [
                 "@api public",
-                "@param {<type>} options - ",
-                "@param {<type>} context - "
+                "@param {<type>} options - <description>",
+                "@param {<type>} context - <description>"
             ]
         },
         {

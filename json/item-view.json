@@ -23,7 +23,7 @@
             "name": "serializeCollection",
             "tags": [
                 "@api public",
-                "@param {<type>} collection - ",
+                "@param {<type>} collection - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -45,7 +45,7 @@
             "name": "attachElContent",
             "tags": [
                 "@api public",
-                "@param {<type>} html - ",
+                "@param {<type>} html - <description>",
                 "@returns {<type>} -"
             ]
         },

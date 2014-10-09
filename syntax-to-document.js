@@ -85,7 +85,7 @@ module.exports = {
 								return param.type === 'Identifier';
 							}).
 							map(function (param) {
-								return '@param {<type>} ' + param.name + ' - ';
+								return '@param {<type>} ' + param.name + ' - ' + '<description>';
 							})
 						].mergeAll()  // here's that mergeAll
 					};
@@ -172,7 +172,7 @@ module.exports = {
 									return param.type === 'Identifier';
 								}).
 								map(function (param) {
-									return '@param {<type>} ' + param.name + ' - ';
+									return '@param {<type>} ' + param.name + ' - ' + '<description>';
 								}),
 							_hasReturn(property.value.body.body) ? ['@returns {<type>} -'] : []
 						].mergeAll()

@@ -2,7 +2,7 @@ modules
   name: Application
 
   description: |
-    <module description>
+  
   
 constructors
   constructor:
@@ -12,38 +12,59 @@ constructors
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 properties
   options: |
+    <description>
+  
     @type {<type>}
     
   _initCallbacks: |
+    <description>
+  
     @type {<type>}
     
   submodules: |
+    <description>
+  
     @type {<type>}
     
   _regionManager: |
+    <description>
+  
     @type {<type>}
     
   name: |
+    <description>
+  
     @type {<type>}
     
   channelName: |
+    <description>
+  
     @type {<type>}
     
   channel: |
+    <description>
+  
     @type {<type>}
     
   vent: |
+    <description>
+  
     @type {<type>}
     
   commands: |
+    <description>
+  
     @type {<type>}
     
   reqres: |
+    <description>
+  
     @type {<type>}
     
 functions
@@ -53,8 +74,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   execute:
     description: | 
@@ -62,8 +84,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   request:
     description: | 
@@ -72,39 +95,43 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   addInitializer:
     description: | 
       @api public
-      @param {<type>} initializer - 
+      @param {<type>} initializer - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   start:
     description: | 
       @api public
-      @param {<type>} options - 
+      @param {<type>} options - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   addRegions:
     description: | 
       @api public
-      @param {<type>} regions - 
+      @param {<type>} regions - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   emptyRegions:
     description: | 
@@ -113,30 +140,33 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   removeRegion:
     description: | 
       @api public
-      @param {<type>} region - 
+      @param {<type>} region - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   getRegion:
     description: | 
       @api public
-      @param {<type>} region - 
+      @param {<type>} region - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   getRegions:
     description: | 
@@ -145,20 +175,22 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   module:
     description: | 
       @api public
-      @param {<type>} moduleNames - 
-      @param {<type>} moduleDefinition - 
+      @param {<type>} moduleNames - <description>
+      @param {<type>} moduleDefinition - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   getRegionManager:
     description: | 
@@ -167,19 +199,21 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _initializeRegions:
     description: | 
       @api private
-      @param {<type>} options - 
+      @param {<type>} options - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _initRegionManager:
     description: | 
@@ -187,8 +221,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _initChannel:
     description: | 
@@ -196,19 +231,20 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 events
   name: before:start
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: start
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       

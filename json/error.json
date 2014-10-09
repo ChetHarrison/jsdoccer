@@ -8,8 +8,8 @@
         {
             "tags": [
                 "@api public",
-                "@param {<type>} message - ",
-                "@param {<type>} options - "
+                "@param {<type>} message - <description>",
+                "@param {<type>} options - <description>"
             ]
         }
     ],

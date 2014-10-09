@@ -28,7 +28,7 @@
             "name": "get",
             "tags": [
                 "@api public",
-                "@param {<type>} templateId - ",
+                "@param {<type>} templateId - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -49,7 +49,7 @@
             "name": "loadTemplate",
             "tags": [
                 "@api public",
-                "@param {<type>} templateId - ",
+                "@param {<type>} templateId - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -57,7 +57,7 @@
             "name": "compileTemplate",
             "tags": [
                 "@api public",
-                "@param {<type>} rawTemplate - ",
+                "@param {<type>} rawTemplate - <description>",
                 "@returns {<type>} -"
             ]
         }

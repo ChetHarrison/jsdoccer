@@ -2,7 +2,7 @@ modules
   name: Controller
 
   description: |
-    <module description>
+  
   
 constructors
   constructor:
@@ -12,11 +12,14 @@ constructors
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 properties
   options: |
+    <description>
+  
     @type {<type>}
     
 functions
@@ -27,6 +30,7 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       

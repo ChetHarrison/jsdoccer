@@ -2,7 +2,7 @@ modules
   name: Callbacks
 
   description: |
-    <module description>
+  
   
 constructors
   constructor:
@@ -11,44 +11,55 @@ constructors
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 properties
   _deferred: |
+    <description>
+  
     @type {<type>}
     
   _callbacks: |
+    <description>
+  
     @type {<type>}
     
   _deferred: |
+    <description>
+  
     @type {<type>}
     
   _callbacks: |
+    <description>
+  
     @type {<type>}
     
 functions
   add:
     description: | 
       @api public
-      @param {<type>} callback - 
-      @param {<type>} contextOverride - 
+      @param {<type>} callback - <description>
+      @param {<type>} contextOverride - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   run:
     description: | 
       @api public
-      @param {<type>} options - 
-      @param {<type>} context - 
+      @param {<type>} options - <description>
+      @param {<type>} context - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   reset:
     description: | 
@@ -56,6 +67,7 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       

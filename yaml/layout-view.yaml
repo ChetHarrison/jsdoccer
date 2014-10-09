@@ -2,33 +2,44 @@ modules
   name: LayoutView
 
   description: |
-    <module description>
+  
   
 constructors
   constructor:
     description: | 
       @api public
-      @param {<type>} options - 
+      @param {<type>} options - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 properties
   _firstRender: |
+    <description>
+  
     @type {<type>}
     
   _firstRender: |
+    <description>
+  
     @type {<type>}
     
   regions: |
+    <description>
+  
     @type {<type>}
     
   regionManager: |
+    <description>
+  
     @type {<type>}
     
   name: |
+    <description>
+  
     @type {<type>}
     
 functions
@@ -39,8 +50,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   destroy:
     description: | 
@@ -49,53 +61,58 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   addRegion:
     description: | 
       @api public
-      @param {<type>} name - 
-      @param {<type>} definition - 
+      @param {<type>} name - <description>
+      @param {<type>} definition - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   addRegions:
     description: | 
       @api public
-      @param {<type>} regions - 
+      @param {<type>} regions - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   removeRegion:
     description: | 
       @api public
-      @param {<type>} name - 
+      @param {<type>} name - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   getRegion:
     description: | 
       @api public
-      @param {<type>} region - 
+      @param {<type>} region - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   getRegions:
     description: | 
@@ -104,19 +121,21 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _buildRegions:
     description: | 
       @api private
-      @param {<type>} regions - 
+      @param {<type>} regions - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   parentEl:
     description: | 
@@ -125,18 +144,20 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _initializeRegions:
     description: | 
       @api private
-      @param {<type>} options - 
+      @param {<type>} options - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _reInitializeRegions:
     description: | 
@@ -144,8 +165,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   getRegionManager:
     description: | 
@@ -154,8 +176,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _initRegionManager:
     description: | 
@@ -163,31 +186,32 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 events
   name: before:add:region
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: add:region
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: before:remove:region
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: remove:region
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       

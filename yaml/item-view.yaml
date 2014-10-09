@@ -2,7 +2,7 @@ modules
   name: ItemView
 
   description: |
-    <module description>
+  
   
 constructors
   constructor:
@@ -11,8 +11,9 @@ constructors
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 functions
   serializeData:
@@ -22,19 +23,21 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   serializeCollection:
     description: | 
       @api public
-      @param {<type>} collection - 
+      @param {<type>} collection - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   render:
     description: | 
@@ -43,8 +46,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _renderTemplate:
     description: | 
@@ -53,19 +57,21 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   attachElContent:
     description: | 
       @api public
-      @param {<type>} html - 
+      @param {<type>} html - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   destroy:
     description: | 
@@ -74,19 +80,20 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 events
   name: before:render
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       
   name: render
 
-  description: |
+  description: | 
 
-  example: |
+  example: | 
       

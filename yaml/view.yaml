@@ -2,39 +2,54 @@ modules
   name: View
 
   description: |
-    <module description>
+  
   
 constructors
   constructor:
     description: | 
       @api public
-      @param {<type>} options - 
+      @param {<type>} options - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
 properties
   options: |
+    <description>
+  
     @type {<type>}
     
   _behaviors: |
+    <description>
+  
     @type {<type>}
     
   events: |
+    <description>
+  
     @type {<type>}
     
   isDestroyed: |
+    <description>
+  
     @type {<type>}
     
   _uiBindings: |
+    <description>
+  
     @type {<type>}
     
   ui: |
+    <description>
+  
     @type {<type>}
     
   ui: |
+    <description>
+  
     @type {<type>}
     
 functions
@@ -45,52 +60,57 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   serializeModel:
     description: | 
       @api public
-      @param {<type>} model - 
+      @param {<type>} model - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   mixinTemplateHelpers:
     description: | 
       @api public
-      @param {<type>} target - 
+      @param {<type>} target - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   normalizeUIKeys:
     description: | 
       @api public
-      @param {<type>} hash - 
+      @param {<type>} hash - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   normalizeUIValues:
     description: | 
       @api public
-      @param {<type>} hash - 
+      @param {<type>} hash - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   configureTriggers:
     description: | 
@@ -99,29 +119,32 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   delegateEvents:
     description: | 
       @api public
-      @param {<type>} events - 
+      @param {<type>} events - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _delegateDOMEvents:
     description: | 
       @api private
-      @param {<type>} eventsArg - 
+      @param {<type>} eventsArg - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   undelegateEvents:
     description: | 
@@ -130,8 +153,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   onShowCalled:
     description: | 
@@ -139,8 +163,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _ensureViewIsIntact:
     description: | 
@@ -148,8 +173,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   destroy:
     description: | 
@@ -158,8 +184,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   bindUIElements:
     description: | 
@@ -167,8 +194,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _bindUIElements:
     description: | 
@@ -176,8 +204,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   unbindUIElements:
     description: | 
@@ -185,8 +214,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _unbindUIElements:
     description: | 
@@ -194,19 +224,21 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   _buildViewTrigger:
     description: | 
       @api private
-      @param {<type>} triggerDef - 
+      @param {<type>} triggerDef - <description>
       @returns {<type>} -
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   setElement:
     description: | 
@@ -215,8 +247,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   triggerMethod:
     description: | 
@@ -225,6 +258,7 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       

@@ -54,21 +54,21 @@
             "name": "addInitializer",
             "tags": [
                 "@api public",
-                "@param {<type>} callback - "
+                "@param {<type>} callback - <description>"
             ]
         },
         {
             "name": "addFinalizer",
             "tags": [
                 "@api public",
-                "@param {<type>} callback - "
+                "@param {<type>} callback - <description>"
             ]
         },
         {
             "name": "start",
             "tags": [
                 "@api public",
-                "@param {<type>} options - "
+                "@param {<type>} options - <description>"
             ]
         },
         {
@@ -81,16 +81,16 @@
             "name": "addDefinition",
             "tags": [
                 "@api public",
-                "@param {<type>} moduleDefinition - ",
-                "@param {<type>} customArgs - "
+                "@param {<type>} moduleDefinition - <description>",
+                "@param {<type>} customArgs - <description>"
             ]
         },
         {
             "name": "_runModuleDefinition",
             "tags": [
                 "@api private",
-                "@param {<type>} definition - ",
-                "@param {<type>} customArgs - "
+                "@param {<type>} definition - <description>",
+                "@param {<type>} customArgs - <description>"
             ]
         },
         {
@@ -103,9 +103,9 @@
             "name": "create",
             "tags": [
                 "@api public",
-                "@param {<type>} app - ",
-                "@param {<type>} moduleNames - ",
-                "@param {<type>} moduleDefinition - ",
+                "@param {<type>} app - <description>",
+                "@param {<type>} moduleNames - <description>",
+                "@param {<type>} moduleDefinition - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -113,11 +113,11 @@
             "name": "_getModule",
             "tags": [
                 "@api private",
-                "@param {<type>} parentModule - ",
-                "@param {<type>} moduleName - ",
-                "@param {<type>} app - ",
-                "@param {<type>} def - ",
-                "@param {<type>} args - ",
+                "@param {<type>} parentModule - <description>",
+                "@param {<type>} moduleName - <description>",
+                "@param {<type>} app - <description>",
+                "@param {<type>} def - <description>",
+                "@param {<type>} args - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -125,7 +125,7 @@
             "name": "getClass",
             "tags": [
                 "@api public",
-                "@param {<type>} moduleDefinition - ",
+                "@param {<type>} moduleDefinition - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -133,18 +133,18 @@
             "name": "_addModuleDefinition",
             "tags": [
                 "@api private",
-                "@param {<type>} parentModule - ",
-                "@param {<type>} module - ",
-                "@param {<type>} def - ",
-                "@param {<type>} args - "
+                "@param {<type>} parentModule - <description>",
+                "@param {<type>} module - <description>",
+                "@param {<type>} def - <description>",
+                "@param {<type>} args - <description>"
             ]
         },
         {
             "name": "_getStartWithParent",
             "tags": [
                 "@api private",
-                "@param {<type>} def - ",
-                "@param {<type>} module - ",
+                "@param {<type>} def - <description>",
+                "@param {<type>} module - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -152,7 +152,7 @@
             "name": "_getDefine",
             "tags": [
                 "@api private",
-                "@param {<type>} def - ",
+                "@param {<type>} def - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -160,9 +160,9 @@
             "name": "_addStartWithParent",
             "tags": [
                 "@api private",
-                "@param {<type>} parentModule - ",
-                "@param {<type>} module - ",
-                "@param {<type>} startWithParent - "
+                "@param {<type>} parentModule - <description>",
+                "@param {<type>} module - <description>",
+                "@param {<type>} startWithParent - <description>"
             ]
         }
     ],

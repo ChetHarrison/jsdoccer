@@ -41,7 +41,7 @@
             "name": "proxyViewProperties",
             "tags": [
                 "@api public",
-                "@param {<type>} view - "
+                "@param {<type>} view - <description>"
             ]
         }
     ]

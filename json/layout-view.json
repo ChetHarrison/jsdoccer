@@ -8,7 +8,7 @@
         {
             "tags": [
                 "@api public",
-                "@param {<type>} options - "
+                "@param {<type>} options - <description>"
             ]
         }
     ],
@@ -48,8 +48,8 @@
             "name": "addRegion",
             "tags": [
                 "@api public",
-                "@param {<type>} name - ",
-                "@param {<type>} definition - ",
+                "@param {<type>} name - <description>",
+                "@param {<type>} definition - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -57,7 +57,7 @@
             "name": "addRegions",
             "tags": [
                 "@api public",
-                "@param {<type>} regions - ",
+                "@param {<type>} regions - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -65,7 +65,7 @@
             "name": "removeRegion",
             "tags": [
                 "@api public",
-                "@param {<type>} name - ",
+                "@param {<type>} name - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -73,7 +73,7 @@
             "name": "getRegion",
             "tags": [
                 "@api public",
-                "@param {<type>} region - ",
+                "@param {<type>} region - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -88,7 +88,7 @@
             "name": "_buildRegions",
             "tags": [
                 "@api private",
-                "@param {<type>} regions - ",
+                "@param {<type>} regions - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -103,7 +103,7 @@
             "name": "_initializeRegions",
             "tags": [
                 "@api private",
-                "@param {<type>} options - "
+                "@param {<type>} options - <description>"
             ]
         },
         {

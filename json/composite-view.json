@@ -22,7 +22,7 @@
             "name": "getChildView",
             "tags": [
                 "@api public",
-                "@param {<type>} child - ",
+                "@param {<type>} child - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -56,7 +56,7 @@
             "name": "attachElContent",
             "tags": [
                 "@api public",
-                "@param {<type>} html - ",
+                "@param {<type>} html - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -64,22 +64,22 @@
             "name": "attachBuffer",
             "tags": [
                 "@api public",
-                "@param {<type>} compositeView - ",
-                "@param {<type>} buffer - "
+                "@param {<type>} compositeView - <description>",
+                "@param {<type>} buffer - <description>"
             ]
         },
         {
             "name": "_insertAfter",
             "tags": [
                 "@api private",
-                "@param {<type>} childView - "
+                "@param {<type>} childView - <description>"
             ]
         },
         {
             "name": "getChildViewContainer",
             "tags": [
                 "@api public",
-                "@param {<type>} containerView - ",
+                "@param {<type>} containerView - <description>",
                 "@returns {<type>} -"
             ]
         },

@@ -8,7 +8,7 @@
         {
             "tags": [
                 "@api public",
-                "@param {<type>} options - "
+                "@param {<type>} options - <description>"
             ]
         }
     ],
@@ -73,8 +73,8 @@
             "name": "_triggerMethodOnChild",
             "tags": [
                 "@api private",
-                "@param {<type>} event - ",
-                "@param {<type>} childView - "
+                "@param {<type>} event - <description>",
+                "@param {<type>} childView - <description>"
             ]
         },
         {
@@ -87,14 +87,14 @@
             "name": "_onCollectionAdd",
             "tags": [
                 "@api private",
-                "@param {<type>} child - "
+                "@param {<type>} child - <description>"
             ]
         },
         {
             "name": "_onCollectionRemove",
             "tags": [
                 "@api private",
-                "@param {<type>} model - "
+                "@param {<type>} model - <description>"
             ]
         },
         {
@@ -157,15 +157,15 @@
             "name": "addEmptyView",
             "tags": [
                 "@api public",
-                "@param {<type>} child - ",
-                "@param {<type>} EmptyView - "
+                "@param {<type>} child - <description>",
+                "@param {<type>} EmptyView - <description>"
             ]
         },
         {
             "name": "getChildView",
             "tags": [
                 "@api public",
-                "@param {<type>} child - ",
+                "@param {<type>} child - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -173,9 +173,9 @@
             "name": "addChild",
             "tags": [
                 "@api public",
-                "@param {<type>} child - ",
-                "@param {<type>} ChildView - ",
-                "@param {<type>} index - ",
+                "@param {<type>} child - <description>",
+                "@param {<type>} ChildView - <description>",
+                "@param {<type>} index - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -183,25 +183,25 @@
             "name": "_updateIndices",
             "tags": [
                 "@api private",
-                "@param {<type>} view - ",
-                "@param {<type>} increment - ",
-                "@param {<type>} index - "
+                "@param {<type>} view - <description>",
+                "@param {<type>} increment - <description>",
+                "@param {<type>} index - <description>"
             ]
         },
         {
             "name": "_addChildView",
             "tags": [
                 "@api private",
-                "@param {<type>} view - ",
-                "@param {<type>} index - "
+                "@param {<type>} view - <description>",
+                "@param {<type>} index - <description>"
             ]
         },
         {
             "name": "renderChildView",
             "tags": [
                 "@api public",
-                "@param {<type>} view - ",
-                "@param {<type>} index - ",
+                "@param {<type>} view - <description>",
+                "@param {<type>} index - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -209,9 +209,9 @@
             "name": "buildChildView",
             "tags": [
                 "@api public",
-                "@param {<type>} child - ",
-                "@param {<type>} ChildViewClass - ",
-                "@param {<type>} childViewOptions - ",
+                "@param {<type>} child - <description>",
+                "@param {<type>} ChildViewClass - <description>",
+                "@param {<type>} childViewOptions - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -219,7 +219,7 @@
             "name": "removeChildView",
             "tags": [
                 "@api public",
-                "@param {<type>} view - ",
+                "@param {<type>} view - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -240,25 +240,25 @@
             "name": "attachBuffer",
             "tags": [
                 "@api public",
-                "@param {<type>} collectionView - ",
-                "@param {<type>} buffer - "
+                "@param {<type>} collectionView - <description>",
+                "@param {<type>} buffer - <description>"
             ]
         },
         {
             "name": "attachHtml",
             "tags": [
                 "@api public",
-                "@param {<type>} collectionView - ",
-                "@param {<type>} childView - ",
-                "@param {<type>} index - "
+                "@param {<type>} collectionView - <description>",
+                "@param {<type>} childView - <description>",
+                "@param {<type>} index - <description>"
             ]
         },
         {
             "name": "_insertBefore",
             "tags": [
                 "@api private",
-                "@param {<type>} childView - ",
-                "@param {<type>} index - ",
+                "@param {<type>} childView - <description>",
+                "@param {<type>} index - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -266,7 +266,7 @@
             "name": "_insertAfter",
             "tags": [
                 "@api private",
-                "@param {<type>} childView - "
+                "@param {<type>} childView - <description>"
             ]
         },
         {
@@ -293,7 +293,7 @@
             "name": "proxyChildEvents",
             "tags": [
                 "@api public",
-                "@param {<type>} view - "
+                "@param {<type>} view - <description>"
             ]
         }
     ],

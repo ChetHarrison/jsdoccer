@@ -2,25 +2,37 @@ modules
   name: Behavior
 
   description: |
-    <module description>
+  
   
 properties
   view: |
+    <description>
+  
     @type {<type>}
     
   defaults: |
+    <description>
+  
     @type {<type>}
     
   options: |
+    <description>
+  
     @type {<type>}
     
   $: |
+    <description>
+  
     @type {<type>}
     
   $el: |
+    <description>
+  
     @type {<type>}
     
   el: |
+    <description>
+  
     @type {<type>}
     
 functions
@@ -30,8 +42,9 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   destroy:
     description: | 
@@ -39,16 +52,18 @@ functions
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       
   proxyViewProperties:
     description: | 
       @api public
-      @param {<type>} view - 
+      @param {<type>} view - <description>
   
     examples:
       -
-        name:
+        name: 
         example: |
+        
       

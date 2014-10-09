@@ -8,7 +8,7 @@
         {
             "tags": [
                 "@api public",
-                "@param {<type>} options - "
+                "@param {<type>} options - <description>"
             ]
         }
     ],
@@ -25,8 +25,8 @@
             "name": "addRegions",
             "tags": [
                 "@api public",
-                "@param {<type>} regionDefinitions - ",
-                "@param {<type>} defaults - ",
+                "@param {<type>} regionDefinitions - <description>",
+                "@param {<type>} defaults - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -34,8 +34,8 @@
             "name": "addRegion",
             "tags": [
                 "@api public",
-                "@param {<type>} name - ",
-                "@param {<type>} definition - ",
+                "@param {<type>} name - <description>",
+                "@param {<type>} definition - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -43,7 +43,7 @@
             "name": "get",
             "tags": [
                 "@api public",
-                "@param {<type>} name - ",
+                "@param {<type>} name - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -58,7 +58,7 @@
             "name": "removeRegion",
             "tags": [
                 "@api public",
-                "@param {<type>} name - ",
+                "@param {<type>} name - <description>",
                 "@returns {<type>} -"
             ]
         },
@@ -87,16 +87,16 @@
             "name": "_store",
             "tags": [
                 "@api private",
-                "@param {<type>} name - ",
-                "@param {<type>} region - "
+                "@param {<type>} name - <description>",
+                "@param {<type>} region - <description>"
             ]
         },
         {
             "name": "_remove",
             "tags": [
                 "@api private",
-                "@param {<type>} name - ",
-                "@param {<type>} region - "
+                "@param {<type>} name - <description>",
+                "@param {<type>} region - <description>"
             ]
         },
         {

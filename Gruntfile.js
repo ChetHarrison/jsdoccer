@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		jshint: {
-			files: ['!Gruntfile.js', './*.js'],
+			files: ['./src/*.js'],
 			// configure JSHint (documented at http://www.jshint.com/docs/)
 			options: {
 				jshintrc: '.jshintrc',
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
 					jshint: grunt.file.readJSON('.jshintrc')
 				},
 				files: {
-					reports: ['!Gruntfile.js', '<%= jshint.files %>']
+					reports: ['syntax-matchers.js', '<%= jshint.files %>']
 				}
 			}
 		},

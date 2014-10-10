@@ -1,5 +1,5 @@
 modules:
-  name: ItemView
+  name: Undefined
 
   description: |
   
@@ -19,7 +19,7 @@ functions:
   serializeData:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -31,7 +31,7 @@ functions:
     description: | 
       @api public
       @param {<type>} collection - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -42,7 +42,7 @@ functions:
   render:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -53,7 +53,7 @@ functions:
   _renderTemplate:
     description: | 
       @api private
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -65,7 +65,7 @@ functions:
     description: | 
       @api public
       @param {<type>} html - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -76,7 +76,7 @@ functions:
   destroy:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -

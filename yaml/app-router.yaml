@@ -1,5 +1,5 @@
 modules:
-  name: AppRouter
+  name: Undefined
 
   description: |
   
@@ -62,7 +62,7 @@ functions:
   _getController:
     description: | 
       @api private
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -

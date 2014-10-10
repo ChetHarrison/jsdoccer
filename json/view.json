@@ -1,7 +1,7 @@
 {
     "modules": [
         {
-            "name": "View"
+            "name": "Undefined"
         }
     ],
     "constructors": [
@@ -40,7 +40,7 @@
             "name": "getTemplate",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -48,7 +48,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} model - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -56,7 +56,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} target - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -64,7 +64,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} hash - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -72,14 +72,14 @@
             "tags": [
                 "@api public",
                 "@param {<type>} hash - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "configureTriggers",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -87,7 +87,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} events - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -101,7 +101,7 @@
             "name": "undelegateEvents",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -120,7 +120,7 @@
             "name": "destroy",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -152,21 +152,21 @@
             "tags": [
                 "@api private",
                 "@param {<type>} triggerDef - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "setElement",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "triggerMethod",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         }
     ]

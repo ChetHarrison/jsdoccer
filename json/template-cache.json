@@ -1,14 +1,14 @@
 {
     "modules": [
         {
-            "name": "TemplateCache"
+            "name": "Undefined"
         }
     ],
     "constructors": [
         {
             "tags": [
                 "@api public",
-                "@param {<type>} templateId - "
+                "@param {<type>} templateId - <description>"
             ]
         }
     ],
@@ -29,7 +29,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} templateId - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -42,7 +42,7 @@
             "name": "load",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -50,7 +50,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} templateId - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -58,7 +58,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} rawTemplate - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         }
     ]

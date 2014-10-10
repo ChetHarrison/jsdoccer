@@ -1,5 +1,5 @@
 modules:
-  name: Application
+  name: Undefined
 
   description: |
   
@@ -8,7 +8,7 @@ constructors:
   constructor:
     description: | 
       @api public
-      @param {<type>} options - 
+      @param {<type>} options - <description>
   
     examples:
       -
@@ -91,7 +91,7 @@ functions:
   request:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -125,7 +125,7 @@ functions:
     description: | 
       @api public
       @param {<type>} regions - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -136,7 +136,7 @@ functions:
   emptyRegions:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -148,7 +148,7 @@ functions:
     description: | 
       @api public
       @param {<type>} region - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -160,7 +160,7 @@ functions:
     description: | 
       @api public
       @param {<type>} region - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -171,7 +171,7 @@ functions:
   getRegions:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -184,7 +184,7 @@ functions:
       @api public
       @param {<type>} moduleNames - <description>
       @param {<type>} moduleDefinition - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -195,7 +195,7 @@ functions:
   getRegionManager:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -207,7 +207,7 @@ functions:
     description: | 
       @api private
       @param {<type>} options - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -

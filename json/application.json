@@ -1,14 +1,14 @@
 {
     "modules": [
         {
-            "name": "Application"
+            "name": "Undefined"
         }
     ],
     "constructors": [
         {
             "tags": [
                 "@api public",
-                "@param {<type>} options - "
+                "@param {<type>} options - <description>"
             ]
         }
     ],
@@ -61,7 +61,7 @@
             "name": "request",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -83,14 +83,14 @@
             "tags": [
                 "@api public",
                 "@param {<type>} regions - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "emptyRegions",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -98,7 +98,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} region - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -106,14 +106,14 @@
             "tags": [
                 "@api public",
                 "@param {<type>} region - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "getRegions",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -122,14 +122,14 @@
                 "@api public",
                 "@param {<type>} moduleNames - <description>",
                 "@param {<type>} moduleDefinition - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "getRegionManager",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -137,7 +137,7 @@
             "tags": [
                 "@api private",
                 "@param {<type>} options - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {

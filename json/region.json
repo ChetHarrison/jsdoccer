@@ -1,14 +1,14 @@
 {
     "modules": [
         {
-            "name": "Region"
+            "name": "Undefined"
         }
     ],
     "constructors": [
         {
             "tags": [
                 "@api public",
-                "@param {<type>} options - "
+                "@param {<type>} options - <description>"
             ]
         }
     ],
@@ -56,7 +56,7 @@
                 "@api private",
                 "@param {<type>} selector - <description>",
                 "@param {<type>} DefaultRegionClass - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -65,7 +65,7 @@
                 "@api private",
                 "@param {<type>} regionConfig - <description>",
                 "@param {<type>} DefaultRegionClass - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -73,7 +73,7 @@
             "tags": [
                 "@api private",
                 "@param {<type>} RegionClass - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -82,7 +82,7 @@
                 "@api public",
                 "@param {<type>} view - <description>",
                 "@param {<type>} options - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -103,7 +103,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} el - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -117,7 +117,7 @@
             "name": "empty",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -131,21 +131,21 @@
             "tags": [
                 "@api public",
                 "@param {<type>} view - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "hasView",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "reset",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         }
     ],

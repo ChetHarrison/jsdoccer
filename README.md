@@ -9,15 +9,29 @@ A Node.js tool to auto document your ECMAScript (Java Script) in  [JSDoc 3](http
 
 ### Basic Usage
 
-From the command line
+Setup
 
 ```
 $ git clone git@github.com:ChetHarrison/jsdoccer.git
 $ cd jsdoccer
-$ node run.js
 ```
 
-**Note: JSDoccer comes with some default syntax to document your JS. In order to configure it to specific syntax you will need to adapt the `.jsdoccerrc` file add target syntax AST tests to the `syntax-to-document.js` file and add any custom YAML templates to the `templates` directory.** *whoo that's a lot o config, but hopefully worth it!*
+
+This tool will provide 2 primarey functions. 
+
+1) create stubbed YAML document templates
+
+```
+$ node generate-doc-yaml.js
+```
+
+2) lint existing documents
+
+```
+$ node lint-docs.js
+```
+
+**Note: JSDoccer comes with some default syntax to document your JS. In order to configure it to specific syntax you will need to adapt the `.jsdoccerrc` file add target syntax AST tests to the `syntax-matchers.js` file and add any custom YAML templates to the `templates` directory.**
 
 ### What You Need To Know About ASTs
 
@@ -61,7 +75,7 @@ AST types are defined by the [Spider Monkey Parser API](https://developer.mozill
 
 #### Configuring Custom Documentation
 
-In order to find syntax targets you can create a custom document "type" by adding a type attribute and associated matching function to the `syntax-to-document.js` hash for example:
+In order to find syntax targets you can create a custom document "type" by adding a type attribute and associated matching function to the `syntax-matchers.js` hash for example:
 
 
 ```
@@ -106,7 +120,7 @@ To find out the AST conditions that match the code you would like to document co
 
 #### Parse JSON like a champ
 
-Map/Reduce is your friend when you need to pull deeply nested targets out of a large amount of JSON. I use a modified Array with the 5 magic RX methods attached. I highly recomend you spend a little time with [this excellent tutorial](http://reactive-extensions.github.io/learnrx/) from Jafar Husain of Netflix **Note: Do it in Chrome. It doesn't work in Firefox.** Then you will be able to inspect the generated AST files in the `ast` directory and write your own custom matchers in the `syntax-to-document.js` file.
+Map/Reduce is your friend when you need to pull deeply nested targets out of a large amount of JSON. I use a modified Array with the 5 magic RX methods attached. I highly recomend you spend a little time with [this excellent tutorial](http://reactive-extensions.github.io/learnrx/) from Jafar Husain of Netflix **Note: Do it in Chrome. It doesn't work in Firefox.** Then you will be able to inspect the generated AST files in the `ast` directory and write your own custom matchers in the `syntax-matchers.js` file.
 
 #### .jsdoccerrc
 
@@ -133,7 +147,7 @@ This file configures the source and destination paths.
     "dest": "./jsdoc/"
   },
   "syntaxToDocument": {
-    "src": "./syntax-to-document.js"
+    "src": "./syntax-matchers.js"
   },
   "fileFilters": [".DS_Store"]
 }
@@ -161,7 +175,7 @@ The syntax target type "functions" should have a corresponding template `functio
 
 Example:
 
-`functions.tpl` referenced in the `syntax-to-document.js` hash above will search for this template in the `yaml/templates` dir specified in the `.jsdoccerrc` file above. **Note the indentation of the loop to populate the template with `param` values.**
+`functions.tpl` referenced in the `syntax-matchers.js` hash above will search for this template in the `yaml/templates` dir specified in the `.jsdoccerrc` file above. **Note the indentation of the loop to populate the template with `param` values.**
 
 ```
 <%- id %>

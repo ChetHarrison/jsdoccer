@@ -1,5 +1,5 @@
 modules:
-  name: Behaviors
+  name: Undefined
 
   description: |
   
@@ -10,7 +10,7 @@ functions:
       @api public
       @param {<type>} behaviorTriggers - <description>
       @param {<type>} behaviors - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -23,7 +23,7 @@ functions:
       @api public
       @param {<type>} behaviorEvents - <description>
       @param {<type>} behaviors - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -46,7 +46,7 @@ functions:
       @api public
       @param {<type>} options - <description>
       @param {<type>} key - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -59,7 +59,7 @@ functions:
       @api public
       @param {<type>} view - <description>
       @param {<type>} behaviors - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -83,7 +83,7 @@ functions:
   buildBehaviorTriggers:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -

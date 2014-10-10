@@ -1,7 +1,7 @@
 {
     "modules": [
         {
-            "name": "LayoutView"
+            "name": "Undefined"
         }
     ],
     "constructors": [
@@ -34,14 +34,14 @@
             "name": "render",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "destroy",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -50,7 +50,7 @@
                 "@api public",
                 "@param {<type>} name - <description>",
                 "@param {<type>} definition - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -58,7 +58,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} regions - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -66,7 +66,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} name - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -74,14 +74,14 @@
             "tags": [
                 "@api public",
                 "@param {<type>} region - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "getRegions",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -89,14 +89,14 @@
             "tags": [
                 "@api private",
                 "@param {<type>} regions - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "parentEl",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -116,7 +116,7 @@
             "name": "getRegionManager",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {

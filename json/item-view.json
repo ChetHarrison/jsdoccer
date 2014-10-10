@@ -1,7 +1,7 @@
 {
     "modules": [
         {
-            "name": "ItemView"
+            "name": "Undefined"
         }
     ],
     "constructors": [
@@ -16,7 +16,7 @@
             "name": "serializeData",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -24,21 +24,21 @@
             "tags": [
                 "@api public",
                 "@param {<type>} collection - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "render",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "_renderTemplate",
             "tags": [
                 "@api private",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -46,14 +46,14 @@
             "tags": [
                 "@api public",
                 "@param {<type>} html - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "destroy",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         }
     ],

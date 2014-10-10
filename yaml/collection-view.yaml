@@ -1,5 +1,5 @@
 modules:
-  name: CollectionView
+  name: Undefined
 
   description: |
   
@@ -165,7 +165,7 @@ functions:
   render:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -236,7 +236,7 @@ functions:
   getEmptyView:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -260,7 +260,7 @@ functions:
     description: | 
       @api public
       @param {<type>} child - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -274,7 +274,7 @@ functions:
       @param {<type>} child - <description>
       @param {<type>} ChildView - <description>
       @param {<type>} index - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -312,7 +312,7 @@ functions:
       @api public
       @param {<type>} view - <description>
       @param {<type>} index - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -326,7 +326,7 @@ functions:
       @param {<type>} child - <description>
       @param {<type>} ChildViewClass - <description>
       @param {<type>} childViewOptions - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -338,7 +338,7 @@ functions:
     description: | 
       @api public
       @param {<type>} view - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -349,7 +349,7 @@ functions:
   isEmpty:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -397,7 +397,7 @@ functions:
       @api private
       @param {<type>} childView - <description>
       @param {<type>} index - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -429,7 +429,7 @@ functions:
   destroy:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -440,7 +440,7 @@ functions:
   destroyChildren:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -

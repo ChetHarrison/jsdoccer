@@ -1,6 +1,7 @@
 // rx functions lovingly lifted from http://reactive-extensions.github.io/learnrx/
 'use strict';
 
+// Dependencies
 var _ = require('lodash');
 
 // Strap on the map/reduce functions for rx mojo

@@ -1,5 +1,5 @@
 modules:
-  name: Object
+  name: Undefined
 
   description: |
   
@@ -8,7 +8,7 @@ constructors:
   constructor:
     description: | 
       @api public
-      @param {<type>} options - 
+      @param {<type>} options - <description>
   
     examples:
       -

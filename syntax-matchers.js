@@ -23,7 +23,7 @@ var _s = require('underscore.string'),
 		return hasReturn;
 	};
 	
-require('./rx-array.js');
+require('./src/rx-array.js');
 
 // add a category of syntax you would like to document
 // and assign it a function that will take a branch of
@@ -43,8 +43,8 @@ require('./rx-array.js');
 //
 // **Note: as much of the syntax you will want to 
 // document will inevitably collide with reserve words
-// I recomend using the plural ex. `functions` instead
-// of `function`.**
+// I recomend using the plural version ex. `functions` 
+// instead of `function`.**
 
 
 
@@ -112,7 +112,7 @@ module.exports = {
 									return param.type === 'Identifier';
 								}).
 								map(function (param) {
-									return '@param {<type>} ' + param.name + ' - ';
+									return '@param {<type>} ' + param.name + ' - ' + '<description>';
 								})
 							].mergeAll()  // here's that mergeAll
 						};
@@ -174,7 +174,7 @@ module.exports = {
 								map(function (param) {
 									return '@param {<type>} ' + param.name + ' - ' + '<description>';
 								}),
-							_hasReturn(property.value.body.body) ? ['@returns {<type>} -'] : []
+							_hasReturn(property.value.body.body) ? ['@returns {<type>} - <description>'] : []
 						].mergeAll()
 					};
 				});

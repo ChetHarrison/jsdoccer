@@ -1,5 +1,5 @@
 modules:
-  name: Error
+  name: Undefined
 
   description: |
   
@@ -37,7 +37,7 @@ functions:
   toString:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -

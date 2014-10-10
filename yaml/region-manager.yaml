@@ -1,5 +1,5 @@
 modules:
-  name: RegionManager
+  name: Undefined
 
   description: |
   
@@ -33,7 +33,7 @@ functions:
       @api public
       @param {<type>} regionDefinitions - <description>
       @param {<type>} defaults - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -46,7 +46,7 @@ functions:
       @api public
       @param {<type>} name - <description>
       @param {<type>} definition - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -58,7 +58,7 @@ functions:
     description: | 
       @api public
       @param {<type>} name - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -69,7 +69,7 @@ functions:
   getRegions:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -81,7 +81,7 @@ functions:
     description: | 
       @api public
       @param {<type>} name - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -92,7 +92,7 @@ functions:
   removeRegions:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -103,7 +103,7 @@ functions:
   emptyRegions:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -114,7 +114,7 @@ functions:
   destroy:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -

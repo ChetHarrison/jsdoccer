@@ -1,5 +1,5 @@
 modules:
-  name: CompositeView
+  name: Undefined
 
   description: |
   
@@ -30,7 +30,7 @@ functions:
     description: | 
       @api public
       @param {<type>} child - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -41,7 +41,7 @@ functions:
   serializeData:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -52,7 +52,7 @@ functions:
   render:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -84,7 +84,7 @@ functions:
     description: | 
       @api public
       @param {<type>} html - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -119,7 +119,7 @@ functions:
     description: | 
       @api public
       @param {<type>} containerView - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -

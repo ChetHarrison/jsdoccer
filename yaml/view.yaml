@@ -1,5 +1,5 @@
 modules:
-  name: View
+  name: Undefined
 
   description: |
   
@@ -56,7 +56,7 @@ functions:
   getTemplate:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -68,7 +68,7 @@ functions:
     description: | 
       @api public
       @param {<type>} model - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -80,7 +80,7 @@ functions:
     description: | 
       @api public
       @param {<type>} target - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -92,7 +92,7 @@ functions:
     description: | 
       @api public
       @param {<type>} hash - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -104,7 +104,7 @@ functions:
     description: | 
       @api public
       @param {<type>} hash - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -115,7 +115,7 @@ functions:
   configureTriggers:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -127,7 +127,7 @@ functions:
     description: | 
       @api public
       @param {<type>} events - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -149,7 +149,7 @@ functions:
   undelegateEvents:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -180,7 +180,7 @@ functions:
   destroy:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -232,7 +232,7 @@ functions:
     description: | 
       @api private
       @param {<type>} triggerDef - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -243,7 +243,7 @@ functions:
   setElement:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -254,7 +254,7 @@ functions:
   triggerMethod:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -

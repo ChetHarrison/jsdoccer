@@ -1,5 +1,5 @@
 modules:
-  name: Renderer
+  name: Undefined
 
   description: |
   
@@ -10,7 +10,7 @@ functions:
       @api public
       @param {<type>} template - <description>
       @param {<type>} data - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -

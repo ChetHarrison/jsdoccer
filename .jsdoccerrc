@@ -27,12 +27,13 @@
 	},
 	
 	
-	"syntaxToDocument": {
-		"src": "./syntax-to-document.js"
+	"syntaxMatchers": {
+		"src": "./syntax-matchers.js"
 	},
 	
 	
-	"fileFilters": [
-		".DS_Store"
+	"filesToFilter": [
+		".DS_Store",
+		"filter-this.js"
 	]
 }

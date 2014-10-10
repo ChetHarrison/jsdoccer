@@ -1,5 +1,5 @@
 modules:
-  name: LayoutView
+  name: Undefined
 
   description: |
   
@@ -46,7 +46,7 @@ functions:
   render:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -57,7 +57,7 @@ functions:
   destroy:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -70,7 +70,7 @@ functions:
       @api public
       @param {<type>} name - <description>
       @param {<type>} definition - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -82,7 +82,7 @@ functions:
     description: | 
       @api public
       @param {<type>} regions - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -94,7 +94,7 @@ functions:
     description: | 
       @api public
       @param {<type>} name - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -106,7 +106,7 @@ functions:
     description: | 
       @api public
       @param {<type>} region - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -117,7 +117,7 @@ functions:
   getRegions:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -129,7 +129,7 @@ functions:
     description: | 
       @api private
       @param {<type>} regions - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -140,7 +140,7 @@ functions:
   parentEl:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -172,7 +172,7 @@ functions:
   getRegionManager:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -

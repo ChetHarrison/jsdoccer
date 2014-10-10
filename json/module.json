@@ -1,16 +1,16 @@
 {
     "modules": [
         {
-            "name": "Module"
+            "name": "Undefined"
         }
     ],
     "constructors": [
         {
             "tags": [
                 "@api public",
-                "@param {<type>} moduleName - ",
-                "@param {<type>} app - ",
-                "@param {<type>} options - "
+                "@param {<type>} moduleName - <description>",
+                "@param {<type>} app - <description>",
+                "@param {<type>} options - <description>"
             ]
         }
     ],
@@ -106,7 +106,7 @@
                 "@param {<type>} app - <description>",
                 "@param {<type>} moduleNames - <description>",
                 "@param {<type>} moduleDefinition - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -118,7 +118,7 @@
                 "@param {<type>} app - <description>",
                 "@param {<type>} def - <description>",
                 "@param {<type>} args - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -126,7 +126,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} moduleDefinition - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -145,7 +145,7 @@
                 "@api private",
                 "@param {<type>} def - <description>",
                 "@param {<type>} module - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -153,7 +153,7 @@
             "tags": [
                 "@api private",
                 "@param {<type>} def - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {

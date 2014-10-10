@@ -1,5 +1,5 @@
 modules:
-  name: Region
+  name: Undefined
 
   description: |
   
@@ -8,7 +8,7 @@ constructors:
   constructor:
     description: | 
       @api public
-      @param {<type>} options - 
+      @param {<type>} options - <description>
   
     examples:
       -
@@ -80,7 +80,7 @@ functions:
       @api private
       @param {<type>} selector - <description>
       @param {<type>} DefaultRegionClass - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -93,7 +93,7 @@ functions:
       @api private
       @param {<type>} regionConfig - <description>
       @param {<type>} DefaultRegionClass - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -105,7 +105,7 @@ functions:
     description: | 
       @api private
       @param {<type>} RegionClass - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -118,7 +118,7 @@ functions:
       @api public
       @param {<type>} view - <description>
       @param {<type>} options - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -151,7 +151,7 @@ functions:
     description: | 
       @api public
       @param {<type>} el - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -173,7 +173,7 @@ functions:
   empty:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -195,7 +195,7 @@ functions:
     description: | 
       @api public
       @param {<type>} view - <description>
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -206,7 +206,7 @@ functions:
   hasView:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -
@@ -217,7 +217,7 @@ functions:
   reset:
     description: | 
       @api public
-      @returns {<type>} -
+      @returns {<type>} - <description>
   
     examples:
       -

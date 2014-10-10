@@ -1,7 +1,7 @@
 {
     "modules": [
         {
-            "name": "CompositeView"
+            "name": "Undefined"
         }
     ],
     "constructors": [
@@ -23,21 +23,21 @@
             "tags": [
                 "@api public",
                 "@param {<type>} child - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "serializeData",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "render",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -57,7 +57,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} html - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -80,7 +80,7 @@
             "tags": [
                 "@api public",
                 "@param {<type>} containerView - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {

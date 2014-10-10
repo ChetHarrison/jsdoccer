@@ -1,7 +1,7 @@
 {
     "modules": [
         {
-            "name": "RegionManager"
+            "name": "Undefined"
         }
     ],
     "constructors": [
@@ -27,7 +27,7 @@
                 "@api public",
                 "@param {<type>} regionDefinitions - <description>",
                 "@param {<type>} defaults - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -36,7 +36,7 @@
                 "@api public",
                 "@param {<type>} name - <description>",
                 "@param {<type>} definition - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -44,14 +44,14 @@
             "tags": [
                 "@api public",
                 "@param {<type>} name - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "getRegions",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
@@ -59,28 +59,28 @@
             "tags": [
                 "@api public",
                 "@param {<type>} name - <description>",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "removeRegions",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "emptyRegions",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {
             "name": "destroy",
             "tags": [
                 "@api public",
-                "@returns {<type>} -"
+                "@returns {<type>} - <description>"
             ]
         },
         {

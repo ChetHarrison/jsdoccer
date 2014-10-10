@@ -25,7 +25,7 @@ This tool will provide 2 primarey functions.
 $ node generate-doc-yaml.js
 ```
 
-2) lint existing documents
+2) lint existing documents **(this is not working right now)**
 
 ```
 $ node lint-docs.js

@@ -22,7 +22,7 @@ This tool will provide 2 primarey functions.
 1) create stubbed YAML document templates
 
 ```
-$ node generate-doc-yaml.js
+$ npm start
 ```
 
 2) lint existing documents **(this is not working right now)**

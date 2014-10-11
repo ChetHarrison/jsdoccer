@@ -1,5 +1,6 @@
 ### This is a work in progress and not ready for prime time.
 #### Because:
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/ChetHarrison/jsdoccer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 * parse documented YAML to JSDoc
 * convert to grunt task.
 

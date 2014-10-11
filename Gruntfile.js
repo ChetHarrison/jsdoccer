@@ -15,8 +15,12 @@ module.exports = function (grunt) {
 
 		watch: {
 			files: ['<%= jshint.files %>'],
-			tasks: ['jshint', 'qunit']
+			tasks: ['jshint', 'clean:build']
 		},
+		
+		clean: {
+  			build: ['./ast/*', './jsdoc/*','./json/*', './yaml/*']
+  		},
 
 		jasmine_node: {
 			coverage: { },
@@ -72,6 +76,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-jasmine-node');
 
 	grunt.loadNpmTasks('grunt-plato');
+	
+	grunt.loadNpmTasks('grunt-contrib-clean');
 
 
 	grunt.registerTask('api', 'Build jsdoc api files.', ['jsDocFiles']);

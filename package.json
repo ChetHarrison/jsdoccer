@@ -4,6 +4,7 @@
   "description": "A tool to auto document your ECMAScript (Java Script) in  JSDoc 3 using Esprima.",
   "main": "run.js",
   "scripts": {
+    "start": "node ./generate-doc-yaml",
     "test": "test"
   },
   "repository": {
@@ -25,6 +26,7 @@
     "dox": "git://github.com/jasonLaster/dox.git#marked",
     "escodegen": "^1.4.1",
     "esprima": "^1.2.2",
+    "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-jasmine": "^0.8.0",
     "grunt-jasmine-node": "^0.2.1",
     "grunt-jasmine-node-coverage": "^0.1.11",

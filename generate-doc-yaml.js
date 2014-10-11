@@ -12,5 +12,5 @@ var config = require('./src/get-config.js'),
 		syntaxMatchers: syntaxMatchers
 	});
 
-jsDoccer.genrateStubbedDocYamlFiles();
+jsDoccer.generateStubbedDocYamlFiles();
 	

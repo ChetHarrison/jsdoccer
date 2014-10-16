@@ -7,10 +7,10 @@ var fs 		= require('fs'),
 	esprima = require('esprima'),
 	_ 		= require('lodash'),
 	
-	// pharmacy (see: constructor > dependency injection)
-	AstGenerator 		= require('./ast-generator.js'),
-	AstToDocJson 		= require('./ast-to-doc-json.js'),
-	DocJsonToDocYaml 	= require('./doc-json-to-doc-yaml.js'),
+	// dependency injection
+	AstGenerator 		= require('./lib/ast-generator.js'),
+	AstToDocJson 		= require('./lib/ast-to-doc-json.js'),
+	DocJsonToDocYaml 	= require('./lib/doc-json-to-doc-yaml.js'),
 
 	// vars
 	JsDoccer;
@@ -23,7 +23,7 @@ JsDoccer = function(options) {
 	this.config = options.config;
 	
 	// dependency injection
-	this.astGenerator 		= new AstGenerator();
+	this.astGenerator 		= AstGenerator;
 	this.astToDocJson 		= new AstToDocJson({syntaxMatchers: options.syntaxMatchers});
 	this.docJsonToDocYaml 	= new DocJsonToDocYaml({config: options.config});
 };

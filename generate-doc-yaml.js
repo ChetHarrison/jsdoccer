@@ -1,6 +1,10 @@
 'use strict';
 
-var config = require('./src/get-config.js'),
+var getConfig = require('./src/lib/get-config.js'),
+
+	configPath = __dirname + '/.jsdoccerrc',
+	
+	config = getConfig(configPath),
 
 	JsDoccer = require('./src/jsdoccer.js'),
 	

@@ -23,7 +23,7 @@ var _s = require('underscore.string'),
 		return hasReturn;
 	};
 	
-require('./src/rx-array.js');
+require('./src/lib/rx-array.js');
 
 // add a category of syntax you would like to document
 // and assign it a function that will take a branch of

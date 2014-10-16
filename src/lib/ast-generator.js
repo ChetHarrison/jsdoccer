@@ -2,28 +2,16 @@
 
 // Dependencies
 //-----------------------------------------
-var _ = require('lodash'),
-
-	fs = require('fs'),
+var fs = require('fs'),
 	
 	esprima = require('esprima'),
 
 	AstGenerator;
 
 
-// Constructor
+// static class
 //-----------------------------------------
-AstGenerator = function(options) {
-	options = options || {};
-	
-	this.config = options.config;
-};
-
-
-// Functions
-//-----------------------------------------
-_.extend(AstGenerator.prototype, {
-	
+AstGenerator = {
 	createSyntaxTree: function (file) {
 		var code = fs.readFileSync(file, 'utf8');
 
@@ -35,8 +23,8 @@ _.extend(AstGenerator.prototype, {
 			comment: false,
 		});
 	}
-	
-});
+};
+
 
 // API
 //-----------------------------------------

@@ -6,12 +6,10 @@ var fs 		= require('fs'),
 	path 	= require('path'),
 	esprima = require('esprima'),
 	_ 		= require('lodash'),
-	
 	// dependency injection
 	AstGenerator 		= require('./lib/ast-generator.js'),
 	AstToDocJson 		= require('./lib/ast-to-doc-json.js'),
 	DocJsonToDocYaml 	= require('./lib/doc-json-to-doc-yaml.js'),
-
 	// vars
 	JsDoccer;
 
@@ -21,7 +19,6 @@ var fs 		= require('fs'),
 JsDoccer = function(options) {
 	options 	= options || {};
 	this.config = options.config;
-	
 	// dependency injection
 	this.astGenerator 		= AstGenerator;
 	this.astToDocJson 		= new AstToDocJson({syntaxMatchers: options.syntaxMatchers});
@@ -48,19 +45,15 @@ _.extend(JsDoccer.prototype, {
 
 		// gard: filter files listed in config
 		if (_.contains(this.config.filesToFilter, filename)) { return; }
-
 		// generate AST
 		syntaxTree = this.astGenerator.createSyntaxTree(path.join(this.config.js.src + filename));
 		this._saveFile(JSON.stringify(syntaxTree, null, 2), filename, this.config.ast.dest, '.ast');
-
 		// filter AST and generate syntax target JSON
 		json = this.astToDocJson.parse(syntaxTree);
 		this._saveFile(JSON.stringify(json, null, 4), filename, this.config.json.dest, '.json');
-
 		// generate document YAML
 		docYaml = this.docJsonToDocYaml.convert(json);
 		this._saveFile(docYaml, filename, this.config.yaml.dest, '.yaml');
-
 		// adding new line for readability
 		console.log();
 	},
@@ -70,7 +63,6 @@ _.extend(JsDoccer.prototype, {
 	generateStubbedDocYamlFiles: function () {
 		var self 			= this,
 			filesToDocument = fs.readdirSync(this.config.js.src);
-			
 			
 		if (filesToDocument.length > 0) {
 			filesToDocument.forEach(function(file) { self.generateStubbedDocYamlFile(file); });

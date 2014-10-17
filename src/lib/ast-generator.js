@@ -3,11 +3,9 @@
 // Dependencies
 //-----------------------------------------
 var fs = require('fs'),
-	
 	esprima = require('esprima'),
-
+	// vars
 	AstGenerator;
-
 
 // static class
 //-----------------------------------------
@@ -24,7 +22,6 @@ AstGenerator = {
 		});
 	}
 };
-
 
 // API
 //-----------------------------------------

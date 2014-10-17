@@ -1,38 +1,26 @@
 'use strict';
 
-var DocJsonToDocYaml = require('../../../../src/lib/doc-json-to-doc-yaml.js'),
-
-	fs = require('fs'),
-
-	desiredYAML = 'modules:\n' +
-  				  '	  name: Undefined\n' +
-  				  '   \n' +
-  				  'description: | \n';
-
+var DocJsonToDocYaml 	= require('../../../../src/lib/doc-json-to-doc-yaml.js'),
+	fs 					= require('fs'),
+	getConfig 			= require('../../../../src/lib/get-config.js'),
+	testConfigFile 		= __dirname + '/../../../.jsdoccerrc-test',
+	config 				= getConfig(testConfigFile),
+	desiredYaml 		= 'description: |',
+	containsDesiredYaml, 
+	generatedYaml;
 
 describe('DocJsonToDocYaml', function () {
 
-	var generatedYaml;
-
 	beforeEach(function () {
-
-		var jsonFile = __dirname + '/../../../mock-files/json/test.json',
-		
-			json = JSON.parse(fs.readFileSync(jsonFile, 'utf8')),
-
-			docJsonToDocYaml = new DocJsonToDocYaml();
-
-		console.log('------------');
-		console.log(jsonFile);
+		var jsonFile 			= __dirname + '/../../../mock-files/json/test.json',
+			json 				= JSON.parse(fs.readFileSync(jsonFile, 'utf8')),
+			docJsonToDocYaml 	= new DocJsonToDocYaml({config: config});
 
 		generatedYaml = docJsonToDocYaml.convert(json);
-		console.log(generatedYaml);
+		containsDesiredYaml = generatedYaml.indexOf(desiredYaml) > 0 ? true : false;
 	});
-
 
 	it('should return desired JSON', function () {
-
-		expect(generatedYaml).toEqual(desiredYAML);
+		expect(containsDesiredYaml).toBe(true);
 	});
-
 });

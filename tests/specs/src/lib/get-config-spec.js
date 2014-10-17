@@ -1,10 +1,8 @@
 'use strict';
 
-var getConfig = require('../../../../src/lib/get-config.js'),
-
-	testConfigFile = __dirname + '/../../../.jsdoccerrc-test',
-	
-	desiredConfig = { 
+var getConfig 		= require('../../../../src/lib/get-config.js'),
+	testConfigFile 	= __dirname + '/../../../.jsdoccerrc-test',
+	desiredConfig 	= { 
 		js: { src: './tests/mock-files/js/' },
   		ast: { dest: './tests/mock-files/ast/' },
   		json: { dest: './tests/mock-files/json/' },
@@ -16,10 +14,7 @@ var getConfig = require('../../../../src/lib/get-config.js'),
 
 describe('GetConfig', function () {
 	
-	
 	it('should return desired config', function () {
-		
 		expect(getConfig(testConfigFile)).toEqual(desiredConfig);
 	});
-
 });

@@ -4,33 +4,3 @@ modules:
   description: |
   
   
-constructors:
-  constructor:
-    description: | 
-      @api public
-      @param {<type>} options - <description>
-  
-    examples:
-      -
-        name: <name>
-        example: |
-          <example>
-      
-properties:
-  options: |
-    <description>
-  
-    @type {<type>}
-    
-functions:
-  destroy:
-    description: | 
-      @api public
-      @returns {<type>} - <description>
-  
-    examples:
-      -
-        name: <name>
-        example: |
-          <example>
-          

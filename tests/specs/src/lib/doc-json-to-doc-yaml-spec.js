@@ -10,7 +10,6 @@ var DocJsonToDocYaml 	= require('../../../../src/lib/doc-json-to-doc-yaml.js'),
 	generatedYaml;
 
 describe('DocJsonToDocYaml', function () {
-
 	beforeEach(function () {
 		var jsonFile 			= __dirname + '/../../../mock-files/json/test.json',
 			json 				= JSON.parse(fs.readFileSync(jsonFile, 'utf8')),

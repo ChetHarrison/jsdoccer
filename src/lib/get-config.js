@@ -6,5 +6,4 @@ var fs = require('fs'),
 		return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 	};
 
-
 module.exports = getConfig;

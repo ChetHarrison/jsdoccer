@@ -35,27 +35,28 @@ _.extend(JsDoccer.prototype, {
 		var dest = path.join(filepath + path.basename(filename, '.js') + extention);
 		
 		fs.writeFileSync(dest, data);
-		console.info('save: ' + dest);
 	},
 
 
 
 	generateStubbedDocYamlFile: function (filename) {
 		var syntaxTree, lookup, json, docYaml;
-
+	
 		// gard: filter files listed in config
 		if (_.contains(this.config.filesToFilter, filename)) { return; }
 		// generate AST
-		syntaxTree = this.astGenerator.createSyntaxTree(path.join(this.config.js.src + filename));
-		this._saveFile(JSON.stringify(syntaxTree, null, 2), filename, this.config.ast.dest, '.ast');
+		syntaxTree = this.astGenerator.createSyntaxTree(filename);
+		if (this.config.ast.save && this.config.ast.save === true) {
+			this._saveFile(JSON.stringify(syntaxTree, null, 2), filename, this.config.ast.dest, '.ast');
+		}
 		// filter AST and generate syntax target JSON
 		json = this.astToDocJson.parse(syntaxTree);
-		this._saveFile(JSON.stringify(json, null, 4), filename, this.config.json.dest, '.json');
+		if (this.config.json.save && this.config.json.save === true) {
+			this._saveFile(JSON.stringify(json, null, 4), filename, this.config.json.dest, '.json');
+		}
 		// generate document YAML
 		docYaml = this.docJsonToDocYaml.convert(json);
 		this._saveFile(docYaml, filename, this.config.yaml.dest, '.yaml');
-		// adding new line for readability
-		console.log();
 	},
 	
 	
@@ -73,6 +74,8 @@ _.extend(JsDoccer.prototype, {
 			process.exit(1);
 		}
 	},
+	
+	
 	
 	lintDocumentJson: function() {
 		console.log('TODO: Impliment this.');

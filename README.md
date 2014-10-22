@@ -1,11 +1,11 @@
 ### This is a work in progress.
 #### Goals:
-(x) generate stubbed YAML documentation template
-( ) generate JSON documentation from YAML
-( ) generate JSDoc documentation from JSON
-(x) convert to grunt task
-( ) build document webpages from JSDoc
-( ) lint existing documents
+- [x] generate stubbed YAML documentation template
+- [ ] generate JSON documentation from YAML
+- [ ] generate JSDoc documentation from JSON
+- [x] convert to grunt task
+- [ ] build document webpages from JSDoc
+- [ ] lint existing documents
 
 # JSDoccer
 

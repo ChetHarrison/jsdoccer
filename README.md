@@ -1,7 +1,10 @@
-### This is a work in progress and not ready for prime time.
-#### Because:
-* parse documented YAML to JSDoc
-* convert to grunt task.
+### This is a work in progress.
+#### Goals:
+[x] generate stubbed YAML documentation template
+[ ] parse documented YAML to JSDoc
+[x] convert to grunt task
+[ ] build document webpages
+[ ] lint existing documents
 
 # JSDoccer
 

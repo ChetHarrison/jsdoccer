@@ -70,6 +70,7 @@ add this to your `grunt.initConfig` in your `GRUNTFILE.js`
 and 
 
 ```
+grunt.loadNpmTasks('jsdoccer');
 ```
 
 to the task list

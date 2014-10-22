@@ -1,9 +1,10 @@
 ### This is a work in progress.
 #### Goals:
 [x] generate stubbed YAML documentation template
-[ ] parse documented YAML to JSDoc
+[ ] generate JSON documentation from YAML
+[ ] generate JSDoc documentation from JSON
 [x] convert to grunt task
-[ ] build document webpages
+[ ] build document webpages from JSDoc
 [ ] lint existing documents
 
 # JSDoccer
@@ -15,8 +16,7 @@ A Node.js tool to auto document your ECMAScript (Java Script) in  [JSDoc 3](http
 Setup
 
 ```
-$ git clone git@github.com:ChetHarrison/jsdoccer.git
-$ cd jsdoccer
+$ npm install jsdoccer
 ```
 
 
@@ -25,16 +25,70 @@ This tool will provide 2 primarey functions.
 1) create stubbed YAML document templates
 
 ```
-$ npm start
+$ grunt jsdoccer:stubDocYaml
 ```
 
 2) lint existing documents **(this is not working right now)**
 
 ```
-$ node lint-docs.js
+$ grunt jsdoccer:lint
 ```
 
-**Note: JSDoccer comes with some default syntax to document your JS. In order to configure it to specific syntax you will need to adapt the `.jsdoccerrc` file add target syntax AST tests to the `syntax-matchers.js` file and add any custom YAML templates to the `templates` directory.**
+### Configuration
+
+add this to your `grunt.initConfig` in your `GRUNTFILE.js`
+
+```
+    jsDoccer: {
+      options: {
+        ast: {
+          dest: './ast/',
+          save: true
+        },
+        json: {
+          dest: './json/',
+          save: true
+        },
+        yaml: {
+          templates: './templates/',
+          dest: './yaml/'
+        },
+        syntaxMatchers: {
+          src: './syntax-matchers.js'
+        },
+        filesToFilter: [
+          '.DS_Store',
+          'filter-this.js'
+        ]
+      },
+      stubDocYaml: {
+        src: './js/*',
+      }
+    }
+```
+
+and 
+
+```
+```
+
+to the task list
+
+**stubDocYaml.src**: The js files you wish to document.
+
+**ast**: Where to save the generated ASTs.
+
+**json**: Where to save the JSON returned from your matching function.
+
+**yaml**: Where to save the documentation YAML files.
+
+**jsdoc**: Where to save the generated JSDoc files.
+
+**syntaxMatchers**: Where to find your syntax target matcher functions.
+
+**fileFilters**: Files listed here will be ignored by the parser.
+
+The task's `options` property is where you provide target directories for each step of the task. `ast` is where it will store each files abstract syntax tree. The save argument is set to `false` this "intermediate" data will not be saved. However if you need to write some custom matchers you will want to look at the syntax trees your code it generating to understand the target matching conditions. You will save these target matching functions in the `syntax-matchers.js` file and add the corresponding custom YAML templates to the `templates` directory.
 
 ### What You Need To Know About ASTs
 
@@ -76,7 +130,7 @@ and generate this AST:
 
 AST types are defined by the [Spider Monkey Parser API](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Parser_API#Functions). 
 
-#### Configuring Custom Documentation
+#### Target Syntax Matchers
 
 In order to find syntax targets you can create a custom document "type" by adding a type attribute and associated matching function to the `syntax-matchers.js` hash for example:
 
@@ -124,51 +178,6 @@ To find out the AST conditions that match the code you would like to document co
 #### Parse JSON like a champ
 
 Map/Reduce is your friend when you need to pull deeply nested targets out of a large amount of JSON. I use a modified Array with the 5 magic RX methods attached. I highly recomend you spend a little time with [this excellent tutorial](http://reactive-extensions.github.io/learnrx/) from Jafar Husain of Netflix **Note: Do it in Chrome. It doesn't work in Firefox.** Then you will be able to inspect the generated AST files in the `ast` directory and write your own custom matchers in the `syntax-matchers.js` file.
-
-#### .jsdoccerrc
-
-This file configures the source and destination paths.
-
-```
-{
-  "js": {
-    "src": "./js/"
-  },
-  "ast": {
-    "dest": "./ast/",
-    "save": true
-  },
-  "json": {
-    "dest": "./json/"
-  },
-  "yaml": {
-    "templates": "./templates/",
-    "dest": "./yaml/",
-    "save": true
-  },
-  "jsdoc": {
-    "dest": "./jsdoc/"
-  },
-  "syntaxToDocument": {
-    "src": "./syntax-matchers.js"
-  },
-  "fileFilters": [".DS_Store"]
-}
-```
-
-**js**: The js files you wish to document.
-
-**ast**: Where to save the generated ASTs.
-
-**json**: Where to save the JSON returned from your matching function.
-
-**yaml**: Where to save the documentation YAML files.
-
-**jsdoc**: Where to save the generated JSDoc files.
-
-**syntaxToDocument**: Where to find your syntax target matcher functions.
-
-**fileFilters**: Files listed here will be ignored by the parser.
 
 #### YAML Templates
 

@@ -5,11 +5,11 @@
 var fs = require('fs'),
 	esprima = require('esprima'),
 	// vars
-	AstGenerator;
+	astGenerator;
 
 // static class
 //-----------------------------------------
-AstGenerator = {
+astGenerator = {
 	createSyntaxTree: function (file) {
 		var code = fs.readFileSync(file, 'utf8');
 
@@ -25,4 +25,4 @@ AstGenerator = {
 
 // API
 //-----------------------------------------
-module.exports = AstGenerator;
+module.exports = astGenerator;

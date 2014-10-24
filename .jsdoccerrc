@@ -1,34 +1,34 @@
 {
 	"js": {
-		"src": "../js/"
+		"src": "./js/"
 	},
 	
 	
 	"ast": {
-		"dest": "../ast/",
+		"dest": "./ast/",
 		"save": true
 	},
 	
 	
 	"json": {
-		"dest": "../json/"
+		"dest": "./json/"
 	},
 	
 	
 	"yaml": {
-		"templates": "../templates/",
-		"dest": "../yaml/",
+		"templates": "./templates/",
+		"dest": "./yaml/",
 		"save": true
 	},
 	
 	
 	"jsdoc": {
-		"dest": "../jsdoc/"
+		"dest": "./jsdoc/"
 	},
 	
 	
 	"syntaxMatchers": {
-		"src": "../syntax-matchers.js"
+		"src": "./syntax-matchers.js"
 	},
 	
 	

@@ -28,6 +28,8 @@ This tool will provide 2 primarey functions.
 $ grunt jsdoccer:stubDocYaml
 ```
 
+**Note:** once you have generated the stubbed YAML templates move them to another directory before you augment them so you don't accidenly over write them by running the task again. At some point I will add a warning.
+
 2) lint existing documents **(this is not working right now)**
 
 ```
@@ -70,7 +72,7 @@ add this to your `grunt.initConfig` in your `GRUNTFILE.js`
 and 
 
 ```
-grunt.loadNpmTasks('jsdoccer');
+grunt.loadNpmTasks('grunt-jsdoccer');
 ```
 
 to the task list

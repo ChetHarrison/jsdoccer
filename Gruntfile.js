@@ -100,7 +100,9 @@ module.exports = function (grunt) {
 			stubDocYaml: {
 				src: './js/*',
 			},
-			nextTarget: {}
+			docJson: {
+				src: './yaml/*'
+			}
 		}
 	});
 

@@ -1,7 +1,7 @@
 'use strict';
 
 var _ 			= require('lodash'),
-	JsDoccer 	= require('../src/jsdoccer.js');
+	jsDoccer 	= require('../src/jsdoccer.js');
 
 function stubDocYaml(grunt, filepath, options, config) {
 	if (!grunt.file.exists(filepath)) {
@@ -12,14 +12,8 @@ function stubDocYaml(grunt, filepath, options, config) {
 		// no-write existing yaml?
 		if (!options['no-write']) {
 			grunt.verbose.writeln('no "no-write" property in options.');
-			// run yaml code here
-			
-			var args 		= {
-					syntaxMatchers: config.options.syntaxMatchers.src,
-					config: config.options
-				},
-				jsDoccer 	= new JsDoccer(args);
-				
+
+			jsDoccer.init(config.options.syntaxMatchers.src, config.options);		
 			jsDoccer.generateStubbedDocYamlFile(filepath);
 		}
 		grunt.verbose.writeln((options['no-write'] ? 'Not actually writing doc YAML ' : 'Writing doc YAML ') + filepath + '...');

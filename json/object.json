@@ -1,7 +1,42 @@
 {
     "modules": [
         {
-            "name": "Undefined"
+            "name": "Object"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} options - <description>"
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "name": "options"
+        }
+    ],
+    "functions": [
+        {
+            "name": "initialize",
+            "tags": [
+                "@api public"
+            ]
+        },
+        {
+            "name": "destroy",
+            "tags": [
+                "@api public"
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "before:destroy"
+        },
+        {
+            "name": "destroy"
         }
     ]
 }

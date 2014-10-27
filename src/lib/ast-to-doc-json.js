@@ -11,8 +11,12 @@ var path 			= require('path'),
 
 module.exports = {
 	
+	setFilename: function(filename) {
+		this.filename = filename;
+	},
+	
 	setSyntaxMatchers: function (syntaxMatchers) {
-		this.syntaxMatchers = syntaxMatchers;
+		this.syntaxMatchers = require('../../' + syntaxMatchers);
 	},
 	// iterate the `syntaxMatchers` object and call each
 	// validation function with the current ast branch. Return
@@ -98,6 +102,8 @@ module.exports = {
 				name: _s.classify(path.basename(this.filename, '.js'))
 			}]
 		};
+		
+		console.log(this.syntaxMatchers);
 
 		this.parseBranch(syntaxTree, results);
 

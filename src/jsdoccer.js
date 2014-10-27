@@ -37,16 +37,17 @@ module.exports = {
 		// gard: filter files listed in config
 		if (_.contains(this.config.filesToFilter, filename)) { return; }
 		// generate AST
-		console.log(filename);
 		syntaxTree = _astGenerator.createSyntaxTree(filename);
 		if (this.config.ast.save && this.config.ast.save === true) {
 			this.saveFile(JSON.stringify(syntaxTree, null, 2), filename, this.config.ast.dest, '.ast');
 		}
 		// filter AST and generate syntax target JSON
+		_astToDocJson.setFilename(filename);
 		json = _astToDocJson.parse(syntaxTree);
 		if (this.config.json.save && this.config.json.save === true) {
 			this.saveFile(JSON.stringify(json, null, 4), filename, this.config.json.dest, '.json');
 		}
+		console.log(json);
 		// generate document YAML
 		docYaml = _docJsonToDocYaml.convert(json);
 		this.saveFile(docYaml, filename, this.config.yaml.dest, '.yaml');

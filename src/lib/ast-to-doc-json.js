@@ -2,25 +2,22 @@
 
 // Dependencies
 //-----------------------------------------
-var _ 		= require('lodash'),
-	path 	= require('path'),
-	_s 		= require('underscore.string'),
-	AstToDocJson;
+var path 			= require('path'),
+	_ 				= require('lodash'),
+	_s 				= require('underscore.string'),
+	// Private Variables
+	_recursionDepth = 0;
 	
-// Constructor
-//-----------------------------------------
-AstToDocJson = function(options) {
-	options = options || {};
-	this.syntaxMatchers = options.syntaxMatchers;
-};
 
-// Private Variables
-//-----------------------------------------
-var	_recursionDepth = 0;
-
-// functions
-//-----------------------------------------
-_.extend(AstToDocJson.prototype, {
+module.exports = {
+	
+	setFilename: function(filename) {
+		this.filename = filename;
+	},
+	
+	setSyntaxMatchers: function (syntaxMatchers) {
+		this.syntaxMatchers = require('../../' + syntaxMatchers);
+	},
 	// iterate the `syntaxMatchers` object and call each
 	// validation function with the current ast branch. Return
 	// the syntax name of the first match.
@@ -45,6 +42,7 @@ _.extend(AstToDocJson.prototype, {
 		return results;
 	},
 	
+	
 	parseBranch: function (branch, results) {
 		var keys 			= _.keys(branch),
 			maxDepth 		= 50,
@@ -52,9 +50,9 @@ _.extend(AstToDocJson.prototype, {
 			syntaxObject 	= this.syntaxToDocument(branch);
 
 		// recursion emergency break!
-		_recursionDepth++;
+		this._recursionDepth++;
 		
-		if (_recursionDepth > maxDepth) {
+		if (this._recursionDepth > maxDepth) {
 			console.warn('ast-to-doc-json.parseBranch(): Exceeded max recursion depth.');
 			return;
 		}
@@ -87,7 +85,7 @@ _.extend(AstToDocJson.prototype, {
 			}
 		});
 
-		_recursionDepth--;
+		this._recursionDepth--;
 
 		return results;
 	},
@@ -104,15 +102,11 @@ _.extend(AstToDocJson.prototype, {
 				name: _s.classify(path.basename(this.filename, '.js'))
 			}]
 		};
+		
+		console.log(this.syntaxMatchers);
 
 		this.parseBranch(syntaxTree, results);
 
 		return results;
 	}
-	
-});
-
-
-// API
-//-----------------------------------------
-module.exports =AstToDocJson;
+};

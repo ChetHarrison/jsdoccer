@@ -4,19 +4,13 @@
 var _ 				= require('lodash'),
 	fs 				= require('fs'),	
 	_s 				= require('underscore.string'),
-	indentString 	= require('indent-string'),
-	DocJsonToDocYaml;
-	
-// constructor
-//-----------------------------------------
-DocJsonToDocYaml = function(options) {
-	options = options || {};
-	this.config = options.config;
-};
+	indentString 	= require('indent-string');
 
-// functions
-//-----------------------------------------
-_.extend(DocJsonToDocYaml.prototype, {
+module.exports = {
+	
+	setConfig: function(config) {
+		this.config = config;
+	},
 	
 	getTemplateName: function (type) {
 		var path = _s.dasherize(type);
@@ -56,8 +50,4 @@ _.extend(DocJsonToDocYaml.prototype, {
 
 		return yaml;
 	}
-});
-
-// API
-//-----------------------------------------
-module.exports = DocJsonToDocYaml;
+};

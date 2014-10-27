@@ -1,7 +1,29 @@
 {
     "modules": [
         {
-            "name": "Undefined"
+            "name": "Controller"
+        }
+    ],
+    "constructors": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} options - <description>"
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "name": "options"
+        }
+    ],
+    "functions": [
+        {
+            "name": "destroy",
+            "tags": [
+                "@api public",
+                "@returns {<type>} - <description>"
+            ]
         }
     ]
 }

@@ -2,61 +2,55 @@
 
 // Dependencies
 //-----------------------------------------
-var fs 		= require('fs'),
-	path 	= require('path'),
-	esprima = require('esprima'),
-	_ 		= require('lodash'),
-	// dependency injection
-	AstGenerator 		= require('./lib/ast-generator.js'),
-	AstToDocJson 		= require('./lib/ast-to-doc-json.js'),
-	DocJsonToDocYaml 	= require('./lib/doc-json-to-doc-yaml.js'),
-	// vars
-	JsDoccer;
+var fs 					= require('fs'),
+	path 				= require('path'),
+	esprima 			= require('esprima'),
+	_ 					= require('lodash'),
+	// private 
+	// delegate declarations
+	_astGenerator 		= Object.create( require('./lib/ast-generator.js') ),
+	_astToDocJson 		= Object.create( require('./lib/ast-to-doc-json.js') ),
+	_docJsonToDocYaml 	= Object.create( require('./lib/doc-json-to-doc-yaml.js') );
 
 
-// constructor
+// API
 //-----------------------------------------
-JsDoccer = function(options) {
-	options 	= options || {};
-	this.config = options.config;
-	// dependency injection
-	this.astGenerator 		= AstGenerator;
-	this.astToDocJson 		= new AstToDocJson({syntaxMatchers: options.syntaxMatchers});
-	this.docJsonToDocYaml 	= new DocJsonToDocYaml({config: options.config});
-};
-
-
-// functions
-//-----------------------------------------
-_.extend(JsDoccer.prototype, {
+module.exports = {
+	
+	init: function(syntaxMatchers, config) {
+		this.config = config;
+		_astToDocJson.setSyntaxMatchers(syntaxMatchers);
+		_docJsonToDocYaml.setConfig(config);
+	},
 	
 	
-	_saveFile: function(data, filename, filepath, extention) {
+	saveFile: function(data, filename, filepath, extention) {
 		var dest = path.join(filepath + path.basename(filename, '.js') + extention);
 		
 		fs.writeFileSync(dest, data);
 	},
-
-
-
+	
+	
 	generateStubbedDocYamlFile: function (filename) {
 		var syntaxTree, lookup, json, docYaml;
 	
 		// gard: filter files listed in config
 		if (_.contains(this.config.filesToFilter, filename)) { return; }
 		// generate AST
-		syntaxTree = this.astGenerator.createSyntaxTree(filename);
+		syntaxTree = _astGenerator.createSyntaxTree(filename);
 		if (this.config.ast.save && this.config.ast.save === true) {
-			this._saveFile(JSON.stringify(syntaxTree, null, 2), filename, this.config.ast.dest, '.ast');
+			this.saveFile(JSON.stringify(syntaxTree, null, 2), filename, this.config.ast.dest, '.ast');
 		}
 		// filter AST and generate syntax target JSON
-		json = this.astToDocJson.parse(syntaxTree);
+		_astToDocJson.setFilename(filename);
+		json = _astToDocJson.parse(syntaxTree);
 		if (this.config.json.save && this.config.json.save === true) {
-			this._saveFile(JSON.stringify(json, null, 4), filename, this.config.json.dest, '.json');
+			this.saveFile(JSON.stringify(json, null, 4), filename, this.config.json.dest, '.json');
 		}
+		console.log(json);
 		// generate document YAML
-		docYaml = this.docJsonToDocYaml.convert(json);
-		this._saveFile(docYaml, filename, this.config.yaml.dest, '.yaml');
+		docYaml = _docJsonToDocYaml.convert(json);
+		this.saveFile(docYaml, filename, this.config.yaml.dest, '.yaml');
 	},
 	
 	
@@ -80,9 +74,4 @@ _.extend(JsDoccer.prototype, {
 	lintDocumentJson: function() {
 		console.log('TODO: Impliment this.');
 	}
-});
-
-
-// API
-//-----------------------------------------
-module.exports = JsDoccer;
+};

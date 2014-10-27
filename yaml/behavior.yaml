@@ -1,6 +1,69 @@
 modules:
-  name: Undefined
+  name: Behavior
 
   description: |
   
   
+properties:
+  view: |
+    <description>
+  
+    @type {<type>}
+    
+  defaults: |
+    <description>
+  
+    @type {<type>}
+    
+  options: |
+    <description>
+  
+    @type {<type>}
+    
+  $: |
+    <description>
+  
+    @type {<type>}
+    
+  $el: |
+    <description>
+  
+    @type {<type>}
+    
+  el: |
+    <description>
+  
+    @type {<type>}
+    
+functions:
+  initialize:
+    description: | 
+      @api public
+  
+    examples:
+      -
+        name: <name>
+        example: |
+          <example>
+          
+  destroy:
+    description: | 
+      @api public
+  
+    examples:
+      -
+        name: <name>
+        example: |
+          <example>
+          
+  proxyViewProperties:
+    description: | 
+      @api public
+      @param {<type>} view - <description>
+  
+    examples:
+      -
+        name: <name>
+        example: |
+          <example>
+          

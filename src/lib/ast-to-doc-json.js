@@ -102,8 +102,6 @@ module.exports = {
 				name: _s.classify(path.basename(this.filename, '.js'))
 			}]
 		};
-		
-		console.log(this.syntaxMatchers);
 
 		this.parseBranch(syntaxTree, results);
 

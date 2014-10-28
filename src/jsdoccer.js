@@ -47,7 +47,6 @@ module.exports = {
 		if (this.config.json.save && this.config.json.save === true) {
 			this.saveFile(JSON.stringify(json, null, 4), filename, this.config.json.dest, '.json');
 		}
-		console.log(json);
 		// generate document YAML
 		docYaml = _docJsonToDocYaml.convert(json);
 		this.saveFile(docYaml, filename, this.config.yaml.dest, '.yaml');

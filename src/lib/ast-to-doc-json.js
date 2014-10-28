@@ -15,8 +15,9 @@ module.exports = {
 		this.filename = filename;
 	},
 	
-	setSyntaxMatchers: function (syntaxMatchers) {
-		this.syntaxMatchers = require('../../' + syntaxMatchers);
+	init: function (options) {
+		options = options || {};
+		this.syntaxMatchers = require('../../' + options.syntaxMatchers);
 	},
 	// iterate the `syntaxMatchers` object and call each
 	// validation function with the current ast branch. Return

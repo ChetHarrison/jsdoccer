@@ -13,7 +13,7 @@ function stubDocYaml(grunt, filepath, options, config) {
 		if (!options['no-write']) {
 			grunt.verbose.writeln('no "no-write" property in options.');
 
-			jsDoccer.init(config.options.syntaxMatchers.src, config.options);		
+			jsDoccer.init({config: config.options});		
 			jsDoccer.generateStubbedDocYamlFile(filepath);
 		}
 		grunt.verbose.writeln((options['no-write'] ? 'Not actually writing doc YAML ' : 'Writing doc YAML ') + filepath + '...');

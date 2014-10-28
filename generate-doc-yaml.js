@@ -6,6 +6,6 @@ var getConfig = require('./src/lib/get-config.js'),
 	jsDoccer = require('./src/jsdoccer.js'),
 	syntaxMatchers = require(config.syntaxMatchers.src);
 	
-jsDoccer.init(syntaxMatchers, config);
+jsDoccer.init({config: config.options});
 jsDoccer.generateStubbedDocYamlFiles();
 	

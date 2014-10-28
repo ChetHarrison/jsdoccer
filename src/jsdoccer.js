@@ -17,10 +17,16 @@ var fs 					= require('fs'),
 //-----------------------------------------
 module.exports = {
 	
-	init: function(syntaxMatchers, config) {
-		this.config = config;
-		_astToDocJson.setSyntaxMatchers(syntaxMatchers);
-		_docJsonToDocYaml.setConfig(config);
+	// set object state
+	init: function init(options) {
+		options = options || {};
+		this.config = options.config;
+		_astToDocJson.init({
+			syntaxMatchers: options.config.syntaxMatchers.src
+		});
+		_docJsonToDocYaml.init({
+			templates: options.config.yaml.templates
+		});
 	},
 	
 	

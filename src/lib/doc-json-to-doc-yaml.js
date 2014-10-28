@@ -8,15 +8,16 @@ var _ 				= require('lodash'),
 
 module.exports = {
 	
-	setConfig: function(config) {
-		this.config = config;
+	init: function(options) {
+		options = options || {};
+		this.templates = options.templates;
 	},
 	
 	getTemplateName: function (type) {
 		var path = _s.dasherize(type);
 		
 		path = path[0] === '-' ? path.substr(1) : path;
-		path = this.config.yaml.templates + '/' + path + '.tpl';
+		path = this.templates + '/' + path + '.tpl';
 
 		return path;
 	},

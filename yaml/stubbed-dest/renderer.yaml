@@ -1,0 +1,20 @@
+modules:
+  name: Renderer
+
+  description: |
+  
+  
+functions:
+  render:
+    description: | 
+      @api public
+      @param {<type>} template - <description>
+      @param {<type>} data - <description>
+      @returns {<type>} - <description>
+  
+    examples:
+      -
+        name: <name>
+        example: |
+          <example>
+          

@@ -1,0 +1,108 @@
+{
+  "modules": {
+    "name": "Error",
+    "description": ""
+  },
+  "constructors": {
+    "constructor": {
+      "description": "@api public\n@param {<type>} message - <description>\n@param {<type>} options - <description>\n",
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    }
+  },
+  "properties": {
+    "url": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    }
+  },
+  "functions": {
+    "captureStackTrace": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "",
+          "summary": "",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      },
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    },
+    "toString": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "returns",
+            "types": [
+              "<type>"
+            ],
+            "description": "- <description>"
+          }
+        ],
+        "description": {
+          "full": "",
+          "summary": "",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      },
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    }
+  },
+  "examples": [],
+  "description": "",
+  "constructor": {}
+}

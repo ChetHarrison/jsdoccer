@@ -50,60 +50,50 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-
-		jsDocFiles: {
-			docs: {
+		
+		jsSourceToStubDocYaml: {
+			doc: {
+				options: {
+					ast: {
+						dest: './ast/',
+						save: true
+					},
+					json: {
+						dest: './json/',
+						save: true
+					},
+					yaml: {
+						templates: './templates/yaml/',
+						src: '.yaml/doccumented-src/',
+						dest: './yaml/stubbed-dest/'
+					},
+					syntaxMatchers: {
+						src: './syntax-matchers.js'
+					},
+					filesToFilter: [
+						'.DS_Store',
+						'filter-this.js'
+					]
+				},
+				files: [{
+					expand: true,
+					src: 'js/*.js'
+				}]
+			}
+		},
+		
+		jsDoccerJson: {
+			doc: {
 				options: {},
 				files: [{
 					expand: true,
-					cwd: 'yaml',
+					cwd: 'yaml/doccumented-src',
 					src: '*.yaml',
-					dest: 'jsdoc',
+					dest: 'doc-json',
 					ext: '.json'
         		}]
 			}
 		},
-
-		compileDocs: {
-			marionette: {
-				options: {
-					repo: 'backbone.marionette',
-					template: 'src/docs/template.html'
-				},
-				src: 'backbone.marionette/docs',
-				dest: 'dist/docs'
-			}
-		},
-		
-		jsDoccer: {
-			options: {
-				ast: {
-					dest: './ast/',
-					save: true
-				},
-				json: {
-					dest: './json/',
-					save: true
-				},
-				yaml: {
-					templates: './templates/',
-					dest: './yaml/'
-				},
-				syntaxMatchers: {
-					src: './syntax-matchers.js'
-				},
-				filesToFilter: [
-					'.DS_Store',
-					'filter-this.js'
-				]
-			},
-			stubDocYaml: {
-				src: './js/*',
-			},
-			docJson: {
-				src: './yaml/*'
-			}
-		}
 	});
 
 	grunt.loadTasks('tasks');
@@ -114,12 +104,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-plato');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 
-	grunt.registerTask('yaml', 'Build stubbed YAML files.', ['jsDoccer:stubDocYaml']);
-	grunt.registerTask('api', 'Build jsdoc api files.', ['jsDocFiles']);
+	grunt.registerTask('yaml', 'Build stubbed YAML files.', ['jsDoccerYaml']);
+	grunt.registerTask('json', 'Build jsdoc JSON files.', ['jsDoccerJson']);
 	grunt.registerTask('test', 'Lint, hint, test, coverage, and complexity.', ['jshint', 'jasmine_node']);
 	grunt.registerTask('default', 'Run test suite.', ['jasmine_node']);
-	// grunt.registerTask('compile-docs', [
-	//    	'compileDocs',
-	//    	'less'
-	//  	]);
 };

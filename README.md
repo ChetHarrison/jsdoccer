@@ -9,89 +9,121 @@
 
 # JSDoccer
 
-A Node.js tool to auto document your ECMAScript (Java Script) in  [JSDoc 3](https://github.com/jsdoc3/jsdoc3.github.com) using [Esprima](http://esprima.org/) and [ESCodeGen](https://github.com/Constellation/escodegen). It converts your code into YAML templates that (will be) converted to JSDocs. The YAML stage allows you to fill in stubbed examples and other details that cannot be generated from the provided Esprima code meta data.
+**Note** this repo is morphing into a collection of Grunt tasks to auto document your ECMAScript (Java Script) in  [JSDoc 3](https://github.com/jsdoc3/jsdoc3.github.com) using [Esprima](http://esprima.org/) and [ESCodeGen](https://github.com/Constellation/escodegen) as well as lint those docs. It converts your code into YAML templates that (will be) converted to JSDocs. The YAML stage allows you to fill in stubbed examples and other details that cannot be generated from the provided Esprima code meta data.
 
 ### Basic Usage
 
 Setup
 
 ```
-$ npm install jsdoccer
+$ npm install grunt-jsdoccer-yaml
+$ npm install grunt-jsdoccer-doc
+$ npm install grunt-jsdoccer-lint
 ```
 
-
-This tool will provide 2 primarey functions. 
+ 
 
 1) create stubbed YAML document templates
 
 ```
-$ grunt jsdoccer:stubDocYaml
+$ grunt grunt-jsdoccer-yaml
 ```
 
-**Note:** once you have generated the stubbed YAML templates move them to another directory before you augment them so you don't accidenly over write them by running the task again. At some point I will add a warning.
-
-2) lint existing documents **(this is not working right now)**
-
-```
-$ grunt jsdoccer:lint
-```
+**Note:** once you have generated the stubbed YAML templates you will find them in the `yaml/stubbed-dest` directory. You will need to move them to `yaml/doccumented-src` directory before you augment them so you don't accidenly over write them by running the task again.
 
 ### Configuration
 
 add this to your `grunt.initConfig` in your `GRUNTFILE.js`
 
 ```
-    jsDoccer: {
-      options: {
-        ast: {
-          dest: './ast/',
-          save: true
+    jsDoccerYaml: {
+      doc: {
+        options: {
+          ast: {
+            dest: './ast/',
+            save: true
+          },
+          json: {
+            dest: './json/',
+            save: true
+          },
+          yaml: {
+            templates: './templates/yaml/',
+            src: '.yaml/doccumented-src/',
+            dest: './yaml/stubbed-dest/'
+          },
+          syntaxMatchers: {
+            src: './syntax-matchers.js'
+          },
+          filesToFilter: [
+            '.DS_Store',
+            'filter-this.js'
+          ]
         },
-        json: {
-          dest: './json/',
-          save: true
-        },
-        yaml: {
-          templates: './templates/',
-          dest: './yaml/'
-        },
-        syntaxMatchers: {
-          src: './syntax-matchers.js'
-        },
-        filesToFilter: [
-          '.DS_Store',
-          'filter-this.js'
-        ]
-      },
-      stubDocYaml: {
-        src: './js/*',
+        files: [{
+          expand: true,
+          src: 'js/*.js'
+        }]
       }
-    }
+    },
 ```
-
-and 
-
-```
-grunt.loadNpmTasks('grunt-jsdoccer');
-```
-
-to the task list
-
-**stubDocYaml.src**: The js files you wish to document.
-
 **ast**: Where to save the generated ASTs.
 
 **json**: Where to save the JSON returned from your matching function.
 
 **yaml**: Where to save the documentation YAML files.
 
-**jsdoc**: Where to save the generated JSDoc files.
-
 **syntaxMatchers**: Where to find your syntax target matcher functions.
 
 **fileFilters**: Files listed here will be ignored by the parser.
 
+**files.src**: Files to document.
+
 The task's `options` property is where you provide target directories for each step of the task. `ast` is where it will store each files abstract syntax tree. The save argument is set to `false` this "intermediate" data will not be saved. However if you need to write some custom matchers you will want to look at the syntax trees your code it generating to understand the target matching conditions. You will save these target matching functions in the `syntax-matchers.js` file and add the corresponding custom YAML templates to the `templates` directory.
+
+
+2) Generate document JSON
+
+```
+$ grunt grunt-jsdoccer-doc
+```
+
+Then you can run the next task that will generate document JSON for each file and save them to the `doc-json` directory. This will be use to produce the document html.
+
+
+
+add this to your `grunt.initConfig` in your `GRUNTFILE.js`
+
+```    
+    jsDoccerJson: {
+      doc: {
+        options: {},
+        files: [{
+          expand: true,
+          cwd: 'yaml/doccumented-src',
+          src: '*.yaml',
+          dest: 'doc-json',
+          ext: '.json'
+            }]
+      }
+    },
+```
+
+and 
+
+```
+grunt.loadNpmTasks('grunt-jsdoccer-doc');
+```
+
+to the task list
+
+
+2) lint existing documents **(this is not working right now)**
+
+```
+$ grunt grunt-jsdoccer-lint
+```
+
 
 ### What You Need To Know About ASTs
 

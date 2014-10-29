@@ -1,0 +1,80 @@
+{
+  "modules": {
+    "name": "Controller",
+    "description": ""
+  },
+  "constructors": {
+    "constructor": {
+      "description": "@api public\n@param {<type>} options - <description>\n",
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    }
+  },
+  "properties": {
+    "options": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    }
+  },
+  "functions": {
+    "destroy": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "returns",
+            "types": [
+              "<type>"
+            ],
+            "description": "- <description>"
+          }
+        ],
+        "description": {
+          "full": "",
+          "summary": "",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      },
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    }
+  },
+  "examples": [],
+  "description": "",
+  "constructor": {}
+}

@@ -30,6 +30,7 @@ function JsDocFilesTask(grunt) {
 };
 
 _.extend(JsDocFilesTask.prototype, {
+  
   buildFiles: function(files) {
     files.forEach(function(file) {
       file.src
@@ -213,8 +214,9 @@ _.extend(JsDocFilesTask.prototype, {
 });
 
 module.exports = function(grunt) {
-  grunt.registerMultiTask('jsDocFiles', 'Compile jsdoc files to json', function() {
+  grunt.registerMultiTask('jsDoccerJson', 'Compile jsdoc files to json', function() {
     var jsDocFiles = new JsDocFilesTask(grunt);
     jsDocFiles.buildFiles(this.files);
+    grunt.log.ok(this.filesSrc.length + ' ' + grunt.util.pluralize(this.filesSrc.length, 'file/files') + ' documented.');
   });
 }

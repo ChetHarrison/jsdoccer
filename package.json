@@ -3,7 +3,6 @@
   "version": "1.0.2",
   "private": false,
   "description": "A tool to auto document your ECMAScript (Java Script) in  JSDoc 3 using Esprima.",
-  "main": "run.js",
   "scripts": {
     "yaml": "grunt yaml"
   },

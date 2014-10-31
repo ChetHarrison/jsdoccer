@@ -1,18 +1,33 @@
 {
-  "modules": {
-    "name": "ItemView",
-    "description": ""
-  },
-  "constructors": {
-    "constructor": {
-      "description": "@api public\n",
-      "examples": [
+  "name": "ItemView",
+  "class": "ItemView",
+  "constructor": {
+    "description": {
+      "tags": [
         {
-          "name": "<name>",
-          "example": "<example>\n"
+          "type": "api",
+          "visibility": "public"
         }
-      ]
-    }
+      ],
+      "description": {
+        "full": "",
+        "summary": "",
+        "body": ""
+      },
+      "isPrivate": false,
+      "api": {
+        "type": "api",
+        "visibility": "public"
+      },
+      "params": [],
+      "paramStr": ""
+    },
+    "examples": [
+      {
+        "name": "<name>",
+        "example": "<example>\n"
+      }
+    ]
   },
   "functions": {
     "serializeData": {
@@ -275,6 +290,5 @@
   },
   "properties": [],
   "examples": [],
-  "description": "",
-  "constructor": {}
+  "description": ""
 }

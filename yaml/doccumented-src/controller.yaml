@@ -1,33 +1,30 @@
-modules:
-  name: Controller
+name: Controller
 
+class: Controller
+
+constructor:   
   description: |
+    @api public
+    @param {<type>} options - <description>
   
-  
-constructors:
-  constructor:
-    description: | 
-      @api public
-      @param {<type>} options - <description>
-  
-    examples:
-      -
-        name: <name>
-        example: |
-          <example>
+  examples:
+  -
+    name: <name>
+    example: |
+      <example>
       
-properties:
+properties: 
   options: |
     <description>
-  
+    
     @type {<type>}
     
-functions:
+functions: 
   destroy:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>

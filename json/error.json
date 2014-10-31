@@ -1,10 +1,17 @@
 {
-    "modules": [
+    "filename": [
         {
-            "name": "Error"
+            "name": "Error",
+            "isCollection": false
         }
     ],
-    "constructors": [
+    "class": [
+        {
+            "name": "Error",
+            "isCollection": false
+        }
+    ],
+    "constructor": [
         {
             "tags": [
                 "@api public",

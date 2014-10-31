@@ -40,12 +40,23 @@ module.exports = {
 			var template = self.getTemplate(type),
 				syntaxJsons = json[type];
 
-			// add type category
-			yaml += type + ':\n';
-			_.each(syntaxJsons, function (syntaxJson) {
-				yaml += indentString(_.template(template, syntaxJson), ' ', 2);
-				yaml += '\n';
-			});
+			console.log(json[type][0].isCollection);
+			if (json[type][0].isCollection) {
+				// add type category
+				yaml += type + ':\n';
+				_.each(syntaxJsons, function (syntaxJson) {
+					yaml += indentString(_.template(template, syntaxJson), ' ', 2);
+					yaml += '\n';
+				});
+			} else {
+				// hack to rename filename to name because ast collision
+				// TODO: find better solution
+				yaml += (type === 'filename' ? 'name' : type) + ': ';
+				_.each(syntaxJsons, function (syntaxJson) {
+					yaml += _.template(template, syntaxJson);
+					yaml += '\n';
+				});
+			}
 
 		});
 

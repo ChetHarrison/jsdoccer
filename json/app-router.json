@@ -1,10 +1,17 @@
 {
-    "modules": [
+    "filename": [
         {
-            "name": "AppRouter"
+            "name": "AppRouter",
+            "isCollection": false
         }
     ],
-    "constructors": [
+    "class": [
+        {
+            "name": "AppRouter",
+            "isCollection": false
+        }
+    ],
+    "constructor": [
         {
             "tags": [
                 "@api public",

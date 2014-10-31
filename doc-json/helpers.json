@@ -1,8 +1,6 @@
 {
-  "modules": {
-    "name": "Helpers",
-    "description": ""
-  },
+  "name": "Helpers",
+  "class": "Helpers",
   "functions": [],
   "properties": [],
   "examples": [],

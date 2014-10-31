@@ -1,44 +1,42 @@
-modules:
-  name: Error
+name: Error
 
+class: Error
+
+constructor:   
   description: |
+    @api public
+    @param {<type>} message - <description>
+    @param {<type>} options - <description>
   
-  
-constructors:
-  constructor:
-    description: | 
-      @api public
-      @param {<type>} message - <description>
-      @param {<type>} options - <description>
-  
-    examples:
-      -
-        name: <name>
-        example: |
-          <example>
+  examples:
+  -
+    name: <name>
+    example: |
+      <example>
       
-properties:
+properties: 
   url: |
     <description>
-  
+    
     @type {<type>}
     
-functions:
+functions: 
   captureStackTrace:
-    description: | 
+    description: |
       @api public
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   toString:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>

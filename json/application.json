@@ -1,10 +1,17 @@
 {
-    "modules": [
+    "filename": [
         {
-            "name": "Application"
+            "name": "Application",
+            "isCollection": false
         }
     ],
-    "constructors": [
+    "class": [
+        {
+            "name": "Application",
+            "isCollection": false
+        }
+    ],
+    "constructor": [
         {
             "tags": [
                 "@api public",

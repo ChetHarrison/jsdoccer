@@ -1,18 +1,94 @@
 {
-  "modules": {
-    "name": "Module",
-    "description": ""
-  },
-  "constructors": {
-    "constructor": {
-      "description": "@api public\n@param {<type>} moduleName - <description>\n@param {<type>} app - <description>\n@param {<type>} options - <description>\n",
-      "examples": [
+  "name": "Module",
+  "class": "Module",
+  "constructor": {
+    "description": {
+      "tags": [
         {
-          "name": "<name>",
-          "example": "<example>\n"
+          "type": "api",
+          "visibility": "public"
+        },
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "moduleName",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
+        },
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "app",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
+        },
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "options",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
         }
-      ]
-    }
+      ],
+      "description": {
+        "full": "",
+        "summary": "",
+        "body": ""
+      },
+      "isPrivate": false,
+      "api": {
+        "type": "api",
+        "visibility": "public"
+      },
+      "params": [
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "moduleName",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
+        },
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "app",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
+        },
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "options",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
+        }
+      ],
+      "paramStr": "moduleName, app, options"
+    },
+    "examples": [
+      {
+        "name": "<name>",
+        "example": "<example>\n"
+      }
+    ]
   },
   "properties": {
     "moduleName": {
@@ -1179,6 +1255,5 @@
     "example": ""
   },
   "examples": [],
-  "description": "",
-  "constructor": {}
+  "description": ""
 }

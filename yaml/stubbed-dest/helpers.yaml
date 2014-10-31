@@ -1,6 +1,4 @@
-modules:
-  name: Helpers
+name: Helpers
 
-  description: |
-  
-  
+class: Helpers
+

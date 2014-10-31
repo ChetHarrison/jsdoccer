@@ -1,7 +1,14 @@
 {
-    "modules": [
+    "filename": [
         {
-            "name": "Renderer"
+            "name": "Renderer",
+            "isCollection": false
+        }
+    ],
+    "class": [
+        {
+            "name": "Renderer",
+            "isCollection": false
         }
     ],
     "functions": [

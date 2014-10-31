@@ -1,10 +1,17 @@
 {
-    "modules": [
+    "filename": [
         {
-            "name": "LayoutView"
+            "name": "LayoutView",
+            "isCollection": false
         }
     ],
-    "constructors": [
+    "class": [
+        {
+            "name": "LayoutView",
+            "isCollection": false
+        }
+    ],
+    "constructor": [
         {
             "tags": [
                 "@api public",

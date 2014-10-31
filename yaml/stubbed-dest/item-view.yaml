@@ -1,99 +1,102 @@
-modules:
-  name: ItemView
+name: ItemView
 
+class: ItemView
+
+constructor:   
   description: |
+    @api public
   
-  
-constructors:
-  constructor:
-    description: | 
-      @api public
-  
-    examples:
-      -
-        name: <name>
-        example: |
-          <example>
+  examples:
+  -
+    name: <name>
+    example: |
+      <example>
       
-functions:
+functions: 
   serializeData:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   serializeCollection:
-    description: | 
+    description: |
       @api public
       @param {<type>} collection - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   render:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   _renderTemplate:
-    description: | 
+    description: |
       @api private
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   attachElContent:
-    description: | 
+    description: |
       @api public
       @param {<type>} html - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   destroy:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
-events:
+events: 
   name: before:render
-
+  
   description: | 
-
+  
   example: | 
       
+
   name: render
-
+  
   description: | 
-
+  
   example: | 
       

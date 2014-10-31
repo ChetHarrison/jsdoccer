@@ -1,8 +1,6 @@
 {
-  "modules": {
-    "name": "Behaviors",
-    "description": ""
-  },
+  "name": "Behaviors",
+  "class": "Behaviors",
   "functions": {
     "behaviorTriggers": {
       "description": {

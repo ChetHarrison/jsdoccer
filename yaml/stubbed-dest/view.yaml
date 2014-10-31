@@ -1,261 +1,282 @@
-modules:
-  name: View
+name: View
 
+class: View
+
+constructor:   
   description: |
+    @api public
+    @param {<type>} options - <description>
   
-  
-constructors:
-  constructor:
-    description: | 
-      @api public
-      @param {<type>} options - <description>
-  
-    examples:
-      -
-        name: <name>
-        example: |
-          <example>
+  examples:
+  -
+    name: <name>
+    example: |
+      <example>
       
-properties:
+properties: 
   options: |
     <description>
-  
+    
     @type {<type>}
     
+
   _behaviors: |
     <description>
-  
+    
     @type {<type>}
     
+
   events: |
     <description>
-  
+    
     @type {<type>}
     
+
   isDestroyed: |
     <description>
-  
+    
     @type {<type>}
     
+
   _uiBindings: |
     <description>
-  
+    
     @type {<type>}
     
+
   ui: |
     <description>
-  
+    
     @type {<type>}
     
+
   ui: |
     <description>
-  
+    
     @type {<type>}
     
-functions:
+functions: 
   getTemplate:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   serializeModel:
-    description: | 
+    description: |
       @api public
       @param {<type>} model - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   mixinTemplateHelpers:
-    description: | 
+    description: |
       @api public
       @param {<type>} target - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   normalizeUIKeys:
-    description: | 
+    description: |
       @api public
       @param {<type>} hash - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   normalizeUIValues:
-    description: | 
+    description: |
       @api public
       @param {<type>} hash - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   configureTriggers:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   delegateEvents:
-    description: | 
+    description: |
       @api public
       @param {<type>} events - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   _delegateDOMEvents:
-    description: | 
+    description: |
       @api private
       @param {<type>} eventsArg - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   undelegateEvents:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   onShowCalled:
-    description: | 
+    description: |
       @api public
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   _ensureViewIsIntact:
-    description: | 
+    description: |
       @api private
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   destroy:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   bindUIElements:
-    description: | 
+    description: |
       @api public
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   _bindUIElements:
-    description: | 
+    description: |
       @api private
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   unbindUIElements:
-    description: | 
+    description: |
       @api public
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   _unbindUIElements:
-    description: | 
+    description: |
       @api private
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   _buildViewTrigger:
-    description: | 
+    description: |
       @api private
       @param {<type>} triggerDef - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   setElement:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   triggerMethod:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>

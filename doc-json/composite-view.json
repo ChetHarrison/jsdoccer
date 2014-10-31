@@ -1,18 +1,33 @@
 {
-  "modules": {
-    "name": "CompositeView",
-    "description": ""
-  },
-  "constructors": {
-    "constructor": {
-      "description": "@api public\n",
-      "examples": [
+  "name": "CompositeView",
+  "class": "CompositeView",
+  "constructor": {
+    "description": {
+      "tags": [
         {
-          "name": "<name>",
-          "example": "<example>\n"
+          "type": "api",
+          "visibility": "public"
         }
-      ]
-    }
+      ],
+      "description": {
+        "full": "",
+        "summary": "",
+        "body": ""
+      },
+      "isPrivate": false,
+      "api": {
+        "type": "api",
+        "visibility": "public"
+      },
+      "params": [],
+      "paramStr": ""
+    },
+    "examples": [
+      {
+        "name": "<name>",
+        "example": "<example>\n"
+      }
+    ]
   },
   "functions": {
     "_initialEvents": {
@@ -513,6 +528,5 @@
     "example": ""
   },
   "examples": [],
-  "description": "",
-  "constructor": {}
+  "description": ""
 }

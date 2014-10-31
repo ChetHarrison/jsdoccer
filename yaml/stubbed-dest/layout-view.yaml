@@ -1,217 +1,233 @@
-modules:
-  name: LayoutView
+name: LayoutView
 
+class: LayoutView
+
+constructor:   
   description: |
+    @api public
+    @param {<type>} options - <description>
   
-  
-constructors:
-  constructor:
-    description: | 
-      @api public
-      @param {<type>} options - <description>
-  
-    examples:
-      -
-        name: <name>
-        example: |
-          <example>
+  examples:
+  -
+    name: <name>
+    example: |
+      <example>
       
-properties:
+properties: 
   _firstRender: |
     <description>
-  
+    
     @type {<type>}
     
+
   _firstRender: |
     <description>
-  
+    
     @type {<type>}
     
+
   regions: |
     <description>
-  
+    
     @type {<type>}
     
+
   regionManager: |
     <description>
-  
+    
     @type {<type>}
     
+
   name: |
     <description>
-  
+    
     @type {<type>}
     
-functions:
+functions: 
   render:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   destroy:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   addRegion:
-    description: | 
+    description: |
       @api public
       @param {<type>} name - <description>
       @param {<type>} definition - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   addRegions:
-    description: | 
+    description: |
       @api public
       @param {<type>} regions - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   removeRegion:
-    description: | 
+    description: |
       @api public
       @param {<type>} name - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   getRegion:
-    description: | 
+    description: |
       @api public
       @param {<type>} region - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   getRegions:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   _buildRegions:
-    description: | 
+    description: |
       @api private
       @param {<type>} regions - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   parentEl:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   _initializeRegions:
-    description: | 
+    description: |
       @api private
       @param {<type>} options - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   _reInitializeRegions:
-    description: | 
+    description: |
       @api private
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   getRegionManager:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   _initRegionManager:
-    description: | 
+    description: |
       @api private
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
-events:
+events: 
   name: before:add:region
-
+  
   description: | 
-
+  
   example: | 
       
+
   name: add:region
-
+  
   description: | 
-
+  
   example: | 
       
+
   name: before:remove:region
-
+  
   description: | 
-
+  
   example: | 
       
+
   name: remove:region
-
+  
   description: | 
-
+  
   example: | 
       

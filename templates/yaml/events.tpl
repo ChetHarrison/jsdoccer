@@ -1,6 +1,7 @@
-name: <%= name %>
 
-description: | 
-
-example: | 
+  name: <%= name %>
+  
+  description: | 
+  
+  example: | 
       

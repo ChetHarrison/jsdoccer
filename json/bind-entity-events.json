@@ -1,7 +1,14 @@
 {
-    "modules": [
+    "filename": [
         {
-            "name": "BindEntityEvents"
+            "name": "BindEntityEvents",
+            "isCollection": false
+        }
+    ],
+    "class": [
+        {
+            "name": "BindEntityEvents",
+            "isCollection": false
         }
     ]
 }

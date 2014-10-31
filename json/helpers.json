@@ -1,7 +1,14 @@
 {
-    "modules": [
+    "filename": [
         {
-            "name": "Helpers"
+            "name": "Helpers",
+            "isCollection": false
+        }
+    ],
+    "class": [
+        {
+            "name": "Helpers",
+            "isCollection": false
         }
     ]
 }

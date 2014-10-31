@@ -1,8 +1,6 @@
 {
-  "modules": {
-    "name": "Renderer",
-    "description": ""
-  },
+  "name": "Renderer",
+  "class": "Renderer",
   "functions": {
     "render": {
       "description": {

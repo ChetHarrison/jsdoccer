@@ -1,18 +1,54 @@
 {
-  "modules": {
-    "name": "TemplateCache",
-    "description": ""
-  },
-  "constructors": {
-    "constructor": {
-      "description": "@api public\n@param {<type>} templateId - <description>\n",
-      "examples": [
+  "name": "TemplateCache",
+  "class": "TemplateCache",
+  "constructor": {
+    "description": {
+      "tags": [
         {
-          "name": "<name>",
-          "example": "<example>\n"
+          "type": "api",
+          "visibility": "public"
+        },
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "templateId",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
         }
-      ]
-    }
+      ],
+      "description": {
+        "full": "",
+        "summary": "",
+        "body": ""
+      },
+      "isPrivate": false,
+      "api": {
+        "type": "api",
+        "visibility": "public"
+      },
+      "params": [
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "templateId",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
+        }
+      ],
+      "paramStr": "templateId"
+    },
+    "examples": [
+      {
+        "name": "<name>",
+        "example": "<example>\n"
+      }
+    ]
   },
   "properties": {
     "templateId": {
@@ -313,6 +349,5 @@
     }
   },
   "examples": [],
-  "description": "",
-  "constructor": {}
+  "description": ""
 }

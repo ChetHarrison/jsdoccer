@@ -1,8 +1,6 @@
 {
-  "modules": {
-    "name": "TriggerMethod",
-    "description": ""
-  },
+  "name": "TriggerMethod",
+  "class": "TriggerMethod",
   "functions": [],
   "properties": [],
   "examples": [],

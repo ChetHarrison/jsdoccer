@@ -1,58 +1,57 @@
-modules:
-  name: Object
+name: Object
 
+class: Object
+
+constructor:   
   description: |
+    @api public
+    @param {<type>} options - <description>
   
-  
-constructors:
-  constructor:
-    description: | 
-      @api public
-      @param {<type>} options - <description>
-  
-    examples:
-      -
-        name: <name>
-        example: |
-          <example>
+  examples:
+  -
+    name: <name>
+    example: |
+      <example>
       
-properties:
+properties: 
   options: |
     <description>
-  
+    
     @type {<type>}
     
-functions:
+functions: 
   initialize:
-    description: | 
+    description: |
       @api public
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   destroy:
-    description: | 
+    description: |
       @api public
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
-events:
+events: 
   name: before:destroy
-
+  
   description: | 
-
+  
   example: | 
       
+
   name: destroy
-
+  
   description: | 
-
+  
   example: | 
       

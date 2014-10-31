@@ -1,7 +1,14 @@
 {
-    "modules": [
+    "filename": [
         {
-            "name": "Behaviors"
+            "name": "Behaviors",
+            "isCollection": false
+        }
+    ],
+    "class": [
+        {
+            "name": "Behaviors",
+            "isCollection": false
         }
     ],
     "functions": [

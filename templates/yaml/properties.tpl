@@ -1,5 +1,6 @@
-<%= name %>: |
-  <description>
-  
-  @type {<type>}
+
+  <%= name %>: |
+    <description>
+    
+    @type {<type>}
     

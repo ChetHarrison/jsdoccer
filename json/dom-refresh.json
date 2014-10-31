@@ -1,7 +1,14 @@
 {
-    "modules": [
+    "filename": [
         {
-            "name": "DomRefresh"
+            "name": "DomRefresh",
+            "isCollection": false
+        }
+    ],
+    "class": [
+        {
+            "name": "DomRefresh",
+            "isCollection": false
         }
     ]
 }

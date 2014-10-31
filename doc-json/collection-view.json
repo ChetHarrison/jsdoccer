@@ -1,18 +1,54 @@
 {
-  "modules": {
-    "name": "CollectionView",
-    "description": ""
-  },
-  "constructors": {
-    "constructor": {
-      "description": "@api public\n@param {<type>} options - <description>\n",
-      "examples": [
+  "name": "CollectionView",
+  "class": "CollectionView",
+  "constructor": {
+    "description": {
+      "tags": [
         {
-          "name": "<name>",
-          "example": "<example>\n"
+          "type": "api",
+          "visibility": "public"
+        },
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "options",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
         }
-      ]
-    }
+      ],
+      "description": {
+        "full": "",
+        "summary": "",
+        "body": ""
+      },
+      "isPrivate": false,
+      "api": {
+        "type": "api",
+        "visibility": "public"
+      },
+      "params": [
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "options",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
+        }
+      ],
+      "paramStr": "options"
+    },
+    "examples": [
+      {
+        "name": "<name>",
+        "example": "<example>\n"
+      }
+    ]
   },
   "properties": {
     "sort": {
@@ -1851,6 +1887,5 @@
     "example": ""
   },
   "examples": [],
-  "description": "",
-  "constructor": {}
+  "description": ""
 }

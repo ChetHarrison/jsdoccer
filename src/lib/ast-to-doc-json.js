@@ -65,7 +65,7 @@ module.exports = {
 			if (!results[syntaxObject.type]) {
 				results[syntaxObject.type] = [];
 			}
-
+			
 			results[syntaxObject.type].push(syntaxObject.ast);
 		}
 
@@ -98,11 +98,20 @@ module.exports = {
 		// this will collect the relevant data.
 		// but first we want to add a special case to 
 		// document the module from the the file name.
-		var results = {
-			modules: [{
-				name: _s.classify(path.basename(this.filename, '.js'))
-			}]
-		};
+		// we need a totaly blank object (with no
+		// constructor, so we don't have name collision.)
+		var results = Object.create( null ),
+			name = _s.classify(path.basename(this.filename, '.js'));
+		
+		results['filename'] = [{
+			name: name,
+			isCollection: false
+		}];
+		
+		results['class'] = [{
+			name: name,
+			isCollection: false
+		}];
 
 		this.parseBranch(syntaxTree, results);
 

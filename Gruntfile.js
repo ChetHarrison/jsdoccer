@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		jshint: {
-			files: ['./src/*.js'],
+			files: ['./src/**/*.js', './tasks/grunt-1-jsdoccer-yaml.js'],
 			// configure JSHint (documented at http://www.jshint.com/docs/)
 			options: {
 				jshintrc: '.jshintrc',
@@ -50,8 +50,19 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		
-		jsSourceToStubDocYaml: {
+
+		sass: {
+			options: {
+				compass: true
+			},
+			dist: {
+				files: {
+					'styles/api.css': 'stylesheets/api.scss'
+				}
+			}
+		},
+
+		'jsDoccer:yaml': {
 			doc: {
 				options: {
 					ast: {
@@ -63,7 +74,7 @@ module.exports = function (grunt) {
 						save: true
 					},
 					yaml: {
-						templates: './templates/yaml/',
+						templates: './templates/yaml',
 						src: '.yaml/doccumented-src/',
 						dest: './yaml/stubbed-dest/'
 					},
@@ -81,8 +92,8 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
-		
-		jsDoccerJson: {
+
+		'jsDoccer:json': {
 			doc: {
 				options: {},
 				files: [{
@@ -94,6 +105,16 @@ module.exports = function (grunt) {
         		}]
 			}
 		},
+
+		'jsDoccer:html': {
+			doc: {
+				options: {
+					handelbarsTemplate: './templates/jsdoc/class.hbs'
+				},
+				src: 'doc-json/*.json',
+				dest: 'jsdoc'
+			}
+		}
 	});
 
 	grunt.loadTasks('tasks');
@@ -103,9 +124,12 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-jasmine-node');
 	grunt.loadNpmTasks('grunt-plato');
 	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 
-	grunt.registerTask('yaml', 'Build stubbed YAML files.', ['jsDoccerYaml']);
-	grunt.registerTask('json', 'Build jsdoc JSON files.', ['jsDoccerJson']);
+	grunt.registerTask('yaml', 'Build stubbed YAML files.', ['jsDoccer:yaml']);
+	grunt.registerTask('json', 'Build jsdoc JSON files.', ['jsDoccer:json']);
+	grunt.registerTask('html', 'Build jsdoc HTML files.', ['jsDoccer:html']);
 	grunt.registerTask('test', 'Lint, hint, test, coverage, and complexity.', ['jshint', 'jasmine_node']);
 	grunt.registerTask('default', 'Run test suite.', ['jasmine_node']);
+	grunt.registerTask('build', 'build sass', ['sass']);
 };

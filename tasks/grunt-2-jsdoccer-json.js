@@ -142,6 +142,10 @@ _.extend(JsDocFilesTask.prototype, {
       result.description = value;
     }
 
+    if (result.description === undefined) {
+      return result;
+    }
+    
     result.description = this.parseDox(result.description, name);
 
     _.each(result.examples, function(example) {
@@ -177,7 +181,7 @@ _.extend(JsDocFilesTask.prototype, {
     try {
       var doc = dox.parseComment(docString);
     } catch (err) {
-      this.grunt.fail.fatal('jsDocFile failed to parse dox at ' + name);
+      this.grunt.fail.fatal('jsDocFile failed to parse string ' + docString + ' dox at ' + name);
     }
 
     var tags = doc.tags || [];
@@ -214,7 +218,7 @@ _.extend(JsDocFilesTask.prototype, {
 });
 
 module.exports = function(grunt) {
-  grunt.registerMultiTask('jsDoccerJson', 'Compile jsdoc files to json', function() {
+  grunt.registerMultiTask('jsDoccer:json', 'Compile jsdoc files to json', function() {
     var jsDocFiles = new JsDocFilesTask(grunt);
     jsDocFiles.buildFiles(this.files);
     grunt.log.ok(this.filesSrc.length + ' ' + grunt.util.pluralize(this.filesSrc.length, 'file/files') + ' documented.');

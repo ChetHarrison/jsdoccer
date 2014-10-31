@@ -1,6 +1,4 @@
-modules:
-  name: TriggerMethod
+name: TriggerMethod
 
-  description: |
-  
-  
+class: TriggerMethod
+

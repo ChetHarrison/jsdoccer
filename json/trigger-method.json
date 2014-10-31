@@ -1,7 +1,14 @@
 {
-    "modules": [
+    "filename": [
         {
-            "name": "TriggerMethod"
+            "name": "TriggerMethod",
+            "isCollection": false
+        }
+    ],
+    "class": [
+        {
+            "name": "TriggerMethod",
+            "isCollection": false
         }
     ]
 }

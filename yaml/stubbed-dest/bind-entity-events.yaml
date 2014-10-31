@@ -1,6 +1,4 @@
-modules:
-  name: BindEntityEvents
+name: BindEntityEvents
 
-  description: |
-  
-  
+class: BindEntityEvents
+

@@ -1,6 +1,4 @@
-modules:
-  name: DomRefresh
+name: DomRefresh
 
-  description: |
-  
-  
+class: DomRefresh
+

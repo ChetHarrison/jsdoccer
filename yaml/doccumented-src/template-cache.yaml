@@ -1,89 +1,92 @@
-modules:
-  name: TemplateCache
+name: TemplateCache
 
+class: TemplateCache
+
+constructor:   
   description: |
+    @api public
+    @param {<type>} templateId - <description>
   
-  
-constructors:
-  constructor:
-    description: | 
-      @api public
-      @param {<type>} templateId - <description>
-  
-    examples:
-      -
-        name: <name>
-        example: |
-          <example>
+  examples:
+  -
+    name: <name>
+    example: |
+      <example>
       
-properties:
+properties: 
   templateId: |
     <description>
-  
+    
     @type {<type>}
     
+
   templateCaches: |
     <description>
-  
+    
     @type {<type>}
     
+
   compiledTemplate: |
     <description>
-  
+    
     @type {<type>}
     
-functions:
+functions: 
   get:
-    description: | 
+    description: |
       @api public
       @param {<type>} templateId - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   clear:
-    description: | 
+    description: |
       @api public
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   load:
-    description: | 
+    description: |
       @api public
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   loadTemplate:
-    description: | 
+    description: |
       @api public
       @param {<type>} templateId - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>
         example: |
           <example>
           
+
   compileTemplate:
-    description: | 
+    description: |
       @api public
       @param {<type>} rawTemplate - <description>
       @returns {<type>} - <description>
-  
+    
     examples:
       -
         name: <name>

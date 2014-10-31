@@ -1,6 +1,6 @@
 {
   "name": "jsdoccer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "A tool to auto document your ECMAScript (Java Script) in  JSDoc 3 using Esprima.",
   "main": "run.js",

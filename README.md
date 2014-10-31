@@ -1,10 +1,10 @@
 ### This is a work in progress.
 #### Goals:
 - [x] generate stubbed YAML documentation template
-- [ ] generate JSON documentation from YAML
-- [ ] generate JSDoc documentation from JSON
+- [x] generate JSON documentation from YAML
+- [x] generate JSDoc documentation from JSON
 - [x] convert to grunt task
-- [ ] build document webpages from JSDoc
+- [x] build document webpages from JSDoc
 - [ ] lint existing documents
 
 # JSDoccer
@@ -16,9 +16,7 @@
 Setup
 
 ```
-$ npm install grunt-jsdoccer-yaml
-$ npm install grunt-jsdoccer-doc
-$ npm install grunt-jsdoccer-lint
+$ npm install grunt-jsdoccer
 ```
 
  
@@ -26,7 +24,7 @@ $ npm install grunt-jsdoccer-lint
 1) create stubbed YAML document templates
 
 ```
-$ grunt grunt-jsdoccer-yaml
+$ grunt grunt-1-jsdoccer-yaml
 ```
 
 **Note:** once you have generated the stubbed YAML templates you will find them in the `yaml/stubbed-dest` directory. You will need to move them to `yaml/doccumented-src` directory before you augment them so you don't accidenly over write them by running the task again.
@@ -36,7 +34,7 @@ $ grunt grunt-jsdoccer-yaml
 add this to your `grunt.initConfig` in your `GRUNTFILE.js`
 
 ```
-    jsDoccerYaml: {
+    'jsDoccer:yaml': {
       doc: {
         options: {
           ast: {
@@ -48,7 +46,7 @@ add this to your `grunt.initConfig` in your `GRUNTFILE.js`
             save: true
           },
           yaml: {
-            templates: './templates/yaml/',
+            templates: './templates/yaml',
             src: '.yaml/doccumented-src/',
             dest: './yaml/stubbed-dest/'
           },
@@ -85,17 +83,16 @@ The task's `options` property is where you provide target directories for each s
 2) Generate document JSON
 
 ```
-$ grunt grunt-jsdoccer-doc
+$ grunt grunt-2-jsdoccer-json
 ```
 
 Then you can run the next task that will generate document JSON for each file and save them to the `doc-json` directory. This will be use to produce the document html.
 
 
-
 add this to your `grunt.initConfig` in your `GRUNTFILE.js`
 
 ```    
-    jsDoccerJson: {
+    'jsDoccer:json': {
       doc: {
         options: {},
         files: [{
@@ -109,13 +106,25 @@ add this to your `grunt.initConfig` in your `GRUNTFILE.js`
     },
 ```
 
-and 
+3) Generate document HTML
 
 ```
-grunt.loadNpmTasks('grunt-jsdoccer-doc');
+grunt grunt-3-jsdoccer-doc'
 ```
 
-to the task list
+add this to your `grunt.initConfig` in your `GRUNTFILE.js`
+
+```
+    'jsDoccer:html': {
+      doc: {
+        options: {
+          handelbarsTemplate: './templates/jsdoc/class.hbs'
+        },
+        src: 'doc-json/*.json',
+        dest: 'jsdoc'
+      }
+    }
+```
 
 
 2) lint existing documents **(this is not working right now)**

@@ -2,36 +2,18 @@ name: TemplateCache
 
 class: TemplateCache
 
-constructor:   
-  description: |
-    @api public
-    @param {<type>} templateId - <description>
-  
-  examples:
-  -
-    name: <name>
-    example: |
-      <example>
-      
-properties: 
-  templateId: |
-    <description>
-    
-    @type {<type>}
-    
-
-  templateCaches: |
-    <description>
-    
-    @type {<type>}
-    
-
-  compiledTemplate: |
-    <description>
-    
-    @type {<type>}
-    
 functions: 
+  TemplateCache:
+    description: |
+      @param {<type>} templateId - <description>
+    
+    examples:
+      -
+        name: <name>
+        example: |
+          <example>
+          
+
   get:
     description: |
       @api public
@@ -93,3 +75,32 @@ functions:
         example: |
           <example>
           
+constructor:   
+  description: |
+    @api public
+    @param {<type>} templateId - <description>
+  
+  examples:
+  -
+    name: <name>
+    example: |
+      <example>
+      
+properties: 
+  templateId: |
+    <description>
+    
+    @type {<type>}
+    
+
+  templateCaches: |
+    <description>
+    
+    @type {<type>}
+    
+
+  compiledTemplate: |
+    <description>
+    
+    @type {<type>}
+    

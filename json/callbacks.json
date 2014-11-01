@@ -11,28 +11,11 @@
             "isCollection": false
         }
     ],
-    "constructor": [
-        {
-            "tags": [
-                "@api public"
-            ]
-        }
-    ],
-    "properties": [
-        {
-            "name": "_deferred"
-        },
-        {
-            "name": "_callbacks"
-        },
-        {
-            "name": "_deferred"
-        },
-        {
-            "name": "_callbacks"
-        }
-    ],
     "functions": [
+        {
+            "name": "Callbacks",
+            "tags": []
+        },
         {
             "name": "add",
             "tags": [
@@ -54,6 +37,27 @@
             "tags": [
                 "@api public"
             ]
+        }
+    ],
+    "constructor": [
+        {
+            "tags": [
+                "@api public"
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "name": "_deferred"
+        },
+        {
+            "name": "_callbacks"
+        },
+        {
+            "name": "_deferred"
+        },
+        {
+            "name": "_callbacks"
         }
     ]
 }

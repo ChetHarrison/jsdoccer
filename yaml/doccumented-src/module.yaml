@@ -2,74 +2,20 @@ name: Module
 
 class: Module
 
-constructor:   
-  description: |
-    @api public
-    @param {<type>} moduleName - <description>
-    @param {<type>} app - <description>
-    @param {<type>} options - <description>
-  
-  examples:
-  -
-    name: <name>
-    example: |
-      <example>
-      
-properties: 
-  moduleName: |
-    <description>
-    
-    @type {<type>}
-    
-
-  options: |
-    <description>
-    
-    @type {<type>}
-    
-
-  initialize: |
-    <description>
-    
-    @type {<type>}
-    
-
-  submodules: |
-    <description>
-    
-    @type {<type>}
-    
-
-  app: |
-    <description>
-    
-    @type {<type>}
-    
-
-  _isInitialized: |
-    <description>
-    
-    @type {<type>}
-    
-
-  _isInitialized: |
-    <description>
-    
-    @type {<type>}
-    
-
-  _initializerCallbacks: |
-    <description>
-    
-    @type {<type>}
-    
-
-  _finalizerCallbacks: |
-    <description>
-    
-    @type {<type>}
-    
 functions: 
+  Module:
+    description: |
+      @param {<type>} moduleName - <description>
+      @param {<type>} app - <description>
+      @param {<type>} options - <description>
+    
+    examples:
+      -
+        name: <name>
+        example: |
+          <example>
+          
+
   initialize:
     description: |
       @api public
@@ -265,6 +211,73 @@ functions:
         example: |
           <example>
           
+constructor:   
+  description: |
+    @api public
+    @param {<type>} moduleName - <description>
+    @param {<type>} app - <description>
+    @param {<type>} options - <description>
+  
+  examples:
+  -
+    name: <name>
+    example: |
+      <example>
+      
+properties: 
+  moduleName: |
+    <description>
+    
+    @type {<type>}
+    
+
+  options: |
+    <description>
+    
+    @type {<type>}
+    
+
+  initialize: |
+    <description>
+    
+    @type {<type>}
+    
+
+  submodules: |
+    <description>
+    
+    @type {<type>}
+    
+
+  app: |
+    <description>
+    
+    @type {<type>}
+    
+
+  _isInitialized: |
+    <description>
+    
+    @type {<type>}
+    
+
+  _isInitialized: |
+    <description>
+    
+    @type {<type>}
+    
+
+  _initializerCallbacks: |
+    <description>
+    
+    @type {<type>}
+    
+
+  _finalizerCallbacks: |
+    <description>
+    
+    @type {<type>}
+    
 events: 
   name: before:start
   

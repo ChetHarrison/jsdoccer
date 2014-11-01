@@ -1,121 +1,48 @@
 {
   "name": "TemplateCache",
   "class": "TemplateCache",
-  "constructor": {
-    "description": {
-      "tags": [
-        {
-          "type": "api",
-          "visibility": "public"
-        },
-        {
-          "type": "param",
-          "types": [
-            "<type>"
-          ],
-          "name": "templateId",
-          "description": "<description>",
-          "optional": false,
-          "typeStr": "<type>"
-        }
-      ],
-      "description": {
-        "full": "",
-        "summary": "",
-        "body": ""
-      },
-      "isPrivate": false,
-      "api": {
-        "type": "api",
-        "visibility": "public"
-      },
-      "params": [
-        {
-          "type": "param",
-          "types": [
-            "<type>"
-          ],
-          "name": "templateId",
-          "description": "<description>",
-          "optional": false,
-          "typeStr": "<type>"
-        }
-      ],
-      "paramStr": "templateId"
-    },
-    "examples": [
-      {
-        "name": "<name>",
-        "example": "<example>\n"
-      }
-    ]
-  },
-  "properties": {
-    "templateId": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "templateCaches": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "compiledTemplate": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    }
-  },
   "functions": {
+    "TemplateCache": {
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              "<type>"
+            ],
+            "name": "templateId",
+            "description": "<description>",
+            "optional": false,
+            "typeStr": "<type>"
+          }
+        ],
+        "description": {
+          "full": "",
+          "summary": "",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "<type>"
+            ],
+            "name": "templateId",
+            "description": "<description>",
+            "optional": false,
+            "typeStr": "<type>"
+          }
+        ],
+        "paramStr": "templateId"
+      },
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    },
     "get": {
       "description": {
         "tags": [
@@ -346,6 +273,120 @@
           "example": "<example>\n"
         }
       ]
+    }
+  },
+  "constructor": {
+    "description": {
+      "tags": [
+        {
+          "type": "api",
+          "visibility": "public"
+        },
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "templateId",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
+        }
+      ],
+      "description": {
+        "full": "",
+        "summary": "",
+        "body": ""
+      },
+      "isPrivate": false,
+      "api": {
+        "type": "api",
+        "visibility": "public"
+      },
+      "params": [
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "templateId",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
+        }
+      ],
+      "paramStr": "templateId"
+    },
+    "examples": [
+      {
+        "name": "<name>",
+        "example": "<example>\n"
+      }
+    ]
+  },
+  "properties": {
+    "templateId": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "templateCaches": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "compiledTemplate": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
     }
   },
   "examples": [],

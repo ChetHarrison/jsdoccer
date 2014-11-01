@@ -2,6 +2,29 @@ name: Controller
 
 class: Controller
 
+functions: 
+  Controller:
+    description: |
+      @param {<type>} options - <description>
+    
+    examples:
+      -
+        name: <name>
+        example: |
+          <example>
+          
+
+  destroy:
+    description: |
+      @api public
+      @returns {<type>} - <description>
+    
+    examples:
+      -
+        name: <name>
+        example: |
+          <example>
+          
 constructor:   
   description: |
     @api public
@@ -19,15 +42,3 @@ properties:
     
     @type {<type>}
     
-functions: 
-  destroy:
-    description: |
-      @api public
-      @returns {<type>} - <description>
-    
-    examples:
-      -
-        name: <name>
-        example: |
-          <example>
-          

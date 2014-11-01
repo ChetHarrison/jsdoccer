@@ -11,46 +11,15 @@
             "isCollection": false
         }
     ],
-    "constructor": [
+    "functions": [
         {
+            "name": "Module",
             "tags": [
-                "@api public",
                 "@param {<type>} moduleName - <description>",
                 "@param {<type>} app - <description>",
                 "@param {<type>} options - <description>"
             ]
-        }
-    ],
-    "properties": [
-        {
-            "name": "moduleName"
         },
-        {
-            "name": "options"
-        },
-        {
-            "name": "initialize"
-        },
-        {
-            "name": "submodules"
-        },
-        {
-            "name": "app"
-        },
-        {
-            "name": "_isInitialized"
-        },
-        {
-            "name": "_isInitialized"
-        },
-        {
-            "name": "_initializerCallbacks"
-        },
-        {
-            "name": "_finalizerCallbacks"
-        }
-    ],
-    "functions": [
         {
             "name": "initialize",
             "tags": [
@@ -171,6 +140,45 @@
                 "@param {<type>} module - <description>",
                 "@param {<type>} startWithParent - <description>"
             ]
+        }
+    ],
+    "constructor": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} moduleName - <description>",
+                "@param {<type>} app - <description>",
+                "@param {<type>} options - <description>"
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "name": "moduleName"
+        },
+        {
+            "name": "options"
+        },
+        {
+            "name": "initialize"
+        },
+        {
+            "name": "submodules"
+        },
+        {
+            "name": "app"
+        },
+        {
+            "name": "_isInitialized"
+        },
+        {
+            "name": "_isInitialized"
+        },
+        {
+            "name": "_initializerCallbacks"
+        },
+        {
+            "name": "_finalizerCallbacks"
         }
     ],
     "events": [

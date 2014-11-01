@@ -2,78 +2,18 @@ name: Application
 
 class: Application
 
-constructor:   
-  description: |
-    @api public
-    @param {<type>} options - <description>
-  
-  examples:
-  -
-    name: <name>
-    example: |
-      <example>
-      
-properties: 
-  options: |
-    <description>
-    
-    @type {<type>}
-    
-
-  _initCallbacks: |
-    <description>
-    
-    @type {<type>}
-    
-
-  submodules: |
-    <description>
-    
-    @type {<type>}
-    
-
-  _regionManager: |
-    <description>
-    
-    @type {<type>}
-    
-
-  name: |
-    <description>
-    
-    @type {<type>}
-    
-
-  channelName: |
-    <description>
-    
-    @type {<type>}
-    
-
-  channel: |
-    <description>
-    
-    @type {<type>}
-    
-
-  vent: |
-    <description>
-    
-    @type {<type>}
-    
-
-  commands: |
-    <description>
-    
-    @type {<type>}
-    
-
-  reqres: |
-    <description>
-    
-    @type {<type>}
-    
 functions: 
+  Application:
+    description: |
+      @param {<type>} options - <description>
+    
+    examples:
+      -
+        name: <name>
+        example: |
+          <example>
+          
+
   initialize:
     description: |
       @api public
@@ -255,6 +195,77 @@ functions:
         example: |
           <example>
           
+constructor:   
+  description: |
+    @api public
+    @param {<type>} options - <description>
+  
+  examples:
+  -
+    name: <name>
+    example: |
+      <example>
+      
+properties: 
+  options: |
+    <description>
+    
+    @type {<type>}
+    
+
+  _initCallbacks: |
+    <description>
+    
+    @type {<type>}
+    
+
+  submodules: |
+    <description>
+    
+    @type {<type>}
+    
+
+  _regionManager: |
+    <description>
+    
+    @type {<type>}
+    
+
+  name: |
+    <description>
+    
+    @type {<type>}
+    
+
+  channelName: |
+    <description>
+    
+    @type {<type>}
+    
+
+  channel: |
+    <description>
+    
+    @type {<type>}
+    
+
+  vent: |
+    <description>
+    
+    @type {<type>}
+    
+
+  commands: |
+    <description>
+    
+    @type {<type>}
+    
+
+  reqres: |
+    <description>
+    
+    @type {<type>}
+    
 events: 
   name: before:start
   

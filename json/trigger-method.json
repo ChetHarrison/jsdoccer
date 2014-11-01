@@ -10,5 +10,20 @@
             "name": "TriggerMethod",
             "isCollection": false
         }
+    ],
+    "functions": [
+        {
+            "name": "triggerMethod",
+            "tags": [
+                "@param {<type>} event - <description>"
+            ]
+        },
+        {
+            "name": "triggerMethodOn",
+            "tags": [
+                "@param {<type>} context - <description>",
+                "@param {<type>} event - <description>"
+            ]
+        }
     ]
 }

@@ -11,44 +11,13 @@
             "isCollection": false
         }
     ],
-    "constructor": [
+    "functions": [
         {
+            "name": "Region",
             "tags": [
-                "@api public",
                 "@param {<type>} options - <description>"
             ]
-        }
-    ],
-    "properties": [
-        {
-            "name": "options"
         },
-        {
-            "name": "el"
-        },
-        {
-            "name": "el"
-        },
-        {
-            "name": "$el"
-        },
-        {
-            "name": "currentView"
-        },
-        {
-            "name": "$el"
-        },
-        {
-            "name": "el"
-        },
-        {
-            "name": "currentView"
-        },
-        {
-            "name": "el"
-        }
-    ],
-    "functions": [
         {
             "name": "buildRegion",
             "tags": [
@@ -73,6 +42,12 @@
                 "@param {<type>} regionConfig - <description>",
                 "@param {<type>} DefaultRegionClass - <description>",
                 "@returns {<type>} - <description>"
+            ]
+        },
+        {
+            "name": "getEl",
+            "tags": [
+                "@param {<type>} el - <description>"
             ]
         },
         {
@@ -154,6 +129,43 @@
                 "@api public",
                 "@returns {<type>} - <description>"
             ]
+        }
+    ],
+    "constructor": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} options - <description>"
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "name": "options"
+        },
+        {
+            "name": "el"
+        },
+        {
+            "name": "el"
+        },
+        {
+            "name": "$el"
+        },
+        {
+            "name": "currentView"
+        },
+        {
+            "name": "$el"
+        },
+        {
+            "name": "el"
+        },
+        {
+            "name": "currentView"
+        },
+        {
+            "name": "el"
         }
     ],
     "events": [

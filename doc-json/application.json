@@ -1,268 +1,48 @@
 {
   "name": "Application",
   "class": "Application",
-  "constructor": {
-    "description": {
-      "tags": [
-        {
-          "type": "api",
-          "visibility": "public"
-        },
-        {
-          "type": "param",
-          "types": [
-            "<type>"
-          ],
-          "name": "options",
-          "description": "<description>",
-          "optional": false,
-          "typeStr": "<type>"
-        }
-      ],
-      "description": {
-        "full": "",
-        "summary": "",
-        "body": ""
-      },
-      "isPrivate": false,
-      "api": {
-        "type": "api",
-        "visibility": "public"
-      },
-      "params": [
-        {
-          "type": "param",
-          "types": [
-            "<type>"
-          ],
-          "name": "options",
-          "description": "<description>",
-          "optional": false,
-          "typeStr": "<type>"
-        }
-      ],
-      "paramStr": "options"
-    },
-    "examples": [
-      {
-        "name": "<name>",
-        "example": "<example>\n"
-      }
-    ]
-  },
-  "properties": {
-    "options": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "_initCallbacks": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "submodules": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "_regionManager": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "name": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "channelName": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "channel": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "vent": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "commands": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "reqres": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    }
-  },
   "functions": {
+    "Application": {
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              "<type>"
+            ],
+            "name": "options",
+            "description": "<description>",
+            "optional": false,
+            "typeStr": "<type>"
+          }
+        ],
+        "description": {
+          "full": "",
+          "summary": "",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "<type>"
+            ],
+            "name": "options",
+            "description": "<description>",
+            "optional": false,
+            "typeStr": "<type>"
+          }
+        ],
+        "paramStr": "options"
+      },
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    },
     "initialize": {
       "description": {
         "tags": [
@@ -912,6 +692,267 @@
           "example": "<example>\n"
         }
       ]
+    }
+  },
+  "constructor": {
+    "description": {
+      "tags": [
+        {
+          "type": "api",
+          "visibility": "public"
+        },
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "options",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
+        }
+      ],
+      "description": {
+        "full": "",
+        "summary": "",
+        "body": ""
+      },
+      "isPrivate": false,
+      "api": {
+        "type": "api",
+        "visibility": "public"
+      },
+      "params": [
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "options",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
+        }
+      ],
+      "paramStr": "options"
+    },
+    "examples": [
+      {
+        "name": "<name>",
+        "example": "<example>\n"
+      }
+    ]
+  },
+  "properties": {
+    "options": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "_initCallbacks": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "submodules": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "_regionManager": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "name": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "channelName": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "channel": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "vent": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "commands": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "reqres": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
     }
   },
   "events": {

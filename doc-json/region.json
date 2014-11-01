@@ -1,142 +1,48 @@
 {
   "name": "Region",
   "class": "Region",
-  "constructor": {
-    "description": {
-      "tags": [
-        {
-          "type": "api",
-          "visibility": "public"
-        },
-        {
-          "type": "param",
-          "types": [
-            "<type>"
-          ],
-          "name": "options",
-          "description": "<description>",
-          "optional": false,
-          "typeStr": "<type>"
-        }
-      ],
-      "description": {
-        "full": "",
-        "summary": "",
-        "body": ""
-      },
-      "isPrivate": false,
-      "api": {
-        "type": "api",
-        "visibility": "public"
-      },
-      "params": [
-        {
-          "type": "param",
-          "types": [
-            "<type>"
-          ],
-          "name": "options",
-          "description": "<description>",
-          "optional": false,
-          "typeStr": "<type>"
-        }
-      ],
-      "paramStr": "options"
-    },
-    "examples": [
-      {
-        "name": "<name>",
-        "example": "<example>\n"
-      }
-    ]
-  },
-  "properties": {
-    "options": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "el": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "$el": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    },
-    "currentView": {
-      "examples": [],
-      "description": {
-        "tags": [
-          {
-            "type": "type",
-            "types": [
-              "<type>"
-            ]
-          }
-        ],
-        "description": {
-          "full": "<description>\n",
-          "summary": "<description>\n",
-          "body": ""
-        },
-        "isPrivate": false,
-        "params": [],
-        "paramStr": ""
-      }
-    }
-  },
   "functions": {
+    "Region": {
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              "<type>"
+            ],
+            "name": "options",
+            "description": "<description>",
+            "optional": false,
+            "typeStr": "<type>"
+          }
+        ],
+        "description": {
+          "full": "",
+          "summary": "",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "<type>"
+            ],
+            "name": "options",
+            "description": "<description>",
+            "optional": false,
+            "typeStr": "<type>"
+          }
+        ],
+        "paramStr": "options"
+      },
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    },
     "buildRegion": {
       "description": {
         "tags": [
@@ -358,6 +264,62 @@
         }
       ]
     },
+    "getEl": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "param",
+            "types": [
+              "<type>"
+            ],
+            "name": "el",
+            "description": "<description>",
+            "optional": false,
+            "typeStr": "<type>"
+          },
+          {
+            "type": "returns",
+            "types": [
+              "<type>"
+            ],
+            "description": "- <description>"
+          }
+        ],
+        "description": {
+          "full": "",
+          "summary": "",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "<type>"
+            ],
+            "name": "el",
+            "description": "<description>",
+            "optional": false,
+            "typeStr": "<type>"
+          }
+        ],
+        "paramStr": "el"
+      },
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    },
     "_buildRegionFromRegionClass": {
       "description": {
         "tags": [
@@ -559,62 +521,6 @@
           }
         ],
         "paramStr": "view"
-      },
-      "examples": [
-        {
-          "name": "<name>",
-          "example": "<example>\n"
-        }
-      ]
-    },
-    "getEl": {
-      "description": {
-        "tags": [
-          {
-            "type": "api",
-            "visibility": "public"
-          },
-          {
-            "type": "param",
-            "types": [
-              "<type>"
-            ],
-            "name": "el",
-            "description": "<description>",
-            "optional": false,
-            "typeStr": "<type>"
-          },
-          {
-            "type": "returns",
-            "types": [
-              "<type>"
-            ],
-            "description": "- <description>"
-          }
-        ],
-        "description": {
-          "full": "",
-          "summary": "",
-          "body": ""
-        },
-        "isPrivate": false,
-        "api": {
-          "type": "api",
-          "visibility": "public"
-        },
-        "params": [
-          {
-            "type": "param",
-            "types": [
-              "<type>"
-            ],
-            "name": "el",
-            "description": "<description>",
-            "optional": false,
-            "typeStr": "<type>"
-          }
-        ],
-        "paramStr": "el"
       },
       "examples": [
         {
@@ -860,6 +766,141 @@
           "example": "<example>\n"
         }
       ]
+    }
+  },
+  "constructor": {
+    "description": {
+      "tags": [
+        {
+          "type": "api",
+          "visibility": "public"
+        },
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "options",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
+        }
+      ],
+      "description": {
+        "full": "",
+        "summary": "",
+        "body": ""
+      },
+      "isPrivate": false,
+      "api": {
+        "type": "api",
+        "visibility": "public"
+      },
+      "params": [
+        {
+          "type": "param",
+          "types": [
+            "<type>"
+          ],
+          "name": "options",
+          "description": "<description>",
+          "optional": false,
+          "typeStr": "<type>"
+        }
+      ],
+      "paramStr": "options"
+    },
+    "examples": [
+      {
+        "name": "<name>",
+        "example": "<example>\n"
+      }
+    ]
+  },
+  "properties": {
+    "options": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "el": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "$el": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "currentView": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "<type>"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<description>\n",
+          "summary": "<description>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
     }
   },
   "events": {

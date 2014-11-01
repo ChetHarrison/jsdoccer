@@ -6,6 +6,7 @@
 - [x] convert to grunt task
 - [x] build document webpages from JSDoc
 - [ ] lint existing documents
+- [ ] create matchers and template for class functions
 
 # JSDoccer
 

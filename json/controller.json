@@ -11,6 +11,21 @@
             "isCollection": false
         }
     ],
+    "functions": [
+        {
+            "name": "Controller",
+            "tags": [
+                "@param {<type>} options - <description>"
+            ]
+        },
+        {
+            "name": "destroy",
+            "tags": [
+                "@api public",
+                "@returns {<type>} - <description>"
+            ]
+        }
+    ],
     "constructor": [
         {
             "tags": [
@@ -22,15 +37,6 @@
     "properties": [
         {
             "name": "options"
-        }
-    ],
-    "functions": [
-        {
-            "name": "destroy",
-            "tags": [
-                "@api public",
-                "@returns {<type>} - <description>"
-            ]
         }
     ]
 }

@@ -2,41 +2,17 @@ name: Callbacks
 
 class: Callbacks
 
-constructor:   
-  description: |
-    @api public
-  
-  examples:
-  -
-    name: <name>
-    example: |
-      <example>
-      
-properties: 
-  _deferred: |
-    <description>
-    
-    @type {<type>}
-    
-
-  _callbacks: |
-    <description>
-    
-    @type {<type>}
-    
-
-  _deferred: |
-    <description>
-    
-    @type {<type>}
-    
-
-  _callbacks: |
-    <description>
-    
-    @type {<type>}
-    
 functions: 
+  Callbacks:
+    description: |
+    
+    examples:
+      -
+        name: <name>
+        example: |
+          <example>
+          
+
   add:
     description: |
       @api public
@@ -73,3 +49,37 @@ functions:
         example: |
           <example>
           
+constructor:   
+  description: |
+    @api public
+  
+  examples:
+  -
+    name: <name>
+    example: |
+      <example>
+      
+properties: 
+  _deferred: |
+    <description>
+    
+    @type {<type>}
+    
+
+  _callbacks: |
+    <description>
+    
+    @type {<type>}
+    
+
+  _deferred: |
+    <description>
+    
+    @type {<type>}
+    
+
+  _callbacks: |
+    <description>
+    
+    @type {<type>}
+    

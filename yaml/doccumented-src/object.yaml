@@ -2,24 +2,18 @@ name: Object
 
 class: Object
 
-constructor:   
-  description: |
-    @api public
-    @param {<type>} options - <description>
-  
-  examples:
-  -
-    name: <name>
-    example: |
-      <example>
-      
-properties: 
-  options: |
-    <description>
-    
-    @type {<type>}
-    
 functions: 
+  Object:
+    description: |
+      @param {<type>} options - <description>
+    
+    examples:
+      -
+        name: <name>
+        example: |
+          <example>
+          
+
   initialize:
     description: |
       @api public
@@ -41,6 +35,23 @@ functions:
         example: |
           <example>
           
+constructor:   
+  description: |
+    @api public
+    @param {<type>} options - <description>
+  
+  examples:
+  -
+    name: <name>
+    example: |
+      <example>
+      
+properties: 
+  options: |
+    <description>
+    
+    @type {<type>}
+    
 events: 
   name: before:destroy
   

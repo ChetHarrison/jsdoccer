@@ -1,6 +1,84 @@
 {
   "name": "Controller",
   "class": "Controller",
+  "functions": {
+    "Controller": {
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              "<type>"
+            ],
+            "name": "options",
+            "description": "<description>",
+            "optional": false,
+            "typeStr": "<type>"
+          }
+        ],
+        "description": {
+          "full": "",
+          "summary": "",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "<type>"
+            ],
+            "name": "options",
+            "description": "<description>",
+            "optional": false,
+            "typeStr": "<type>"
+          }
+        ],
+        "paramStr": "options"
+      },
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    },
+    "destroy": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "returns",
+            "types": [
+              "<type>"
+            ],
+            "description": "- <description>"
+          }
+        ],
+        "description": {
+          "full": "",
+          "summary": "",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      },
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    }
+  },
   "constructor": {
     "description": {
       "tags": [
@@ -71,43 +149,6 @@
         "params": [],
         "paramStr": ""
       }
-    }
-  },
-  "functions": {
-    "destroy": {
-      "description": {
-        "tags": [
-          {
-            "type": "api",
-            "visibility": "public"
-          },
-          {
-            "type": "returns",
-            "types": [
-              "<type>"
-            ],
-            "description": "- <description>"
-          }
-        ],
-        "description": {
-          "full": "",
-          "summary": "",
-          "body": ""
-        },
-        "isPrivate": false,
-        "api": {
-          "type": "api",
-          "visibility": "public"
-        },
-        "params": [],
-        "paramStr": ""
-      },
-      "examples": [
-        {
-          "name": "<name>",
-          "example": "<example>\n"
-        }
-      ]
     }
   },
   "examples": [],

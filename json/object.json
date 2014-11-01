@@ -11,20 +11,13 @@
             "isCollection": false
         }
     ],
-    "constructor": [
+    "functions": [
         {
+            "name": "Object",
             "tags": [
-                "@api public",
                 "@param {<type>} options - <description>"
             ]
-        }
-    ],
-    "properties": [
-        {
-            "name": "options"
-        }
-    ],
-    "functions": [
+        },
         {
             "name": "initialize",
             "tags": [
@@ -36,6 +29,19 @@
             "tags": [
                 "@api public"
             ]
+        }
+    ],
+    "constructor": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} options - <description>"
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "name": "options"
         }
     ],
     "events": [

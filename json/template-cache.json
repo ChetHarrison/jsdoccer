@@ -11,26 +11,13 @@
             "isCollection": false
         }
     ],
-    "constructor": [
+    "functions": [
         {
+            "name": "TemplateCache",
             "tags": [
-                "@api public",
                 "@param {<type>} templateId - <description>"
             ]
-        }
-    ],
-    "properties": [
-        {
-            "name": "templateId"
         },
-        {
-            "name": "templateCaches"
-        },
-        {
-            "name": "compiledTemplate"
-        }
-    ],
-    "functions": [
         {
             "name": "get",
             "tags": [
@@ -67,6 +54,25 @@
                 "@param {<type>} rawTemplate - <description>",
                 "@returns {<type>} - <description>"
             ]
+        }
+    ],
+    "constructor": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} templateId - <description>"
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "name": "templateId"
+        },
+        {
+            "name": "templateCaches"
+        },
+        {
+            "name": "compiledTemplate"
         }
     ]
 }

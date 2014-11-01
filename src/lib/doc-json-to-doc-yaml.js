@@ -40,7 +40,6 @@ module.exports = {
 			var template = self.getTemplate(type),
 				syntaxJsons = json[type];
 
-			console.log(json[type][0].isCollection);
 			if (json[type][0].isCollection) {
 				// add type category
 				yaml += type + ':\n';

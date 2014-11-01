@@ -11,47 +11,13 @@
             "isCollection": false
         }
     ],
-    "constructor": [
+    "functions": [
         {
+            "name": "Application",
             "tags": [
-                "@api public",
                 "@param {<type>} options - <description>"
             ]
-        }
-    ],
-    "properties": [
-        {
-            "name": "options"
         },
-        {
-            "name": "_initCallbacks"
-        },
-        {
-            "name": "submodules"
-        },
-        {
-            "name": "_regionManager"
-        },
-        {
-            "name": "name"
-        },
-        {
-            "name": "channelName"
-        },
-        {
-            "name": "channel"
-        },
-        {
-            "name": "vent"
-        },
-        {
-            "name": "commands"
-        },
-        {
-            "name": "reqres"
-        }
-    ],
-    "functions": [
         {
             "name": "initialize",
             "tags": [
@@ -158,6 +124,46 @@
             "tags": [
                 "@api private"
             ]
+        }
+    ],
+    "constructor": [
+        {
+            "tags": [
+                "@api public",
+                "@param {<type>} options - <description>"
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "name": "options"
+        },
+        {
+            "name": "_initCallbacks"
+        },
+        {
+            "name": "submodules"
+        },
+        {
+            "name": "_regionManager"
+        },
+        {
+            "name": "name"
+        },
+        {
+            "name": "channelName"
+        },
+        {
+            "name": "channel"
+        },
+        {
+            "name": "vent"
+        },
+        {
+            "name": "commands"
+        },
+        {
+            "name": "reqres"
         }
     ],
     "events": [

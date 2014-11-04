@@ -1,6 +1,6 @@
 {
   "name": "jsdoccer",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "private": false,
   "description": "A tool to auto document your ECMAScript (Java Script) in  JSDoc 3 using Esprima.",
   "scripts": {
@@ -23,9 +23,6 @@
   "homepage": "https://github.com/ChetHarrison/jsdoccer",
   "devDependencies": {
     "dox": "git://github.com/jasonLaster/dox.git#marked",
-    "escodegen": "^1.4.1",
-    "esprima": "^1.2.2",
-    "gitty": "samccone/gitty",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.5.0",
@@ -37,17 +34,20 @@
     "grunt-jasmine-node": "^0.2.1",
     "grunt-jasmine-node-coverage": "^0.1.11",
     "grunt-plato": "^1.3.0",
-    "handlebars": "^2.0.0",
-    "highlight.js": "^8.2.0",
-    "js-yaml": "^3.1.0",
     "jshint-stylish": "^1.0.0",
     "load-grunt-tasks": "^0.6.0",
-    "marked": "^0.3.2",
     "mkdirp": "^0.5.0",
     "morgan": "^1.1.1",
     "rimraf": "^2.2.8"
   },
   "dependencies": {
+    "marked": "^0.3.2",
+    "handlebars": "^2.0.0",
+    "highlight.js": "^8.2.0",
+    "js-yaml": "^3.1.0",
+    "escodegen": "^1.4.1",
+    "esprima": "^1.2.2",
+    "gitty": "samccone/gitty",
     "indent-string": "^1.1.0",
     "underscore.string": "^2.3.3",
     "lodash": "^2.4.1",

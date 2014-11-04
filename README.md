@@ -8,7 +8,7 @@
 - [ ] lint existing documents
 - [ ] create matchers and template for class functions
 
-A collaboration with @jasonLaster
+A collaboration with [@jasonLaster](https://github.com/jasonLaster)
 
 # JSDoccer
 

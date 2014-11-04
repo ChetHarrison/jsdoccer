@@ -112,7 +112,7 @@ add this to your `grunt.initConfig` in your `GRUNTFILE.js`
 3) Generate document HTML
 
 ```
-grunt grunt-3-jsdoccer-doc'
+grunt grunt-3-jsdoccer-html'
 ```
 
 add this to your `grunt.initConfig` in your `GRUNTFILE.js`

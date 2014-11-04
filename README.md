@@ -19,7 +19,7 @@ A collaboration with [@jasonLaster](https://github.com/jasonLaster)
 Setup
 
 ```
-$ npm install grunt-jsdoccer
+$ npm install jsdoccer
 ```
 
  

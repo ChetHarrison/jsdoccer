@@ -11,3 +11,8 @@ npm-debug.log
 bower_components/
 .grunt
 reports
+ast/
+js/
+jsdoc/
+json/
+

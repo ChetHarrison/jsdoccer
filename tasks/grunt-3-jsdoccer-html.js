@@ -1,7 +1,6 @@
 var Promise      = require('bluebird');
 var _            = require('lodash');
 var path         = require('path');
-var gitty        = require('gitty');
 var fs           = Promise.promisifyAll(require('fs'));
 var Handlebars   = require('handlebars');
 var taskName     = 'jsDoccer:html'

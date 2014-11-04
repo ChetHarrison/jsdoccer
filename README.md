@@ -8,6 +8,8 @@
 - [ ] lint existing documents
 - [ ] create matchers and template for class functions
 
+A collaboration with @jasonLaster
+
 # JSDoccer
 
 **Note** this repo is morphing into a collection of Grunt tasks to auto document your ECMAScript (Java Script) in  [JSDoc 3](https://github.com/jsdoc3/jsdoc3.github.com) using [Esprima](http://esprima.org/) and [ESCodeGen](https://github.com/Constellation/escodegen) as well as lint those docs. It converts your code into YAML templates that (will be) converted to JSDocs. The YAML stage allows you to fill in stubbed examples and other details that cannot be generated from the provided Esprima code meta data.

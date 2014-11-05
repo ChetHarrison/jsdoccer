@@ -5,17 +5,20 @@
 
 'use strict';
 
-var dox = require('dox'),
-	_ = require('lodash'),
-	yaml = require('js-yaml'),
-	marked = require('marked'),
-	highlight = require('highlight.js');
+var dox 		= require('dox'),
+	_ 			= require('lodash'),
+	yaml 		= require('js-yaml'),
+	marked 		= require('marked'),
+	highlight 	= require('highlight.js'),
+	fs 			= require('fs'),
+	path 		= require('path');
 
 
 module.exports = {
 
 	init: function (options) {
-		this.grunt = options.grunt;
+		options = options || {};
+		this.files = options.files;
 		this.markdown = new marked.Renderer();
 		this.dox = dox.setMarkedOptions({
 			renderer: this.markdown,
@@ -32,40 +35,31 @@ module.exports = {
 		});
 	},
 
-	buildFiles: function (files) {
-		files.forEach(function (file) {
-			file.src
-				.filter(function (filepath) {
-					return this.grunt.file.exists(filepath) && !this.grunt.file.isDir(filepath);
-				}.bind(this))
-				.map(function (filepath) {
-					return this.compileJsDoc(file, filepath);
-				}.bind(this));
-		}.bind(this));
-	},
 
-	compileJsDoc: function (src, dest) {
-
-		var doc = this.grunt.file.read(src);
-		var json = this.parseYaml(doc);
+	compileJsDoc: function (file) {
+		
+		var doc = fs.readFileSync(file, {encoding: 'utf8'}),
+			json = this.parseYaml(doc),
+			filename = path.basename(file, '.yaml'),
+			destPath = path.normalize(this.files.dest + filename + '.json');
 
 		json.functions = this.buildFunctions(json.functions);
 		json.properties = this.buildProperties(json.properties);
 		json.examples = this.buildExamples(json.examples);
 
 		json.description = this.parseDescription(json.description);
-
 		json.constructor = json.constructor || '';
-
 		json.constructor = this.parseBody(json.constructor, 'constructor');
-
-		this.writeJSON(dest, json);
+		
+		this.writeJSON(destPath, json);
 	},
+
 
 	parseDescription: function (description) {
 		description = description || '';
 		return marked(description);
 	},
+
 
 	buildFunctions: function (functions) {
 		functions = functions || [];
@@ -76,6 +70,7 @@ module.exports = {
 
 		return functions;
 	},
+
 
 	buildProperties: function (properties) {
 		properties = properties || [];
@@ -97,35 +92,6 @@ module.exports = {
 		return examples;
 	},
 
-	/**
-	 * parseBody takes a yaml body, which is either a string or an object.
-	 * if it's just a string, it assumes it's one dox string, if it's an object it
-	 * assumes it has a description and examples.
-	 *
-	 *
-	 * e.g
-	 * foo: |
-	 *    Foo function is yay
-	 *
-	 *     @param wtf
-	 *
-	 * or...
-	 * foo:
-	 *   description: |
-	 *     Foo function is yay
-	 *
-	 *      @param wtf
-	 *
-	 *   examples:
-	 *     -
-	 *       name: foo e.g. 1
-	 *       example: |
-	 *          show the foo in action
-	 *          ```js
-	 *             foo(1,2,3)
-	 *          ```
-	 *
-	 **/
 
 	parseBody: function (value, name) {
 		var result = {};
@@ -157,13 +123,14 @@ module.exports = {
 		return result;
 	},
 
+
 	parseExample: function (example) {
 		if (!example.name) {
-			this.grunt.fail.fatal('jsDocFile failed to find example name');
+			console.warn('jsDocFile failed to find example name');
 		}
 
 		if (!example.example) {
-			this.grunt.fail.fatal('jsDocFile failed to find example for ' + example.name);
+			console.warn('jsDocFile failed to find example for ' + example.name);
 		}
 
 		example.example = marked(example.example);
@@ -183,7 +150,7 @@ module.exports = {
 		try {
 			doc = dox.parseComment(docString);
 		} catch (err) {
-			this.grunt.fail.fatal('jsDocFile failed to parse string ' + docString + ' dox at ' + name);
+			console.warn('jsDocFile failed to parse string ' + docString + ' dox at ' + name);
 		}
 
 		tags = doc.tags || [];
@@ -206,18 +173,21 @@ module.exports = {
 		return doc;
 	},
 
+
 	// write parsed api to file
 	writeJSON: function (dest, json) {
 		var prettyJSON = JSON.stringify(json, undefined, 2);
-		this.grunt.file.write(dest, prettyJSON);
+		console.log(dest);
+		fs.writeFileSync(dest, prettyJSON, {encoding: 'utf8'});
 	},
+
 
 	// read yaml file
 	parseYaml: function (file) {
 		try {
 			return yaml.safeLoad(file);
 		} catch (err) {
-			this.grunt.fail.fatal(err.name + ':\n' + err.reason + '\n\n' + err.mark);
+			console.warn(err.name + ':\n' + err.reason + '\n\n' + err.mark);
 		}
 	}
 

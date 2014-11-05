@@ -23,10 +23,15 @@ module.exports = {
 	},
 
 	buildJsonFile: function () {
-		var jsonFiles = _.map(this.files.src, function (filename) {
+		var files = fs.readdirSync(this.files.src),
+			jsonFiles = _.map(files, function (filename) {
+			filename = path.resolve(this.files.src + filename);
+			console.log(filename);
 			var content = fs.readFileSync(filename).toString();
 			return JSON.parse(content);
-		});
+		}, this);
+
+		console.log(this.files.src);
 
 		var apiJson = {};
 		apiJson.classes = [];

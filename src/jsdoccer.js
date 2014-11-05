@@ -22,8 +22,7 @@ var fs 					= require('fs-extra'),
 		setUpSrc: './setup',
 		setUpDest: _root + 'jsdoccer/',
 		yamlTemplates: _root + 'jsdoccer/templates/yaml/',
-		handlebarsTemplate: _root + 'jsdoccer/templates/yaml/',
-		jsdocTemplates: _root + 'jsdoccer/templates/jsdoc/',
+		handlebarsTemplate: _root + 'jsdoccer/templates/jsdoc/class.hbs',
 		ast: _root + 'jsdoccer/generated-files/ast/',
 		docJson: _root + 'jsdoccer/generated-files/doc-json/',
 		json: _root + 'jsdoccer/generated-files/json/',
@@ -63,7 +62,9 @@ module.exports = {
 		});
 		
 		_prepareYaml.init({
-			grunt: options.grunt
+			files: {
+				dest: _config.docJson
+			}
 		});
 		
 		_generateDocs.init({
@@ -73,6 +74,7 @@ module.exports = {
 			},
 			handlebarsTemplate: _config.handlebarsTemplate
 		});
+		
 	},
 	
 	// utilities
@@ -83,16 +85,13 @@ module.exports = {
 	},
 	
 	
-	mapFiles: function (dir, process) {
-		var self 			= this,
-			filesToDocument = fs.readdirSync(dir);
-			
-		if (filesToDocument.length > 0) {
-			filesToDocument.forEach(function(file) { process(file); });
+	mapFiles: function (files, process) {	
+		if (files.length > 0) {
+			files.forEach(function(file) { process(file); });
 		}
 		// bad usage
 		else {
-			console.warn('No js targets found to document in ' + dir);
+			console.warn('No js targets found to document');
 			process.exit(1);
 		}
 	},
@@ -100,7 +99,6 @@ module.exports = {
 	// control
 	generateStubbedDocYamlFile: function (file) {
 		var syntaxTree, lookup, json, docYaml;
-	
 		// gard: filter files listed in config
 		if (_.contains(this.config.filesToFilter, file)) { return; }
 		// generate AST
@@ -119,17 +117,24 @@ module.exports = {
 	
 	
 	generateStubbedDocYamlFiles: function (files) {
-		this.mapFiles(files, this.generateStubbedDocYamlFile);
+		_.each(files, function(file) {
+				this.generateStubbedDocYamlFile(file);
+			}, this
+		);
 	},
 	
 	
 	prepareYaml: function (file) {
-		_prepareYaml.prepare(file);
+		console.log(file);
+		_prepareYaml.compileJsDoc(file);
 	},
 	
 	
 	prepareYamls: function(files) {
-		this.mapFiles(files, this.prepareYaml);
+		_.each(files, function(file) {
+				this.prepareYaml(file);
+			}, this
+		);
 	},
 	
 	
@@ -139,7 +144,10 @@ module.exports = {
 	
 	
 	generateDocs: function(files) {
-		this.mapFiles(files, this.generateDoc);
+		_.each(files, function(file) {
+				this.generateDoc(file);
+			}, this
+		);
 	},
 	
 	

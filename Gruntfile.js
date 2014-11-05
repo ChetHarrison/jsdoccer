@@ -88,7 +88,8 @@ module.exports = function (grunt) {
 				},
 				files: [{
 					expand: true,
-					src: 'js/*.js'
+					src: 'js/*.js',
+					dest: '../../jsdoccer/generated-files/yaml/stubbed'
 				}]
 			}
 		},
@@ -98,11 +99,9 @@ module.exports = function (grunt) {
 				options: {},
 				files: [{
 					expand: true,
-					cwd: 'yaml/doccumented-src',
-					src: '*.yaml',
-					dest: 'doc-json',
-					ext: '.json'
-        		}]
+					src: '../../jsdoccer/generated-files/yaml/documented/*.yaml',
+					dest: '../../jsdoccer/generated-files/doc-json/'
+				}]
 			}
 		},
 
@@ -111,8 +110,11 @@ module.exports = function (grunt) {
 				options: {
 					handelbarsTemplate: './templates/jsdoc/class.hbs'
 				},
-				src: 'doc-json/*.json',
-				dest: 'jsdoc'
+				files: [{
+					expand: true,
+					src: '../../jsdoccer/generated-files/doc-json/*.json',
+					dest: '../../jsdoccer/documentation'
+				}]
 			}
 		}
 	});

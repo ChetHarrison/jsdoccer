@@ -62,25 +62,9 @@ module.exports = function (grunt) {
 			}
 		},
 
-		'jsDoccer:yaml': {
+		'jsDoccerYaml': {
 			doc: {
 				options: {
-					ast: {
-						dest: './ast/',
-						save: true
-					},
-					json: {
-						dest: './json/',
-						save: true
-					},
-					yaml: {
-						templates: './templates/yaml',
-						src: '.yaml/doccumented-src/',
-						dest: './yaml/stubbed-dest/'
-					},
-					syntaxMatchers: {
-						src: './syntax-matchers.js'
-					},
 					filesToFilter: [
 						'.DS_Store',
 						'filter-this.js'
@@ -89,32 +73,40 @@ module.exports = function (grunt) {
 				files: [{
 					expand: true,
 					src: 'js/*.js',
-					dest: '../../jsdoccer/generated-files/yaml/stubbed'
 				}]
 			}
 		},
 
-		'jsDoccer:json': {
-			doc: {
-				options: {},
-				files: [{
-					expand: true,
-					src: '../../jsdoccer/generated-files/yaml/documented/*.yaml',
-					dest: '../../jsdoccer/generated-files/doc-json/'
-				}]
-			}
-		},
-
-		'jsDoccer:html': {
+		'jsDoccerJson': {
 			doc: {
 				options: {
-					handelbarsTemplate: './templates/jsdoc/class.hbs'
+					filesToFilter: [
+						'.DS_Store',
+						'filter-this.js'
+					]
 				},
-				files: [{
-					expand: true,
-					src: '../../jsdoccer/generated-files/doc-json/*.json',
-					dest: '../../jsdoccer/documentation'
-				}]
+			}
+		},
+
+		'jsDoccerHtml': {
+			doc: {
+				options: {
+					filesToFilter: [
+						'.DS_Store',
+						'filter-this.js'
+					]
+				},
+			}
+		},
+		
+		'jsDoccerDoc': {
+			doc: {
+				options: {
+					filesToFilter: [
+						'.DS_Store',
+						'filter-this.js'
+					]
+				},
 			}
 		}
 	});
@@ -128,9 +120,10 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 
-	grunt.registerTask('yaml', 'Build stubbed YAML files.', ['jsDoccer:yaml']);
-	grunt.registerTask('json', 'Build jsdoc JSON files.', ['jsDoccer:json']);
-	grunt.registerTask('html', 'Build jsdoc HTML files.', ['jsDoccer:html']);
+	grunt.registerTask('yaml', 'Build stubbed YAML files.', ['jsDoccerYaml']);
+	grunt.registerTask('json', 'Build jsdoc JSON files.', ['jsDoccerJson']);
+	grunt.registerTask('html', 'Build jsdoc HTML files.', ['jsDoccerHtml']);
+	grunt.registerTask('doc', 'Build jsdoc HTML files from YAML.', ['jsDoccerDoc']);
 	grunt.registerTask('test', 'Lint, hint, test, coverage, and complexity.', ['jshint', 'jasmine_node']);
 	grunt.registerTask('default', 'Run test suite.', ['jasmine_node']);
 	grunt.registerTask('build', 'build sass', ['sass']);

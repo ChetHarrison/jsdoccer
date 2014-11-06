@@ -27,7 +27,7 @@ var fs 					= require('fs-extra'),
 		docJson: _root + 'jsdoccer/generated-files/doc-json/',
 		json: _root + 'jsdoccer/generated-files/json/',
 		yamlStubbed: _root + 'jsdoccer/generated-files/yaml/stubbed/',
-		yamlDocumented: _root + 'jsdoccer/generated-files/ymal/documented/',
+		yamlDocumented: _root + 'jsdoccer/generated-files/yaml/documented/',
 		htmlDocumentation: _root + 'jsdoccer/documentation/'
 	};
 
@@ -48,9 +48,8 @@ module.exports = {
 		}
 		catch (err) {
 			console.log('Current Working Dir: ' + process.cwd());
-			console.log('No "' + _config.syntaxMatchers + '" setting up defaults.');
+			console.log('No "syntax-matchers.js" found. Setting up defaults.');
 			fs.copySync(_config.setUpSrc, _config.setUpDest);
-			console.log(err);
 		}
 		
 		_astToDocJson.init({
@@ -62,7 +61,9 @@ module.exports = {
 		});
 		
 		_prepareYaml.init({
+			filesToFilter: options.config.filesToFilter,
 			files: {
+				src: _config.yamlDocumented,
 				dest: _config.docJson
 			}
 		});
@@ -84,17 +85,6 @@ module.exports = {
 		fs.writeFileSync(dest, data);
 	},
 	
-	
-	mapFiles: function (files, process) {	
-		if (files.length > 0) {
-			files.forEach(function(file) { process(file); });
-		}
-		// bad usage
-		else {
-			console.warn('No js targets found to document');
-			process.exit(1);
-		}
-	},
 	
 	// control
 	generateStubbedDocYamlFile: function (file) {
@@ -121,33 +111,17 @@ module.exports = {
 				this.generateStubbedDocYamlFile(file);
 			}, this
 		);
+		return files.length;
 	},
 	
 	
-	prepareYaml: function (file) {
-		console.log(file);
-		_prepareYaml.compileJsDoc(file);
+	prepareYaml: function () {
+		return _prepareYaml.prepare();
 	},
 	
 	
-	prepareYamls: function(files) {
-		_.each(files, function(file) {
-				this.prepareYaml(file);
-			}, this
-		);
-	},
-	
-	
-	generateDoc: function (file) {
-		_generateDocs.generate(file);
-	},
-	
-	
-	generateDocs: function(files) {
-		_.each(files, function(file) {
-				this.generateDoc(file);
-			}, this
-		);
+	generateDoc: function () {
+		return _generateDocs.generate();
 	},
 	
 	

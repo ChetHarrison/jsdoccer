@@ -11,7 +11,8 @@ var bluebird = require('bluebird'),
 	path = require('path'),
 	fs = bluebird.promisifyAll(require('fs')),
 	Handlebars = require('handlebars'),
-	taskName = 'jsDoccer:html';
+	taskName = 'jsDoccer:html',
+	numberOfDocument;
 	
 
 module.exports = {
@@ -26,12 +27,10 @@ module.exports = {
 		var files = fs.readdirSync(this.files.src),
 			jsonFiles = _.map(files, function (filename) {
 			filename = path.resolve(this.files.src + filename);
-			console.log(filename);
 			var content = fs.readFileSync(filename).toString();
 			return JSON.parse(content);
 		}, this);
 
-		console.log(this.files.src);
 
 		var apiJson = {};
 		apiJson.classes = [];
@@ -60,8 +59,9 @@ module.exports = {
 	},
 	
 	buildHtmlFiles: function () {
-		var json = JSON.parse(fs.readFileSync(path.resolve(this.files.dest, 'api.json')));
-		var classTpl = Handlebars.compile(fs.readFileSync(this.handlebarsTemplate).toString());
+		var json = JSON.parse(fs.readFileSync(path.resolve(this.files.dest, 'api.json'))),
+			classTpl = Handlebars.compile(fs.readFileSync(this.handlebarsTemplate).toString()),
+			numberOfClasses = 0;
 
 		_.each(json.classes, function (klass) {
 			var data = {
@@ -72,16 +72,18 @@ module.exports = {
 			var classHtml = classTpl(data);
 			var classPath = path.resolve(this.files.dest, klass.name + '.html');
 
-			console.log('writing ' + klass.name + ' api file.');
-			console.log(classPath);
+			// console.log('writing ' + klass.name + ' api file.');
 
 			fs.writeFileSync(classPath, classHtml);
-
+			numberOfClasses++;
+			
 		}, this);
+		
+		return numberOfClasses;
 	},
 	
 	generate: function () {
 		this.buildJsonFile();
-		this.buildHtmlFiles();
+		return this.buildHtmlFiles();
 	}
 };

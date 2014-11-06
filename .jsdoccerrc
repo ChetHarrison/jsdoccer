@@ -1,39 +1,11 @@
 {
-	"js": {
-		"src": "./js/"
+	"jsToDocument": {
+		"src": "./js/*.js"
 	},
-	
-	
-	"ast": {
-		"dest": "./ast/",
-		"save": true
-	},
-	
-	
-	"json": {
-		"dest": "./json/"
-	},
-	
-	
-	"yaml": {
-		"templates": "./templates/",
-		"dest": "./yaml/",
-		"save": true
-	},
-	
-	
-	"jsdoc": {
-		"dest": "./jsdoc/"
-	},
-	
-	
-	"syntaxMatchers": {
-		"src": "./syntax-matchers.js"
-	},
-	
-	
 	"filesToFilter": [
-		".DS_Store",
-		"filter-this.js"
-	]
+		".DS_Store"
+	],
+	"documentedYaml": {
+		"src": "../../jsdoccer/generated-files/yaml/documented/*.yaml"
+	}
 }

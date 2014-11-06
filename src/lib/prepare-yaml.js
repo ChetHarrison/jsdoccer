@@ -1,8 +1,3 @@
-/*
- * jsDocFiles is a task for compiling jsdoc api files
- *
- */
-
 'use strict';
 
 var dox 		= require('dox'),
@@ -18,6 +13,7 @@ module.exports = {
 
 	init: function (options) {
 		options = options || {};
+		this.filesToFilter = options.filesToFilter;
 		this.files = options.files;
 		this.markdown = new marked.Renderer();
 		this.dox = dox.setMarkedOptions({
@@ -34,10 +30,27 @@ module.exports = {
 			}
 		});
 	},
+	
+	
+	prepare: function () {
+		var files = fs.readdirSync(this.files.src),
+			self = this;
+			
+			
+		files = files.filter(function(file) {
+			return !_.contains(self.filesToFilter, file);
+		});
+		
+		_.each(files, function (filename) {
+			filename = path.resolve(this.files.src + filename);
+			this.compileJsDoc(filename);
+		}, this);
+			
+		return files.length;
+	},
 
 
 	compileJsDoc: function (file) {
-		
 		var doc = fs.readFileSync(file, {encoding: 'utf8'}),
 			json = this.parseYaml(doc),
 			filename = path.basename(file, '.yaml'),
@@ -177,7 +190,6 @@ module.exports = {
 	// write parsed api to file
 	writeJSON: function (dest, json) {
 		var prettyJSON = JSON.stringify(json, undefined, 2);
-		console.log(dest);
 		fs.writeFileSync(dest, prettyJSON, {encoding: 'utf8'});
 	},
 

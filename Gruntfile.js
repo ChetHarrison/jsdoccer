@@ -75,39 +75,6 @@ module.exports = function (grunt) {
 					src: 'js/*.js',
 				}]
 			}
-		},
-
-		'jsDoccerJson': {
-			doc: {
-				options: {
-					filesToFilter: [
-						'.DS_Store',
-						'filter-this.js'
-					]
-				},
-			}
-		},
-
-		'jsDoccerHtml': {
-			doc: {
-				options: {
-					filesToFilter: [
-						'.DS_Store',
-						'filter-this.js'
-					]
-				},
-			}
-		},
-		
-		'jsDoccerDoc': {
-			doc: {
-				options: {
-					filesToFilter: [
-						'.DS_Store',
-						'filter-this.js'
-					]
-				},
-			}
 		}
 	});
 
@@ -120,10 +87,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 
-	grunt.registerTask('yaml', 'Build stubbed YAML files.', ['jsDoccerYaml']);
-	grunt.registerTask('json', 'Build jsdoc JSON files.', ['jsDoccerJson']);
-	grunt.registerTask('html', 'Build jsdoc HTML files.', ['jsDoccerHtml']);
-	grunt.registerTask('doc', 'Build jsdoc HTML files from YAML.', ['jsDoccerDoc']);
 	grunt.registerTask('test', 'Lint, hint, test, coverage, and complexity.', ['jshint', 'jasmine_node']);
 	grunt.registerTask('default', 'Run test suite.', ['jasmine_node']);
 	grunt.registerTask('build', 'build sass', ['sass']);

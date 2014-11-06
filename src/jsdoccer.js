@@ -16,7 +16,7 @@ var fs 					= require('fs-extra'),
 	
 	// file path configuration the "setup" directory will be copied
 	// to the project root.
-	_root = '../../',
+	_root = './',
 	_config = {
 		syntaxMatchers: _root + 'jsdoccer/syntax-matchers.js',
 		setUpSrc: './setup',

@@ -5,7 +5,7 @@
 - [x] build document webpages from JSDoc
 - [ ] lint existing documents
 
-**There have been some major changes between 1.0 and 1.1. This is a pure Node.js tool now. If you are looking for a Grunt task you can find it at (grunt-jsdoccer)[https://github.com/ChetHarrison/grunt-jsdoccer].
+**There have been some major changes between 1.0 and 1.1. This is a pure Node.js tool now. If you are looking for a Grunt task you can find it at [grunt-jsdoccer](https://github.com/ChetHarrison/grunt-jsdoccer).
 
 A collaboration with [@jasonLaster](https://github.com/jasonLaster)
 

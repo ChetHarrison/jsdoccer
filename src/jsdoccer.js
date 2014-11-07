@@ -51,6 +51,15 @@ module.exports = {
 			console.log('Current Working Dir: ' + process.cwd());
 			console.log('No "syntax-matchers.js" found. Setting up defaults.');
 			fs.copySync(_config.setUpSrc, _config.setUpDest);
+			// github won't commit empty folders so we need to make those
+			// by hand
+			fs.makedirSync('jsdoccer/generated-files/');
+			fs.makedirSync(_config.ast);
+			fs.makedirSync(_config.docJson);
+			fs.makedirSync(_config.json);
+			fs.makedirSync(_config.yamlStubbed);
+			fs.makedirSync(_config.yamlDocumented);
+			fs.makedirSync(_config.htmlDocumentation);
 			syntaxMatchers = require('../../../' + _config.syntaxMatchers);
 		}
 		

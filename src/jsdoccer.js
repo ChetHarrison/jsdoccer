@@ -57,6 +57,7 @@ module.exports = {
 			fs.mkdirSync(_config.ast);
 			fs.mkdirSync(_config.docJson);
 			fs.mkdirSync(_config.json);
+			fs.mkdirSync('jsdoccer/generated-files/yaml/')
 			fs.mkdirSync(_config.yamlStubbed);
 			fs.mkdirSync(_config.yamlDocumented);
 			fs.mkdirSync(_config.htmlDocumentation);

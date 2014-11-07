@@ -53,13 +53,13 @@ module.exports = {
 			fs.copySync(_config.setUpSrc, _config.setUpDest);
 			// github won't commit empty folders so we need to make those
 			// by hand
-			fs.makedirSync('jsdoccer/generated-files/');
-			fs.makedirSync(_config.ast);
-			fs.makedirSync(_config.docJson);
-			fs.makedirSync(_config.json);
-			fs.makedirSync(_config.yamlStubbed);
-			fs.makedirSync(_config.yamlDocumented);
-			fs.makedirSync(_config.htmlDocumentation);
+			fs.mkdirSync('jsdoccer/generated-files/');
+			fs.mkdirSync(_config.ast);
+			fs.mkdirSync(_config.docJson);
+			fs.mkdirSync(_config.json);
+			fs.mkdirSync(_config.yamlStubbed);
+			fs.mkdirSync(_config.yamlDocumented);
+			fs.mkdirSync(_config.htmlDocumentation);
 			syntaxMatchers = require('../../../' + _config.syntaxMatchers);
 		}
 		

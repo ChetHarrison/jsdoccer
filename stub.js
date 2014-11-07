@@ -44,10 +44,10 @@ try {
 	console.log('Done: Generated ' + filesStubbed + ' YAML document stubs at'); 
 	console.log('"jsdoccer/generated-files/yaml/stubbed/".');
 	console.log('Remember to copy them into the "jsdoccer/generated-files/yaml/stubbed/"');
-	console.log('directory befor augmenting them with examples.');
+	console.log('directory before augmenting them with examples.');
 } catch (err) {
 	console.warn('Unable to generate YAML templates.');
-	console.log('Useage: node jsdoccer-stub "./path/to/target/file.js". Or set up your "jsToDocument.src" default targets in the ".jsdoccerrc" config file to run it with out arguments.');
+	console.log('Usage: node jsdoccer-stub "./path/to/target/file.js". Or set up your "jsToDocument.src" default targets in the ".jsdoccerrc" config file to run it with out arguments.');
 	console.log(err);
 }
 

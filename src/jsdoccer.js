@@ -94,7 +94,7 @@ module.exports = {
 	saveFile: function(data, file, filepath, extention) {
 		var dest = path.join(filepath + path.basename(file, '.js') + extention);
 		
-		fs.writeFileSync('../../' + dest, data);
+		fs.writeFileSync(dest, data);
 	},
 	
 	

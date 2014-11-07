@@ -22,25 +22,25 @@ Setup
 $ npm install jsdoccer
 ```
 
-1) create stubbed YAML document templates
+1) Create stubbed YAML document templates.
 
 ```
-$ node node_modules/jsdoccer/stub [path/to/files/you/want/to/doc]
+$ node node_modules/jsdoccer/stub [<path/to/files/you/want/to/doc/globaway/**/*.js>]
 ```
 
-The first time you run this command the tool will search for a `jsdoccer/syntaxMatchers.js` file at the root of your project directory. if it is not found it will copy the `setup` directory into a `jsdoccer` directory at the project root containing the default syntax matchers and templates. You can then custimize them to suit your style of code. **Note:** currently, if you delete the `syntaxMatchers.js` file it will generate a new `jsdoccer` folder with all the defaults and you will loose any custom augmentations you have made to your YAML templates. Once you have generated the stubbed YAML templates you will find them in the `jsdoccer/generated-files/yaml/stubbed` directory. You will need to move them to `jsdoccer/generated-files/yaml/documented` directory before you augment them so you don't accidenly over write them by running the task again. **If you forget to move them you will not be able to generate the documents!**
+The first time you run this command the tool will search for a `jsdoccer/syntaxMatchers.js` file at the root of your project directory. if it is not found it will copy the `setup` directory into a `jsdoccer` directory at the project root containing the default syntax matchers and templates. You can then customize them to suit your style of code. **Note:** currently, if you delete the `syntaxMatchers.js` file it will generate a new `jsdoccer` folder with all the defaults and you will loose any custom augmentations you have made to your YAML templates. Once you have generated the stubbed YAML templates you will find them in the `jsdoccer/generated-files/yaml/stubbed` directory. You will need to move them to `jsdoccer/generated-files/yaml/documented` directory before you augment them so you don't accidentally over write them by running the task again. **If you forget to move them you will not be able to generate the documents!**
 
-2) Generate documents
+2) Generate documents.
 
 ```
-$ node node_modules/jsdoccer/doc [path/to/yaml/you/want/to/doc]
+$ node node_modules/jsdoccer/doc [<path/to/yaml/you/want/to/doc>]
 ```
 
-Generated documents can be found in the `jsdoccer/documentation` folder allong with some default styles.
+Generated documents can be found in the `jsdoccer/documentation` folder along with some default styles.
 
 ### Configuration
 
-The `./jsdoccerrc` file contains cofiguration for the tool. If no files are provided on the command line the tool will look in the `jsToDocument.src` directory for target files. `filesToFilter` contains a black list of files ignore. If no files are provided on the command line for the documentation phase `documentedYaml.src` is the default.
+The `./jsdoccerrc` file contains configuration for the tool. If no files are provided on the command line the tool will look in the `jsToDocument.src` directory for target files. `filesToFilter` contains a black list of files ignore. If no files are provided on the command line for the documentation phase `documentedYaml.src` is the default.
 
 ```
 {
@@ -139,13 +139,13 @@ module.exports = {
 ```
 **Note**: I am using map/reduce to produce exactly the JSON I need here. You could just as easily use regex or even string matching to identify a target case and return the current unfiltered AST node containing all the data your template requires.
 
-The script will recursively walk the ASTs of each file passing every node to each match function. Each match function should return `false` or a valid JSON object containing all of the data the associated YAML template requires. While you can certainly return the raw AST node, I recomend you filter and organize your JSON here rather than in the template.
+The script will recursively walk the ASTs of each file passing every node to each match function. Each match function should return `false` or a valid JSON object containing all of the data the associated YAML template requires. While you can certainly return the raw AST node, I recommend you filter and organize your JSON here rather than in the template.
 
 To find out the AST conditions that match the code you would like to document compare your code with the ASTs saved in the `ast` directory. Then you will have a predictable AST JSON structure to query in an associated template for each document type.
 
 #### Parse JSON like a champ
 
-Map/Reduce is your friend when you need to pull deeply nested targets out of a large amount of JSON. I use a modified Array with the 5 magic RX methods attached. I highly recomend you spend a little time with [this excellent tutorial](http://reactive-extensions.github.io/learnrx/) from Jafar Husain of Netflix **Note: Do it in Chrome. It doesn't work in Firefox.** Then you will be able to inspect the generated AST files in the `ast` directory and write your own custom matchers in the `syntax-matchers.js` file.
+Map/Reduce is your friend when you need to pull deeply nested targets out of a large amount of JSON. I use a modified Array with the 5 magic RX methods attached. I highly recommend you spend a little time with [this excellent tutorial](http://reactive-extensions.github.io/learnrx/) from Jafar Husain of Netflix **Note: Do it in Chrome. It doesn't work in Firefox.** Then you will be able to inspect the generated AST files in the `ast` directory and write your own custom matchers in the `syntax-matchers.js` file.
 
 #### YAML Templates
 

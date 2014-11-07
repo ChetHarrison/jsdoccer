@@ -16,19 +16,18 @@ var fs 					= require('fs-extra'),
 	
 	// file path configuration the "setup" directory will be copied
 	// to the project root.
-	_root = './',
 	_config = {
-		syntaxMatchers: _root + 'jsdoccer/syntax-matchers.js',
-		setUpSrc: './setup',
-		setUpDest: _root + 'jsdoccer/',
-		yamlTemplates: _root + 'jsdoccer/templates/yaml/',
-		handlebarsTemplate: _root + 'jsdoccer/templates/jsdoc/class.hbs',
-		ast: _root + 'jsdoccer/generated-files/ast/',
-		docJson: _root + 'jsdoccer/generated-files/doc-json/',
-		json: _root + 'jsdoccer/generated-files/json/',
-		yamlStubbed: _root + 'jsdoccer/generated-files/yaml/stubbed/',
-		yamlDocumented: _root + 'jsdoccer/generated-files/yaml/documented/',
-		htmlDocumentation: _root + 'jsdoccer/documentation/'
+		syntaxMatchers: 	'jsdoccer/syntax-matchers.js',
+		setUpSrc: 			'./node_modules/jsdoccer/setup/',
+		setUpDest: 			'jsdoccer/',
+		yamlTemplates: 		'jsdoccer/templates/yaml/',
+		handlebarsTemplate: 'jsdoccer/templates/jsdoc/class.hbs',
+		ast: 				'jsdoccer/generated-files/ast/',
+		docJson: 			'jsdoccer/generated-files/doc-json/',
+		json: 				'jsdoccer/generated-files/json/',
+		yamlStubbed: 		'jsdoccer/generated-files/yaml/stubbed/',
+		yamlDocumented: 	'jsdoccer/generated-files/yaml/documented/',
+		htmlDocumentation: 	'jsdoccer/documentation/'
 	};
 
 
@@ -38,22 +37,25 @@ module.exports = {
 	
 	// set object state
 	init: function init(options) {
+		var syntaxMatchers;
 		options = options || {};
 		this.config = options.config;
 		
+		
 		// check to see if we are set up
 		try {
-			var fd = fs.openSync(_config.syntaxMatchers, 'r');
-			fs.closeSync(fd);
+			syntaxMatchers = require('../../../' + _config.syntaxMatchers);
 		}
 		catch (err) {
+			console.log(err);
 			console.log('Current Working Dir: ' + process.cwd());
 			console.log('No "syntax-matchers.js" found. Setting up defaults.');
 			fs.copySync(_config.setUpSrc, _config.setUpDest);
+			syntaxMatchers = require('../../../' + _config.syntaxMatchers);
 		}
 		
 		_astToDocJson.init({
-			syntaxMatchers: _config.syntaxMatchers
+			syntaxMatchers: syntaxMatchers
 		});
 		
 		_docJsonToDocYaml.init({
@@ -82,7 +84,7 @@ module.exports = {
 	saveFile: function(data, file, filepath, extention) {
 		var dest = path.join(filepath + path.basename(file, '.js') + extention);
 		
-		fs.writeFileSync(dest, data);
+		fs.writeFileSync('../../' + dest, data);
 	},
 	
 	

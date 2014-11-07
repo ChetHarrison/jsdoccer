@@ -17,7 +17,7 @@ module.exports = {
 	
 	init: function (options) {
 		options = options || {};
-		this.syntaxMatchers = require('../../' + options.syntaxMatchers);
+		this.syntaxMatchers = options.syntaxMatchers;
 	},
 	// iterate the `syntaxMatchers` object and call each
 	// validation function with the current ast branch. Return

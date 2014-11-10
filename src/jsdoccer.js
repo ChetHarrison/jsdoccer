@@ -17,8 +17,8 @@ var fs 					= require('fs-extra'),
 	// file path configuration the "setup" directory will be copied
 	// to the project root.
 	_config = {
-		syntaxMatchers: 	'jsdoccer/syntax-matchers.js',
-		setUpSrc: 			'./node_modules/jsdoccer/setup/',
+		ssyntaxMatchers: 	'/jsdoccer/syntax-matchers.js',
+		setUpSrc: 			'/../setup/',
 		setUpDest: 			'jsdoccer/',
 		yamlTemplates: 		'jsdoccer/templates/yaml/',
 		handlebarsTemplate: 'jsdoccer/templates/jsdoc/class.hbs',
@@ -37,31 +37,30 @@ module.exports = {
 	
 	// set object state
 	init: function init(options) {
-		var syntaxMatchers;
+		var syntaxMatchers,
+      		syntaxMatchersPath = path.resolve(process.cwd() + _config.syntaxMatchers),
+		  	setUpSrcPath = path.resolve(__dirname + _config.setUpSrc);
+		
 		options = options || {};
 		this.config = options.config;
 		
-		
 		// check to see if we are set up
 		try {
-			syntaxMatchers = require('../../../' + _config.syntaxMatchers);
+			syntaxMatchers = require(syntaxMatchersPath);
 		}
 		catch (err) {
-			console.log(err);
-			console.log('Current Working Dir: ' + process.cwd());
 			console.log('No "syntax-matchers.js" found. Setting up defaults.');
-			fs.copySync(_config.setUpSrc, _config.setUpDest);
+			fs.copySync(setUpSrcPath, _config.setUpDest);
 			// github won't commit empty folders so we need to make those
 			// by hand
 			fs.mkdirSync('jsdoccer/generated-files/');
 			fs.mkdirSync(_config.ast);
 			fs.mkdirSync(_config.docJson);
 			fs.mkdirSync(_config.json);
-			fs.mkdirSync('jsdoccer/generated-files/yaml/')
+			fs.mkdirSync('jsdoccer/generated-files/yaml/');
 			fs.mkdirSync(_config.yamlStubbed);
 			fs.mkdirSync(_config.yamlDocumented);
-			fs.mkdirSync(_config.htmlDocumentation);
-			syntaxMatchers = require('../../../' + _config.syntaxMatchers);
+			syntaxMatchers = require(syntaxMatchersPath);
 		}
 		
 		_astToDocJson.init({

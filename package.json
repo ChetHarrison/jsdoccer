@@ -1,11 +1,9 @@
 {
   "name": "jsdoccer",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "private": false,
   "description": "A Node.js tool to auto document your ECMAScript (Java Script) in  JSDoc 3 using Esprima.",
-  "scripts": {
-    "yaml": "grunt yaml"
-  },
+  "main": "./src/jsdoccer",
   "repository": {
     "type": "git",
     "url": "https://github.com/ChetHarrison/jsdoccer.git"

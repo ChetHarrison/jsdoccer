@@ -1,11 +1,9 @@
 {
 	"jsToDocument": {
-		"src": "./js/*.js"
+		"src": "./js/*.js",
+		"dest": "./"
 	},
 	"filesToFilter": [
 		".DS_Store"
-	],
-	"documentedYaml": {
-		"src": "../../jsdoccer/generated-files/yaml/documented/*.yaml"
-	}
+	]
 }

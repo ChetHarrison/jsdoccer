@@ -8,11 +8,11 @@ var fs 					= require('fs-extra'),
 	_ 					= require('lodash'),
 	// private 
 	// delegate declarations
-	_astGenerator 		= Object.create( require('./lib/ast-generator.js') ),
-	_astToDocJson 		= Object.create( require('./lib/ast-to-doc-json.js') ),
-	_docJsonToDocYaml 	= Object.create( require('./lib/doc-json-to-doc-yaml.js') ),
-	_prepareYaml		= Object.create( require('./lib/prepare-yaml.js') ),
-	_generateDocs		= Object.create( require('./lib/generate-docs.js') ),
+	_astGenerator 		= require('./lib/ast-generator.js'),
+	_astToDocJson 		= require('./lib/ast-to-doc-json.js'),
+	_docJsonToDocYaml 	= require('./lib/doc-json-to-doc-yaml.js'),
+	_prepareYaml		= require('./lib/prepare-yaml.js'),
+	_generateDocs		= require('./lib/generate-docs.js'),
 	
 	// file path configuration the "setup" directory will be copied
 	// to the project root.
@@ -36,30 +36,31 @@ var fs 					= require('fs-extra'),
 module.exports = {
 	
 	// set object state
+	// Need to be able to configure: 
+	//   * output dir path
 	init: function init(options) {
-		var syntaxMatchers,
-      		syntaxMatchersPath = path.resolve(process.cwd() + _config.syntaxMatchers),
-		  	setUpSrcPath = path.resolve(__dirname + _config.setUpSrc);
-		
+		var syntaxMatchers, syntaxMatchersPath, setUpSrcPath;
+      		
 		options = options || {};
 		this.config = options.config;
-		
+		syntaxMatchersPath = path.resolve(process.cwd(), this.config.jsToDocument.dest + _config.syntaxMatchers);
+		setUpSrcPath = path.resolve(__dirname + _config.setUpSrc);
 		// check to see if we are set up
 		try {
 			syntaxMatchers = require(syntaxMatchersPath);
 		}
 		catch (err) {
 			console.log('No "syntax-matchers.js" found. Setting up defaults.');
-			fs.copySync(setUpSrcPath, _config.setUpDest);
+			fs.copySync(setUpSrcPath, path.resolve(this.config.jsToDocument.dest + _config.setUpDest));
 			// github won't commit empty folders so we need to make those
 			// by hand
-			fs.mkdirSync('jsdoccer/generated-files/');
-			fs.mkdirSync(_config.ast);
-			fs.mkdirSync(_config.docJson);
-			fs.mkdirSync(_config.json);
-			fs.mkdirSync('jsdoccer/generated-files/yaml/');
-			fs.mkdirSync(_config.yamlStubbed);
-			fs.mkdirSync(_config.yamlDocumented);
+			fs.mkdirSync(path.resolve(this.config.jsToDocument.dest + 'jsdoccer/generated-files/'));
+			fs.mkdirSync(path.resolve(this.config.jsToDocument.dest + _config.ast));
+			fs.mkdirSync(path.resolve(this.config.jsToDocument.dest + _config.docJson));
+			fs.mkdirSync(path.resolve(this.config.jsToDocument.dest + _config.json));
+			fs.mkdirSync(path.resolve(this.config.jsToDocument.dest + 'jsdoccer/generated-files/yaml/'));
+			fs.mkdirSync(path.resolve(this.config.jsToDocument.dest + _config.yamlStubbed));
+			fs.mkdirSync(path.resolve(this.config.jsToDocument.dest + _config.yamlDocumented));
 			syntaxMatchers = require(syntaxMatchersPath);
 		}
 		
@@ -68,31 +69,34 @@ module.exports = {
 		});
 		
 		_docJsonToDocYaml.init({
-			templates: _config.yamlTemplates
+			templates: path.resolve(this.config.jsToDocument.dest + _config.yamlTemplates),
+			dest: path.resolve(this.config.jsToDocument.dest + this.config.jsToDocument.dest)
 		});
 		
 		_prepareYaml.init({
 			filesToFilter: options.config.filesToFilter,
 			files: {
-				src: _config.yamlDocumented,
-				dest: _config.docJson
+				src: path.resolve(this.config.jsToDocument.dest + _config.yamlDocumented),
+				dest: path.resolve(this.config.jsToDocument.dest + _config.docJson)
 			}
 		});
 		
 		_generateDocs.init({
 			files: {
-				src: _config.docJson,
-				dest: _config.htmlDocumentation
+				src: path.resolve(this.config.jsToDocument.dest + _config.docJson),
+				dest: path.resolve(this.config.jsToDocument.dest + _config.htmlDocumentation)
 			},
-			handlebarsTemplate: _config.handlebarsTemplate
+			handlebarsTemplate: path.resolve(this.config.jsToDocument.dest + _config.handlebarsTemplate)
 		});
 		
 	},
 	
 	// utilities
 	saveFile: function(data, file, filepath, extention) {
-		var dest = path.join(filepath + path.basename(file, '.js') + extention);
+		var dest = path.resolve(this.config.jsToDocument.dest + filepath + path.basename(file, '.js') + extention);
+		console.log(filepath);
 		
+		console.log('-----Saving to :' + dest);
 		fs.writeFileSync(dest, data);
 	},
 	
@@ -100,6 +104,7 @@ module.exports = {
 	// control
 	generateStubbedDocYamlFile: function (file) {
 		var syntaxTree, lookup, json, docYaml;
+		console.log('howdy');
 		// gard: filter files listed in config
 		if (_.contains(this.config.filesToFilter, file)) { return; }
 		// generate AST
@@ -118,8 +123,11 @@ module.exports = {
 	
 	
 	generateStubbedDocYamlFiles: function (files) {
+		console.log('in generateStubbedDocYamlFiles.');
 		_.each(files, function(file) {
+				console.log(file);
 				this.generateStubbedDocYamlFile(file);
+				console.log('post');
 			}, this
 		);
 		return files.length;

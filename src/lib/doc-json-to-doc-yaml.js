@@ -2,7 +2,8 @@
 
 // Dependencies
 var _ 				= require('lodash'),
-	fs 				= require('fs'),	
+	fs 				= require('fs'),
+	path 			= require('path'),
 	_s 				= require('underscore.string'),
 	indentString 	= require('indent-string');
 
@@ -14,21 +15,18 @@ module.exports = {
 	},
 	
 	getTemplateName: function (type) {
-		var path = _s.dasherize(type);
+		var templatePath = _s.dasherize(type);
 		
-		path = path[0] === '-' ? path.substr(1) : path;
-		path = this.templates + '/' + path + '.tpl';
+		templatePath = templatePath[0] === '-' ? templatePath.substr(1) : templatePath;
+		templatePath = this.templates + '/' + templatePath + '.tpl';
 
-		return path;
+		return templatePath;
 	},
 	
 	getTemplate: function (type) {
-		// TODO: Make this more robust with Node Path lib
-		var filename = this.getTemplateName(type),
-			fs = require('fs'),
-			file = __dirname + 'filename';
-
-		return fs.readFileSync(filename, 'utf8');
+		var filename = this.getTemplateName(type);
+		console.log(filename);
+		return fs.readFileSync(path.resolve(filename), 'utf8');
 	},
 	
 	convert: function (json) {

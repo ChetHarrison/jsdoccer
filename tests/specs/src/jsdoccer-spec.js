@@ -1,31 +1,31 @@
 'use strict';
 
-var JsDoccer 		= require('../../../src/jsdoccer.js'),
-	fs 				= require('fs'),
-	configFilePath 		= __dirname + '/../../.jsdoccerrc-test',
+var fs 				= require('fs'),
+	path 			= require('path'),
+	jsdoccer 		= require(path.resolve(__dirname + '../../../../src/jsdoccer.js')),
+	
+	configFilePath 	= path.resolve(__dirname + '/../../.jsdoccerrc-test'),
 	testConfig 		= JSON.parse(fs.readFileSync(configFilePath, 'utf8')),
-	syntaxMatchers 	= require('../../../setup/syntax-matchers.js'),
 	// vars
 	ast;
-	
-console.log(process.cwd());
 
-
-describe('JsDoccer', function () {
-	var jsDoccer, yaml;
+describe('jsdoccer', function () {
+	var yaml,
+		testFiles = [],
+		testFile = path.resolve('tests/mock-files/js/test.js');
+	testFiles.push(testFile);
 	
 	beforeEach(function() {
-		jsDoccer = new JsDoccer({
-			config: testConfig,
-			syntaxMatchers: syntaxMatchers
+		jsdoccer.init({
+			config: testConfig
 		});
 		
-		spyOn(jsDoccer, 'generateStubbedDocYamlFile');
-	    yaml = jsDoccer.generateStubbedDocYamlFiles();
+		// spyOn(jsdoccer, 'generateStubbedDocYamlFile');
+	    yaml = jsdoccer.generateStubbedDocYamlFiles(testFiles);
 	});
 	
 	
 	it('should call generateStubbedDocYamlFile()', function () {
-		expect(jsDoccer.generateStubbedDocYamlFile).toHaveBeenCalled();
+		expect(jsdoccer.generateStubbedDocYamlFile).toHaveBeenCalled();
 	});
 });

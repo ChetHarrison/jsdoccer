@@ -1,29 +1,8 @@
 {
-	"js": {     
-		"src": "./tests/mock-files/js/"
+	"jsToDocument": {
+		"src": "./js/*.js",
+		"dest": "./tests/"
 	},
-	
-	"ast": {
-		"dest": "./tests/mock-files/ast/"
-	},
-	
-	"json": {
-		"dest": "./tests/mock-files/json/"
-	},
-	
-	"yaml": {
-		"templates": "./templates/",
-		"dest": "./tests/mock-files/yaml/"
-	},
-	
-	"jsdoc": {
-		"dest": "./tests/mock-files/jsdoc/"
-	},
-	
-	"syntaxMatchers": {
-		"src": "./syntax-matchers.js"
-	},
-	
 	"filesToFilter": [
 		".DS_Store"
 	]

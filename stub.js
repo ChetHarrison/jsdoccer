@@ -38,7 +38,6 @@ if (args.length === 0) {
 }
 
 
-jsDoccer.generateStubbedDocYamlFiles(args);
 try {
 	var filesStubbed = jsDoccer.generateStubbedDocYamlFiles(args);
 	console.log('Done: Generated ' + filesStubbed + ' YAML document stubs at'); 

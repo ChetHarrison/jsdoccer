@@ -2,11 +2,13 @@
 
 var JsDoccer 		= require('../../../src/jsdoccer.js'),
 	fs 				= require('fs'),
-	configFile 		= __dirname + '/../../.jsdoccerrc-test',
-	testConfig 		= JSON.parse(fs.readFileSync(configFile, 'utf8')),
-	syntaxMatchers 	= require('../../../syntax-matchers.js'),
+	configFilePath 		= __dirname + '/../../.jsdoccerrc-test',
+	testConfig 		= JSON.parse(fs.readFileSync(configFilePath, 'utf8')),
+	syntaxMatchers 	= require('../../../setup/syntax-matchers.js'),
 	// vars
 	ast;
+	
+console.log(process.cwd());
 
 
 describe('JsDoccer', function () {

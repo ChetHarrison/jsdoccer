@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		jshint: {
-			files: ['./src/**/*.js', './tasks/grunt-1-jsdoccer-yaml.js'],
+			files: ['./src/**/*.js', './tasks/*.js', './setup/*.js'],
 			// configure JSHint (documented at http://www.jshint.com/docs/)
 			options: {
 				jshintrc: '.jshintrc',

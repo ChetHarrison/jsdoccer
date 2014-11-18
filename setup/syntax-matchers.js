@@ -1,4 +1,5 @@
 'use strict';
+/*jshint -W030 */
 
 // Private functions
 //-----------------------------------------
@@ -236,7 +237,8 @@ matchers['functions'] = function(ast) {
 
 matchers['events'] = function(ast) {
 
-    var json = [ast].
+    var events,
+    	json = [ast].
         	filter(function(exp) {
         		return exp.type === 'ExpressionStatement' &&
         			exp.expression.type &&
@@ -269,11 +271,13 @@ matchers['events'] = function(ast) {
             });
     	
     if (json.length > 0) {
-		return json.pop();
+		events = json.pop();
+	} else {
+		events = false;	
 	}
 	
-	return false;
-}
+	return events;
+}; 
 	
 	
 module.exports = matchers;

@@ -25,7 +25,6 @@ module.exports = {
 	
 	getTemplate: function (type) {
 		var filename = this.getTemplateName(type);
-		console.log(filename);
 		return fs.readFileSync(path.resolve(filename), 'utf8');
 	},
 	

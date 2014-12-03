@@ -1,9 +1,12 @@
 {
-	"jsToDocument": {
-		"src": "./js/*.js",
-		"dest": "./"
+	"js": {
+		// glob paths to the js you want to document
+		"src": ["./src/*.js"]
 	},
-	"filesToFilter": [
-		".DS_Store"
-	]
+	"yaml": {
+		// glob paths to your documented yaml
+		"src": ["./jsdoccer/generated/yaml/documented/**/*.yaml"]
+	},
+	// all generated files will be placed under this path
+	"dest": "./jsdoccer/"
 }

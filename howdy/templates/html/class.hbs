@@ -1,0 +1,151 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/api.css">
+  </head>
+  <body>
+    <div class="docs">
+      <div class="docs__sidebar">
+        <nav>
+          <div class="global_links">
+            <h3>Marionette Classes</h3>
+            {{#with marionette}}
+              <ul>
+                {{#each classes}}
+                  <li><a href="/api/{{name}}.html">{{name}}</a></li>
+                {{/each}}
+              </ul>
+            {{/with}}
+          </div>
+
+
+          {{#with klass}}
+            <div class="class_links">
+              <h3>{{name}}</h3>
+              <h3>Functions</h3>
+              <ul>
+                {{#each functions}}
+                  <li><a href="#{{@key}}">{{@key}}</a></li>
+                {{/each}}
+              </ul>
+
+              <h3>Properties</h3>
+              <ul>
+                {{#each properties}}
+                  <li><a href="#{{@key}}">{{@key}}</a></li>
+                {{/each}}
+              </ul>
+            {{/with}}
+          </div>
+        </nav>
+      </div>
+
+      <div class="docs__content">
+        {{#with klass}}
+          <h1>{{name}}</h1>
+          <div class="class">Class: {{class}}</div>
+
+          {{#each extends}}
+            <div class="extend">Mixes In: {{.}}</div>
+          {{/each}}
+
+          {{{description}}}
+
+          {{#if examples}}
+            <h2>Examples</h2>
+            {{#each examples}}
+              <h3>Example: {{name}}</h3>
+              <div>
+                {{{example}}}
+              </div>
+            {{/each}}
+          {{/if}}
+
+          {{#if constructor}}{{#with constructor}}
+            <div class="function_block">
+              {{#with description}}
+                <div class="function_signature">
+                  <a href="#constructor"><h3>&#x25cf; constructor({{paramStr}})</h3></a>
+                </div>
+
+                {{{description.full}}}
+
+                {{#if params}}
+                  <div class="params">
+                    <h4>Params</h4>
+                    {{#each params}}
+                      <div class="param">
+                        <span class="param-name">{{name}}</span>
+                        <span class="param-types">{{#if typeStr}}({{typeStr}}){{/if}}</span>
+                        <span class="param-description">{{#if description}} &nbsp; {{description}} {{/if}}</span>
+                      </div>
+                    {{/each}}
+                  </div>
+                {{/if}}
+              {{/with}}
+            </div>
+          {{/with}}{{/if}}
+
+          {{#each functions}}
+            <div class="function_block">
+              {{#with description}}
+                <div class="function_signature">
+                  <a href="#{{@key}}"><h3>&#x25cf; {{@key}}({{paramStr}})</h3></a>
+                </div>
+                {{{description.full}}}
+
+                {{#if params}}
+                  <div class="params">
+                    <h4>Params</h4>
+                    {{#each params}}
+                      <div class="param">
+                        <span class="param-name">{{name}}</span>
+                        <span class="param-types">{{#if typeStr}}({{typeStr}}){{/if}}</span>
+                        <span class="param-description">{{#if description}} &nbsp; {{description}} {{/if}}</span>
+                      </div>
+                    {{/each}}
+                  </div>
+                {{/if}}
+              {{/with}}
+
+              {{#if examples}}
+                <h4>Examples</h4>
+                {{#each examples}}
+                  <div class="example_block">
+                    <h4><a href="#">{{name}}</a></h4>
+                    <div class="example_content">
+                      {{{example}}}
+                    </div>
+                  </div>
+                {{/each}}
+              {{/if}}
+            </div>
+          {{/each}}
+
+          {{#if properties}}
+          <h3> Properties </h3>
+          {{#each properties}}
+            <div class="property_block">
+              {{#with description}}
+                <div class="property">
+                  <a href="#{{@key}}"><h3>&#x25cf; {{@key}}</h3></a>
+                </div>
+                {{{description.full}}}
+              {{/with}}
+
+              {{#if examples}}
+                <h4>Examples</h4>
+                {{#each examples}}
+                  <div class="example_block">
+                    <h4>{{name}}</h4>
+                    {{{example}}}
+                  </div>
+                {{/each}}
+              {{/if}}
+            </div>
+          {{/each}}
+          {{/if}}
+        {{/with}}
+      </div>
+    </div>
+  </body>
+</html>

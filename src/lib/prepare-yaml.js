@@ -12,7 +12,6 @@ var dox 		= require('dox'),
 module.exports = {
 
 	init: function (options) {
-		console.log(options.files.src);
 		options = options || {};
 		this.filesToFilter = options.filesToFilter;
 		this.files = options.files;

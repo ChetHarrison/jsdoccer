@@ -5,10 +5,10 @@ var jsDoccer = require('./src/jsdoccer.js'),
 	args = Array.prototype.slice.call(process.argv, 2),
 	filesDocumented = 0; // a count of the documented files
 
-jsDoccer.init({ config: configLoader('.jsdoccerrc') });
+jsDoccer.init(configLoader('.jsdoccerrc'));
 
 try {
-	filesDocumented = jsDoccer.documentGlobs(args);
+	filesDocumented = jsDoccer.doc(args);
 	console.log('Done: Generated ' + filesDocumented + ' file documents at'); 
 	console.log('"jsdoccer/documentation/".');
 } catch (err) {

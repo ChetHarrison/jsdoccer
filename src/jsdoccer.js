@@ -15,7 +15,10 @@ var fs = require('fs-extra'),
 	_prepareYaml = require('./lib/prepare-yaml.js'),
 	_generateDocs = require('./lib/generate-docs.js');
 
-
+// util
+path.stripExtention = function(file) {
+	return path.basename(file, path.extname(file));
+};
 
 // API
 //-----------------------------------------
@@ -31,24 +34,15 @@ module.exports = {
 		options = options || {};
 		config = this.config = options.config;
 		
-		this.generatedFiles = path.join(config.dest, 'generated');
+		this.generatedFiles = 'generated';
 		this.yaml = path.join(this.generatedFiles, 'yaml');
-		this.stubbedYaml = path.join(this.generatedFiles, 'yaml/stubbed');
-		this.documentedYaml = path.join(this.generatedFiles, 'yaml/documented');
+		this.stubbedYaml = path.join(this.yaml, 'stubbed');
+		this.documentedYaml = path.join(this.yaml, 'documented');
 		this.ast = path.join(this.generatedFiles, 'ast');
 		this.json = path.join(this.generatedFiles, 'json');
 		this.docJson = path.join(this.generatedFiles, 'docJson');
-		this.htmlTemplate = path.join(config.dest, 'templates/html');
-		this.documentation = path.join(config.dest, 'docs');
-		
-		console.log(this.generatedFiles);
-		console.log(this.stubbedYaml);
-		console.log(this.documentedYaml);
-		console.log(this.ast);
-		console.log(this.json);
-		console.log(this.docJson);
-		console.log(this.htmlTemplate);
-		console.log(this.documentation);
+		this.htmlTemplate = path.join(config.dest, 'templates/html/class.hbs');
+		this.documentation = path.join('docs');
 		
 		
 		// check to see if we are set up
@@ -94,8 +88,8 @@ module.exports = {
 
 	// utilities
 	saveFile: function (data, file, filepath, extention) {
-		var dest = path.join(this.config.dest, filepath, path.basename(file, '.js') + extention);
-		console.log('-----Saving to :' + dest);
+		// fyi path.stripExtention is defined at the top of this file under util
+		var dest = path.resolve(path.join(this.config.dest, filepath, path.stripExtention(file) + extention));
 		fs.writeFileSync(dest, data);
 	},
 
@@ -128,8 +122,9 @@ module.exports = {
 
 
 	yamlFile: function (file) {
-		var yaml = _prepareYaml.prepare(file);
-		this.saveFile(yaml, file, this.config.yamlDocumented, '.yaml');
+		var json = _prepareYaml.compileJsDoc(file);
+		this.saveFile(JSON.stringify(json, null, 2), file, this.docJson, '.json');
+		return json;
 	},
 
 
@@ -142,13 +137,15 @@ module.exports = {
 
 
 	documentFile: function (file) {
-		var html = _generateDocs.generate(file);
-		this.saveFile(html, file, this.config.htmlDocumentation, '.html');
+		var json = this.yamlFile(file),
+			html = _generateDocs.generate(json);
+		this.saveFile(html, file, this.documentation, '.html');
 	},
 
 
 	documentFiles: function (files) {
 		_.each(files, function (file) {
+			console.log(file + '--------');
 			this.documentFile(file);
 		}, this);
 		return files.length;
@@ -167,12 +164,9 @@ module.exports = {
 	documentGlobs: function (fileGlobs) {
 		var files;
 		// if no globs passed use config glob
-		if (fileGlobs.length === 0) { 
-			fileGlobs = path.resolve(this.config.yaml.src); 
-		}
+		if (fileGlobs.length === 0) { fileGlobs = this.config.yaml.src; }
 		files = _fileGlobber(fileGlobs);
-		this.yamlFiles(files);
-		return this.docFiles(path.resolve(this.config.yamlDocumented + '*.yaml'));
+		return this.documentFiles(files);
 	},
 
 

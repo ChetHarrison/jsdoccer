@@ -33,8 +33,8 @@ module.exports = {
 	},
 	
 	
-	prepare: function () {
-		var files = fs.readdirSync(this.files.src),
+	prepare: function (file) {
+		var files = fs.readdirSync(file),
 			self = this;
 			
 			
@@ -65,7 +65,7 @@ module.exports = {
 		json.constructor = json.constructor || '';
 		json.constructor = this.parseBody(json.constructor, 'constructor');
 		
-		this.writeJSON(destPath, json);
+		return json;
 	},
 
 
@@ -185,13 +185,6 @@ module.exports = {
 
 
 		return doc;
-	},
-
-
-	// write parsed api to file
-	writeJSON: function (dest, json) {
-		var prettyJSON = JSON.stringify(json, undefined, 2);
-		fs.writeFileSync(dest, prettyJSON, {encoding: 'utf8'});
 	},
 
 

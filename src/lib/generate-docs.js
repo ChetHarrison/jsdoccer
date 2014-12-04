@@ -26,6 +26,7 @@ module.exports = {
 		var json = JSON.parse(fs.readdirSync(file));
 
 		var apiJson = {};
+		
 		apiJson.classes = [];
 		apiJson.functions = {};
 		apiJson.properties = {};
@@ -47,9 +48,9 @@ module.exports = {
 		return apiJson;
 	},
 	
-	buildDocHtml: function (file) {
-		var json = JSON.parse(fs.readFileSync(file)),
-			classTpl = Handlebars.compile(fs.readFileSync(this.htmlTemplate).toString()),
+	buildDocHtml: function (json) {
+		// var json = JSON.parse(fs.readFileSync(file)),
+		var	classTpl = Handlebars.compile(fs.readFileSync(this.htmlTemplate).toString()),
 			classHtml = classTpl({
 				marionette: json, // TODO: what does this do?
 				klass: json
@@ -58,8 +59,7 @@ module.exports = {
 		return classHtml;
 	},
 	
-	generate: function (file) {
-		var json = this.buildApiJson(file);
+	generate: function (json) {
 		return this.buildDocHtml(json);
 	}
 };

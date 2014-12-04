@@ -12,6 +12,7 @@ try {
 	console.log('Done: Generated ' + filesDocumented + ' file documents at'); 
 	console.log('"jsdoccer/documentation/".');
 } catch (err) {
-	console.warn('Unable to generate documentation. Did you remember to copy your YAML from the `jsdoccer/generated-files/yaml/stubbed/` folder to the ".jsdoccerrc.documentedYaml.src" folder?');
+	console.warn('Unable to generate documentation. Did you remember to copy your YAML from the "' + jsDoccer.config.dest + 'generated/yaml/stubbed/" folder to the ".jsdoccerrc.documentedYaml.src" folder?');
 	console.warn('Useage: node doc "./path/to/target/file.yaml". Or set up your "documentedYaml.src" default targets in the ".jsdoccerrc" config file to run it with out arguments.');
+	console.log(err);
 }

@@ -8,5 +8,5 @@
 		"src": ["./jsdoccer/generated/yaml/documented/**/*.yaml"]
 	},
 	// all generated files will be placed under this path
-	"dest": "./howdy/"
+	"dest": "./jsdoccer/"
 }

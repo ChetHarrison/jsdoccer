@@ -42,10 +42,10 @@ module.exports = {
 	// default to the .jsdoccerrc config file.
 	configurePaths: function(options) {
 		var self = this,
-			paths = [],
+			dirsToCreate = [],
 			add = function(dir, name) {
 				self[name] = path.join(dir, name);
-				paths.push(self[name]);
+				dirsToCreate.push(self[name]);
 				// console.log(self[name]); // <-- brain damage filter.
 			};
 
@@ -66,25 +66,25 @@ module.exports = {
 		// html documentation of js lives here
 		add(this.dest, 'docs');
 				
+		// TODO: FILTER THESE GUYS FROM THE PATHS ARRAY RETURNED
 		// resource files
 		this.syntaxMatchers = path.join(this.dest, 'syntax-matchers.js');
-		this.setup =path.resolve('setup');
-		add(this.dest, 'templates');
-		add(this.templates, 'html');
-		add(this.html, 'htmlTemplates');
-		add(this.templates, 'yaml');
+		this.setup = path.resolve('setup');
+		path.join(this.dest, 'templates');
+		path.join(this.templates, 'yaml');
+		path.join(this.templates, 'html');
 		
-		return paths;
+		return dirsToCreate;
 	},
 
 	// set object state
 	// Need to be able to configure: 
 	//   * output dir path
 	init: function init(options) {
-		var syntaxMatchers, folders;
+		var syntaxMatchers, dirsToCreate;
 
 		options = options || {};
-		folders = this.configurePaths(options);
+		dirsToCreate = this.configurePaths(options);
 
 		// check to see if we are set up
 		try {
@@ -93,7 +93,7 @@ module.exports = {
 			console.log('No "syntax-matchers.js" found. Setting up defaults.');
 			fs.copySync(this.setup, this.dest);
 			// github won't commit empty folders so we need to make those
-			_.each(folders, function(folder) { fs.mkdirSync(folder); });
+			_.each(dirsToCreate, function(folder) { fs.mkdirSync(folder); });
 			syntaxMatchers = require(this.syntaxMatchers);
 		}
 

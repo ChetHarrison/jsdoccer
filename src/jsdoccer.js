@@ -6,14 +6,14 @@ var fs = require('fs-extra'),
 	path = require('path'),
 	esprima = require('esprima'),
 	_ = require('lodash'),
+	_fileGlobber = require('./util/file-globber.js'),
 	// private 
-	// delegate declarations
-	_fileGlobber = require('./lib/file-globber.js'),
-	_astGenerator = require('./lib/ast-generator.js'),
-	_astToDocJson = require('./lib/ast-to-doc-json.js'),
-	_docJsonToDocYaml = require('./lib/doc-json-to-doc-yaml.js'),
-	_prepareYaml = require('./lib/prepare-yaml.js'),
-	_generateDocs = require('./lib/generate-docs.js'),
+	// decorations
+	_jsToAst = require('./decorations/step1-js-to-ast.js'),
+	_astToJsonPre = require('./decorations/step2-ast-to-json-pre.js'),
+	_jsonPreToYamlStubbed = require('./decorations/step3-json-pre-to-yaml-stubbed.js'),
+	_yamlDocumentedToJsonApi = require('./decorations/step4-yaml-documented-to-json-api.js'),
+	_jsonApiToDocs = require('./decorations/step5-json-api-to-docs.js'),
 	globsToFiles;
 
 
@@ -23,16 +23,18 @@ var fs = require('fs-extra'),
 module.exports = {
 	
 	// util
-	stripExtention: function(file) {
+	// strips the extention
+	trimFileName: function(file) {
 		return path.basename(file, path.extname(file));
 	},
 
 
-	saveFile: function (data, file, filepath, extention) {
-		var dest = path.join(this.config.dest, filepath, this.stripExtention(file) + extention);
-		
+	saveFile: function (data, filepath, file, extention) {
+		var dest;
+		console.log(arguments);
+		dest = path.join(filepath, this.trimFileName(file) + extention);
 		dest = path.resolve(dest);
-		// format your json here
+		// 															format your json here  V
 		if (_.contains(['.json', '.ast'], extention))  { data = JSON.stringify(data, null, 2); } 
 		fs.writeFileSync(dest, data);
 	},
@@ -46,9 +48,9 @@ module.exports = {
 			add = function(dir, name) {
 				self[name] = path.join(dir, name);
 				dirsToCreate.push(self[name]);
-				// console.log(self[name]); // <-- brain damage filter.
 			};
 
+		this.config = options;
 		// all custom jsdoccer files live here
 		this.dest = path.resolve(options.dest);
 		
@@ -56,9 +58,9 @@ module.exports = {
 		// indentation shows file structure
 		add(this.dest, 'generated');
 		add(this.generated, 'json');
-		add(this.generated, 'ast');
-		add(this.generated, 'pre');
-		add(this.generated, 'api');
+		add(this.json, 'ast');
+		add(this.json, 'pre');
+		add(this.json, 'api');
 		add(this.generated, 'yaml');
 		add(this.yaml, 'stubbed');
 		add(this.yaml, 'documented');
@@ -70,9 +72,8 @@ module.exports = {
 		// resource files
 		this.syntaxMatchers = path.join(this.dest, 'syntax-matchers.js');
 		this.setup = path.resolve('setup');
-		path.join(this.dest, 'templates');
-		path.join(this.templates, 'yaml');
-		path.join(this.templates, 'html');
+		this.yamlTemplates = path.join(this.dest, 'templates/yaml');
+		this.htmlTemplates = path.join(this.dest, 'templates/html/class.hbs');
 		
 		return dirsToCreate;
 	},
@@ -97,23 +98,23 @@ module.exports = {
 			syntaxMatchers = require(this.syntaxMatchers);
 		}
 
-		_astToDocJson.init({
+		_astToJsonPre.init({
 			syntaxMatchers: syntaxMatchers
 		});
 
-		_docJsonToDocYaml.init({
+		_jsonPreToYamlStubbed.init({
 			templates: this.yamlTemplates,
-			dest: this.stubbedYaml
+			dest: this.stubbed
 		});
 
-		_prepareYaml.init({
+		_yamlDocumentedToJsonApi.init({
 			files: {
-				dest: this.docJson			
+				dest: this.api			
 			}
 		});
 
-		_generateDocs.init({
-			htmlTemplate: this.htmlTemplate
+		_jsonApiToDocs.init({
+			htmlTemplate: this.htmlTemplates
 		});
 	},
 
@@ -133,17 +134,18 @@ module.exports = {
 			var syntaxTree, lookup, json, docYaml;
 
 			// generate AST
-			syntaxTree = _astGenerator.createSyntaxTree(file);
-			this.saveFile(syntaxTree, file, this.ast, '.ast');
+			syntaxTree = _jsToAst.createSyntaxTree(file);
+			this.saveFile(syntaxTree, this.ast, file, '.ast');
 
 			// filter AST and generate syntax target JSON
-			_astToDocJson.setFilename(file);
-			json = _astToDocJson.parse(syntaxTree);
-			this.saveFile(json, file, this.json, '.json');
+			_astToJsonPre.setFilename(file);
+			json = _astToJsonPre.parse(syntaxTree);
+			this.saveFile(json, this.pre, file, '.json');
 
 			// generate document YAML
-			docYaml = _docJsonToDocYaml.convert(json);
-			this.saveFile(docYaml, file, this.stubbedYaml, '.yaml');
+			docYaml = _jsonPreToYamlStubbed.convert(json);
+			this.saveFile(docYaml, this.stubbed, file, '.yaml');
+			
 		}, this);
 		return files.length;
 	},
@@ -158,18 +160,18 @@ module.exports = {
 	doc: function (fileGlobs) {
 		var files;
 		// if no globs passed use config glob
-		files = _fileGlobber(fileGlobs, this.config.yaml.src);
+		files = _fileGlobber(fileGlobs, this.config.documentedYaml.src);
 		
 		_.each(files, function (file) {
 			var json, html; 
 			
 			// generate apiJson
-			json = _prepareYaml.compileJsDoc(file);
-			this.saveFile(json, file, this.docJson, '.json');
+			json = _yamlDocumentedToJsonApi.compileJsDoc(file);
+			this.saveFile(json, this.api, file, '.json');
 			
 			// generate documentation html
-			html = _generateDocs.generate(json);
-			this.saveFile(html, file, this.documentation, '.html');
+			html = _jsonApiToDocs.generate(json);
+			this.saveFile(html, this.docs, file, '.html');
 		}, this);
 		return files.length;
 	},

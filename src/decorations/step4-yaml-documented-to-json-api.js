@@ -13,7 +13,6 @@ module.exports = {
 
 	init: function (options) {
 		options = options || {};
-		this.filesToFilter = options.filesToFilter;
 		this.files = options.files;
 		this.markdown = new marked.Renderer();
 		this.dox = dox.setMarkedOptions({
@@ -29,24 +28,6 @@ module.exports = {
 				return highlight.highlight(lang, code).value;
 			}
 		});
-	},
-	
-	
-	prepare: function (file) {
-		var files = fs.readdirSync(file),
-			self = this;
-			
-			
-		files = files.filter(function(file) {
-			return !_.contains(self.filesToFilter, file);
-		});
-		
-		_.each(files, function (filename) {
-			filename = path.resolve(this.files.src + filename);
-			this.compileJsDoc(filename);
-		}, this);
-			
-		return files.length;
 	},
 
 

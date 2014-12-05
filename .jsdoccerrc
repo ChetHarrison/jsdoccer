@@ -7,6 +7,6 @@
 		// glob paths to your documented yaml
 		"src": ["./jsdoccer/generated/yaml/documented/**/*.yaml"]
 	},
-	// all generated files will be placed under this path
+	// all local files will be placed under this path
 	"dest": "./jsdoccer/"
 }

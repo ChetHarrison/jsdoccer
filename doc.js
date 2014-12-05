@@ -1,7 +1,7 @@
 'use strict';
 
 var jsDoccer = require('./src/jsdoccer.js'),
-	configLoader = require('./config-loader.js'),
+	configLoader = require('./src/util/config-loader.js'),
 	args = Array.prototype.slice.call(process.argv, 2),
 	filesDocumented = 0; // a count of the documented files
 

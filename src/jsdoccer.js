@@ -31,7 +31,6 @@ module.exports = {
 
 	saveFile: function (data, filepath, file, extention) {
 		var dest;
-		console.log(arguments);
 		dest = path.join(filepath, this.trimFileName(file) + extention);
 		dest = path.resolve(dest);
 		// 															format your json here  V
@@ -108,9 +107,7 @@ module.exports = {
 		});
 
 		_yamlDocumentedToJsonApi.init({
-			files: {
-				dest: this.api			
-			}
+			dest: this.api
 		});
 
 		_jsonApiToDocs.init({

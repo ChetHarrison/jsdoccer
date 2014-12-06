@@ -13,7 +13,7 @@ module.exports = {
 
 	init: function (options) {
 		options = options || {};
-		this.files = options.files;
+		this.dest = options.dest;
 		this.markdown = new marked.Renderer();
 		this.dox = dox.setMarkedOptions({
 			renderer: this.markdown,
@@ -33,9 +33,7 @@ module.exports = {
 
 	compileJsDoc: function (file) {
 		var doc = fs.readFileSync(file, {encoding: 'utf8'}),
-			json = this.parseYaml(doc),
-			filename = path.basename(file, '.yaml'),
-			destPath = path.normalize(this.files.dest + filename + '.json');
+			json = this.parseYaml(doc);
 
 		json.functions = this.buildFunctions(json.functions);
 		json.properties = this.buildProperties(json.properties);

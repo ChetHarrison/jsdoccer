@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/api.css">
+  </head>
+  <body>
+    <div class="docs">
+      <div class="docs__sidebar">
+        <nav>
+          <div class="global_links">
+            <h3>Marionette Classes</h3>
+            {{#with marionette}}
+              <ul>
+                {{#each classes}}
+                  <li><a href="/api/{{name}}.html">{{name}}</a></li>
+                {{/each}}
+              </ul>
+            {{/with}}
+          </div>
+
+
+          {{#with klass}}
+            <div class="class_links">
+              <h3>{{name}}</h3>
+              <h3>Functions</h3>
+              <ul>
+                {{#each functions}}
+                  <li><a href="#{{@key}}">{{@key}}</a></li>
+                {{/each}}
+              </ul>
+
+              <h3>Properties</h3>
+              <ul>
+                {{#each properties}}
+                  <li><a href="#{{@key}}">{{@key}}</a></li>
+                {{/each}}
+              </ul>
+            {{/with}}
+          </div>
+        </nav>
+      </div>
+
+      <div class="docs__content">
+        {{> content}}
+      </div>
+    </div>
+  </body>
+</html>

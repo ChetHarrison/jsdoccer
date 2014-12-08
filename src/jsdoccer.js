@@ -8,12 +8,14 @@ var fs = require('fs-extra'),
 	_ = require('lodash'),
 	_fileGlobber = require('./util/file-globber.js'),
 	// private 
-	// decorations
-	_jsToAst = require('./decorations/step1-js-to-ast.js'),
-	_astToJsonPre = require('./decorations/step2-ast-to-json-pre.js'),
-	_jsonPreToYamlStubbed = require('./decorations/step3-json-pre-to-yaml-stubbed.js'),
-	_yamlDocumentedToJsonApi = require('./decorations/step4-yaml-documented-to-json-api.js'),
-	_jsonApiToDocs = require('./decorations/step5-json-api-to-docs.js'),
+	// transforms
+	_jsToAst = require('./transforms/step1-js-to-ast.js'),
+	_astToJsonPre = require('./transforms/step2-ast-to-json-pre.js'),
+	_jsonPreToYamlStubbed = require('./transforms/step3-json-pre-to-yaml-stubbed.js'),
+	_yamlDocumentedToJsonApi = require('./transforms/step4-yaml-documented-to-json-api.js'),
+	_jsonApiToDocs = require('./transforms/step5-json-api-to-docs.js'),
+	
+	registry = require('./util/registry'),
 	globsToFiles;
 
 
@@ -24,14 +26,14 @@ module.exports = {
 	
 	// util
 	// strips the extention
-	trimFileName: function(file) {
+	trimFileExtention: function(file) {
 		return path.basename(file, path.extname(file));
 	},
 
 
 	saveFile: function (data, filepath, file, extention) {
 		var dest;
-		dest = path.join(filepath, this.trimFileName(file) + extention);
+		dest = path.join(filepath, this.trimFileExtention(file) + extention);
 		dest = path.resolve(dest);
 		// 															format your json here  V
 		if (_.contains(['.json', '.ast'], extention))  { data = JSON.stringify(data, null, 2); } 
@@ -85,6 +87,7 @@ module.exports = {
 
 		options = options || {};
 		dirsToCreate = this.configurePaths(options);
+		this._docType = Object.create(registry);
 
 		// check to see if we are set up
 		try {
@@ -114,7 +117,16 @@ module.exports = {
 			htmlTemplate: this.htmlTemplates
 		});
 	},
-
+	
+	
+	addDocType: function(options) {
+		this._docType.register(options.name, {
+			syntaxMatcher: options.syntaxMatcher,
+			templateYaml: options.templateYaml,
+			templateHtml: options.templateHtml,
+			lintDoc: options.lintDoc
+		});
+	},
 
 	// Takes and optional array of file globs. If the 
 	// the array is empty it defauts to the config "js.src"

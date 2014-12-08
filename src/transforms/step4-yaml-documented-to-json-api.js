@@ -38,6 +38,7 @@ module.exports = {
 		json.functions = this.buildFunctions(json.functions);
 		json.properties = this.buildProperties(json.properties);
 		json.examples = this.buildExamples(json.examples);
+		json.events = this.buildExamples(json.events);
 
 		json.description = this.parseDescription(json.description);
 		json.constructor = json.constructor || '';
@@ -82,6 +83,17 @@ module.exports = {
 		}, this);
 
 		return examples;
+	},
+	
+	
+	buildEvents: function (events) {
+		events = events || [];
+
+		_.each(events, function (value, name) {
+			events[name] = this.parseBody(value, name);
+		}, this);
+
+		return events;
 	},
 
 

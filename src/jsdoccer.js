@@ -109,9 +109,7 @@ module.exports = {
 			dest: this.stubbed
 		});
 
-		_yamlDocumentedToJsonApi.init({
-			dest: this.api
-		});
+		_yamlDocumentedToJsonApi.init();
 
 		_jsonApiToDocs.init({
 			htmlTemplate: this.htmlTemplates

@@ -1,15 +1,30 @@
 {
+	// Note: all comments are striped before this file is parsed.
 	// if null the project name will be pulled from the root dir name
 	"projectName": null,
+	
 	"js": {
 		// glob paths to the js you want to document
-		"src": ["./src/**/*.js", "stub.js", "doc.js"]
+		"src": ["./src/jsdoccer.js"]
 	},
+	
 	"documentedYaml": {
 		// glob paths to your documented yaml
 		// "src": ["./jsdoccer/generated/yaml/documented/**/*.yaml"]
 		"src": ["./api/*.jsdoc"]
 	},
+	
 	// all local files will be placed under this path
-	"dest": "./jsdoccer/"
+	"dest": "./jsdoccer/",
+	
+	// Default syntax targets. Set the ones you want to true. Add
+	// extended targets to this list. This targets will be generated
+	// and linted.
+	"targets": {
+		"class": true,
+		"constructor": true,
+		"event": false,
+		"function": true,
+		"property": true
+	}
 }

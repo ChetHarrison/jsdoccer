@@ -13,7 +13,6 @@ module.exports = {
 
 	init: function (options) {
 		options = options || {};
-		this.dest = options.dest;
 		this.markdown = new marked.Renderer();
 		this.dox = dox.setMarkedOptions({
 			renderer: this.markdown,
@@ -28,6 +27,21 @@ module.exports = {
 				return highlight.highlight(lang, code).value;
 			}
 		});
+	},
+	
+	
+	convert: function (json) {
+		json = this.parseYaml(json);
+		json.functions = this.buildFunctions(json.functions);
+		json.properties = this.buildProperties(json.properties);
+		json.examples = this.buildExamples(json.examples);
+		json.events = this.buildExamples(json.events);
+
+		json.description = this.parseDescription(json.description);
+		json.constructor = json.constructor || '';
+		json.constructor = this.parseBody(json.constructor, 'constructor');
+		
+		return json;
 	},
 
 

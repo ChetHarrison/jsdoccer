@@ -11,7 +11,8 @@ module.exports = {
 	
 	init: function(options) {
 		options = options || {};
-		this.templates = options.templates;
+		this.templates = options.templates; // <-- old school
+		this.templaters = options.templaters || []; // <-- new school
 	},
 	
 	getTemplateName: function (type) {
@@ -50,6 +51,39 @@ module.exports = {
 				yaml += (type === 'filename' ? 'name' : type) + ': ';
 				_.each(syntaxJsons, function (syntaxJson) {
 					yaml += _.template(template, syntaxJson);
+					yaml += '\n';
+				});
+			}
+
+		});
+		
+		return yaml;
+	},
+		
+	converter: function (json) {
+		var yaml = '',
+			syntaxTypes = _.keys(json),
+			self = this;
+
+		console.log(this.templaters);
+		console.log(syntaxTypes);
+		_.each(syntaxTypes, function (type) {
+			var templater = self.templaters[type],
+				syntaxJsons = json[type];
+
+			if (json[type][0].isCollection) {
+				// add type category
+				yaml += type + ':\n';
+				_.each(syntaxJsons, function (syntaxJson) {
+					yaml += indentString(templater(syntaxJson));
+					yaml += '\n';
+				});
+			} else {
+				// hack to rename filename to name because ast collision
+				// TODO: find better solution
+				yaml += (type === 'filename' ? 'name' : type) + ': ';
+				_.each(syntaxJsons, function (syntaxJson) {
+					yaml += templater(syntaxJson);
 					yaml += '\n';
 				});
 			}

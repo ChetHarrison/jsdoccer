@@ -5,7 +5,19 @@ var fs = require('fs'),
 	handlebars = require('handlebars');
 
 module.exports = function(model) {
-	var templatePath = path.resolve('./templates/html.hbs'), 
-		template = handlebars.compile(fs.readFileSync(templatePath, 'utf8'));
+	var classTemplatePath = path.resolve('./templates/html.hbs'),
+		partial, template;
+		
+		// TODO: add partials
+	
+		handlebars.registerPartial({
+		  'constructor': partial,
+		  'event': partial,
+		  'properties': partial,
+		  'function': partial
+		}); 
+		
+	template = handlebars.compile(fs.readFileSync(classTemplatePath, 'utf8'));
+	
 	return template(model);
 };

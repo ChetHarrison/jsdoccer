@@ -32,6 +32,7 @@ module.exports = {
 
 		_.each(syntaxTargets, function (syntaxTarget) {
 			syntaxJson = self.syntaxMatchers[syntaxTarget](branch);
+			
 			if (syntaxJson) {
 				results = {
 					type: syntaxTarget,
@@ -50,10 +51,10 @@ module.exports = {
 			self 			= this,
 			syntaxObject 	= this.syntaxToDocument(branch);
 
-		// recursion emergency break!
-		this._recursionDepth++;
+		// recursion e-break
+		_recursionDepth++;
 		
-		if (this._recursionDepth > maxDepth) {
+		if (_recursionDepth > maxDepth) {
 			console.warn('ast-to-doc-json.parseBranch(): Exceeded max recursion depth.');
 			return;
 		}
@@ -68,7 +69,7 @@ module.exports = {
 			
 			results[syntaxObject.type].push(syntaxObject.ast);
 		}
-
+		
 		_.each(keys, function (key) {
 			var childBranch = branch[key];
 
@@ -86,7 +87,7 @@ module.exports = {
 			}
 		});
 
-		this._recursionDepth--;
+		_recursionDepth--;
 
 		return results;
 	},
@@ -103,10 +104,10 @@ module.exports = {
 		var results = Object.create( null ),
 			name = _s.classify(path.basename(this.filename, '.js'));
 		
-		results['filename'] = [{
-			name: name,
-			isCollection: false
-		}];
+		// results['filename'] = [{
+		// 	name: name,
+		// 	isCollection: false
+		// }];
 		
 		results['class'] = [{
 			name: name,

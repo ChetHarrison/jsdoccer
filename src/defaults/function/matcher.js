@@ -1,15 +1,15 @@
 'use strict';
 /*jshint -W030 */
 
-var _s = require('./vendor/underscore.string.min.js'),
+var _s = require('underscore.string'),
 
-	parseAstSubString = function(ast, subAstString) {
+	_parseAstSubString = function(ast, subAstString) {
 		var astString = JSON.stringify(ast, null, 2);
 
 		return astString.indexOf(subAstString) > -1;
 	},
 	
-	hasReturn = function(body) {
+	_hasReturn = function(body) {
 		var hasReturn = false;
 		
 		body.forEach(function(subAst) {
@@ -21,16 +21,16 @@ var _s = require('./vendor/underscore.string.min.js'),
 		return hasReturn;
 	},
 	
-	formatParam = function(name) {
+	_formatParam = function(name) {
 		return '@param {<type>} ' + name + ' - ' + '<description>';
 	},
 	
-	formatReturn = function() {
+	_formatReturn = function() {
 		return '@returns {<type>} - <description>';
 	};
 	
 	
-require('./vendor/rx-array.js');
+require('rx-array');
 
 module.exports = function(ast) {
 	var json = [],

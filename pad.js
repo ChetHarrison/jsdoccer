@@ -6,7 +6,8 @@ var fs = require('fs'),
 	ast = fs.readFileSync(path.resolve('./jsdoccer/generated/json/ast/jsdoccer.ast'), { encoding: 'utf8' }),
 	astToJasonPre = require('./src/transforms/step2-ast-to-json-pre.js'),
 	jsonPreToYamlStubbed = require('./src/transforms/step3-json-pre-to-yaml-stubbed.js'),
-	yamlDocumentedToJsonApi = require('./src/transforms/step4-yaml-documented-to-json-api.js');
+	yamlDocumentedToJsonApi = require('./src/transforms/step4-yaml-documented-to-json-api.js'),
+	jsonApiToDocs = require('./src/transforms/step5-json-api-to-docs.js');
 		
 	
 ast = JSON.parse(ast);
@@ -44,3 +45,14 @@ yamlDocumentedToJsonApi.init();
 var jsonApi = yamlDocumentedToJsonApi.convert(yaml);
 
 console.log(JSON.stringify(jsonApi, null, 2));
+
+jsonApiToDocs.init({
+	htmlTemplate: path.resolve('./src/defaults/docs-index.hbs'),
+	navJson: ['ClassOne', 'ClassTwo']
+});
+
+var classTemplater = require('./src/defaults/class/templateHtml.js');
+var doc = jsonApiToDocs.generate(jsonApi, classTemplater);
+
+console.log(doc);
+

@@ -2,7 +2,5 @@
 
 var path = require('path'),
 	loader = require('../../util/yaml-template-loader.js');
-	
-console.log(path.join(__dirname + '/templates/yaml.tpl'));
 
-module.exports = loader(path.join(__dirname + '/templates/yaml.tpl'));
+module.exports = loader(path.join(__dirname, '/templates/yaml.tpl'));

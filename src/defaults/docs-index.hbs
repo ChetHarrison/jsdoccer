@@ -8,7 +8,7 @@
         <nav>
           <div class="global_links">
             <h3>Marionette Classes</h3>
-            {{#with marionette}}
+            {{#with navigation}}
               <ul>
                 {{#each classes}}
                   <li><a href="/api/{{name}}.html">{{name}}</a></li>
@@ -18,7 +18,7 @@
           </div>
 
 
-          {{#with klass}}
+          {{#with model}}
             <div class="class_links">
               <h3>{{name}}</h3>
               <h3>Functions</h3>
@@ -40,7 +40,7 @@
       </div>
 
       <div class="docs__content">
-        {{> content}}
+        {{{content}}}
       </div>
     </div>
   </body>

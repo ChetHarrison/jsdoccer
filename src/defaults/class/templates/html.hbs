@@ -1,4 +1,3 @@
-        {{#with klass}}
           <h1>{{name}}</h1>
           <div class="class">Class: {{class}}</div>
 
@@ -18,9 +17,10 @@
             {{/each}}
           {{/if}}
 
-          {{> constructor}}
+          {{{constructor}}}
 
-          {{> functions}}
+          {{{functions}}}
 
-          {{> properties}}
-        {{/with}}
+          {{{properties}}}
+          
+          {{{events}}}

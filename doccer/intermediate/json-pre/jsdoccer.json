@@ -1,0 +1,51 @@
+{
+  "function": [
+    {
+      "name": "init",
+      "tags": [
+        "@api public",
+        "@param {<type>} options - <description>"
+      ]
+    },
+    {
+      "name": "_parseGlobs",
+      "tags": [
+        "@api private",
+        "@param {<type>} fileGlobs - <description>",
+        "@param {<type>} steps - <description>",
+        "@returns {<type>} - <description>"
+      ]
+    },
+    {
+      "name": "stub",
+      "tags": [
+        "@api public",
+        "@param {<type>} globs - <description>",
+        "@returns {<type>} - <description>"
+      ]
+    },
+    {
+      "name": "doc",
+      "tags": [
+        "@api public",
+        "@param {<type>} globs - <description>",
+        "@returns {<type>} - <description>"
+      ]
+    },
+    {
+      "name": "lint",
+      "tags": [
+        "@api public",
+        "@param {<type>} globs - <description>"
+      ]
+    }
+  ],
+  "property": [
+    {
+      "name": "config"
+    },
+    {
+      "name": "paths"
+    }
+  ]
+}

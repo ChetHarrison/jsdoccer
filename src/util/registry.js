@@ -6,7 +6,7 @@
 module.exports = {
 	init: function(options) {
 		options = options || [];
-		this._values = options.values;
+		this._values = options.values || [];
 		this._defaultValue = options.defaultValue || null;
 	},
 	

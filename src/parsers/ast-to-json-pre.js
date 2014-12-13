@@ -11,19 +11,16 @@ var path 			= require('path'),
 
 module.exports = {
 	
-	setFilename: function(filename) {
-		this.filename = filename;
-	},
-	
 	init: function (options) {
 		options = options || {};
-		this.syntaxMatchers = options.syntaxMatchers;
+		this.matchers = options.matchers;
 	},
-	// iterate the `syntaxMatchers` object and call each
+	
+	// iterate the `matchers` object and call each
 	// validation function with the current ast branch. Return
 	// the syntax name of the first match.
 	syntaxToDocument: function (branch) {
-		var syntaxTargets 	= _.keys(this.syntaxMatchers),
+		var syntaxTargets 	= _.keys(this.matchers),
 			results 		= false,
 			self 			= this,
 			syntaxJson;
@@ -31,7 +28,7 @@ module.exports = {
 		if (_.isNull(branch)) { return; }
 
 		_.each(syntaxTargets, function (syntaxTarget) {
-			syntaxJson = self.syntaxMatchers[syntaxTarget](branch);
+			syntaxJson = self.matchers[syntaxTarget](branch);
 			
 			if (syntaxJson) {
 				results = {
@@ -50,7 +47,7 @@ module.exports = {
 			maxDepth 		= 50,
 			self 			= this,
 			syntaxObject 	= this.syntaxToDocument(branch);
-
+		
 		// recursion e-break
 		_recursionDepth++;
 		
@@ -96,26 +93,17 @@ module.exports = {
 	// Walk the AST building a yaml string of whitelisted
 	// syntax.
 	parse: function (syntaxTree) {
-		// this will collect the relevant data.
-		// but first we want to add a special case to 
-		// document the module from the the file name.
 		// we need a totaly blank object (with no
 		// constructor, so we don't have name collision.)
-		var results = Object.create( null ),
-			name = _s.classify(path.basename(this.filename, '.js'));
+		var results = Object.create( null );
 		
-		// results['filename'] = [{
-		// 	name: name,
+		// results['class'] = [{
+		// 	name: 'name',
 		// 	isCollection: false
 		// }];
-		
-		results['class'] = [{
-			name: name,
-			isCollection: false
-		}];
 
-		this.parseBranch(syntaxTree, results);
+		this.parseBranch(JSON.parse(syntaxTree), results);
 
-		return results;
+		return JSON.stringify(results, null, 2);
 	}
 };

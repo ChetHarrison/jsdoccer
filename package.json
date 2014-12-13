@@ -35,6 +35,7 @@
     "load-grunt-tasks": "^0.6.0",
     "mkdirp": "^0.5.0",
     "morgan": "^1.1.1",
+    "prettyjson": "^1.0.0",
     "rimraf": "^2.2.8"
   },
   "dependencies": {
@@ -50,6 +51,7 @@
     "js-yaml": "^3.1.0",
     "lodash": "^2.4.1",
     "marked": "^0.3.2",
+    "rx-array": "0.0.3",
     "shelljs": "^0.3.0",
     "strip-json-comments": "^1.0.2",
     "underscore.string": "^2.3.3"

@@ -5,26 +5,35 @@
 	
 	"js": {
 		// glob paths to the js you want to document
-		"src": ["./src/jsdoccer.js"]
+		"src": ["./src/*.js"]
 	},
 	
 	"documentedYaml": {
-		// glob paths to your documented yaml
-		// "src": ["./jsdoccer/generated/yaml/documented/**/*.yaml"]
+		// Glob paths to your documented yaml.
+		// "src": ["./doccer/intermediate/yaml-documented/**/*.yaml"]
 		"src": ["./api/*.jsdoc"]
 	},
 	
-	// all local files will be placed under this path
-	"dest": "./jsdoccer/",
+	// All generated intermediate files will be placed under this path.
+	"dest": "./doccer/",
 	
-	// Default syntax targets. Set the ones you want to true. Add
-	// extended targets to this list. This targets will be generated
-	// and linted.
+	// Syntax targets
 	"targets": {
-		"class": true,
-		"constructor": true,
-		"event": false,
-		"function": true,
-		"property": true
+		"default": {
+			"class": true,
+			"constructor": true,
+			"event": false,
+			"function": true,
+			"property": true
+		},
+		"custom": {
+			// Add custom targets here. Example
+			// "myTarget": {
+			//     "linter": "path/to/linter/function",
+			//     "matcher": "path/to/matcher/function",
+			//     "templateYaml": "path/to/templateYaml/function",
+			//     "templateHtml": "path/to/templateHtml/function"
+			// }
+		}
 	}
 }

@@ -1,0 +1,94 @@
+{
+  "function": {
+    "_globToFileList": {
+      "description": "@api private\n@param {<type>} fileGlobs - <description>\n@returns {<type>} - <description>\n",
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    },
+    "init": {
+      "description": "@api public\n@param {<type>} options - <description>\n",
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    },
+    "_fileName": {
+      "description": "@api private\n@param {<type>} filePath - <description>\n@returns {<type>} - <description>\n",
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    },
+    "_parseGlobs": {
+      "description": "@api private\n@param {<type>} fileGlobs - <description>\n@param {<type>} steps - <description>\n@returns {<type>} - <description>\n",
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    },
+    "_buildJsonNav": {
+      "description": "@api private\n@param {<type>} fileGlobs - <description>\n@returns {<type>} - <description>\n",
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    },
+    "stub": {
+      "description": "@api public\n@param {<type>} globs - <description>\n@returns {<type>} - <description>\n",
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    },
+    "doc": {
+      "description": "@api public\n@param {<type>} globs - <description>\n@returns {<type>} - <description>\n",
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    },
+    "lint": {
+      "description": "@api public\n@param {<type>} globs - <description>\n",
+      "examples": [
+        {
+          "name": "<name>",
+          "example": "<example>\n"
+        }
+      ]
+    }
+  },
+  "property": {
+    "config": {
+      "examples": [],
+      "description": "<description>\n\n@type {<type>}\n"
+    },
+    "paths": {
+      "examples": [],
+      "description": "<description>\n\n@type {<type>}\n"
+    }
+  },
+  "file-name": "jsdoccer",
+  "nav": {
+    "files": [
+      {
+        "name": "jsdoccer"
+      }
+    ]
+  }
+}

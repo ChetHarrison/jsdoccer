@@ -9,12 +9,13 @@ module.exports = {
 	init: function(options) {
 		options = options || {};
 		this.yamlTemplaters = options.yamlTemplaters || {};
+		// console.log(this.yamlTemplaters['file-name']({name: 'chet'}));
 	},
 		
 	parse: function (json) {
 		var yaml = '',
 			syntaxTypes;
-			
+		
 		json = JSON.parse(json);
 		syntaxTypes = _.keys(json);
 		
@@ -22,21 +23,17 @@ module.exports = {
 			var templater = this.yamlTemplaters[type],
 				syntaxJsons = json[type];
 
-			if (json[type][0].isCollection) {
 				// add type category
+			
+			if (Array.isArray(syntaxJsons)) {
 				yaml += type + ':\n';
 				_.each(syntaxJsons, function (syntaxJson) {
-					yaml += indentString(templater(syntaxJson));
+					yaml += indentString(templater(syntaxJson), ' ', 2);
 					yaml += '\n';
 				});
 			} else {
-				// hack to rename filename to name because ast collision
-				// TODO: find better solution
-				yaml += (type === 'filename' ? 'name' : type) + ': ';
-				_.each(syntaxJsons, function (syntaxJson) {
-					yaml += templater(syntaxJson);
-					yaml += '\n';
-				});
+				yaml += type + ': ' + templater(syntaxJsons);
+				yaml += '\n';
 			}
 
 		}, this);

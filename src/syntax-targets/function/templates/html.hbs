@@ -1,4 +1,6 @@
-          {{#each functions}}
+        {{#if property}}
+          <h3> Functions </h3>
+          {{#each function}}
             <div class="function_block">
               {{#with description}}
                 <div class="function_signature">
@@ -33,3 +35,4 @@
               {{/if}}
             </div>
           {{/each}}
+        {{/if}}

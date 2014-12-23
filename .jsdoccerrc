@@ -10,8 +10,8 @@
 	
 	"documentedYaml": {
 		// Glob paths to your documented yaml.
-		// "src": ["./doccer/intermediate/yaml-documented/**/*.yaml"]
-		"src": ["./api/*.jsdoc"]
+		"src": ["./doccer/yaml-documented/**/*.yaml"]
+		// "src": ["./api/*.jsdoc"]
 	},
 	
 	// All generated intermediate files will be placed under this path.
@@ -20,6 +20,7 @@
 	// Syntax targets
 	"targets": {
 		"default": {
+			"file-name": true,
 			"class": true,
 			"constructor": true,
 			"event": false,

@@ -17,9 +17,5 @@ module.exports = function(model) {
 	model.properties = propertyTemplater(model);
 	model.functions = functionTemplater(model);
 	
-	console.log('--------------------------');
-	console.log(model);
-	console.log('--------------------------');
-	
 	return template(model);
 };

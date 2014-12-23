@@ -2,7 +2,7 @@
 
 var dox 		= require('dox'),
 	_ 			= require('lodash'),
-	yaml 		= require('js-yaml'),
+	jsYaml 		= require('js-yaml'),
 	marked 		= require('marked'),
 	highlight 	= require('highlight.js');
 
@@ -31,18 +31,17 @@ module.exports = {
 	
 	parse: function (yaml) {
 		var json = {};
-		
 		try {
-			json = yaml.safeLoad(yaml); // yaml to json
+			json = jsYaml.safeLoad(yaml); // yaml to json
 		} catch (err) {
 			console.warn(err.name + ':\n' + err.reason + '\n\n' + err.mark);
 		}
 		
 		_.each(this.targets, function(target) {
 			this.parseTarget(json[target]);
-		});
+		}, this);
 		
-		return json;
+		return JSON.stringify(json, null, 2);
 	},
 	
 	
@@ -77,7 +76,8 @@ module.exports = {
 			return result;
 		}
 
-		result.description = this.parseDox(result.description, name);
+		// TODO: FIX THIS
+		// result.description = this.parseDox(result.description, name);
 
 		_.each(result.examples, function (example) {
 			result.examples[name] = marked(example.example);
@@ -118,6 +118,6 @@ module.exports = {
 			});
 		});
 		
-		return marked(doc);
+		return marked(doc); // TODO: it is choking here
 	}
 };

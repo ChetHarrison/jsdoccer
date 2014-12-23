@@ -9,21 +9,31 @@ var bluebird = require('bluebird'),
 
 module.exports = {
 	
-	init: function (options) {
-		this.options = options || {};
+	init: function(options) {
+		options = options || {};
+		this.htmlTemplaters = options.htmlTemplaters;
 		this.docPageTplPath = options.docPageTplPath;
-		this.navJson = options.navJson;
+		this.projectName = options.projectName;
 	},
 	
 	
-	parse: function (docJson, templater) {
-		var	docPageTpl = Handlebars.compile(fs.readFileSync(this.docPageTplPath).toString());
+	parse: function (jsonApi) {
+		var	docPageTpl = Handlebars.compile(fs.readFileSync(this.docPageTplPath).toString()),
+			contentTemplater = this.htmlTemplaters['file-name'];
 		
+		jsonApi = JSON.parse(jsonApi);
+		
+		// TODO: elevate the namespacing to jsdoccer so we don't collide
+		// with a function named 'nav'.
 		return docPageTpl({
-			navigation: this.navJson,
-			model: docJson,
-			content: templater(docJson)
+			nav: jsonApi.nav,
+			model: jsonApi,
+			content: contentTemplater(jsonApi), // currently we are not passing in a templater
+			projectName: this.projectName
 		});
 	}
 
 };
+
+
+

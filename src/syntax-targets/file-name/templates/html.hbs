@@ -1,0 +1,26 @@
+          <h1>{{file-name}}</h1>
+          <div class="class">File Name: {{file-name}}</div>
+
+          {{#each extends}}
+            <div class="extend">Mixes In: {{.}}</div>
+          {{/each}}
+
+          {{{description}}}
+
+          {{#if examples}}
+            <h2>Examples</h2>
+            {{#each examples}}
+              <h3>Example: {{name}}</h3>
+              <div>
+                {{{example}}}
+              </div>
+            {{/each}}
+          {{/if}}
+
+          {{{constructor}}}
+
+          {{{function}}}
+
+          {{{property}}}
+          
+          {{{event}}}

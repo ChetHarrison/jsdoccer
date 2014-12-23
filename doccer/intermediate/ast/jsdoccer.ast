@@ -200,211 +200,6 @@
               }
             ]
           }
-        },
-        {
-          "type": "VariableDeclarator",
-          "id": {
-            "type": "Identifier",
-            "name": "_globToFileList"
-          },
-          "init": {
-            "type": "FunctionExpression",
-            "id": null,
-            "params": [
-              {
-                "type": "Identifier",
-                "name": "fileGlobs"
-              }
-            ],
-            "defaults": [],
-            "body": {
-              "type": "BlockStatement",
-              "body": [
-                {
-                  "type": "VariableDeclaration",
-                  "declarations": [
-                    {
-                      "type": "VariableDeclarator",
-                      "id": {
-                        "type": "Identifier",
-                        "name": "files"
-                      },
-                      "init": {
-                        "type": "ArrayExpression",
-                        "elements": []
-                      }
-                    }
-                  ],
-                  "kind": "var"
-                },
-                {
-                  "type": "ExpressionStatement",
-                  "expression": {
-                    "type": "CallExpression",
-                    "callee": {
-                      "type": "MemberExpression",
-                      "computed": false,
-                      "object": {
-                        "type": "Identifier",
-                        "name": "console"
-                      },
-                      "property": {
-                        "type": "Identifier",
-                        "name": "log"
-                      }
-                    },
-                    "arguments": [
-                      {
-                        "type": "Identifier",
-                        "name": "fileGlobs"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "ExpressionStatement",
-                  "expression": {
-                    "type": "CallExpression",
-                    "callee": {
-                      "type": "MemberExpression",
-                      "computed": false,
-                      "object": {
-                        "type": "Identifier",
-                        "name": "fileGlobs"
-                      },
-                      "property": {
-                        "type": "Identifier",
-                        "name": "forEach"
-                      }
-                    },
-                    "arguments": [
-                      {
-                        "type": "FunctionExpression",
-                        "id": null,
-                        "params": [
-                          {
-                            "type": "Identifier",
-                            "name": "fileGlob"
-                          }
-                        ],
-                        "defaults": [],
-                        "body": {
-                          "type": "BlockStatement",
-                          "body": [
-                            {
-                              "type": "ExpressionStatement",
-                              "expression": {
-                                "type": "CallExpression",
-                                "callee": {
-                                  "type": "MemberExpression",
-                                  "computed": false,
-                                  "object": {
-                                    "type": "Identifier",
-                                    "name": "files"
-                                  },
-                                  "property": {
-                                    "type": "Identifier",
-                                    "name": "push"
-                                  }
-                                },
-                                "arguments": [
-                                  {
-                                    "type": "CallExpression",
-                                    "callee": {
-                                      "type": "MemberExpression",
-                                      "computed": false,
-                                      "object": {
-                                        "type": "Identifier",
-                                        "name": "glob"
-                                      },
-                                      "property": {
-                                        "type": "Identifier",
-                                        "name": "sync"
-                                      }
-                                    },
-                                    "arguments": [
-                                      {
-                                        "type": "Identifier",
-                                        "name": "fileGlob"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        "rest": null,
-                        "generator": false,
-                        "expression": false
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "ExpressionStatement",
-                  "expression": {
-                    "type": "AssignmentExpression",
-                    "operator": "=",
-                    "left": {
-                      "type": "Identifier",
-                      "name": "files"
-                    },
-                    "right": {
-                      "type": "CallExpression",
-                      "callee": {
-                        "type": "MemberExpression",
-                        "computed": false,
-                        "object": {
-                          "type": "Identifier",
-                          "name": "files"
-                        },
-                        "property": {
-                          "type": "Identifier",
-                          "name": "mergeAll"
-                        }
-                      },
-                      "arguments": []
-                    }
-                  }
-                },
-                {
-                  "type": "ExpressionStatement",
-                  "expression": {
-                    "type": "CallExpression",
-                    "callee": {
-                      "type": "MemberExpression",
-                      "computed": false,
-                      "object": {
-                        "type": "Identifier",
-                        "name": "console"
-                      },
-                      "property": {
-                        "type": "Identifier",
-                        "name": "log"
-                      }
-                    },
-                    "arguments": [
-                      {
-                        "type": "Identifier",
-                        "name": "files"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "ReturnStatement",
-                  "argument": {
-                    "type": "Identifier",
-                    "name": "files"
-                  }
-                }
-              ]
-            },
-            "rest": null,
-            "generator": false,
-            "expression": false
-          }
         }
       ],
       "kind": "var"
@@ -429,6 +224,164 @@
         "right": {
           "type": "ObjectExpression",
           "properties": [
+            {
+              "type": "Property",
+              "key": {
+                "type": "Identifier",
+                "name": "_globToFileList"
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "fileGlobs"
+                  }
+                ],
+                "defaults": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "VariableDeclaration",
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "id": {
+                            "type": "Identifier",
+                            "name": "files"
+                          },
+                          "init": {
+                            "type": "ArrayExpression",
+                            "elements": []
+                          }
+                        }
+                      ],
+                      "kind": "var"
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "Identifier",
+                            "name": "fileGlobs"
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "forEach"
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "FunctionExpression",
+                            "id": null,
+                            "params": [
+                              {
+                                "type": "Identifier",
+                                "name": "fileGlob"
+                              }
+                            ],
+                            "defaults": [],
+                            "body": {
+                              "type": "BlockStatement",
+                              "body": [
+                                {
+                                  "type": "ExpressionStatement",
+                                  "expression": {
+                                    "type": "CallExpression",
+                                    "callee": {
+                                      "type": "MemberExpression",
+                                      "computed": false,
+                                      "object": {
+                                        "type": "Identifier",
+                                        "name": "files"
+                                      },
+                                      "property": {
+                                        "type": "Identifier",
+                                        "name": "push"
+                                      }
+                                    },
+                                    "arguments": [
+                                      {
+                                        "type": "CallExpression",
+                                        "callee": {
+                                          "type": "MemberExpression",
+                                          "computed": false,
+                                          "object": {
+                                            "type": "Identifier",
+                                            "name": "glob"
+                                          },
+                                          "property": {
+                                            "type": "Identifier",
+                                            "name": "sync"
+                                          }
+                                        },
+                                        "arguments": [
+                                          {
+                                            "type": "Identifier",
+                                            "name": "fileGlob"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            "rest": null,
+                            "generator": false,
+                            "expression": false
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "Identifier",
+                          "name": "files"
+                        },
+                        "right": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "Identifier",
+                              "name": "files"
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "mergeAll"
+                            }
+                          },
+                          "arguments": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "Identifier",
+                        "name": "files"
+                      }
+                    }
+                  ]
+                },
+                "rest": null,
+                "generator": false,
+                "expression": false
+              },
+              "kind": "init"
+            },
             {
               "type": "Property",
               "key": {
@@ -567,6 +520,88 @@
                         "right": {
                           "type": "Identifier",
                           "name": "options"
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "ThisExpression"
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "config"
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "projectName"
+                          }
+                        },
+                        "right": {
+                          "type": "LogicalExpression",
+                          "operator": "||",
+                          "left": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "config"
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "projectName"
+                            }
+                          },
+                          "right": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "path"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "basename"
+                              }
+                            },
+                            "arguments": [
+                              {
+                                "type": "CallExpression",
+                                "callee": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "Identifier",
+                                    "name": "process"
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "cwd"
+                                  }
+                                },
+                                "arguments": []
+                              }
+                            ]
+                          }
                         }
                       }
                     },
@@ -813,15 +848,11 @@
                                 },
                                 "arguments": [
                                   {
-                                    "type": "Identifier",
-                                    "name": "dest"
-                                  },
-                                  {
                                     "type": "BinaryExpression",
                                     "operator": "+",
                                     "left": {
                                       "type": "Identifier",
-                                      "name": "intermediate"
+                                      "name": "dest"
                                     },
                                     "right": {
                                       "type": "Literal",
@@ -1528,6 +1559,135 @@
                                   "name": "htmlTemplaters"
                                 },
                                 "kind": "init"
+                              },
+                              {
+                                "type": "Property",
+                                "key": {
+                                  "type": "Identifier",
+                                  "name": "docPageTplPath"
+                                },
+                                "value": {
+                                  "type": "CallExpression",
+                                  "callee": {
+                                    "type": "MemberExpression",
+                                    "computed": false,
+                                    "object": {
+                                      "type": "Identifier",
+                                      "name": "path"
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "resolve"
+                                    }
+                                  },
+                                  "arguments": [
+                                    {
+                                      "type": "Literal",
+                                      "value": "src/syntax-targets/docs-index.hbs",
+                                      "raw": "'src/syntax-targets/docs-index.hbs'"
+                                    }
+                                  ]
+                                },
+                                "kind": "init"
+                              },
+                              {
+                                "type": "Property",
+                                "key": {
+                                  "type": "Identifier",
+                                  "name": "projectName"
+                                },
+                                "value": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "MemberExpression",
+                                    "computed": false,
+                                    "object": {
+                                      "type": "ThisExpression"
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "config"
+                                    }
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "projectName"
+                                  }
+                                },
+                                "kind": "init"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "rest": null,
+                "generator": false,
+                "expression": false
+              },
+              "kind": "init"
+            },
+            {
+              "type": "Property",
+              "key": {
+                "type": "Identifier",
+                "name": "_fileName"
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "filePath"
+                  }
+                ],
+                "defaults": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "Identifier",
+                            "name": "path"
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "basename"
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "name": "filePath"
+                          },
+                          {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "Identifier",
+                                "name": "path"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "extname"
+                              }
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "name": "filePath"
                               }
                             ]
                           }
@@ -1577,8 +1737,15 @@
                           "init": {
                             "type": "CallExpression",
                             "callee": {
-                              "type": "Identifier",
-                              "name": "_globToFileList"
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "_globToFileList"
+                              }
                             },
                             "arguments": [
                               {
@@ -1590,80 +1757,6 @@
                         }
                       ],
                       "kind": "var"
-                    },
-                    {
-                      "type": "ExpressionStatement",
-                      "expression": {
-                        "type": "CallExpression",
-                        "callee": {
-                          "type": "MemberExpression",
-                          "computed": false,
-                          "object": {
-                            "type": "Identifier",
-                            "name": "console"
-                          },
-                          "property": {
-                            "type": "Identifier",
-                            "name": "log"
-                          }
-                        },
-                        "arguments": [
-                          {
-                            "type": "Literal",
-                            "value": "------",
-                            "raw": "'------'"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "type": "ExpressionStatement",
-                      "expression": {
-                        "type": "CallExpression",
-                        "callee": {
-                          "type": "MemberExpression",
-                          "computed": false,
-                          "object": {
-                            "type": "Identifier",
-                            "name": "console"
-                          },
-                          "property": {
-                            "type": "Identifier",
-                            "name": "log"
-                          }
-                        },
-                        "arguments": [
-                          {
-                            "type": "Identifier",
-                            "name": "files"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "type": "ExpressionStatement",
-                      "expression": {
-                        "type": "CallExpression",
-                        "callee": {
-                          "type": "MemberExpression",
-                          "computed": false,
-                          "object": {
-                            "type": "Identifier",
-                            "name": "console"
-                          },
-                          "property": {
-                            "type": "Identifier",
-                            "name": "log"
-                          }
-                        },
-                        "arguments": [
-                          {
-                            "type": "Literal",
-                            "value": "------",
-                            "raw": "'------'"
-                          }
-                        ]
-                      }
                     },
                     {
                       "type": "ExpressionStatement",
@@ -1856,39 +1949,17 @@
                                                               "type": "MemberExpression",
                                                               "computed": false,
                                                               "object": {
-                                                                "type": "Identifier",
-                                                                "name": "path"
+                                                                "type": "ThisExpression"
                                                               },
                                                               "property": {
                                                                 "type": "Identifier",
-                                                                "name": "basename"
+                                                                "name": "_fileName"
                                                               }
                                                             },
                                                             "arguments": [
                                                               {
                                                                 "type": "Identifier",
                                                                 "name": "file"
-                                                              },
-                                                              {
-                                                                "type": "CallExpression",
-                                                                "callee": {
-                                                                  "type": "MemberExpression",
-                                                                  "computed": false,
-                                                                  "object": {
-                                                                    "type": "Identifier",
-                                                                    "name": "path"
-                                                                  },
-                                                                  "property": {
-                                                                    "type": "Identifier",
-                                                                    "name": "extname"
-                                                                  }
-                                                                },
-                                                                "arguments": [
-                                                                  {
-                                                                    "type": "Identifier",
-                                                                    "name": "file"
-                                                                  }
-                                                                ]
                                                               }
                                                             ]
                                                           },
@@ -1918,28 +1989,278 @@
                                               "kind": "var"
                                             },
                                             {
-                                              "type": "ExpressionStatement",
-                                              "expression": {
-                                                "type": "CallExpression",
-                                                "callee": {
-                                                  "type": "MemberExpression",
-                                                  "computed": false,
-                                                  "object": {
-                                                    "type": "Identifier",
-                                                    "name": "console"
-                                                  },
-                                                  "property": {
-                                                    "type": "Identifier",
-                                                    "name": "log"
-                                                  }
+                                              "type": "IfStatement",
+                                              "test": {
+                                                "type": "MemberExpression",
+                                                "computed": false,
+                                                "object": {
+                                                  "type": "Identifier",
+                                                  "name": "step"
                                                 },
-                                                "arguments": [
+                                                "property": {
+                                                  "type": "Identifier",
+                                                  "name": "needsFileName"
+                                                }
+                                              },
+                                              "consequent": {
+                                                "type": "BlockStatement",
+                                                "body": [
                                                   {
-                                                    "type": "Identifier",
-                                                    "name": "output"
+                                                    "type": "ExpressionStatement",
+                                                    "expression": {
+                                                      "type": "AssignmentExpression",
+                                                      "operator": "=",
+                                                      "left": {
+                                                        "type": "Identifier",
+                                                        "name": "output"
+                                                      },
+                                                      "right": {
+                                                        "type": "CallExpression",
+                                                        "callee": {
+                                                          "type": "MemberExpression",
+                                                          "computed": false,
+                                                          "object": {
+                                                            "type": "Identifier",
+                                                            "name": "JSON"
+                                                          },
+                                                          "property": {
+                                                            "type": "Identifier",
+                                                            "name": "parse"
+                                                          }
+                                                        },
+                                                        "arguments": [
+                                                          {
+                                                            "type": "Identifier",
+                                                            "name": "output"
+                                                          }
+                                                        ]
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "ExpressionStatement",
+                                                    "expression": {
+                                                      "type": "AssignmentExpression",
+                                                      "operator": "=",
+                                                      "left": {
+                                                        "type": "MemberExpression",
+                                                        "computed": true,
+                                                        "object": {
+                                                          "type": "Identifier",
+                                                          "name": "output"
+                                                        },
+                                                        "property": {
+                                                          "type": "Literal",
+                                                          "value": "file-name",
+                                                          "raw": "'file-name'"
+                                                        }
+                                                      },
+                                                      "right": {
+                                                        "type": "ObjectExpression",
+                                                        "properties": [
+                                                          {
+                                                            "type": "Property",
+                                                            "key": {
+                                                              "type": "Identifier",
+                                                              "name": "name"
+                                                            },
+                                                            "value": {
+                                                              "type": "CallExpression",
+                                                              "callee": {
+                                                                "type": "MemberExpression",
+                                                                "computed": false,
+                                                                "object": {
+                                                                  "type": "ThisExpression"
+                                                                },
+                                                                "property": {
+                                                                  "type": "Identifier",
+                                                                  "name": "_fileName"
+                                                                }
+                                                              },
+                                                              "arguments": [
+                                                                {
+                                                                  "type": "Identifier",
+                                                                  "name": "file"
+                                                                }
+                                                              ]
+                                                            },
+                                                            "kind": "init"
+                                                          }
+                                                        ]
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "ExpressionStatement",
+                                                    "expression": {
+                                                      "type": "AssignmentExpression",
+                                                      "operator": "=",
+                                                      "left": {
+                                                        "type": "Identifier",
+                                                        "name": "output"
+                                                      },
+                                                      "right": {
+                                                        "type": "CallExpression",
+                                                        "callee": {
+                                                          "type": "MemberExpression",
+                                                          "computed": false,
+                                                          "object": {
+                                                            "type": "Identifier",
+                                                            "name": "JSON"
+                                                          },
+                                                          "property": {
+                                                            "type": "Identifier",
+                                                            "name": "stringify"
+                                                          }
+                                                        },
+                                                        "arguments": [
+                                                          {
+                                                            "type": "Identifier",
+                                                            "name": "output"
+                                                          },
+                                                          {
+                                                            "type": "Literal",
+                                                            "value": null,
+                                                            "raw": "null"
+                                                          },
+                                                          {
+                                                            "type": "Literal",
+                                                            "value": 2,
+                                                            "raw": "2"
+                                                          }
+                                                        ]
+                                                      }
+                                                    }
                                                   }
                                                 ]
-                                              }
+                                              },
+                                              "alternate": null
+                                            },
+                                            {
+                                              "type": "IfStatement",
+                                              "test": {
+                                                "type": "MemberExpression",
+                                                "computed": false,
+                                                "object": {
+                                                  "type": "Identifier",
+                                                  "name": "step"
+                                                },
+                                                "property": {
+                                                  "type": "Identifier",
+                                                  "name": "jsonNav"
+                                                }
+                                              },
+                                              "consequent": {
+                                                "type": "BlockStatement",
+                                                "body": [
+                                                  {
+                                                    "type": "ExpressionStatement",
+                                                    "expression": {
+                                                      "type": "AssignmentExpression",
+                                                      "operator": "=",
+                                                      "left": {
+                                                        "type": "Identifier",
+                                                        "name": "output"
+                                                      },
+                                                      "right": {
+                                                        "type": "CallExpression",
+                                                        "callee": {
+                                                          "type": "MemberExpression",
+                                                          "computed": false,
+                                                          "object": {
+                                                            "type": "Identifier",
+                                                            "name": "JSON"
+                                                          },
+                                                          "property": {
+                                                            "type": "Identifier",
+                                                            "name": "parse"
+                                                          }
+                                                        },
+                                                        "arguments": [
+                                                          {
+                                                            "type": "Identifier",
+                                                            "name": "output"
+                                                          }
+                                                        ]
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "ExpressionStatement",
+                                                    "expression": {
+                                                      "type": "AssignmentExpression",
+                                                      "operator": "=",
+                                                      "left": {
+                                                        "type": "MemberExpression",
+                                                        "computed": false,
+                                                        "object": {
+                                                          "type": "Identifier",
+                                                          "name": "output"
+                                                        },
+                                                        "property": {
+                                                          "type": "Identifier",
+                                                          "name": "nav"
+                                                        }
+                                                      },
+                                                      "right": {
+                                                        "type": "MemberExpression",
+                                                        "computed": false,
+                                                        "object": {
+                                                          "type": "Identifier",
+                                                          "name": "step"
+                                                        },
+                                                        "property": {
+                                                          "type": "Identifier",
+                                                          "name": "jsonNav"
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "ExpressionStatement",
+                                                    "expression": {
+                                                      "type": "AssignmentExpression",
+                                                      "operator": "=",
+                                                      "left": {
+                                                        "type": "Identifier",
+                                                        "name": "output"
+                                                      },
+                                                      "right": {
+                                                        "type": "CallExpression",
+                                                        "callee": {
+                                                          "type": "MemberExpression",
+                                                          "computed": false,
+                                                          "object": {
+                                                            "type": "Identifier",
+                                                            "name": "JSON"
+                                                          },
+                                                          "property": {
+                                                            "type": "Identifier",
+                                                            "name": "stringify"
+                                                          }
+                                                        },
+                                                        "arguments": [
+                                                          {
+                                                            "type": "Identifier",
+                                                            "name": "output"
+                                                          },
+                                                          {
+                                                            "type": "Literal",
+                                                            "value": null,
+                                                            "raw": "null"
+                                                          },
+                                                          {
+                                                            "type": "Literal",
+                                                            "value": 2,
+                                                            "raw": "2"
+                                                          }
+                                                        ]
+                                                      }
+                                                    }
+                                                  }
+                                                ]
+                                              },
+                                              "alternate": null
                                             },
                                             {
                                               "type": "ExpressionStatement",
@@ -1989,6 +2310,9 @@
                                         "rest": null,
                                         "generator": false,
                                         "expression": false
+                                      },
+                                      {
+                                        "type": "ThisExpression"
                                       }
                                     ]
                                   }
@@ -1998,6 +2322,9 @@
                             "rest": null,
                             "generator": false,
                             "expression": false
+                          },
+                          {
+                            "type": "ThisExpression"
                           }
                         ]
                       }
@@ -2015,6 +2342,204 @@
                           "type": "Identifier",
                           "name": "length"
                         }
+                      }
+                    }
+                  ]
+                },
+                "rest": null,
+                "generator": false,
+                "expression": false
+              },
+              "kind": "init"
+            },
+            {
+              "type": "Property",
+              "key": {
+                "type": "Identifier",
+                "name": "_buildJsonNav"
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "fileGlobs"
+                  }
+                ],
+                "defaults": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "VariableDeclaration",
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "id": {
+                            "type": "Identifier",
+                            "name": "files"
+                          },
+                          "init": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "_globToFileList"
+                              }
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "name": "fileGlobs"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "VariableDeclarator",
+                          "id": {
+                            "type": "Identifier",
+                            "name": "jsonNav"
+                          },
+                          "init": {
+                            "type": "ObjectExpression",
+                            "properties": [
+                              {
+                                "type": "Property",
+                                "key": {
+                                  "type": "Identifier",
+                                  "name": "files"
+                                },
+                                "value": {
+                                  "type": "ArrayExpression",
+                                  "elements": []
+                                },
+                                "kind": "init"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "kind": "var"
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "Identifier",
+                            "name": "_"
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "each"
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "name": "files"
+                          },
+                          {
+                            "type": "FunctionExpression",
+                            "id": null,
+                            "params": [
+                              {
+                                "type": "Identifier",
+                                "name": "file"
+                              }
+                            ],
+                            "defaults": [],
+                            "body": {
+                              "type": "BlockStatement",
+                              "body": [
+                                {
+                                  "type": "ExpressionStatement",
+                                  "expression": {
+                                    "type": "CallExpression",
+                                    "callee": {
+                                      "type": "MemberExpression",
+                                      "computed": false,
+                                      "object": {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                          "type": "Identifier",
+                                          "name": "jsonNav"
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "files"
+                                        }
+                                      },
+                                      "property": {
+                                        "type": "Identifier",
+                                        "name": "push"
+                                      }
+                                    },
+                                    "arguments": [
+                                      {
+                                        "type": "ObjectExpression",
+                                        "properties": [
+                                          {
+                                            "type": "Property",
+                                            "key": {
+                                              "type": "Identifier",
+                                              "name": "name"
+                                            },
+                                            "value": {
+                                              "type": "CallExpression",
+                                              "callee": {
+                                                "type": "MemberExpression",
+                                                "computed": false,
+                                                "object": {
+                                                  "type": "ThisExpression"
+                                                },
+                                                "property": {
+                                                  "type": "Identifier",
+                                                  "name": "_fileName"
+                                                }
+                                              },
+                                              "arguments": [
+                                                {
+                                                  "type": "Identifier",
+                                                  "name": "file"
+                                                }
+                                              ]
+                                            },
+                                            "kind": "init"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            "rest": null,
+                            "generator": false,
+                            "expression": false
+                          },
+                          {
+                            "type": "ThisExpression"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "Identifier",
+                        "name": "jsonNav"
                       }
                     }
                   ]
@@ -2178,6 +2703,19 @@
                                       "raw": "'json'"
                                     },
                                     "kind": "init"
+                                  },
+                                  {
+                                    "type": "Property",
+                                    "key": {
+                                      "type": "Identifier",
+                                      "name": "needsFileName"
+                                    },
+                                    "value": {
+                                      "type": "Literal",
+                                      "value": true,
+                                      "raw": "true"
+                                    },
+                                    "kind": "init"
                                   }
                                 ]
                               },
@@ -2271,6 +2809,39 @@
                   "type": "BlockStatement",
                   "body": [
                     {
+                      "type": "VariableDeclaration",
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "id": {
+                            "type": "Identifier",
+                            "name": "jsonNav"
+                          },
+                          "init": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "_buildJsonNav"
+                              }
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "name": "globs"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "kind": "var"
+                    },
+                    {
                       "type": "ReturnStatement",
                       "argument": {
                         "type": "CallExpression",
@@ -2345,6 +2916,18 @@
                                       "type": "Literal",
                                       "value": "json",
                                       "raw": "'json'"
+                                    },
+                                    "kind": "init"
+                                  },
+                                  {
+                                    "type": "Property",
+                                    "key": {
+                                      "type": "Identifier",
+                                      "name": "jsonNav"
+                                    },
+                                    "value": {
+                                      "type": "Identifier",
+                                      "name": "jsonNav"
                                     },
                                     "kind": "init"
                                   }

@@ -97,10 +97,9 @@ module.exports = {
 		// constructor, so we don't have name collision.)
 		var results = Object.create( null );
 		
-		// results['class'] = [{
-		// 	name: 'name',
-		// 	isCollection: false
-		// }];
+		// results['class'] = {
+		// 	name: 'name'
+		// };
 
 		this.parseBranch(JSON.parse(syntaxTree), results);
 

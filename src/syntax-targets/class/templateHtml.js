@@ -4,9 +4,9 @@ var fs = require('fs'),
 	path = require('path'),
 	Handlebars = require('handlebars'),
 	constructorTemplater = require('../constructor/templateHtml.js'),
-	eventTemplater = require('../event/templateHtml.js'),
-	propertyTemplater = require('../property/templateHtml.js'),
-	functionTemplater = require('../function/templateHtml.js'),
+	eventTemplater = require('../events/templateHtml.js'),
+	propertyTemplater = require('../properties/templateHtml.js'),
+	functionTemplater = require('../functions/templateHtml.js'),
 	htmlTemplateLoader = require('../../util/html-template-loader.js');
 
 module.exports = function(model) {

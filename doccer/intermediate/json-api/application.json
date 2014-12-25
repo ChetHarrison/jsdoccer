@@ -1,0 +1,844 @@
+{
+  "name": "Application",
+  "class": "Marionette.Application",
+  "description": "<p>Applications are the entry point into most Marionette Applications. \nFor all but the simplest of webapps you&#39;ll want to instantiate a new Application to act as the hub for the rest of your code.</p>\n<p>Applications let you accomplish three things. \nFirstly, they provide a place to put start up code for your app through its Initializers. \nSecondly, they allow you to group your code into logical sections with the Module system. \nLastly, they give you a way to connect Views to the document through its Regions.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> MyApp = <span class=\"hljs-keyword\">new</span> Backbone.Marionette.Application();\n</code></pre>\n",
+  "constructor": {
+    "description": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              "...*"
+            ],
+            "name": "options",
+            "description": "Options to be available on the Application instance directly.",
+            "optional": false,
+            "typeStr": "...*"
+          }
+        ],
+        "description": {
+          "full": "<p>Creates a new Application.</p>\n<p>The constructor function calls initialize if it exists, and sets the properties of the Application. \nNote that Applications are unique in that their options are automatically attached to the Application instead of a separate options object. </p>\n<p>The <code>options</code> parameter can take any key/value pair and set it on the application instance.\nTwo special properties that are used in the application are:</p>\n<ul>\n<li>regions - regions are set on the app</li>\n<li>channelName - channel name for the app</li>\n</ul>\n",
+          "summary": "<p>Creates a new Application.</p>\n",
+          "body": "<p>The constructor function calls initialize if it exists, and sets the properties of the Application. \nNote that Applications are unique in that their options are automatically attached to the Application instead of a separate options object. </p>\n<p>The <code>options</code> parameter can take any key/value pair and set it on the application instance.\nTwo special properties that are used in the application are:</p>\n<ul>\n<li>regions - regions are set on the app</li>\n<li>channelName - channel name for the app</li>\n</ul>\n"
+        },
+        "isPrivate": false,
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "...*"
+            ],
+            "name": "options",
+            "description": "Options to be available on the Application instance directly.",
+            "optional": false,
+            "typeStr": "...*"
+          }
+        ],
+        "paramStr": "options"
+      }
+    },
+    "examples": [
+      {
+        "name": "Add regions",
+        "example": "You can also specify regions per `Application` instance.\n\n```js\nnew Marionette.Application({\n  regions: {\n    fooRegion: '#foo-region'\n  }\n});\n"
+      }
+    ]
+  },
+  "properties": {
+    "vent": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "Backbone.Wreqr.EventAggregator"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<p>The eventAggregator from the global Channel to be used for Application-level events.</p>\n",
+          "summary": "<p>The eventAggregator from the global Channel to be used for Application-level events.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "commands": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "Backbone.Wreqr.Commands"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<p>The commands instance from the global Channel to be used for Application-level commands.</p>\n",
+          "summary": "<p>The commands instance from the global Channel to be used for Application-level commands.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "reqres": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "Backbone.Wreqr.RequestResponse"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<p>The RequestResponse instance from the global Channel to be used for Application-level requests.</p>\n",
+          "summary": "<p>The RequestResponse instance from the global Channel to be used for Application-level requests.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "submodules": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "type",
+            "types": [
+              "Object"
+            ]
+          }
+        ],
+        "description": {
+          "full": "<p>The container for the Application&#39;s modules. \nModules are stored with their name as the key, and the module itself as the value.</p>\n",
+          "summary": "<p>The container for the Application&#39;s modules. \nModules are stored with their name as the key, and the module itself as the value.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "regions": {
+      "description": {
+        "tags": [],
+        "description": {
+          "full": "<p>Region Options</p>\n",
+          "summary": "<p>Region Options</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      },
+      "examples": [
+        {
+          "name": "Add regions as prototype property",
+          "example": "<p>You can also specify regions as a prototype property.</p>\n<pre><code class=\"lang-js\">Marionette.Application.extend({\n  regions: {\n    fooRegion: <span class=\"hljs-string\">'#foo-region'</span>\n  }\n});\n</code></pre>\n"
+        },
+        {
+          "name": "Add regions as prototype function",
+          "example": "<p>You can also specify regions as a prototype function.</p>\n<p>The <code>options</code> parameter is same as the constructor <code>options</code> parameter.</p>\n<pre><code class=\"lang-js\">Marionette.Application.extend({\n  regions: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(options)</span> </span>{\n    <span class=\"hljs-keyword\">return</span> {\n      fooRegion: <span class=\"hljs-string\">'#foo-region'</span>\n    }\n  }\n});\n</code></pre>\n"
+        }
+      ]
+    }
+  },
+  "functions": {
+    "initialize": {
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "options",
+            "description": "The constructor's options",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "description": {
+          "full": "<p>If <code>initialize</code> is set in the Application class, it will be called when new regions are instantiated.</p>\n",
+          "summary": "<p>If <code>initialize</code> is set in the Application class, it will be called when new regions are instantiated.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "options",
+            "description": "The constructor's options",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "paramStr": "options"
+      },
+      "examples": [
+        {
+          "name": "Basic Use",
+          "example": "<p>The <code>initialize</code> function is a good place to put custom, post instantiation class logic.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> MyApp = Marionette.Application.extend({\n  initialize: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(options)</span> </span>{\n    <span class=\"hljs-built_in\">console</span>.log(options.container);\n  }\n});\n\n<span class=\"hljs-keyword\">var</span> myApp = <span class=\"hljs-keyword\">new</span> MyApp({container: <span class=\"hljs-string\">'#app'</span>});\n</code></pre>\n"
+        }
+      ]
+    },
+    "execute": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "commandName",
+            "description": "The command to be executed.",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "...*"
+            ],
+            "name": "args",
+            "description": "Additional arguments to pass to the command callback.",
+            "optional": false,
+            "typeStr": "...*"
+          },
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "<p>A convenience method to access the execute method\non the instance of Backbone.Wreqr.Commands attached to\nevery instance of Marionette.Application.</p>\n<p>This method is alternatively available as app.commands.execute,\nwhere app is the instance name of the Application.</p>\n",
+          "summary": "<p>A convenience method to access the execute method\non the instance of Backbone.Wreqr.Commands attached to\nevery instance of Marionette.Application.</p>\n",
+          "body": "<p>This method is alternatively available as app.commands.execute,\nwhere app is the instance name of the Application.</p>\n"
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "commandName",
+            "description": "The command to be executed.",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "...*"
+            ],
+            "name": "args",
+            "description": "Additional arguments to pass to the command callback.",
+            "optional": false,
+            "typeStr": "...*"
+          }
+        ],
+        "paramStr": "commandName, args"
+      }
+    },
+    "request": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "requestName",
+            "description": "The name of the request.",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "...*"
+            ],
+            "name": "args",
+            "description": "Additional arguments to pass to the response callback.",
+            "optional": false,
+            "typeStr": "...*"
+          },
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "<p>A convenience method to access the request method on the instance of \nBackbone.Wreqr.RequestResponse attached to every instance of Marionette.Application.</p>\n<p>This method is alternatively available as app.reqres.request,\nwhere app is the instance name of the Application.</p>\n",
+          "summary": "<p>A convenience method to access the request method on the instance of \nBackbone.Wreqr.RequestResponse attached to every instance of Marionette.Application.</p>\n",
+          "body": "<p>This method is alternatively available as app.reqres.request,\nwhere app is the instance name of the Application.</p>\n"
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "requestName",
+            "description": "The name of the request.",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "...*"
+            ],
+            "name": "args",
+            "description": "Additional arguments to pass to the response callback.",
+            "optional": false,
+            "typeStr": "...*"
+          }
+        ],
+        "paramStr": "requestName, args"
+      }
+    },
+    "addInitializer": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "param",
+            "types": [
+              ""
+            ],
+            "name": "initializer",
+            "description": "",
+            "optional": false,
+            "typeStr": ""
+          }
+        ],
+        "description": {
+          "full": "<p>Adds an initializer that runs once the Application has started,\nor immediately if the app has already been started.</p>\n<p>Initializer callbacks will be executed when you start your application,\nand are bound to the application object as the context for\nthe callback. In other words, <code>this</code> is the <code>MyApp</code> object inside\nof the initializer function.</p>\n<p>The callback <code>options</code> argument is passed from the <code>start</code> method (see below).</p>\n<p>Initializer callbacks are guaranteed to run, no matter when you\nadd them to the app object. If you add them before the app is\nstarted, they will run when the <code>start</code> method is called. If you\nadd them after the app is started, they will run immediately.</p>\n",
+          "summary": "<p>Adds an initializer that runs once the Application has started,\nor immediately if the app has already been started.</p>\n",
+          "body": "<p>Initializer callbacks will be executed when you start your application,\nand are bound to the application object as the context for\nthe callback. In other words, <code>this</code> is the <code>MyApp</code> object inside\nof the initializer function.</p>\n<p>The callback <code>options</code> argument is passed from the <code>start</code> method (see below).</p>\n<p>Initializer callbacks are guaranteed to run, no matter when you\nadd them to the app object. If you add them before the app is\nstarted, they will run when the <code>start</code> method is called. If you\nadd them after the app is started, they will run immediately.</p>\n"
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              ""
+            ],
+            "name": "initializer",
+            "description": "",
+            "optional": false,
+            "typeStr": ""
+          }
+        ],
+        "paramStr": "initializer"
+      },
+      "examples": [
+        {
+          "name": "Adding initializers",
+          "example": "<p>Your application needs to do useful things, like displaying content in your\nregions, starting up your routers, and more. To accomplish these tasks and\nensure that your <code>Application</code> is fully configured, you can add initializer\ncallbacks to the application.</p>\n<pre><code class=\"lang-js\">MyApp.addInitializer(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(options)</span></span>{\n  <span class=\"hljs-comment\">// do useful stuff here</span>\n  <span class=\"hljs-keyword\">var</span> myView = <span class=\"hljs-keyword\">new</span> MyView({\n    model: options.someModel\n  });\n  MyApp.getRegion(<span class=\"hljs-string\">\"main\"</span>).show(myView);\n});\n\nMyApp.addInitializer(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(options)</span></span>{\n  <span class=\"hljs-keyword\">new</span> MyAppRouter();\n  Backbone.history.start();\n});\n</code></pre>\n"
+        }
+      ]
+    },
+    "start": {
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              "...*"
+            ],
+            "name": "options",
+            "description": "Options to pass to the `start` triggerMethods and the Initializers functions.",
+            "optional": false,
+            "typeStr": "...*"
+          },
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "<p>Start the Application, triggering the Initializers array of callbacks.</p>\n",
+          "summary": "<p>Start the Application, triggering the Initializers array of callbacks.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "...*"
+            ],
+            "name": "options",
+            "description": "Options to pass to the `start` triggerMethods and the Initializers functions.",
+            "optional": false,
+            "typeStr": "...*"
+          }
+        ],
+        "paramStr": "options"
+      },
+      "examples": [
+        {
+          "name": "Starting an Application",
+          "example": "<p>Once you have your application configured, you can kick everything off by\ncalling: <code>MyApp.start(options)</code>.</p>\n<p>This function takes a single optional parameter. This parameter will be passed\nto each of your initializer functions, as well as the initialize events. This\nallows you to provide extra configuration for various parts of your app throughout the\ninitialization sequence.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> options = {\n  something: <span class=\"hljs-string\">\"some value\"</span>,\n  another: <span class=\"hljs-string\">\"#some-selector\"</span>\n};\n\nMyApp.start(options);\n</code></pre>\n"
+        }
+      ]
+    },
+    "addRegions": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object",
+              "Function"
+            ],
+            "name": "regions",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object, Function"
+          }
+        ],
+        "description": {
+          "full": "<p>You can create Regions through the <code>addRegions</code> method by passing in an object\nliteral or a function that returns an object literal.</p>\n<p>For more information on regions, see <a href=\"./marionette.region.md\">the region documentation</a> \nAlso, the API that Applications use to manage regions comes from the RegionManager Class, \nwhich is documented <a href=\"https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.regionmanager.md\">over here</a>.</p>\n",
+          "summary": "<p>You can create Regions through the <code>addRegions</code> method by passing in an object\nliteral or a function that returns an object literal.</p>\n",
+          "body": "<p>For more information on regions, see <a href=\"./marionette.region.md\">the region documentation</a> \nAlso, the API that Applications use to manage regions comes from the RegionManager Class, \nwhich is documented <a href=\"https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.regionmanager.md\">over here</a>.</p>\n"
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object",
+              "Function"
+            ],
+            "name": "regions",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object, Function"
+          }
+        ],
+        "paramStr": "regions"
+      },
+      "examples": [
+        {
+          "name": "jQuery Selector",
+          "example": "<p>The first is to specify a jQuery selector as the value of the region\ndefinition. This will create an instance of a Marionette.Region directly,\nand assign it to the selector:</p>\n<pre><code class=\"lang-js\">MyApp.addRegions({\n  someRegion: <span class=\"hljs-string\">\"#some-div\"</span>,\n  anotherRegion: <span class=\"hljs-string\">\"#another-div\"</span>\n});\n</code></pre>\n"
+        },
+        {
+          "name": "Custom Region Class",
+          "example": "<p>The second is to specify a custom region class, where the region class has\nalready specified a selector:</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> MyCustomRegion = Marionette.Region.extend({\n  el: <span class=\"hljs-string\">\"#foo\"</span>\n});\n\nMyApp.addRegions(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span> </span>{\n  <span class=\"hljs-keyword\">return</span> {\n    someRegion: MyCustomRegion\n  };\n});\n</code></pre>\n"
+        },
+        {
+          "name": "Custom Region Class And Selector",
+          "example": "<p>The third method is to specify a custom region class, and a jQuery selector\nfor this region instance, using an object literal:</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> MyCustomRegion = Marionette.Region.extend({});\n\nMyApp.addRegions({\n\n  someRegion: {\n    selector: <span class=\"hljs-string\">\"#foo\"</span>,\n    regionClass: MyCustomRegion\n  },\n\n  anotherRegion: {\n    selector: <span class=\"hljs-string\">\"#bar\"</span>,\n    regionClass: MyCustomRegion\n  }\n\n});\n</code></pre>\n"
+        }
+      ]
+    },
+    "emptyRegions": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "<p>Empties all of the Application&#39;s Regions by destroying the View within each Region.</p>\n",
+          "summary": "<p>Empties all of the Application&#39;s Regions by destroying the View within each Region.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "removeRegion": {
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "regionName",
+            "description": "The name of the Region to be removed.",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "<p>Removes the specified Region from the Application. \nRemoving a region will properly empty it before removing it from the application object.</p>\n",
+          "summary": "<p>Removes the specified Region from the Application. \nRemoving a region will properly empty it before removing it from the application object.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "regionName",
+            "description": "The name of the Region to be removed.",
+            "optional": false,
+            "typeStr": "String"
+          }
+        ],
+        "paramStr": "regionName"
+      },
+      "examples": [
+        {
+          "name": "Remove a region",
+          "example": "<p>Regions can also be removed with the <code>removeRegion</code> method, passing in\nthe name of the region to remove as a string value:</p>\n<pre><code class=\"lang-js\">MyApp.removeRegion(<span class=\"hljs-string\">\"someRegion\"</span>);\n</code></pre>\n"
+        }
+      ]
+    },
+    "getRegion": {
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "regionName",
+            "description": "The name of the Region to receive.",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "<p>Returns a Region by name.</p>\n",
+          "summary": "<p>Returns a Region by name.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "regionName",
+            "description": "The name of the Region to receive.",
+            "optional": false,
+            "typeStr": "String"
+          }
+        ],
+        "paramStr": "regionName"
+      },
+      "examples": [
+        {
+          "name": "Get Region by name",
+          "example": "<p>A region can be retrieved by name, using the <code>getRegion</code> method:</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> app = <span class=\"hljs-keyword\">new</span> Marionette.Application();\napp.addRegions({ r1: <span class=\"hljs-string\">\"#region1\"</span> });\n\n<span class=\"hljs-comment\">// r1 === r1Again; true</span>\n<span class=\"hljs-keyword\">var</span> r1 = app.getRegion(<span class=\"hljs-string\">\"r1\"</span>);\n<span class=\"hljs-keyword\">var</span> r1Again = app.r1;\n</code></pre>\n<p>This is the preferred method of accessing Regions on the Application instance.</p>\n"
+        }
+      ]
+    },
+    "getRegions": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "<p>Returns an array of every Region from the RegionManager</p>\n",
+          "summary": "<p>Returns an array of every Region from the RegionManager</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "module": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "param",
+            "types": [
+              ""
+            ],
+            "name": "moduleNames",
+            "description": "",
+            "optional": false,
+            "typeStr": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              ""
+            ],
+            "name": "moduleDefinition",
+            "description": "",
+            "optional": false,
+            "typeStr": ""
+          }
+        ],
+        "description": {
+          "full": "<p>Create a module, attached to the application</p>\n",
+          "summary": "<p>Create a module, attached to the application</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              ""
+            ],
+            "name": "moduleNames",
+            "description": "",
+            "optional": false,
+            "typeStr": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              ""
+            ],
+            "name": "moduleDefinition",
+            "description": "",
+            "optional": false,
+            "typeStr": ""
+          }
+        ],
+        "paramStr": "moduleNames, moduleDefinition"
+      }
+    },
+    "getRegionManager": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "<p>Returns a new instance of a region manager.</p>\n<p>Enables easy overriding of the default <code>RegionManager</code> for customized region interactions \nand business-specific view logic for better control over single regions.</p>\n",
+          "summary": "<p>Returns a new instance of a region manager.</p>\n",
+          "body": "<p>Enables easy overriding of the default <code>RegionManager</code> for customized region interactions \nand business-specific view logic for better control over single regions.</p>\n"
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "_initializeRegions": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              ""
+            ],
+            "name": "options",
+            "description": "",
+            "optional": false,
+            "typeStr": ""
+          },
+          {
+            "type": "api",
+            "visibility": "private"
+          }
+        ],
+        "description": {
+          "full": "<p>Internal method to initialize the regions that have been defined in a\n<code>regions</code> attribute on the application instance</p>\n",
+          "summary": "<p>Internal method to initialize the regions that have been defined in a\n<code>regions</code> attribute on the application instance</p>\n",
+          "body": ""
+        },
+        "isPrivate": true,
+        "api": {
+          "type": "api",
+          "visibility": "private"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              ""
+            ],
+            "name": "options",
+            "description": "",
+            "optional": false,
+            "typeStr": ""
+          }
+        ],
+        "paramStr": "options"
+      }
+    },
+    "_initRegionManager": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "private"
+          }
+        ],
+        "description": {
+          "full": "<p>Instantiates the RegionManager for the Application object, and forwards\nthe events from the RegionManager to the Application itself.</p>\n",
+          "summary": "<p>Instantiates the RegionManager for the Application object, and forwards\nthe events from the RegionManager to the Application itself.</p>\n",
+          "body": ""
+        },
+        "isPrivate": true,
+        "api": {
+          "type": "api",
+          "visibility": "private"
+        },
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "_initChannel": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "private"
+          }
+        ],
+        "description": {
+          "full": "<p>Internal method to setup the Wreqr.radio channel</p>\n",
+          "summary": "<p>Internal method to setup the Wreqr.radio channel</p>\n",
+          "body": ""
+        },
+        "isPrivate": true,
+        "api": {
+          "type": "api",
+          "visibility": "private"
+        },
+        "params": [],
+        "paramStr": ""
+      }
+    }
+  },
+  "nav": {
+    "files": [
+      {
+        "name": "application"
+      },
+      {
+        "name": "behavior"
+      },
+      {
+        "name": "collection-view"
+      },
+      {
+        "name": "composite-view"
+      },
+      {
+        "name": "controller"
+      },
+      {
+        "name": "helpers"
+      },
+      {
+        "name": "item-view"
+      },
+      {
+        "name": "layout-view"
+      },
+      {
+        "name": "region-manager"
+      },
+      {
+        "name": "region"
+      },
+      {
+        "name": "view"
+      }
+    ]
+  }
+}

@@ -1,0 +1,532 @@
+{
+  "name": "LayoutView",
+  "class": "Marionette.LayoutView",
+  "extends": [
+    "Marionette.ItemView"
+  ],
+  "description": "<p>A <code>LayoutView</code> is a hybrid of an <code>ItemView</code> and a collection of <code>Region</code> objects. They are ideal for rendering application layouts with multiple sub-regions managed by specified region managers.</p>\n<p>A LayoutView can also act as a composite-view to aggregate multiple views and sub-application areas of the screen allowing applications to attach multiple region managers to dynamically rendered HTML.</p>\n<p>You can create complex views by nesting LayoutView managers within <code>Regions</code>.</p>\n<p>Please see the <a href=\"item-view.jsdoc\">Marionette.ItemView documentation</a> for more information on available features and functionality.</p>\n<p>Additionally, interactions with Marionette.Region will provide features such as <code>onShow</code> callbacks, etc. Please see the <a href=\"region.jsdoc\">Region documentation</a> for more information.</p>\n",
+  "examples": [
+    {
+      "name": "Nesting LayoutViews",
+      "example": "<p>Since <code>LayoutView</code> extends directly from <code>ItemView</code>, it has all of the core functionality of an <code>ItemView</code>. This includes the methods necessary to be shown within an existing region manager. This example uses Application regions as the base of our view tree.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-comment\">// Create an Application</span>\n<span class=\"hljs-keyword\">var</span> MyApp = <span class=\"hljs-keyword\">new</span> Marionette.Application();\n\n<span class=\"hljs-comment\">// Add a region</span>\nMyApp.addRegions({\n  main: <span class=\"hljs-string\">\"main\"</span>\n});\n\n<span class=\"hljs-comment\">// Create a new LayoutView</span>\n<span class=\"hljs-keyword\">var</span> layoutView = <span class=\"hljs-keyword\">new</span> Marionette.LayoutView();\n\n<span class=\"hljs-comment\">// Lastly, show the LayoutView in the App's mainRegion</span>\nMyApp.getRegion(<span class=\"hljs-string\">'main'</span>).show(layoutView);\n</code></pre>\n<p>You can nest LayoutViews as deeply as you want. This provides for a well organized, nested view structure.</p>\n<p>For example, to nest 3 layouts:</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> layout1 = <span class=\"hljs-keyword\">new</span> Layout1();\n<span class=\"hljs-keyword\">var</span> layout2 = <span class=\"hljs-keyword\">new</span> Layout2();\n<span class=\"hljs-keyword\">var</span> layout3 = <span class=\"hljs-keyword\">new</span> Layout3();\n\nMyApp.getRegion(<span class=\"hljs-string\">'main'</span>).show(layout1);\n\nlayout1.getRegion(<span class=\"hljs-string\">'region1'</span>).show(layout2);\nlayout2.getRegion(<span class=\"hljs-string\">'region2'</span>).show(layout3);\n</code></pre>\n"
+    }
+  ],
+  "constructor": {
+    "description": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "options",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "description": {
+          "full": "<p>Creates a new LayoutView.</p>\n<p>The constructor function calls initialize if it exists, and sets up the regions that have been defined in the<code>regions</code> attribute.</p>\n",
+          "summary": "<p>Creates a new LayoutView.</p>\n",
+          "body": "<p>The constructor function calls initialize if it exists, and sets up the regions that have been defined in the<code>regions</code> attribute.</p>\n"
+        },
+        "isPrivate": false,
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "options",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "paramStr": "options"
+      }
+    },
+    "examples": [
+      {
+        "name": "Creating a new LayoutView using the `regions` hash",
+        "example": "The `LayoutView` extends directly from `ItemView` and adds the ability to specify `regions` which become `Region` instances that are attached to the LayoutView.\n\n```html\n<script id=\"layout-view-template\" type=\"text/template\">\n  <section>\n    <navigation id=\"menu\">...</navigation>\n    <article id=\"content\">...</article>\n  </section>\n</script>\n```\n\n```js\nvar MyLayoutView = Marionette.LayoutView.extend({\n  template: \"#layout-view-template\",\n  \n  ui: {\n    menu: '#menu',\n    content: '#content'\n  },\n  \n  regions: {\n    menuRegion: \"@ui.menu\",\n    contentRegion: \"@ui.content\"\n    }\n  }\n});\n\nvar layoutView = new MyLayoutView();\n```\n"
+      },
+      {
+        "name": "Creating a new LayoutView by using a function",
+        "example": "Regions can be specified on a LayoutView using a function that returns an object with the region definitions. The returned object follow the same rules for defining a region, as outlined above.\n\n```js\nvar MyLayoutView = Marionette.LayoutView.extend({\n  template: \"#layout-view-template\",\n  \n  ui: {\n    menu: '#menu'\n  },\n  \n  regions: function(options) {\n    return {\n      menuRegion: \"@ui.menu\"\n    };\n  }\n});\n```\n\nNote that the function receives the view's `options` arguments that were passed in to the view's constructor. `this.options` is not yet available when the regions are first initialized, so the options must be accessed through this parameter.\n"
+      },
+      {
+        "name": "Creating a new LayoutView by using a custom region class",
+        "example": "If you have the need to replace the `Region` with a region class of your own implementation, you can specify an alternate class to use with the `regionClass` property of the `LayoutView`.\n\nYou can also specify custom `Region` classes for each `region`:\n\n```js\nvar MyLayoutView = Marionette.LayoutView.extend({\n  template: \"#layout-view-template\",\n\n  regionClass: DefaultCustomRegion,\n\n  ui: {\n    menu: '#menu',\n    content: '#content'\n  },\n\n  regions: {\n    menu: {\n      selector: \"@ui.menu\",\n      regionClass: CustomMenuRegion\n    },\n    content: {\n      selector: \"@ui.content\",\n      regionClass: CustomContentRegion\n    }\n  }\n});\n```\n"
+      }
+    ]
+  },
+  "functions": {
+    "render": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "<p>A LayoutView can be rendered as many times as needed, but renders after the first one behave differently than the initial render.</p>\n<p>The first time a LayoutView is rendered, nothing special happens. It just delegates to the <code>ItemView</code> prototype to do the render. After the first render has happened, though, the render function is modified to account for re-rendering with regions in the LayoutView.</p>\n<p>After the first render, all subsequent renders will force every region to be emptied by calling the <code>empty</code> method on them. This will force every view in the region, and sub-views if any, to be destroyed as well. Once the regions are emptied, the regions will also be reset so that they are no longer referencing the element of the previous layoutView render.</p>\n<p>Then after the LayoutView is finished re-rendering itself, showing a view in the LayoutView&#39;s regions will cause the regions to attach themselves to the new elements in the LayoutView.</p>\n<p>There are times when re-rendering the entire LayoutView is necessary. However, due to the behavior described above, this can cause a large amount of work to be needed in order to fully restore the LayoutView and all of the views that the LayoutView is displaying.</p>\n<p>Therefore, it is suggested that you avoid re-rendering the entire LayoutView unless absolutely necessary. Instead, if you are binding the LayoutView&#39;s template to a model and need to update portions of the LayoutView, you should listen to the model&#39;s &quot;change&quot; events and only update the necessary DOM elements.</p>\n",
+          "summary": "<p>A LayoutView can be rendered as many times as needed, but renders after the first one behave differently than the initial render.</p>\n",
+          "body": "<p>The first time a LayoutView is rendered, nothing special happens. It just delegates to the <code>ItemView</code> prototype to do the render. After the first render has happened, though, the render function is modified to account for re-rendering with regions in the LayoutView.</p>\n<p>After the first render, all subsequent renders will force every region to be emptied by calling the <code>empty</code> method on them. This will force every view in the region, and sub-views if any, to be destroyed as well. Once the regions are emptied, the regions will also be reset so that they are no longer referencing the element of the previous layoutView render.</p>\n<p>Then after the LayoutView is finished re-rendering itself, showing a view in the LayoutView&#39;s regions will cause the regions to attach themselves to the new elements in the LayoutView.</p>\n<p>There are times when re-rendering the entire LayoutView is necessary. However, due to the behavior described above, this can cause a large amount of work to be needed in order to fully restore the LayoutView and all of the views that the LayoutView is displaying.</p>\n<p>Therefore, it is suggested that you avoid re-rendering the entire LayoutView unless absolutely necessary. Instead, if you are binding the LayoutView&#39;s template to a model and need to update portions of the LayoutView, you should listen to the model&#39;s &quot;change&quot; events and only update the necessary DOM elements.</p>\n"
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      },
+      "examples": [
+        {
+          "name": "Rendering a LayoutView",
+          "example": "<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> layoutView = <span class=\"hljs-keyword\">new</span> MyLayoutView();\n\n<span class=\"hljs-comment\">// ...</span>\n\nlayoutView.render();\n</code></pre>\n"
+        }
+      ]
+    },
+    "destroy": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "<p>Destroys all the regions and views, and then destroy the LayoutView itself.</p>\n<p>If you are showing a LayoutView within a parent region manager, replacing the LayoutView with another view or LayoutView will destroy the current one. All of this ensures that LayoutViews and the views that they contain are cleaned up correctly.</p>\n",
+          "summary": "<p>Destroys all the regions and views, and then destroy the LayoutView itself.</p>\n",
+          "body": "<p>If you are showing a LayoutView within a parent region manager, replacing the LayoutView with another view or LayoutView will destroy the current one. All of this ensures that LayoutViews and the views that they contain are cleaned up correctly.</p>\n"
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      },
+      "examples": [
+        {
+          "name": "Destroying a LayoutView",
+          "example": "<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> layoutView = <span class=\"hljs-keyword\">new</span> MyLayoutView();\n\n<span class=\"hljs-comment\">// ...</span>\n\nlayoutView.destroy();\n</code></pre>\n"
+        }
+      ]
+    },
+    "addRegion": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "name",
+            "description": "The name of the region being added.",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Marionette.Region",
+              "Function",
+              "String",
+              "Object"
+            ],
+            "name": "definition",
+            "description": "Accepts a Marionette.Region instance, a function that returns a Marionette.Region instance (such as a Region constructor), a selector, or an object definition for finer control.",
+            "optional": false,
+            "typeStr": "Marionette.Region, Function, String, Object"
+          }
+        ],
+        "description": {
+          "full": "<p>Adds a single region, by name, to the LayoutView.</p>\n",
+          "summary": "<p>Adds a single region, by name, to the LayoutView.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "name",
+            "description": "The name of the region being added.",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Marionette.Region",
+              "Function",
+              "String",
+              "Object"
+            ],
+            "name": "definition",
+            "description": "Accepts a Marionette.Region instance, a function that returns a Marionette.Region instance (such as a Region constructor), a selector, or an object definition for finer control.",
+            "optional": false,
+            "typeStr": "Marionette.Region, Function, String, Object"
+          }
+        ],
+        "paramStr": "name, definition"
+      },
+      "examples": [
+        {
+          "name": "Adding a region to a LayoutView",
+          "example": "<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> layoutView = <span class=\"hljs-keyword\">new</span> MyLayoutView();\n\n<span class=\"hljs-comment\">// ...</span>\n\nlayoutView.addRegion(<span class=\"hljs-string\">\"foo\"</span>, <span class=\"hljs-string\">\"#foo\"</span>);\n</code></pre>\n"
+        }
+      ]
+    },
+    "addRegions": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object",
+              "Function"
+            ],
+            "name": "regions",
+            "description": "Accepts an object literal or a function that returns an object literal. The object literal must contain region names as keys and region definitions as values.",
+            "optional": false,
+            "typeStr": "Object, Function"
+          },
+          {
+            "type": "returns",
+            "types": [
+              "Object"
+            ],
+            "description": "Object literal with all the created regions."
+          }
+        ],
+        "description": {
+          "full": "<p>Adds multiple regions to the LayoutView.</p>\n",
+          "summary": "<p>Adds multiple regions to the LayoutView.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object",
+              "Function"
+            ],
+            "name": "regions",
+            "description": "Accepts an object literal or a function that returns an object literal. The object literal must contain region names as keys and region definitions as values.",
+            "optional": false,
+            "typeStr": "Object, Function"
+          }
+        ],
+        "paramStr": "regions"
+      },
+      "examples": [
+        {
+          "name": "Adding multiple regions to a LayoutView using an object literal",
+          "example": "<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> layoutView = <span class=\"hljs-keyword\">new</span> MyLayoutView();\n\n<span class=\"hljs-comment\">// ...</span>\n\nlayoutView.addRegions({\n  foo: <span class=\"hljs-string\">\"#foo\"</span>,\n  bar: <span class=\"hljs-string\">\"#bar\"</span>\n});\n</code></pre>\n"
+        },
+        {
+          "name": "Adding multiple regions to a LayoutView using a function that returns an object literal",
+          "example": "<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> layoutView = <span class=\"hljs-keyword\">new</span> MyLayoutView();\n\n<span class=\"hljs-comment\">// ...</span>\n\nlayoutView.addRegions(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span> </span>{\n  <span class=\"hljs-keyword\">return</span> {\n    foo: <span class=\"hljs-string\">\"#foo\"</span>,\n    bar: <span class=\"hljs-string\">\"#bar\"</span>\n  };\n});\n</code></pre>\n"
+        }
+      ]
+    },
+    "removeRegion": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "name",
+            "description": "The name of the region being removed.",
+            "optional": false,
+            "typeStr": "String"
+          }
+        ],
+        "description": {
+          "full": "<p>Removes a single region, by name, from the LayoutView. Any region can be removed, whether it was defined in the <code>regions</code> attribute of the region definition, or added later.</p>\n<p>For more information on using these methods, see the <code>regionManager</code> documentation.</p>\n",
+          "summary": "<p>Removes a single region, by name, from the LayoutView. Any region can be removed, whether it was defined in the <code>regions</code> attribute of the region definition, or added later.</p>\n",
+          "body": "<p>For more information on using these methods, see the <code>regionManager</code> documentation.</p>\n"
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "name",
+            "description": "The name of the region being removed.",
+            "optional": false,
+            "typeStr": "String"
+          }
+        ],
+        "paramStr": "name"
+      },
+      "examples": [
+        {
+          "name": "Removing a region from a LayoutView",
+          "example": "<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> layoutView = <span class=\"hljs-keyword\">new</span> MyLayoutView();\n\n<span class=\"hljs-comment\">// ...</span>\n\nlayoutView.removeRegion(<span class=\"hljs-string\">\"foo\"</span>);\n</code></pre>\n"
+        }
+      ]
+    },
+    "getRegion": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "region",
+            "description": "The name of the region you're trying to get",
+            "optional": false,
+            "typeStr": "String"
+          }
+        ],
+        "description": {
+          "full": "<p>Retrieves a region from the LayoutView.</p>\n<p>Any defined regions within a LayoutView will be available to the View or any calling code immediately after instantiating the View. This allows a View to be attached to an existing DOM element in an HTML page, without the need to call a render method or anything else, to create the regions.</p>\n<p>However, a region will only be able to populate itself if the View has access to the elements specified within the region definitions. That is, if your view has not yet rendered, your regions may not be able to find the element that you&#39;ve specified for them to manage. In that scenario, using the region will result in no changes to the DOM.</p>\n",
+          "summary": "<p>Retrieves a region from the LayoutView.</p>\n",
+          "body": "<p>Any defined regions within a LayoutView will be available to the View or any calling code immediately after instantiating the View. This allows a View to be attached to an existing DOM element in an HTML page, without the need to call a render method or anything else, to create the regions.</p>\n<p>However, a region will only be able to populate itself if the View has access to the elements specified within the region definitions. That is, if your view has not yet rendered, your regions may not be able to find the element that you&#39;ve specified for them to manage. In that scenario, using the region will result in no changes to the DOM.</p>\n"
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "region",
+            "description": "The name of the region you're trying to get",
+            "optional": false,
+            "typeStr": "String"
+          }
+        ],
+        "paramStr": "region"
+      },
+      "examples": [
+        {
+          "name": "Accessing a region from a LayoutView",
+          "example": "<p>Once you&#39;ve rendered the LayoutView, you now have direct access to all of the specified regions as region managers.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> layoutView = <span class=\"hljs-keyword\">new</span> MyLayoutView();\nlayoutView.render();\n\n<span class=\"hljs-comment\">// ...</span>\n\nlayoutView.getRegion(<span class=\"hljs-string\">'menu'</span>).show(<span class=\"hljs-keyword\">new</span> MenuView());\nlayoutView.getRegion(<span class=\"hljs-string\">'content'</span>).show(<span class=\"hljs-keyword\">new</span> ContentView());\n</code></pre>\n"
+        }
+      ]
+    },
+    "getRegions": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "returns",
+            "types": [
+              "Object"
+            ],
+            "description": "Object literal with all the regions."
+          }
+        ],
+        "description": {
+          "full": "<p>Retrieves all the regions from the LayoutView.</p>\n",
+          "summary": "<p>Retrieves all the regions from the LayoutView.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      },
+      "examples": [
+        {
+          "name": "Getting all regions from a LayoutView",
+          "example": "<p>Once you&#39;ve rendered the LayoutView, you now have direct access to all of the specified regions as region managers.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> layoutView = <span class=\"hljs-keyword\">new</span> MyLayoutView();\n\n<span class=\"hljs-comment\">// ...</span>\n\n<span class=\"hljs-keyword\">var</span> regions = layoutView.getRegions();\nregions.foo; <span class=\"hljs-comment\">//=&gt; foo region</span>\nregions.bar; <span class=\"hljs-comment\">//=&gt; bar region</span>\n</code></pre>\n"
+        }
+      ]
+    },
+    "getRegionManager": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "returns",
+            "types": [
+              "Marionette.RegionManager"
+            ],
+            "description": "A new Marionette RegionManager."
+          }
+        ],
+        "description": {
+          "full": "<p>Lets you override the default <code>RegionManager</code> for times when you need the <code>RegionManager</code>&#39;s class chosen dynamically.</p>\n",
+          "summary": "<p>Lets you override the default <code>RegionManager</code> for times when you need the <code>RegionManager</code>&#39;s class chosen dynamically.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      },
+      "examples": [
+        {
+          "name": "Overriding the default RegionManager",
+          "example": "<p>This can be useful if you want to attach <code>LayoutView</code>&#39;s regions to your own instance of <code>RegionManager</code>.</p>\n<pre><code class=\"lang-js\">Marionette.LayoutView.extend({\n  <span class=\"hljs-comment\">// ...</span>\n\n  getRegionManager: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span> </span>{\n    <span class=\"hljs-comment\">// custom logic</span>\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">new</span> MyRegionManager();\n  }\n</code></pre>\n"
+        }
+      ]
+    }
+  },
+  "events": [
+    {
+      "name": "before:add:region",
+      "description": {
+        "tags": [],
+        "description": {
+          "full": "<p>Triggered before a region is added to the LayoutView.</p>\n",
+          "summary": "<p>Triggered before a region is added to the LayoutView.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      },
+      "example": "```js\nvar MyLayoutView = Marionette.LayoutView.extend({\n  // ...\n  \n  onBeforeAddRegion: function(name) {\n    // do something\n  }\n});\n```\n"
+    },
+    {
+      "name": "add:region",
+      "description": {
+        "tags": [],
+        "description": {
+          "full": "<p>Triggered when a region is added to the LayoutView. This allows you to use the region instance immediately, or attach the region to an object that needs a reference to it.</p>\n",
+          "summary": "<p>Triggered when a region is added to the LayoutView. This allows you to use the region instance immediately, or attach the region to an object that needs a reference to it.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      },
+      "example": "```js\nvar MyLayoutView = Marionette.LayoutView.extend({\n  // ...\n  \n  onAddRegion: function(name, region) {\n    // do something with the region instance\n  }\n});\n```\n"
+    },
+    {
+      "name": "before:remove:region",
+      "description": {
+        "tags": [],
+        "description": {
+          "full": "<p>Triggered before a region is removed from the LayoutView, so you can perform any cleanup opersations.</p>\n",
+          "summary": "<p>Triggered before a region is removed from the LayoutView, so you can perform any cleanup opersations.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      },
+      "example": "```js\nvar MyLayoutView = Marionette.LayoutView.extend({\n  // ...\n  \n  onBeforeRemoveRegion: function(name) {\n    // do something\n  }\n});\n```\n"
+    },
+    {
+      "name": "remove:region",
+      "description": {
+        "tags": [],
+        "description": {
+          "full": "<p>Triggered when a region is removed from the LayoutView. This allows you to use the region instance one last time, or remove the region from an object that has a reference to it.</p>\n",
+          "summary": "<p>Triggered when a region is removed from the LayoutView. This allows you to use the region instance one last time, or remove the region from an object that has a reference to it.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "params": [],
+        "paramStr": ""
+      },
+      "example": "```js\nvar MyLayoutView = Marionette.LayoutView.extend({\n  // ...\n  \n  onRemoveRegion: function(name, region) {\n    // do something with the region instance\n  }\n});\n```\n"
+    }
+  ],
+  "notes": {
+    "name": "Region Naming",
+    "note": "A LayoutViews' regions are attached directly to the LayoutView instance with the name of the region as the key and the region itself as the value. Because of this, you need to be careful to avoid conflicts with existing properties on the LayoutView when you name your Region.\n\nThe prototype chain of LayoutViews is:\n\n`Backbone.View > Marionette.View > Marionette.ItemView > Marionette.LayoutView`\n\nConsequently, every property on each of those Classes must be avoided as Region names. The most common issue people run into is trying to name their Region *\"attributes\"*. Be aware that you are **not** able to do this.\n\nThe following is an abbreviated list of other names that can't be used as Region names. For a more complete list refer to the API documentation for each Class on the prototype chain:\n  \n- attributes\n- constructor\n- regionClass\n- render\n- destroy\n- addRegion\n- git addRegions\n- removeRegion\n"
+  },
+  "nav": {
+    "files": [
+      {
+        "name": "application"
+      },
+      {
+        "name": "behavior"
+      },
+      {
+        "name": "collection-view"
+      },
+      {
+        "name": "composite-view"
+      },
+      {
+        "name": "controller"
+      },
+      {
+        "name": "helpers"
+      },
+      {
+        "name": "item-view"
+      },
+      {
+        "name": "layout-view"
+      },
+      {
+        "name": "region-manager"
+      },
+      {
+        "name": "region"
+      },
+      {
+        "name": "view"
+      }
+    ]
+  }
+}

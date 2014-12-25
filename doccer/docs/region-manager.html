@@ -1,0 +1,378 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../../styles/api.css">
+  </head>
+  <body>
+    <div class="docs">
+      <div class="docs__sidebar">
+        <nav>
+          <div class="global_links">
+            <h3>jsdoccer Files</h3>
+              <ul>
+                  <li><a href="/docs/application.html">application</a></li>
+                  <li><a href="/docs/behavior.html">behavior</a></li>
+                  <li><a href="/docs/collection-view.html">collection-view</a></li>
+                  <li><a href="/docs/composite-view.html">composite-view</a></li>
+                  <li><a href="/docs/controller.html">controller</a></li>
+                  <li><a href="/docs/helpers.html">helpers</a></li>
+                  <li><a href="/docs/item-view.html">item-view</a></li>
+                  <li><a href="/docs/layout-view.html">layout-view</a></li>
+                  <li><a href="/docs/region-manager.html">region-manager</a></li>
+                  <li><a href="/docs/region.html">region</a></li>
+                  <li><a href="/docs/view.html">view</a></li>
+              </ul>
+          </div>
+
+
+            <div class="class_links">
+              <h3></h3>
+              <h3>Functions</h3>
+              <ul>
+              </ul>
+
+              <h3>Properties</h3>
+              <ul>
+              </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="docs__content">
+                  <h1>RegionManager</h1>
+          <div class="class">File Name: RegionManager</div>
+
+            <div class="extend">Mixes In: Marionette.Controller</div>
+
+          <p>RegionManagers provide a consistent way to manage a number of Marionette.Region objects within an application. The RegionManager is intended to be used by other objects, to facilitate the addition, storage, retrieval, and removal of regions from that object.</p>
+<p>Even if you&#39;re not using this class redirectly, it is already being used by Marionette.Application and Marionette.LayoutView.</p>
+
+
+
+          [object Object]
+
+                    <h3> Functions </h3>
+            <div class="function_block">
+                <div class="function_signature">
+                  <a href="#addRegion"><h3>&#x25cf; addRegion(name, definition)</h3></a>
+                </div>
+                <p>Regions can be added individually using the <code>addRegion</code> method.</p>
+
+
+                  <div class="params">
+                    <h4>Params</h4>
+                      <div class="param">
+                        <span class="param-name">name</span>
+                        <span class="param-types">(String)</span>
+                        <span class="param-description"> &nbsp; The name of the region being added </span>
+                      </div>
+                      <div class="param">
+                        <span class="param-name">definition</span>
+                        <span class="param-types">(Marionette.Region, Function, String, Object)</span>
+                        <span class="param-description"> &nbsp; Accepts a Marionette.Region instance, a Function that returns a Marionette.Region instance (such as a Region constructor), a selector, or an object definition for finer control </span>
+                      </div>
+                  </div>
+
+                <h4>Examples</h4>
+                  <div class="example_block">
+                    <h4><a href="#">Adding a region</a></h4>
+                    <div class="example_content">
+                      <p>A region named &quot;foo&quot; will be added to the RegionManager instance. It is defined as a jQuery selector that will search for the <code>#bar</code> element in the DOM.</p>
+<p>There are a lot of other ways to define a region, including object literals with various options, and instances of Region objects. For more information on this, see the Region documentation.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> rm = <span class="hljs-keyword">new</span> Marionette.RegionManager();
+
+<span class="hljs-keyword">var</span> region = rm.addRegion(<span class="hljs-string">"foo"</span>, <span class="hljs-string">"#bar"</span>);
+</code></pre>
+
+                    </div>
+                  </div>
+            </div>
+            <div class="function_block">
+                <div class="function_signature">
+                  <a href="#addRegions"><h3>&#x25cf; addRegions(name)</h3></a>
+                </div>
+                <p>Regions can also be added en-masse through the use of the <code>addRegions</code> method. This method takes an object literal or a function that returns an object literal.</p>
+
+
+                  <div class="params">
+                    <h4>Params</h4>
+                      <div class="param">
+                        <span class="param-name">name</span>
+                        <span class="param-types">(Object)</span>
+                        <span class="param-description"> &nbsp; Accepts an object literal or a function that returns an object literal. The object literal must contain region names as keys and region definitions as values. The return value is an object literal with all the created regions. </span>
+                      </div>
+                  </div>
+
+                <h4>Examples</h4>
+                  <div class="example_block">
+                    <h4><a href="#">Adding multiple regions with a object literal or a function</a></h4>
+                    <div class="example_content">
+                      <pre><code class="lang-js"><span class="hljs-keyword">var</span> rm = <span class="hljs-keyword">new</span> Marionette.RegionManager();
+
+<span class="hljs-comment">// With an object literal</span>
+<span class="hljs-keyword">var</span> regions = rm.addRegions({
+  main: <span class="hljs-string">'#main-content'</span>,
+  navigation: {
+    selector: <span class="hljs-string">'#navigation'</span>,
+    regionClass: MyNavRegion
+  }
+});
+
+<span class="hljs-comment">// With a function</span>
+<span class="hljs-keyword">var</span> otherRegions = rm.addRegions(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(regionDefinition)</span> </span>{
+  <span class="hljs-keyword">return</span> {
+    footer: <span class="hljs-string">'#footer'</span>
+  };
+});
+
+regions.getRegion(<span class="hljs-string">"main"</span>);        <span class="hljs-comment">//=&gt; 'main' region instance</span>
+regions.getRegion(<span class="hljs-string">"navigation"</span>);  <span class="hljs-comment">//=&gt; 'navigation' region instance</span>
+otherRegions.getRegion(<span class="hljs-string">"footer"</span>); <span class="hljs-comment">//=&gt; 'footer' region instance</span>
+</code></pre>
+
+                    </div>
+                  </div>
+                  <div class="example_block">
+                    <h4><a href="#">Adding multiple regions with a function</a></h4>
+                    <div class="example_content">
+                      <p>If you supply a function to <code>addRegions</code>, it will be called with the <code>RegionManager</code> instance context and all the arguments passed to <code>addRegions</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> rm = <span class="hljs-keyword">new</span> Marionette.RegionManager();
+
+<span class="hljs-keyword">var</span> regionDefaults = {
+  regionClass: MyRegionClass
+};
+
+rm.addRegions(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(regionDefinition, defaults)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>);             <span class="hljs-comment">// `rm` instance of `RegionManager`</span>
+  <span class="hljs-built_in">console</span>.log(regionDefinition); <span class="hljs-comment">// the region definition function</span>
+  <span class="hljs-built_in">console</span>.log(defaults);         <span class="hljs-comment">// `{ regionClass: MyRegionClass }`</span>
+
+  <span class="hljs-comment">// ...return the region definition object literal</span>
+}, regionDefaults);
+</code></pre>
+
+                    </div>
+                  </div>
+                  <div class="example_block">
+                    <h4><a href="#">Adding multiple regions with defaults</a></h4>
+                    <div class="example_content">
+                      <p>When adding multiple regions it may be useful to provide a set of defaults that get applied to all of the regions being added. This can be done through the use of a <code>defaults</code> parameter. Specify this parameter as an object literal with <code>key: value</code> pairs that will be applied to every region added.</p>
+<p>In this example, all regions will be added as instances of <code>MyRegionClass</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> rm = <span class="hljs-keyword">new</span> Marionette.RegionManager();
+
+<span class="hljs-keyword">var</span> defaults = {
+  regionClass: MyRegionClass
+};
+
+<span class="hljs-keyword">var</span> regions = {
+  foo: <span class="hljs-string">"#bar"</span>,
+  baz: <span class="hljs-string">"#quux"</span>
+};
+
+rm.addRegions(regions, defaults);
+</code></pre>
+
+                    </div>
+                  </div>
+            </div>
+            <div class="function_block">
+                <div class="function_signature">
+                  <a href="#get"><h3>&#x25cf; get(name)</h3></a>
+                </div>
+                <p>A region instance can be retrieved from the RegionManager instance using the <code>get</code> method and passing in the name of the region.</p>
+
+
+                  <div class="params">
+                    <h4>Params</h4>
+                      <div class="param">
+                        <span class="param-name">name</span>
+                        <span class="param-types">(String)</span>
+                        <span class="param-description"> &nbsp; The name of the region you&#x27;re trying to get </span>
+                      </div>
+                  </div>
+
+                <h4>Examples</h4>
+                  <div class="example_block">
+                    <h4><a href="#">Adding and then accessing a region</a></h4>
+                    <div class="example_content">
+                      <pre><code class="lang-js"><span class="hljs-keyword">var</span> rm = <span class="hljs-keyword">new</span> Marionette.RegionManager();
+rm.addRegion(<span class="hljs-string">"foo"</span>, <span class="hljs-string">"#bar"</span>);
+
+<span class="hljs-keyword">var</span> region = rm.get(<span class="hljs-string">"foo"</span>);
+</code></pre>
+
+                    </div>
+                  </div>
+            </div>
+            <div class="function_block">
+                <div class="function_signature">
+                  <a href="#getRegions"><h3>&#x25cf; getRegions()</h3></a>
+                </div>
+                <p>Get all the regions from the RegionManager. Returns an object literal with named regions as attributes.</p>
+
+
+
+                <h4>Examples</h4>
+                  <div class="example_block">
+                    <h4><a href="#">Getting all the regions</a></h4>
+                    <div class="example_content">
+                      <pre><code class="lang-js"><span class="hljs-keyword">var</span> rm = <span class="hljs-keyword">new</span> Marionette.RegionManager();
+rm.addRegion(<span class="hljs-string">"foo"</span>, <span class="hljs-string">"#foo"</span>);
+rm.addRegion(<span class="hljs-string">"bar"</span>, <span class="hljs-string">"#bar"</span>);
+
+<span class="hljs-keyword">var</span> regions = rm.getRegions();
+
+regions.getRegion(<span class="hljs-string">"foo"</span>); <span class="hljs-comment">//=&gt; foo region</span>
+regions.getRegion(<span class="hljs-string">"bar"</span>); <span class="hljs-comment">//=&gt; bar region</span>
+</code></pre>
+
+                    </div>
+                  </div>
+            </div>
+            <div class="function_block">
+                <div class="function_signature">
+                  <a href="#removeRegion"><h3>&#x25cf; removeRegion(name)</h3></a>
+                </div>
+                <p>A region can be removed by calling the <code>removeRegion</code> method and passing in the name of the region. A region will have its <code>empty</code> and <code>stopListening</code> methods called before it is removed from the RegionManager instance.</p>
+
+
+                  <div class="params">
+                    <h4>Params</h4>
+                      <div class="param">
+                        <span class="param-name">name</span>
+                        <span class="param-types">(String)</span>
+                        <span class="param-description"> &nbsp; The name of the region you&#x27;re trying to remove </span>
+                      </div>
+                  </div>
+
+                <h4>Examples</h4>
+                  <div class="example_block">
+                    <h4><a href="#">Removing a region</a></h4>
+                    <div class="example_content">
+                      <pre><code class="lang-js"><span class="hljs-keyword">var</span> rm = <span class="hljs-keyword">new</span> Marionette.RegionManager();
+rm.addRegion(<span class="hljs-string">"foo"</span>, <span class="hljs-string">"#bar"</span>);
+
+rm.removeRegion(<span class="hljs-string">"foo"</span>);
+</code></pre>
+
+                    </div>
+                  </div>
+            </div>
+            <div class="function_block">
+                <div class="function_signature">
+                  <a href="#removeRegions"><h3>&#x25cf; removeRegions()</h3></a>
+                </div>
+                <p>Quickly remove all regions from the RegionManager instance.</p>
+
+
+
+                <h4>Examples</h4>
+                  <div class="example_block">
+                    <h4><a href="#">Removing all regions</a></h4>
+                    <div class="example_content">
+                      <p>This will empty all regions, and remove them.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> rm = <span class="hljs-keyword">new</span> Marionette.RegionManager();
+rm.addRegions({
+  foo: <span class="hljs-string">"#foo"</span>,
+  bar: <span class="hljs-string">"#bar"</span>,
+  baz: <span class="hljs-string">"#baz"</span>
+});
+
+rm.removeRegions();
+</code></pre>
+
+                    </div>
+                  </div>
+            </div>
+            <div class="function_block">
+                <div class="function_signature">
+                  <a href="#emptyRegions"><h3>&#x25cf; emptyRegions()</h3></a>
+                </div>
+                <p>Quickly empty all regions from the RegionManager instance while leaving them attached.</p>
+
+
+
+                <h4>Examples</h4>
+                  <div class="example_block">
+                    <h4><a href="#">Emptying all regions</a></h4>
+                    <div class="example_content">
+                      <p>This will empty all regions without removing them from the RegionManager instance.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> rm = <span class="hljs-keyword">new</span> Marionette.RegionManager();
+rm.addRegions({
+  foo: <span class="hljs-string">"#foo"</span>,
+  bar: <span class="hljs-string">"#bar"</span>,
+  baz: <span class="hljs-string">"#baz"</span>
+});
+
+rm.emptyRegions();
+</code></pre>
+
+                    </div>
+                  </div>
+            </div>
+            <div class="function_block">
+                <div class="function_signature">
+                  <a href="#destroy"><h3>&#x25cf; destroy()</h3></a>
+                </div>
+                <p>Destroy a RegionManager instance.</p>
+
+
+
+                <h4>Examples</h4>
+                  <div class="example_block">
+                    <h4><a href="#">Destroying and removing all regions from the RegionManager instance</a></h4>
+                    <div class="example_content">
+                      <pre><code class="lang-js"><span class="hljs-keyword">var</span> rm = <span class="hljs-keyword">new</span> Marionette.RegionManager();
+rm.addRegions({
+  foo: <span class="hljs-string">"#foo"</span>,
+  bar: <span class="hljs-string">"#bar"</span>,
+  baz: <span class="hljs-string">"#baz"</span>
+});
+
+rm.destroy();
+</code></pre>
+
+                    </div>
+                  </div>
+            </div>
+
+
+          
+          
+                    <h3> Events </h3>
+            <div class="property_block">
+                <div class="property">
+                  <a href="#"><h3>&#x25cf; </h3></a>
+                </div>
+                <p>Triggered before a region is added to the RegionManager.</p>
+
+
+            </div>
+            <div class="property_block">
+                <div class="property">
+                  <a href="#"><h3>&#x25cf; </h3></a>
+                </div>
+                <p>Triggered when a region is added to the RegionManager. This allows you to use the region instance immediately, or attach the region to an object that needs a reference to it.</p>
+
+
+            </div>
+            <div class="property_block">
+                <div class="property">
+                  <a href="#"><h3>&#x25cf; </h3></a>
+                </div>
+                <p>Triggered before a region is removed from the manager, so you can perform any cleanup opersations.</p>
+
+
+            </div>
+            <div class="property_block">
+                <div class="property">
+                  <a href="#"><h3>&#x25cf; </h3></a>
+                </div>
+                <p>Triggered when a region is removed from the RegionManager. This allows you to use the region instance one last time, or remove the region from an object that has a reference to it.</p>
+
+
+            </div>
+
+      </div>
+    </div>
+  </body>
+</html>

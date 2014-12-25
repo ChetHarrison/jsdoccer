@@ -19,7 +19,7 @@ module.exports = {
 	
 	parse: function (jsonApi) {
 		var	docPageTpl = Handlebars.compile(fs.readFileSync(this.docPageTplPath).toString()),
-			contentTemplater = this.htmlTemplaters['file-name'];
+			contentTemplater = this.htmlTemplaters['name'];
 		
 		jsonApi = JSON.parse(jsonApi);
 		

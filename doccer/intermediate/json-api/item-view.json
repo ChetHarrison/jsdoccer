@@ -1,0 +1,305 @@
+{
+  "name": "ItemView",
+  "class": "Marionette.ItemView",
+  "extends": [
+    "Marionette.View"
+  ],
+  "description": "<p>An <code>ItemView</code> is a view that represents a single item. That item may be a <code>Backbone.Model</code> or may be a <code>Backbone.Collection</code>. Whichever it is though, it will be treated as a single item.</p>\n<p>Please see <a href=\"marionette.view.md\">the Marionette.View documentation</a> for more information on available features and functionality.</p>\n<p>Additionally, interactions with Marionette.Region will provide features such as <code>onShow</code> callbacks, etc. Please see <a href=\"marionette.region.md\">the Region documentation</a> for more information.</p>\n",
+  "constructor": {
+    "description": {
+      "examples": [],
+      "description": {
+        "tags": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "options",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "description": {
+          "full": "<p>Creates a new ItemView.</p>\n<p>As a View, the constructor calls the initialize function if it exists.</p>\n",
+          "summary": "<p>Creates a new ItemView.</p>\n",
+          "body": "<p>As a View, the constructor calls the initialize function if it exists.</p>\n"
+        },
+        "isPrivate": false,
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "options",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "paramStr": "options"
+      }
+    },
+    "examples": [
+      {
+        "name": "Creating a new ItemView representing a single model.",
+        "example": "ItemViews can be used to represent either a `Backbone.Model` or `Backbone.Collection` by setting `model` or `collection` properties on the ItemView. The collection is only used if a model is not already set.\n\n```js\nvar MyItemView = Marionette.ItemView.extend({\n  template: '#some-item-template'\n});\n\nvar itemView = new MyItemView({\n  model: myModel\n});\n```\n"
+      }
+    ]
+  },
+  "functions": {
+    "serializeData": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "<p>Serialize the model or collection for the view. If a model is found, the view&#39;s <code>serializeModel</code> is called. If a collection is found, each model in the collection is serialized by calling the view&#39;s <code>serializeCollection</code> and putting into an <code>items</code> array in the resulting data. If both are found, the model is used.</p>\n<p>You can override the <code>serializeData</code> method in your own view definition, to provide custom serialization for your view&#39;s data. These serializations are then passed into the template function if one is set.</p>\n",
+          "summary": "<p>Serialize the model or collection for the view. If a model is found, the view&#39;s <code>serializeModel</code> is called. If a collection is found, each model in the collection is serialized by calling the view&#39;s <code>serializeCollection</code> and putting into an <code>items</code> array in the resulting data. If both are found, the model is used.</p>\n",
+          "body": "<p>You can override the <code>serializeData</code> method in your own view definition, to provide custom serialization for your view&#39;s data. These serializations are then passed into the template function if one is set.</p>\n"
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "serializeModel": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Backbone.Model"
+            ],
+            "name": "model",
+            "description": "The model set on the ItemView to be serialized.",
+            "optional": false,
+            "typeStr": "Backbone.Model"
+          },
+          {
+            "type": "returns",
+            "types": [
+              "Object"
+            ],
+            "description": "Javascript object representation of the model. \nexamples:\n  -\n    name: Defining custom model serialization.\n\n    example: |\n      ```js\n      var MyitemView = Marionette.ItemView.extend({\n        serializeModel: function(model){\n          return _.omit(model.attributes, 'secretData');\n        }\n      });\n      ```\n  -\n    name: Defining custom model serialization and"
+          }
+        ],
+        "description": {
+          "full": "<p>Serialize the view&#39;s model.</p>\n",
+          "summary": "<p>Serialize the view&#39;s model.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Backbone.Model"
+            ],
+            "name": "model",
+            "description": "The model set on the ItemView to be serialized.",
+            "optional": false,
+            "typeStr": "Backbone.Model"
+          }
+        ],
+        "paramStr": "model"
+      }
+    },
+    "serializeCollection": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Backbone.Collection"
+            ],
+            "name": "collection",
+            "description": "The collection set on the ItemView to be serialized. \nexamples:\n  -\n    name: Defining custom collection serialization.\n\n    example: |\n      ```js\n      var MyItemView = Marionette.ItemView.extend({\n        serializeCollection: function(collection){\n          return collection.map(function(model){ return _.omit(model.attributes, 'secretData'); });\n        }\n      });\n      ```",
+            "optional": false,
+            "typeStr": "Backbone.Collection"
+          }
+        ],
+        "description": {
+          "full": "<p>Serialize the view&#39;s collection.</p>\n",
+          "summary": "<p>Serialize the view&#39;s collection.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Backbone.Collection"
+            ],
+            "name": "collection",
+            "description": "The collection set on the ItemView to be serialized. \nexamples:\n  -\n    name: Defining custom collection serialization.\n\n    example: |\n      ```js\n      var MyItemView = Marionette.ItemView.extend({\n        serializeCollection: function(collection){\n          return collection.map(function(model){ return _.omit(model.attributes, 'secretData'); });\n        }\n      });\n      ```",
+            "optional": false,
+            "typeStr": "Backbone.Collection"
+          }
+        ],
+        "paramStr": "collection"
+      }
+    },
+    "render": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "<p>Render the view, defaulting to underscore.js templates. You can override this in your view definition to provide a very specific rendering for your view.</p>\n<p>In general, though, you should override the <code>Marionette.Renderer</code> object to change how Marionette renders views.</p>\n",
+          "summary": "<p>Render the view, defaulting to underscore.js templates. You can override this in your view definition to provide a very specific rendering for your view.</p>\n",
+          "body": "<p>In general, though, you should override the <code>Marionette.Renderer</code> object to change how Marionette renders views.</p>\n"
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      }
+    },
+    "attachElContent": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "html",
+            "description": "The html content to set inside the view element.",
+            "optional": false,
+            "typeStr": "String"
+          }
+        ],
+        "description": {
+          "full": "<p>Attaches the content of the view. This method can be overridden to optimize rendering, or to render in a non standard way.</p>\n",
+          "summary": "<p>Attaches the content of the view. This method can be overridden to optimize rendering, or to render in a non standard way.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "html",
+            "description": "The html content to set inside the view element.",
+            "optional": false,
+            "typeStr": "String"
+          }
+        ],
+        "paramStr": "html"
+      },
+      "examples": [
+        {
+          "name": "Render using `innerHTML` instead of `$el.html`",
+          "example": "<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> MyItemView = Marionette.ItemView.extend({\n  attachElContent: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(html)</span></span>{\n    <span class=\"hljs-keyword\">this</span>.el.innerHTML = html;\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">this</span>;\n  }\n});\n</code></pre>\n"
+        }
+      ]
+    },
+    "destroy": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          }
+        ],
+        "description": {
+          "full": "<p>Destroy the view.</p>\n",
+          "summary": "<p>Destroy the view.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [],
+        "paramStr": ""
+      },
+      "examples": [
+        {
+          "name": "Override the destroy method to trigger another event.",
+          "example": "<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> myItemView = Marionette.ItemView.extend({\n  destroy: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span></span>{\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-keyword\">this</span>.isDestroyed) { <span class=\"hljs-keyword\">return</span>; }\n\n    <span class=\"hljs-keyword\">var</span> destroyed = Marionette.View.prototype.destroy.apply(<span class=\"hljs-keyword\">this</span>, <span class=\"hljs-built_in\">arguments</span>);\n\n    <span class=\"hljs-keyword\">var</span> args = <span class=\"hljs-built_in\">Array</span>.prototype.slice.call(<span class=\"hljs-built_in\">arguments</span>);\n    <span class=\"hljs-keyword\">this</span>.triggerMethod.apply(<span class=\"hljs-keyword\">this</span>, [<span class=\"hljs-string\">'after:destroy'</span>].concat(args));\n\n    <span class=\"hljs-keyword\">return</span> destroyed;\n  }\n});\n</code></pre>\n"
+        }
+      ]
+    }
+  },
+  "nav": {
+    "files": [
+      {
+        "name": "application"
+      },
+      {
+        "name": "behavior"
+      },
+      {
+        "name": "collection-view"
+      },
+      {
+        "name": "composite-view"
+      },
+      {
+        "name": "controller"
+      },
+      {
+        "name": "helpers"
+      },
+      {
+        "name": "item-view"
+      },
+      {
+        "name": "layout-view"
+      },
+      {
+        "name": "region-manager"
+      },
+      {
+        "name": "region"
+      },
+      {
+        "name": "view"
+      }
+    ]
+  }
+}

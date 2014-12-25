@@ -1,10 +1,10 @@
 'use strict';
 
-var dox 		= require('dox'),
-	_ 			= require('lodash'),
-	jsYaml 		= require('js-yaml'),
-	marked 		= require('marked'),
-	highlight 	= require('highlight.js');
+var dox = require('dox'),
+	_ = require('lodash'),
+	jsYaml = require('js-yaml'),
+	marked = require('marked'),
+	highlight = require('highlight.js');
 
 
 module.exports = {
@@ -15,20 +15,20 @@ module.exports = {
 		this.markdown = new marked.Renderer();
 		this.dox = dox.setMarkedOptions({
 			renderer: this.markdown,
-			gfm: 			true,
-			tables: 		true,
-			breaks: 		false,
-			pedantic: 		false,
-			sanitize: 		false,
-			smartLists: 	true,
-			smartypants: 	false,
+			gfm: true,
+			tables: true,
+			breaks: false,
+			pedantic: false,
+			sanitize: false,
+			smartLists: true,
+			smartypants: false,
 			highlight: function (code, lang) {
 				return highlight.highlight(lang, code).value;
 			}
 		});
 	},
-	
-	
+
+
 	parse: function (yaml) {
 		var json = {};
 		try {
@@ -36,25 +36,36 @@ module.exports = {
 		} catch (err) {
 			console.warn(err.name + ':\n' + err.reason + '\n\n' + err.mark);
 		}
-		
-		_.each(this.targets, function(target) {
-			this.parseTarget(json[target]);
+	
+		_.each(this.targets, function (target) {
+			json[target] = this.parseTarget(json[target]); // run objects through marked
 		}, this);
 		
+		// Markdown file description and examples
+		// TODO: Markdown options should be moved to config template.
+		if (json.description) { json.description = marked(json.description); }
+		if (json.examples) { 
+			json.examples.forEach(function(example) {
+				this.parseExample(example);
+			}, this);
+		}
+
 		return JSON.stringify(json, null, 2);
 	},
-	
-	
-	parseTarget: function (targetSet) {
-		targetSet = targetSet || [];
 
-		_.each(targetSet, function (value, name) {
-			targetSet[name] = this.parseBody(value, name);
-		}, this);
+
+	parseTarget: function (targetSet) {
+		var keys;
+		if (_.isObject(targetSet)) { 
+			keys = Object.keys(targetSet);
+			keys.forEach(function(key) {  
+				targetSet[key] = this.parseBody(targetSet[key]);
+			}, this);
+		}
 
 		return targetSet;
 	},
-	
+
 
 	parseBody: function (value, name) {
 		var result = {};
@@ -75,17 +86,35 @@ module.exports = {
 		if (result.description === undefined) {
 			return result;
 		}
-
-		// TODO: FIX THIS
-		// result.description = this.parseDox(result.description, name);
+	
+		result.description = this.parseDox(result.description, name);
 
 		_.each(result.examples, function (example) {
-			result.examples[name] = marked(example.example);
+			var parsedExample = this.parseExample(example);
+			if (!_.isNull(parsedExample)) {
+				result.examples[name] = parsedExample;
+			}
 		}, this);
-
-
+		
 		return result;
 	},
+	
+	
+	parseExample: function(example) {
+    if (!example.name) {
+        console.warn('jsDocFile failed to find example name');
+        return null;
+    }
+
+    if (!example.example) {
+        console.warn('jsDocFile failed to find example for ' + example.name);
+        return null;
+    }
+
+    example.example = marked(example.example);
+
+    return example;
+  },
 
 	/**
 	 * parse the dox comment string.
@@ -94,21 +123,16 @@ module.exports = {
 	 *
 	 **/
 	parseDox: function (docString, name) {
-		var doc, tags;
-
+		var tags, doc;
 		try {
 			doc = dox.parseComment(docString);
 		} catch (err) {
-			console.warn('jsDocFile failed to parse string ' + docString + ' dox at ' + name);
+			this.grunt.fail.fatal('jsDocFile failed to parse dox at ' + name);
 		}
 
 		tags = doc.tags || [];
-		doc.api = _.findWhere(tags, {
-			type: 'api'
-		});
-		doc.params = _.where(tags, {
-			type: 'param'
-		});
+		doc.api = _.findWhere(tags, { type: 'api' });
+		doc.params = _.where(tags, { type: 'param' });
 		doc.paramStr = _.pluck(doc.params, 'name').join(', ');
 
 		doc.params = _.map(doc.params, function (param) {
@@ -117,7 +141,7 @@ module.exports = {
 				description: param.description.replace(/^- /, '') // because dox doesn't parse the - out
 			});
 		});
-		
-		return marked(doc); // TODO: it is choking here
-	}
+
+		return doc;
+	},
 };

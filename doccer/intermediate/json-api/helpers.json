@@ -1,0 +1,1218 @@
+{
+  "name": "Helpers",
+  "namespace": "Marionette",
+  "extends": [
+    "Backbone.extend"
+  ],
+  "description": "<p>Marionette provides a set of utility/helper functions that are used to facilitate\ncommon behaviors throughout the framework. These functions may be useful to those that\nare building on top of Marionette, as they provide a way to get the same behaviors and\nconventions from your own code.</p>\n",
+  "functions": {
+    "extend": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "protoProps",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "staticProps",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "borrows",
+            "otherMemberName": "Backbone.extend",
+            "thisMemberName": "Marionette.extend"
+          },
+          {
+            "type": "return",
+            "types": [
+              "Object"
+            ],
+            "description": ""
+          }
+        ],
+        "description": {
+          "full": "<p>Borrow the Backbone <code>extend</code> method so we can use it as needed</p>\n",
+          "summary": "<p>Borrow the Backbone <code>extend</code> method so we can use it as needed</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "protoProps",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "staticProps",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "paramStr": "protoProps, staticProps"
+      },
+      "examples": [
+        {
+          "name": "Marionette.extend",
+          "example": "<p>Backbone&#39;s <code>extend</code> function is a useful utility to have, and is used in\nvarious places in Marionette. To make the use of this method more consistent,\nBackbone&#39;s <code>extend</code> has been aliased to <code>Marionette.extend</code>. This allows\nyou to get the extend functionality for your object without having to\ndecide if you want to use Backbone.View or Backbone.Model or another\nBackbone object to grab the method from.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> Foo = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span></span>{};\n\n<span class=\"hljs-comment\">// use Marionette.extend to make Foo extendable, just like other</span>\n<span class=\"hljs-comment\">// Backbone and Marionette objects</span>\nFoo.extend = Marionette.extend;\n\n<span class=\"hljs-comment\">// Now Foo can be extended to create a new class, with methods</span>\n<span class=\"hljs-keyword\">var</span> Bar = Foo.extend({\n\n  someMethod: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span></span>{ ... }\n\n  <span class=\"hljs-comment\">// ...</span>\n});\n\n<span class=\"hljs-comment\">// Create an instance of Bar</span>\n<span class=\"hljs-keyword\">var</span> b = <span class=\"hljs-keyword\">new</span> Bar();\n</code></pre>\n"
+        }
+      ]
+    },
+    "isNodeAttached": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "Node"
+            ],
+            "name": "el",
+            "description": "",
+            "optional": false,
+            "typeStr": "Node"
+          },
+          {
+            "type": "return",
+            "types": [
+              "Boolean"
+            ],
+            "description": ""
+          }
+        ],
+        "description": {
+          "full": "<p>Determines whether the passed-in node is a child of the <code>document</code> or not.</p>\n",
+          "summary": "<p>Determines whether the passed-in node is a child of the <code>document</code> or not.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Node"
+            ],
+            "name": "el",
+            "description": "",
+            "optional": false,
+            "typeStr": "Node"
+          }
+        ],
+        "paramStr": "el"
+      },
+      "examples": [
+        {
+          "name": "Testing whether an element is a child of the document or not",
+          "example": "<p>This method returns <code>false</code> when the node isn&#39;t attached to the <code>document</code>; otherwise it returns <code>true</code>.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> div = <span class=\"hljs-built_in\">document</span>.createElement(<span class=\"hljs-string\">'div'</span>);\nMarionette.isNodeAttached(div);\n<span class=\"hljs-comment\">// =&gt; false</span>\n\n$(<span class=\"hljs-string\">'body'</span>).append(div);\nMarionette.isNodeAttached(div);\n<span class=\"hljs-comment\">// =&gt; true</span>\n</code></pre>\n"
+        }
+      ]
+    },
+    "getOption": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "target",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "optionName",
+            "description": "",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "return",
+            "types": [
+              "String"
+            ],
+            "description": ""
+          }
+        ],
+        "description": {
+          "full": "<p>Retrieve an object, function or other value from a target object or its <code>options</code>, with\n<code>options</code> taking precedence.</p>\n",
+          "summary": "<p>Retrieve an object, function or other value from a target object or its <code>options</code>, with\n<code>options</code> taking precedence.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "target",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "optionName",
+            "description": "",
+            "optional": false,
+            "typeStr": "String"
+          }
+        ],
+        "paramStr": "target, optionName"
+      },
+      "examples": [
+        {
+          "name": "getOption",
+          "example": "<p>Retrieve an object&#39;s attribute either directly from the object, or from\nthe object&#39;s <code>this.options</code>, with <code>this.options</code> taking precedence.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> M = Backbone.Model.extend({\n  foo: <span class=\"hljs-string\">\"bar\"</span>,\n\n  initialize: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span></span>{\n    <span class=\"hljs-keyword\">var</span> f = Marionette.getOption(<span class=\"hljs-keyword\">this</span>, <span class=\"hljs-string\">\"foo\"</span>);\n    <span class=\"hljs-built_in\">console</span>.log(f);\n  }\n});\n\n<span class=\"hljs-keyword\">new</span> M(); <span class=\"hljs-comment\">// =&gt; \"bar\"</span>\n\n<span class=\"hljs-keyword\">new</span> M({}, { foo: <span class=\"hljs-string\">\"quux\"</span> }); <span class=\"hljs-comment\">// =&gt; \"quux\"</span>\n</code></pre>\n<p>This is useful when building an object that can have configuration set\nin either the object definition or the object&#39;s constructor options.</p>\n"
+        },
+        {
+          "name": "Falsey Values",
+          "example": "<p>The <code>getOption</code> function will return any falsey value from the <code>options</code>,\nother than <code>undefined</code>. If an object&#39;s options has an <code>undefined</code> value, it will\nattempt to read the value from the object directly.</p>\n<p>For example:</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> M = Backbone.Model.extend({\n  foo: <span class=\"hljs-string\">\"bar\"</span>,\n\n  initialize: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span></span>{\n    <span class=\"hljs-keyword\">var</span> f = Marionette.getOption(<span class=\"hljs-keyword\">this</span>, <span class=\"hljs-string\">\"foo\"</span>);\n    <span class=\"hljs-built_in\">console</span>.log(f);\n  }\n});\n\n<span class=\"hljs-keyword\">new</span> M(); <span class=\"hljs-comment\">// =&gt; \"bar\"</span>\n\n<span class=\"hljs-keyword\">var</span> f;\n<span class=\"hljs-keyword\">new</span> M({}, { foo: f }); <span class=\"hljs-comment\">// =&gt; \"bar\"</span>\n</code></pre>\n<p>In this example, &quot;bar&quot; is returned both times because the second\nexample has an <code>undefined</code> value for <code>f</code>.</p>\n"
+        }
+      ]
+    },
+    "proxyGetOption": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "optionName",
+            "description": "",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "return",
+            "types": [
+              "String"
+            ],
+            "description": ""
+          }
+        ],
+        "description": {
+          "full": "<p>Proxy <code>Marionette.getOption</code></p>\n",
+          "summary": "<p>Proxy <code>Marionette.getOption</code></p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "optionName",
+            "description": "",
+            "optional": false,
+            "typeStr": "String"
+          }
+        ],
+        "paramStr": "optionName"
+      },
+      "examples": [
+        {
+          "name": "proxyGetOption",
+          "example": "<p>This method proxies <code>Marionette.getOption</code> so that it can be easily added to an instance.</p>\n<p>Say you&#39;ve written your own Pagination class and you always pass options to it.\nWith <code>proxyGetOption</code>, you can easily give this class the <code>getOption</code> function.</p>\n<pre><code class=\"lang-js\">_.extend(Pagination.prototype, {\n\n  getFoo: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span></span>{\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">this</span>.getOption(<span class=\"hljs-string\">\"foo\"</span>);\n  },\n\n  getOption: Marionette.proxyGetOption\n});\n</code></pre>\n"
+        }
+      ]
+    },
+    "triggerMethod": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "event",
+            "description": "",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "...*"
+            ],
+            "name": "[arguments]",
+            "description": "",
+            "optional": true,
+            "typeStr": "...*"
+          },
+          {
+            "type": "return",
+            "types": [
+              "*"
+            ],
+            "description": ""
+          }
+        ],
+        "description": {
+          "full": "<p>Trigger an event and a corresponding method on the target object.</p>\n",
+          "summary": "<p>Trigger an event and a corresponding method on the target object.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "event",
+            "description": "",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "...*"
+            ],
+            "name": "[arguments]",
+            "description": "",
+            "optional": true,
+            "typeStr": "...*"
+          }
+        ],
+        "paramStr": "event, [arguments]"
+      },
+      "examples": [
+        {
+          "name": "triggerMethod",
+          "example": "<p>Trigger an event and a corresponding method on the target object.</p>\n<p>When an event is triggered, the first letter of each section of the\nevent name is capitalized, and the word <code>on</code> is tagged on to the front\nof it. Examples:</p>\n<ul>\n<li><code>triggerMethod(&quot;render&quot;)</code> fires the <code>onRender</code> function</li>\n<li><code>triggerMethod(&quot;before:destroy&quot;)</code> fires the <code>onBeforeDestroy</code> function</li>\n</ul>\n<p>All arguments that are passed to the triggerMethod call are passed along to both the event and\nthe method, with the exception of the event name not being passed to the corresponding method.</p>\n<p><code>triggerMethod(&quot;foo&quot;, bar)</code> will call <code>onFoo: function(bar){...})</code></p>\n<p>Note that <code>triggerMethod</code> can be called on objects that do not have\n<code>Backbone.Events</code> mixed in to them. These objects will not have a <code>trigger</code>\nmethod, and no attempt to call <code>.trigger()</code> will be made. The <code>on{Name}</code>\ncallback methods will still be called, though.</p>\n"
+        }
+      ]
+    },
+    "triggerMethodOn": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "context",
+            "description": "",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "event",
+            "description": "",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "...*"
+            ],
+            "name": "[arguments]",
+            "description": "",
+            "optional": true,
+            "typeStr": "...*"
+          }
+        ],
+        "description": {
+          "full": "<p>Invoke <code>triggerMethod</code> on a specific context.</p>\n",
+          "summary": "<p>Invoke <code>triggerMethod</code> on a specific context.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "context",
+            "description": "",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "event",
+            "description": "",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "...*"
+            ],
+            "name": "[arguments]",
+            "description": "",
+            "optional": true,
+            "typeStr": "...*"
+          }
+        ],
+        "paramStr": "context, event, [arguments]"
+      },
+      "examples": [
+        {
+          "name": "triggerMethodOn",
+          "example": "<p>Invoke <code>triggerMethod</code> on a specific context.</p>\n<p>This is useful when it&#39;s not clear that the object has <code>triggerMethod</code> defined. In the case of views,\n<code>Marionette.View</code> defines <code>triggerMethod</code>, but <code>Backbone.View</code> does not.</p>\n<pre><code class=\"lang-js\">Marionette.triggerMethodOn(ctx, <span class=\"hljs-string\">\"foo\"</span>, bar);\n<span class=\"hljs-comment\">// will invoke `onFoo: function(bar){...})`</span>\n<span class=\"hljs-comment\">// will trigger \"foo\" on ctx</span>\n</code></pre>\n"
+        }
+      ]
+    },
+    "bindEntityEvents": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "target",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "entity",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "bindings",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "description": {
+          "full": "<p>Bind a backbone &quot;entity&quot; (collection/model) to methods on a target object.</p>\n",
+          "summary": "<p>Bind a backbone &quot;entity&quot; (collection/model) to methods on a target object.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "target",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "entity",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "bindings",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "paramStr": "target, entity, bindings"
+      },
+      "examples": [
+        {
+          "name": "bindEntityEvents",
+          "example": "<p>This method is used to bind a backbone &quot;entity&quot; (collection/model)\nto methods on a target object.</p>\n<pre><code class=\"lang-js\">Backbone.View.extend({\n\n  modelEvents: {\n    <span class=\"hljs-string\">\"change:foo\"</span>: <span class=\"hljs-string\">\"doSomething\"</span>\n  },\n\n  initialize: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span></span>{\n    Marionette.bindEntityEvents(<span class=\"hljs-keyword\">this</span>, <span class=\"hljs-keyword\">this</span>.model, <span class=\"hljs-keyword\">this</span>.modelEvents);\n  },\n\n  doSomething: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span></span>{\n    <span class=\"hljs-comment\">// the \"change:foo\" event was fired from the model</span>\n    <span class=\"hljs-comment\">// respond to it appropriately, here.</span>\n  }\n\n});\n</code></pre>\n<p>The first parameter, <code>target</code>, must have a <code>listenTo</code> method from the\nEventBinder object.</p>\n<p>The second parameter is the entity (Backbone.Model or Backbone.Collection)\nto bind the events from.</p>\n<p>The third parameter is a hash of <code>{ &quot;event:name&quot;: &quot;eventHandler&quot; }</code>\nconfiguration. Multiple handlers can be separated by a space. A\nfunction can be supplied instead of a string handler name.</p>\n"
+        }
+      ]
+    },
+    "unbindEntityEvents": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "target",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "entity",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "bindings",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "description": {
+          "full": "<p>Unbind a backbone &quot;entity&quot; (collection/model) to methods on a target object.</p>\n",
+          "summary": "<p>Unbind a backbone &quot;entity&quot; (collection/model) to methods on a target object.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "target",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "entity",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "bindings",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "paramStr": "target, entity, bindings"
+      },
+      "examples": [
+        {
+          "name": "unbindEntityEvents",
+          "example": "<p>This method can be used to unbind callbacks from entities&#39; (collection/model) events. It&#39;s\nthe opposite of <code>bindEntityEvents</code>. Consequently, the APIs are identical for each method.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-comment\">// Just like the above example we bind our model events.</span>\n<span class=\"hljs-comment\">// This time, however, we unbind them on close.</span>\nBackbone.View.extend({\n\n  modelEvents: {\n    <span class=\"hljs-string\">\"change:foo\"</span>: <span class=\"hljs-string\">\"doSomething\"</span>\n  },\n\n  initialize: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span></span>{\n    Marionette.bindEntityEvents(<span class=\"hljs-keyword\">this</span>, <span class=\"hljs-keyword\">this</span>.model, <span class=\"hljs-keyword\">this</span>.modelEvents);\n  },\n\n  doSomething: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span></span>{\n    <span class=\"hljs-comment\">// the \"change:foo\" event was fired from the model</span>\n    <span class=\"hljs-comment\">// respond to it appropriately, here.</span>\n  },\n\n  onClose: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span> </span>{\n    Marionette.unbindEntityEvents(<span class=\"hljs-keyword\">this</span>, <span class=\"hljs-keyword\">this</span>.model, <span class=\"hljs-keyword\">this</span>.modelEvents);\n  }\n\n});\n</code></pre>\n"
+        }
+      ]
+    },
+    "proxyBindEntityEvents": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "entity",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "bindings",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "description": {
+          "full": "<p>Proxy <code>Marionette.bindEntityEvents</code></p>\n",
+          "summary": "<p>Proxy <code>Marionette.bindEntityEvents</code></p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "entity",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "bindings",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "paramStr": "entity, bindings"
+      },
+      "examples": [
+        {
+          "name": "proxyBindEntityEvents",
+          "example": "<p>This method proxies <code>Marionette.bindEntityEvents</code> so that it can easily be added to an instance.</p>\n<p>Say you&#39;ve written your own Pagination class and you want to easily listen to some entities events.\nWith <code>proxyBindEntityEvents</code>, you can easily give this class the <code>bindEntityEvents</code> function.</p>\n<pre><code class=\"lang-js\">_.extend(Pagination.prototype, {\n\n   bindSomething: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span> </span>{\n     <span class=\"hljs-keyword\">this</span>.bindEntityEvents(<span class=\"hljs-keyword\">this</span>.something, <span class=\"hljs-keyword\">this</span>.somethingEvents)\n   },\n\n   bindEntityEvents: Marionette.proxyBindEntityEvents\n\n});\n</code></pre>\n"
+        }
+      ]
+    },
+    "proxyUnbindEntityEvents": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "entity",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "bindings",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "description": {
+          "full": "<p>Proxy <code>Marionette.unbindEntityEvents</code></p>\n",
+          "summary": "<p>Proxy <code>Marionette.unbindEntityEvents</code></p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "entity",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "bindings",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "paramStr": "entity, bindings"
+      },
+      "examples": [
+        {
+          "name": "proxyUnbindEntityEvents",
+          "example": "<p>This method proxies <code>Marionette.unbindEntityEvents</code>.</p>\n<p>Like <code>Marionette.proxyBindEntityEvents</code>, unbinding proxied events can be done similarly.</p>\n<pre><code class=\"lang-js\">_.extend(Pagination.prototype, {\n\n   bindSomething: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span> </span>{\n     <span class=\"hljs-keyword\">this</span>.bindEntityEvents(<span class=\"hljs-keyword\">this</span>.something, <span class=\"hljs-keyword\">this</span>.somethingEvents)\n   },\n\n   bindEntityEvents: Marionette.proxyBindEntityEvents,\n\n   unbindEntityEvents: Marionette.proxyUnbindEntityEvents\n\n});\n</code></pre>\n"
+        }
+      ]
+    },
+    "normalizeMethods": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "hash",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "return",
+            "types": [
+              "Object"
+            ],
+            "description": ""
+          }
+        ],
+        "description": {
+          "full": "<p>Pass in a mapping of events to functions or function names and return a mapping of events to functions.</p>\n",
+          "summary": "<p>Pass in a mapping of events to functions or function names and return a mapping of events to functions.</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "hash",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "paramStr": "hash"
+      },
+      "examples": [
+        {
+          "name": "normalizeMethods",
+          "example": "<p>Receives a hash of event names and functions and/or function names, and returns the\nsame hash with the function names replaced with the function references themselves.</p>\n<p>This function is attached to the <code>Marionette.View</code> prototype by default. To use it from non-View classes\nyou&#39;ll need to attach it yourself.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> View = Marionette.ItemView.extend({\n\n  initialize: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span> </span>{\n    <span class=\"hljs-keyword\">this</span>.someFn = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span> </span>{};\n    <span class=\"hljs-keyword\">this</span>.someOtherFn = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">()</span> </span>{};\n    <span class=\"hljs-keyword\">var</span> hash = {\n      eventOne: <span class=\"hljs-string\">\"someFn\"</span>, <span class=\"hljs-comment\">// This will become a reference to `this.someFn`</span>\n      eventTwo: <span class=\"hljs-keyword\">this</span>.someOtherFn\n    };\n    <span class=\"hljs-keyword\">this</span>.normalizedHash = <span class=\"hljs-keyword\">this</span>.normalizeMethods(hash);\n  }\n\n});\n</code></pre>\n"
+        }
+      ]
+    },
+    "normalizeUIString": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "uiString",
+            "description": "",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "ui",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "return",
+            "types": [
+              "String"
+            ],
+            "description": ""
+          }
+        ],
+        "description": {
+          "full": "<p>Utility method for parsing <code>@ui.</code> syntax string into associated selector</p>\n",
+          "summary": "<p>Utility method for parsing <code>@ui.</code> syntax string into associated selector</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "String"
+            ],
+            "name": "uiString",
+            "description": "",
+            "optional": false,
+            "typeStr": "String"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "ui",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "paramStr": "uiString, ui"
+      },
+      "examples": [
+        {
+          "name": "normalizeUIString",
+          "example": "<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> ui = {\n  <span class=\"hljs-string\">'list'</span>: <span class=\"hljs-string\">'ul'</span>\n};\n\n<span class=\"hljs-comment\">// This turns a `ui` hash string into it's applicable selector</span>\n<span class=\"hljs-keyword\">var</span> normalized = Marionette.normalizeUIString(<span class=\"hljs-string\">'@ui.foo'</span>, ui);\n</code></pre>\n"
+        }
+      ]
+    },
+    "normalizeUIKeys": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "hash",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "ui",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "return",
+            "types": [
+              "Object"
+            ],
+            "description": ""
+          }
+        ],
+        "description": {
+          "full": "<p>Allows for the use of the @ui. syntax within a given key for triggers and events\nswaps the @ui with the associated selector</p>\n",
+          "summary": "<p>Allows for the use of the @ui. syntax within a given key for triggers and events\nswaps the @ui with the associated selector</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "hash",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "ui",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "paramStr": "hash, ui"
+      },
+      "examples": [
+        {
+          "name": "normalizeUIKeys",
+          "example": "<p>This method allows you to use the <code>@ui.</code> syntax within a given key for triggers and events hashes. It\nswaps the <code>@ui.</code> reference with the associated selector.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> hash = {\n  <span class=\"hljs-string\">'click @ui.list'</span>: <span class=\"hljs-string\">'myCb'</span>\n};\n\n<span class=\"hljs-keyword\">var</span> ui = {\n  <span class=\"hljs-string\">'list'</span>: <span class=\"hljs-string\">'ul'</span>\n};\n\n<span class=\"hljs-comment\">// This sets 'click @ui.list' to be 'click ul' in the newHash object</span>\n<span class=\"hljs-keyword\">var</span> newHash = Marionette.normalizeUIKeys(hash, ui);\n</code></pre>\n"
+        }
+      ]
+    },
+    "normalizeUIValues": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "hash",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "ui",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "return",
+            "types": [
+              "Object"
+            ],
+            "description": ""
+          }
+        ],
+        "description": {
+          "full": "<p>Allows for the use of the @ui. syntax within a given value for regions swaps the @ui with the associated selector</p>\n",
+          "summary": "<p>Allows for the use of the @ui. syntax within a given value for regions swaps the @ui with the associated selector</p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "hash",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "ui",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "paramStr": "hash, ui"
+      },
+      "examples": [
+        {
+          "name": "normalizeUIValues",
+          "example": "<p>This method allows you to use the <code>@ui.</code> syntax within a given hash value (for example region hashes). It\nswaps the <code>@ui.</code> reference with the associated selector.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> hash = {\n  <span class=\"hljs-string\">'foo'</span>: <span class=\"hljs-string\">'@ui.bar'</span>\n};\n\n<span class=\"hljs-keyword\">var</span> ui = {\n  <span class=\"hljs-string\">'bar'</span>: <span class=\"hljs-string\">'.quux'</span>\n};\n\n<span class=\"hljs-comment\">// This sets 'foo' to be '.quux' in the newHash object</span>\n<span class=\"hljs-keyword\">var</span> newHash = Marionette.normalizeUIValues(hash, ui);\n</code></pre>\n"
+        }
+      ]
+    },
+    "actAsCollection": {
+      "description": {
+        "tags": [
+          {
+            "type": "api",
+            "visibility": "public"
+          },
+          {
+            "type": "static",
+            "string": ""
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "object",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "listProperty",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "description": {
+          "full": "<p>Mix in methods from Underscore, for iteration, and other collection related features. Borrowing this code\nfrom <code>Backbone.Collection</code>. See <a href=\"http://backbonejs.org/docs/backbone.html#section-121\">http://backbonejs.org/docs/backbone.html#section-121</a></p>\n",
+          "summary": "<p>Mix in methods from Underscore, for iteration, and other collection related features. Borrowing this code\nfrom <code>Backbone.Collection</code>. See <a href=\"http://backbonejs.org/docs/backbone.html#section-121\">http://backbonejs.org/docs/backbone.html#section-121</a></p>\n",
+          "body": ""
+        },
+        "isPrivate": false,
+        "api": {
+          "type": "api",
+          "visibility": "public"
+        },
+        "params": [
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "object",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          },
+          {
+            "type": "param",
+            "types": [
+              "Object"
+            ],
+            "name": "listProperty",
+            "description": "",
+            "optional": false,
+            "typeStr": "Object"
+          }
+        ],
+        "paramStr": "object, listProperty"
+      },
+      "examples": [
+        {
+          "name": "Object Literal",
+          "example": "<p>It works by taking an object and a property field, in this example &#39;list&#39;,\nand appending collection functions to the object so that it can\ndelegate collection calls to its list.</p>\n<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> obj = {\n  list: [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>]\n}\n\nMarionette.actAsCollection(obj, <span class=\"hljs-string\">'list'</span>);\n\n<span class=\"hljs-keyword\">var</span> double = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(v)</span></span>{ <span class=\"hljs-keyword\">return</span> v*<span class=\"hljs-number\">2</span>};\n<span class=\"hljs-built_in\">console</span>.log(obj.map(double)); <span class=\"hljs-comment\">// [2, 4, 6]</span>\n</code></pre>\n"
+        },
+        {
+          "name": "Function Prototype",
+          "example": "<pre><code class=\"lang-js\"><span class=\"hljs-keyword\">var</span> Func = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(list)</span> </span>{\n  <span class=\"hljs-keyword\">this</span>.list = list;\n};\n\nMarionette.actAsCollection(Func.prototype, <span class=\"hljs-string\">'list'</span>);\n<span class=\"hljs-keyword\">var</span> func = <span class=\"hljs-keyword\">new</span> Func([<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>]);\n\n<span class=\"hljs-keyword\">var</span> double = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(v)</span></span>{ <span class=\"hljs-keyword\">return</span> v*<span class=\"hljs-number\">2</span>};\n<span class=\"hljs-built_in\">console</span>.log(func.map(double)); <span class=\"hljs-comment\">// [2, 4, 6]</span>\n</code></pre>\n"
+        }
+      ]
+    }
+  },
+  "nav": {
+    "files": [
+      {
+        "name": "application"
+      },
+      {
+        "name": "behavior"
+      },
+      {
+        "name": "collection-view"
+      },
+      {
+        "name": "composite-view"
+      },
+      {
+        "name": "controller"
+      },
+      {
+        "name": "helpers"
+      },
+      {
+        "name": "item-view"
+      },
+      {
+        "name": "layout-view"
+      },
+      {
+        "name": "region-manager"
+      },
+      {
+        "name": "region"
+      },
+      {
+        "name": "view"
+      }
+    ]
+  }
+}

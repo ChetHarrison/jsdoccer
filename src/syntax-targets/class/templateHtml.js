@@ -12,7 +12,7 @@ var fs = require('fs'),
 module.exports = function(model) {
 	var template = htmlTemplateLoader(path.join(__dirname, 'templates/html.hbs'));
 	
-	model.constructor = constructorTemplater(model);
+	model['constructor'] = constructorTemplater(model);
 	model.events = eventTemplater(model);
 	model.properties = propertyTemplater(model);
 	model.functions = functionTemplater(model);

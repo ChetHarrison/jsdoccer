@@ -19,21 +19,24 @@ module.exports = {
 	
 	parse: function (jsonApi) {
 		var	docPageTpl = Handlebars.compile(fs.readFileSync(this.docPageTplPath).toString()),
-			contentTemplater = this.htmlTemplaters['name'];
+			contentTemplater = this.htmlTemplaters['class'];
 		
 		jsonApi = JSON.parse(jsonApi);
 		
 		// TODO: elevate the namespacing to jsdoccer so we don't collide
 		// with a function named 'nav'.
+		
 		return docPageTpl({
+			projectName: this.projectName,
 			nav: jsonApi.nav,
-			model: jsonApi,
-			content: contentTemplater(jsonApi), // currently we are not passing in a templater
-			projectName: this.projectName
+			file: {
+				name: jsonApi.name,
+				functions: jsonApi.functions,
+				properties: jsonApi.properties,
+				events: jsonApi.events
+			},
+			content: contentTemplater(jsonApi) // currently we are not passing in a templater
 		});
 	}
 
 };
-
-
-

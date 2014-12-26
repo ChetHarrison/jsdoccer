@@ -127,7 +127,7 @@ module.exports = {
 		try {
 			doc = dox.parseComment(docString);
 		} catch (err) {
-			this.grunt.fail.fatal('jsDocFile failed to parse dox at ' + name);
+			console.warn('jsDocFile failed to parse dox at ' + name);
 		}
 
 		tags = doc.tags || [];

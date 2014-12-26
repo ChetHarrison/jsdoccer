@@ -17,20 +17,27 @@
             {{/with}}
           </div>
 
-
-          {{#with model}}
+          {{#with file}}
             <div class="class_links">
-              <h3>{{file-name}}</h3>
+              <h3>{{name}}</h3>
+              
               <h3>Functions</h3>
               <ul>
-                {{#each function}}
+                {{#each functions}}
                   <li><a href="#{{@key}}">{{@key}}</a></li>
                 {{/each}}
               </ul>
 
               <h3>Properties</h3>
               <ul>
-                {{#each property}}
+                {{#each properties}}
+                  <li><a href="#{{@key}}">{{@key}}</a></li>
+                {{/each}}
+              </ul>
+              
+              <h3>Events</h3>
+              <ul>
+                {{#each events}}
                   <li><a href="#{{@key}}">{{@key}}</a></li>
                 {{/each}}
               </ul>

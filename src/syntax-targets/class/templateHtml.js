@@ -12,12 +12,13 @@ var fs = require('fs'),
 module.exports = function(model) {
 	var template = htmlTemplateLoader(path.join(__dirname, 'templates/html.hbs'));
 	
+	// TODO: drop in collision alias code
 	model['constructors'] = constructorsTemplater(model);
 	model.events = eventTemplater(model);
 	model.properties = propertyTemplater(model);
 	model.functions = functionTemplater(model);
 	
-	console.log(model.description);
+	console.log(model.description); // TODO: file.description = model.description.description
 	
 	return template(model);
 };

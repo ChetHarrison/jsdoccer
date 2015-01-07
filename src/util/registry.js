@@ -1,12 +1,19 @@
-// registry
+// registry pattern
+// good stuff from http://lostechies.com/derickbailey/2014/01/28/killing-switch-statements-with-a-registry-an-example-and-screencast/
+// with good stuff from Kyle Simpson
 // Use by delegation. Example:
 // var myHash = Object.create(registry);
+// myHash.init({
+	// values: {
+		// 'foo': function() { ... }
+	// }
+// }) before use
 'use strict';
 
 module.exports = {
 	init: function(options) {
-		options = options || [];
-		this._values = options.values || [];
+		options = options || {};
+		this._values = options.values || Object.create( null );
 		this._defaultValue = options.defaultValue || null;
 	},
 	
@@ -15,8 +22,9 @@ module.exports = {
 	},
 	
 	getValue: function(name) {
-		if (this._values.indexOf(name) >= 0) {
-			return this._values[name];
+		var value = this._values[name];
+		if (value) {
+			return value;
 		} else {
 			return this._defaultValue;
 		}

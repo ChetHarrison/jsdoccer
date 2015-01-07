@@ -73,7 +73,7 @@ module.exports = {
 		
 		astToJsonPre.init({ matchers: matchers });
 		jsonPreToYamlStubbed.init({ yamlTemplaters: yamlTemplaters });
-		yamlDocumentedToJsonApi.init({ targets: targets });
+		// yamlDocumentedToJsonApi.init({ targets: targets });
 		jsonApiToDocs.init({ 
 			htmlTemplaters: htmlTemplaters,
 			docPageTplPath: path.resolve('src/syntax-targets/docs-index.hbs'),

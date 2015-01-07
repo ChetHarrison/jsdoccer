@@ -15,14 +15,14 @@ module.exports = function(ast) {
 	if (ast.type === 'Property' &&
 		ast.value.type === 'FunctionExpression' &&
 		ast.key.type === 'Identifier' &&
-		ast.key.name === 'constructor') {
+		ast.key.name === 'constructors') {
 		
 		json = [ast].
 			filter(function(ast) {
 				return ast.type === 'Property' &&
 					ast.value.type === 'FunctionExpression' &&
 					ast.key.type === 'Identifier' &&
-					ast.key.name === 'constructor';
+					ast.key.name === 'constructors';
 			}).
 			map(function(property) {
 			return {

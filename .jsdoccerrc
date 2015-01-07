@@ -11,7 +11,7 @@
 	"documentedYaml": {
 		// Glob paths to your documented yaml.
 		// "src": ["./doccer/yaml-documented/**/*.yaml"]
-		"src": ["./api/*.jsdoc"]
+		"src": ["./api/application.jsdoc"]
 	},
 	
 	// All generated intermediate files will be placed under this path.
@@ -22,7 +22,7 @@
 		"default": {
 			"name": true,
 			"class": true,
-			"constructor": true,
+			"constructors": true,
 			"events": true,
 			"functions": true,
 			"properties": true

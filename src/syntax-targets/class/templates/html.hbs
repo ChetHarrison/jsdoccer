@@ -2,7 +2,7 @@
           <div class="class">Class: {{class}}</div>
 
           {{#each extends}}
-            <div class="extend">Mixes In: {{.}}</div>
+            <div class="extend">Mixes In: {{this}}</div>
           {{/each}}
 
           {{{description}}}
@@ -17,7 +17,7 @@
             {{/each}}
           {{/if}}
 
-          {{{constructor}}}
+          {{{constructors}}}
 
           {{{functions}}}
 

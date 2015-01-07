@@ -1,9 +1,9 @@
-        {{#if constructor}}
-          {{#with constructor}}
+        {{#if constructors}}
+          {{#with constructors}}
             <div class="function_block">
               {{#with description}}
                 <div class="function_signature">
-                  <a href="#constructor"><h3>&#x25cf; constructor({{paramStr}})</h3></a>
+                  <a href="#constructors"><h3>&#x25cf; constructor({{paramStr}})</h3></a>
                 </div>
 
                 {{{description.full}}}
@@ -21,6 +21,16 @@
                   </div>
                 {{/if}}
               {{/with}}
+              
+              {{#if examples}}
+                <h4>Examples</h4>
+                {{#each examples}}
+                  <div class="example_block">
+                    <h4>{{name}}</h4>
+                    {{{example}}}
+                  </div>
+                {{/each}}
+              {{/if}}
             </div>
           {{/with}}
         {{/if}}

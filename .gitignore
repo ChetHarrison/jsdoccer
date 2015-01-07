@@ -12,5 +12,6 @@ bower_components/
 .grunt
 reports
 jsdoccer/
+doccer/
 api/
 pad.js

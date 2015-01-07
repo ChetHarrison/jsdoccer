@@ -3,7 +3,7 @@
 var fs = require('fs'),
 	path = require('path'),
 	Handlebars = require('handlebars'),
-	constructorsTemplater = require('../constructors/templateHtml.js'),
+	constructorTemplater = require('../constructor/templateHtml.js'),
 	eventTemplater = require('../events/templateHtml.js'),
 	propertyTemplater = require('../properties/templateHtml.js'),
 	functionTemplater = require('../functions/templateHtml.js'),
@@ -11,14 +11,14 @@ var fs = require('fs'),
 
 module.exports = function(model) {
 	var template = htmlTemplateLoader(path.join(__dirname, 'templates/html.hbs'));
-	
-	// TODO: drop in collision alias code
-	model['constructors'] = constructorsTemplater(model);
+
+	console.log(constructorTemplater(model));
+		  
+	model.constructer = constructorTemplater(model);  
 	model.events = eventTemplater(model);
 	model.properties = propertyTemplater(model);
 	model.functions = functionTemplater(model);
+	// TODO: file.description = model.description.description
 	
-	console.log(model.description); // TODO: file.description = model.description.description
-	
-	return template(model);
+	return template(model);  // <-- here is where it get's mangled
 };

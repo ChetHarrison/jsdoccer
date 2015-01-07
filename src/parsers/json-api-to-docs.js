@@ -32,11 +32,12 @@ module.exports = {
 		model.nav = jsonApi.nav;
 		model.file = file;
 		model.file.name = jsonApi.name;
-		model.file.constructors = jsonApi.constructors;
+		model.file.constructor = jsonApi.constructor;
 		model.file.functions = jsonApi.functions;
 		model.file.properties = jsonApi.properties;
 		model.file.events = jsonApi.events;
 		model.content = contentTemplater(jsonApi); // currently we are not passing in a templater
+		
 		
 		return docPageTpl(model);
 	}

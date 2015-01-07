@@ -10,7 +10,6 @@
 	
 	"documentedYaml": {
 		// Glob paths to your documented yaml.
-		// "src": ["./doccer/yaml-documented/**/*.yaml"]
 		"src": ["./api/application.jsdoc"]
 	},
 	
@@ -22,7 +21,7 @@
 		"default": {
 			"name": true,
 			"class": true,
-			"constructors": true,
+			"constructor": true,
 			"events": true,
 			"functions": true,
 			"properties": true

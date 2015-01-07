@@ -5,9 +5,9 @@ require('rx-array');
 
 module.exports = function(ast) {
 	// Two casses 
-	// 1) Named constructors,: search for methods named
+	// 1) Named constructor,: search for methods named
 	// constructor 
-	// 2) Anonymous constructors: find methods with the
+	// 2) Anonymous constructor: find methods with the
 	// assigned to capitalized objects or properites.
 	var json = false;
 	
@@ -15,14 +15,14 @@ module.exports = function(ast) {
 	if (ast.type === 'Property' &&
 		ast.value.type === 'FunctionExpression' &&
 		ast.key.type === 'Identifier' &&
-		ast.key.name === 'constructors') {
+		ast.key.name === 'constructor') {
 		
 		json = [ast].
 			filter(function(ast) {
 				return ast.type === 'Property' &&
 					ast.value.type === 'FunctionExpression' &&
 					ast.key.type === 'Identifier' &&
-					ast.key.name === 'constructors';
+					ast.key.name === 'constructor';
 			}).
 			map(function(property) {
 			return {

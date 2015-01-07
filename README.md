@@ -5,11 +5,11 @@
 - [x] build document webpages from JSDoc
 - [ ] lint existing documents
 
-**There have been some major changes between 1.0 and 1.1. This is a pure Node.js tool now. If you are looking for a Grunt task you can find it at [grunt-jsdoccer](https://github.com/ChetHarrison/grunt-jsdoccer).
+**There have been some major changes between 1.0 and 1.1 and 1.2. This is a pure Node.js tool now. If you are looking for a Grunt task you can find it at [grunt-jsdoccer](https://github.com/ChetHarrison/grunt-jsdoccer).
 
 A collaboration with [@jasonLaster](https://github.com/jasonLaster)
 
-# JSDoccer
+# JsDoccer
 
  A collection of Node.js tasks to auto document your ECMAScript (Java Script) in  [JSDoc 3](https://github.com/jsdoc3/jsdoc3.github.com) using [Esprima](http://esprima.org/) and [ESCodeGen](https://github.com/Constellation/escodegen) as well as lint those docs. It converts your code into YAML templates that (will be) converted to JSDocs. The YAML stage allows you to fill in stubbed examples and other details that cannot be generated from the provided Esprima code meta data.
 
@@ -36,27 +36,30 @@ The first time you run this command the tool will search for a `jsdoccer/syntaxM
 $ node node_modules/jsdoccer/doc [<path/to/yaml/you/want/to/doc>]
 ```
 
-Generated documents can be found in the `jsdoccer/documentation` folder along with some default styles.
+Generated documents can be found in the `doccer/docs` folder (or where ever you configured the destination).
 
 ### Configuration
 
-The `./jsdoccerrc` file contains configuration for the tool. If no files are provided on the command line the tool will look in the `jsToDocument.src` directory for target files. `filesToFilter` contains a black list of files ignore. If no files are provided on the command line for the documentation phase `documentedYaml.src` is the default.
+The `./jsdoccerrc` file contains configuration for the tool. If no files are provided on the command line the tool will glob the files listed in the `js` directory for target files. In the generate documentation phasethe tool will look for your augmented YAML in the globs configured under the `documentedYaml` argument. All intermediate files are saved under the `dest` path. These are useful for debug.
 
-```
-{
-  "jsToDocument": {
-    "src": "./js/*.js"
-  },
-  "filesToFilter": [
-    ".DS_Store"
-  ],
-  "documentedYaml": {
-    "src": "./jsdoccer/generated-files/yaml/documented/*.yaml"
-  }
-}
-```
+Syntax targets are specific types of code you would like to document like *functions* or *properties*. JsDoccer comes with the following targets that you include or ignore based on a boolean under the `targets/defaut`. They are
 
+* name
+* class
+* constructors
+* events
+* functions
+* properties
 
+### Extention
+
+__Note: I am currently working on the code to extend the tool right now__
+
+JsDoccer uses a collection of templates and functions designed to find syntax targets and render them. You can use what ever templating library you are comfortable with, however with nested templates I recomend [Handelbars](http://handlebarsjs.com/) support of partials.
+
+Each syntax target requires a YAML template for creating the document stubs and an HTML template for creating the documentation as well as functions to render them. You will also need to provide a matcher function that can parse an AST node looking for the target. You may optionally provide a linter function if you would like to use the linter. All of the default target code can be found under `scr/syntax-targets` for examples. This is also where the documentation website index template `docs-index.hbs` lives.
+
+Add custom targets to your `.jsdoccerrc` file under `targets/custom` with a true value. __Make sure the file name matches target name.__
 
 ### What You Need To Know About ASTs
 
@@ -146,12 +149,6 @@ To find out the AST conditions that match the code you would like to document co
 #### Parse JSON like a champ
 
 Map/Reduce is your friend when you need to pull deeply nested targets out of a large amount of JSON. I use a modified Array with the 5 magic RX methods attached. I highly recommend you spend a little time with [this excellent tutorial](http://reactive-extensions.github.io/learnrx/) from Jafar Husain of Netflix **Note: Do it in Chrome. It doesn't work in Firefox.** Then you will be able to inspect the generated AST files in the `ast` directory and write your own custom matchers in the `syntax-matchers.js` file.
-
-#### YAML Templates
-
-YAML template file names should be "slugified" with a `.tpl` extention. Example:
-
-The syntax target type "functions" should have a corresponding template `functions.tpl`. At the moment templates are populated using Lodash (Underscore) templating. Because YAML is whitespace sensitive you may have to carefully watch where you place inline script.
 
 Example:
 

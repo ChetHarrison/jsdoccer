@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		jshint: {
-			files: ['./src/**/*.js', './setup/*.js'],
+			files: ['./src/**/*.js'],
 			// configure JSHint (documented at http://www.jshint.com/docs/)
 			options: {
 				jshintrc: '.jshintrc',
@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 
 		watch: {
 			files: ['<%= jshint.files %>'],
-			tasks: ['jshint', 'clean:build']
+			tasks: ['jshint', 'jasmine_node']
 		},
 
 		clean: {

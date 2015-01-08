@@ -1,9 +1,39 @@
 {
-	"jsToDocument": {
-		"src": "./js/*.js",
-		"dest": "./tests/"
+	// Note: all comments are striped before this file is parsed.
+	// if null the project name will be pulled from the root dir name
+	"projectName": null,
+	
+	"js": {
+		// glob paths to the js you want to document
+		"src": ["./src/*.js"]
 	},
-	"filesToFilter": [
-		".DS_Store"
-	]
+	
+	"documentedYaml": {
+		// Glob paths to your documented yaml.
+		"src": ["./api/application.jsdoc"]
+	},
+	
+	// All generated intermediate files will be placed under this path.
+	"dest": "./doccer/",
+	
+	// Syntax targets
+	"targets": {
+		"default": {
+			"name": true,
+			"class": true,
+			"constructor": true,
+			"events": true,
+			"functions": true,
+			"properties": true
+		},
+		"custom": {
+			// Add custom targets here. Example
+			// "myTarget": {
+			//     "linter": "path/to/linter/function",
+			//     "matcher": "path/to/matcher/function",
+			//     "templateYaml": "path/to/templateYaml/function",
+			//     "templateHtml": "path/to/templateHtml/function"
+			// }
+		}
+	}
 }

@@ -24,6 +24,5 @@ try {
 } catch (err) {
 	console.warn('Unable to generate YAML templates.');
 	console.log('Usage: node stub "./path/to/target/file.js". Or set up your "js.src" default targets in the ".jsdoccerrc" config file to run it with out arguments.');
-	console.log(JSON.stringify(err, ['stack', 'message'], 2));
 	nodeStackTracer(err);
 }

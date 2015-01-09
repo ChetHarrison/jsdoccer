@@ -1,6 +1,10 @@
-          <h1>{{name}}</h1>
-          <div class="class">Class: {{class}}</div>
-
+          {{# if name}}
+            <h1>{{name}}</h1>
+          {{/if}}
+          {{# if class}}
+            <div class="class">Class: {{class}}</div>
+          {{/if}}
+          
           {{#each extends}}
             <div class="extend">Mixes In: {{this}}</div>
           {{/each}}

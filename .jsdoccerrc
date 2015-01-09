@@ -5,12 +5,12 @@
 	
 	"js": {
 		// glob paths to the js you want to document
-		"src": ["./src/*.js"]
+		"src": ["./src/jsdoccer.js", "./src/parsers/*.js"]
 	},
 	
 	"documentedYaml": {
 		// Glob paths to your documented yaml.
-		"src": ["./api/application.jsdoc"]
+		"src": ["./doccer/intermediate/yaml-documented/*.yaml"]
 	},
 	
 	// All generated intermediate files will be placed under this path.

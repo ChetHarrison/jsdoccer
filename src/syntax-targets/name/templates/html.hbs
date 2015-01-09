@@ -1,5 +1,6 @@
-          <h1>{{name}}</h1>
-          <div class="class">File Name: {{name}}</div>
+          {{# if name}}
+            <h1>{{name}}</h1>
+          {{/if}}
 
           {{#each extends}}
             <div class="extend">Mixes In: {{.}}</div>

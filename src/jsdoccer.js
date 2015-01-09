@@ -43,7 +43,7 @@ module.exports = {
 			intermediate: path.resolve(path.resolve(dest, intermediate)),
 			ast: path.resolve(dest, intermediate + 'ast'),
 			jsonPre: path.resolve(dest, intermediate + 'json-pre'),
-			yamlStubbed: path.resolve(dest + 'yaml-stubbed'),
+			yamlStubbed: path.resolve(dest, intermediate + 'yaml-stubbed'),
 			jsonApi: path.resolve(dest, intermediate + 'json-api'),
 			docs: path.resolve(dest, 'docs')
 		};
@@ -70,6 +70,10 @@ module.exports = {
 		}, this);
 		
 		// TODO: load custom syntax targets and associated functions
+		// The way we do this is to load paths to default folders 
+		// and custom folders with the same dir structure we can
+		// dry up a lot of code and split out a config inti mod with
+		// this approach and make the tool super extensable.
 		
 		astToJsonPre.init({ matchers: matchers });
 		jsonPreToYamlStubbed.init({ yamlTemplaters: yamlTemplaters });
@@ -104,7 +108,7 @@ module.exports = {
 					
 				if (step.needsFileName) {
 					output = JSON.parse(output);
-					output['file-name'] = {
+					output['name'] = {
 						name: this._fileName(file)
 					};
 					output = JSON.stringify(output, null, 2);

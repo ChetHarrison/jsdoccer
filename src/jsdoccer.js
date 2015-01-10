@@ -21,29 +21,32 @@ module.exports = {
 	},
 	
 	
-	init: function(options) {
-		var targets = [],
-			linters = {},
-			matchers = {},
-			yamlTemplaters = {},
-			htmlTemplaters = {},
-			dest, intermediate;
-			
-		options = options || {};
-		this.config = options;
-		this.config.projectName = this.config.projectName || 
-			path.basename(process.cwd());
+	_buildJsonNav: function (fileGlobs) {
+		var files = this._globToFileList(fileGlobs),
+			jsonNav = {files: []};
+		_.each(files, function (file) {
+			jsonNav.files.push({name: this._fileName(file)});
+		}, this);
+		
+		return jsonNav;
+	},
 	
+	
+	_fileName: function(filePath) {
+		return path.basename(filePath, path.extname(filePath));
+	},
+	
+	
+	_setupWorkingDir: function(dest) {
 		// set up local working directory
-		dest = options.dest;
-		intermediate = 'intermediate/';
+		var intermediate = 'intermediate/';
 		
 		this.paths = {
 			dest: path.resolve(dest),
 			intermediate: path.resolve(path.resolve(dest, intermediate)),
 			ast: path.resolve(dest, intermediate + 'ast'),
 			jsonPre: path.resolve(dest, intermediate + 'json-pre'),
-			yamlStubbed: path.resolve(dest, intermediate + 'yaml-stubbed'),
+			yamlStubbed: path.resolve(dest + 'yaml-stubbed'),
 			jsonApi: path.resolve(dest, intermediate + 'json-api'),
 			docs: path.resolve(dest, 'docs')
 		};
@@ -53,42 +56,109 @@ module.exports = {
 				fs.mkdirSync(aPath);
 			}
 		});
+	},
+	
+	
+	_duplicateTargets: function(defaultTargets, customTargets) {
+		var targetCount = defaultTargets.length + customTargets.length,
+			uniqueCount = _.union(defaultTargets, customTargets).length;
+
+		return targetCount !== uniqueCount;
+	},
+	
+	
+	_getFile: function(target, targetPath, file) {
+		return require(path.resolve(path.join(targetPath, '/', target, '/', file)));
+	},
+	
+	
+	_addSyntaxTargetByName: function(target, targetPath) {
+		this.addSyntaxTargets({
+			target: 		target,
+			linter: 		this._getFile(target, targetPath, 'linter.js'),
+			matcher: 		this._getFile(target, targetPath, 'matcher.js'),
+			yamlTemplater: this._getFile(target, targetPath, 'templateYaml.js'),
+			htmlTemplater: this._getFile(target, targetPath, 'templateHtml.js')
+		});
+	},
+	
+	
+	_addSyntaxTarget: function(options) {
+		// TODO: check for name collisions
+		var target = options.target;
+		this.targets.push(target);
+		this.linters[target] 		= options.linter;
+		this.matchers[target] 		= options.matcher;
+		this.yamlTemplaters[target] = options.yamlTemplater;
+		this.htmlTemplaters[target] = options.yamlTemplater;
+	},
+	
+	
+	addSyntaxTargets: function(options) {
+		if (_.isArray(options)) {
+			_.each(options, function(option) {
+				this._addSyntaxTarget(option);
+			});
+		}
+		
+		this._addSyntaxTarget(options);
+	},
+	
+	
+	init: function(options) {
+		var dest, intermediate,
+			defaultTargets,
+			customTargets,
+			targets;
+			
+		options = options || {};
+		this.config = options;
+		this.targets = [];
+		this.linters = {};
+		this.matchers = {};
+		this.yamlTemplaters = {};
+		this.htmlTemplaters = {};
+		this.config.projectName = this.config.projectName || 
+			path.basename(process.cwd());
+		
+		
+		this._setupWorkingDir(this.config.dest);
 		
 		
 		// configure targets
-		targets = Object.keys(this.config.targets.default)
+		defaultTargets = Object.keys(this.config.targets.default)
 			.filter(function(target) {
 				return this.config.targets.default[target]; // filter false values in config
 			}, this);
+			
+		customTargets = Object.keys(this.config.targets.custom)
+			.filter(function(target) {
+				return this.config.targets.custom[target]; // filter false values in config
+			}, this);
+			
+		if (this._duplicateTargets(defaultTargets, customTargets)) { 
+			throw 'Syntax target names must be unique.';
+		}
 		
-		_.each(targets, function(target) {
-			var src = './syntax-targets/' + target;
-			linters[target] 		= require(src + '/linter.js');
-			matchers[target] 		= require(src + '/matcher.js');
-			yamlTemplaters[target] 	= require(src + '/templateYaml.js');
-			htmlTemplaters[target] 	= require(src + '/templateHtml.js');
+		_.each(defaultTargets, function(target) {
+			this._addSyntaxTargetByName(target, './src/syntax-targets/');
 		}, this);
 		
-		// TODO: load custom syntax targets and associated functions
-		// The way we do this is to load paths to default folders 
-		// and custom folders with the same dir structure we can
-		// dry up a lot of code and split out a config inti mod with
-		// this approach and make the tool super extensable.
+		_.each(customTargets, function(target) {
+			this._addSyntaxTargetByName(target, this.config.targets.customTargetsPath);
+		}, this);
+
 		
-		astToJsonPre.init({ matchers: matchers });
-		jsonPreToYamlStubbed.init({ yamlTemplaters: yamlTemplaters });
-		// yamlDocumentedToJsonApi.init({ targets: targets });
+		// init parsers
+		astToJsonPre.init({ matchers: this.matchers });
+		jsonPreToYamlStubbed.init({ yamlTemplaters: this.yamlTemplaters });
 		jsonApiToDocs.init({ 
-			htmlTemplaters: htmlTemplaters,
+			htmlTemplaters: this.htmlTemplaters,
 			docPageTplPath: path.resolve('src/syntax-targets/docs-index.hbs'),
 			projectName: this.config.projectName
 		});
 	},
 	
-	
-	_fileName: function(filePath) {
-		return path.basename(filePath, path.extname(filePath));
-	},
 	
 	// convert a glob arg to array of file paths
 	// read in each file and apply the parser function
@@ -129,16 +199,6 @@ module.exports = {
 		return files.length;
 	},
 	
-	
-	_buildJsonNav: function (fileGlobs) {
-		var files = this._globToFileList(fileGlobs),
-			jsonNav = {files: []};
-		_.each(files, function (file) {
-			jsonNav.files.push({name: this._fileName(file)});
-		}, this);
-		
-		return jsonNav;
-	},
 	
 	// Generate stubbed yaml file.
 	stub: function(globs) {

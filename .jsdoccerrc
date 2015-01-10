@@ -23,17 +23,14 @@
 			"class": true,
 			"constructor": true,
 			"events": true,
-			"functions": true,
-			"properties": true
+			"properties": true,
+			"functions": true
 		},
 		"custom": {
-			// Add custom targets here. Example
-			// "myTarget": {
-			//     "linter": "path/to/linter/function",
-			//     "matcher": "path/to/matcher/function",
-			//     "templateYaml": "path/to/templateYaml/function",
-			//     "templateHtml": "path/to/templateHtml/function"
-			// }
-		}
+            // Add custom targets here. Example:
+            // "customTarget1": true,
+            // "customTarget2": true
+        },
+        "customTargetsPath": "./customSyntaxTargets/"
 	}
 }

@@ -9,7 +9,6 @@ module.exports = {
 	init: function(options) {
 		options = options || {};
 		this.yamlTemplaters = options.yamlTemplaters || {};
-		// console.log(this.yamlTemplaters['file-name']({name: 'chet'}));
 	},
 		
 	parse: function (json) {

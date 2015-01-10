@@ -1,4 +1,5 @@
 ### This is a work in progress. At the moment it is currently setup to document [backbone.marionette](https://github.com/marionettejs/backbone.marionette).
+advertized config is semi-operational so please don't burn cycles on this until I tell you go get em regardless of my semver molestation (which I think I have a handle on). 
 
 #### Goals:
 - [x] generate stubbed YAML documentation template
@@ -9,7 +10,9 @@
 
 A collaboration with [@jasonLaster](https://github.com/jasonLaster)
 
-# JsDoccer
+# JsDoccer 
+
+(OK a tool that documents your code should have some **REALLY** good docs right?. But I'm working on getting that live so, imagine that icon with the man shoveling stuff)  <-- long disclaimer. 
 
  A collection of Node.js tasks to auto document your ECMAScript (Java Script) in  [JSDoc 3](https://github.com/jsdoc3/jsdoc3.github.com) using [Esprima](http://esprima.org/) and [ESCodeGen](https://github.com/Constellation/escodegen) as well as lint those docs. It converts your code into YAML templates that (will be) converted to JSDocs. The YAML stage allows you to fill in stubbed examples and other details that cannot be generated from the provided Esprima code meta data.
 

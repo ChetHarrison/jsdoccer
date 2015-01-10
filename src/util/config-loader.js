@@ -10,15 +10,13 @@ module.exports = function (filePath) {
 	}
 
 	if (!shjs.test('-e', filePath)) {
-		console.warn('Can\'t find config file: ' + filePath);
-		exports.exit(1);
+		throw 'Can\'t find config file: ' + filePath;
 	}
 
 	try {
 		var config = JSON.parse(stripJsonComments(shjs.cat(filePath)));
 		return config;
 	} catch (err) {
-		console.warn('Can\'t parse config file: ' + filePath);
-		exports.exit(1);
+		throw 'Can\'t parse config file: ' + filePath ;
 	}
 };

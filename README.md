@@ -74,12 +74,12 @@ There are 2 ways to extend the doccer with custom targets. 1) Add arguments and 
 
 ```js
 jsdoccer.addSyntaxTargets({
-      target: name,
-      linter: aLinterFunction,
-      matcher: aMatcherFunction,
-      yamlTemplater: aYamlTemplaterFunction,
-      htmlTemplater: aHtmlTemplaterFunction
-    }
+    target: name,
+    linter: aLinterFunction,
+    matcher: aMatcherFunction,
+    yamlTemplater: aYamlTemplaterFunction,
+    htmlTemplater: aHtmlTemplaterFunction
+});
 ```
 
 You can pass several targets in an array as well.

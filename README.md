@@ -64,10 +64,10 @@ Add custom targets to your `.jsdoccerrc` file under `targets/custom` with a true
 
 There are 2 ways to extend the doccer with custom targets. 1) Add arguments and a path to your `.jsdoccerrc` file under `targets/custom` and `targets/customTargetsPath`. To choose this route you will need to set up a folder with an identical name to the target argument in your `.jsdoccerrc` file. in that folder you will need to provide the following 6 files and they must be named as follows
 
-`linter.js` a lint function that will be passed old and new verison you your YAML
-`matcher.js` a matching fuction that will search an AST and return the pertinate information about that target.
-`templateYaml.js` a function that will populate a template with the YAML stub of your syntax target.
-`templateHtml.js` a function that will populate a template with the HTML documentation of your syntax target.
+* `linter.js` a lint function that will be passed old and new verison you your YAML
+* `matcher.js` a matching fuction that will search an AST and return the pertinate information about that target.
+* `templateYaml.js` a function that will populate a template with the YAML stub of your syntax target.
+* `templateHtml.js` a function that will populate a template with the HTML documentation of your syntax target.
 
 
 2) Add the functions to the `jsdoccer` object.

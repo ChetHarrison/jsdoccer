@@ -32,7 +32,7 @@ $ npm install jsdoccer
 $ node node_modules/jsdoccer/stub [<path/to/files/you/want/to/doc/globaway/**/*.js>]
 ```
 
-This will generate `ast`, `json-pre`, and `yaml-stubbed` files in the `intermediate` directory under the the `dest` argument in your `.jsdoccerrc` config file. At the moment you will want to copy your YAML stubs to a different directory __before you add examples and descriptions__ so you don't overwrite your files if you rerun the stub task. You will want to place them in the directory configured in the `.jsdoccerrc` file under the `documentedYaml` arg. The default is `yaml-documented`. *I am working on removing this step and auto augmenting existing documentation in a non-destructive fashion.*
+This will generate 'ast', 'json-pre', and 'yaml-stubbed' files in the `intermediate` directory under the the `dest` argument in your `.jsdoccerrc` config file. At the moment you will want to copy your YAML stubs to a different directory __before you add examples and descriptions__ so you don't overwrite your files if you rerun the stub task. You will want to place them in the directory configured in the `.jsdoccerrc` file under the `documentedYaml` arg. The default is `yaml-documented`. *I am working on removing this step and auto augmenting existing documentation in a non-destructive fashion.*
 
 2) Generate documents.
 
@@ -44,9 +44,9 @@ Generated documents can be found in the `doccer/docs` folder (or where ever you 
 
 ### Configuration
 
-The `./jsdoccerrc` file contains configuration for the tool. If no files are provided on the command line the tool will glob the files listed in the `js` directory for target files. In the generate documentation phasethe tool will look for your augmented YAML in the globs configured under the `documentedYaml` argument. All intermediate files are saved under the `dest` path. These are useful for debug.
+The `./jsdoccerrc` file contains configuration for the tool. If no files are provided on the command line the tool will glob the files listed in the `js` directory for target files. In the generate documentation phase the tool will look for your augmented YAML in the globs configured under the `documentedYaml` argument. All intermediate files are saved under the `dest` path. These are useful for debug.
 
-Syntax targets are specific types of code you would like to document like *functions* or *properties*. JsDoccer comes with the following targets that you include or ignore based on a boolean under the `targets/defaut`. They are
+Syntax targets are specific types of code you would like to document like *functions* or *properties*. JsDoccer comes with the following targets that you include or ignore based on a boolean under the `targets/defaut` in your `.jsdoccerrc` file. They are:
 
 * name
 * class
@@ -57,11 +57,9 @@ Syntax targets are specific types of code you would like to document like *funct
 
 ### Extention
 
-JsDoccer uses a collection of templates and functions designed to find syntax targets and render them. You can use what ever templating library you are comfortable with, however with nested templates I recomend [Handelbars](http://handlebarsjs.com/) for it's support of partials.
+JsDoccer uses a collection of templates and functions designed to find syntax targets and render them to both YAML stubbed templates and HTML documents. You can use what ever templating library you are comfortable with, however with nested templates I recomend [Handelbars](http://handlebarsjs.com/) for it's support of partials.
 
 Each syntax target requires a YAML template for creating the document stubs and an HTML template for creating the documentation as well as functions to render them. You will also need to provide a matcher function that can parse an AST node looking for the target. You may optionally provide a linter function if you would like to use the linter. All of the default target code can be found under `scr/syntax-targets` for examples. This is also where the documentation website index template `docs-index.hbs` lives.
-
-Add custom targets to your `.jsdoccerrc` file under `targets/custom` with a true value. __Make sure the file name matches target name.__
 
 There are 2 ways to extend the doccer with custom targets. 1) Add arguments and a path to your `.jsdoccerrc` file under `targets/custom` and `targets/customTargetsPath`. To choose this route you will need to set up a folder with an identical name to the target argument in your `.jsdoccerrc` file. in that folder you will need to provide the following 6 files and they must be named as follows
 

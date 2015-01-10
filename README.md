@@ -9,7 +9,7 @@ A collaboration with [@jasonLaster](https://github.com/jasonLaster)
 
 # JsDoccer 
 
-(OK a tool that documents your code should have some **REALLY** good docs right?. But I'm working on getting that live so, imagine that icon with the man shoveling stuff)  <-- long disclaimer. 
+(OK a tool that documents your code should have some **REALLY** good docs right?. But I'm working on getting that live so, imagine that icon with the man shoveling stuff)
 
  A collection of Node.js tasks to:
 

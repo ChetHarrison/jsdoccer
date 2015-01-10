@@ -56,13 +56,35 @@ Syntax targets are specific types of code you would like to document like *funct
 
 ### Extention
 
-__Note: I am currently working on the code to extend the tool right now__
-
-JsDoccer uses a collection of templates and functions designed to find syntax targets and render them. You can use what ever templating library you are comfortable with, however with nested templates I recomend [Handelbars](http://handlebarsjs.com/) support of partials.
+JsDoccer uses a collection of templates and functions designed to find syntax targets and render them. You can use what ever templating library you are comfortable with, however with nested templates I recomend [Handelbars](http://handlebarsjs.com/) for it's support of partials.
 
 Each syntax target requires a YAML template for creating the document stubs and an HTML template for creating the documentation as well as functions to render them. You will also need to provide a matcher function that can parse an AST node looking for the target. You may optionally provide a linter function if you would like to use the linter. All of the default target code can be found under `scr/syntax-targets` for examples. This is also where the documentation website index template `docs-index.hbs` lives.
 
 Add custom targets to your `.jsdoccerrc` file under `targets/custom` with a true value. __Make sure the file name matches target name.__
+
+There are 2 ways to extend the doccer with custom targets. 1) Add arguments and a path to your `.jsdoccerrc` file under `targets/custom` and `targets/customTargetsPath`. To choose this route you will need to set up a folder with an identical name to the target argument in your `.jsdoccerrc` file. in that folder you will need to provide the following 6 files and they must be named as follows
+
+`linter.js` a lint function that will be passed old and new verison you your YAML
+`matcher.js` a matching fuction that will search an AST and return the pertinate information about that target.
+`templateYaml.js` a function that will populate a template with the YAML stub of your syntax target.
+`templateHtml.js` a function that will populate a template with the HTML documentation of your syntax target.
+
+
+2) Add the functions to the `jsdoccer` object.
+
+```js
+jsdoccer.addSyntaxTargets({
+      target: name,
+      linter: aLinterFunction,
+      matcher: aMatcherFunction,
+      yamlTemplater: aYamlTemplaterFunction,
+      htmlTemplater: aHtmlTemplaterFunction
+    }
+```
+
+You can pass several targets in an array as well.
+
+
 
 ### What You Need To Know About ASTs
 

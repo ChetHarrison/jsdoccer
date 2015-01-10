@@ -1,12 +1,9 @@
-### This is a work in progress. At the moment it is currently setup to document [backbone.marionette](https://github.com/marionettejs/backbone.marionette).
-advertized config is semi-operational so please don't burn cycles on this until I tell you go get em regardless of my semver molestation (which I think I have a handle on). 
-
 #### Goals:
 - [x] generate stubbed YAML documentation template
 - [x] build document webpages from JSDoc
 - [ ] lint existing documents
 
-**There have been some major changes between 1.0 and 1.1 and 1.2. This is a pure Node.js tool now. If you are looking for a Grunt task you can find it at [grunt-jsdoccer](https://github.com/ChetHarrison/grunt-jsdoccer).
+**There have been some major changes between 1.0, 1.1, 1.2 and 1.3. This is a pure Node.js tool. If you are looking for a Grunt task you can find it at [grunt-jsdoccer](https://github.com/ChetHarrison/grunt-jsdoccer).
 
 A collaboration with [@jasonLaster](https://github.com/jasonLaster)
 
@@ -14,7 +11,11 @@ A collaboration with [@jasonLaster](https://github.com/jasonLaster)
 
 (OK a tool that documents your code should have some **REALLY** good docs right?. But I'm working on getting that live so, imagine that icon with the man shoveling stuff)  <-- long disclaimer. 
 
- A collection of Node.js tasks to auto document your ECMAScript (Java Script) in  [JSDoc 3](https://github.com/jsdoc3/jsdoc3.github.com) using [Esprima](http://esprima.org/) and [ESCodeGen](https://github.com/Constellation/escodegen) as well as lint those docs. It converts your code into YAML templates that (will be) converted to JSDocs. The YAML stage allows you to fill in stubbed examples and other details that cannot be generated from the provided Esprima code meta data.
+ A collection of Node.js tasks to:
+
+* Auto-document your ECMAScript (Java Script) using [Esprima](http://esprima.org/) It converts your code into YAML templates that allows you to fill in stubbed examples and descriptions using [JSDoc 3](https://github.com/jsdoc3/jsdoc3.github.com) sintax. 
+* Convert the those YAML files to HTML docs.
+* Lint those docs to keep them up to date.
 
 
 ### Basic Usage
@@ -31,7 +32,7 @@ $ npm install jsdoccer
 $ node node_modules/jsdoccer/stub [<path/to/files/you/want/to/doc/globaway/**/*.js>]
 ```
 
-The first time you run this command the tool will search for a `jsdoccer/syntaxMatchers.js` file at the root of your project directory. if it is not found it will copy the `setup` directory into a `jsdoccer` directory at the project root containing the default syntax matchers and templates. You can then customize them to suit your style of code. **Note:** currently, if you delete the `syntaxMatchers.js` file it will generate a new `jsdoccer` folder with all the defaults and you will loose any custom augmentations you have made to your YAML templates. Once you have generated the stubbed YAML templates you will find them in the `jsdoccer/generated-files/yaml/stubbed` directory. You will need to move them to `jsdoccer/generated-files/yaml/documented` directory before you augment them so you don't accidentally over write them by running the task again. **If you forget to move them you will not be able to generate the documents!**
+This will generate ast, json-pre, and yaml-stubbed files in the `intermediate` directory under the the `dest` argument in your `.jsdoccerrc` config file. At the moment you will want to copy your YAML stubs to a different directory __before you add examples and descriptions__ so you don't overwrite your files if you rerun the stub task. You will want to place them in the directory configured in the `.jsdoccerrc` file under the `documentedYaml` arg. The default is `yaml-documented`. *I am working on removing this step and auto augmenting existing documentation in a non-destructive fashion.*
 
 2) Generate documents.
 
@@ -39,7 +40,7 @@ The first time you run this command the tool will search for a `jsdoccer/syntaxM
 $ node node_modules/jsdoccer/doc [<path/to/yaml/you/want/to/doc>]
 ```
 
-Generated documents can be found in the `doccer/docs` folder (or where ever you configured the destination).
+Generated documents can be found in the `doccer/docs` folder (or where ever you configured the destination). *At the moment the default styles are messed up so you will get naked HTML.*
 
 ### Configuration
 
@@ -205,3 +206,4 @@ unbindFromStrings
       name: 
       example: |
 ```
+

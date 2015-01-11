@@ -68,15 +68,15 @@ module.exports = {
 	
 	
 	_getFile: function(target, targetPath, file) {
-		return require(path.resolve(path.join(targetPath, '/', target, '/', file)));
+		return require(path.resolve(path.join(__dirname, targetPath, '/', target, '/', file)));
 	},
 	
 	
 	_addSyntaxTargetByName: function(target, targetPath) {
 		this.addSyntaxTargets({
-			target: 		target,
-			linter: 		this._getFile(target, targetPath, 'linter.js'),
-			matcher: 		this._getFile(target, targetPath, 'matcher.js'),
+			target: 	   target,
+			linter: 	   this._getFile(target, targetPath, 'linter.js'),
+			matcher: 	   this._getFile(target, targetPath, 'matcher.js'),
 			yamlTemplater: this._getFile(target, targetPath, 'templateYaml.js'),
 			htmlTemplater: this._getFile(target, targetPath, 'templateHtml.js')
 		});
@@ -141,7 +141,7 @@ module.exports = {
 		}
 		
 		_.each(defaultTargets, function(target) {
-			this._addSyntaxTargetByName(target, './src/syntax-targets/');
+			this._addSyntaxTargetByName(target, './syntax-targets/');
 		}, this);
 		
 		_.each(customTargets, function(target) {
@@ -154,7 +154,7 @@ module.exports = {
 		jsonPreToYamlStubbed.init({ yamlTemplaters: this.yamlTemplaters });
 		jsonApiToDocs.init({ 
 			htmlTemplaters: this.htmlTemplaters,
-			docPageTplPath: path.resolve('src/syntax-targets/docs-index.hbs'),
+			docPageTplPath: path.resolve(__dirname, 'syntax-targets/docs-index.hbs'),
 			projectName: this.config.projectName
 		});
 	},

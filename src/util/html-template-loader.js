@@ -5,9 +5,9 @@ var fs = require('fs'),
   Handlebars = require('handlebars');
 
 module.exports = function(templatePath) {
-	return	function(model) {
-		var template = Handlebars.compile(fs.readFileSync(templatePath, 'utf8').toString());
-		
-	  	return template(model);
-	};
+        return  function(model) {
+                var template = Handlebars.compile(fs.readFileSync(templatePath, 'utf8').toString());
+                
+                return template(model);
+        };
 };

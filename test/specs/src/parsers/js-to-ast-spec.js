@@ -1,9 +1,10 @@
 'use strict';
 
 var path = require('path'),
-	fs = require('fs'),
+	expect = require('chai').expect,
+  fs = require('fs'),
 	jsToAst = require('../../../../src/parsers/js-to-ast.js');
-	
+
 describe('parser js-to-ast', function () {
 	var generatedAst;
 
@@ -31,10 +32,10 @@ describe('parser js-to-ast', function () {
 				    }
 				  ]
 			}, null, 2);
-		
+
 		generatedAst = jsToAst.parse('var answer = 42;');
-		
-		expect(generatedAst).toEqual(desiredAST);
+
+		expect(generatedAst).to.eql(desiredAST);
 	});
 });
 

@@ -1,7 +1,8 @@
 'use strict';
 
 var path = require('path'),
-	fs = require('fs'),
+  expect = require('chai').expect,
+  fs = require('fs'),
 	root = '../../../../',
 	match = root + 'src/syntax-targets/',
 	astToDocJson = require(root + 'src/parsers/ast-to-json-pre.js'),
@@ -14,13 +15,13 @@ matchers['constructor']  = require(match + 'constructor/matcher.js'),
 matchers['events']  = require(match + 'events/matcher.js'),
 matchers['functions']  = require(match + 'functions/matcher.js'),
 matchers['properties']  = require(match + 'properties/matcher.js');
-	
+
 
 describe('ast-to-json-pre', function () {
 
 	it('should return expected JSON', function () {
 		astToDocJson.init({ matchers: matchers })
 		var generatedAst = astToDocJson.parse(astFile);
-		expect(generatedAst).toEqual(expectedJSON);
+		expect(generatedAst).to.eql(expectedJSON);
 	});
 });

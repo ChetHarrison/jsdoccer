@@ -1,7 +1,8 @@
 'use strict';
-	
+
 var path = require('path'),
-	fs = require('fs'),
+	expect = require('chai').expect,
+  fs = require('fs'),
 	root = '../../../../',
 	match = root + 'src/syntax-targets/',
 	jsonPreToYamlStubbed = require(root + 'src/parsers/json-pre-to-yaml-stubbed.js'),
@@ -16,11 +17,11 @@ yamlTemplaters['functions']  = require(match + 'functions/templateYaml.js'),
 yamlTemplaters['properties']  = require(match + 'properties/templateYaml.js');
 
 describe('json-pre-to-yaml-stubbed', function () {
-	
+
 	it('should return expected stubbed YAML', function () {
 		var generatedYaml;
 		jsonPreToYamlStubbed.init({yamlTemplaters: yamlTemplaters})
 		generatedYaml = jsonPreToYamlStubbed.parse(jsonFile);
-		expect(generatedYaml).toEqual(expectedYaml);
+		expect(generatedYaml).to.eql(expectedYaml);
 	});
 });

@@ -1,7 +1,8 @@
 'use strict';
 
 var path = require('path'),
-	fs = require('fs'),
+	expect = require('chai').expect,
+  fs = require('fs'),
 	root = '../../../../',
 	htmlTemplaters = {},
 	match = root + 'src/syntax-targets/',
@@ -16,18 +17,18 @@ htmlTemplaters['functions']  = require(match + 'functions/templateHtml.js'),
 htmlTemplaters['properties']  = require(match + 'properties/templateHtml.js');
 
 describe('json-api-to-docs', function () {
-	
+
 	it('should return expected doc HTML', function () {
 		var generatedHtml;
-		
-		jsonApiToDocs.init({ 
+
+		jsonApiToDocs.init({
 			htmlTemplaters: htmlTemplaters,
 			docPageTplPath: path.resolve(__dirname, root, 'src/syntax-targets/docs-index.hbs'),
 			projectName: 'custom name'
 		});
-		
+
 		generatedHtml = jsonApiToDocs.parse(jsonFile);
-		expect(generatedHtml).toEqual(expectedHtml);
+    expect(generatedHtml).to.eql(expectedHtml);
 	});
 });
 

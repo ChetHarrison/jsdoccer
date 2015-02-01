@@ -1,10 +1,12 @@
+#!/usr/bin/env node
+
 'use strict';
 
 var path = require('path'),
-	jsDoccer = require('./src/jsdoccer.js'),
-	configLoader = require('./src/util/config-loader.js'),
-	nodeStackTracer = require('./src/util/node-stack-tracer.js'),
-	
+	jsDoccer = require('../src/jsdoccer.js'),
+	configLoader = require('../src/util/config-loader.js'),
+	nodeStackTracer = require('../src/util/node-stack-tracer.js'),
+
 	args = Array.prototype.slice.call(process.argv, 2),
 	destPath, srcPath,
 	filesStubbed = 0; // a count of the stubbed files
@@ -17,7 +19,7 @@ try {
 	destPath = path.resolve(jsDoccer.config.dest + 'yaml-stubbed');
 	srcPath = path.resolve(jsDoccer.config.dest + 'yaml-documented');
 	filesStubbed = jsDoccer.stub(args);
-	console.log('Done: Generated ' + filesStubbed + ' YAML document stubs at'); 
+	console.log('Done: Generated ' + filesStubbed + ' YAML document stubs at');
 	console.log(destPath);
 	console.log('Remember to copy them into ' + srcPath + ' path defined in your .jsdoccerrc config.');
 	console.log('directory BEFORE augmenting them with examples.');

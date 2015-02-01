@@ -17,6 +17,9 @@
     "auto",
     "documentation"
   ],
+  "scripts": {
+    "test": "mocha"
+  },
   "author": "Chet Harrison",
   "license": "ISC",
   "bugs": {
@@ -55,6 +58,7 @@
     "js-yaml": "^3.1.0",
     "lodash": "^2.4.1",
     "marked": "^0.3.2",
+    "mocha": "^2.1.0",
     "prettyjson": "^1.0.0",
     "rx-array": "0.0.3",
     "shelljs": "^0.3.0",

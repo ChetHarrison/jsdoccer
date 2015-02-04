@@ -29,7 +29,7 @@ $ npm install jsdoccer
 1) Create stubbed YAML document templates.
 
 ```
-$ node node_modules/jsdoccer/stub [<path/to/files/you/want/to/doc/globaway/**/*.js>]
+$ ./node_modules/.bin/stub [<path/to/files/you/want/to/doc/globaway/**/*.js>]
 ```
 
 This will generate 'ast', 'json-pre', and 'yaml-stubbed' files in the `intermediate` directory under the the `dest` argument in your `.jsdoccerrc` config file. At the moment you will want to copy your YAML stubs to a different directory __before you add examples and descriptions__ so you don't overwrite your files if you rerun the stub task. You will want to place them in the directory configured in the `.jsdoccerrc` file under the `documentedYaml` arg. The default is `yaml-documented`. *I am working on removing this step and auto augmenting existing documentation in a non-destructive fashion.*
@@ -37,7 +37,7 @@ This will generate 'ast', 'json-pre', and 'yaml-stubbed' files in the `intermedi
 2) Generate documents.
 
 ```
-$ node node_modules/jsdoccer/doc [<path/to/yaml/you/want/to/doc>]
+$ ./node_modules/.bin/doc [<path/to/yaml/you/want/to/doc>]
 ```
 
 Generated documents can be found in the `doccer/docs` folder (or where ever you configured the destination). *At the moment the default styles are messed up so you will get naked HTML.*

@@ -7,19 +7,19 @@
 'use strict';
 
 var _ = require('lodash'),
-	walk = function(node, targetKey, valueDecorator) {
-		if (_.isObject(node)) {
-			var keys = _.keys(node);
-			_.each(keys, function(key) {
-				var value = node[key]; 
-				if (_.isString(value) && key === targetKey) {
-					node[key] = valueDecorator(value);
-				}
-				else {
-					walk(value, targetKey, valueDecorator);
-				}
-			}, this);
-		}
-	};
+  walk = function(node, targetKey, valueDecorator) {
+    if (_.isObject(node)) {
+      var keys = _.keys(node);
+      _.each(keys, function(key) {
+        var value = node[key]; 
+        if (_.isString(value) && key === targetKey) {
+          node[key] = valueDecorator(value);
+        }
+        else {
+          walk(value, targetKey, valueDecorator);
+        }
+      }, this);
+    }
+  };
 
 module.exports = walk;

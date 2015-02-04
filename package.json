@@ -8,11 +8,18 @@
     "type": "git",
     "url": "https://github.com/ChetHarrison/jsdoccer.git"
   },
+  "bin": {
+    "stub": "./bin/stub.js",
+    "doc": "./bin/doc.js"
+  },
   "keywords": [
     "jsdoc",
     "auto",
     "documentation"
   ],
+  "scripts": {
+    "test": "mocha"
+  },
   "author": "Chet Harrison",
   "license": "ISC",
   "bugs": {
@@ -20,6 +27,7 @@
   },
   "homepage": "https://github.com/ChetHarrison/jsdoccer",
   "devDependencies": {
+    "chai": "^1.10.0",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.5.0",
@@ -51,6 +59,8 @@
     "js-yaml": "^3.1.0",
     "lodash": "^2.4.1",
     "marked": "^0.3.2",
+    "mocha": "^2.1.0",
+    "prettyjson": "^1.0.0",
     "rx-array": "0.0.3",
     "shelljs": "^0.3.0",
     "strip-json-comments": "^1.0.2",

@@ -219,17 +219,17 @@ module.exports = {
   },
 
   // Generate html documentation from documented yaml
-  doc: function(globs) {
-    var jsonNav = this._buildJsonNav(globs);
-      
-    return this._parseGlobs(globs, [{ 
+  doc: function(files, dest) {
+    var jsonNav = this._buildJsonNav(files);
+
+    return this._parseGlobs(files, htmlTemplate, [{
         parser: yamlDocumentedToJsonApi,
         dest: this.paths.jsonApi,
         ext: 'json',
         jsonNav: jsonNav
       }, {
-        parser: jsonApiToDocs, 
-        dest: this.paths.docs,
+        parser: jsonApiToDocs,
+        dest: dest || this.paths.docs,
         ext: 'html'
       }]);
 },

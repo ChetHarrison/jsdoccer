@@ -64,6 +64,7 @@
     "rx-array": "0.0.3",
     "shelljs": "^0.3.0",
     "strip-json-comments": "^1.0.2",
-    "underscore.string": "^2.3.3"
+    "underscore.string": "^2.3.3",
+    "minimist": "~1.1.0"
   }
 }

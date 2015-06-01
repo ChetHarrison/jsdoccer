@@ -1,4 +1,4 @@
-<img title="Build Status Images" src="https://travis-ci.org/ChetHarrison/jsdoccer.svg">
+
 
 #### Goals:
 - [x] generate stubbed YAML documentation template

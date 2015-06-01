@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.org/ChetHarrison/jsdoccer.svg?branch=master)](https://travis-ci.org/ChetHarrison/jsdoccer)
 
 #### Goals:
 - [x] generate stubbed YAML documentation template
